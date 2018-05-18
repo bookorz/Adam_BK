@@ -1,0 +1,3504 @@
+<?xml version="1.0" standalone="yes"?>
+<DocumentElement>
+  <Table>
+    <Category_ID>SANWA.Robot</Category_ID>
+    <Category_Description>Robot 命令</Category_Description>
+    <Code_Name>Robot 狀態取得</Code_Name>
+    <Code_Type>GET</Code_Type>
+    <Code_ID>STS__</Code_ID>
+    <Code_Cause>Robot 狀態取得</Code_Cause>
+    <Code_Cause_English>Robot get status</Code_Cause_English>
+  </Table>
+  <Table>
+    <Category_ID>SANWA.Robot</Category_ID>
+    <Category_Description>Robot 命令</Category_Description>
+    <Code_Name>IO 狀態取得</Code_Name>
+    <Code_Type>GET</Code_Type>
+    <Code_ID>RIO__</Code_ID>
+    <Code_Cause>IO 狀態取得</Code_Cause>
+    <Code_Cause_English>IO ststus get</Code_Cause_English>
+  </Table>
+  <Table>
+    <Category_ID>SANWA.Robot</Category_ID>
+    <Category_Description>Robot 命令</Category_Description>
+    <Code_Name>Speed 限制取得</Code_Name>
+    <Code_Type>GET</Code_Type>
+    <Code_ID>SP___</Code_ID>
+    <Code_Cause>Speed 限制取得</Code_Cause>
+    <Code_Cause_English>Get speed limit</Code_Cause_English>
+  </Table>
+  <Table>
+    <Category_ID>SANWA.Robot</Category_ID>
+    <Category_Description>Robot 命令</Category_Description>
+    <Code_Name>Error 履歷取得</Code_Name>
+    <Code_Type>GET</Code_Type>
+    <Code_ID>ERR__</Code_ID>
+    <Code_Cause>Error 履歷取得</Code_Cause>
+    <Code_Cause_English>Get error history</Code_Cause_English>
+  </Table>
+  <Table>
+    <Category_ID>SANWA.Robot</Category_ID>
+    <Category_Description>Robot 命令</Category_Description>
+    <Code_Name>Mapping 結果取得</Code_Name>
+    <Code_Type>GET</Code_Type>
+    <Code_ID>MAP__</Code_ID>
+    <Code_Cause>Mapping 結果取得</Code_Cause>
+    <Code_Cause_English>Get Wafer/Glass Mapping</Code_Cause_English>
+  </Table>
+  <Table>
+    <Category_ID>SANWA.Robot</Category_ID>
+    <Category_Description>Robot 命令</Category_Description>
+    <Code_Name>電磁閥狀態取得</Code_Name>
+    <Code_Type>GET</Code_Type>
+    <Code_ID>SV___</Code_ID>
+    <Code_Cause>電磁閥狀態取得</Code_Cause>
+    <Code_Cause_English />
+  </Table>
+  <Table>
+    <Category_ID>SANWA.Robot</Category_ID>
+    <Category_Description>Robot 命令</Category_Description>
+    <Code_Name>讀取 Point Data 裡的各軸位置(R~R1 六軸)</Code_Name>
+    <Code_Type>GET</Code_Type>
+    <Code_ID>TEACH</Code_ID>
+    <Code_Cause>讀取 Point Data 裡的各軸位置(R~R1 六軸)</Code_Cause>
+    <Code_Cause_English />
+  </Table>
+  <Table>
+    <Category_ID>SANWA.Robot</Category_ID>
+    <Category_Description>Robot 命令</Category_Description>
+    <Code_Name>取得 Robot 參數值</Code_Name>
+    <Code_Type>GET</Code_Type>
+    <Code_ID>PARAM</Code_ID>
+    <Code_Cause>取得 Robot 參數值</Code_Cause>
+    <Code_Cause_English />
+  </Table>
+  <Table>
+    <Category_ID>SANWA.Robot</Category_ID>
+    <Category_Description>Robot 命令</Category_Description>
+    <Code_Name>取得 Robot 參數詳細資料</Code_Name>
+    <Code_Type>GET</Code_Type>
+    <Code_ID>PARSY</Code_ID>
+    <Code_Cause>取得 Robot 參數詳細資料</Code_Cause>
+    <Code_Cause_English />
+  </Table>
+  <Table>
+    <Category_ID>SANWA.Robot</Category_ID>
+    <Category_Description>Robot 命令</Category_Description>
+    <Code_Name>取得指定點位欄位的資訊</Code_Name>
+    <Code_Type>GET</Code_Type>
+    <Code_ID>PDATA</Code_ID>
+    <Code_Cause>取得指定點位欄位的資訊</Code_Cause>
+    <Code_Cause_English />
+  </Table>
+  <Table>
+    <Category_ID>SANWA.Robot</Category_ID>
+    <Category_Description>Robot 命令</Category_Description>
+    <Code_Name>取得 Panel(Wafer) 的狀態</Code_Name>
+    <Code_Type>GET</Code_Type>
+    <Code_ID>PNSTS</Code_ID>
+    <Code_Cause>取得 Panel(Wafer) 的狀態</Code_Cause>
+    <Code_Cause_English />
+  </Table>
+  <Table>
+    <Category_ID>SANWA.Robot</Category_ID>
+    <Category_Description>Robot 命令</Category_Description>
+    <Code_Name>取得目前 Robot 各軸的位置</Code_Name>
+    <Code_Type>GET</Code_Type>
+    <Code_ID>POS__</Code_ID>
+    <Code_Cause>取得目前 Robot 各軸的位置</Code_Cause>
+    <Code_Cause_English />
+  </Table>
+  <Table>
+    <Category_ID>SANWA.Robot</Category_ID>
+    <Category_Description>Robot 命令</Category_Description>
+    <Code_Name>取得 Mapping 厚度結果</Code_Name>
+    <Code_Type>GET</Code_Type>
+    <Code_ID>MAPT_</Code_ID>
+    <Code_Cause>取得 Mapping 厚度結果</Code_Cause>
+    <Code_Cause_English />
+  </Table>
+  <Table>
+    <Category_ID>SANWA.Robot</Category_ID>
+    <Category_Description>Robot 命令</Category_Description>
+    <Code_Name>IO 狀態設定</Code_Name>
+    <Code_Type>SET</Code_Type>
+    <Code_ID>RIO__</Code_ID>
+    <Code_Cause>IO 狀態設定</Code_Cause>
+    <Code_Cause_English />
+  </Table>
+  <Table>
+    <Category_ID>SANWA.Robot</Category_ID>
+    <Category_Description>Robot 命令</Category_Description>
+    <Code_Name>速度限制設定</Code_Name>
+    <Code_Type>SET</Code_Type>
+    <Code_ID>SP___</Code_ID>
+    <Code_Cause>速度限制設定</Code_Cause>
+    <Code_Cause_English />
+  </Table>
+  <Table>
+    <Category_ID>SANWA.Robot</Category_ID>
+    <Category_Description>Robot 命令</Category_Description>
+    <Code_Name>動作暫停</Code_Name>
+    <Code_Type>SET</Code_Type>
+    <Code_ID>PAUSE</Code_ID>
+    <Code_Cause>動作暫停</Code_Cause>
+    <Code_Cause_English />
+  </Table>
+  <Table>
+    <Category_ID>SANWA.Robot</Category_ID>
+    <Category_Description>Robot 命令</Category_Description>
+    <Code_Name>暫停解除</Code_Name>
+    <Code_Type>SET</Code_Type>
+    <Code_ID>CONT_</Code_ID>
+    <Code_Cause>暫停解除</Code_Cause>
+    <Code_Cause_English />
+  </Table>
+  <Table>
+    <Category_ID>SANWA.Robot</Category_ID>
+    <Category_Description>Robot 命令</Category_Description>
+    <Code_Name>動作停止</Code_Name>
+    <Code_Type>SET</Code_Type>
+    <Code_ID>STOP_</Code_ID>
+    <Code_Cause>動作停止</Code_Cause>
+    <Code_Cause_English />
+  </Table>
+  <Table>
+    <Category_ID>SANWA.Robot</Category_ID>
+    <Category_Description>Robot 命令</Category_Description>
+    <Code_Name>Robot 動作模式選擇設定</Code_Name>
+    <Code_Type>SET</Code_Type>
+    <Code_ID>MODE_</Code_ID>
+    <Code_Cause />
+    <Code_Cause_English />
+  </Table>
+  <Table>
+    <Category_ID>SANWA.Robot</Category_ID>
+    <Category_Description>Robot 命令</Category_Description>
+    <Code_Name>Step 動作等待解除</Code_Name>
+    <Code_Type>SET</Code_Type>
+    <Code_ID>STPDO</Code_ID>
+    <Code_Cause>Step 動作等待解除</Code_Cause>
+    <Code_Cause_English />
+  </Table>
+  <Table>
+    <Category_ID>SANWA.Robot</Category_ID>
+    <Category_Description>Robot 命令</Category_Description>
+    <Code_Name>Error 解除</Code_Name>
+    <Code_Type>SET</Code_Type>
+    <Code_ID>RESET</Code_ID>
+    <Code_Cause>Error 解除</Code_Cause>
+    <Code_Cause_English />
+  </Table>
+  <Table>
+    <Category_ID>SANWA.Robot</Category_ID>
+    <Category_Description>Robot 命令</Category_Description>
+    <Code_Name>Servo On</Code_Name>
+    <Code_Type>SET</Code_Type>
+    <Code_ID>SERVO</Code_ID>
+    <Code_Cause>Servo On</Code_Cause>
+    <Code_Cause_English />
+  </Table>
+  <Table>
+    <Category_ID>SANWA.Robot</Category_ID>
+    <Category_Description>Robot 命令</Category_Description>
+    <Code_Name>電磁閥狀態設定</Code_Name>
+    <Code_Type>SET</Code_Type>
+    <Code_ID>SV___</Code_ID>
+    <Code_Cause>電磁閥狀態設定</Code_Cause>
+    <Code_Cause_English />
+  </Table>
+  <Table>
+    <Category_ID>SANWA.Robot</Category_ID>
+    <Category_Description>Robot 命令</Category_Description>
+    <Code_Name>設定 Log file 儲存</Code_Name>
+    <Code_Type>SET</Code_Type>
+    <Code_ID>LOGSV</Code_ID>
+    <Code_Cause>設定 Log file 儲存</Code_Cause>
+    <Code_Cause_English />
+  </Table>
+  <Table>
+    <Category_ID>SANWA.Robot</Category_ID>
+    <Category_Description>Robot 命令</Category_Description>
+    <Code_Name>將目前各軸的位置寫入指定的 Point Data</Code_Name>
+    <Code_Type>SET</Code_Type>
+    <Code_ID>TEACH</Code_ID>
+    <Code_Cause>將目前各軸的位置寫入指定的 Point Data</Code_Cause>
+    <Code_Cause_English />
+  </Table>
+  <Table>
+    <Category_ID>SANWA.Robot</Category_ID>
+    <Category_Description>Robot 命令</Category_Description>
+    <Code_Name>將 Point Data 存入 CF 卡</Code_Name>
+    <Code_Type>SET</Code_Type>
+    <Code_ID>SAVEP</Code_ID>
+    <Code_Cause>將 Point Data 存入 CF 卡</Code_Cause>
+    <Code_Cause_English />
+  </Table>
+  <Table>
+    <Category_ID>SANWA.Robot</Category_ID>
+    <Category_Description>Robot 命令</Category_Description>
+    <Code_Name>將 Point Data 從 CF 卡載入</Code_Name>
+    <Code_Type>SET</Code_Type>
+    <Code_ID>LOADP</Code_ID>
+    <Code_Cause>將 Point Data 從 CF 卡載入</Code_Cause>
+    <Code_Cause_English />
+  </Table>
+  <Table>
+    <Category_ID>SANWA.Robot</Category_ID>
+    <Category_Description>Robot 命令</Category_Description>
+    <Code_Name>設定 Robot 參數值</Code_Name>
+    <Code_Type>SET</Code_Type>
+    <Code_ID>PARAM</Code_ID>
+    <Code_Cause>設定 Robot 參數值</Code_Cause>
+    <Code_Cause_English />
+  </Table>
+  <Table>
+    <Category_ID>SANWA.Robot</Category_ID>
+    <Category_Description>Robot 命令</Category_Description>
+    <Code_Name>儲存 Robot 參數</Code_Name>
+    <Code_Type>SET</Code_Type>
+    <Code_ID>SAVE_</Code_ID>
+    <Code_Cause>儲存 Robot 參數</Code_Cause>
+    <Code_Cause_English />
+  </Table>
+  <Table>
+    <Category_ID>SANWA.Robot</Category_ID>
+    <Category_Description>Robot 命令</Category_Description>
+    <Code_Name>Absolute Encoder Alarm Clear</Code_Name>
+    <Code_Type>SET</Code_Type>
+    <Code_ID>ENCCL</Code_ID>
+    <Code_Cause>Absolute Encoder Alarm Clear</Code_Cause>
+    <Code_Cause_English />
+  </Table>
+  <Table>
+    <Category_ID>SANWA.Robot</Category_ID>
+    <Category_Description>Robot 命令</Category_Description>
+    <Code_Name>Abssolute Encoder Offset</Code_Name>
+    <Code_Type>SET</Code_Type>
+    <Code_ID>ENCOF</Code_ID>
+    <Code_Cause>Abssolute Encoder Offset</Code_Cause>
+    <Code_Cause_English />
+  </Table>
+  <Table>
+    <Category_ID>SANWA.Robot</Category_ID>
+    <Category_Description>Robot 命令</Category_Description>
+    <Code_Name>Battery Alarm Clear</Code_Name>
+    <Code_Type>SET</Code_Type>
+    <Code_ID>BATCL</Code_ID>
+    <Code_Cause>Battery Alarm Clear</Code_Cause>
+    <Code_Cause_English />
+  </Table>
+  <Table>
+    <Category_ID>SANWA.Robot</Category_ID>
+    <Category_Description>Robot 命令</Category_Description>
+    <Code_Name>設定指定點位參數</Code_Name>
+    <Code_Type>SET</Code_Type>
+    <Code_ID>PDATA</Code_ID>
+    <Code_Cause>設定指定點位參數</Code_Cause>
+    <Code_Cause_English />
+  </Table>
+  <Table>
+    <Category_ID>SANWA.Robot</Category_ID>
+    <Category_Description>Robot 命令</Category_Description>
+    <Code_Name>各軸移動至 HOME 位置</Code_Name>
+    <Code_Type>CMD</Code_Type>
+    <Code_ID>HOME_</Code_ID>
+    <Code_Cause>各軸移動至 HOME 位置</Code_Cause>
+    <Code_Cause_English />
+  </Table>
+  <Table>
+    <Category_ID>SANWA.Robot</Category_ID>
+    <Category_Description>Robot 命令</Category_Description>
+    <Code_Name>各軸安全回 HOME 位置</Code_Name>
+    <Code_Type>CMD</Code_Type>
+    <Code_ID>SHOME</Code_ID>
+    <Code_Cause>各軸安全回 HOME 位置</Code_Cause>
+    <Code_Cause_English />
+  </Table>
+  <Table>
+    <Category_ID>SANWA.Robot</Category_ID>
+    <Category_Description>Robot 命令</Category_Description>
+    <Code_Name>各軸回 ORG 的位置</Code_Name>
+    <Code_Type>CMD</Code_Type>
+    <Code_ID>RHOME</Code_ID>
+    <Code_Cause>各軸回 ORG 的位置</Code_Cause>
+    <Code_Cause_English />
+  </Table>
+  <Table>
+    <Category_ID>SANWA.Robot</Category_ID>
+    <Category_Description>Robot 命令</Category_Description>
+    <Code_Name>取片</Code_Name>
+    <Code_Type>CMD</Code_Type>
+    <Code_ID>GET__</Code_ID>
+    <Code_Cause>取片</Code_Cause>
+    <Code_Cause_English />
+  </Table>
+  <Table>
+    <Category_ID>SANWA.Robot</Category_ID>
+    <Category_Description>Robot 命令</Category_Description>
+    <Code_Name>放片</Code_Name>
+    <Code_Type>CMD</Code_Type>
+    <Code_ID>PUT__</Code_ID>
+    <Code_Cause>放片</Code_Cause>
+    <Code_Cause_English />
+  </Table>
+  <Table>
+    <Category_ID>SANWA.Robot</Category_ID>
+    <Category_Description>Robot 命令</Category_Description>
+    <Code_Name>取片+放片 動作指令(Exchange)</Code_Name>
+    <Code_Type>CMD</Code_Type>
+    <Code_ID>CARRY</Code_ID>
+    <Code_Cause>取片+放片 動作指令(Exchange)</Code_Cause>
+    <Code_Cause_English />
+  </Table>
+  <Table>
+    <Category_ID>SANWA.Robot</Category_ID>
+    <Category_Description>Robot 命令</Category_Description>
+    <Code_Name>取片 SXZ 軸到位後停止</Code_Name>
+    <Code_Type>CMD</Code_Type>
+    <Code_ID>GETW_</Code_ID>
+    <Code_Cause>取片 SXZ 軸到位後停止</Code_Cause>
+    <Code_Cause_English />
+  </Table>
+  <Table>
+    <Category_ID>SANWA.Robot</Category_ID>
+    <Category_Description>Robot 命令</Category_Description>
+    <Code_Name>放片 SXZ 軸到位後停止</Code_Name>
+    <Code_Type>CMD</Code_Type>
+    <Code_ID>PUTW_</Code_ID>
+    <Code_Cause>放片 SXZ 軸到位後停止</Code_Cause>
+    <Code_Cause_English />
+  </Table>
+  <Table>
+    <Category_ID>SANWA.Robot</Category_ID>
+    <Category_Description>Robot 命令</Category_Description>
+    <Code_Name>Arm 回 HOME 位置</Code_Name>
+    <Code_Type>CMD</Code_Type>
+    <Code_ID>RET__</Code_ID>
+    <Code_Cause>Arm 回 HOME 位置</Code_Cause>
+    <Code_Cause_English />
+  </Table>
+  <Table>
+    <Category_ID>SANWA.Robot</Category_ID>
+    <Category_Description>Robot 命令</Category_Description>
+    <Code_Name>移動指定軸到指定點位</Code_Name>
+    <Code_Type>CMD</Code_Type>
+    <Code_ID>MOVED</Code_ID>
+    <Code_Cause>移動指定軸到指定點位</Code_Cause>
+    <Code_Cause_English />
+  </Table>
+  <Table>
+    <Category_ID>SANWA.Robot</Category_ID>
+    <Category_Description>Robot 命令</Category_Description>
+    <Code_Name>ORG Search</Code_Name>
+    <Code_Type>CMD</Code_Type>
+    <Code_ID>ORG__</Code_ID>
+    <Code_Cause>ORG Search</Code_Cause>
+    <Code_Cause_English />
+  </Table>
+  <Table>
+    <Category_ID>SANWA.Robot</Category_ID>
+    <Category_Description>Robot 命令</Category_Description>
+    <Code_Name>單軸 ORG Search</Code_Name>
+    <Code_Type>CMD</Code_Type>
+    <Code_ID>EORG_</Code_ID>
+    <Code_Cause>單軸 ORG Search</Code_Cause>
+    <Code_Cause_English />
+  </Table>
+  <Table>
+    <Category_ID>SANWA.Robot</Category_ID>
+    <Category_Description>Robot 命令</Category_Description>
+    <Code_Name>Panel(Wafer) 保持</Code_Name>
+    <Code_Type>CMD</Code_Type>
+    <Code_ID>WHLD_</Code_ID>
+    <Code_Cause>Panel(Wafer) 保持</Code_Cause>
+    <Code_Cause_English />
+  </Table>
+  <Table>
+    <Category_ID>SANWA.Robot</Category_ID>
+    <Category_Description>Robot 命令</Category_Description>
+    <Code_Name>Panel(Wafer) 解除</Code_Name>
+    <Code_Type>CMD</Code_Type>
+    <Code_ID>WRLS_</Code_ID>
+    <Code_Cause>Panel(Wafer) 解除</Code_Cause>
+    <Code_Cause_English />
+  </Table>
+  <Table>
+    <Category_ID>SANWA.Robot</Category_ID>
+    <Category_Description>Robot 命令</Category_Description>
+    <Code_Name>端面檢出 (option)</Code_Name>
+    <Code_Type>CMD</Code_Type>
+    <Code_ID>ALX__</Code_ID>
+    <Code_Cause>端面檢出 (option)</Code_Cause>
+    <Code_Cause_English />
+  </Table>
+  <Table>
+    <Category_ID>SANWA.Robot</Category_ID>
+    <Category_Description>Robot 命令</Category_Description>
+    <Code_Name>Fork 開合位置變更 (option)</Code_Name>
+    <Code_Type>CMD</Code_Type>
+    <Code_ID>FORK_</Code_ID>
+    <Code_Cause>Fork 開合位置變更 (option)</Code_Cause>
+    <Code_Cause_English />
+  </Table>
+  <Table>
+    <Category_ID>SANWA.Robot</Category_ID>
+    <Category_Description>Robot 命令</Category_Description>
+    <Code_Name>Fork Calibration (option)</Code_Name>
+    <Code_Type>CMD</Code_Type>
+    <Code_ID>FRKCB</Code_ID>
+    <Code_Cause>Fork Calibration (option)</Code_Cause>
+    <Code_Cause_English />
+  </Table>
+  <Table>
+    <Category_ID>SANWA.Robot</Category_ID>
+    <Category_Description>Robot 命令</Category_Description>
+    <Code_Name>Mapping (option)</Code_Name>
+    <Code_Type>CMD</Code_Type>
+    <Code_ID>MAP__</Code_ID>
+    <Code_Cause>Mapping (option)</Code_Cause>
+    <Code_Cause_English />
+  </Table>
+  <Table>
+    <Category_ID>SANWA.Robot</Category_ID>
+    <Category_Description>Robot 命令</Category_Description>
+    <Code_Name>Multi Panel 選擇命令 (option)</Code_Name>
+    <Code_Type>CMD</Code_Type>
+    <Code_ID>MULSE</Code_ID>
+    <Code_Cause>Multi Panel 選擇命令 (option)</Code_Cause>
+    <Code_Cause_English />
+  </Table>
+  <Table>
+    <Category_ID>SANWA.Aligner</Category_ID>
+    <Category_Description>Aligner 命令</Category_Description>
+    <Code_Name>Aligner狀態取得 </Code_Name>
+    <Code_Type>GET</Code_Type>
+    <Code_ID>STS__</Code_ID>
+    <Code_Cause>Aligner狀態取得 </Code_Cause>
+    <Code_Cause_English />
+  </Table>
+  <Table>
+    <Category_ID>SANWA.Aligner</Category_ID>
+    <Category_Description>Aligner 命令</Category_Description>
+    <Code_Name>IO狀態取得 </Code_Name>
+    <Code_Type>GET</Code_Type>
+    <Code_ID>RIO__</Code_ID>
+    <Code_Cause>IO狀態取得 </Code_Cause>
+    <Code_Cause_English />
+  </Table>
+  <Table>
+    <Category_ID>SANWA.Aligner</Category_ID>
+    <Category_Description>Aligner 命令</Category_Description>
+    <Code_Name>Speed限制取得 </Code_Name>
+    <Code_Type>GET</Code_Type>
+    <Code_ID>SP___</Code_ID>
+    <Code_Cause>Speed限制取得 </Code_Cause>
+    <Code_Cause_English />
+  </Table>
+  <Table>
+    <Category_ID>SANWA.Aligner</Category_ID>
+    <Category_Description>Aligner 命令</Category_Description>
+    <Code_Name>Error履歷取得</Code_Name>
+    <Code_Type>GET</Code_Type>
+    <Code_ID>ERR__</Code_ID>
+    <Code_Cause>Error履歷取得</Code_Cause>
+    <Code_Cause_English />
+  </Table>
+  <Table>
+    <Category_ID>SANWA.Aligner</Category_ID>
+    <Category_Description>Aligner 命令</Category_Description>
+    <Code_Name>電磁閥狀態取得</Code_Name>
+    <Code_Type>GET</Code_Type>
+    <Code_ID>SV___</Code_ID>
+    <Code_Cause>電磁閥狀態取得</Code_Cause>
+    <Code_Cause_English />
+  </Table>
+  <Table>
+    <Category_ID>SANWA.Aligner</Category_ID>
+    <Category_Description>Aligner 命令</Category_Description>
+    <Code_Name>取得Aligner參數值</Code_Name>
+    <Code_Type>GET</Code_Type>
+    <Code_ID>PARAM</Code_ID>
+    <Code_Cause>取得Aligner參數值</Code_Cause>
+    <Code_Cause_English />
+  </Table>
+  <Table>
+    <Category_ID>SANWA.Aligner</Category_ID>
+    <Category_Description>Aligner 命令</Category_Description>
+    <Code_Name>取得Aligner參數詳細資料</Code_Name>
+    <Code_Type>GET</Code_Type>
+    <Code_ID>PARSY</Code_ID>
+    <Code_Cause>取得Aligner參數詳細資料</Code_Cause>
+    <Code_Cause_English />
+  </Table>
+  <Table>
+    <Category_ID>SANWA.Aligner</Category_ID>
+    <Category_Description>Aligner 命令</Category_Description>
+    <Code_Name>取得目前Aligner各軸的位置</Code_Name>
+    <Code_Type>GET</Code_Type>
+    <Code_ID>POS__</Code_ID>
+    <Code_Cause>取得目前Aligner各軸的位置</Code_Cause>
+    <Code_Cause_English />
+  </Table>
+  <Table>
+    <Category_ID>SANWA.Aligner</Category_ID>
+    <Category_Description>Aligner 命令</Category_Description>
+    <Code_Name>IO狀態設定 </Code_Name>
+    <Code_Type>SET</Code_Type>
+    <Code_ID>RIO__</Code_ID>
+    <Code_Cause>IO狀態設定 </Code_Cause>
+    <Code_Cause_English />
+  </Table>
+  <Table>
+    <Category_ID>SANWA.Aligner</Category_ID>
+    <Category_Description>Aligner 命令</Category_Description>
+    <Code_Name>速度限制設定  </Code_Name>
+    <Code_Type>SET</Code_Type>
+    <Code_ID>SP___</Code_ID>
+    <Code_Cause>速度限制設定  </Code_Cause>
+    <Code_Cause_English />
+  </Table>
+  <Table>
+    <Category_ID>SANWA.Aligner</Category_ID>
+    <Category_Description>Aligner 命令</Category_Description>
+    <Code_Name>設定晶圓(Wafer)大小</Code_Name>
+    <Code_Type>SET</Code_Type>
+    <Code_ID>ALIGN</Code_ID>
+    <Code_Cause>設定晶圓(Wafer)大小</Code_Cause>
+    <Code_Cause_English />
+  </Table>
+  <Table>
+    <Category_ID>SANWA.Aligner</Category_ID>
+    <Category_Description>Aligner 命令</Category_Description>
+    <Code_Name>動作暫停 </Code_Name>
+    <Code_Type>SET</Code_Type>
+    <Code_ID>PAUSE</Code_ID>
+    <Code_Cause>動作暫停 </Code_Cause>
+    <Code_Cause_English />
+  </Table>
+  <Table>
+    <Category_ID>SANWA.Aligner</Category_ID>
+    <Category_Description>Aligner 命令</Category_Description>
+    <Code_Name>暫停解除 </Code_Name>
+    <Code_Type>SET</Code_Type>
+    <Code_ID>CONT_</Code_ID>
+    <Code_Cause>暫停解除 </Code_Cause>
+    <Code_Cause_English />
+  </Table>
+  <Table>
+    <Category_ID>SANWA.Aligner</Category_ID>
+    <Category_Description>Aligner 命令</Category_Description>
+    <Code_Name>動作停止 </Code_Name>
+    <Code_Type>SET</Code_Type>
+    <Code_ID>STOP_</Code_ID>
+    <Code_Cause>動作停止 </Code_Cause>
+    <Code_Cause_English />
+  </Table>
+  <Table>
+    <Category_ID>SANWA.Aligner</Category_ID>
+    <Category_Description>Aligner 命令</Category_Description>
+    <Code_Name>動作模式設定 </Code_Name>
+    <Code_Type>SET</Code_Type>
+    <Code_ID>MODE_</Code_ID>
+    <Code_Cause>動作模式設定 </Code_Cause>
+    <Code_Cause_English />
+  </Table>
+  <Table>
+    <Category_ID>SANWA.Aligner</Category_ID>
+    <Category_Description>Aligner 命令</Category_Description>
+    <Code_Name>Step動作等待解除 </Code_Name>
+    <Code_Type>SET</Code_Type>
+    <Code_ID>STPDO</Code_ID>
+    <Code_Cause>Step動作等待解除 </Code_Cause>
+    <Code_Cause_English />
+  </Table>
+  <Table>
+    <Category_ID>SANWA.Aligner</Category_ID>
+    <Category_Description>Aligner 命令</Category_Description>
+    <Code_Name>Error 解除 </Code_Name>
+    <Code_Type>SET</Code_Type>
+    <Code_ID>RESET</Code_ID>
+    <Code_Cause>Error 解除 </Code_Cause>
+    <Code_Cause_English />
+  </Table>
+  <Table>
+    <Category_ID>SANWA.Aligner</Category_ID>
+    <Category_Description>Aligner 命令</Category_Description>
+    <Code_Name>Servo on</Code_Name>
+    <Code_Type>SET</Code_Type>
+    <Code_ID>SERVO</Code_ID>
+    <Code_Cause>Servo on</Code_Cause>
+    <Code_Cause_English />
+  </Table>
+  <Table>
+    <Category_ID>SANWA.Aligner</Category_ID>
+    <Category_Description>Aligner 命令</Category_Description>
+    <Code_Name>電磁閥狀態設定</Code_Name>
+    <Code_Type>SET</Code_Type>
+    <Code_ID>SV___</Code_ID>
+    <Code_Cause>電磁閥狀態設定</Code_Cause>
+    <Code_Cause_English />
+  </Table>
+  <Table>
+    <Category_ID>SANWA.Aligner</Category_ID>
+    <Category_Description>Aligner 命令</Category_Description>
+    <Code_Name>設定LOG file 儲存</Code_Name>
+    <Code_Type>SET</Code_Type>
+    <Code_ID>LOGSV</Code_ID>
+    <Code_Cause>設定LOG file 儲存</Code_Cause>
+    <Code_Cause_English />
+  </Table>
+  <Table>
+    <Category_ID>SANWA.Aligner</Category_ID>
+    <Category_Description>Aligner 命令</Category_Description>
+    <Code_Name>設定Aligner參數值</Code_Name>
+    <Code_Type>SET</Code_Type>
+    <Code_ID>PARAM</Code_ID>
+    <Code_Cause>設定Aligner參數值</Code_Cause>
+    <Code_Cause_English />
+  </Table>
+  <Table>
+    <Category_ID>SANWA.Aligner</Category_ID>
+    <Category_Description>Aligner 命令</Category_Description>
+    <Code_Name>儲存Aligner參數</Code_Name>
+    <Code_Type>SET</Code_Type>
+    <Code_ID>SAVE_</Code_ID>
+    <Code_Cause>儲存Aligner參數</Code_Cause>
+    <Code_Cause_English />
+  </Table>
+  <Table>
+    <Category_ID>SANWA.Aligner</Category_ID>
+    <Category_Description>Aligner 命令</Category_Description>
+    <Code_Name>各軸移動至HOME位置</Code_Name>
+    <Code_Type>CMD</Code_Type>
+    <Code_ID>HOME_</Code_ID>
+    <Code_Cause>各軸移動至HOME位置</Code_Cause>
+    <Code_Cause_English />
+  </Table>
+  <Table>
+    <Category_ID>SANWA.Aligner</Category_ID>
+    <Category_Description>Aligner 命令</Category_Description>
+    <Code_Name>各軸回ORG的位置</Code_Name>
+    <Code_Type>CMD</Code_Type>
+    <Code_ID>RHOME</Code_ID>
+    <Code_Cause>各軸回ORG的位置</Code_Cause>
+    <Code_Cause_English />
+  </Table>
+  <Table>
+    <Category_ID>SANWA.Aligner</Category_ID>
+    <Category_Description>Aligner 命令</Category_Description>
+    <Code_Name>移動指定軸到指定點位</Code_Name>
+    <Code_Type>CMD</Code_Type>
+    <Code_ID>MOVED</Code_ID>
+    <Code_Cause>移動指定軸到指定點位</Code_Cause>
+    <Code_Cause_English />
+  </Table>
+  <Table>
+    <Category_ID>SANWA.Aligner</Category_ID>
+    <Category_Description>Aligner 命令</Category_Description>
+    <Code_Name>ORG Search</Code_Name>
+    <Code_Type>CMD</Code_Type>
+    <Code_ID>ORG__</Code_ID>
+    <Code_Cause>ORG Search</Code_Cause>
+    <Code_Cause_English />
+  </Table>
+  <Table>
+    <Category_ID>SANWA.Aligner</Category_ID>
+    <Category_Description>Aligner 命令</Category_Description>
+    <Code_Name>單軸ORG Search</Code_Name>
+    <Code_Type>CMD</Code_Type>
+    <Code_ID>EORG_</Code_ID>
+    <Code_Cause>單軸ORG Search</Code_Cause>
+    <Code_Cause_English />
+  </Table>
+  <Table>
+    <Category_ID>SANWA.Aligner</Category_ID>
+    <Category_Description>Aligner 命令</Category_Description>
+    <Code_Name>Arm原點移動</Code_Name>
+    <Code_Type>CMD</Code_Type>
+    <Code_ID>RET__</Code_ID>
+    <Code_Cause>Arm原點移動</Code_Cause>
+    <Code_Cause_English />
+  </Table>
+  <Table>
+    <Category_ID>SANWA.Aligner</Category_ID>
+    <Category_Description>Aligner 命令</Category_Description>
+    <Code_Name>保持晶圓控制</Code_Name>
+    <Code_Type>CMD</Code_Type>
+    <Code_ID>WHLD_</Code_ID>
+    <Code_Cause>保持晶圓控制</Code_Cause>
+    <Code_Cause_English />
+  </Table>
+  <Table>
+    <Category_ID>SANWA.Aligner</Category_ID>
+    <Category_Description>Aligner 命令</Category_Description>
+    <Code_Name>釋放晶圓控制</Code_Name>
+    <Code_Type>CMD</Code_Type>
+    <Code_ID>WRLS_</Code_ID>
+    <Code_Cause>釋放晶圓控制</Code_Cause>
+    <Code_Cause_English />
+  </Table>
+  <Table>
+    <Category_ID>SANWA.Aligner</Category_ID>
+    <Category_Description>Aligner 命令</Category_Description>
+    <Code_Name>尋找晶圓(Wafer)缺口(notch)後,移動至所需的角度位置</Code_Name>
+    <Code_Type>CMD</Code_Type>
+    <Code_ID>ALIGN</Code_ID>
+    <Code_Cause>尋找晶圓(Wafer)缺口(notch)後,移動至所需的角度位置</Code_Cause>
+    <Code_Cause_English />
+  </Table>
+  <Table>
+    <Category_ID>System</Category_ID>
+    <Category_Description>系統訊息</Category_Description>
+    <Code_Name>Robot</Code_Name>
+    <Code_Type>EquipmentType</Code_Type>
+    <Code_ID>Robot</Code_ID>
+    <Code_Cause>Robot</Code_Cause>
+    <Code_Cause_English>Robot</Code_Cause_English>
+  </Table>
+  <Table>
+    <Category_ID>System</Category_ID>
+    <Category_Description>系統訊息</Category_Description>
+    <Code_Name>Aligner</Code_Name>
+    <Code_Type>EquipmentType</Code_Type>
+    <Code_ID>Aligner</Code_ID>
+    <Code_Cause>Aligner</Code_Cause>
+    <Code_Cause_English>Aligner</Code_Cause_English>
+  </Table>
+  <Table>
+    <Category_ID>System</Category_ID>
+    <Category_Description>系統訊息</Category_Description>
+    <Code_Name>OCR</Code_Name>
+    <Code_Type>EquipmentType</Code_Type>
+    <Code_ID>OCR</Code_ID>
+    <Code_Cause>OCR</Code_Cause>
+    <Code_Cause_English>OCR</Code_Cause_English>
+  </Table>
+  <Table>
+    <Category_ID>System</Category_ID>
+    <Category_Description>系統訊息</Category_Description>
+    <Code_Name>Load Port</Code_Name>
+    <Code_Type>EquipmentType</Code_Type>
+    <Code_ID>LoadPort</Code_ID>
+    <Code_Cause>Load Port</Code_Cause>
+    <Code_Cause_English>Load Port</Code_Cause_English>
+  </Table>
+  <Table>
+    <Category_ID>System</Category_ID>
+    <Category_Description>系統訊息</Category_Description>
+    <Code_Name>DIO</Code_Name>
+    <Code_Type>EquipmentType</Code_Type>
+    <Code_ID>DIO</Code_ID>
+    <Code_Cause>DIO</Code_Cause>
+    <Code_Cause_English>DIO</Code_Cause_English>
+  </Table>
+  <Table>
+    <Category_ID>System</Category_ID>
+    <Category_Description>系統訊息</Category_Description>
+    <Code_Name>SANWA</Code_Name>
+    <Code_Type>EquipmentSupplier</Code_Type>
+    <Code_ID>SANWA</Code_ID>
+    <Code_Cause>SANWA</Code_Cause>
+    <Code_Cause_English>SANWA</Code_Cause_English>
+  </Table>
+  <Table>
+    <Category_ID>System</Category_ID>
+    <Category_Description>系統訊息</Category_Description>
+    <Code_Name>Kawasaki</Code_Name>
+    <Code_Type>EquipmentSupplier</Code_Type>
+    <Code_ID>Kawasaki</Code_ID>
+    <Code_Cause>Kawasaki</Code_Cause>
+    <Code_Cause_English>Kawasaki</Code_Cause_English>
+  </Table>
+  <Table>
+    <Category_ID>System</Category_ID>
+    <Category_Description>系統訊息</Category_Description>
+    <Code_Name>test</Code_Name>
+    <Code_Type>Check</Code_Type>
+    <Code_ID>test</Code_ID>
+    <Code_Cause>test</Code_Cause>
+    <Code_Cause_English />
+  </Table>
+  <Table>
+    <Category_ID>COGNEX.OCR</Category_ID>
+    <Category_Description>ORC 命令</Category_Description>
+    <Code_Name>Read</Code_Name>
+    <Code_Type>CMD</Code_Type>
+    <Code_ID>Read</Code_ID>
+    <Code_Cause>OCR Read</Code_Cause>
+    <Code_Cause_English />
+  </Table>
+  <Table>
+    <Category_ID>HST.OCR</Category_ID>
+    <Category_Description>ORC 命令</Category_Description>
+    <Code_Name>Read</Code_Name>
+    <Code_Type>CMD</Code_Type>
+    <Code_ID>Read</Code_ID>
+    <Code_Cause>OCR Read</Code_Cause>
+    <Code_Cause_English />
+  </Table>
+  <Table>
+    <Category_ID>System</Category_ID>
+    <Category_Description>系統訊息</Category_Description>
+    <Code_Name>COGNEX</Code_Name>
+    <Code_Type>EquipmentSupplier</Code_Type>
+    <Code_ID>COGNEX</Code_ID>
+    <Code_Cause>COGNEX</Code_Cause>
+    <Code_Cause_English>COGNEX</Code_Cause_English>
+  </Table>
+  <Table>
+    <Category_ID>System</Category_ID>
+    <Category_Description>系統訊息</Category_Description>
+    <Code_Name>HST</Code_Name>
+    <Code_Type>EquipmentSupplier</Code_Type>
+    <Code_ID>HST</Code_ID>
+    <Code_Cause>HST</Code_Cause>
+    <Code_Cause_English>HST</Code_Cause_English>
+  </Table>
+  <Table>
+    <Category_ID>System</Category_ID>
+    <Category_Description>系統訊息</Category_Description>
+    <Code_Name>三和命令格式</Code_Name>
+    <Code_Type>SANWA.Command.Format</Code_Type>
+    <Code_ID>${0}{1}{2}:{3}</Code_ID>
+    <Code_Cause>三和命令格式</Code_Cause>
+    <Code_Cause_English />
+  </Table>
+  <Table>
+    <Category_ID>System</Category_ID>
+    <Category_Description>系統訊息</Category_Description>
+    <Code_Name>Cognex 命令格式</Code_Name>
+    <Code_Type>COGNEX.Command.Format</Code_Type>
+    <Code_ID>{0}</Code_ID>
+    <Code_Cause>Cognex 命令格式</Code_Cause>
+    <Code_Cause_English />
+  </Table>
+  <Table>
+    <Category_ID>System</Category_ID>
+    <Category_Description>系統訊息</Category_Description>
+    <Code_Name>HST 命令格式</Code_Name>
+    <Code_Type>HST.Command.Format</Code_Type>
+    <Code_ID>{0}</Code_ID>
+    <Code_Cause>HST 命令格式</Code_Cause>
+    <Code_Cause_English />
+  </Table>
+  <Table>
+    <Category_ID>EquipmentAlarmCode</Category_ID>
+    <Category_Description>設備警示代碼</Category_Description>
+    <Code_Name>SANWA Robot Alarm ID</Code_Name>
+    <Code_Type>SANWA.ROBOT</Code_Type>
+    <Code_ID>00</Code_ID>
+    <Code_Cause>三和 Robot 警示群組代碼</Code_Cause>
+    <Code_Cause_English />
+  </Table>
+  <Table>
+    <Category_ID>EquipmentAlarmCode</Category_ID>
+    <Category_Description>設備警示代碼</Category_Description>
+    <Code_Name>SANWA Aligner Alarm ID</Code_Name>
+    <Code_Type>SANEA.ALIGNER</Code_Type>
+    <Code_ID>A0</Code_ID>
+    <Code_Cause>三和 Aligent 警示群組代碼</Code_Cause>
+    <Code_Cause_English />
+  </Table>
+  <Table>
+    <Category_ID>00</Category_ID>
+    <Category_Description>SANWA Robot Error 機台錯誤訊息</Category_Description>
+    <Code_Name>ECD_GNR_NORMAL_STOP</Code_Name>
+    <Code_Type>General Alarm</Code_Type>
+    <Code_ID>80800000</Code_ID>
+    <Code_Cause>停止按鈕被觸發</Code_Cause>
+    <Code_Cause_English>Normal Stop(Stop Button Locked)</Code_Cause_English>
+  </Table>
+  <Table>
+    <Category_ID>00</Category_ID>
+    <Category_Description>SANWA Robot Error 機台錯誤訊息</Category_Description>
+    <Code_Name>ECD_GNR_FILE_FAIL</Code_Name>
+    <Code_Type>General Alarm</Code_Type>
+    <Code_ID>80801000</Code_ID>
+    <Code_Cause>讀取或寫入記憶卡失敗</Code_Cause>
+    <Code_Cause_English>File Read/Write Fail</Code_Cause_English>
+  </Table>
+  <Table>
+    <Category_ID>00</Category_ID>
+    <Category_Description>SANWA Robot Error 機台錯誤訊息</Category_Description>
+    <Code_Name>ECD_GNR_BUG_TIMER</Code_Name>
+    <Code_Type>General Alarm</Code_Type>
+    <Code_ID>80802000</Code_ID>
+    <Code_Cause>記憶體處理錯誤</Code_Cause>
+    <Code_Cause_English>Memory Process Fail</Code_Cause_English>
+  </Table>
+  <Table>
+    <Category_ID>00</Category_ID>
+    <Category_Description>SANWA Robot Error 機台錯誤訊息</Category_Description>
+    <Code_Name>ECD_GNR_INTERNAL_FAIL</Code_Name>
+    <Code_Type>General Alarm</Code_Type>
+    <Code_ID>80803000</Code_ID>
+    <Code_Cause>內部錯誤(一般是因為控制器硬體異常)</Code_Cause>
+    <Code_Cause_English>Internal Fail</Code_Cause_English>
+  </Table>
+  <Table>
+    <Category_ID>00</Category_ID>
+    <Category_Description>SANWA Robot Error 機台錯誤訊息</Category_Description>
+    <Code_Name>ECD_GNR_DIO_FAIL</Code_Name>
+    <Code_Type>General Alarm</Code_Type>
+    <Code_ID>80804000</Code_ID>
+    <Code_Cause>DIO 錯誤(控制器異常)</Code_Cause>
+    <Code_Cause_English>DIO Fail</Code_Cause_English>
+  </Table>
+  <Table>
+    <Category_ID>00</Category_ID>
+    <Category_Description>SANWA Robot Error 機台錯誤訊息</Category_Description>
+    <Code_Name>ECD_GNR_INTERLOCK</Code_Name>
+    <Code_Type>General Alarm</Code_Type>
+    <Code_ID>80805000</Code_ID>
+    <Code_Cause>互鎖輸入被觸發</Code_Cause>
+    <Code_Cause_English>InterLock Enable</Code_Cause_English>
+  </Table>
+  <Table>
+    <Category_ID>00</Category_ID>
+    <Category_Description>SANWA Robot Error 機台錯誤訊息</Category_Description>
+    <Code_Name>ECD_MTN_POSITION_OD</Code_Name>
+    <Code_Type>Motion Alarm</Code_Type>
+    <Code_ID>91800000</Code_ID>
+    <Code_Cause>靜態脫調(由控制器端引發)</Code_Cause>
+    <Code_Cause_English>Over Deviation(Static)</Code_Cause_English>
+  </Table>
+  <Table>
+    <Category_ID>00</Category_ID>
+    <Category_Description>SANWA Robot Error 機台錯誤訊息</Category_Description>
+    <Code_Name>ECD_MTN_SOFT_LIMIT_P</Code_Name>
+    <Code_Type>Motion Alarm</Code_Type>
+    <Code_ID>91801000</Code_ID>
+    <Code_Cause>位置超出軟體正極限</Code_Cause>
+    <Code_Cause_English>Soft Limit+</Code_Cause_English>
+  </Table>
+  <Table>
+    <Category_ID>00</Category_ID>
+    <Category_Description>SANWA Robot Error 機台錯誤訊息</Category_Description>
+    <Code_Name>ECD_MTN_SOFT_LIMIT_M</Code_Name>
+    <Code_Type>Motion Alarm</Code_Type>
+    <Code_ID>91802000</Code_ID>
+    <Code_Cause>位置超出軟體負極限</Code_Cause>
+    <Code_Cause_English>Soft Limit-</Code_Cause_English>
+  </Table>
+  <Table>
+    <Category_ID>00</Category_ID>
+    <Category_Description>SANWA Robot Error 機台錯誤訊息</Category_Description>
+    <Code_Name>ECD_MTN_HARD_LIMIT_P</Code_Name>
+    <Code_Type>Motion Alarm</Code_Type>
+    <Code_ID>91803000</Code_ID>
+    <Code_Cause>位置超出硬體正極限</Code_Cause>
+    <Code_Cause_English>Hard Limit+</Code_Cause_English>
+  </Table>
+  <Table>
+    <Category_ID>00</Category_ID>
+    <Category_Description>SANWA Robot Error 機台錯誤訊息</Category_Description>
+    <Code_Name>ECD_MTN_HARD_LIMIT_M</Code_Name>
+    <Code_Type>Motion Alarm</Code_Type>
+    <Code_ID>91804000</Code_ID>
+    <Code_Cause>位置超出硬體負極限</Code_Cause>
+    <Code_Cause_English>Hard Limit-</Code_Cause_English>
+  </Table>
+  <Table>
+    <Category_ID>00</Category_ID>
+    <Category_Description>SANWA Robot Error 機台錯誤訊息</Category_Description>
+    <Code_Name>ECD_MTN_SERVO_NOT_READY</Code_Name>
+    <Code_Type>Motion Alarm</Code_Type>
+    <Code_ID>81805000</Code_ID>
+    <Code_Cause>馬達驅動器異常(Servo OFF 狀態)</Code_Cause>
+    <Code_Cause_English>Servo not Ready</Code_Cause_English>
+  </Table>
+  <Table>
+    <Category_ID>00</Category_ID>
+    <Category_Description>SANWA Robot Error 機台錯誤訊息</Category_Description>
+    <Code_Name>ECD_MTN_ORG_DISABLED</Code_Name>
+    <Code_Type>Motion Alarm</Code_Type>
+    <Code_ID>91806000</Code_ID>
+    <Code_Cause>原點復歸在參數中被關閉</Code_Cause>
+    <Code_Cause_English>ORG Search Disabled</Code_Cause_English>
+  </Table>
+  <Table>
+    <Category_ID>00</Category_ID>
+    <Category_Description>SANWA Robot Error 機台錯誤訊息</Category_Description>
+    <Code_Name>ECD_MTN_ARM_EXTEND</Code_Name>
+    <Code_Type>Motion Alarm</Code_Type>
+    <Code_ID>91807000</Code_ID>
+    <Code_Cause>手臂伸出未退回，無法進行其他動作。</Code_Cause>
+    <Code_Cause_English>Arm Extend(Retract First)</Code_Cause_English>
+  </Table>
+  <Table>
+    <Category_ID>00</Category_ID>
+    <Category_Description>SANWA Robot Error 機台錯誤訊息</Category_Description>
+    <Code_Name>ECD_MTN_FINISH_TMO</Code_Name>
+    <Code_Type>Motion Alarm</Code_Type>
+    <Code_ID>91808000</Code_ID>
+    <Code_Cause>等待移動結束超時</Code_Cause>
+    <Code_Cause_English>Wait Finish Timeout</Code_Cause_English>
+  </Table>
+  <Table>
+    <Category_ID>00</Category_ID>
+    <Category_Description>SANWA Robot Error 機台錯誤訊息</Category_Description>
+    <Code_Name>ECD_MTN_FOLLOWING_OD</Code_Name>
+    <Code_Type>Motion Alarm</Code_Type>
+    <Code_ID>91809000</Code_ID>
+    <Code_Cause>動態脫調(由控制器端引發)</Code_Cause>
+    <Code_Cause_English>Over Deviation(Dynamic)</Code_Cause_English>
+  </Table>
+  <Table>
+    <Category_ID>00</Category_ID>
+    <Category_Description>SANWA Robot Error 機台錯誤訊息</Category_Description>
+    <Code_Name>ECD_MTN_INTERFERE</Code_Name>
+    <Code_Type>Motion Alarm</Code_Type>
+    <Code_ID>8180A000</Code_ID>
+    <Code_Cause>動作干涉停止(由 DIO 觸發)</Code_Cause>
+    <Code_Cause_English>Motion Interfere(By DIO)</Code_Cause_English>
+  </Table>
+  <Table>
+    <Category_ID>00</Category_ID>
+    <Category_Description>SANWA Robot Error 機台錯誤訊息</Category_Description>
+    <Code_Name>ECD_MTN_FLIP_INTERFERE</Code_Name>
+    <Code_Type>Motion Alarm</Code_Type>
+    <Code_ID>9180B000</Code_ID>
+    <Code_Cause>動作干涉停止(翻轉軸干涉)</Code_Cause>
+    <Code_Cause_English>Motion Interfere(Flip)</Code_Cause_English>
+  </Table>
+  <Table>
+    <Category_ID>00</Category_ID>
+    <Category_Description>SANWA Robot Error 機台錯誤訊息</Category_Description>
+    <Code_Name>ECD_MTN_MAP_FAIL</Code_Name>
+    <Code_Type>Motion Alarm</Code_Type>
+    <Code_ID>81810000</Code_ID>
+    <Code_Cause>Mapping 失敗</Code_Cause>
+    <Code_Cause_English>Mapping Fail</Code_Cause_English>
+  </Table>
+  <Table>
+    <Category_ID>00</Category_ID>
+    <Category_Description>SANWA Robot Error 機台錯誤訊息</Category_Description>
+    <Code_Name>ECD_MTN_MAP_INTERFERE</Code_Name>
+    <Code_Type>Motion Alarm</Code_Type>
+    <Code_ID>81811000</Code_ID>
+    <Code_Cause>Mapping 干涉</Code_Cause>
+    <Code_Cause_English>Mapping Interfere</Code_Cause_English>
+  </Table>
+  <Table>
+    <Category_ID>00</Category_ID>
+    <Category_Description>SANWA Robot Error 機台錯誤訊息</Category_Description>
+    <Code_Name>ECD_MTN_MOVE_ORG_FAIL</Code_Name>
+    <Code_Type>Motion Alarm</Code_Type>
+    <Code_ID>91812000</Code_ID>
+    <Code_Cause>原點復歸失敗</Code_Cause>
+    <Code_Cause_English>ORG Search Fail</Code_Cause_English>
+  </Table>
+  <Table>
+    <Category_ID>00</Category_ID>
+    <Category_Description>SANWA Robot Error 機台錯誤訊息</Category_Description>
+    <Code_Name>ECD_MTN_REQUIRE_ORG</Code_Name>
+    <Code_Type>Motion Alarm</Code_Type>
+    <Code_ID>81813000</Code_ID>
+    <Code_Cause>需要先執行原點復歸</Code_Cause>
+    <Code_Cause_English>Require ORG Search</Code_Cause_English>
+  </Table>
+  <Table>
+    <Category_ID>00</Category_ID>
+    <Category_Description>SANWA Robot Error 機台錯誤訊息</Category_Description>
+    <Code_Name>ECD_MTN_SERVO_OFF</Code_Name>
+    <Code_Type>Motion Alarm</Code_Type>
+    <Code_ID>81814000</Code_ID>
+    <Code_Cause>在 Servo Off 時執行 Motion 命令</Code_Cause>
+    <Code_Cause_English>Servo Off(Need Servo On)</Code_Cause_English>
+  </Table>
+  <Table>
+    <Category_ID>00</Category_ID>
+    <Category_Description>SANWA Robot Error 機台錯誤訊息</Category_Description>
+    <Code_Name>ECD_MTN_ROBOT_IN_ALARM</Code_Name>
+    <Code_Type>Motion Alarm</Code_Type>
+    <Code_ID>81815000</Code_ID>
+    <Code_Cause>目前有錯誤發生無法進行動作，請先排除錯誤。</Code_Cause>
+    <Code_Cause_English>Robot in Alarm(Reset First)</Code_Cause_English>
+  </Table>
+  <Table>
+    <Category_ID>00</Category_ID>
+    <Category_Description>SANWA Robot Error 機台錯誤訊息</Category_Description>
+    <Code_Name>ECD_MTN_ROBOT_PAUSED</Code_Name>
+    <Code_Type>Motion Alarm</Code_Type>
+    <Code_ID>81816000</Code_ID>
+    <Code_Cause>Robot 目前在暫停狀態，無法動作。</Code_Cause>
+    <Code_Cause_English>Robot Paused</Code_Cause_English>
+  </Table>
+  <Table>
+    <Category_ID>00</Category_ID>
+    <Category_Description>SANWA Robot Error 機台錯誤訊息</Category_Description>
+    <Code_Name>ECD_MTN_SHOME_FAIL</Code_Name>
+    <Code_Type>Motion Alarm</Code_Type>
+    <Code_ID>81817000</Code_ID>
+    <Code_Cause>SHOME 命令失敗</Code_Cause>
+    <Code_Cause_English>SHOME Command Fail</Code_Cause_English>
+  </Table>
+  <Table>
+    <Category_ID>00</Category_ID>
+    <Category_Description>SANWA Robot Error 機台錯誤訊息</Category_Description>
+    <Code_Name>ECD_MTN_SHOME_OVER_LIMIT</Code_Name>
+    <Code_Type>Motion Alarm</Code_Type>
+    <Code_ID>91818000</Code_ID>
+    <Code_Cause>SHOME 命令失敗，位置處於不安全範圍。</Code_Cause>
+    <Code_Cause_English>SHOME Position Over Safety Limit</Code_Cause_English>
+  </Table>
+  <Table>
+    <Category_ID>00</Category_ID>
+    <Category_Description>SANWA Robot Error 機台錯誤訊息</Category_Description>
+    <Code_Name>ECD_MTN_ALIGN_OVER_LIMIT_R</Code_Name>
+    <Code_Type>Alignment Error</Code_Type>
+    <Code_ID>81820000</Code_ID>
+    <Code_Cause>Alignment: Arm 軸的補正設定值過大</Code_Cause>
+    <Code_Cause_English>Align Over Limit R</Code_Cause_English>
+  </Table>
+  <Table>
+    <Category_ID>00</Category_ID>
+    <Category_Description>SANWA Robot Error 機台錯誤訊息</Category_Description>
+    <Code_Name>ECD_MTN_ALIGN_PARAMETER1</Code_Name>
+    <Code_Type>Alignment Error</Code_Type>
+    <Code_ID>81821000</Code_ID>
+    <Code_Cause>Alignment: 設定值 1 異常</Code_Cause>
+    <Code_Cause_English>Align Parameter1</Code_Cause_English>
+  </Table>
+  <Table>
+    <Category_ID>00</Category_ID>
+    <Category_Description>SANWA Robot Error 機台錯誤訊息</Category_Description>
+    <Code_Name>ECD_MTN_ALIGN_PARAMETER2</Code_Name>
+    <Code_Type>Alignment Error</Code_Type>
+    <Code_ID>81822000</Code_ID>
+    <Code_Cause>Alignment: 設定值 2 異常</Code_Cause>
+    <Code_Cause_English>Align Parameter2</Code_Cause_English>
+  </Table>
+  <Table>
+    <Category_ID>00</Category_ID>
+    <Category_Description>SANWA Robot Error 機台錯誤訊息</Category_Description>
+    <Code_Name>ECD_MTN_ALIGN_NO_SENSING_R</Code_Name>
+    <Code_Type>Alignment Error</Code_Type>
+    <Code_ID>81823000</Code_ID>
+    <Code_Cause>Alignment: R 側無 Sensor 檢出</Code_Cause>
+    <Code_Cause_English>Align No Sensing R</Code_Cause_English>
+  </Table>
+  <Table>
+    <Category_ID>00</Category_ID>
+    <Category_Description>SANWA Robot Error 機台錯誤訊息</Category_Description>
+    <Code_Name>ECD_MTN_ALIGN_NO_SENSING_L</Code_Name>
+    <Code_Type>Alignment Error</Code_Type>
+    <Code_ID>81824000</Code_ID>
+    <Code_Cause>Alignment: L 側無 Sensor 檢出</Code_Cause>
+    <Code_Cause_English>Align No Sensing L</Code_Cause_English>
+  </Table>
+  <Table>
+    <Category_ID>00</Category_ID>
+    <Category_Description>SANWA Robot Error 機台錯誤訊息</Category_Description>
+    <Code_Name>ECD_MTN_ALIGN_OVER_SENSING</Code_Name>
+    <Code_Type>Alignment Error</Code_Type>
+    <Code_ID>81825000</Code_ID>
+    <Code_Cause>Alignment: Sensor ON/OFF 次數過多</Code_Cause>
+    <Code_Cause_English>Align Over Sensing</Code_Cause_English>
+  </Table>
+  <Table>
+    <Category_ID>00</Category_ID>
+    <Category_Description>SANWA Robot Error 機台錯誤訊息</Category_Description>
+    <Code_Name>ECD_MTN_ALIGN_OVER_DELTA</Code_Name>
+    <Code_Type>Alignment Error</Code_Type>
+    <Code_ID>81826000</Code_ID>
+    <Code_Cause>Alignment: 補正角度過大</Code_Cause>
+    <Code_Cause_English>Align Over Limit Delta</Code_Cause_English>
+  </Table>
+  <Table>
+    <Category_ID>00</Category_ID>
+    <Category_Description>SANWA Robot Error 機台錯誤訊息</Category_Description>
+    <Code_Name>ECD_MTN_ALIGN_OVER_LIMIT_X</Code_Name>
+    <Code_Type>Alignment Error</Code_Type>
+    <Code_ID>81827000</Code_ID>
+    <Code_Cause>Alignment: X 軸補正過大</Code_Cause>
+    <Code_Cause_English>Align Over Limit X</Code_Cause_English>
+  </Table>
+  <Table>
+    <Category_ID>00</Category_ID>
+    <Category_Description>SANWA Robot Error 機台錯誤訊息</Category_Description>
+    <Code_Name>ECD_MTN_EDGE_UNKNOWN</Code_Name>
+    <Code_Type>Edge Detect Error</Code_Type>
+    <Code_ID>81830000</Code_ID>
+    <Code_Cause>端面檢知異常失敗</Code_Cause>
+    <Code_Cause_English>Edge Unknown</Code_Cause_English>
+  </Table>
+  <Table>
+    <Category_ID>00</Category_ID>
+    <Category_Description>SANWA Robot Error 機台錯誤訊息</Category_Description>
+    <Code_Name>ECD_MTN_EDGE_PARAMETER</Code_Name>
+    <Code_Type>Edge Detect Error</Code_Type>
+    <Code_ID>81831000</Code_ID>
+    <Code_Cause>端面檢知參數錯誤</Code_Cause>
+    <Code_Cause_English>Edge Parameter</Code_Cause_English>
+  </Table>
+  <Table>
+    <Category_ID>00</Category_ID>
+    <Category_Description>SANWA Robot Error 機台錯誤訊息</Category_Description>
+    <Code_Name>ECD_MTN_EDGE_OVER_SENSING</Code_Name>
+    <Code_Type>Edge Detect Error</Code_Type>
+    <Code_ID>81832000</Code_ID>
+    <Code_Cause>端面檢知 Sensor ON/OFF 次數過多</Code_Cause>
+    <Code_Cause_English>Edge Over Sensing</Code_Cause_English>
+  </Table>
+  <Table>
+    <Category_ID>00</Category_ID>
+    <Category_Description>SANWA Robot Error 機台錯誤訊息</Category_Description>
+    <Code_Name>ECD_MTN_EDGE_NO_SENSING</Code_Name>
+    <Code_Type>Edge Detect Error</Code_Type>
+    <Code_ID>81833000</Code_ID>
+    <Code_Cause>端面檢知無 Sensor 檢出</Code_Cause>
+    <Code_Cause_English>Edge No Sensing</Code_Cause_English>
+  </Table>
+  <Table>
+    <Category_ID>00</Category_ID>
+    <Category_Description>SANWA Robot Error 機台錯誤訊息</Category_Description>
+    <Code_Name>ECD_MTN_EDGE_SENSERROR</Code_Name>
+    <Code_Type>Edge Detect Error</Code_Type>
+    <Code_ID>81834000</Code_ID>
+    <Code_Cause>端面檢知偵測錯誤</Code_Cause>
+    <Code_Cause_English>Edge Sense Error</Code_Cause_English>
+  </Table>
+  <Table>
+    <Category_ID>00</Category_ID>
+    <Category_Description>SANWA Robot Error 機台錯誤訊息</Category_Description>
+    <Code_Name>ECD_MTN_EDGE_OVER_LIMIT</Code_Name>
+    <Code_Type>Edge Detect Error</Code_Type>
+    <Code_ID>81835000</Code_ID>
+    <Code_Cause>端面檢知超出範圍</Code_Cause>
+    <Code_Cause_English>Edge Over Limit</Code_Cause_English>
+  </Table>
+  <Table>
+    <Category_ID>00</Category_ID>
+    <Category_Description>SANWA Robot Error 機台錯誤訊息</Category_Description>
+    <Code_Name>ECD_MTN_END_EF_POSITION</Code_Name>
+    <Code_Type>End Effector Error</Code_Type>
+    <Code_ID>91840000</Code_ID>
+    <Code_Cause>End Effector 位置錯誤</Code_Cause>
+    <Code_Cause_English>End_EF Position Fail</Code_Cause_English>
+  </Table>
+  <Table>
+    <Category_ID>00</Category_ID>
+    <Category_Description>SANWA Robot Error 機台錯誤訊息</Category_Description>
+    <Code_Name>ECD_MTN_END_EF_OVER_CURRENT</Code_Name>
+    <Code_Type>End Effector Error</Code_Type>
+    <Code_ID>91841000</Code_ID>
+    <Code_Cause>End Effector 馬達過電流(End Effector 開闔並使用馬控制的版本才會有此錯誤)</Code_Cause>
+    <Code_Cause_English>End_EF Over Current</Code_Cause_English>
+  </Table>
+  <Table>
+    <Category_ID>00</Category_ID>
+    <Category_Description>SANWA Robot Error 機台錯誤訊息</Category_Description>
+    <Code_Name>ECD_MTN_END_EF_OC_PEAK</Code_Name>
+    <Code_Type>End Effector Error</Code_Type>
+    <Code_ID>91842000</Code_ID>
+    <Code_Cause>End Effector 馬達過電流(峰值)</Code_Cause>
+    <Code_Cause_English>End_EF Over Current(Peak)</Code_Cause_English>
+  </Table>
+  <Table>
+    <Category_ID>00</Category_ID>
+    <Category_Description>SANWA Robot Error 機台錯誤訊息</Category_Description>
+    <Code_Name>ECD_MTN_END_EF_ENCODER_LOST</Code_Name>
+    <Code_Type>End Effector Error</Code_Type>
+    <Code_ID>91843000</Code_ID>
+    <Code_Cause>End Effector Encoder 異常</Code_Cause>
+    <Code_Cause_English>End_EF Encoder Lost</Code_Cause_English>
+  </Table>
+  <Table>
+    <Category_ID>00</Category_ID>
+    <Category_Description>SANWA Robot Error 機台錯誤訊息</Category_Description>
+    <Code_Name>ECD_MTN_FORK_PARAM_ERROR</Code_Name>
+    <Code_Type>End Effector Error</Code_Type>
+    <Code_ID>91844000</Code_ID>
+    <Code_Cause>End Effector 手臂參數錯誤</Code_Cause>
+    <Code_Cause_English>End-EF Control Parameter Error</Code_Cause_English>
+  </Table>
+  <Table>
+    <Category_ID>00</Category_ID>
+    <Category_Description>SANWA Robot Error 機台錯誤訊息</Category_Description>
+    <Code_Name>ECD_MTN_FORK_PAD_ERROR</Code_Name>
+    <Code_Type>End Effector Error</Code_Type>
+    <Code_ID>91845000</Code_ID>
+    <Code_Cause>End Effector 變化PAD 吸著方式失敗</Code_Cause>
+    <Code_Cause_English>End-EF Pad Change Fail</Code_Cause_English>
+  </Table>
+  <Table>
+    <Category_ID>00</Category_ID>
+    <Category_Description>SANWA Robot Error 機台錯誤訊息</Category_Description>
+    <Code_Name>ECD_MTN_EMERGENCY_STOP</Code_Name>
+    <Code_Type>Motion Controller</Code_Type>
+    <Code_ID>91850000</Code_ID>
+    <Code_Cause>緊急停止</Code_Cause>
+    <Code_Cause_English>Emergency Stop</Code_Cause_English>
+  </Table>
+  <Table>
+    <Category_ID>00</Category_ID>
+    <Category_Description>SANWA Robot Error 機台錯誤訊息</Category_Description>
+    <Code_Name>ECD_MTN_COUNT_OVERFLOW</Code_Name>
+    <Code_Type>Motion Controller</Code_Type>
+    <Code_ID>91851000</Code_ID>
+    <Code_Cause>脈波計數器溢位</Code_Cause>
+    <Code_Cause_English>Pulse Counter Overflow</Code_Cause_English>
+  </Table>
+  <Table>
+    <Category_ID>00</Category_ID>
+    <Category_Description>SANWA Robot Error 機台錯誤訊息</Category_Description>
+    <Code_Name>ECD_MTN_ENCODER_ERROR</Code_Name>
+    <Code_Type>Motion Controller</Code_Type>
+    <Code_ID>91852000</Code_ID>
+    <Code_Cause>編碼器脈波輸入異常</Code_Cause>
+    <Code_Cause_English>Encoder Pulse Error</Code_Cause_English>
+  </Table>
+  <Table>
+    <Category_ID>00</Category_ID>
+    <Category_Description>SANWA Robot Error 機台錯誤訊息</Category_Description>
+    <Code_Name>ECD_MTN_MJS_FAIL</Code_Name>
+    <Code_Type>Multi-Joint Simulation</Code_Type>
+    <Code_ID>81860000</Code_ID>
+    <Code_Cause>擬似多軸錯誤</Code_Cause>
+    <Code_Cause_English>Multi-Joint Simulation Fail</Code_Cause_English>
+  </Table>
+  <Table>
+    <Category_ID>00</Category_ID>
+    <Category_Description>SANWA Robot Error 機台錯誤訊息</Category_Description>
+    <Code_Name>ECD_MTN_MJS_ARM_INTERFERE</Code_Name>
+    <Code_Type>Multi-Joint Simulation</Code_Type>
+    <Code_ID>81861000</Code_ID>
+    <Code_Cause>擬似多軸 Arm 動作干涉</Code_Cause>
+    <Code_Cause_English>MJS Arm Interfere</Code_Cause_English>
+  </Table>
+  <Table>
+    <Category_ID>00</Category_ID>
+    <Category_Description>SANWA Robot Error 機台錯誤訊息</Category_Description>
+    <Code_Name>ECD_MTN_MJS_HARDWARE_ERROR</Code_Name>
+    <Code_Type>Multi-Joint Simulation</Code_Type>
+    <Code_ID>81862000</Code_ID>
+    <Code_Cause>硬體不支援擬似多軸功能</Code_Cause>
+    <Code_Cause_English>MJS Hardware Error</Code_Cause_English>
+  </Table>
+  <Table>
+    <Category_ID>00</Category_ID>
+    <Category_Description>SANWA Robot Error 機台錯誤訊息</Category_Description>
+    <Code_Name>ECD_MTN_MJS_OVER_ARM_LENGTH</Code_Name>
+    <Code_Type>Multi-Joint Simulation</Code_Type>
+    <Code_ID>81863000</Code_ID>
+    <Code_Cause>超出 Link-Arm 的最大到達範圍</Code_Cause>
+    <Code_Cause_English>MJS Over Link-Arm Length</Code_Cause_English>
+  </Table>
+  <Table>
+    <Category_ID>00</Category_ID>
+    <Category_Description>SANWA Robot Error 機台錯誤訊息</Category_Description>
+    <Code_Name>ECD_DRV_UNKNOWN_FAIL</Code_Name>
+    <Code_Type>Motor Driver Alarm</Code_Type>
+    <Code_ID>92800000</Code_ID>
+    <Code_Cause>馬達驅動器異常</Code_Cause>
+    <Code_Cause_English>Driver Unknown Fail</Code_Cause_English>
+  </Table>
+  <Table>
+    <Category_ID>00</Category_ID>
+    <Category_Description>SANWA Robot Error 機台錯誤訊息</Category_Description>
+    <Code_Name>ECD_DRV_INITIAL_FAIL</Code_Name>
+    <Code_Type>Motor Driver Alarm</Code_Type>
+    <Code_ID>92801000</Code_ID>
+    <Code_Cause>馬達驅動器初始化失敗(請檢查 CAN Bus 接線或是終端電阻)</Code_Cause>
+    <Code_Cause_English>Driver Initial Fail</Code_Cause_English>
+  </Table>
+  <Table>
+    <Category_ID>00</Category_ID>
+    <Category_Description>SANWA Robot Error 機台錯誤訊息</Category_Description>
+    <Code_Name>ECD_DRV_ALARM</Code_Name>
+    <Code_Type>Motor Driver Alarm</Code_Type>
+    <Code_ID>92802000</Code_ID>
+    <Code_Cause>馬達驅動器異常</Code_Cause>
+    <Code_Cause_English>Driver Alarm</Code_Cause_English>
+  </Table>
+  <Table>
+    <Category_ID>00</Category_ID>
+    <Category_Description>SANWA Robot Error 機台錯誤訊息</Category_Description>
+    <Code_Name>ECD_DRV_TEMPERATURE</Code_Name>
+    <Code_Type>Motor Driver Alarm</Code_Type>
+    <Code_ID>92803000</Code_ID>
+    <Code_Cause>馬達驅動器溫度異常</Code_Cause>
+    <Code_Cause_English>Driver Over Temperature</Code_Cause_English>
+  </Table>
+  <Table>
+    <Category_ID>00</Category_ID>
+    <Category_Description>SANWA Robot Error 機台錯誤訊息</Category_Description>
+    <Code_Name>ECD_DRV_OVER_CURRENT</Code_Name>
+    <Code_Type>Motor Driver Alarm</Code_Type>
+    <Code_ID>92804000</Code_ID>
+    <Code_Cause>馬達驅動器過電流</Code_Cause>
+    <Code_Cause_English>Driver Over Current</Code_Cause_English>
+  </Table>
+  <Table>
+    <Category_ID>00</Category_ID>
+    <Category_Description>SANWA Robot Error 機台錯誤訊息</Category_Description>
+    <Code_Name>ECD_DRV_POSITION_OD</Code_Name>
+    <Code_Type>Motor Driver Alarm</Code_Type>
+    <Code_ID>92805000</Code_ID>
+    <Code_Cause>馬達驅動器靜態脫調</Code_Cause>
+    <Code_Cause_English>Driver Over Deviation(Static)</Code_Cause_English>
+  </Table>
+  <Table>
+    <Category_ID>00</Category_ID>
+    <Category_Description>SANWA Robot Error 機台錯誤訊息</Category_Description>
+    <Code_Name>ECD_DRV_FOLLOWING_OD</Code_Name>
+    <Code_Type>Motor Driver Alarm</Code_Type>
+    <Code_ID>92806000</Code_ID>
+    <Code_Cause>馬達驅動器動態脫調</Code_Cause>
+    <Code_Cause_English>Driver Over Deviation(Dynamic)</Code_Cause_English>
+  </Table>
+  <Table>
+    <Category_ID>00</Category_ID>
+    <Category_Description>SANWA Robot Error 機台錯誤訊息</Category_Description>
+    <Code_Name>ECD_DRV_OVER_SPEED</Code_Name>
+    <Code_Type>Motor Driver Alarm</Code_Type>
+    <Code_ID>92807000</Code_ID>
+    <Code_Cause>馬達驅動器速度異常</Code_Cause>
+    <Code_Cause_English>Driver Over Speed</Code_Cause_English>
+  </Table>
+  <Table>
+    <Category_ID>00</Category_ID>
+    <Category_Description>SANWA Robot Error 機台錯誤訊息</Category_Description>
+    <Code_Name>ECD_DRV_LOW_VOLTAGE</Code_Name>
+    <Code_Type>Motor Driver Alarm</Code_Type>
+    <Code_ID>92808000</Code_ID>
+    <Code_Cause>馬達驅動器電壓異常</Code_Cause>
+    <Code_Cause_English>Driver Low Voltage</Code_Cause_English>
+  </Table>
+  <Table>
+    <Category_ID>00</Category_ID>
+    <Category_Description>SANWA Robot Error 機台錯誤訊息</Category_Description>
+    <Code_Name>ECD_DRV_ORG_CMD_FAIL</Code_Name>
+    <Code_Type>Motor Driver Alarm</Code_Type>
+    <Code_ID>92809000</Code_ID>
+    <Code_Cause>馬達驅動器 ORG Search 失敗</Code_Cause>
+    <Code_Cause_English>Driver ORG Search Fail</Code_Cause_English>
+  </Table>
+  <Table>
+    <Category_ID>00</Category_ID>
+    <Category_Description>SANWA Robot Error 機台錯誤訊息</Category_Description>
+    <Code_Name>ECD_DRV_PULSE_GEN</Code_Name>
+    <Code_Type>Motor Driver Alarm</Code_Type>
+    <Code_ID>9280A000</Code_ID>
+    <Code_Cause>馬達驅動器脈波產生異常</Code_Cause>
+    <Code_Cause_English>Driver Pulse Generator Fail</Code_Cause_English>
+  </Table>
+  <Table>
+    <Category_ID>00</Category_ID>
+    <Category_Description>SANWA Robot Error 機台錯誤訊息</Category_Description>
+    <Code_Name>ECD_DRV_V_MOTOR_LOW</Code_Name>
+    <Code_Type>Motor Driver Alarm</Code_Type>
+    <Code_ID>9280B000</Code_ID>
+    <Code_Cause>馬達驅動器馬達電壓異常</Code_Cause>
+    <Code_Cause_English>Driver Low Motor Voltage</Code_Cause_English>
+  </Table>
+  <Table>
+    <Category_ID>00</Category_ID>
+    <Category_Description>SANWA Robot Error 機台錯誤訊息</Category_Description>
+    <Code_Name>ECD_DRV_POWER_ON</Code_Name>
+    <Code_Type>Driver Error</Code_Type>
+    <Code_ID>82810000</Code_ID>
+    <Code_Cause>馬達驅動器電源啟動失敗</Code_Cause>
+    <Code_Cause_English>Driver Power On Fail</Code_Cause_English>
+  </Table>
+  <Table>
+    <Category_ID>00</Category_ID>
+    <Category_Description>SANWA Robot Error 機台錯誤訊息</Category_Description>
+    <Code_Name>ECD_DRV_SERVO_ON</Code_Name>
+    <Code_Type>Driver Error</Code_Type>
+    <Code_ID>92811000</Code_ID>
+    <Code_Cause>馬達驅動器無法 Servo On</Code_Cause>
+    <Code_Cause_English>Driver Servo On Fail</Code_Cause_English>
+  </Table>
+  <Table>
+    <Category_ID>00</Category_ID>
+    <Category_Description>SANWA Robot Error 機台錯誤訊息</Category_Description>
+    <Code_Name>ECD_DRV_RESET_ALARM</Code_Name>
+    <Code_Type>Driver Error</Code_Type>
+    <Code_ID>92812000</Code_ID>
+    <Code_Cause>馬達驅動器清除警報失敗</Code_Cause>
+    <Code_Cause_English>Driver Reset Alarm Fail</Code_Cause_English>
+  </Table>
+  <Table>
+    <Category_ID>00</Category_ID>
+    <Category_Description>SANWA Robot Error 機台錯誤訊息</Category_Description>
+    <Code_Name>ECD_DRV_COMMUNICATION</Code_Name>
+    <Code_Type>Driver Error</Code_Type>
+    <Code_ID>92813000</Code_ID>
+    <Code_Cause>無法與馬達驅動器通訊</Code_Cause>
+    <Code_Cause_English>Driver Communication Fail</Code_Cause_English>
+  </Table>
+  <Table>
+    <Category_ID>00</Category_ID>
+    <Category_Description>SANWA Robot Error 機台錯誤訊息</Category_Description>
+    <Code_Name>ECD_DRV_ENCODER_UNSTABLE</Code_Name>
+    <Code_Type>Driver Error</Code_Type>
+    <Code_ID>92814000</Code_ID>
+    <Code_Cause>ABS Encoder 異常</Code_Cause>
+    <Code_Cause_English>ABS Encoder Unstable</Code_Cause_English>
+  </Table>
+  <Table>
+    <Category_ID>00</Category_ID>
+    <Category_Description>SANWA Robot Error 機台錯誤訊息</Category_Description>
+    <Code_Name>ECD_DRV_ENCODER_FAIL</Code_Name>
+    <Code_Type>Driver Error</Code_Type>
+    <Code_ID>92815000</Code_ID>
+    <Code_Cause>ABS Encoder  讀取失敗</Code_Cause>
+    <Code_Cause_English>ABS Encoder Read Fail</Code_Cause_English>
+  </Table>
+  <Table>
+    <Category_ID>00</Category_ID>
+    <Category_Description>SANWA Robot Error 機台錯誤訊息</Category_Description>
+    <Code_Name>ECD_DRV_Z_PAHSE_ERR</Code_Name>
+    <Code_Type>Driver Error</Code_Type>
+    <Code_ID>92816000</Code_ID>
+    <Code_Cause>ABS Encoder Z-Phase 錯誤</Code_Cause>
+    <Code_Cause_English>ABS Encoder Z-Phase Error</Code_Cause_English>
+  </Table>
+  <Table>
+    <Category_ID>00</Category_ID>
+    <Category_Description>SANWA Robot Error 機台錯誤訊息</Category_Description>
+    <Code_Name>ECD_DRV_MOTOR_IN_MOVING</Code_Name>
+    <Code_Type>Driver Error</Code_Type>
+    <Code_ID>92817000</Code_ID>
+    <Code_Cause>馬達還未停止就進行下一個命令</Code_Cause>
+    <Code_Cause_English>Motor in Moving</Code_Cause_English>
+  </Table>
+  <Table>
+    <Category_ID>00</Category_ID>
+    <Category_Description>SANWA Robot Error 機台錯誤訊息</Category_Description>
+    <Code_Name>ECD_DRV_MOTOR_MODEL_ERROR</Code_Name>
+    <Code_Type>Driver Error</Code_Type>
+    <Code_ID>92818000</Code_ID>
+    <Code_Cause>馬達序號不匹配</Code_Cause>
+    <Code_Cause_English>Motor Model Error</Code_Cause_English>
+  </Table>
+  <Table>
+    <Category_ID>00</Category_ID>
+    <Category_Description>SANWA Robot Error 機台錯誤訊息</Category_Description>
+    <Code_Name>ECD_RIO_INIT_FAIL</Code_Name>
+    <Code_Type>Remote I/O Board Error</Code_Type>
+    <Code_ID>92820000</Code_ID>
+    <Code_Cause>遠端 I/O 擴展板初始化失敗</Code_Cause>
+    <Code_Cause_English>Remote I/O Initial Fail</Code_Cause_English>
+  </Table>
+  <Table>
+    <Category_ID>00</Category_ID>
+    <Category_Description>SANWA Robot Error 機台錯誤訊息</Category_Description>
+    <Code_Name>ECD_RIO_COMMUNICATION</Code_Name>
+    <Code_Type>Remote I/O Board Error</Code_Type>
+    <Code_ID>92821000</Code_ID>
+    <Code_Cause>遠端 I/O 擴展板通訊異常</Code_Cause>
+    <Code_Cause_English>Remote I/O Communication Fail</Code_Cause_English>
+  </Table>
+  <Table>
+    <Category_ID>00</Category_ID>
+    <Category_Description>SANWA Robot Error 機台錯誤訊息</Category_Description>
+    <Code_Name>ECD_SSR_TIMEOUT</Code_Name>
+    <Code_Type>Sensor Alarm</Code_Type>
+    <Code_ID>83800000</Code_ID>
+    <Code_Cause>等待感測器超時</Code_Cause>
+    <Code_Cause_English>Sensor Timeout</Code_Cause_English>
+  </Table>
+  <Table>
+    <Category_ID>00</Category_ID>
+    <Category_Description>SANWA Robot Error 機台錯誤訊息</Category_Description>
+    <Code_Name>ECD_SSR_REQ_ENTER_TMO</Code_Name>
+    <Code_Type>Sensor Alarm</Code_Type>
+    <Code_ID>83801000</Code_ID>
+    <Code_Cause>PCL REQ_ENTER 訊號沒回應</Code_Cause>
+    <Code_Cause_English>PCL REQ_ENTER Timeout</Code_Cause_English>
+  </Table>
+  <Table>
+    <Category_ID>00</Category_ID>
+    <Category_Description>SANWA Robot Error 機台錯誤訊息</Category_Description>
+    <Code_Name>ECD_SSR_REQ_ENTER_ON</Code_Name>
+    <Code_Type>Sensor Alarm</Code_Type>
+    <Code_ID>83802000</Code_ID>
+    <Code_Cause>PCL REQ_ENTER 訊號 "ON" 異常</Code_Cause>
+    <Code_Cause_English>PCL REQ_ENTER 'ON' Fail</Code_Cause_English>
+  </Table>
+  <Table>
+    <Category_ID>00</Category_ID>
+    <Category_Description>SANWA Robot Error 機台錯誤訊息</Category_Description>
+    <Code_Name>ECD_SSR_PRESENT_ON</Code_Name>
+    <Code_Type>Sensor Alarm</Code_Type>
+    <Code_ID>93803000</Code_ID>
+    <Code_Cause>在席感測器訊號 "ON" 異常</Code_Cause>
+    <Code_Cause_English>Present Sensor 'ON' Fail</Code_Cause_English>
+  </Table>
+  <Table>
+    <Category_ID>00</Category_ID>
+    <Category_Description>SANWA Robot Error 機台錯誤訊息</Category_Description>
+    <Code_Name>ECD_SSR_PRESENT_OFF</Code_Name>
+    <Code_Type>Sensor Alarm</Code_Type>
+    <Code_ID>93804000</Code_ID>
+    <Code_Cause>在席感測器訊號 "OFF" 異常</Code_Cause>
+    <Code_Cause_English>Present Sensor 'OFF' Fail</Code_Cause_English>
+  </Table>
+  <Table>
+    <Category_ID>00</Category_ID>
+    <Category_Description>SANWA Robot Error 機台錯誤訊息</Category_Description>
+    <Code_Name>ECD_SSR_CONTROLLER_FAN</Code_Name>
+    <Code_Type>Sensor Alarm</Code_Type>
+    <Code_ID>83805000</Code_ID>
+    <Code_Cause>控制器風扇異常</Code_Cause>
+    <Code_Cause_English>Controller Fan Fail</Code_Cause_English>
+  </Table>
+  <Table>
+    <Category_ID>00</Category_ID>
+    <Category_Description>SANWA Robot Error 機台錯誤訊息</Category_Description>
+    <Code_Name>ECD_SSR_ROBOT_FAN1</Code_Name>
+    <Code_Type>Sensor Alarm</Code_Type>
+    <Code_ID>83806000</Code_ID>
+    <Code_Cause>Robot 風扇 1 異常</Code_Cause>
+    <Code_Cause_English>Robot Fan1 Fail</Code_Cause_English>
+  </Table>
+  <Table>
+    <Category_ID>00</Category_ID>
+    <Category_Description>SANWA Robot Error 機台錯誤訊息</Category_Description>
+    <Code_Name>ECD_SSR_ROBOT_FAN2</Code_Name>
+    <Code_Type>Sensor Alarm</Code_Type>
+    <Code_ID>83807000</Code_ID>
+    <Code_Cause>Robot 風扇 2 異常</Code_Cause>
+    <Code_Cause_English>Robot Fan2 Fail</Code_Cause_English>
+  </Table>
+  <Table>
+    <Category_ID>00</Category_ID>
+    <Category_Description>SANWA Robot Error 機台錯誤訊息</Category_Description>
+    <Code_Name>ECD_SSR_ROBOT_FAN3</Code_Name>
+    <Code_Type>Sensor Alarm</Code_Type>
+    <Code_ID>83808000</Code_ID>
+    <Code_Cause>Robot 風扇 3 異常</Code_Cause>
+    <Code_Cause_English>Robot Fan3 Fail</Code_Cause_English>
+  </Table>
+  <Table>
+    <Category_ID>00</Category_ID>
+    <Category_Description>SANWA Robot Error 機台錯誤訊息</Category_Description>
+    <Code_Name>ECD_SSR_ORG</Code_Name>
+    <Code_Type>Sensor Alarm</Code_Type>
+    <Code_ID>93809000</Code_ID>
+    <Code_Cause>原點感測器訊號 "ON" 異常</Code_Cause>
+    <Code_Cause_English>ORG Sensor 'ON' Fail</Code_Cause_English>
+  </Table>
+  <Table>
+    <Category_ID>00</Category_ID>
+    <Category_Description>SANWA Robot Error 機台錯誤訊息</Category_Description>
+    <Code_Name>ECD_SSR_WAFER_HOLD_TMO</Code_Name>
+    <Code_Type>Sensor Alarm</Code_Type>
+    <Code_ID>9380A000</Code_ID>
+    <Code_Cause>晶圓保持(吸附)失敗(有 Timeout 參數)</Code_Cause>
+    <Code_Cause_English>Wafer Hold Timeout</Code_Cause_English>
+  </Table>
+  <Table>
+    <Category_ID>00</Category_ID>
+    <Category_Description>SANWA Robot Error 機台錯誤訊息</Category_Description>
+    <Code_Name>ECD_SSR_WAFER_RELEASE_TMO</Code_Name>
+    <Code_Type>Sensor Alarm</Code_Type>
+    <Code_ID>9380B000</Code_ID>
+    <Code_Cause>晶圓釋放失敗(有 Timeout 參數)</Code_Cause>
+    <Code_Cause_English>Wafer Release Timeout</Code_Cause_English>
+  </Table>
+  <Table>
+    <Category_ID>00</Category_ID>
+    <Category_Description>SANWA Robot Error 機台錯誤訊息</Category_Description>
+    <Code_Name>ECD_SSR_WAFER_HOLD_FAIL</Code_Name>
+    <Code_Type>Sensor Alarm</Code_Type>
+    <Code_ID>9380C000</Code_ID>
+    <Code_Cause>晶圓保持(吸附)失敗(直接判斷無 Timeout)</Code_Cause>
+    <Code_Cause_English>Wafer Hold Fail</Code_Cause_English>
+  </Table>
+  <Table>
+    <Category_ID>00</Category_ID>
+    <Category_Description>SANWA Robot Error 機台錯誤訊息</Category_Description>
+    <Code_Name>ECD_SSR_WAFER_RELEASE_FAIL</Code_Name>
+    <Code_Type>Sensor Alarm</Code_Type>
+    <Code_ID>9380D000</Code_ID>
+    <Code_Cause>晶圓釋放失敗(直接判斷無 Timeout)</Code_Cause>
+    <Code_Cause_English>Wafer Release Fail</Code_Cause_English>
+  </Table>
+  <Table>
+    <Category_ID>00</Category_ID>
+    <Category_Description>SANWA Robot Error 機台錯誤訊息</Category_Description>
+    <Code_Name>ECD_SSR_WAFER_SENSOR</Code_Name>
+    <Code_Type>Sensor Alarm</Code_Type>
+    <Code_ID>9380F000</Code_ID>
+    <Code_Cause>晶圓感測器訊號異常</Code_Cause>
+    <Code_Cause_English>Wafer Sensor Fail</Code_Cause_English>
+  </Table>
+  <Table>
+    <Category_ID>00</Category_ID>
+    <Category_Description>SANWA Robot Error 機台錯誤訊息</Category_Description>
+    <Code_Name>ECD_SSR_PRESSURE</Code_Name>
+    <Code_Type>Sensor Alarm</Code_Type>
+    <Code_ID>83810000</Code_ID>
+    <Code_Cause>壓力異常</Code_Cause>
+    <Code_Cause_English>Abnormal Pressure</Code_Cause_English>
+  </Table>
+  <Table>
+    <Category_ID>00</Category_ID>
+    <Category_Description>SANWA Robot Error 機台錯誤訊息</Category_Description>
+    <Code_Name>ECD_SSR_CRASH</Code_Name>
+    <Code_Type>Sensor Alarm</Code_Type>
+    <Code_ID>83820000</Code_ID>
+    <Code_Cause>撞機(震動感知器觸發)</Code_Cause>
+    <Code_Cause_English>Crash(Detected Shock Sensor)</Code_Cause_English>
+  </Table>
+  <Table>
+    <Category_ID>00</Category_ID>
+    <Category_Description>SANWA Robot Error 機台錯誤訊息</Category_Description>
+    <Code_Name>ECD_SSR_BELT_BREAK</Code_Name>
+    <Code_Type>Sensor Alarm</Code_Type>
+    <Code_ID>83830000</Code_ID>
+    <Code_Cause>皮帶斷裂</Code_Cause>
+    <Code_Cause_English>Belt Break</Code_Cause_English>
+  </Table>
+  <Table>
+    <Category_ID>00</Category_ID>
+    <Category_Description>SANWA Robot Error 機台錯誤訊息</Category_Description>
+    <Code_Name>ECD_CMD_UNLNOWN_CMD</Code_Name>
+    <Code_Type>Host Command Alarm</Code_Type>
+    <Code_ID>84800000</Code_ID>
+    <Code_Cause>未知的命令</Code_Cause>
+    <Code_Cause_English>Unknown Command</Code_Cause_English>
+  </Table>
+  <Table>
+    <Category_ID>00</Category_ID>
+    <Category_Description>SANWA Robot Error 機台錯誤訊息</Category_Description>
+    <Code_Name>ECD_CMD_IN_EXECUTE</Code_Name>
+    <Code_Type>Host Command Alarm</Code_Type>
+    <Code_ID>84801000</Code_ID>
+    <Code_Cause>上一個命令還在執行中</Code_Cause>
+    <Code_Cause_English>Command Executing</Code_Cause_English>
+  </Table>
+  <Table>
+    <Category_ID>00</Category_ID>
+    <Category_Description>SANWA Robot Error 機台錯誤訊息</Category_Description>
+    <Code_Name>ECD_CMD_ACK_TMO</Code_Name>
+    <Code_Type>Host Command Alarm</Code_Type>
+    <Code_ID>84802000</Code_ID>
+    <Code_Cause>控制器異常</Code_Cause>
+    <Code_Cause_English>Command Internal Ack Timeout</Code_Cause_English>
+  </Table>
+  <Table>
+    <Category_ID>00</Category_ID>
+    <Category_Description>SANWA Robot Error 機台錯誤訊息</Category_Description>
+    <Code_Name>ECD_CMD_EXECUTE_TIMEOUT</Code_Name>
+    <Code_Type>Host Command Alarm</Code_Type>
+    <Code_ID>84803000</Code_ID>
+    <Code_Cause>命令未在時間內完成</Code_Cause>
+    <Code_Cause_English>Command Execute Timeout</Code_Cause_English>
+  </Table>
+  <Table>
+    <Category_ID>00</Category_ID>
+    <Category_Description>SANWA Robot Error 機台錯誤訊息</Category_Description>
+    <Code_Name>ECD_CMD_EXECUTE_FAIL</Code_Name>
+    <Code_Type>Host Command Alarm</Code_Type>
+    <Code_ID>84804000</Code_ID>
+    <Code_Cause>命令執行失敗</Code_Cause>
+    <Code_Cause_English>Command Execute Fail</Code_Cause_English>
+  </Table>
+  <Table>
+    <Category_ID>00</Category_ID>
+    <Category_Description>SANWA Robot Error 機台錯誤訊息</Category_Description>
+    <Code_Name>ECD_CMD_ABORT</Code_Name>
+    <Code_Type>Host Command Alarm</Code_Type>
+    <Code_ID>84805000</Code_ID>
+    <Code_Cause>命令中斷</Code_Cause>
+    <Code_Cause_English>Command Abort</Code_Cause_English>
+  </Table>
+  <Table>
+    <Category_ID>00</Category_ID>
+    <Category_Description>SANWA Robot Error 機台錯誤訊息</Category_Description>
+    <Code_Name>ECD_CMD_IN_MANUAL_MODE</Code_Name>
+    <Code_Type>Host Command Alarm</Code_Type>
+    <Code_ID>84806000</Code_ID>
+    <Code_Cause>Robot 目前切換到手動模式，無法接受命令。</Code_Cause>
+    <Code_Cause_English>Robot in Manual Mode</Code_Cause_English>
+  </Table>
+  <Table>
+    <Category_ID>00</Category_ID>
+    <Category_Description>SANWA Robot Error 機台錯誤訊息</Category_Description>
+    <Code_Name>ECD_CMD_PARAMETER</Code_Name>
+    <Code_Type>Host Command Alarm</Code_Type>
+    <Code_ID>84807000</Code_ID>
+    <Code_Cause>命令所帶的參數超過容許範圍</Code_Cause>
+    <Code_Cause_English>Command Parameter Over Range</Code_Cause_English>
+  </Table>
+  <Table>
+    <Category_ID>00</Category_ID>
+    <Category_Description>SANWA Robot Error 機台錯誤訊息</Category_Description>
+    <Code_Name>ECD_CMD_CONTINUE_FAIL</Code_Name>
+    <Code_Type>Host Command Alarm</Code_Type>
+    <Code_ID>84808000</Code_ID>
+    <Code_Cause>命令暫停後無法繼續(有錯誤發生)</Code_Cause>
+    <Code_Cause_English>Command Continue Fail(Error Occurred)</Code_Cause_English>
+  </Table>
+  <Table>
+    <Category_ID>00</Category_ID>
+    <Category_Description>SANWA Robot Error 機台錯誤訊息</Category_Description>
+    <Code_Name>ECD_CMD_RESET_IN_ROBOT_RUN</Code_Name>
+    <Code_Type>Host Command Alarm</Code_Type>
+    <Code_ID>84809000</Code_ID>
+    <Code_Cause>命令還未結束無法執行 Reset 動作</Code_Cause>
+    <Code_Cause_English>Reset Alarm Fail(Command Executing)</Code_Cause_English>
+  </Table>
+  <Table>
+    <Category_ID>00</Category_ID>
+    <Category_Description>SANWA Robot Error 機台錯誤訊息</Category_Description>
+    <Code_Name>ECD_CMD_UNLNOWN_FLAG</Code_Name>
+    <Code_Type>Host Command Alarm</Code_Type>
+    <Code_ID>8480A000</Code_ID>
+    <Code_Cause>未知的命令類型</Code_Cause>
+    <Code_Cause_English>Command Flag Unknown</Code_Cause_English>
+  </Table>
+  <Table>
+    <Category_ID>00</Category_ID>
+    <Category_Description>SANWA Robot Error 機台錯誤訊息</Category_Description>
+    <Code_Name>ECD_CMD_FORMAT_ERROR</Code_Name>
+    <Code_Type>Host Command Alarm</Code_Type>
+    <Code_ID>8480B000</Code_ID>
+    <Code_Cause>命令格式錯誤</Code_Cause>
+    <Code_Cause_English>Command Format Error</Code_Cause_English>
+  </Table>
+  <Table>
+    <Category_ID>00</Category_ID>
+    <Category_Description>SANWA Robot Error 機台錯誤訊息</Category_Description>
+    <Code_Name>ECD_CMD_PAUSE_FAIL</Code_Name>
+    <Code_Type>Host Command Alarm</Code_Type>
+    <Code_ID>8480C000</Code_ID>
+    <Code_Cause>執行暫停命令失敗</Code_Cause>
+    <Code_Cause_English>Command Pause Error</Code_Cause_English>
+  </Table>
+  <Table>
+    <Category_ID>00</Category_ID>
+    <Category_Description>SANWA Robot Error 機台錯誤訊息</Category_Description>
+    <Code_Name>ECD_P2P_SPD_OVER_RANGE</Code_Name>
+    <Code_Type>Point to Point Alarm</Code_Type>
+    <Code_ID>85800000</Code_ID>
+    <Code_Cause>速度超出範圍</Code_Cause>
+    <Code_Cause_English>Speed Over Range(0~100)</Code_Cause_English>
+  </Table>
+  <Table>
+    <Category_ID>00</Category_ID>
+    <Category_Description>SANWA Robot Error 機台錯誤訊息</Category_Description>
+    <Code_Name>ECD_P2P_SPD_TYPE_ERROR</Code_Name>
+    <Code_Type>Point to Point Alarm</Code_Type>
+    <Code_ID>85801000</Code_ID>
+    <Code_Cause>速度的選擇超出範圍(Normal, Teach, ORG)</Code_Cause>
+    <Code_Cause_English>Speed Type Error</Code_Cause_English>
+  </Table>
+  <Table>
+    <Category_ID>00</Category_ID>
+    <Category_Description>SANWA Robot Error 機台錯誤訊息</Category_Description>
+    <Code_Name>ECD_P2P_POINT_NO</Code_Name>
+    <Code_Type>Point to Point Alarm</Code_Type>
+    <Code_ID>85802000</Code_ID>
+    <Code_Cause>移動命令的點位參數超出範圍</Code_Cause>
+    <Code_Cause_English>Point No. Over Range</Code_Cause_English>
+  </Table>
+  <Table>
+    <Category_ID>00</Category_ID>
+    <Category_Description>SANWA Robot Error 機台錯誤訊息</Category_Description>
+    <Code_Name>ECD_P2P_ARM_NO</Code_Name>
+    <Code_Type>Point to Point Alarm</Code_Type>
+    <Code_ID>85803000</Code_ID>
+    <Code_Cause>移動命令的 Arm 參數超出範圍</Code_Cause>
+    <Code_Cause_English>Arm No. Over Range</Code_Cause_English>
+  </Table>
+  <Table>
+    <Category_ID>00</Category_ID>
+    <Category_Description>SANWA Robot Error 機台錯誤訊息</Category_Description>
+    <Code_Name>ECD_P2P_SIDE_NO</Code_Name>
+    <Code_Type>Point to Point Alarm</Code_Type>
+    <Code_ID>85804000</Code_ID>
+    <Code_Cause>Side Number 超出範圍</Code_Cause>
+    <Code_Cause_English>Side No. Over Range</Code_Cause_English>
+  </Table>
+  <Table>
+    <Category_ID>00</Category_ID>
+    <Category_Description>SANWA Robot Error 機台錯誤訊息</Category_Description>
+    <Code_Name>ECD_P2P_REFS_CASSETTE</Code_Name>
+    <Code_Type>Point to Point Alarm</Code_Type>
+    <Code_ID>85805000</Code_ID>
+    <Code_Cause>Point Data 中 "Reference Cassette" 指向自己</Code_Cause>
+    <Code_Cause_English>Refs Cassette No. Fail(Equal to Itself)</Code_Cause_English>
+  </Table>
+  <Table>
+    <Category_ID>00</Category_ID>
+    <Category_Description>SANWA Robot Error 機台錯誤訊息</Category_Description>
+    <Code_Name>ECD_P2P_REFS_POSITION</Code_Name>
+    <Code_Type>Point to Point Alarm</Code_Type>
+    <Code_ID>85806000</Code_ID>
+    <Code_Cause>Point Data 中 "Reference Position" 指向自己</Code_Cause>
+    <Code_Cause_English>Refs Position No. Fail(Equal to Itself)</Code_Cause_English>
+  </Table>
+  <Table>
+    <Category_ID>00</Category_ID>
+    <Category_Description>SANWA Robot Error 機台錯誤訊息</Category_Description>
+    <Code_Name>ECD_P2P_SLOT_NO</Code_Name>
+    <Code_Type>Point to Point Alarm</Code_Type>
+    <Code_ID>85807000</Code_ID>
+    <Code_Cause>移動命令的 Slot 參數超出範圍</Code_Cause>
+    <Code_Cause_English>Cassette Slot No. Over Range</Code_Cause_English>
+  </Table>
+  <Table>
+    <Category_ID>00</Category_ID>
+    <Category_Description>SANWA Robot Error 機台錯誤訊息</Category_Description>
+    <Code_Name>ECD_P2P_COLUMN_NO</Code_Name>
+    <Code_Type>Point to Point Alarm</Code_Type>
+    <Code_ID>85808000</Code_ID>
+    <Code_Cause>移動命令的 Column 參數超出範圍</Code_Cause>
+    <Code_Cause_English>Cassette Column No. Over Range</Code_Cause_English>
+  </Table>
+  <Table>
+    <Category_ID>00</Category_ID>
+    <Category_Description>SANWA Robot Error 機台錯誤訊息</Category_Description>
+    <Code_Name>ECD_P2P_ROW_NO</Code_Name>
+    <Code_Type>Point to Point Alarm</Code_Type>
+    <Code_ID>85809000</Code_ID>
+    <Code_Cause>移動命令的 Row 參數超出範圍</Code_Cause>
+    <Code_Cause_English>Cassette Row No. Over Range</Code_Cause_English>
+  </Table>
+  <Table>
+    <Category_ID>00</Category_ID>
+    <Category_Description>SANWA Robot Error 機台錯誤訊息</Category_Description>
+    <Code_Name>ECD_P2P_POSITION_DATA_EMPTY</Code_Name>
+    <Code_Type>Point to Point Alarm</Code_Type>
+    <Code_ID>8580A000</Code_ID>
+    <Code_Cause>移動命令的點位資料沒有被設定</Code_Cause>
+    <Code_Cause_English>Position Data is Empty</Code_Cause_English>
+  </Table>
+  <Table>
+    <Category_ID>00</Category_ID>
+    <Category_Description>SANWA Robot Error 機台錯誤訊息</Category_Description>
+    <Code_Name>ECD_P2P_RL_GOR_P_DISABLE</Code_Name>
+    <Code_Type>Point to Point Alarm</Code_Type>
+    <Code_ID>8580B000</Code_ID>
+    <Code_Cause>R/L 軸同動功能被關閉</Code_Cause>
+    <Code_Cause_English>RL-GorP Disabled</Code_Cause_English>
+  </Table>
+  <Table>
+    <Category_ID>00</Category_ID>
+    <Category_Description>SANWA Robot Error 機台錯誤訊息</Category_Description>
+    <Code_Name>ECD_P2P_SLOT_TYPE</Code_Name>
+    <Code_Type>Point to Point Alarm</Code_Type>
+    <Code_ID>8580C000</Code_ID>
+    <Code_Cause>移動命令所指定的 Slot 型式錯誤</Code_Cause>
+    <Code_Cause_English>Slot Type Error</Code_Cause_English>
+  </Table>
+  <Table>
+    <Category_ID>00</Category_ID>
+    <Category_Description>SANWA Robot Error 機台錯誤訊息</Category_Description>
+    <Code_Name>ECD_P2P_AXIS_DISABLED</Code_Name>
+    <Code_Type>Point to Point Alarm</Code_Type>
+    <Code_ID>95810000</Code_ID>
+    <Code_Cause>軸已被關閉，無法進行動作</Code_Cause>
+    <Code_Cause_English>Axis Disabled</Code_Cause_English>
+  </Table>
+  <Table>
+    <Category_ID>00</Category_ID>
+    <Category_Description>SANWA Robot Error 機台錯誤訊息</Category_Description>
+    <Code_Name>ECD_P2P_OVER_RANGE</Code_Name>
+    <Code_Type>Point to Point Alarm</Code_Type>
+    <Code_ID>95811000</Code_ID>
+    <Code_Cause>要移動的位置超出可移動範圍 (如果清除警報時會出現請檢查該軸臂長、軸間距與正負極限參數是否正確)</Code_Cause>
+    <Code_Cause_English>Move Over Range</Code_Cause_English>
+  </Table>
+  <Table>
+    <Category_ID>00</Category_ID>
+    <Category_Description>SANWA Robot Error 機台錯誤訊息</Category_Description>
+    <Code_Name>ECD_P2P_OVER_SOFT_LIMIT</Code_Name>
+    <Code_Type>Point to Point Alarm</Code_Type>
+    <Code_ID>95812000</Code_ID>
+    <Code_Cause>要移動的位置超出軟體極限值</Code_Cause>
+    <Code_Cause_English>Over Soft Limit</Code_Cause_English>
+  </Table>
+  <Table>
+    <Category_ID>00</Category_ID>
+    <Category_Description>SANWA Robot Error 機台錯誤訊息</Category_Description>
+    <Code_Name>ECD_P2P_SET_SPEED</Code_Name>
+    <Code_Type>Point to Point Alarm</Code_Type>
+    <Code_ID>95813000</Code_ID>
+    <Code_Cause>速度參數錯誤導致設定失敗</Code_Cause>
+    <Code_Cause_English>Set Speed Fail</Code_Cause_English>
+  </Table>
+  <Table>
+    <Category_ID>00</Category_ID>
+    <Category_Description>SANWA Robot Error 機台錯誤訊息</Category_Description>
+    <Code_Name>ECD_P2P_PARAM_SPD_HIGH</Code_Name>
+    <Code_Type>Parameter Setting Error</Code_Type>
+    <Code_ID>95821000</Code_ID>
+    <Code_Cause>移動速度參數設定錯誤(高速)</Code_Cause>
+    <Code_Cause_English>Param. Speed High</Code_Cause_English>
+  </Table>
+  <Table>
+    <Category_ID>00</Category_ID>
+    <Category_Description>SANWA Robot Error 機台錯誤訊息</Category_Description>
+    <Code_Name>ECD_P2P_PARAM_SPD_LOW</Code_Name>
+    <Code_Type>Parameter Setting Error</Code_Type>
+    <Code_ID>95822000</Code_ID>
+    <Code_Cause>移動速度參數設定錯誤(低速)</Code_Cause>
+    <Code_Cause_English>Param. Speed Low</Code_Cause_English>
+  </Table>
+  <Table>
+    <Category_ID>00</Category_ID>
+    <Category_Description>SANWA Robot Error 機台錯誤訊息</Category_Description>
+    <Code_Name>ECD_P2P_PARAM_SPD_UAC</Code_Name>
+    <Code_Type>Parameter Setting Error</Code_Type>
+    <Code_ID>95823000</Code_ID>
+    <Code_Cause>移動速度參數設定錯誤(加速度)</Code_Cause>
+    <Code_Cause_English>Param. Speed UAC</Code_Cause_English>
+  </Table>
+  <Table>
+    <Category_ID>00</Category_ID>
+    <Category_Description>SANWA Robot Error 機台錯誤訊息</Category_Description>
+    <Code_Name>ECD_P2P_PARAM_SPD_USC</Code_Name>
+    <Code_Type>Parameter Setting Error</Code_Type>
+    <Code_ID>95824000</Code_ID>
+    <Code_Cause>移動速度參數設定錯誤(S-Curve 加速度)</Code_Cause>
+    <Code_Cause_English>Param. Speed USC</Code_Cause_English>
+  </Table>
+  <Table>
+    <Category_ID>00</Category_ID>
+    <Category_Description>SANWA Robot Error 機台錯誤訊息</Category_Description>
+    <Code_Name>ECD_P2P_PARAM_SPD_OFFSET</Code_Name>
+    <Code_Type>Parameter Setting Error</Code_Type>
+    <Code_ID>95825000</Code_ID>
+    <Code_Cause>移動速度參數設定錯誤(Offset)</Code_Cause>
+    <Code_Cause_English>Param. Speed Offset</Code_Cause_English>
+  </Table>
+  <Table>
+    <Category_ID>00</Category_ID>
+    <Category_Description>SANWA Robot Error 機台錯誤訊息</Category_Description>
+    <Code_Name>ECD_P2P_PARAM_PULSE_BUNSI</Code_Name>
+    <Code_Type>Parameter Setting Error</Code_Type>
+    <Code_ID>95826000</Code_ID>
+    <Code_Cause>齒輪比分子設定錯誤</Code_Cause>
+    <Code_Cause_English>Param. Pulse Bunsi</Code_Cause_English>
+  </Table>
+  <Table>
+    <Category_ID>00</Category_ID>
+    <Category_Description>SANWA Robot Error 機台錯誤訊息</Category_Description>
+    <Code_Name>ECD_P2P_PARAM_PULSE_BUNBO</Code_Name>
+    <Code_Type>Parameter Setting Error</Code_Type>
+    <Code_ID>95827000</Code_ID>
+    <Code_Cause>齒輪比分母設定錯誤</Code_Cause>
+    <Code_Cause_English>Param. Pulse Bunbo</Code_Cause_English>
+  </Table>
+  <Table>
+    <Category_ID>00</Category_ID>
+    <Category_Description>SANWA Robot Error 機台錯誤訊息</Category_Description>
+    <Code_Name>ECD_P2P_PARAM_LEAD</Code_Name>
+    <Code_Type>Parameter Setting Error</Code_Type>
+    <Code_ID>95828000</Code_ID>
+    <Code_Cause>導程設定錯誤</Code_Cause>
+    <Code_Cause_English>Param. Lead</Code_Cause_English>
+  </Table>
+  <Table>
+    <Category_ID>00</Category_ID>
+    <Category_Description>SANWA Robot Error 機台錯誤訊息</Category_Description>
+    <Code_Name>ECD_P2P_PARAM_LINKARM</Code_Name>
+    <Code_Type>Parameter Setting Error</Code_Type>
+    <Code_ID>85829000</Code_ID>
+    <Code_Cause>Link-Arm 參數設定錯誤</Code_Cause>
+    <Code_Cause_English>Param. Link-Arm</Code_Cause_English>
+  </Table>
+  <Table>
+    <Category_ID>A0</Category_ID>
+    <Category_Description>SANWA Aligner Error 機台錯誤訊息</Category_Description>
+    <Code_Name>ECD_GNR_NORMAL_STOP</Code_Name>
+    <Code_Type>General Alarm</Code_Type>
+    <Code_ID>80800000</Code_ID>
+    <Code_Cause>停止按鈕被觸發</Code_Cause>
+    <Code_Cause_English>Normal Stop(Stop Button Locked)</Code_Cause_English>
+  </Table>
+  <Table>
+    <Category_ID>A0</Category_ID>
+    <Category_Description>SANWA Aligner Error 機台錯誤訊息</Category_Description>
+    <Code_Name>ECD_GNR_FILE_FAIL</Code_Name>
+    <Code_Type>General Alarm</Code_Type>
+    <Code_ID>80801000</Code_ID>
+    <Code_Cause>讀取或寫入記憶卡失敗</Code_Cause>
+    <Code_Cause_English>File Read/Write Fail</Code_Cause_English>
+  </Table>
+  <Table>
+    <Category_ID>A0</Category_ID>
+    <Category_Description>SANWA Aligner Error 機台錯誤訊息</Category_Description>
+    <Code_Name>ECD_GNR_BUG_TIMER</Code_Name>
+    <Code_Type>General Alarm</Code_Type>
+    <Code_ID>80802000</Code_ID>
+    <Code_Cause>記憶體處理錯誤</Code_Cause>
+    <Code_Cause_English>Memory Process Fail</Code_Cause_English>
+  </Table>
+  <Table>
+    <Category_ID>A0</Category_ID>
+    <Category_Description>SANWA Aligner Error 機台錯誤訊息</Category_Description>
+    <Code_Name>ECD_GNR_INTERNAL_FAIL</Code_Name>
+    <Code_Type>General Alarm</Code_Type>
+    <Code_ID>80803000</Code_ID>
+    <Code_Cause>內部錯誤(一般是因為控制器硬體異常)</Code_Cause>
+    <Code_Cause_English>Internal Fail</Code_Cause_English>
+  </Table>
+  <Table>
+    <Category_ID>A0</Category_ID>
+    <Category_Description>SANWA Aligner Error 機台錯誤訊息</Category_Description>
+    <Code_Name>ECD_GNR_DIO_FAIL</Code_Name>
+    <Code_Type>General Alarm</Code_Type>
+    <Code_ID>80804000</Code_ID>
+    <Code_Cause>DIO 錯誤(控制器異常)</Code_Cause>
+    <Code_Cause_English>DIO Fail</Code_Cause_English>
+  </Table>
+  <Table>
+    <Category_ID>A0</Category_ID>
+    <Category_Description>SANWA Aligner Error 機台錯誤訊息</Category_Description>
+    <Code_Name>ECD_MTN_POSITION_OD</Code_Name>
+    <Code_Type>Motion Alarm</Code_Type>
+    <Code_ID>91800000</Code_ID>
+    <Code_Cause>脫條(由控制器端引發)</Code_Cause>
+    <Code_Cause_English>Over Deviation(Static)</Code_Cause_English>
+  </Table>
+  <Table>
+    <Category_ID>A0</Category_ID>
+    <Category_Description>SANWA Aligner Error 機台錯誤訊息</Category_Description>
+    <Code_Name>ECD_MTN_SOFT_LIMIT_P</Code_Name>
+    <Code_Type>Motion Alarm</Code_Type>
+    <Code_ID>91801000</Code_ID>
+    <Code_Cause>位置超出軟體正極限</Code_Cause>
+    <Code_Cause_English>Soft Limit+</Code_Cause_English>
+  </Table>
+  <Table>
+    <Category_ID>A0</Category_ID>
+    <Category_Description>SANWA Aligner Error 機台錯誤訊息</Category_Description>
+    <Code_Name>ECD_MTN_SOFT_LIMIT_M</Code_Name>
+    <Code_Type>Motion Alarm</Code_Type>
+    <Code_ID>91802000</Code_ID>
+    <Code_Cause>位置超出軟體負極限</Code_Cause>
+    <Code_Cause_English>Soft Limit-</Code_Cause_English>
+  </Table>
+  <Table>
+    <Category_ID>A0</Category_ID>
+    <Category_Description>SANWA Aligner Error 機台錯誤訊息</Category_Description>
+    <Code_Name>ECD_MTN_HARD_LIMIT_P</Code_Name>
+    <Code_Type>Motion Alarm</Code_Type>
+    <Code_ID>91803000</Code_ID>
+    <Code_Cause>位置超出硬體正極限</Code_Cause>
+    <Code_Cause_English>Hard Limit+</Code_Cause_English>
+  </Table>
+  <Table>
+    <Category_ID>A0</Category_ID>
+    <Category_Description>SANWA Aligner Error 機台錯誤訊息</Category_Description>
+    <Code_Name>ECD_MTN_HARD_LIMIT_M</Code_Name>
+    <Code_Type>Motion Alarm</Code_Type>
+    <Code_ID>91804000</Code_ID>
+    <Code_Cause>位置超出硬體負極限</Code_Cause>
+    <Code_Cause_English>Hard Limit-</Code_Cause_English>
+  </Table>
+  <Table>
+    <Category_ID>A0</Category_ID>
+    <Category_Description>SANWA Aligner Error 機台錯誤訊息</Category_Description>
+    <Code_Name>ECD_MTN_SERVO_NOT_READY</Code_Name>
+    <Code_Type>Motion Alarm</Code_Type>
+    <Code_ID>81805000</Code_ID>
+    <Code_Cause>馬達驅動器異常</Code_Cause>
+    <Code_Cause_English>Servo not Ready</Code_Cause_English>
+  </Table>
+  <Table>
+    <Category_ID>A0</Category_ID>
+    <Category_Description>SANWA Aligner Error 機台錯誤訊息</Category_Description>
+    <Code_Name>ECD_MTN_ORG_DISABLED</Code_Name>
+    <Code_Type>Motion Alarm</Code_Type>
+    <Code_ID>91806000</Code_ID>
+    <Code_Cause>原點復歸在參數中被關閉</Code_Cause>
+    <Code_Cause_English>ORG Search Disabled</Code_Cause_English>
+  </Table>
+  <Table>
+    <Category_ID>A0</Category_ID>
+    <Category_Description>SANWA Aligner Error 機台錯誤訊息</Category_Description>
+    <Code_Name>ECD_MTN_ARM_EXTEND</Code_Name>
+    <Code_Type>Motion Alarm</Code_Type>
+    <Code_ID>91807000</Code_ID>
+    <Code_Cause>手臂伸出未退回，無法進行其他動作。</Code_Cause>
+    <Code_Cause_English>Arm Extend(Retract First)</Code_Cause_English>
+  </Table>
+  <Table>
+    <Category_ID>A0</Category_ID>
+    <Category_Description>SANWA Aligner Error 機台錯誤訊息</Category_Description>
+    <Code_Name>ECD_MTN_FINISH_TMO</Code_Name>
+    <Code_Type>Motion Alarm</Code_Type>
+    <Code_ID>91808000</Code_ID>
+    <Code_Cause>等待移動結束超時</Code_Cause>
+    <Code_Cause_English>Wait Finish Timeout</Code_Cause_English>
+  </Table>
+  <Table>
+    <Category_ID>A0</Category_ID>
+    <Category_Description>SANWA Aligner Error 機台錯誤訊息</Category_Description>
+    <Code_Name>ECD_MTN_FOLLOWING_OD</Code_Name>
+    <Code_Type>Motion Alarm</Code_Type>
+    <Code_ID>91809000</Code_ID>
+    <Code_Cause>動態脫條(由控制器端引發)</Code_Cause>
+    <Code_Cause_English>Over Deviation(Dynamic)</Code_Cause_English>
+  </Table>
+  <Table>
+    <Category_ID>A0</Category_ID>
+    <Category_Description>SANWA Aligner Error 機台錯誤訊息</Category_Description>
+    <Code_Name>ECD_MTN_MAP_FAIL</Code_Name>
+    <Code_Type>Motion Alarm</Code_Type>
+    <Code_ID>81810000</Code_ID>
+    <Code_Cause>Mapping 失敗</Code_Cause>
+    <Code_Cause_English>Mapping Fail</Code_Cause_English>
+  </Table>
+  <Table>
+    <Category_ID>A0</Category_ID>
+    <Category_Description>SANWA Aligner Error 機台錯誤訊息</Category_Description>
+    <Code_Name>ECD_MTN_MAP_INTERFERE</Code_Name>
+    <Code_Type>Motion Alarm</Code_Type>
+    <Code_ID>81811000</Code_ID>
+    <Code_Cause>Mapping 干涉</Code_Cause>
+    <Code_Cause_English>Mapping Interfere</Code_Cause_English>
+  </Table>
+  <Table>
+    <Category_ID>A0</Category_ID>
+    <Category_Description>SANWA Aligner Error 機台錯誤訊息</Category_Description>
+    <Code_Name>ECD_MTN_MOVE_ORG_FAIL</Code_Name>
+    <Code_Type>Motion Alarm</Code_Type>
+    <Code_ID>81812000</Code_ID>
+    <Code_Cause>原點復歸失敗</Code_Cause>
+    <Code_Cause_English>ORG Search Fail</Code_Cause_English>
+  </Table>
+  <Table>
+    <Category_ID>A0</Category_ID>
+    <Category_Description>SANWA Aligner Error 機台錯誤訊息</Category_Description>
+    <Code_Name>ECD_MTN_REQUIRE_ORG</Code_Name>
+    <Code_Type>Motion Alarm</Code_Type>
+    <Code_ID>81813000</Code_ID>
+    <Code_Cause>需要先執行原點復歸</Code_Cause>
+    <Code_Cause_English>Require ORG Search</Code_Cause_English>
+  </Table>
+  <Table>
+    <Category_ID>A0</Category_ID>
+    <Category_Description>SANWA Aligner Error 機台錯誤訊息</Category_Description>
+    <Code_Name>ECD_MTN_SERVO_OFF</Code_Name>
+    <Code_Type>Motion Alarm</Code_Type>
+    <Code_ID>81814000</Code_ID>
+    <Code_Cause>在 Servo Off 時執行 Motion 命令</Code_Cause>
+    <Code_Cause_English>Servo Off(Need Servo On)</Code_Cause_English>
+  </Table>
+  <Table>
+    <Category_ID>A0</Category_ID>
+    <Category_Description>SANWA Aligner Error 機台錯誤訊息</Category_Description>
+    <Code_Name>ECD_MTN_ROBOT_IN_ALARM</Code_Name>
+    <Code_Type>Motion Alarm</Code_Type>
+    <Code_ID>81815000</Code_ID>
+    <Code_Cause>目前有錯誤發生, 請先排除錯誤。</Code_Cause>
+    <Code_Cause_English>Robot in Alarm(Reset First)</Code_Cause_English>
+  </Table>
+  <Table>
+    <Category_ID>A0</Category_ID>
+    <Category_Description>SANWA Aligner Error 機台錯誤訊息</Category_Description>
+    <Code_Name>ECD_MTN_ROBOT_PAUSED</Code_Name>
+    <Code_Type>Motion Alarm</Code_Type>
+    <Code_ID>81816000</Code_ID>
+    <Code_Cause>Robot目前在暫停狀態，無法動作。</Code_Cause>
+    <Code_Cause_English>Robot Paused</Code_Cause_English>
+  </Table>
+  <Table>
+    <Category_ID>A0</Category_ID>
+    <Category_Description>SANWA Aligner Error 機台錯誤訊息</Category_Description>
+    <Code_Name>ECD_MTN_SHOME_FAIL</Code_Name>
+    <Code_Type>Motion Alarm</Code_Type>
+    <Code_ID>81817000</Code_ID>
+    <Code_Cause>SHOME 命令失敗</Code_Cause>
+    <Code_Cause_English>SHOME Command Fail</Code_Cause_English>
+  </Table>
+  <Table>
+    <Category_ID>A0</Category_ID>
+    <Category_Description>SANWA Aligner Error 機台錯誤訊息</Category_Description>
+    <Code_Name>ECD_MTN_SHOME_OVER_LIMIT</Code_Name>
+    <Code_Type>Motion Alarm</Code_Type>
+    <Code_ID>91818000</Code_ID>
+    <Code_Cause>SHOME 命令失敗，位置處於不安全範圍。</Code_Cause>
+    <Code_Cause_English>SHOME Position Over Safety Limit</Code_Cause_English>
+  </Table>
+  <Table>
+    <Category_ID>A0</Category_ID>
+    <Category_Description>SANWA Aligner Error 機台錯誤訊息</Category_Description>
+    <Code_Name>ECD_MTN_ALIGN_OVER_LIMIT_R</Code_Name>
+    <Code_Type>for Alignment Error</Code_Type>
+    <Code_ID>81820000</Code_ID>
+    <Code_Cause>Alignment: Arm 軸的補正設定值過大</Code_Cause>
+    <Code_Cause_English>Align Over Limit R</Code_Cause_English>
+  </Table>
+  <Table>
+    <Category_ID>A0</Category_ID>
+    <Category_Description>SANWA Aligner Error 機台錯誤訊息</Category_Description>
+    <Code_Name>ECD_MTN_ALIGN_PARAMETER1</Code_Name>
+    <Code_Type>for Alignment Error</Code_Type>
+    <Code_ID>81821000</Code_ID>
+    <Code_Cause>Alignment: 設定值 1 異常</Code_Cause>
+    <Code_Cause_English>Align Parameter1</Code_Cause_English>
+  </Table>
+  <Table>
+    <Category_ID>A0</Category_ID>
+    <Category_Description>SANWA Aligner Error 機台錯誤訊息</Category_Description>
+    <Code_Name>ECD_MTN_ALIGN_PARAMETER2</Code_Name>
+    <Code_Type>for Alignment Error</Code_Type>
+    <Code_ID>81822000</Code_ID>
+    <Code_Cause>Alignment: 設定值 2 異常</Code_Cause>
+    <Code_Cause_English>Align Parameter2</Code_Cause_English>
+  </Table>
+  <Table>
+    <Category_ID>A0</Category_ID>
+    <Category_Description>SANWA Aligner Error 機台錯誤訊息</Category_Description>
+    <Code_Name>ECD_MTN_ALIGN_NO_SENSING_R</Code_Name>
+    <Code_Type>for Alignment Error</Code_Type>
+    <Code_ID>81823000</Code_ID>
+    <Code_Cause>Alignment: R 側無 Sensor 檢出</Code_Cause>
+    <Code_Cause_English>Align No Sensing R</Code_Cause_English>
+  </Table>
+  <Table>
+    <Category_ID>A0</Category_ID>
+    <Category_Description>SANWA Aligner Error 機台錯誤訊息</Category_Description>
+    <Code_Name>ECD_MTN_ALIGN_NO_SENSING_L</Code_Name>
+    <Code_Type>for Alignment Error</Code_Type>
+    <Code_ID>81824000</Code_ID>
+    <Code_Cause>Alignment: L 側無 Sensor 檢出</Code_Cause>
+    <Code_Cause_English>Align No Sensing L</Code_Cause_English>
+  </Table>
+  <Table>
+    <Category_ID>A0</Category_ID>
+    <Category_Description>SANWA Aligner Error 機台錯誤訊息</Category_Description>
+    <Code_Name>ECD_MTN_ALIGN_OVER_SENSING</Code_Name>
+    <Code_Type>for Alignment Error</Code_Type>
+    <Code_ID>81825000</Code_ID>
+    <Code_Cause>Alignment: Sensor ON/OFF 次數過多</Code_Cause>
+    <Code_Cause_English>Align Over Sensing</Code_Cause_English>
+  </Table>
+  <Table>
+    <Category_ID>A0</Category_ID>
+    <Category_Description>SANWA Aligner Error 機台錯誤訊息</Category_Description>
+    <Code_Name>ECD_MTN_ALIGN_OVER_DELTA</Code_Name>
+    <Code_Type>for Alignment Error</Code_Type>
+    <Code_ID>81826000</Code_ID>
+    <Code_Cause>Alignment: 補正角度過大</Code_Cause>
+    <Code_Cause_English>Align Over Limit Delta</Code_Cause_English>
+  </Table>
+  <Table>
+    <Category_ID>A0</Category_ID>
+    <Category_Description>SANWA Aligner Error 機台錯誤訊息</Category_Description>
+    <Code_Name>ECD_MTN_ALIGN_OVER_LIMIT_X</Code_Name>
+    <Code_Type>for Alignment Error</Code_Type>
+    <Code_ID>81827000</Code_ID>
+    <Code_Cause>Alignment: X 軸補正過大</Code_Cause>
+    <Code_Cause_English>Align Over Limit X</Code_Cause_English>
+  </Table>
+  <Table>
+    <Category_ID>A0</Category_ID>
+    <Category_Description>SANWA Aligner Error 機台錯誤訊息</Category_Description>
+    <Code_Name>ECD_MTN_EDGE_UNKNOWN</Code_Name>
+    <Code_Type>for Edge Detect Error</Code_Type>
+    <Code_ID>81830000</Code_ID>
+    <Code_Cause>端面檢知異常失敗</Code_Cause>
+    <Code_Cause_English>Edge Unknown</Code_Cause_English>
+  </Table>
+  <Table>
+    <Category_ID>A0</Category_ID>
+    <Category_Description>SANWA Aligner Error 機台錯誤訊息</Category_Description>
+    <Code_Name>ECD_MTN_EDGE_PARAMETER</Code_Name>
+    <Code_Type>for Edge Detect Error</Code_Type>
+    <Code_ID>81831000</Code_ID>
+    <Code_Cause>端面檢知參數錯誤</Code_Cause>
+    <Code_Cause_English>Edge Parameter</Code_Cause_English>
+  </Table>
+  <Table>
+    <Category_ID>A0</Category_ID>
+    <Category_Description>SANWA Aligner Error 機台錯誤訊息</Category_Description>
+    <Code_Name>ECD_MTN_EDGE_OVER_SENSING</Code_Name>
+    <Code_Type>for Edge Detect Error</Code_Type>
+    <Code_ID>81832000</Code_ID>
+    <Code_Cause>端面檢知 Sensor ON/OFF 次數過多</Code_Cause>
+    <Code_Cause_English>Edge Over Sensing</Code_Cause_English>
+  </Table>
+  <Table>
+    <Category_ID>A0</Category_ID>
+    <Category_Description>SANWA Aligner Error 機台錯誤訊息</Category_Description>
+    <Code_Name>ECD_MTN_EDGE_NO_SENSING</Code_Name>
+    <Code_Type>for Edge Detect Error</Code_Type>
+    <Code_ID>81833000</Code_ID>
+    <Code_Cause>端面檢知無 Sensor 檢出</Code_Cause>
+    <Code_Cause_English>Edge No Sensing</Code_Cause_English>
+  </Table>
+  <Table>
+    <Category_ID>A0</Category_ID>
+    <Category_Description>SANWA Aligner Error 機台錯誤訊息</Category_Description>
+    <Code_Name>ECD_MTN_EDGE_SENSERROR</Code_Name>
+    <Code_Type>for Edge Detect Error</Code_Type>
+    <Code_ID>81834000</Code_ID>
+    <Code_Cause>端面檢知偵測錯誤</Code_Cause>
+    <Code_Cause_English>Edge Sense Error</Code_Cause_English>
+  </Table>
+  <Table>
+    <Category_ID>A0</Category_ID>
+    <Category_Description>SANWA Aligner Error 機台錯誤訊息</Category_Description>
+    <Code_Name>ECD_MTN_EDGE_OVER_LIMIT</Code_Name>
+    <Code_Type>for Edge Detect Error</Code_Type>
+    <Code_ID>81835000</Code_ID>
+    <Code_Cause>端面檢知超出範圍</Code_Cause>
+    <Code_Cause_English>Edge Over Limit</Code_Cause_English>
+  </Table>
+  <Table>
+    <Category_ID>A0</Category_ID>
+    <Category_Description>SANWA Aligner Error 機台錯誤訊息</Category_Description>
+    <Code_Name>ECD_MTN_FORK_POSITION</Code_Name>
+    <Code_Type>for Fork Error</Code_Type>
+    <Code_ID>91840000</Code_ID>
+    <Code_Cause>Fork 位置錯誤</Code_Cause>
+    <Code_Cause_English>Fork Position Fail</Code_Cause_English>
+  </Table>
+  <Table>
+    <Category_ID>A0</Category_ID>
+    <Category_Description>SANWA Aligner Error 機台錯誤訊息</Category_Description>
+    <Code_Name>ECD_MTN_FORK_OVER_CURRENT</Code_Name>
+    <Code_Type>for Fork Error</Code_Type>
+    <Code_ID>91841000</Code_ID>
+    <Code_Cause>Fork馬達過電流(Fork開闔並使用馬達)</Code_Cause>
+    <Code_Cause_English>Fork Over Current</Code_Cause_English>
+  </Table>
+  <Table>
+    <Category_ID>A0</Category_ID>
+    <Category_Description>SANWA Aligner Error 機台錯誤訊息</Category_Description>
+    <Code_Name>ECD_MTN_FORK_OC_PEAK</Code_Name>
+    <Code_Type>for Fork Error</Code_Type>
+    <Code_ID>91842000</Code_ID>
+    <Code_Cause>Fork 馬達過電流(峰值)</Code_Cause>
+    <Code_Cause_English>Fork Over Current(Peak)</Code_Cause_English>
+  </Table>
+  <Table>
+    <Category_ID>A0</Category_ID>
+    <Category_Description>SANWA Aligner Error 機台錯誤訊息</Category_Description>
+    <Code_Name>ECD_MTN_FORK_ENCODER_LOST</Code_Name>
+    <Code_Type>for Fork Error</Code_Type>
+    <Code_ID>91843000</Code_ID>
+    <Code_Cause>Fork Encoder 異常</Code_Cause>
+    <Code_Cause_English>Fork Encoder Lost</Code_Cause_English>
+  </Table>
+  <Table>
+    <Category_ID>A0</Category_ID>
+    <Category_Description>SANWA Aligner Error 機台錯誤訊息</Category_Description>
+    <Code_Name>ECD_MTN_FORK_PARAM_ERROR</Code_Name>
+    <Code_Type>for Fork Error</Code_Type>
+    <Code_ID>81844000</Code_ID>
+    <Code_Cause>Fork開闔參數設定錯誤</Code_Cause>
+    <Code_Cause_English>Fork Control Parameter Error</Code_Cause_English>
+  </Table>
+  <Table>
+    <Category_ID>A0</Category_ID>
+    <Category_Description>SANWA Aligner Error 機台錯誤訊息</Category_Description>
+    <Code_Name>ECD_MTN_EMERGENCY_STOP</Code_Name>
+    <Code_Type>for Motion Controller</Code_Type>
+    <Code_ID>91850000</Code_ID>
+    <Code_Cause>緊急停止</Code_Cause>
+    <Code_Cause_English>Emergency Stop</Code_Cause_English>
+  </Table>
+  <Table>
+    <Category_ID>A0</Category_ID>
+    <Category_Description>SANWA Aligner Error 機台錯誤訊息</Category_Description>
+    <Code_Name>ECD_MTN_COUNT_OVERFLOW</Code_Name>
+    <Code_Type>for Motion Controller</Code_Type>
+    <Code_ID>91851000</Code_ID>
+    <Code_Cause>脈波計數器溢位</Code_Cause>
+    <Code_Cause_English>Pulse Counter Overflow</Code_Cause_English>
+  </Table>
+  <Table>
+    <Category_ID>A0</Category_ID>
+    <Category_Description>SANWA Aligner Error 機台錯誤訊息</Category_Description>
+    <Code_Name>ECD_MTN_ENCODER_ERROR</Code_Name>
+    <Code_Type>for Motion Controller</Code_Type>
+    <Code_ID>91852000</Code_ID>
+    <Code_Cause>編碼器脈波輸入異常</Code_Cause>
+    <Code_Cause_English>Encoder Pulse Error</Code_Cause_English>
+  </Table>
+  <Table>
+    <Category_ID>A0</Category_ID>
+    <Category_Description>SANWA Aligner Error 機台錯誤訊息</Category_Description>
+    <Code_Name>ECD_MTN_MJS_FAIL</Code_Name>
+    <Code_Type>for Multi-Joint Simulation</Code_Type>
+    <Code_ID>91860000</Code_ID>
+    <Code_Cause>擬似多軸錯誤</Code_Cause>
+    <Code_Cause_English>Multi-Joint Simulation Fail</Code_Cause_English>
+  </Table>
+  <Table>
+    <Category_ID>A0</Category_ID>
+    <Category_Description>SANWA Aligner Error 機台錯誤訊息</Category_Description>
+    <Code_Name>ECD_MTN_MJS_ARM_INTERFERE</Code_Name>
+    <Code_Type>for Multi-Joint Simulation</Code_Type>
+    <Code_ID>81861000</Code_ID>
+    <Code_Cause>擬似多軸 Arm 動作干涉</Code_Cause>
+    <Code_Cause_English>MJS Arm Interfere</Code_Cause_English>
+  </Table>
+  <Table>
+    <Category_ID>A0</Category_ID>
+    <Category_Description>SANWA Aligner Error 機台錯誤訊息</Category_Description>
+    <Code_Name>ECD_MTN_MJS_HARDWARE_ERROR</Code_Name>
+    <Code_Type>for Multi-Joint Simulation</Code_Type>
+    <Code_ID>81862000</Code_ID>
+    <Code_Cause>硬體不支援擬似多軸功能</Code_Cause>
+    <Code_Cause_English>MJS Hardware Error</Code_Cause_English>
+  </Table>
+  <Table>
+    <Category_ID>A0</Category_ID>
+    <Category_Description>SANWA Aligner Error 機台錯誤訊息</Category_Description>
+    <Code_Name>ECD_MTN_MJS_OVER_ARM_LENGT</Code_Name>
+    <Code_Type>for Multi-Joint Simulation</Code_Type>
+    <Code_ID>81863000</Code_ID>
+    <Code_Cause>超出  Link-Arm  的最大到達範圍</Code_Cause>
+    <Code_Cause_English>MJS Over Link-Arm Length</Code_Cause_English>
+  </Table>
+  <Table>
+    <Category_ID>A0</Category_ID>
+    <Category_Description>SANWA Aligner Error 機台錯誤訊息</Category_Description>
+    <Code_Name>ECD_DRV_UNKNOWN_FAIL</Code_Name>
+    <Code_Type>Motor Driver Alarm</Code_Type>
+    <Code_ID>92800000</Code_ID>
+    <Code_Cause>馬達驅動器異常</Code_Cause>
+    <Code_Cause_English>SI-Driver Unknown Fail</Code_Cause_English>
+  </Table>
+  <Table>
+    <Category_ID>A0</Category_ID>
+    <Category_Description>SANWA Aligner Error 機台錯誤訊息</Category_Description>
+    <Code_Name>ECD_ DRV_INITIAL_FAIL</Code_Name>
+    <Code_Type>Motor Driver Alarm</Code_Type>
+    <Code_ID>92801000</Code_ID>
+    <Code_Cause>馬達驅動器初始化失敗</Code_Cause>
+    <Code_Cause_English>SI-Driver Initial Fail</Code_Cause_English>
+  </Table>
+  <Table>
+    <Category_ID>A0</Category_ID>
+    <Category_Description>SANWA Aligner Error 機台錯誤訊息</Category_Description>
+    <Code_Name>ECD_ DRV_ALARM</Code_Name>
+    <Code_Type>Motor Driver Alarm</Code_Type>
+    <Code_ID>92802000</Code_ID>
+    <Code_Cause>馬達驅動器異常</Code_Cause>
+    <Code_Cause_English>SI-Driver Alarm</Code_Cause_English>
+  </Table>
+  <Table>
+    <Category_ID>A0</Category_ID>
+    <Category_Description>SANWA Aligner Error 機台錯誤訊息</Category_Description>
+    <Code_Name>ECD_ DRV_TEMPERATURE</Code_Name>
+    <Code_Type>Motor Driver Alarm</Code_Type>
+    <Code_ID>92803000</Code_ID>
+    <Code_Cause>馬達驅動器溫度異常</Code_Cause>
+    <Code_Cause_English>SI-Driver Over Temperature</Code_Cause_English>
+  </Table>
+  <Table>
+    <Category_ID>A0</Category_ID>
+    <Category_Description>SANWA Aligner Error 機台錯誤訊息</Category_Description>
+    <Code_Name>ECD_ DRV_OVER_CURRENT</Code_Name>
+    <Code_Type>Motor Driver Alarm</Code_Type>
+    <Code_ID>92804000</Code_ID>
+    <Code_Cause>馬達驅動器過電流</Code_Cause>
+    <Code_Cause_English>SI-Driver Over Current</Code_Cause_English>
+  </Table>
+  <Table>
+    <Category_ID>A0</Category_ID>
+    <Category_Description>SANWA Aligner Error 機台錯誤訊息</Category_Description>
+    <Code_Name>ECD_ DRV_POSITION_OD</Code_Name>
+    <Code_Type>Motor Driver Alarm</Code_Type>
+    <Code_ID>92805000</Code_ID>
+    <Code_Cause>馬達驅動器靜態脫調</Code_Cause>
+    <Code_Cause_English>SI-Driver Over Deviation(Static)</Code_Cause_English>
+  </Table>
+  <Table>
+    <Category_ID>A0</Category_ID>
+    <Category_Description>SANWA Aligner Error 機台錯誤訊息</Category_Description>
+    <Code_Name>ECD_ DRV_FOLLOWING_OD</Code_Name>
+    <Code_Type>Motor Driver Alarm</Code_Type>
+    <Code_ID>92806000</Code_ID>
+    <Code_Cause>馬達驅動器動態脫調</Code_Cause>
+    <Code_Cause_English>SI-Driver Over Deviation(Dynamic)</Code_Cause_English>
+  </Table>
+  <Table>
+    <Category_ID>A0</Category_ID>
+    <Category_Description>SANWA Aligner Error 機台錯誤訊息</Category_Description>
+    <Code_Name>ECD_ DRV_OVER_SPEED</Code_Name>
+    <Code_Type>Motor Driver Alarm</Code_Type>
+    <Code_ID>92807000</Code_ID>
+    <Code_Cause>馬達驅動器速度異常</Code_Cause>
+    <Code_Cause_English>SI-Driver Over Speed</Code_Cause_English>
+  </Table>
+  <Table>
+    <Category_ID>A0</Category_ID>
+    <Category_Description>SANWA Aligner Error 機台錯誤訊息</Category_Description>
+    <Code_Name>ECD_ DRV_LOW_VOLTAGE</Code_Name>
+    <Code_Type>Motor Driver Alarm</Code_Type>
+    <Code_ID>92808000</Code_ID>
+    <Code_Cause>馬達驅動器電壓異常</Code_Cause>
+    <Code_Cause_English>SI-Driver Low Voltage</Code_Cause_English>
+  </Table>
+  <Table>
+    <Category_ID>A0</Category_ID>
+    <Category_Description>SANWA Aligner Error 機台錯誤訊息</Category_Description>
+    <Code_Name>ECD_ DRV_ORG_CMD_FAIL</Code_Name>
+    <Code_Type>Motor Driver Alarm</Code_Type>
+    <Code_ID>92809000</Code_ID>
+    <Code_Cause>馬達驅動器 ORG Search 失敗</Code_Cause>
+    <Code_Cause_English>SI-Driver ORG Search Fail</Code_Cause_English>
+  </Table>
+  <Table>
+    <Category_ID>A0</Category_ID>
+    <Category_Description>SANWA Aligner Error 機台錯誤訊息</Category_Description>
+    <Code_Name>ECD_ DRV_PULSE_GEN</Code_Name>
+    <Code_Type>Motor Driver Alarm</Code_Type>
+    <Code_ID>9280A000</Code_ID>
+    <Code_Cause>馬達驅動器脈波產生異常</Code_Cause>
+    <Code_Cause_English>SI-Driver Pulse Generator Fail</Code_Cause_English>
+  </Table>
+  <Table>
+    <Category_ID>A0</Category_ID>
+    <Category_Description>SANWA Aligner Error 機台錯誤訊息</Category_Description>
+    <Code_Name>ECD_ DRV_V_MOTOR_LOW</Code_Name>
+    <Code_Type>Motor Driver Alarm</Code_Type>
+    <Code_ID>9280B000</Code_ID>
+    <Code_Cause>馬達驅動器馬達電壓異常</Code_Cause>
+    <Code_Cause_English>SI-Driver Low Motor Voltage</Code_Cause_English>
+  </Table>
+  <Table>
+    <Category_ID>A0</Category_ID>
+    <Category_Description>SANWA Aligner Error 機台錯誤訊息</Category_Description>
+    <Code_Name>ECD_ DRV_POWER_ON</Code_Name>
+    <Code_Type>Motor Driver Alarm</Code_Type>
+    <Code_ID>92810000</Code_ID>
+    <Code_Cause>馬達驅動器電源異常</Code_Cause>
+    <Code_Cause_English>SI-Driver Power On Fail</Code_Cause_English>
+  </Table>
+  <Table>
+    <Category_ID>A0</Category_ID>
+    <Category_Description>SANWA Aligner Error 機台錯誤訊息</Category_Description>
+    <Code_Name>ECD_ DRV_SERVO_ON</Code_Name>
+    <Code_Type>Motor Driver Alarm</Code_Type>
+    <Code_ID>92811000</Code_ID>
+    <Code_Cause>馬達驅動器無法 Servo On</Code_Cause>
+    <Code_Cause_English>SI-Driver Servo On Fail</Code_Cause_English>
+  </Table>
+  <Table>
+    <Category_ID>A0</Category_ID>
+    <Category_Description>SANWA Aligner Error 機台錯誤訊息</Category_Description>
+    <Code_Name>ECD_ DRV_RESET_ALARM</Code_Name>
+    <Code_Type>Motor Driver Alarm</Code_Type>
+    <Code_ID>92812000</Code_ID>
+    <Code_Cause>馬達驅動器清除警報失敗</Code_Cause>
+    <Code_Cause_English>SI-Driver Reset Alarm Fail</Code_Cause_English>
+  </Table>
+  <Table>
+    <Category_ID>A0</Category_ID>
+    <Category_Description>SANWA Aligner Error 機台錯誤訊息</Category_Description>
+    <Code_Name>ECD_ DRV_COMMUNICATION</Code_Name>
+    <Code_Type>Motor Driver Alarm</Code_Type>
+    <Code_ID>92813000</Code_ID>
+    <Code_Cause>無法與馬達驅動器通訊</Code_Cause>
+    <Code_Cause_English>SI-Driver Communication Fail</Code_Cause_English>
+  </Table>
+  <Table>
+    <Category_ID>A0</Category_ID>
+    <Category_Description>SANWA Aligner Error 機台錯誤訊息</Category_Description>
+    <Code_Name>ECD_DRV_ENCODER_UNSTABLE</Code_Name>
+    <Code_Type>Motor Driver Alarm</Code_Type>
+    <Code_ID>92814000</Code_ID>
+    <Code_Cause>ABS Encoder 異常</Code_Cause>
+    <Code_Cause_English>ABS Encoder Unstable</Code_Cause_English>
+  </Table>
+  <Table>
+    <Category_ID>A0</Category_ID>
+    <Category_Description>SANWA Aligner Error 機台錯誤訊息</Category_Description>
+    <Code_Name>ECD_DRV_ENCODER_FAIL</Code_Name>
+    <Code_Type>Motor Driver Alarm</Code_Type>
+    <Code_ID>92815000</Code_ID>
+    <Code_Cause>ABS Encoder  讀取失敗</Code_Cause>
+    <Code_Cause_English>ABS Encoder Read Fail</Code_Cause_English>
+  </Table>
+  <Table>
+    <Category_ID>A0</Category_ID>
+    <Category_Description>SANWA Aligner Error 機台錯誤訊息</Category_Description>
+    <Code_Name>ECD_DRV_Z_PAHSE_ERR</Code_Name>
+    <Code_Type>Motor Driver Alarm</Code_Type>
+    <Code_ID>92816000</Code_ID>
+    <Code_Cause>ABS Encoder Z-Phase 錯誤</Code_Cause>
+    <Code_Cause_English>ABS Encoder Z-Phase Error</Code_Cause_English>
+  </Table>
+  <Table>
+    <Category_ID>A0</Category_ID>
+    <Category_Description>SANWA Aligner Error 機台錯誤訊息</Category_Description>
+    <Code_Name>ECD_DRV_MOTOR_IN_MOVING</Code_Name>
+    <Code_Type>Motor Driver Alarm</Code_Type>
+    <Code_ID>92817000</Code_ID>
+    <Code_Cause>馬達還未停止就進行下一個命令</Code_Cause>
+    <Code_Cause_English>Motor in Moving</Code_Cause_English>
+  </Table>
+  <Table>
+    <Category_ID>A0</Category_ID>
+    <Category_Description>SANWA Aligner Error 機台錯誤訊息</Category_Description>
+    <Code_Name>ECD_DRV_MOTOR_MODEL_ERROR</Code_Name>
+    <Code_Type>Motor Driver Alarm</Code_Type>
+    <Code_ID>92818000</Code_ID>
+    <Code_Cause>馬達序號不匹配</Code_Cause>
+    <Code_Cause_English>Motor Model Error</Code_Cause_English>
+  </Table>
+  <Table>
+    <Category_ID>A0</Category_ID>
+    <Category_Description>SANWA Aligner Error 機台錯誤訊息</Category_Description>
+    <Code_Name>ECD_EXT_IO_INIT_FAIL</Code_Name>
+    <Code_Type>for Ext-IO Board Error</Code_Type>
+    <Code_ID>92820000</Code_ID>
+    <Code_Cause>IO 擴展板初始化失敗</Code_Cause>
+    <Code_Cause_English>Ext-IO Initial Fail</Code_Cause_English>
+  </Table>
+  <Table>
+    <Category_ID>A0</Category_ID>
+    <Category_Description>SANWA Aligner Error 機台錯誤訊息</Category_Description>
+    <Code_Name>ECD_SSR_TIMEOUT</Code_Name>
+    <Code_Type>Sensor Alarm</Code_Type>
+    <Code_ID>83800000</Code_ID>
+    <Code_Cause>等待感測器超時</Code_Cause>
+    <Code_Cause_English>Sensor Timeout</Code_Cause_English>
+  </Table>
+  <Table>
+    <Category_ID>A0</Category_ID>
+    <Category_Description>SANWA Aligner Error 機台錯誤訊息</Category_Description>
+    <Code_Name>ECD_SSR_REQ_ENTER_TMO</Code_Name>
+    <Code_Type>Sensor Alarm</Code_Type>
+    <Code_ID>83801000</Code_ID>
+    <Code_Cause>PCL REQ_ENTER 訊號沒回應</Code_Cause>
+    <Code_Cause_English>PCL REQ_ENTER Timeout</Code_Cause_English>
+  </Table>
+  <Table>
+    <Category_ID>A0</Category_ID>
+    <Category_Description>SANWA Aligner Error 機台錯誤訊息</Category_Description>
+    <Code_Name>ECD_SSR_REQ_ENTER_ON</Code_Name>
+    <Code_Type>Sensor Alarm</Code_Type>
+    <Code_ID>83802000</Code_ID>
+    <Code_Cause>PCL REQ_ENTER 訊號 "ON" 異常</Code_Cause>
+    <Code_Cause_English>PCL REQ_ENTER 'ON' Fail</Code_Cause_English>
+  </Table>
+  <Table>
+    <Category_ID>A0</Category_ID>
+    <Category_Description>SANWA Aligner Error 機台錯誤訊息</Category_Description>
+    <Code_Name>ECD_SSR_PRESENT_ON</Code_Name>
+    <Code_Type>Sensor Alarm</Code_Type>
+    <Code_ID>93803000</Code_ID>
+    <Code_Cause>在席感測器訊號 "ON" 異常</Code_Cause>
+    <Code_Cause_English>Present Sensor 'ON' Fail</Code_Cause_English>
+  </Table>
+  <Table>
+    <Category_ID>A0</Category_ID>
+    <Category_Description>SANWA Aligner Error 機台錯誤訊息</Category_Description>
+    <Code_Name>ECD_SSR_PRESENT_OFF</Code_Name>
+    <Code_Type>Sensor Alarm</Code_Type>
+    <Code_ID>93804000</Code_ID>
+    <Code_Cause>在席感測器訊號 "OFF" 異常</Code_Cause>
+    <Code_Cause_English>Present Sensor 'OFF' Fail</Code_Cause_English>
+  </Table>
+  <Table>
+    <Category_ID>A0</Category_ID>
+    <Category_Description>SANWA Aligner Error 機台錯誤訊息</Category_Description>
+    <Code_Name>ECD_SSR_CONTROLLER_FAN</Code_Name>
+    <Code_Type>Sensor Alarm</Code_Type>
+    <Code_ID>83805000</Code_ID>
+    <Code_Cause>控制器風扇異常</Code_Cause>
+    <Code_Cause_English>Controller Fan Fail</Code_Cause_English>
+  </Table>
+  <Table>
+    <Category_ID>A0</Category_ID>
+    <Category_Description>SANWA Aligner Error 機台錯誤訊息</Category_Description>
+    <Code_Name>ECD_SSR_ROBOT_FAN1</Code_Name>
+    <Code_Type>Sensor Alarm</Code_Type>
+    <Code_ID>83806000</Code_ID>
+    <Code_Cause>Robot 風扇 1 異常</Code_Cause>
+    <Code_Cause_English>Robot Fan1 Fail</Code_Cause_English>
+  </Table>
+  <Table>
+    <Category_ID>A0</Category_ID>
+    <Category_Description>SANWA Aligner Error 機台錯誤訊息</Category_Description>
+    <Code_Name>ECD_SSR_ROBOT_FAN2</Code_Name>
+    <Code_Type>Sensor Alarm</Code_Type>
+    <Code_ID>83807000</Code_ID>
+    <Code_Cause>Robot 風扇 2 異常</Code_Cause>
+    <Code_Cause_English>Robot Fan2 Fail</Code_Cause_English>
+  </Table>
+  <Table>
+    <Category_ID>A0</Category_ID>
+    <Category_Description>SANWA Aligner Error 機台錯誤訊息</Category_Description>
+    <Code_Name>ECD_SSR_ROBOT_FAN3</Code_Name>
+    <Code_Type>Sensor Alarm</Code_Type>
+    <Code_ID>83808000</Code_ID>
+    <Code_Cause>Robot 風扇 3 異常</Code_Cause>
+    <Code_Cause_English>Robot Fan3 Fail</Code_Cause_English>
+  </Table>
+  <Table>
+    <Category_ID>A0</Category_ID>
+    <Category_Description>SANWA Aligner Error 機台錯誤訊息</Category_Description>
+    <Code_Name>ECD_SSR_ORG</Code_Name>
+    <Code_Type>Sensor Alarm</Code_Type>
+    <Code_ID>93809000</Code_ID>
+    <Code_Cause>原點感測器訊號 "ON" 異常</Code_Cause>
+    <Code_Cause_English>ORG Sensor 'ON' Fail</Code_Cause_English>
+  </Table>
+  <Table>
+    <Category_ID>A0</Category_ID>
+    <Category_Description>SANWA Aligner Error 機台錯誤訊息</Category_Description>
+    <Code_Name>ECD_SSR_WAFER_HOLD_TMO</Code_Name>
+    <Code_Type>Sensor Alarm</Code_Type>
+    <Code_ID>9380A000</Code_ID>
+    <Code_Cause>晶圓保持(吸附)失敗(有 Timeout 參數)</Code_Cause>
+    <Code_Cause_English>Wafer Hold Timeout</Code_Cause_English>
+  </Table>
+  <Table>
+    <Category_ID>A0</Category_ID>
+    <Category_Description>SANWA Aligner Error 機台錯誤訊息</Category_Description>
+    <Code_Name>ECD_SSR_WAFER_RELEASE_TMO</Code_Name>
+    <Code_Type>Sensor Alarm</Code_Type>
+    <Code_ID>9380B000</Code_ID>
+    <Code_Cause>晶圓釋放失敗(有 Timeout 參數)</Code_Cause>
+    <Code_Cause_English>Wafer Release Timeout</Code_Cause_English>
+  </Table>
+  <Table>
+    <Category_ID>A0</Category_ID>
+    <Category_Description>SANWA Aligner Error 機台錯誤訊息</Category_Description>
+    <Code_Name>ECD_SSR_WAFER_HOLD_FAIL</Code_Name>
+    <Code_Type>Sensor Alarm</Code_Type>
+    <Code_ID>9380C000</Code_ID>
+    <Code_Cause>晶圓保持(吸附)失敗(直接判斷無 Timeout)</Code_Cause>
+    <Code_Cause_English>Wafer Hold Fail</Code_Cause_English>
+  </Table>
+  <Table>
+    <Category_ID>A0</Category_ID>
+    <Category_Description>SANWA Aligner Error 機台錯誤訊息</Category_Description>
+    <Code_Name>ECD_SSR_WAFER_RELEASE_FAIL</Code_Name>
+    <Code_Type>Sensor Alarm</Code_Type>
+    <Code_ID>9380D000</Code_ID>
+    <Code_Cause>晶圓釋放失敗(直接判斷無 Timeout)</Code_Cause>
+    <Code_Cause_English>Wafer Release Fail</Code_Cause_English>
+  </Table>
+  <Table>
+    <Category_ID>A0</Category_ID>
+    <Category_Description>SANWA Aligner Error 機台錯誤訊息</Category_Description>
+    <Code_Name>ECD_SSR_WAFER_SENSOR</Code_Name>
+    <Code_Type>Sensor Alarm</Code_Type>
+    <Code_ID>9380F000</Code_ID>
+    <Code_Cause>晶圓感測器訊號異常</Code_Cause>
+    <Code_Cause_English>Wafer Sensor Fail</Code_Cause_English>
+  </Table>
+  <Table>
+    <Category_ID>A0</Category_ID>
+    <Category_Description>SANWA Aligner Error 機台錯誤訊息</Category_Description>
+    <Code_Name>ECD_SSR_PRESSURE</Code_Name>
+    <Code_Type>Sensor Alarm</Code_Type>
+    <Code_ID>83810000</Code_ID>
+    <Code_Cause>壓力異常</Code_Cause>
+    <Code_Cause_English>Abnormal Pressure</Code_Cause_English>
+  </Table>
+  <Table>
+    <Category_ID>A0</Category_ID>
+    <Category_Description>SANWA Aligner Error 機台錯誤訊息</Category_Description>
+    <Code_Name>ECD_SSR_CRASH</Code_Name>
+    <Code_Type>Sensor Alarm</Code_Type>
+    <Code_ID>83820000</Code_ID>
+    <Code_Cause>撞機(震動感知器觸發)</Code_Cause>
+    <Code_Cause_English>Crash(Detected Shock Sensor)</Code_Cause_English>
+  </Table>
+  <Table>
+    <Category_ID>A0</Category_ID>
+    <Category_Description>SANWA Aligner Error 機台錯誤訊息</Category_Description>
+    <Code_Name>ECD_SSR_BELT_BREAK</Code_Name>
+    <Code_Type>Sensor Alarm</Code_Type>
+    <Code_ID>83830000</Code_ID>
+    <Code_Cause>皮帶斷裂</Code_Cause>
+    <Code_Cause_English>Belt Break</Code_Cause_English>
+  </Table>
+  <Table>
+    <Category_ID>A0</Category_ID>
+    <Category_Description>SANWA Aligner Error 機台錯誤訊息</Category_Description>
+    <Code_Name>ECD_CMD_UNLNOWN_CMD</Code_Name>
+    <Code_Type>Host Command Alarm</Code_Type>
+    <Code_ID>84800000</Code_ID>
+    <Code_Cause>未知的命令</Code_Cause>
+    <Code_Cause_English>Unknown Command</Code_Cause_English>
+  </Table>
+  <Table>
+    <Category_ID>A0</Category_ID>
+    <Category_Description>SANWA Aligner Error 機台錯誤訊息</Category_Description>
+    <Code_Name>ECD_CMD_IN_EXECUTE</Code_Name>
+    <Code_Type>Host Command Alarm</Code_Type>
+    <Code_ID>84801000</Code_ID>
+    <Code_Cause>上一個命令還在執行中</Code_Cause>
+    <Code_Cause_English>Command Executing</Code_Cause_English>
+  </Table>
+  <Table>
+    <Category_ID>A0</Category_ID>
+    <Category_Description>SANWA Aligner Error 機台錯誤訊息</Category_Description>
+    <Code_Name>ECD_CMD_ACK_TMO</Code_Name>
+    <Code_Type>Host Command Alarm</Code_Type>
+    <Code_ID>84802000</Code_ID>
+    <Code_Cause>控制器異常</Code_Cause>
+    <Code_Cause_English>Command Internal Ack Timeout</Code_Cause_English>
+  </Table>
+  <Table>
+    <Category_ID>A0</Category_ID>
+    <Category_Description>SANWA Aligner Error 機台錯誤訊息</Category_Description>
+    <Code_Name>ECD_CMD_EXECUTE_TIMEOUT</Code_Name>
+    <Code_Type>Host Command Alarm</Code_Type>
+    <Code_ID>84803000</Code_ID>
+    <Code_Cause>命令未在時間內完成</Code_Cause>
+    <Code_Cause_English>Command Execute Timeout</Code_Cause_English>
+  </Table>
+  <Table>
+    <Category_ID>A0</Category_ID>
+    <Category_Description>SANWA Aligner Error 機台錯誤訊息</Category_Description>
+    <Code_Name>ECD_CMD_EXECUTE_FAIL</Code_Name>
+    <Code_Type>Host Command Alarm</Code_Type>
+    <Code_ID>84804000</Code_ID>
+    <Code_Cause>命令執行失敗</Code_Cause>
+    <Code_Cause_English>Command Execute Fail</Code_Cause_English>
+  </Table>
+  <Table>
+    <Category_ID>A0</Category_ID>
+    <Category_Description>SANWA Aligner Error 機台錯誤訊息</Category_Description>
+    <Code_Name>ECD_CMD_ABORT</Code_Name>
+    <Code_Type>Host Command Alarm</Code_Type>
+    <Code_ID>84805000</Code_ID>
+    <Code_Cause>命令中斷</Code_Cause>
+    <Code_Cause_English>Command Abort</Code_Cause_English>
+  </Table>
+  <Table>
+    <Category_ID>A0</Category_ID>
+    <Category_Description>SANWA Aligner Error 機台錯誤訊息</Category_Description>
+    <Code_Name>ECD_CMD_IN_MANUAL_MODE</Code_Name>
+    <Code_Type>Host Command Alarm</Code_Type>
+    <Code_ID>84806000</Code_ID>
+    <Code_Cause>Aligner目前切換到手動模式</Code_Cause>
+    <Code_Cause_English>Aligner in Manual Mode</Code_Cause_English>
+  </Table>
+  <Table>
+    <Category_ID>A0</Category_ID>
+    <Category_Description>SANWA Aligner Error 機台錯誤訊息</Category_Description>
+    <Code_Name>ECD_CMD_PARAMETER</Code_Name>
+    <Code_Type>Host Command Alarm</Code_Type>
+    <Code_ID>84807000</Code_ID>
+    <Code_Cause>命令所帶的參數超過容許範圍</Code_Cause>
+    <Code_Cause_English>Command Parameter Over Range</Code_Cause_English>
+  </Table>
+  <Table>
+    <Category_ID>A0</Category_ID>
+    <Category_Description>SANWA Aligner Error 機台錯誤訊息</Category_Description>
+    <Code_Name>ECD_CMD_CONTINUE_FAIL</Code_Name>
+    <Code_Type>Host Command Alarm</Code_Type>
+    <Code_ID>84808000</Code_ID>
+    <Code_Cause>命令暫停後無法繼續(有錯誤發生)</Code_Cause>
+    <Code_Cause_English>Command Continue Fail (Error Occurred)</Code_Cause_English>
+  </Table>
+  <Table>
+    <Category_ID>A0</Category_ID>
+    <Category_Description>SANWA Aligner Error 機台錯誤訊息</Category_Description>
+    <Code_Name>ECD_CMD_RESET_IN_ROBOT_RUN</Code_Name>
+    <Code_Type>Host Command Alarm</Code_Type>
+    <Code_ID>84809000</Code_ID>
+    <Code_Cause>命令還未結束無法執行 Reset 動作</Code_Cause>
+    <Code_Cause_English>Reset Alarm Fail (Command Executing)</Code_Cause_English>
+  </Table>
+  <Table>
+    <Category_ID>A0</Category_ID>
+    <Category_Description>SANWA Aligner Error 機台錯誤訊息</Category_Description>
+    <Code_Name>ECD_CMD_UNLNOWN_FLAG</Code_Name>
+    <Code_Type>Host Command Alarm</Code_Type>
+    <Code_ID>8480A000</Code_ID>
+    <Code_Cause>未知的命令類型</Code_Cause>
+    <Code_Cause_English>Command Flag Unknown</Code_Cause_English>
+  </Table>
+  <Table>
+    <Category_ID>A0</Category_ID>
+    <Category_Description>SANWA Aligner Error 機台錯誤訊息</Category_Description>
+    <Code_Name>ECD_CMD_FORMAT_ERROR</Code_Name>
+    <Code_Type>Host Command Alarm</Code_Type>
+    <Code_ID>8480B000</Code_ID>
+    <Code_Cause>命令格式錯誤</Code_Cause>
+    <Code_Cause_English>Command Format Error</Code_Cause_English>
+  </Table>
+  <Table>
+    <Category_ID>A0</Category_ID>
+    <Category_Description>SANWA Aligner Error 機台錯誤訊息</Category_Description>
+    <Code_Name>ECD_CMD_PAUSE_FAIL</Code_Name>
+    <Code_Type>Host Command Alarm</Code_Type>
+    <Code_ID>8480C000</Code_ID>
+    <Code_Cause>執行暫停命令失敗</Code_Cause>
+    <Code_Cause_English>Command Pause Error</Code_Cause_English>
+  </Table>
+  <Table>
+    <Category_ID>A0</Category_ID>
+    <Category_Description>SANWA Aligner Error 機台錯誤訊息</Category_Description>
+    <Code_Name>ECD_P2P_SPD_OVER_RANGE</Code_Name>
+    <Code_Type>Point to Piont Alarm</Code_Type>
+    <Code_ID>85800000</Code_ID>
+    <Code_Cause>速度超出範圍</Code_Cause>
+    <Code_Cause_English>Speed Over Range(0~100)</Code_Cause_English>
+  </Table>
+  <Table>
+    <Category_ID>A0</Category_ID>
+    <Category_Description>SANWA Aligner Error 機台錯誤訊息</Category_Description>
+    <Code_Name>ECD_P2P_SPD_TYPE_ERROR</Code_Name>
+    <Code_Type>Point to Piont Alarm</Code_Type>
+    <Code_ID>85801000</Code_ID>
+    <Code_Cause>速度的選擇超出範圍(Normal, Teach, ORG)</Code_Cause>
+    <Code_Cause_English>Speed Type Error</Code_Cause_English>
+  </Table>
+  <Table>
+    <Category_ID>A0</Category_ID>
+    <Category_Description>SANWA Aligner Error 機台錯誤訊息</Category_Description>
+    <Code_Name>ECD_P2P_POINT_NO</Code_Name>
+    <Code_Type>Point to Piont Alarm</Code_Type>
+    <Code_ID>85802000</Code_ID>
+    <Code_Cause>移動命令的點位參數超出範圍</Code_Cause>
+    <Code_Cause_English>Point No. Over Range</Code_Cause_English>
+  </Table>
+  <Table>
+    <Category_ID>A0</Category_ID>
+    <Category_Description>SANWA Aligner Error 機台錯誤訊息</Category_Description>
+    <Code_Name>ECD_P2P_ARM_NO</Code_Name>
+    <Code_Type>Point to Piont Alarm</Code_Type>
+    <Code_ID>85803000</Code_ID>
+    <Code_Cause>移動命令的 Arm 參數超出範圍</Code_Cause>
+    <Code_Cause_English>Arm No. Over Range</Code_Cause_English>
+  </Table>
+  <Table>
+    <Category_ID>A0</Category_ID>
+    <Category_Description>SANWA Aligner Error 機台錯誤訊息</Category_Description>
+    <Code_Name>ECD_P2P_SIDE_NO</Code_Name>
+    <Code_Type>Point to Piont Alarm</Code_Type>
+    <Code_ID>85804000</Code_ID>
+    <Code_Cause>Side Number 超出範圍</Code_Cause>
+    <Code_Cause_English>Side No. Over Range</Code_Cause_English>
+  </Table>
+  <Table>
+    <Category_ID>A0</Category_ID>
+    <Category_Description>SANWA Aligner Error 機台錯誤訊息</Category_Description>
+    <Code_Name>ECD_P2P_REFS_CASSETTE</Code_Name>
+    <Code_Type>Point to Piont Alarm</Code_Type>
+    <Code_ID>85805000</Code_ID>
+    <Code_Cause>Point Data 中 "Reference Cassette" 指向自己 </Code_Cause>
+    <Code_Cause_English>Refs Cassette No. Fail(Equal to Itself)</Code_Cause_English>
+  </Table>
+  <Table>
+    <Category_ID>A0</Category_ID>
+    <Category_Description>SANWA Aligner Error 機台錯誤訊息</Category_Description>
+    <Code_Name>ECD_P2P_REFS_POSITION</Code_Name>
+    <Code_Type>Point to Piont Alarm</Code_Type>
+    <Code_ID>85806000</Code_ID>
+    <Code_Cause>Point Data 中 "Reference Position" 指向自己 </Code_Cause>
+    <Code_Cause_English>Refs Position No. Fail(Equal to Itself)</Code_Cause_English>
+  </Table>
+  <Table>
+    <Category_ID>A0</Category_ID>
+    <Category_Description>SANWA Aligner Error 機台錯誤訊息</Category_Description>
+    <Code_Name>ECD_P2P_SLOT_NO</Code_Name>
+    <Code_Type>Point to Piont Alarm</Code_Type>
+    <Code_ID>85807000</Code_ID>
+    <Code_Cause>移動命令的 Slot 參數超出範圍</Code_Cause>
+    <Code_Cause_English>Cassette Slot No. Over Range</Code_Cause_English>
+  </Table>
+  <Table>
+    <Category_ID>A0</Category_ID>
+    <Category_Description>SANWA Aligner Error 機台錯誤訊息</Category_Description>
+    <Code_Name>ECD_P2P_COLUMN_NO</Code_Name>
+    <Code_Type>Point to Piont Alarm</Code_Type>
+    <Code_ID>85808000</Code_ID>
+    <Code_Cause>移動命令的 Column 參數超出範圍</Code_Cause>
+    <Code_Cause_English>Cassette Column No. Over Range</Code_Cause_English>
+  </Table>
+  <Table>
+    <Category_ID>A0</Category_ID>
+    <Category_Description>SANWA Aligner Error 機台錯誤訊息</Category_Description>
+    <Code_Name>ECD_P2P_ROW_NO</Code_Name>
+    <Code_Type>Point to Piont Alarm</Code_Type>
+    <Code_ID>85809000</Code_ID>
+    <Code_Cause>移動命令的 Row 參數超出範圍</Code_Cause>
+    <Code_Cause_English>Cassette Row No. Over Range</Code_Cause_English>
+  </Table>
+  <Table>
+    <Category_ID>A0</Category_ID>
+    <Category_Description>SANWA Aligner Error 機台錯誤訊息</Category_Description>
+    <Code_Name>ECD_P2P_POSITION_DATA_EMPTY</Code_Name>
+    <Code_Type>Point to Piont Alarm</Code_Type>
+    <Code_ID>8580A000</Code_ID>
+    <Code_Cause>移動命令的點位資料沒有被設定</Code_Cause>
+    <Code_Cause_English>Position Data is Empty</Code_Cause_English>
+  </Table>
+  <Table>
+    <Category_ID>A0</Category_ID>
+    <Category_Description>SANWA Aligner Error 機台錯誤訊息</Category_Description>
+    <Code_Name>ECD_P2P_RL_GOR_P_DISABLE</Code_Name>
+    <Code_Type>Point to Piont Alarm</Code_Type>
+    <Code_ID>8580B000</Code_ID>
+    <Code_Cause>R/L 軸同動功能被關閉</Code_Cause>
+    <Code_Cause_English>RL-GorP Disabled</Code_Cause_English>
+  </Table>
+  <Table>
+    <Category_ID>A0</Category_ID>
+    <Category_Description>SANWA Aligner Error 機台錯誤訊息</Category_Description>
+    <Code_Name>ECD_P2P_SLOT_TYPE</Code_Name>
+    <Code_Type>Point to Piont Alarm</Code_Type>
+    <Code_ID>8580C000</Code_ID>
+    <Code_Cause>移動命令所指定的 Slot 型式錯誤</Code_Cause>
+    <Code_Cause_English>Slot Type Error</Code_Cause_English>
+  </Table>
+  <Table>
+    <Category_ID>A0</Category_ID>
+    <Category_Description>SANWA Aligner Error 機台錯誤訊息</Category_Description>
+    <Code_Name>ECD_P2P_AXIS_DISABLED</Code_Name>
+    <Code_Type>Point to Piont Alarm</Code_Type>
+    <Code_ID>95810000</Code_ID>
+    <Code_Cause>軸已被關閉，無法進行動作</Code_Cause>
+    <Code_Cause_English>Axis Disabled</Code_Cause_English>
+  </Table>
+  <Table>
+    <Category_ID>A0</Category_ID>
+    <Category_Description>SANWA Aligner Error 機台錯誤訊息</Category_Description>
+    <Code_Name>ECD_P2P_OVER_RANGE</Code_Name>
+    <Code_Type>Point to Piont Alarm</Code_Type>
+    <Code_ID>95811000</Code_ID>
+    <Code_Cause>要移動的位置超出可移動範圍</Code_Cause>
+    <Code_Cause_English>Move Over Range</Code_Cause_English>
+  </Table>
+  <Table>
+    <Category_ID>A0</Category_ID>
+    <Category_Description>SANWA Aligner Error 機台錯誤訊息</Category_Description>
+    <Code_Name>ECD_P2P_OVER_SOFT_LIMIT</Code_Name>
+    <Code_Type>Point to Piont Alarm</Code_Type>
+    <Code_ID>95812000</Code_ID>
+    <Code_Cause>要移動的位置超出軟體極限值</Code_Cause>
+    <Code_Cause_English>Over Soft Limit</Code_Cause_English>
+  </Table>
+  <Table>
+    <Category_ID>A0</Category_ID>
+    <Category_Description>SANWA Aligner Error 機台錯誤訊息</Category_Description>
+    <Code_Name>ECD_P2P_SET_SPEED</Code_Name>
+    <Code_Type>Point to Piont Alarm</Code_Type>
+    <Code_ID>95813000</Code_ID>
+    <Code_Cause>速度參數錯誤導致設定失敗</Code_Cause>
+    <Code_Cause_English>Set Speed Fail</Code_Cause_English>
+  </Table>
+  <Table>
+    <Category_ID>A0</Category_ID>
+    <Category_Description>SANWA Aligner Error 機台錯誤訊息</Category_Description>
+    <Code_Name>ECD_P2P_PARAM_SPD_HIGH</Code_Name>
+    <Code_Type>for Parameter Setting Error</Code_Type>
+    <Code_ID>95821000</Code_ID>
+    <Code_Cause>移動速度參數設定錯誤(高速)</Code_Cause>
+    <Code_Cause_English>Param. Speed High</Code_Cause_English>
+  </Table>
+  <Table>
+    <Category_ID>A0</Category_ID>
+    <Category_Description>SANWA Aligner Error 機台錯誤訊息</Category_Description>
+    <Code_Name>ECD_P2P_PARAM_SPD_LOW</Code_Name>
+    <Code_Type>for Parameter Setting Error</Code_Type>
+    <Code_ID>95822000</Code_ID>
+    <Code_Cause>移動速度參數設定錯誤(低速)</Code_Cause>
+    <Code_Cause_English>Param. Speed Low</Code_Cause_English>
+  </Table>
+  <Table>
+    <Category_ID>A0</Category_ID>
+    <Category_Description>SANWA Aligner Error 機台錯誤訊息</Category_Description>
+    <Code_Name>ECD_P2P_PARAM_SPD_UAC</Code_Name>
+    <Code_Type>for Parameter Setting Error</Code_Type>
+    <Code_ID>95823000</Code_ID>
+    <Code_Cause>移動速度參數設定錯誤(加速度)</Code_Cause>
+    <Code_Cause_English>Param. Speed UAC</Code_Cause_English>
+  </Table>
+  <Table>
+    <Category_ID>A0</Category_ID>
+    <Category_Description>SANWA Aligner Error 機台錯誤訊息</Category_Description>
+    <Code_Name>ECD_P2P_PARAM_SPD_USC</Code_Name>
+    <Code_Type>for Parameter Setting Error</Code_Type>
+    <Code_ID>95824000</Code_ID>
+    <Code_Cause>移動速度參數設定錯誤(S-Curve 加速度)</Code_Cause>
+    <Code_Cause_English>Param. Speed USC</Code_Cause_English>
+  </Table>
+  <Table>
+    <Category_ID>A0</Category_ID>
+    <Category_Description>SANWA Aligner Error 機台錯誤訊息</Category_Description>
+    <Code_Name>ECD_P2P_PARAM_SPD_OFFSET</Code_Name>
+    <Code_Type>for Parameter Setting Error</Code_Type>
+    <Code_ID>95825000</Code_ID>
+    <Code_Cause>移動速度參數設定錯誤(Offset)</Code_Cause>
+    <Code_Cause_English>Param. Speed Offset</Code_Cause_English>
+  </Table>
+  <Table>
+    <Category_ID>A0</Category_ID>
+    <Category_Description>SANWA Aligner Error 機台錯誤訊息</Category_Description>
+    <Code_Name>ECD_P2P_PARAM_PULSE_BUNSI</Code_Name>
+    <Code_Type>for Parameter Setting Error</Code_Type>
+    <Code_ID>95826000</Code_ID>
+    <Code_Cause>齒輪比分子設定錯誤</Code_Cause>
+    <Code_Cause_English>Param. Pulse Bunsi</Code_Cause_English>
+  </Table>
+  <Table>
+    <Category_ID>A0</Category_ID>
+    <Category_Description>SANWA Aligner Error 機台錯誤訊息</Category_Description>
+    <Code_Name>ECD_P2P_PARAM_PULSE_BUNBO</Code_Name>
+    <Code_Type>for Parameter Setting Error</Code_Type>
+    <Code_ID>95827000</Code_ID>
+    <Code_Cause>齒輪比分母設定錯誤</Code_Cause>
+    <Code_Cause_English>Param. Pulse Bunbo</Code_Cause_English>
+  </Table>
+  <Table>
+    <Category_ID>A0</Category_ID>
+    <Category_Description>SANWA Aligner Error 機台錯誤訊息</Category_Description>
+    <Code_Name>ECD_P2P_PARAM_LEAD</Code_Name>
+    <Code_Type>for Parameter Setting Error</Code_Type>
+    <Code_ID>95828000</Code_ID>
+    <Code_Cause>導程設定錯誤</Code_Cause>
+    <Code_Cause_English>Param. Lead</Code_Cause_English>
+  </Table>
+  <Table>
+    <Category_ID>A0</Category_ID>
+    <Category_Description>SANWA Aligner Error 機台錯誤訊息</Category_Description>
+    <Code_Name>ECD_P2P_PARAM_LINKARM</Code_Name>
+    <Code_Type>for Parameter Setting Error</Code_Type>
+    <Code_ID>85829000</Code_ID>
+    <Code_Cause>Link-Arm 參數設定錯誤</Code_Cause>
+    <Code_Cause_English>Param. Link-Arm</Code_Cause_English>
+  </Table>
+  <Table>
+    <Category_ID>A0</Category_ID>
+    <Category_Description>SANWA Aligner Error 機台錯誤訊息</Category_Description>
+    <Code_Name>ECD_ALN_DATA_CHECKSUM</Code_Name>
+    <Code_Type>Aligner Alarm</Code_Type>
+    <Code_ID>86800000</Code_ID>
+    <Code_Cause>控制器內部硬體異常</Code_Cause>
+    <Code_Cause_English>Data Checksum Error</Code_Cause_English>
+  </Table>
+  <Table>
+    <Category_ID>A0</Category_ID>
+    <Category_Description>SANWA Aligner Error 機台錯誤訊息</Category_Description>
+    <Code_Name>ECD_ALN_DATA_INDEX</Code_Name>
+    <Code_Type>Aligner Alarm</Code_Type>
+    <Code_ID>86801000</Code_ID>
+    <Code_Cause>控制器內部硬體異常</Code_Cause>
+    <Code_Cause_English>Data Index Error</Code_Cause_English>
+  </Table>
+  <Table>
+    <Category_ID>A0</Category_ID>
+    <Category_Description>SANWA Aligner Error 機台錯誤訊息</Category_Description>
+    <Code_Name>ECD_ALN_PHOTO_CH0</Code_Name>
+    <Code_Type>Aligner Alarm</Code_Type>
+    <Code_ID>86802000</Code_ID>
+    <Code_Cause>控制器讀Photo Sensor Ch0 異常</Code_Cause>
+    <Code_Cause_English>Read Photo Sens. Ch0 N.G.</Code_Cause_English>
+  </Table>
+  <Table>
+    <Category_ID>A0</Category_ID>
+    <Category_Description>SANWA Aligner Error 機台錯誤訊息</Category_Description>
+    <Code_Name>ECD_ ALN_PHOTO_CH1</Code_Name>
+    <Code_Type>Aligner Alarm</Code_Type>
+    <Code_ID>86803000</Code_ID>
+    <Code_Cause>控制器讀Photo Sensor Ch1 異常</Code_Cause>
+    <Code_Cause_English>Read Photo Sens. Ch1 N.G.</Code_Cause_English>
+  </Table>
+  <Table>
+    <Category_ID>A0</Category_ID>
+    <Category_Description>SANWA Aligner Error 機台錯誤訊息</Category_Description>
+    <Code_Name>ECD_ALN_OVER_CCD_LIMITP</Code_Name>
+    <Code_Type>Aligner Alarm</Code_Type>
+    <Code_ID>86810000</Code_ID>
+    <Code_Cause>Wafer邊緣位置未到CCD範圍</Code_Cause>
+    <Code_Cause_English>Over CCD Limit +</Code_Cause_English>
+  </Table>
+  <Table>
+    <Category_ID>A0</Category_ID>
+    <Category_Description>SANWA Aligner Error 機台錯誤訊息</Category_Description>
+    <Code_Name>ECD_ALN_OVER_CCD_LIMITN</Code_Name>
+    <Code_Type>Aligner Alarm</Code_Type>
+    <Code_ID>86811000</Code_ID>
+    <Code_Cause>Wafer邊緣位置超過CCD範圍</Code_Cause>
+    <Code_Cause_English>Over CCD Limit -</Code_Cause_English>
+  </Table>
+  <Table>
+    <Category_ID>A0</Category_ID>
+    <Category_Description>SANWA Aligner Error 機台錯誤訊息</Category_Description>
+    <Code_Name>ECD_ALN_WAFER_EDGE</Code_Name>
+    <Code_Type>Aligner Alarm</Code_Type>
+    <Code_ID>86812000</Code_ID>
+    <Code_Cause>Wafer 邊緣異常</Code_Cause>
+    <Code_Cause_English>Wafer Edge Error</Code_Cause_English>
+  </Table>
+  <Table>
+    <Category_ID>A0</Category_ID>
+    <Category_Description>SANWA Aligner Error 機台錯誤訊息</Category_Description>
+    <Code_Name>ECD_ALN_ENCODER</Code_Name>
+    <Code_Type>Aligner Alarm</Code_Type>
+    <Code_ID>86813000</Code_ID>
+    <Code_Cause>Encoder Data未達1圈</Code_Cause>
+    <Code_Cause_English>Encoder Data Less 1 Rev</Code_Cause_English>
+  </Table>
+  <Table>
+    <Category_ID>A0</Category_ID>
+    <Category_Description>SANWA Aligner Error 機台錯誤訊息</Category_Description>
+    <Code_Name>ECD_ALN_CALC_OFFSET</Code_Name>
+    <Code_Type>Aligner Alarm</Code_Type>
+    <Code_ID>86820000</Code_ID>
+    <Code_Cause>Offset 計算異常</Code_Cause>
+    <Code_Cause_English>Calc.Offset Error</Code_Cause_English>
+  </Table>
+  <Table>
+    <Category_ID>A0</Category_ID>
+    <Category_Description>SANWA Aligner Error 機台錯誤訊息</Category_Description>
+    <Code_Name>ECD_ALN_CALC_NOTCH</Code_Name>
+    <Code_Type>Aligner Alarm</Code_Type>
+    <Code_ID>86821000</Code_ID>
+    <Code_Cause>Notch 位置計算異常</Code_Cause>
+    <Code_Cause_English>Calc. Notch Error</Code_Cause_English>
+  </Table>
+  <Table>
+    <Category_ID>AxisCode</Category_ID>
+    <Category_Description>SANWA Alarm 機台定義軸代碼</Category_Description>
+    <Code_Name>R 軸</Code_Name>
+    <Code_Type>右 Arm 軸</Code_Type>
+    <Code_ID>0</Code_ID>
+    <Code_Cause>R 軸</Code_Cause>
+    <Code_Cause_English>R Axis</Code_Cause_English>
+  </Table>
+  <Table>
+    <Category_ID>AxisCode</Category_ID>
+    <Category_Description>SANWA Alarm 機台定義軸代碼</Category_Description>
+    <Code_Name>L 軸</Code_Name>
+    <Code_Type>左 Arm 軸</Code_Type>
+    <Code_ID>1</Code_ID>
+    <Code_Cause>L 軸</Code_Cause>
+    <Code_Cause_English>L Axis</Code_Cause_English>
+  </Table>
+  <Table>
+    <Category_ID>AxisCode</Category_ID>
+    <Category_Description>SANWA Alarm 機台定義軸代碼</Category_Description>
+    <Code_Name>S 軸</Code_Name>
+    <Code_Type>回旋軸</Code_Type>
+    <Code_ID>2</Code_ID>
+    <Code_Cause>S 軸</Code_Cause>
+    <Code_Cause_English>S Axis</Code_Cause_English>
+  </Table>
+  <Table>
+    <Category_ID>AxisCode</Category_ID>
+    <Category_Description>SANWA Alarm 機台定義軸代碼</Category_Description>
+    <Code_Name>Z 軸</Code_Name>
+    <Code_Type>上下軸</Code_Type>
+    <Code_ID>3</Code_ID>
+    <Code_Cause>Z 軸</Code_Cause>
+    <Code_Cause_English>Z Axis</Code_Cause_English>
+  </Table>
+  <Table>
+    <Category_ID>AxisCode</Category_ID>
+    <Category_Description>SANWA Alarm 機台定義軸代碼</Category_Description>
+    <Code_Name>X 軸</Code_Name>
+    <Code_Type>走行軸</Code_Type>
+    <Code_ID>4</Code_ID>
+    <Code_Cause>X 軸</Code_Cause>
+    <Code_Cause_English>X Axis</Code_Cause_English>
+  </Table>
+  <Table>
+    <Category_ID>AxisCode</Category_ID>
+    <Category_Description>SANWA Alarm 機台定義軸代碼</Category_Description>
+    <Code_Name>R1 軸</Code_Name>
+    <Code_Type>預備軸</Code_Type>
+    <Code_ID>5</Code_ID>
+    <Code_Cause>R1 軸</Code_Cause>
+    <Code_Cause_English>R1 Axis</Code_Cause_English>
+  </Table>
+  <Table>
+    <Category_ID>AxisCode</Category_ID>
+    <Category_Description>SANWA Alarm 機台定義軸代碼</Category_Description>
+    <Code_Name>L1 軸</Code_Name>
+    <Code_Type>預備軸</Code_Type>
+    <Code_ID>6</Code_ID>
+    <Code_Cause>L1 軸</Code_Cause>
+    <Code_Cause_English>L1 Axis</Code_Cause_English>
+  </Table>
+  <Table>
+    <Category_ID>AxisCode</Category_ID>
+    <Category_Description>SANWA Alarm 機台定義軸代碼</Category_Description>
+    <Code_Name>S1 軸</Code_Name>
+    <Code_Type>預備軸</Code_Type>
+    <Code_ID>7</Code_ID>
+    <Code_Cause>S1 軸</Code_Cause>
+    <Code_Cause_English>S1 Axis</Code_Cause_English>
+  </Table>
+  <Table>
+    <Category_ID>AxisCode</Category_ID>
+    <Category_Description>SANWA Alarm 機台定義軸代碼</Category_Description>
+    <Code_Name>Z1 軸</Code_Name>
+    <Code_Type>預備軸</Code_Type>
+    <Code_ID>8</Code_ID>
+    <Code_Cause>Z1 軸</Code_Cause>
+    <Code_Cause_English>Z1 Axis</Code_Cause_English>
+  </Table>
+  <Table>
+    <Category_ID>AxisCode</Category_ID>
+    <Category_Description>SANWA Alarm 機台定義軸代碼</Category_Description>
+    <Code_Name>X1 軸</Code_Name>
+    <Code_Type>預備軸</Code_Type>
+    <Code_ID>9</Code_ID>
+    <Code_Cause>X1 軸</Code_Cause>
+    <Code_Cause_English>X1 Axis</Code_Cause_English>
+  </Table>
+  <Table>
+    <Category_ID>AxisCode</Category_ID>
+    <Category_Description>SANWA Alarm 機台定義軸代碼</Category_Description>
+    <Code_Name>R2 軸</Code_Name>
+    <Code_Type>預備軸</Code_Type>
+    <Code_ID>A</Code_ID>
+    <Code_Cause>R2 軸</Code_Cause>
+    <Code_Cause_English>R2 Axis</Code_Cause_English>
+  </Table>
+  <Table>
+    <Category_ID>AxisCode</Category_ID>
+    <Category_Description>SANWA Alarm 機台定義軸代碼</Category_Description>
+    <Code_Name>L2 軸</Code_Name>
+    <Code_Type>預備軸</Code_Type>
+    <Code_ID>B</Code_ID>
+    <Code_Cause>L2 軸</Code_Cause>
+    <Code_Cause_English>L2 Axis</Code_Cause_English>
+  </Table>
+  <Table>
+    <Category_ID>AxisCode</Category_ID>
+    <Category_Description>SANWA Alarm 機台定義軸代碼</Category_Description>
+    <Code_Name>S2 軸</Code_Name>
+    <Code_Type>預備軸</Code_Type>
+    <Code_ID>C</Code_ID>
+    <Code_Cause>S2 軸</Code_Cause>
+    <Code_Cause_English>S2 Axis</Code_Cause_English>
+  </Table>
+  <Table>
+    <Category_ID>AxisCode</Category_ID>
+    <Category_Description>SANWA Alarm 機台定義軸代碼</Category_Description>
+    <Code_Name>Z2 軸</Code_Name>
+    <Code_Type>預備軸</Code_Type>
+    <Code_ID>D</Code_ID>
+    <Code_Cause>Z2 軸</Code_Cause>
+    <Code_Cause_English>Z2 Axis</Code_Cause_English>
+  </Table>
+  <Table>
+    <Category_ID>AxisCode</Category_ID>
+    <Category_Description>SANWA Alarm 機台定義軸代碼</Category_Description>
+    <Code_Name>X2 軸</Code_Name>
+    <Code_Type>預備軸</Code_Type>
+    <Code_ID>E</Code_ID>
+    <Code_Cause>X2 軸</Code_Cause>
+    <Code_Cause_English>X2 Axis</Code_Cause_English>
+  </Table>
+  <Table>
+    <Category_ID>AxisCode</Category_ID>
+    <Category_Description>SANWA Alarm 機台定義軸代碼</Category_Description>
+    <Code_Name>R3 軸</Code_Name>
+    <Code_Type>預備軸</Code_Type>
+    <Code_ID>F</Code_ID>
+    <Code_Cause>R3 軸</Code_Cause>
+    <Code_Cause_English>R3 Axis</Code_Cause_English>
+  </Table>
+</DocumentElement>

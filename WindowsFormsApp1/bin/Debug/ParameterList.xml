@@ -1,0 +1,2926 @@
+<?xml version="1.0" standalone="yes"?>
+<DocumentElement>
+  <Table>
+    <Equipment_Type>Robot</Equipment_Type>
+    <Equipment_Supplier>SANWA</Equipment_Supplier>
+    <Command_Type>GET</Command_Type>
+    <Command_ID>STS__</Command_ID>
+    <Command_Format>${0}{1}GET:STS__</Command_Format>
+    <Command_Name>Robot 狀態取得</Command_Name>
+    <Command_Order>01</Command_Order>
+    <Parameters_Amount>01</Parameters_Amount>
+    <Parameter_Order>01</Parameter_Order>
+    <Parameter_ID>Null</Parameter_ID>
+    <Parameter_Description />
+    <Data_Value />
+    <Min_Value />
+    <Max_Value />
+    <Default_Value />
+    <Values_length />
+    <Is_Fill />
+    <Action_Function>DeviceStatus</Action_Function>
+  </Table>
+  <Table>
+    <Equipment_Type>Robot</Equipment_Type>
+    <Equipment_Supplier>SANWA</Equipment_Supplier>
+    <Command_Type>GET</Command_Type>
+    <Command_ID>RIO__</Command_ID>
+    <Command_Format>${0}{1}GET:RIO__</Command_Format>
+    <Command_Name>IO 狀態取得</Command_Name>
+    <Command_Order>02</Command_Order>
+    <Parameters_Amount>01</Parameters_Amount>
+    <Parameter_Order>01</Parameter_Order>
+    <Parameter_ID>no</Parameter_ID>
+    <Parameter_Description>no  :IO 號碼。(000~999) * IO 分配表請參閱 Table 5, Table 6, Table 7</Parameter_Description>
+    <Data_Value />
+    <Min_Value>0</Min_Value>
+    <Max_Value>999</Max_Value>
+    <Default_Value>0</Default_Value>
+    <Values_length>3</Values_length>
+    <Is_Fill>Y</Is_Fill>
+    <Action_Function>DeviceStatusIO</Action_Function>
+  </Table>
+  <Table>
+    <Equipment_Type>Robot</Equipment_Type>
+    <Equipment_Supplier>SANWA</Equipment_Supplier>
+    <Command_Type>GET</Command_Type>
+    <Command_ID>SP___</Command_ID>
+    <Command_Format>${0}{1}GET:SP___</Command_Format>
+    <Command_Name>Speed 限制取得</Command_Name>
+    <Command_Order>03</Command_Order>
+    <Parameters_Amount>01</Parameters_Amount>
+    <Parameter_Order>01</Parameter_Order>
+    <Parameter_ID>Null</Parameter_ID>
+    <Parameter_Description />
+    <Data_Value />
+    <Action_Function>DeviceStatusSpeed</Action_Function>
+  </Table>
+  <Table>
+    <Equipment_Type>Robot</Equipment_Type>
+    <Equipment_Supplier>SANWA</Equipment_Supplier>
+    <Command_Type>GET</Command_Type>
+    <Command_ID>ERR__</Command_ID>
+    <Command_Format>${0}{1}GET:ERR__</Command_Format>
+    <Command_Name>Error 履歷取得</Command_Name>
+    <Command_Order>04</Command_Order>
+    <Parameters_Amount>01</Parameters_Amount>
+    <Parameter_Order>01</Parameter_Order>
+    <Parameter_ID>no</Parameter_ID>
+    <Parameter_Description>no  :履歷號碼  2 位數  10 進位  (00 – 64)</Parameter_Description>
+    <Data_Value />
+    <Min_Value>0</Min_Value>
+    <Max_Value>64</Max_Value>
+    <Default_Value>0</Default_Value>
+    <Values_length>2</Values_length>
+    <Is_Fill>Y</Is_Fill>
+    <Action_Function>ErrorList</Action_Function>
+  </Table>
+  <Table>
+    <Equipment_Type>Robot</Equipment_Type>
+    <Equipment_Supplier>SANWA</Equipment_Supplier>
+    <Command_Type>GET</Command_Type>
+    <Command_ID>MAP__</Command_ID>
+    <Command_Format>${0}{1}GET:MAP__</Command_Format>
+    <Command_Name>Mapping 結果取得</Command_Name>
+    <Command_Order>05</Command_Order>
+    <Parameters_Amount>01</Parameters_Amount>
+    <Parameter_Order>01</Parameter_Order>
+    <Parameter_ID>no</Parameter_ID>
+    <Parameter_Description>no  :Data 選擇  (1~3) 
+  1  ：由下往上 Mapping Buffer1 之結果   
+  2  ：由上往下 Mapping Buffer2 之結果   
+  3  ：整合上下 Mapping 之結果</Parameter_Description>
+    <Data_Value />
+    <Min_Value>1</Min_Value>
+    <Max_Value>3</Max_Value>
+    <Default_Value>1</Default_Value>
+    <Values_length>1</Values_length>
+    <Is_Fill>N</Is_Fill>
+    <Action_Function>Mapping</Action_Function>
+  </Table>
+  <Table>
+    <Equipment_Type>Robot</Equipment_Type>
+    <Equipment_Supplier>SANWA</Equipment_Supplier>
+    <Command_Type>GET</Command_Type>
+    <Command_ID>SV___</Command_ID>
+    <Command_Format>${0}{1}GET:SV___</Command_Format>
+    <Command_Name>電磁閥狀態取得</Command_Name>
+    <Command_Order>06</Command_Order>
+    <Parameters_Amount>01</Parameters_Amount>
+    <Parameter_Order>01</Parameter_Order>
+    <Parameter_ID>no</Parameter_ID>
+    <Parameter_Description>no  :電磁閥號碼  (01~10) *電磁閥之相關定義  請參閱  Table 4</Parameter_Description>
+    <Data_Value />
+    <Min_Value>0</Min_Value>
+    <Max_Value>2</Max_Value>
+    <Default_Value>0</Default_Value>
+    <Values_length>1</Values_length>
+    <Is_Fill>N</Is_Fill>
+    <Action_Function>SolenoidValve</Action_Function>
+  </Table>
+  <Table>
+    <Equipment_Type>Robot</Equipment_Type>
+    <Equipment_Supplier>SANWA</Equipment_Supplier>
+    <Command_Type>GET</Command_Type>
+    <Command_ID>TEACH</Command_ID>
+    <Command_Format>${0}{1}GET:TEACH</Command_Format>
+    <Command_Name>讀取 Point Data 裡的各軸位置(R~R1 六軸)</Command_Name>
+    <Command_Order>07</Command_Order>
+    <Parameters_Amount>01</Parameters_Amount>
+    <Parameter_Order>01</Parameter_Order>
+    <Parameter_ID>pno</Parameter_ID>
+    <Parameter_Description>pno    :Teach  點位</Parameter_Description>
+    <Data_Value />
+    <Min_Value>1</Min_Value>
+    <Max_Value>1999</Max_Value>
+    <Default_Value>1</Default_Value>
+    <Values_length>4</Values_length>
+    <Is_Fill>Y</Is_Fill>
+    <Action_Function>Teach</Action_Function>
+  </Table>
+  <Table>
+    <Equipment_Type>Robot</Equipment_Type>
+    <Equipment_Supplier>SANWA</Equipment_Supplier>
+    <Command_Type>GET</Command_Type>
+    <Command_ID>PARAM</Command_ID>
+    <Command_Format>${0}{1}GET:PARAM</Command_Format>
+    <Command_Name>取得 Robot 參數值</Command_Name>
+    <Command_Order>08</Command_Order>
+    <Parameters_Amount>01</Parameters_Amount>
+    <Parameter_Order>01</Parameter_Order>
+    <Parameter_ID>Type</Parameter_ID>
+    <Parameter_Description>Type  :  參數類別(0~9) 
+0    : Options 
+1    : Adjust 
+Others  : Reserved</Parameter_Description>
+    <Data_Value />
+    <Min_Value>0</Min_Value>
+    <Max_Value>9</Max_Value>
+    <Default_Value>0</Default_Value>
+    <Values_length>1</Values_length>
+    <Is_Fill>N</Is_Fill>
+    <Action_Function>Parameter</Action_Function>
+  </Table>
+  <Table>
+    <Equipment_Type>Robot</Equipment_Type>
+    <Equipment_Supplier>SANWA</Equipment_Supplier>
+    <Command_Type>GET</Command_Type>
+    <Command_ID>PARAM</Command_ID>
+    <Command_Format>${0}{1}GET:PARAM</Command_Format>
+    <Command_Name>取得 Robot 參數值</Command_Name>
+    <Command_Order>08</Command_Order>
+    <Parameters_Amount>02</Parameters_Amount>
+    <Parameter_Order>02</Parameter_Order>
+    <Parameter_ID>No</Parameter_ID>
+    <Parameter_Description>No  :  參數號碼(000~999) ,參數定義請參考 Table 14,</Parameter_Description>
+    <Data_Value />
+    <Min_Value>0</Min_Value>
+    <Max_Value>999</Max_Value>
+    <Default_Value>0</Default_Value>
+    <Values_length>3</Values_length>
+    <Is_Fill>Y</Is_Fill>
+    <Action_Function>Parameter</Action_Function>
+  </Table>
+  <Table>
+    <Equipment_Type>Robot</Equipment_Type>
+    <Equipment_Supplier>SANWA</Equipment_Supplier>
+    <Command_Type>GET</Command_Type>
+    <Command_ID>PARSY</Command_ID>
+    <Command_Format>${0}{1}GET:PARSY</Command_Format>
+    <Command_Name>取得 Robot 參數詳細資料</Command_Name>
+    <Command_Order>09</Command_Order>
+    <Parameters_Amount>01</Parameters_Amount>
+    <Parameter_Order>01</Parameter_Order>
+    <Parameter_ID>Type</Parameter_ID>
+    <Parameter_Description>Type  :  參數類別(0~9) 
+0    : Option 
+1    : Adjust 
+Others  : Reserved</Parameter_Description>
+    <Data_Value />
+    <Min_Value>0</Min_Value>
+    <Max_Value>9</Max_Value>
+    <Default_Value>0</Default_Value>
+    <Values_length>1</Values_length>
+    <Is_Fill>N</Is_Fill>
+    <Action_Function>PARSY</Action_Function>
+  </Table>
+  <Table>
+    <Equipment_Type>Robot</Equipment_Type>
+    <Equipment_Supplier>SANWA</Equipment_Supplier>
+    <Command_Type>GET</Command_Type>
+    <Command_ID>PARSY</Command_ID>
+    <Command_Format>${0}{1}GET:PARSY</Command_Format>
+    <Command_Name>取得 Robot 參數詳細資料</Command_Name>
+    <Command_Order>09</Command_Order>
+    <Parameters_Amount>02</Parameters_Amount>
+    <Parameter_Order>02</Parameter_Order>
+    <Parameter_ID>No</Parameter_ID>
+    <Parameter_Description>No  :  參數號碼(000~999)  請參考 Table 14,</Parameter_Description>
+    <Data_Value />
+    <Min_Value>0</Min_Value>
+    <Max_Value>999</Max_Value>
+    <Default_Value>1</Default_Value>
+    <Values_length>3</Values_length>
+    <Is_Fill>Y</Is_Fill>
+    <Action_Function>PARSY</Action_Function>
+  </Table>
+  <Table>
+    <Equipment_Type>Robot</Equipment_Type>
+    <Equipment_Supplier>SANWA</Equipment_Supplier>
+    <Command_Type>GET</Command_Type>
+    <Command_ID>PDATA</Command_ID>
+    <Command_Format>${0}{1}GET:PDATA</Command_Format>
+    <Command_Name>取得指定點位欄位的資訊</Command_Name>
+    <Command_Order>10</Command_Order>
+    <Parameters_Amount>01</Parameters_Amount>
+    <Parameter_Order>01</Parameter_Order>
+    <Parameter_ID>pno</Parameter_ID>
+    <Parameter_Description>pno  : Teach  點位(1~1999)</Parameter_Description>
+    <Data_Value />
+    <Min_Value>1</Min_Value>
+    <Max_Value>1999</Max_Value>
+    <Default_Value>1</Default_Value>
+    <Values_length>4</Values_length>
+    <Is_Fill>N</Is_Fill>
+    <Action_Function>SetPointParameter</Action_Function>
+  </Table>
+  <Table>
+    <Equipment_Type>Robot</Equipment_Type>
+    <Equipment_Supplier>SANWA</Equipment_Supplier>
+    <Command_Type>GET</Command_Type>
+    <Command_ID>PDATA</Command_ID>
+    <Command_Format>${0}{1}GET:PDATA</Command_Format>
+    <Command_Name>取得指定點位欄位的資訊</Command_Name>
+    <Command_Order>10</Command_Order>
+    <Parameters_Amount>02</Parameters_Amount>
+    <Parameter_Order>02</Parameter_Order>
+    <Parameter_ID>no</Parameter_ID>
+    <Parameter_Description>no  :  參數號碼(000~124)  請參閱 2-6 Point Data  參數列表</Parameter_Description>
+    <Data_Value />
+    <Min_Value>0</Min_Value>
+    <Max_Value>124</Max_Value>
+    <Default_Value>0</Default_Value>
+    <Values_length>3</Values_length>
+    <Is_Fill>Y</Is_Fill>
+    <Action_Function>SetPointParameter</Action_Function>
+  </Table>
+  <Table>
+    <Equipment_Type>Robot</Equipment_Type>
+    <Equipment_Supplier>SANWA</Equipment_Supplier>
+    <Command_Type>GET</Command_Type>
+    <Command_ID>PNSTS</Command_ID>
+    <Command_Format>${0}{1}GET:PNSTS</Command_Format>
+    <Command_Name>取得 Panel(Wafer) 的狀態</Command_Name>
+    <Command_Order>11</Command_Order>
+    <Parameters_Amount>01</Parameters_Amount>
+    <Parameter_Order>01</Parameter_Order>
+    <Parameter_ID>arm</Parameter_ID>
+    <Parameter_Description>arm  : Arm  選擇 
+1  :R 軸 
+2  :L 軸</Parameter_Description>
+    <Data_Value />
+    <Min_Value>1</Min_Value>
+    <Max_Value>2</Max_Value>
+    <Default_Value>1</Default_Value>
+    <Values_length>1</Values_length>
+    <Is_Fill>Y</Is_Fill>
+    <Action_Function>WaferStatus</Action_Function>
+  </Table>
+  <Table>
+    <Equipment_Type>Robot</Equipment_Type>
+    <Equipment_Supplier>SANWA</Equipment_Supplier>
+    <Command_Type>GET</Command_Type>
+    <Command_ID>POS__</Command_ID>
+    <Command_Format>${0}{1}GET:POS__</Command_Format>
+    <Command_Name>取得目前 Robot 各軸的位置</Command_Name>
+    <Command_Order>12</Command_Order>
+    <Parameters_Amount>01</Parameters_Amount>
+    <Parameter_Order>01</Parameter_Order>
+    <Parameter_ID>Type</Parameter_ID>
+    <Parameter_Description>Type: Command/Encoder  選擇 
+1  : Robot 的 pulse command 
+2  :  實際  Encoder  回傳值</Parameter_Description>
+    <Data_Value />
+    <Min_Value>1</Min_Value>
+    <Max_Value>2</Max_Value>
+    <Default_Value>1</Default_Value>
+    <Values_length>1</Values_length>
+    <Is_Fill>N</Is_Fill>
+    <Action_Function>ArmLocation</Action_Function>
+  </Table>
+  <Table>
+    <Equipment_Type>Robot</Equipment_Type>
+    <Equipment_Supplier>SANWA</Equipment_Supplier>
+    <Command_Type>GET</Command_Type>
+    <Command_ID>POS__</Command_ID>
+    <Command_Format>${0}{1}GET:POS__</Command_Format>
+    <Command_Name>取得目前 Robot 各軸的位置</Command_Name>
+    <Command_Order>12</Command_Order>
+    <Parameters_Amount>02</Parameters_Amount>
+    <Parameter_Order>02</Parameter_Order>
+    <Parameter_ID>Unit</Parameter_ID>
+    <Parameter_Description>Unit:  單位選擇 
+1  : um 
+2  : pulse</Parameter_Description>
+    <Data_Value />
+    <Min_Value>1</Min_Value>
+    <Max_Value>2</Max_Value>
+    <Default_Value>1</Default_Value>
+    <Values_length>1</Values_length>
+    <Is_Fill>N</Is_Fill>
+    <Action_Function>ArmLocation</Action_Function>
+  </Table>
+  <Table>
+    <Equipment_Type>Robot</Equipment_Type>
+    <Equipment_Supplier>SANWA</Equipment_Supplier>
+    <Command_Type>GET</Command_Type>
+    <Command_ID>MAPT_</Command_ID>
+    <Command_Format>${0}{1}GET:MAPT_</Command_Format>
+    <Command_Name>取得 Mapping 厚度結果</Command_Name>
+    <Command_Order>13</Command_Order>
+    <Parameters_Amount>01</Parameters_Amount>
+    <Parameter_Order>01</Parameter_Order>
+    <Parameter_ID>no</Parameter_ID>
+    <Parameter_Description>no  :Data 選擇  (1~3)
+1  ：由下往上 Mapping Buffer1 之厚度結果
+2  ：由上往下 Mapping Buffer2 之厚度結果
+3  ：與 1 的結果相同</Parameter_Description>
+    <Data_Value />
+    <Min_Value>1</Min_Value>
+    <Max_Value>3</Max_Value>
+    <Default_Value>1</Default_Value>
+    <Values_length>1</Values_length>
+    <Is_Fill>N</Is_Fill>
+    <Action_Function>SlotThickness</Action_Function>
+  </Table>
+  <Table>
+    <Equipment_Type>Robot</Equipment_Type>
+    <Equipment_Supplier>SANWA</Equipment_Supplier>
+    <Command_Type>SET</Command_Type>
+    <Command_ID>RIO__</Command_ID>
+    <Command_Format>${0}{1}SET:RIO__</Command_Format>
+    <Command_Name>IO 狀態設定</Command_Name>
+    <Command_Order>01</Command_Order>
+    <Parameters_Amount>01</Parameters_Amount>
+    <Parameter_Order>01</Parameter_Order>
+    <Parameter_ID>no</Parameter_ID>
+    <Parameter_Description>no  :IO 號碼  (000~999)    *IO 表請參閱 Table 5,Table 6,Table 7</Parameter_Description>
+    <Data_Value />
+    <Min_Value>0</Min_Value>
+    <Max_Value>999</Max_Value>
+    <Default_Value>0</Default_Value>
+    <Values_length>3</Values_length>
+    <Is_Fill>Y</Is_Fill>
+    <Action_Function>DeviceStatusIO</Action_Function>
+  </Table>
+  <Table>
+    <Equipment_Type>Robot</Equipment_Type>
+    <Equipment_Supplier>SANWA</Equipment_Supplier>
+    <Command_Type>SET</Command_Type>
+    <Command_ID>RIO__</Command_ID>
+    <Command_Format>${0}{1}SET:RIO__</Command_Format>
+    <Command_Name>IO 狀態設定</Command_Name>
+    <Command_Order>01</Command_Order>
+    <Parameters_Amount>02</Parameters_Amount>
+    <Parameter_Order>02</Parameter_Order>
+    <Parameter_ID>vl</Parameter_ID>
+    <Parameter_Description>vl  :狀態
+0  :OFF
+1  :ON</Parameter_Description>
+    <Data_Value />
+    <Min_Value>0</Min_Value>
+    <Max_Value>1</Max_Value>
+    <Default_Value>0</Default_Value>
+    <Values_length>1</Values_length>
+    <Is_Fill>N</Is_Fill>
+    <Action_Function>DeviceStatusIO</Action_Function>
+  </Table>
+  <Table>
+    <Equipment_Type>Robot</Equipment_Type>
+    <Equipment_Supplier>SANWA</Equipment_Supplier>
+    <Command_Type>SET</Command_Type>
+    <Command_ID>SP___</Command_ID>
+    <Command_Format>${0}{1}SET:SP___</Command_Format>
+    <Command_Name>速度限制設定</Command_Name>
+    <Command_Order>02</Command_Order>
+    <Parameters_Amount>01</Parameters_Amount>
+    <Parameter_Order>01</Parameter_Order>
+    <Parameter_ID>vl</Parameter_ID>
+    <Parameter_Description>vl  :Speed 限制，(00~99)</Parameter_Description>
+    <Data_Value />
+    <Min_Value>0</Min_Value>
+    <Max_Value>99</Max_Value>
+    <Default_Value>0</Default_Value>
+    <Values_length>2</Values_length>
+    <Is_Fill>Y</Is_Fill>
+    <Action_Function>DeviceStatusSpeed</Action_Function>
+  </Table>
+  <Table>
+    <Equipment_Type>Robot</Equipment_Type>
+    <Equipment_Supplier>SANWA</Equipment_Supplier>
+    <Command_Type>SET</Command_Type>
+    <Command_ID>PAUSE</Command_ID>
+    <Command_Format>${0}{1}SET:PAUSE</Command_Format>
+    <Command_Name>動作暫停</Command_Name>
+    <Command_Order>03</Command_Order>
+    <Parameters_Amount>01</Parameters_Amount>
+    <Parameter_Order>01</Parameter_Order>
+    <Parameter_ID>Null</Parameter_ID>
+    <Parameter_Description />
+    <Data_Value />
+    <Action_Function>Pause</Action_Function>
+  </Table>
+  <Table>
+    <Equipment_Type>Robot</Equipment_Type>
+    <Equipment_Supplier>SANWA</Equipment_Supplier>
+    <Command_Type>SET</Command_Type>
+    <Command_ID>CONT_</Command_ID>
+    <Command_Format>${0}{1}SET:CONT_</Command_Format>
+    <Command_Name>暫停解除</Command_Name>
+    <Command_Order>04</Command_Order>
+    <Parameters_Amount>01</Parameters_Amount>
+    <Parameter_Order>01</Parameter_Order>
+    <Parameter_ID>Null</Parameter_ID>
+    <Parameter_Description />
+    <Data_Value />
+    <Action_Function>Continue</Action_Function>
+  </Table>
+  <Table>
+    <Equipment_Type>Robot</Equipment_Type>
+    <Equipment_Supplier>SANWA</Equipment_Supplier>
+    <Command_Type>SET</Command_Type>
+    <Command_ID>STOP_</Command_ID>
+    <Command_Format>${0}{1}SET:STOP_</Command_Format>
+    <Command_Name>動作停止</Command_Name>
+    <Command_Order>05</Command_Order>
+    <Parameters_Amount>01</Parameters_Amount>
+    <Parameter_Order>01</Parameter_Order>
+    <Parameter_ID>m1</Parameter_ID>
+    <Parameter_Description>m1  :
+0  :減速停止
+1  :立即停止</Parameter_Description>
+    <Data_Value />
+    <Min_Value>0</Min_Value>
+    <Max_Value>1</Max_Value>
+    <Default_Value>0</Default_Value>
+    <Values_length>1</Values_length>
+    <Is_Fill>N</Is_Fill>
+    <Action_Function>Stop</Action_Function>
+  </Table>
+  <Table>
+    <Equipment_Type>Robot</Equipment_Type>
+    <Equipment_Supplier>SANWA</Equipment_Supplier>
+    <Command_Type>SET</Command_Type>
+    <Command_ID>MODE_</Command_ID>
+    <Command_Format>${0}{1}SET:MODE_</Command_Format>
+    <Command_Name>Robot 動作模式選擇設定</Command_Name>
+    <Command_Order>06</Command_Order>
+    <Parameters_Amount>01</Parameters_Amount>
+    <Parameter_Order>01</Parameter_Order>
+    <Parameter_ID>vl</Parameter_ID>
+    <Parameter_Description>vl  :動作模式選擇  (0~3) 
+0  :Normal Mode   
+1  :Dry Mode   
+2  :Test Mode   
+3  :Step Mode</Parameter_Description>
+    <Data_Value />
+    <Min_Value>0</Min_Value>
+    <Max_Value>3</Max_Value>
+    <Default_Value>1</Default_Value>
+    <Values_length>1</Values_length>
+    <Is_Fill>N</Is_Fill>
+    <Action_Function>Mode</Action_Function>
+  </Table>
+  <Table>
+    <Equipment_Type>Robot</Equipment_Type>
+    <Equipment_Supplier>SANWA</Equipment_Supplier>
+    <Command_Type>SET</Command_Type>
+    <Command_ID>STPDO</Command_ID>
+    <Command_Format>${0}{1}SET:STPDO</Command_Format>
+    <Command_Name>Step 動作等待解除</Command_Name>
+    <Command_Order>07</Command_Order>
+    <Parameters_Amount>01</Parameters_Amount>
+    <Parameter_Order>01</Parameter_Order>
+    <Parameter_ID>Null</Parameter_ID>
+    <Parameter_Description />
+    <Data_Value />
+    <Action_Function>STPDO</Action_Function>
+  </Table>
+  <Table>
+    <Equipment_Type>Robot</Equipment_Type>
+    <Equipment_Supplier>SANWA</Equipment_Supplier>
+    <Command_Type>SET</Command_Type>
+    <Command_ID>RESET</Command_ID>
+    <Command_Format>${0}{1}SET:RESET</Command_Format>
+    <Command_Name>Error 解除</Command_Name>
+    <Command_Order>08</Command_Order>
+    <Parameters_Amount>01</Parameters_Amount>
+    <Parameter_Order>01</Parameter_Order>
+    <Parameter_ID>Null</Parameter_ID>
+    <Parameter_Description />
+    <Data_Value />
+    <Action_Function>ErrorReset</Action_Function>
+  </Table>
+  <Table>
+    <Equipment_Type>Robot</Equipment_Type>
+    <Equipment_Supplier>SANWA</Equipment_Supplier>
+    <Command_Type>SET</Command_Type>
+    <Command_ID>SERVO</Command_ID>
+    <Command_Format>${0}{1}SET:SERVO</Command_Format>
+    <Command_Name>Servo On</Command_Name>
+    <Command_Order>09</Command_Order>
+    <Parameters_Amount>01</Parameters_Amount>
+    <Parameter_Order>01</Parameter_Order>
+    <Parameter_ID>sv</Parameter_ID>
+    <Parameter_Description>sv  :Servo ON / OFF 選擇  (0~1) 
+0  :Servo OFF   
+1  :Servo ON</Parameter_Description>
+    <Data_Value />
+    <Min_Value>0</Min_Value>
+    <Max_Value>1</Max_Value>
+    <Default_Value>0</Default_Value>
+    <Values_length>1</Values_length>
+    <Is_Fill>N</Is_Fill>
+    <Action_Function>Excitation</Action_Function>
+  </Table>
+  <Table>
+    <Equipment_Type>Robot</Equipment_Type>
+    <Equipment_Supplier>SANWA</Equipment_Supplier>
+    <Command_Type>SET</Command_Type>
+    <Command_ID>SV___</Command_ID>
+    <Command_Format>${0}{1}SET:SV___</Command_Format>
+    <Command_Name>電磁閥狀態設定</Command_Name>
+    <Command_Order>10</Command_Order>
+    <Parameters_Amount>01</Parameters_Amount>
+    <Parameter_Order>01</Parameter_Order>
+    <Parameter_ID>no</Parameter_ID>
+    <Parameter_Description>no  :電磁閥號碼
+01  R  軸吸著用電磁閥
+02  L  軸吸著用電磁閥
+03  R  軸吸著用電磁閥 Pad１
+04  R  軸吸著用電磁閥 Pad２
+05  L  軸吸著用電磁閥 Pad１
+06  L  軸吸著用電磁閥 Pad２
+07  R  軸 FORK 開闔電磁閥段數１
+08  R  軸 FORK 開闔電磁閥段數２
+09  L  軸 FORK 開闔電磁閥段數１
+10  L  軸 FORK 開闔電磁閥段數２</Parameter_Description>
+    <Data_Value />
+    <Min_Value>1</Min_Value>
+    <Max_Value>10</Max_Value>
+    <Default_Value>1</Default_Value>
+    <Values_length>2</Values_length>
+    <Is_Fill>Y</Is_Fill>
+    <Action_Function>SolenoidValve</Action_Function>
+  </Table>
+  <Table>
+    <Equipment_Type>Robot</Equipment_Type>
+    <Equipment_Supplier>SANWA</Equipment_Supplier>
+    <Command_Type>SET</Command_Type>
+    <Command_ID>SV___</Command_ID>
+    <Command_Format>${0}{1}SET:SV___</Command_Format>
+    <Command_Name>電磁閥狀態設定</Command_Name>
+    <Command_Order>10</Command_Order>
+    <Parameters_Amount>02</Parameters_Amount>
+    <Parameter_Order>02</Parameter_Order>
+    <Parameter_ID>vl</Parameter_ID>
+    <Parameter_Description>vl  :狀態
+0  :OFF
+1  :ON</Parameter_Description>
+    <Data_Value />
+    <Min_Value>0</Min_Value>
+    <Max_Value>1</Max_Value>
+    <Default_Value>0</Default_Value>
+    <Values_length>1</Values_length>
+    <Is_Fill>N</Is_Fill>
+    <Action_Function>SolenoidValve</Action_Function>
+  </Table>
+  <Table>
+    <Equipment_Type>Robot</Equipment_Type>
+    <Equipment_Supplier>SANWA</Equipment_Supplier>
+    <Command_Type>SET</Command_Type>
+    <Command_ID>LOGSV</Command_ID>
+    <Command_Format>${0}{1}SET:LOGSV</Command_Format>
+    <Command_Name>設定 Log file 儲存</Command_Name>
+    <Command_Order>11</Command_Order>
+    <Parameters_Amount>01</Parameters_Amount>
+    <Parameter_Order>01</Parameter_Order>
+    <Parameter_ID>Null</Parameter_ID>
+    <Parameter_Description />
+    <Data_Value />
+    <Action_Function>LogSave</Action_Function>
+  </Table>
+  <Table>
+    <Equipment_Type>Robot</Equipment_Type>
+    <Equipment_Supplier>SANWA</Equipment_Supplier>
+    <Command_Type>SET</Command_Type>
+    <Command_ID>TEACH</Command_ID>
+    <Command_Format>${0}{1}SET:TEACH</Command_Format>
+    <Command_Name>將目前各軸的位置寫入指定的 Point Data</Command_Name>
+    <Command_Order>12</Command_Order>
+    <Parameters_Amount>01</Parameters_Amount>
+    <Parameter_Order>01</Parameter_Order>
+    <Parameter_ID>pno</Parameter_ID>
+    <Parameter_Description>pno  :Teaching  點位(0001 ~ 1999)</Parameter_Description>
+    <Data_Value />
+    <Min_Value>1</Min_Value>
+    <Max_Value>1999</Max_Value>
+    <Default_Value>1</Default_Value>
+    <Values_length>4</Values_length>
+    <Is_Fill>Y</Is_Fill>
+    <Action_Function>Teach</Action_Function>
+  </Table>
+  <Table>
+    <Equipment_Type>Robot</Equipment_Type>
+    <Equipment_Supplier>SANWA</Equipment_Supplier>
+    <Command_Type>SET</Command_Type>
+    <Command_ID>SAVEP</Command_ID>
+    <Command_Format>${0}{1}SET:SAVEP</Command_Format>
+    <Command_Name>將 Point Data 存入 CF 卡</Command_Name>
+    <Command_Order>13</Command_Order>
+    <Parameters_Amount>01</Parameters_Amount>
+    <Parameter_Order>01</Parameter_Order>
+    <Parameter_ID>Null</Parameter_ID>
+    <Parameter_Description />
+    <Data_Value />
+    <Action_Function>PointSave</Action_Function>
+  </Table>
+  <Table>
+    <Equipment_Type>Robot</Equipment_Type>
+    <Equipment_Supplier>SANWA</Equipment_Supplier>
+    <Command_Type>SET</Command_Type>
+    <Command_ID>LOADP</Command_ID>
+    <Command_Format>${0}{1}SET:LOADP</Command_Format>
+    <Command_Name>將 Point Data 從 CF 卡載入</Command_Name>
+    <Command_Order>14</Command_Order>
+    <Parameters_Amount>01</Parameters_Amount>
+    <Parameter_Order>01</Parameter_Order>
+    <Parameter_ID>Null</Parameter_ID>
+    <Parameter_Description />
+    <Data_Value />
+    <Action_Function>PointLoad</Action_Function>
+  </Table>
+  <Table>
+    <Equipment_Type>Robot</Equipment_Type>
+    <Equipment_Supplier>SANWA</Equipment_Supplier>
+    <Command_Type>SET</Command_Type>
+    <Command_ID>PARAM</Command_ID>
+    <Command_Format>${0}{1}SET:PARAM</Command_Format>
+    <Command_Name>設定 Robot 參數值</Command_Name>
+    <Command_Order>15</Command_Order>
+    <Parameters_Amount>01</Parameters_Amount>
+    <Parameter_Order>01</Parameter_Order>
+    <Parameter_ID>Type</Parameter_ID>
+    <Parameter_Description>Type  :參數類別(0~9)
+0    :Option
+1    :Adjust
+Others  :Reserved</Parameter_Description>
+    <Data_Value />
+    <Min_Value>0</Min_Value>
+    <Max_Value>9</Max_Value>
+    <Default_Value>0</Default_Value>
+    <Values_length>1</Values_length>
+    <Is_Fill>N</Is_Fill>
+    <Action_Function>Parameter</Action_Function>
+  </Table>
+  <Table>
+    <Equipment_Type>Robot</Equipment_Type>
+    <Equipment_Supplier>SANWA</Equipment_Supplier>
+    <Command_Type>SET</Command_Type>
+    <Command_ID>PARAM</Command_ID>
+    <Command_Format>${0}{1}SET:PARAM</Command_Format>
+    <Command_Name>設定 Robot 參數值</Command_Name>
+    <Command_Order>15</Command_Order>
+    <Parameters_Amount>02</Parameters_Amount>
+    <Parameter_Order>02</Parameter_Order>
+    <Parameter_ID>No</Parameter_ID>
+    <Parameter_Description>No  :參數號碼(000~999),  請參考 Table 14,</Parameter_Description>
+    <Data_Value />
+    <Min_Value>0</Min_Value>
+    <Max_Value>999</Max_Value>
+    <Default_Value>0</Default_Value>
+    <Values_length>3</Values_length>
+    <Is_Fill>Y</Is_Fill>
+    <Action_Function>Parameter</Action_Function>
+  </Table>
+  <Table>
+    <Equipment_Type>Robot</Equipment_Type>
+    <Equipment_Supplier>SANWA</Equipment_Supplier>
+    <Command_Type>SET</Command_Type>
+    <Command_ID>PARAM</Command_ID>
+    <Command_Format>${0}{1}SET:PARAM</Command_Format>
+    <Command_Name>設定 Robot 參數值</Command_Name>
+    <Command_Order>15</Command_Order>
+    <Parameters_Amount>03</Parameters_Amount>
+    <Parameter_Order>03</Parameter_Order>
+    <Parameter_ID>Data</Parameter_ID>
+    <Parameter_Description>data  :  參數值(-99999999~+99999999)</Parameter_Description>
+    <Data_Value />
+    <Min_Value>-99999999</Min_Value>
+    <Max_Value>99999999</Max_Value>
+    <Default_Value>0</Default_Value>
+    <Values_length>8</Values_length>
+    <Is_Fill>Y</Is_Fill>
+    <Action_Function>Parameter</Action_Function>
+  </Table>
+  <Table>
+    <Equipment_Type>Robot</Equipment_Type>
+    <Equipment_Supplier>SANWA</Equipment_Supplier>
+    <Command_Type>SET</Command_Type>
+    <Command_ID>SAVE_</Command_ID>
+    <Command_Format>${0}{1}SET:SAVE_</Command_Format>
+    <Command_Name>儲存 Robot 參數</Command_Name>
+    <Command_Order>16</Command_Order>
+    <Parameters_Amount>01</Parameters_Amount>
+    <Parameter_Order>01</Parameter_Order>
+    <Parameter_ID>Null</Parameter_ID>
+    <Parameter_Description />
+    <Data_Value />
+    <Action_Function>Save</Action_Function>
+  </Table>
+  <Table>
+    <Equipment_Type>Robot</Equipment_Type>
+    <Equipment_Supplier>SANWA</Equipment_Supplier>
+    <Command_Type>SET</Command_Type>
+    <Command_ID>ENCCL</Command_ID>
+    <Command_Format>${0}{1}SET:ENCCL</Command_Format>
+    <Command_Name>Absolute Encoder Alarm Clear</Command_Name>
+    <Command_Order>17</Command_Order>
+    <Parameters_Amount>01</Parameters_Amount>
+    <Parameter_Order>01</Parameter_Order>
+    <Parameter_ID>axis</Parameter_ID>
+    <Parameter_Description>axis  :軸，(01~16)</Parameter_Description>
+    <Data_Value />
+    <Min_Value>1</Min_Value>
+    <Max_Value>16</Max_Value>
+    <Default_Value>1</Default_Value>
+    <Values_length>2</Values_length>
+    <Is_Fill>Y</Is_Fill>
+    <Action_Function>AbssoluteEncoderReset</Action_Function>
+  </Table>
+  <Table>
+    <Equipment_Type>Robot</Equipment_Type>
+    <Equipment_Supplier>SANWA</Equipment_Supplier>
+    <Command_Type>SET</Command_Type>
+    <Command_ID>ENCOF</Command_ID>
+    <Command_Format>${0}{1}SET:ENCOF</Command_Format>
+    <Command_Name>Abssolute Encoder Offset</Command_Name>
+    <Command_Order>18</Command_Order>
+    <Parameters_Amount>01</Parameters_Amount>
+    <Parameter_Order>01</Parameter_Order>
+    <Parameter_ID>axis</Parameter_ID>
+    <Parameter_Description>axis  :軸，(01 ~ 16)</Parameter_Description>
+    <Data_Value />
+    <Min_Value>1</Min_Value>
+    <Max_Value>16</Max_Value>
+    <Default_Value>1</Default_Value>
+    <Values_length>2</Values_length>
+    <Is_Fill>Y</Is_Fill>
+    <Action_Function>AbssoluteEncoderOffset</Action_Function>
+  </Table>
+  <Table>
+    <Equipment_Type>Robot</Equipment_Type>
+    <Equipment_Supplier>SANWA</Equipment_Supplier>
+    <Command_Type>SET</Command_Type>
+    <Command_ID>BATCL</Command_ID>
+    <Command_Format>${0}{1}SET:BATCL</Command_Format>
+    <Command_Name>Battery Alarm Clear</Command_Name>
+    <Command_Order>19</Command_Order>
+    <Parameters_Amount>01</Parameters_Amount>
+    <Parameter_Order>01</Parameter_Order>
+    <Parameter_ID>axis</Parameter_ID>
+    <Parameter_Description>axis  :軸，(01 ~ 16)</Parameter_Description>
+    <Data_Value />
+    <Min_Value>1</Min_Value>
+    <Max_Value>16</Max_Value>
+    <Default_Value>1</Default_Value>
+    <Values_length>2</Values_length>
+    <Is_Fill>Y</Is_Fill>
+    <Action_Function>BatteryAlarmClear</Action_Function>
+  </Table>
+  <Table>
+    <Equipment_Type>Robot</Equipment_Type>
+    <Equipment_Supplier>SANWA</Equipment_Supplier>
+    <Command_Type>SET</Command_Type>
+    <Command_ID>PDATA</Command_ID>
+    <Command_Format>${0}{1}SET:PDATA</Command_Format>
+    <Command_Name>設定指定點位參數</Command_Name>
+    <Command_Order>20</Command_Order>
+    <Parameters_Amount>01</Parameters_Amount>
+    <Parameter_Order>01</Parameter_Order>
+    <Parameter_ID>pno</Parameter_ID>
+    <Parameter_Description>pno  : Teach  點位(1~1999)</Parameter_Description>
+    <Data_Value />
+    <Min_Value>1</Min_Value>
+    <Max_Value>1999</Max_Value>
+    <Default_Value>1</Default_Value>
+    <Values_length>4</Values_length>
+    <Is_Fill>N</Is_Fill>
+    <Action_Function>SetPointParameter</Action_Function>
+  </Table>
+  <Table>
+    <Equipment_Type>Robot</Equipment_Type>
+    <Equipment_Supplier>SANWA</Equipment_Supplier>
+    <Command_Type>SET</Command_Type>
+    <Command_ID>PDATA</Command_ID>
+    <Command_Format>${0}{1}SET:PDATA</Command_Format>
+    <Command_Name>設定指定點位參數</Command_Name>
+    <Command_Order>20</Command_Order>
+    <Parameters_Amount>02</Parameters_Amount>
+    <Parameter_Order>02</Parameter_Order>
+    <Parameter_ID>no</Parameter_ID>
+    <Parameter_Description>no  :  參數號碼(000~124)  請參閱 2-6 Point Data  參數列表</Parameter_Description>
+    <Data_Value />
+    <Min_Value>0</Min_Value>
+    <Max_Value>124</Max_Value>
+    <Default_Value>0</Default_Value>
+    <Values_length>3</Values_length>
+    <Is_Fill>Y</Is_Fill>
+    <Action_Function>SetPointParameter</Action_Function>
+  </Table>
+  <Table>
+    <Equipment_Type>Robot</Equipment_Type>
+    <Equipment_Supplier>SANWA</Equipment_Supplier>
+    <Command_Type>SET</Command_Type>
+    <Command_ID>PDATA</Command_ID>
+    <Command_Format>${0}{1}SET:PDATA</Command_Format>
+    <Command_Name>設定指定點位參數</Command_Name>
+    <Command_Order>20</Command_Order>
+    <Parameters_Amount>03</Parameters_Amount>
+    <Parameter_Order>03</Parameter_Order>
+    <Parameter_ID>data</Parameter_ID>
+    <Parameter_Description>data  :  參數值(-99999999~+99999999)</Parameter_Description>
+    <Data_Value />
+    <Min_Value>-99999999</Min_Value>
+    <Max_Value>99999999</Max_Value>
+    <Default_Value>0</Default_Value>
+    <Values_length>8</Values_length>
+    <Is_Fill>Y</Is_Fill>
+    <Action_Function>SetPointParameter</Action_Function>
+  </Table>
+  <Table>
+    <Equipment_Type>Robot</Equipment_Type>
+    <Equipment_Supplier>SANWA</Equipment_Supplier>
+    <Command_Type>CMD</Command_Type>
+    <Command_ID>HOME_</Command_ID>
+    <Command_Format>${0}{1}CMD:HOME_</Command_Format>
+    <Command_Name>各軸移動至 HOME 位置</Command_Name>
+    <Command_Order>01</Command_Order>
+    <Parameters_Amount>01</Parameters_Amount>
+    <Parameter_Order>01</Parameter_Order>
+    <Parameter_ID>Null</Parameter_ID>
+    <Parameter_Description />
+    <Data_Value />
+    <Action_Function>Home</Action_Function>
+  </Table>
+  <Table>
+    <Equipment_Type>Robot</Equipment_Type>
+    <Equipment_Supplier>SANWA</Equipment_Supplier>
+    <Command_Type>CMD</Command_Type>
+    <Command_ID>SHOME</Command_ID>
+    <Command_Format>${0}{1}CMD:SHOME</Command_Format>
+    <Command_Name>各軸安全回 HOME 位置</Command_Name>
+    <Command_Order>02</Command_Order>
+    <Parameters_Amount>01</Parameters_Amount>
+    <Parameter_Order>01</Parameter_Order>
+    <Parameter_ID>Null</Parameter_ID>
+    <Parameter_Description />
+    <Data_Value />
+    <Action_Function>HOMEToSafety</Action_Function>
+  </Table>
+  <Table>
+    <Equipment_Type>Robot</Equipment_Type>
+    <Equipment_Supplier>SANWA</Equipment_Supplier>
+    <Command_Type>CMD</Command_Type>
+    <Command_ID>RHOME</Command_ID>
+    <Command_Format>${0}{1}CMD:RHOME</Command_Format>
+    <Command_Name>各軸回 ORG 的位置</Command_Name>
+    <Command_Order>03</Command_Order>
+    <Parameters_Amount>01</Parameters_Amount>
+    <Parameter_Order>01</Parameter_Order>
+    <Parameter_ID>Null</Parameter_ID>
+    <Parameter_Description />
+    <Data_Value />
+    <Action_Function>HOMEToOrgin</Action_Function>
+  </Table>
+  <Table>
+    <Equipment_Type>Robot</Equipment_Type>
+    <Equipment_Supplier>SANWA</Equipment_Supplier>
+    <Command_Type>CMD</Command_Type>
+    <Command_ID>GET__</Command_ID>
+    <Command_Format>${0}{1}CMD:GET__</Command_Format>
+    <Command_Name>取片</Command_Name>
+    <Command_Order>04</Command_Order>
+    <Parameters_Amount>01</Parameters_Amount>
+    <Parameter_Order>01</Parameter_Order>
+    <Parameter_ID>pno</Parameter_ID>
+    <Parameter_Description>pno  :Point 編號，4 位數 10 進位  (0001 ~ 1999)</Parameter_Description>
+    <Data_Value />
+    <Min_Value>1</Min_Value>
+    <Max_Value>1999</Max_Value>
+    <Default_Value>1</Default_Value>
+    <Values_length>4</Values_length>
+    <Is_Fill>Y</Is_Fill>
+    <Action_Function>GetWafer</Action_Function>
+  </Table>
+  <Table>
+    <Equipment_Type>Robot</Equipment_Type>
+    <Equipment_Supplier>SANWA</Equipment_Supplier>
+    <Command_Type>CMD</Command_Type>
+    <Command_ID>GET__</Command_ID>
+    <Command_Format>${0}{1}CMD:GET__</Command_Format>
+    <Command_Name>取片</Command_Name>
+    <Command_Order>04</Command_Order>
+    <Parameters_Amount>02</Parameters_Amount>
+    <Parameter_Order>02</Parameter_Order>
+    <Parameter_ID>slot</Parameter_ID>
+    <Parameter_Description>slot  :Slot，3 位數 10 進位  (001 ~ Point Data  內設定 slot  的值)</Parameter_Description>
+    <Data_Value />
+    <Min_Value>1</Min_Value>
+    <Max_Value>50</Max_Value>
+    <Default_Value>1</Default_Value>
+    <Values_length>3</Values_length>
+    <Is_Fill>Y</Is_Fill>
+    <Action_Function>GetWafer</Action_Function>
+  </Table>
+  <Table>
+    <Equipment_Type>Robot</Equipment_Type>
+    <Equipment_Supplier>SANWA</Equipment_Supplier>
+    <Command_Type>CMD</Command_Type>
+    <Command_ID>GET__</Command_ID>
+    <Command_Format>${0}{1}CMD:GET__</Command_Format>
+    <Command_Name>取片</Command_Name>
+    <Command_Order>04</Command_Order>
+    <Parameters_Amount>03</Parameters_Amount>
+    <Parameter_Order>03</Parameter_Order>
+    <Parameter_ID>arm</Parameter_ID>
+    <Parameter_Description>arm  :Arm  選擇  ( 1~3) 
+1  :R 軸   
+2  :L 軸   
+3  :R+L 軸  (Point Data : 102RL-GorP =1)</Parameter_Description>
+    <Data_Value />
+    <Min_Value>1</Min_Value>
+    <Max_Value>3</Max_Value>
+    <Default_Value>1</Default_Value>
+    <Values_length>1</Values_length>
+    <Is_Fill>N</Is_Fill>
+    <Action_Function>GetWafer</Action_Function>
+  </Table>
+  <Table>
+    <Equipment_Type>Robot</Equipment_Type>
+    <Equipment_Supplier>SANWA</Equipment_Supplier>
+    <Command_Type>CMD</Command_Type>
+    <Command_ID>GET__</Command_ID>
+    <Command_Format>${0}{1}CMD:GET__</Command_Format>
+    <Command_Name>取片</Command_Name>
+    <Command_Order>04</Command_Order>
+    <Parameters_Amount>04</Parameters_Amount>
+    <Parameter_Order>04</Parameter_Order>
+    <Parameter_ID>al</Parameter_ID>
+    <Parameter_Description>al  :Alignment 選擇   
+0  :無  Alignment   
+1  :有  Alignment</Parameter_Description>
+    <Data_Value />
+    <Min_Value>0</Min_Value>
+    <Max_Value>1</Max_Value>
+    <Default_Value>0</Default_Value>
+    <Values_length>1</Values_length>
+    <Is_Fill>N</Is_Fill>
+    <Action_Function>GetWafer</Action_Function>
+  </Table>
+  <Table>
+    <Equipment_Type>Robot</Equipment_Type>
+    <Equipment_Supplier>SANWA</Equipment_Supplier>
+    <Command_Type>CMD</Command_Type>
+    <Command_ID>GET__</Command_ID>
+    <Command_Format>${0}{1}CMD:GET__</Command_Format>
+    <Command_Name>取片</Command_Name>
+    <Command_Order>04</Command_Order>
+    <Parameters_Amount>05</Parameters_Amount>
+    <Parameter_Order>05</Parameter_Order>
+    <Parameter_ID>opt</Parameter_ID>
+    <Parameter_Description>opt  :Option (詳細動作請參閱標準動作說明)
+0  :無指定
+1  :Z  軸移動至  Panel  下點位，Arm 伸出後就停止動作
+2  :Arm 伸出後，Z  軸上升至取片位置後就停止動作
+3  :繼續執行 1or 2 後續的動作 (必須前一個指令有下過 1 或是 2 的 option)
+4  :Micro Step 的功能開啟(Clamp type  不支援 option4 的選項,Vacuum
+    type 某些機型不支援)</Parameter_Description>
+    <Data_Value />
+    <Min_Value>0</Min_Value>
+    <Max_Value>4</Max_Value>
+    <Default_Value>0</Default_Value>
+    <Values_length>1</Values_length>
+    <Is_Fill>N</Is_Fill>
+    <Action_Function>GetWafer</Action_Function>
+  </Table>
+  <Table>
+    <Equipment_Type>Robot</Equipment_Type>
+    <Equipment_Supplier>SANWA</Equipment_Supplier>
+    <Command_Type>CMD</Command_Type>
+    <Command_ID>PUT__</Command_ID>
+    <Command_Format>${0}{1}CMD:PUT__</Command_Format>
+    <Command_Name>放片</Command_Name>
+    <Command_Order>05</Command_Order>
+    <Parameters_Amount>01</Parameters_Amount>
+    <Parameter_Order>01</Parameter_Order>
+    <Parameter_ID>pno</Parameter_ID>
+    <Parameter_Description>pno  :Point 編號，4 位數 10 進位  (0001 ~ 1999)</Parameter_Description>
+    <Data_Value />
+    <Min_Value>1</Min_Value>
+    <Max_Value>1999</Max_Value>
+    <Default_Value>1</Default_Value>
+    <Values_length>4</Values_length>
+    <Is_Fill>Y</Is_Fill>
+    <Action_Function>PutWafer</Action_Function>
+  </Table>
+  <Table>
+    <Equipment_Type>Robot</Equipment_Type>
+    <Equipment_Supplier>SANWA</Equipment_Supplier>
+    <Command_Type>CMD</Command_Type>
+    <Command_ID>PUT__</Command_ID>
+    <Command_Format>${0}{1}CMD:PUT__</Command_Format>
+    <Command_Name>放片</Command_Name>
+    <Command_Order>05</Command_Order>
+    <Parameters_Amount>02</Parameters_Amount>
+    <Parameter_Order>02</Parameter_Order>
+    <Parameter_ID>slot</Parameter_ID>
+    <Parameter_Description>slot  :Slot，3 位數 10 進位  (001 ~ Point Data  內設定 slot  的值)</Parameter_Description>
+    <Data_Value />
+    <Min_Value>1</Min_Value>
+    <Max_Value>50</Max_Value>
+    <Default_Value>1</Default_Value>
+    <Values_length>3</Values_length>
+    <Is_Fill>Y</Is_Fill>
+    <Action_Function>PutWafer</Action_Function>
+  </Table>
+  <Table>
+    <Equipment_Type>Robot</Equipment_Type>
+    <Equipment_Supplier>SANWA</Equipment_Supplier>
+    <Command_Type>CMD</Command_Type>
+    <Command_ID>PUT__</Command_ID>
+    <Command_Format>${0}{1}CMD:PUT__</Command_Format>
+    <Command_Name>放片</Command_Name>
+    <Command_Order>05</Command_Order>
+    <Parameters_Amount>03</Parameters_Amount>
+    <Parameter_Order>03</Parameter_Order>
+    <Parameter_ID>arm</Parameter_ID>
+    <Parameter_Description>arm  :Arm  選擇  ( 1~3 ) 
+1  :R 軸   
+2  :L 軸   
+3  :R+L 軸(Point Data : 102RL-GorP =1)</Parameter_Description>
+    <Data_Value />
+    <Min_Value>1</Min_Value>
+    <Max_Value>3</Max_Value>
+    <Default_Value>1</Default_Value>
+    <Values_length>1</Values_length>
+    <Is_Fill>N</Is_Fill>
+    <Action_Function>PutWafer</Action_Function>
+  </Table>
+  <Table>
+    <Equipment_Type>Robot</Equipment_Type>
+    <Equipment_Supplier>SANWA</Equipment_Supplier>
+    <Command_Type>CMD</Command_Type>
+    <Command_ID>PUT__</Command_ID>
+    <Command_Format>${0}{1}CMD:PUT__</Command_Format>
+    <Command_Name>放片</Command_Name>
+    <Command_Order>05</Command_Order>
+    <Parameters_Amount>04</Parameters_Amount>
+    <Parameter_Order>04</Parameter_Order>
+    <Parameter_ID>opt</Parameter_ID>
+    <Parameter_Description>opt  :Option (詳細動作請參閱標準動作說明) 
+0  :無指定,   
+1  :Z  軸移動至  Panel  上點位，Arm 伸出後就停止動作 
+2  :Z 中間位置停止(Teaching 位置  + Z 軸下降設定距離)   
+3    :繼續執行 1 or 2  後續的動作(必須前一個指令有下過  1  或是  2 的 option)
+4  : Micro Step 的功能開啟(Clamp Type 不支援 option 4 的選項)</Parameter_Description>
+    <Data_Value />
+    <Min_Value>0</Min_Value>
+    <Max_Value>4</Max_Value>
+    <Default_Value>1</Default_Value>
+    <Values_length>1</Values_length>
+    <Is_Fill>N</Is_Fill>
+    <Action_Function>PutWafer</Action_Function>
+  </Table>
+  <Table>
+    <Equipment_Type>Robot</Equipment_Type>
+    <Equipment_Supplier>SANWA</Equipment_Supplier>
+    <Command_Type>CMD</Command_Type>
+    <Command_ID>CARRY</Command_ID>
+    <Command_Format>${0}{1}CMD:CARRY</Command_Format>
+    <Command_Name>取片+放片 動作指令(Exchange)</Command_Name>
+    <Command_Order>06</Command_Order>
+    <Parameters_Amount>01</Parameters_Amount>
+    <Parameter_Order>01</Parameter_Order>
+    <Parameter_ID>gpno</Parameter_ID>
+    <Parameter_Description>gpno  :Point 編號。(0001 ~ 1999)</Parameter_Description>
+    <Data_Value />
+    <Min_Value>1</Min_Value>
+    <Max_Value>1999</Max_Value>
+    <Default_Value>1</Default_Value>
+    <Values_length>4</Values_length>
+    <Is_Fill>Y</Is_Fill>
+    <Action_Function>Exchange</Action_Function>
+  </Table>
+  <Table>
+    <Equipment_Type>Robot</Equipment_Type>
+    <Equipment_Supplier>SANWA</Equipment_Supplier>
+    <Command_Type>CMD</Command_Type>
+    <Command_ID>CARRY</Command_ID>
+    <Command_Format>${0}{1}CMD:CARRY</Command_Format>
+    <Command_Name>取片+放片 動作指令(Exchange)</Command_Name>
+    <Command_Order>06</Command_Order>
+    <Parameters_Amount>02</Parameters_Amount>
+    <Parameter_Order>02</Parameter_Order>
+    <Parameter_ID>gslot</Parameter_ID>
+    <Parameter_Description>gslot  :Slot 編號。3 位數 10 進位  (001 ~ Point Data  內設定 slot  的值)</Parameter_Description>
+    <Data_Value />
+    <Min_Value>1</Min_Value>
+    <Max_Value>50</Max_Value>
+    <Default_Value>1</Default_Value>
+    <Values_length>3</Values_length>
+    <Is_Fill>Y</Is_Fill>
+    <Action_Function>Exchange</Action_Function>
+  </Table>
+  <Table>
+    <Equipment_Type>Robot</Equipment_Type>
+    <Equipment_Supplier>SANWA</Equipment_Supplier>
+    <Command_Type>CMD</Command_Type>
+    <Command_ID>CARRY</Command_ID>
+    <Command_Format>${0}{1}CMD:CARRY</Command_Format>
+    <Command_Name>取片+放片 動作指令(Exchange)</Command_Name>
+    <Command_Order>06</Command_Order>
+    <Parameters_Amount>03</Parameters_Amount>
+    <Parameter_Order>03</Parameter_Order>
+    <Parameter_ID>garm</Parameter_ID>
+    <Parameter_Description>garm  :Arm 選擇  ( 1~2 ) 
+1  :R 軸
+2  :L 軸</Parameter_Description>
+    <Data_Value />
+    <Min_Value>1</Min_Value>
+    <Max_Value>2</Max_Value>
+    <Default_Value>1</Default_Value>
+    <Values_length>1</Values_length>
+    <Is_Fill>N</Is_Fill>
+    <Action_Function>Exchange</Action_Function>
+  </Table>
+  <Table>
+    <Equipment_Type>Robot</Equipment_Type>
+    <Equipment_Supplier>SANWA</Equipment_Supplier>
+    <Command_Type>CMD</Command_Type>
+    <Command_ID>CARRY</Command_ID>
+    <Command_Format>${0}{1}CMD:CARRY</Command_Format>
+    <Command_Name>取片+放片 動作指令(Exchange)</Command_Name>
+    <Command_Order>06</Command_Order>
+    <Parameters_Amount>04</Parameters_Amount>
+    <Parameter_Order>03</Parameter_Order>
+    <Parameter_ID>ppno</Parameter_ID>
+    <Parameter_Description>ppno  :Point 編號。(0001 ~ 1999)</Parameter_Description>
+    <Data_Value />
+    <Min_Value>1</Min_Value>
+    <Max_Value>1999</Max_Value>
+    <Default_Value>1</Default_Value>
+    <Values_length>4</Values_length>
+    <Is_Fill>Y</Is_Fill>
+    <Action_Function>Exchange</Action_Function>
+  </Table>
+  <Table>
+    <Equipment_Type>Robot</Equipment_Type>
+    <Equipment_Supplier>SANWA</Equipment_Supplier>
+    <Command_Type>CMD</Command_Type>
+    <Command_ID>CARRY</Command_ID>
+    <Command_Format>${0}{1}CMD:CARRY</Command_Format>
+    <Command_Name>取片+放片 動作指令(Exchange)</Command_Name>
+    <Command_Order>06</Command_Order>
+    <Parameters_Amount>05</Parameters_Amount>
+    <Parameter_Order>04</Parameter_Order>
+    <Parameter_ID>pslot</Parameter_ID>
+    <Parameter_Description>pslot  :Slot 編號。3 位數 10 進位  (001 ~ Point Data  內設定 slot  的值)</Parameter_Description>
+    <Data_Value />
+    <Min_Value>1</Min_Value>
+    <Max_Value>50</Max_Value>
+    <Default_Value>1</Default_Value>
+    <Values_length>3</Values_length>
+    <Is_Fill>Y</Is_Fill>
+    <Action_Function>Exchange</Action_Function>
+  </Table>
+  <Table>
+    <Equipment_Type>Robot</Equipment_Type>
+    <Equipment_Supplier>SANWA</Equipment_Supplier>
+    <Command_Type>CMD</Command_Type>
+    <Command_ID>CARRY</Command_ID>
+    <Command_Format>${0}{1}CMD:CARRY</Command_Format>
+    <Command_Name>取片+放片 動作指令(Exchange)</Command_Name>
+    <Command_Order>06</Command_Order>
+    <Parameters_Amount>06</Parameters_Amount>
+    <Parameter_Order>05</Parameter_Order>
+    <Parameter_ID>parm</Parameter_ID>
+    <Parameter_Description>parm  :Arm 選擇( 1~2 )
+1  :R 軸   
+2  :L 軸</Parameter_Description>
+    <Data_Value />
+    <Min_Value>1</Min_Value>
+    <Max_Value>2</Max_Value>
+    <Default_Value>1</Default_Value>
+    <Values_length>1</Values_length>
+    <Is_Fill>N</Is_Fill>
+    <Action_Function>Exchange</Action_Function>
+  </Table>
+  <Table>
+    <Equipment_Type>Robot</Equipment_Type>
+    <Equipment_Supplier>SANWA</Equipment_Supplier>
+    <Command_Type>CMD</Command_Type>
+    <Command_ID>GETW_</Command_ID>
+    <Command_Format>${0}{1}CMD:GETW_</Command_Format>
+    <Command_Name>取片 SXZ 軸到位後停止</Command_Name>
+    <Command_Order>07</Command_Order>
+    <Parameters_Amount>01</Parameters_Amount>
+    <Parameter_Order>01</Parameter_Order>
+    <Parameter_ID>pno</Parameter_ID>
+    <Parameter_Description>pno  :Point 編號，(0001 ~ 1999)</Parameter_Description>
+    <Data_Value />
+    <Min_Value>1</Min_Value>
+    <Max_Value>1999</Max_Value>
+    <Default_Value>1</Default_Value>
+    <Values_length>4</Values_length>
+    <Is_Fill>Y</Is_Fill>
+    <Action_Function>Get_ArmToReady</Action_Function>
+  </Table>
+  <Table>
+    <Equipment_Type>Robot</Equipment_Type>
+    <Equipment_Supplier>SANWA</Equipment_Supplier>
+    <Command_Type>CMD</Command_Type>
+    <Command_ID>GETW_</Command_ID>
+    <Command_Format>${0}{1}CMD:GETW_</Command_Format>
+    <Command_Name>取片 SXZ 軸到位後停止</Command_Name>
+    <Command_Order>07</Command_Order>
+    <Parameters_Amount>02</Parameters_Amount>
+    <Parameter_Order>02</Parameter_Order>
+    <Parameter_ID>slot</Parameter_ID>
+    <Parameter_Description>slot  :Slot，3 位數 10 進位  (001 ~ Point Data  內設定 slot  的值)</Parameter_Description>
+    <Data_Value />
+    <Min_Value>1</Min_Value>
+    <Max_Value>50</Max_Value>
+    <Default_Value>1</Default_Value>
+    <Values_length>3</Values_length>
+    <Is_Fill>Y</Is_Fill>
+    <Action_Function>Get_ArmToReady</Action_Function>
+  </Table>
+  <Table>
+    <Equipment_Type>Robot</Equipment_Type>
+    <Equipment_Supplier>SANWA</Equipment_Supplier>
+    <Command_Type>CMD</Command_Type>
+    <Command_ID>GETW_</Command_ID>
+    <Command_Format>${0}{1}CMD:GETW_</Command_Format>
+    <Command_Name>取片 SXZ 軸到位後停止</Command_Name>
+    <Command_Order>07</Command_Order>
+    <Parameters_Amount>03</Parameters_Amount>
+    <Parameter_Order>03</Parameter_Order>
+    <Parameter_ID>arm</Parameter_ID>
+    <Parameter_Description>arm  :Arm  選擇  ( 1~2 )
+1  :R 軸   
+2  :L 軸</Parameter_Description>
+    <Data_Value />
+    <Min_Value>1</Min_Value>
+    <Max_Value>2</Max_Value>
+    <Default_Value>1</Default_Value>
+    <Values_length>1</Values_length>
+    <Is_Fill>N</Is_Fill>
+    <Action_Function>Get_ArmToReady</Action_Function>
+  </Table>
+  <Table>
+    <Equipment_Type>Robot</Equipment_Type>
+    <Equipment_Supplier>SANWA</Equipment_Supplier>
+    <Command_Type>CMD</Command_Type>
+    <Command_ID>PUTW_</Command_ID>
+    <Command_Format>${0}{1}CMD:PUTW_</Command_Format>
+    <Command_Name>放片 SXZ 軸到位後停止</Command_Name>
+    <Command_Order>08</Command_Order>
+    <Parameters_Amount>01</Parameters_Amount>
+    <Parameter_Order>01</Parameter_Order>
+    <Parameter_ID>pno</Parameter_ID>
+    <Parameter_Description>pno  :Point 編號，(0001 ~ 1999)</Parameter_Description>
+    <Data_Value />
+    <Min_Value>1</Min_Value>
+    <Max_Value>1999</Max_Value>
+    <Default_Value>1</Default_Value>
+    <Values_length>4</Values_length>
+    <Is_Fill>Y</Is_Fill>
+    <Action_Function>Put_ArmToReady</Action_Function>
+  </Table>
+  <Table>
+    <Equipment_Type>Robot</Equipment_Type>
+    <Equipment_Supplier>SANWA</Equipment_Supplier>
+    <Command_Type>CMD</Command_Type>
+    <Command_ID>PUTW_</Command_ID>
+    <Command_Format>${0}{1}CMD:PUTW_</Command_Format>
+    <Command_Name>放片 SXZ 軸到位後停止</Command_Name>
+    <Command_Order>08</Command_Order>
+    <Parameters_Amount>02</Parameters_Amount>
+    <Parameter_Order>02</Parameter_Order>
+    <Parameter_ID>slot</Parameter_ID>
+    <Parameter_Description>slot  :Slot，3 位數 10 進位  (001 ~ Point Data  內設定 slot  的值)</Parameter_Description>
+    <Data_Value />
+    <Min_Value>1</Min_Value>
+    <Max_Value>50</Max_Value>
+    <Default_Value>1</Default_Value>
+    <Values_length>3</Values_length>
+    <Is_Fill>Y</Is_Fill>
+    <Action_Function>Put_ArmToReady</Action_Function>
+  </Table>
+  <Table>
+    <Equipment_Type>Robot</Equipment_Type>
+    <Equipment_Supplier>SANWA</Equipment_Supplier>
+    <Command_Type>CMD</Command_Type>
+    <Command_ID>PUTW_</Command_ID>
+    <Command_Format>${0}{1}CMD:PUTW_</Command_Format>
+    <Command_Name>放片 SXZ 軸到位後停止</Command_Name>
+    <Command_Order>08</Command_Order>
+    <Parameters_Amount>03</Parameters_Amount>
+    <Parameter_Order>03</Parameter_Order>
+    <Parameter_ID>arm</Parameter_ID>
+    <Parameter_Description>arm  :Arm  選擇  ( 1~2 )
+1  :R 軸
+2  :L 軸</Parameter_Description>
+    <Data_Value />
+    <Min_Value>1</Min_Value>
+    <Max_Value>2</Max_Value>
+    <Default_Value>1</Default_Value>
+    <Values_length>1</Values_length>
+    <Is_Fill>N</Is_Fill>
+    <Action_Function>Put_ArmToReady</Action_Function>
+  </Table>
+  <Table>
+    <Equipment_Type>Robot</Equipment_Type>
+    <Equipment_Supplier>SANWA</Equipment_Supplier>
+    <Command_Type>CMD</Command_Type>
+    <Command_ID>RET__</Command_ID>
+    <Command_Format>${0}{1}CMD:RET__</Command_Format>
+    <Command_Name>Arm 回 HOME 位置</Command_Name>
+    <Command_Order>09</Command_Order>
+    <Parameters_Amount>01</Parameters_Amount>
+    <Parameter_Order>01</Parameter_Order>
+    <Parameter_ID>Null</Parameter_ID>
+    <Parameter_Description />
+    <Data_Value />
+    <Min_Value />
+    <Max_Value />
+    <Default_Value />
+    <Values_length />
+    <Is_Fill />
+    <Action_Function>ArmRetract</Action_Function>
+  </Table>
+  <Table>
+    <Equipment_Type>Robot</Equipment_Type>
+    <Equipment_Supplier>SANWA</Equipment_Supplier>
+    <Command_Type>CMD</Command_Type>
+    <Command_ID>MOVED</Command_ID>
+    <Command_Format>${0}{1}CMD:MOVED</Command_Format>
+    <Command_Name>移動指定軸到指定點位</Command_Name>
+    <Command_Order>10</Command_Order>
+    <Parameters_Amount>01</Parameters_Amount>
+    <Parameter_Order>01</Parameter_Order>
+    <Parameter_ID>axis</Parameter_ID>
+    <Parameter_Description>axis  :軸, (01 ~ 16) ,軸資訊請參考 Table 9</Parameter_Description>
+    <Data_Value />
+    <Min_Value>1</Min_Value>
+    <Max_Value>16</Max_Value>
+    <Default_Value>1</Default_Value>
+    <Values_length>2</Values_length>
+    <Is_Fill>Y</Is_Fill>
+    <Action_Function>MoveDirect</Action_Function>
+  </Table>
+  <Table>
+    <Equipment_Type>Robot</Equipment_Type>
+    <Equipment_Supplier>SANWA</Equipment_Supplier>
+    <Command_Type>CMD</Command_Type>
+    <Command_ID>MOVED</Command_ID>
+    <Command_Format>${0}{1}CMD:MOVED</Command_Format>
+    <Command_Name>移動指定軸到指定點位</Command_Name>
+    <Command_Order>10</Command_Order>
+    <Parameters_Amount>02</Parameters_Amount>
+    <Parameter_Order>02</Parameter_Order>
+    <Parameter_ID>type</Parameter_ID>
+    <Parameter_Description>type  :移動方式選擇
+0  : ABS:絕對位置
+1  : INC:相對位置
+2  : Pulse 數量</Parameter_Description>
+    <Data_Value />
+    <Min_Value>0</Min_Value>
+    <Max_Value>2</Max_Value>
+    <Default_Value>0</Default_Value>
+    <Values_length>1</Values_length>
+    <Is_Fill>N</Is_Fill>
+    <Action_Function>MoveDirect</Action_Function>
+  </Table>
+  <Table>
+    <Equipment_Type>Robot</Equipment_Type>
+    <Equipment_Supplier>SANWA</Equipment_Supplier>
+    <Command_Type>CMD</Command_Type>
+    <Command_ID>ORG__</Command_ID>
+    <Command_Format>${0}{1}CMD:ORG__</Command_Format>
+    <Command_Name>ORG Search</Command_Name>
+    <Command_Order>11</Command_Order>
+    <Parameters_Amount>01</Parameters_Amount>
+    <Parameter_Order>01</Parameter_Order>
+    <Parameter_ID>Null</Parameter_ID>
+    <Parameter_Description />
+    <Data_Value />
+    <Min_Value />
+    <Max_Value />
+    <Default_Value />
+    <Values_length />
+    <Is_Fill />
+    <Action_Function>OrginSearch</Action_Function>
+  </Table>
+  <Table>
+    <Equipment_Type>Robot</Equipment_Type>
+    <Equipment_Supplier>SANWA</Equipment_Supplier>
+    <Command_Type>CMD</Command_Type>
+    <Command_ID>EORG_</Command_ID>
+    <Command_Format>${0}{1}CMD:EORG_</Command_Format>
+    <Command_Name>單軸 ORG Search</Command_Name>
+    <Command_Order>12</Command_Order>
+    <Parameters_Amount>01</Parameters_Amount>
+    <Parameter_Order>01</Parameter_Order>
+    <Parameter_ID>axis</Parameter_ID>
+    <Parameter_Description>axis  :軸, (01 ~ 16) ,軸資訊請參考 Table 9</Parameter_Description>
+    <Data_Value />
+    <Min_Value>1</Min_Value>
+    <Max_Value>16</Max_Value>
+    <Default_Value>1</Default_Value>
+    <Values_length>2</Values_length>
+    <Is_Fill>Y</Is_Fill>
+    <Action_Function>OrginSearchSingle</Action_Function>
+  </Table>
+  <Table>
+    <Equipment_Type>Robot</Equipment_Type>
+    <Equipment_Supplier>SANWA</Equipment_Supplier>
+    <Command_Type>CMD</Command_Type>
+    <Command_ID>WHLD_</Command_ID>
+    <Command_Format>${0}{1}CMD:WHLD_</Command_Format>
+    <Command_Name>Panel(Wafer) 保持</Command_Name>
+    <Command_Order>13</Command_Order>
+    <Parameters_Amount>01</Parameters_Amount>
+    <Parameter_Order>01</Parameter_Order>
+    <Parameter_ID>arm</Parameter_ID>
+    <Parameter_Description>arm  :Arm 選擇  ( 1~2 )
+1  :R 軸
+2  :L 軸</Parameter_Description>
+    <Data_Value />
+    <Min_Value>1</Min_Value>
+    <Max_Value>2</Max_Value>
+    <Default_Value>1</Default_Value>
+    <Values_length>1</Values_length>
+    <Is_Fill>N</Is_Fill>
+    <Action_Function>WaferHold</Action_Function>
+  </Table>
+  <Table>
+    <Equipment_Type>Robot</Equipment_Type>
+    <Equipment_Supplier>SANWA</Equipment_Supplier>
+    <Command_Type>CMD</Command_Type>
+    <Command_ID>WRLS_</Command_ID>
+    <Command_Format>${0}{1}CMD:WRLS_</Command_Format>
+    <Command_Name>Panel(Wafer) 解除</Command_Name>
+    <Command_Order>14</Command_Order>
+    <Parameters_Amount>01</Parameters_Amount>
+    <Parameter_Order>01</Parameter_Order>
+    <Parameter_ID>arm</Parameter_ID>
+    <Parameter_Description>arm  :Arm 選擇  ( 1~2 )
+1  :R 軸
+2  :L 軸</Parameter_Description>
+    <Data_Value />
+    <Min_Value>1</Min_Value>
+    <Max_Value>2</Max_Value>
+    <Default_Value>1</Default_Value>
+    <Values_length>1</Values_length>
+    <Is_Fill>N</Is_Fill>
+    <Action_Function>WaferRelease</Action_Function>
+  </Table>
+  <Table>
+    <Equipment_Type>Robot</Equipment_Type>
+    <Equipment_Supplier>SANWA</Equipment_Supplier>
+    <Command_Type>CMD</Command_Type>
+    <Command_ID>ALX__</Command_ID>
+    <Command_Format>${0}{1}CMD:ALX__</Command_Format>
+    <Command_Name>端面檢出 (option)</Command_Name>
+    <Command_Order>15</Command_Order>
+    <Parameters_Amount>01</Parameters_Amount>
+    <Parameter_Order>01</Parameter_Order>
+    <Parameter_ID>pno</Parameter_ID>
+    <Parameter_Description>pno  :Point 編號。(0001 ~ 1999)</Parameter_Description>
+    <Data_Value />
+    <Min_Value>1</Min_Value>
+    <Max_Value>1999</Max_Value>
+    <Default_Value>1</Default_Value>
+    <Values_length>4</Values_length>
+    <Is_Fill>Y</Is_Fill>
+    <Action_Function />
+  </Table>
+  <Table>
+    <Equipment_Type>Robot</Equipment_Type>
+    <Equipment_Supplier>SANWA</Equipment_Supplier>
+    <Command_Type>CMD</Command_Type>
+    <Command_ID>ALX__</Command_ID>
+    <Command_Format>${0}{1}CMD:ALX__</Command_Format>
+    <Command_Name>端面檢出 (option)</Command_Name>
+    <Command_Order>15</Command_Order>
+    <Parameters_Amount>02</Parameters_Amount>
+    <Parameter_Order>02</Parameter_Order>
+    <Parameter_ID>arm</Parameter_ID>
+    <Parameter_Description>arm  :Arm 選擇。  ( 1~2 )   
+1  :R 軸
+2  :L 軸</Parameter_Description>
+    <Data_Value />
+    <Min_Value>1</Min_Value>
+    <Max_Value>2</Max_Value>
+    <Default_Value>1</Default_Value>
+    <Values_length>1</Values_length>
+    <Is_Fill>N</Is_Fill>
+    <Action_Function />
+  </Table>
+  <Table>
+    <Equipment_Type>Robot</Equipment_Type>
+    <Equipment_Supplier>SANWA</Equipment_Supplier>
+    <Command_Type>CMD</Command_Type>
+    <Command_ID>FORK_</Command_ID>
+    <Command_Format>${0}{1}CMD:FORK_</Command_Format>
+    <Command_Name>Fork 開合位置變更 (option)</Command_Name>
+    <Command_Order>16</Command_Order>
+    <Parameters_Amount>01</Parameters_Amount>
+    <Parameter_Order>01</Parameter_Order>
+    <Parameter_ID>arm</Parameter_ID>
+    <Parameter_Description>arm  :Arm 選擇。  ( 1~2 )   
+1  :R 軸
+2  :L 軸</Parameter_Description>
+    <Data_Value />
+    <Min_Value>1</Min_Value>
+    <Max_Value>2</Max_Value>
+    <Default_Value>1</Default_Value>
+    <Values_length>1</Values_length>
+    <Is_Fill>N</Is_Fill>
+    <Action_Function />
+  </Table>
+  <Table>
+    <Equipment_Type>Robot</Equipment_Type>
+    <Equipment_Supplier>SANWA</Equipment_Supplier>
+    <Command_Type>CMD</Command_Type>
+    <Command_ID>FORK_</Command_ID>
+    <Command_Format>${0}{1}CMD:FORK_</Command_Format>
+    <Command_Name>Fork 開合位置變更 (option)</Command_Name>
+    <Command_Order>16</Command_Order>
+    <Parameters_Amount>02</Parameters_Amount>
+    <Parameter_Order>02</Parameter_Order>
+    <Parameter_ID>fork</Parameter_ID>
+    <Parameter_Description>fork  :開合位置選擇  ( 0~3 )</Parameter_Description>
+    <Data_Value />
+    <Min_Value>0</Min_Value>
+    <Max_Value>3</Max_Value>
+    <Default_Value>0</Default_Value>
+    <Values_length>1</Values_length>
+    <Is_Fill>N</Is_Fill>
+    <Action_Function />
+  </Table>
+  <Table>
+    <Equipment_Type>Robot</Equipment_Type>
+    <Equipment_Supplier>SANWA</Equipment_Supplier>
+    <Command_Type>CMD</Command_Type>
+    <Command_ID>FORK_</Command_ID>
+    <Command_Format>${0}{1}CMD:FORK_</Command_Format>
+    <Command_Name>Fork 開合位置變更 (option)</Command_Name>
+    <Command_Order>16</Command_Order>
+    <Parameters_Amount>03</Parameters_Amount>
+    <Parameter_Order>03</Parameter_Order>
+    <Parameter_ID>vac</Parameter_ID>
+    <Parameter_Description>vac  :Pad 電磁閥選擇  ( 0~3 )</Parameter_Description>
+    <Data_Value />
+    <Min_Value>0</Min_Value>
+    <Max_Value>3</Max_Value>
+    <Default_Value>0</Default_Value>
+    <Values_length>1</Values_length>
+    <Is_Fill>N</Is_Fill>
+    <Action_Function />
+  </Table>
+  <Table>
+    <Equipment_Type>Robot</Equipment_Type>
+    <Equipment_Supplier>SANWA</Equipment_Supplier>
+    <Command_Type>CMD</Command_Type>
+    <Command_ID>FRKCB</Command_ID>
+    <Command_Format>${0}{1}CMD:FRKCB</Command_Format>
+    <Command_Name>Fork Calibration (option)</Command_Name>
+    <Command_Order>17</Command_Order>
+    <Parameters_Amount>01</Parameters_Amount>
+    <Parameter_Order>01</Parameter_Order>
+    <Parameter_ID>Null</Parameter_ID>
+    <Parameter_Description>arm  :Arm 選擇。  ( 1~3 )   
+1  :R 軸
+2  :L 軸
+3  :R+L  軸</Parameter_Description>
+    <Data_Value>arm  :Arm 選擇。  ( 1~3 )   
+1  :R 軸
+2  :L 軸
+3  :R+L  軸</Data_Value>
+    <Min_Value />
+    <Max_Value />
+    <Default_Value />
+    <Values_length />
+    <Is_Fill />
+    <Action_Function />
+  </Table>
+  <Table>
+    <Equipment_Type>Robot</Equipment_Type>
+    <Equipment_Supplier>SANWA</Equipment_Supplier>
+    <Command_Type>CMD</Command_Type>
+    <Command_ID>MAP__</Command_ID>
+    <Command_Format>${0}{1}CMD:MAP__</Command_Format>
+    <Command_Name>Mapping (option)</Command_Name>
+    <Command_Order>18</Command_Order>
+    <Parameters_Amount>01</Parameters_Amount>
+    <Parameter_Order>01</Parameter_Order>
+    <Parameter_ID>pno</Parameter_ID>
+    <Parameter_Description>pno  :Point Data 編號。(0001 ~ 1999)</Parameter_Description>
+    <Data_Value />
+    <Min_Value>1</Min_Value>
+    <Max_Value>1999</Max_Value>
+    <Default_Value>1</Default_Value>
+    <Values_length>1</Values_length>
+    <Is_Fill>Y</Is_Fill>
+    <Action_Function>Mapping</Action_Function>
+  </Table>
+  <Table>
+    <Equipment_Type>Robot</Equipment_Type>
+    <Equipment_Supplier>SANWA</Equipment_Supplier>
+    <Command_Type>CMD</Command_Type>
+    <Command_ID>MAP__</Command_ID>
+    <Command_Format>${0}{1}CMD:MAP__</Command_Format>
+    <Command_Name>Mapping (option)</Command_Name>
+    <Command_Order>18</Command_Order>
+    <Parameters_Amount>02</Parameters_Amount>
+    <Parameter_Order>02</Parameter_Order>
+    <Parameter_ID>col</Parameter_ID>
+    <Parameter_Description>col  :Cassette  列編號。(1 ~ Point Data 內設定 col  的值)</Parameter_Description>
+    <Data_Value />
+    <Min_Value>1</Min_Value>
+    <Max_Value>10</Max_Value>
+    <Default_Value>1</Default_Value>
+    <Values_length>1</Values_length>
+    <Is_Fill>N</Is_Fill>
+    <Action_Function>Mapping</Action_Function>
+  </Table>
+  <Table>
+    <Equipment_Type>Robot</Equipment_Type>
+    <Equipment_Supplier>SANWA</Equipment_Supplier>
+    <Command_Type>CMD</Command_Type>
+    <Command_ID>MAP__</Command_ID>
+    <Command_Format>${0}{1}CMD:MAP__</Command_Format>
+    <Command_Name>Mapping (option)</Command_Name>
+    <Command_Order>18</Command_Order>
+    <Parameters_Amount>03</Parameters_Amount>
+    <Parameter_Order>03</Parameter_Order>
+    <Parameter_ID>slot</Parameter_ID>
+    <Parameter_Description>slot  :Slot  編號。(000~ Point Data  內設定 slot  的值) 
+0    :掃描全部  Slot 
+Others  :從指定的 Slot 開始掃描</Parameter_Description>
+    <Data_Value />
+    <Min_Value>1</Min_Value>
+    <Max_Value>50</Max_Value>
+    <Default_Value>1</Default_Value>
+    <Values_length>3</Values_length>
+    <Is_Fill>Y</Is_Fill>
+    <Action_Function>Mapping</Action_Function>
+  </Table>
+  <Table>
+    <Equipment_Type>Robot</Equipment_Type>
+    <Equipment_Supplier>SANWA</Equipment_Supplier>
+    <Command_Type>CMD</Command_Type>
+    <Command_ID>MULSE</Command_ID>
+    <Command_Format>${0}{1}CMD:MULSE</Command_Format>
+    <Command_Name>Multi Panel 選擇命令 (option)</Command_Name>
+    <Command_Order>19</Command_Order>
+    <Parameters_Amount>01</Parameters_Amount>
+    <Parameter_Order>01</Parameter_Order>
+    <Parameter_ID>Arm</Parameter_ID>
+    <Parameter_Description>Arm  :1 或 2，R 或Ｌ軸選擇
+1:  Ｒ軸
+2:  Ｌ軸</Parameter_Description>
+    <Data_Value />
+    <Min_Value>1</Min_Value>
+    <Max_Value>2</Max_Value>
+    <Default_Value>1</Default_Value>
+    <Values_length>1</Values_length>
+    <Is_Fill>N</Is_Fill>
+    <Action_Function>MultiPanel</Action_Function>
+  </Table>
+  <Table>
+    <Equipment_Type>Robot</Equipment_Type>
+    <Equipment_Supplier>SANWA</Equipment_Supplier>
+    <Command_Type>CMD</Command_Type>
+    <Command_ID>MULSE</Command_ID>
+    <Command_Format>${0}{1}CMD:MULSE</Command_Format>
+    <Command_Name>Multi Panel 選擇命令 (option)</Command_Name>
+    <Command_Order>19</Command_Order>
+    <Parameters_Amount>02</Parameters_Amount>
+    <Parameter_Order>02</Parameter_Order>
+    <Parameter_ID>no1</Parameter_ID>
+    <Parameter_Description>no1~16:  選擇指定的 Panel   
+0 :  關閉 
+1 :  開啟</Parameter_Description>
+    <Data_Value />
+    <Min_Value>0</Min_Value>
+    <Max_Value>1</Max_Value>
+    <Default_Value>1</Default_Value>
+    <Values_length>1</Values_length>
+    <Is_Fill>N</Is_Fill>
+    <Action_Function>MultiPanel</Action_Function>
+  </Table>
+  <Table>
+    <Equipment_Type>Robot</Equipment_Type>
+    <Equipment_Supplier>SANWA</Equipment_Supplier>
+    <Command_Type>CMD</Command_Type>
+    <Command_ID>MULSE</Command_ID>
+    <Command_Format>${0}{1}CMD:MULSE</Command_Format>
+    <Command_Name>Multi Panel 選擇命令 (option)</Command_Name>
+    <Command_Order>19</Command_Order>
+    <Parameters_Amount>03</Parameters_Amount>
+    <Parameter_Order>03</Parameter_Order>
+    <Parameter_ID>no2</Parameter_ID>
+    <Parameter_Description>no1~16:  選擇指定的 Panel   
+0 :  關閉 
+1 :  開啟</Parameter_Description>
+    <Data_Value />
+    <Min_Value>0</Min_Value>
+    <Max_Value>1</Max_Value>
+    <Default_Value>1</Default_Value>
+    <Values_length>1</Values_length>
+    <Is_Fill>N</Is_Fill>
+    <Action_Function>MultiPanel</Action_Function>
+  </Table>
+  <Table>
+    <Equipment_Type>Robot</Equipment_Type>
+    <Equipment_Supplier>SANWA</Equipment_Supplier>
+    <Command_Type>CMD</Command_Type>
+    <Command_ID>MULSE</Command_ID>
+    <Command_Format>${0}{1}CMD:MULSE</Command_Format>
+    <Command_Name>Multi Panel 選擇命令 (option)</Command_Name>
+    <Command_Order>19</Command_Order>
+    <Parameters_Amount>04</Parameters_Amount>
+    <Parameter_Order>04</Parameter_Order>
+    <Parameter_ID>no3</Parameter_ID>
+    <Parameter_Description>no1~16:  選擇指定的 Panel   
+0 :  關閉 
+1 :  開啟</Parameter_Description>
+    <Data_Value />
+    <Min_Value>0</Min_Value>
+    <Max_Value>1</Max_Value>
+    <Default_Value>1</Default_Value>
+    <Values_length>1</Values_length>
+    <Is_Fill>N</Is_Fill>
+    <Action_Function>MultiPanel</Action_Function>
+  </Table>
+  <Table>
+    <Equipment_Type>Robot</Equipment_Type>
+    <Equipment_Supplier>SANWA</Equipment_Supplier>
+    <Command_Type>CMD</Command_Type>
+    <Command_ID>MULSE</Command_ID>
+    <Command_Format>${0}{1}CMD:MULSE</Command_Format>
+    <Command_Name>Multi Panel 選擇命令 (option)</Command_Name>
+    <Command_Order>19</Command_Order>
+    <Parameters_Amount>05</Parameters_Amount>
+    <Parameter_Order>05</Parameter_Order>
+    <Parameter_ID>no4</Parameter_ID>
+    <Parameter_Description>no1~16:  選擇指定的 Panel   
+0 :  關閉 
+1 :  開啟</Parameter_Description>
+    <Data_Value />
+    <Min_Value>0</Min_Value>
+    <Max_Value>1</Max_Value>
+    <Default_Value>1</Default_Value>
+    <Values_length>1</Values_length>
+    <Is_Fill>N</Is_Fill>
+    <Action_Function>MultiPanel</Action_Function>
+  </Table>
+  <Table>
+    <Equipment_Type>Robot</Equipment_Type>
+    <Equipment_Supplier>SANWA</Equipment_Supplier>
+    <Command_Type>CMD</Command_Type>
+    <Command_ID>MULSE</Command_ID>
+    <Command_Format>${0}{1}CMD:MULSE</Command_Format>
+    <Command_Name>Multi Panel 選擇命令 (option)</Command_Name>
+    <Command_Order>19</Command_Order>
+    <Parameters_Amount>06</Parameters_Amount>
+    <Parameter_Order>06</Parameter_Order>
+    <Parameter_ID>no5</Parameter_ID>
+    <Parameter_Description>no1~16:  選擇指定的 Panel   
+0 :  關閉 
+1 :  開啟</Parameter_Description>
+    <Data_Value />
+    <Min_Value>0</Min_Value>
+    <Max_Value>1</Max_Value>
+    <Default_Value>1</Default_Value>
+    <Values_length>1</Values_length>
+    <Is_Fill>N</Is_Fill>
+    <Action_Function>MultiPanel</Action_Function>
+  </Table>
+  <Table>
+    <Equipment_Type>Robot</Equipment_Type>
+    <Equipment_Supplier>SANWA</Equipment_Supplier>
+    <Command_Type>CMD</Command_Type>
+    <Command_ID>MULSE</Command_ID>
+    <Command_Format>${0}{1}CMD:MULSE</Command_Format>
+    <Command_Name>Multi Panel 選擇命令 (option)</Command_Name>
+    <Command_Order>19</Command_Order>
+    <Parameters_Amount>07</Parameters_Amount>
+    <Parameter_Order>07</Parameter_Order>
+    <Parameter_ID>no6</Parameter_ID>
+    <Parameter_Description>no1~16:  選擇指定的 Panel   
+0 :  關閉 
+1 :  開啟</Parameter_Description>
+    <Data_Value />
+    <Min_Value>0</Min_Value>
+    <Max_Value>1</Max_Value>
+    <Default_Value>1</Default_Value>
+    <Values_length>1</Values_length>
+    <Is_Fill>N</Is_Fill>
+    <Action_Function>MultiPanel</Action_Function>
+  </Table>
+  <Table>
+    <Equipment_Type>Robot</Equipment_Type>
+    <Equipment_Supplier>SANWA</Equipment_Supplier>
+    <Command_Type>CMD</Command_Type>
+    <Command_ID>MULSE</Command_ID>
+    <Command_Format>${0}{1}CMD:MULSE</Command_Format>
+    <Command_Name>Multi Panel 選擇命令 (option)</Command_Name>
+    <Command_Order>19</Command_Order>
+    <Parameters_Amount>08</Parameters_Amount>
+    <Parameter_Order>08</Parameter_Order>
+    <Parameter_ID>no7</Parameter_ID>
+    <Parameter_Description>no1~16:  選擇指定的 Panel   
+0 :  關閉 
+1 :  開啟</Parameter_Description>
+    <Data_Value />
+    <Min_Value>0</Min_Value>
+    <Max_Value>1</Max_Value>
+    <Default_Value>1</Default_Value>
+    <Values_length>1</Values_length>
+    <Is_Fill>N</Is_Fill>
+    <Action_Function>MultiPanel</Action_Function>
+  </Table>
+  <Table>
+    <Equipment_Type>Robot</Equipment_Type>
+    <Equipment_Supplier>SANWA</Equipment_Supplier>
+    <Command_Type>CMD</Command_Type>
+    <Command_ID>MULSE</Command_ID>
+    <Command_Format>${0}{1}CMD:MULSE</Command_Format>
+    <Command_Name>Multi Panel 選擇命令 (option)</Command_Name>
+    <Command_Order>19</Command_Order>
+    <Parameters_Amount>09</Parameters_Amount>
+    <Parameter_Order>09</Parameter_Order>
+    <Parameter_ID>no8</Parameter_ID>
+    <Parameter_Description>no1~16:  選擇指定的 Panel   
+0 :  關閉 
+1 :  開啟</Parameter_Description>
+    <Data_Value />
+    <Min_Value>0</Min_Value>
+    <Max_Value>1</Max_Value>
+    <Default_Value>1</Default_Value>
+    <Values_length>1</Values_length>
+    <Is_Fill>N</Is_Fill>
+    <Action_Function>MultiPanel</Action_Function>
+  </Table>
+  <Table>
+    <Equipment_Type>Robot</Equipment_Type>
+    <Equipment_Supplier>SANWA</Equipment_Supplier>
+    <Command_Type>CMD</Command_Type>
+    <Command_ID>MULSE</Command_ID>
+    <Command_Format>${0}{1}CMD:MULSE</Command_Format>
+    <Command_Name>Multi Panel 選擇命令 (option)</Command_Name>
+    <Command_Order>19</Command_Order>
+    <Parameters_Amount>10</Parameters_Amount>
+    <Parameter_Order>10</Parameter_Order>
+    <Parameter_ID>no9</Parameter_ID>
+    <Parameter_Description>no1~16:  選擇指定的 Panel   
+0 :  關閉 
+1 :  開啟</Parameter_Description>
+    <Data_Value />
+    <Min_Value>0</Min_Value>
+    <Max_Value>1</Max_Value>
+    <Default_Value>1</Default_Value>
+    <Values_length>1</Values_length>
+    <Is_Fill>N</Is_Fill>
+    <Action_Function>MultiPanel</Action_Function>
+  </Table>
+  <Table>
+    <Equipment_Type>Robot</Equipment_Type>
+    <Equipment_Supplier>SANWA</Equipment_Supplier>
+    <Command_Type>CMD</Command_Type>
+    <Command_ID>MULSE</Command_ID>
+    <Command_Format>${0}{1}CMD:MULSE</Command_Format>
+    <Command_Name>Multi Panel 選擇命令 (option)</Command_Name>
+    <Command_Order>19</Command_Order>
+    <Parameters_Amount>11</Parameters_Amount>
+    <Parameter_Order>11</Parameter_Order>
+    <Parameter_ID>no10</Parameter_ID>
+    <Parameter_Description>no1~16:  選擇指定的 Panel   
+0 :  關閉 
+1 :  開啟</Parameter_Description>
+    <Data_Value />
+    <Min_Value>0</Min_Value>
+    <Max_Value>1</Max_Value>
+    <Default_Value>1</Default_Value>
+    <Values_length>1</Values_length>
+    <Is_Fill>N</Is_Fill>
+    <Action_Function>MultiPanel</Action_Function>
+  </Table>
+  <Table>
+    <Equipment_Type>Robot</Equipment_Type>
+    <Equipment_Supplier>SANWA</Equipment_Supplier>
+    <Command_Type>CMD</Command_Type>
+    <Command_ID>MULSE</Command_ID>
+    <Command_Format>${0}{1}CMD:MULSE</Command_Format>
+    <Command_Name>Multi Panel 選擇命令 (option)</Command_Name>
+    <Command_Order>19</Command_Order>
+    <Parameters_Amount>12</Parameters_Amount>
+    <Parameter_Order>12</Parameter_Order>
+    <Parameter_ID>no11</Parameter_ID>
+    <Parameter_Description>no1~16:  選擇指定的 Panel   
+0 :  關閉 
+1 :  開啟</Parameter_Description>
+    <Data_Value />
+    <Min_Value>0</Min_Value>
+    <Max_Value>1</Max_Value>
+    <Default_Value>1</Default_Value>
+    <Values_length>1</Values_length>
+    <Is_Fill>N</Is_Fill>
+    <Action_Function>MultiPanel</Action_Function>
+  </Table>
+  <Table>
+    <Equipment_Type>Robot</Equipment_Type>
+    <Equipment_Supplier>SANWA</Equipment_Supplier>
+    <Command_Type>CMD</Command_Type>
+    <Command_ID>MULSE</Command_ID>
+    <Command_Format>${0}{1}CMD:MULSE</Command_Format>
+    <Command_Name>Multi Panel 選擇命令 (option)</Command_Name>
+    <Command_Order>19</Command_Order>
+    <Parameters_Amount>13</Parameters_Amount>
+    <Parameter_Order>13</Parameter_Order>
+    <Parameter_ID>no12</Parameter_ID>
+    <Parameter_Description>no1~16:  選擇指定的 Panel   
+0 :  關閉 
+1 :  開啟</Parameter_Description>
+    <Data_Value />
+    <Min_Value>0</Min_Value>
+    <Max_Value>1</Max_Value>
+    <Default_Value>1</Default_Value>
+    <Values_length>1</Values_length>
+    <Is_Fill>N</Is_Fill>
+    <Action_Function>MultiPanel</Action_Function>
+  </Table>
+  <Table>
+    <Equipment_Type>Robot</Equipment_Type>
+    <Equipment_Supplier>SANWA</Equipment_Supplier>
+    <Command_Type>CMD</Command_Type>
+    <Command_ID>MULSE</Command_ID>
+    <Command_Format>${0}{1}CMD:MULSE</Command_Format>
+    <Command_Name>Multi Panel 選擇命令 (option)</Command_Name>
+    <Command_Order>19</Command_Order>
+    <Parameters_Amount>14</Parameters_Amount>
+    <Parameter_Order>14</Parameter_Order>
+    <Parameter_ID>no13</Parameter_ID>
+    <Parameter_Description>no1~16:  選擇指定的 Panel   
+0 :  關閉 
+1 :  開啟</Parameter_Description>
+    <Data_Value />
+    <Min_Value>0</Min_Value>
+    <Max_Value>1</Max_Value>
+    <Default_Value>1</Default_Value>
+    <Values_length>1</Values_length>
+    <Is_Fill>N</Is_Fill>
+    <Action_Function>MultiPanel</Action_Function>
+  </Table>
+  <Table>
+    <Equipment_Type>Robot</Equipment_Type>
+    <Equipment_Supplier>SANWA</Equipment_Supplier>
+    <Command_Type>CMD</Command_Type>
+    <Command_ID>MULSE</Command_ID>
+    <Command_Format>${0}{1}CMD:MULSE</Command_Format>
+    <Command_Name>Multi Panel 選擇命令 (option)</Command_Name>
+    <Command_Order>19</Command_Order>
+    <Parameters_Amount>15</Parameters_Amount>
+    <Parameter_Order>15</Parameter_Order>
+    <Parameter_ID>no14</Parameter_ID>
+    <Parameter_Description>no1~16:  選擇指定的 Panel   
+0 :  關閉 
+1 :  開啟</Parameter_Description>
+    <Data_Value />
+    <Min_Value>0</Min_Value>
+    <Max_Value>1</Max_Value>
+    <Default_Value>1</Default_Value>
+    <Values_length>1</Values_length>
+    <Is_Fill>N</Is_Fill>
+    <Action_Function>MultiPanel</Action_Function>
+  </Table>
+  <Table>
+    <Equipment_Type>Robot</Equipment_Type>
+    <Equipment_Supplier>SANWA</Equipment_Supplier>
+    <Command_Type>CMD</Command_Type>
+    <Command_ID>MULSE</Command_ID>
+    <Command_Format>${0}{1}CMD:MULSE</Command_Format>
+    <Command_Name>Multi Panel 選擇命令 (option)</Command_Name>
+    <Command_Order>19</Command_Order>
+    <Parameters_Amount>16</Parameters_Amount>
+    <Parameter_Order>16</Parameter_Order>
+    <Parameter_ID>no15</Parameter_ID>
+    <Parameter_Description>no1~16:  選擇指定的 Panel   
+0 :  關閉 
+1 :  開啟</Parameter_Description>
+    <Data_Value />
+    <Min_Value>0</Min_Value>
+    <Max_Value>1</Max_Value>
+    <Default_Value>1</Default_Value>
+    <Values_length>1</Values_length>
+    <Is_Fill>N</Is_Fill>
+    <Action_Function>MultiPanel</Action_Function>
+  </Table>
+  <Table>
+    <Equipment_Type>Robot</Equipment_Type>
+    <Equipment_Supplier>SANWA</Equipment_Supplier>
+    <Command_Type>CMD</Command_Type>
+    <Command_ID>MULSE</Command_ID>
+    <Command_Format>${0}{1}CMD:MULSE</Command_Format>
+    <Command_Name>Multi Panel 選擇命令 (option)</Command_Name>
+    <Command_Order>19</Command_Order>
+    <Parameters_Amount>17</Parameters_Amount>
+    <Parameter_Order>17</Parameter_Order>
+    <Parameter_ID>no16</Parameter_ID>
+    <Parameter_Description>no1~16:  選擇指定的 Panel   
+0 :  關閉 
+1 :  開啟</Parameter_Description>
+    <Data_Value />
+    <Min_Value>0</Min_Value>
+    <Max_Value>1</Max_Value>
+    <Default_Value>1</Default_Value>
+    <Values_length>1</Values_length>
+    <Is_Fill>N</Is_Fill>
+    <Action_Function>MultiPanel</Action_Function>
+  </Table>
+  <Table>
+    <Equipment_Type>Robot</Equipment_Type>
+    <Equipment_Supplier>SANWA</Equipment_Supplier>
+    <Command_Type>CMD</Command_Type>
+    <Command_ID>MOVED</Command_ID>
+    <Command_Format>${0}{1}CMD:MOVED</Command_Format>
+    <Command_Name>移動指定軸到指定點位</Command_Name>
+    <Command_Order>19</Command_Order>
+    <Parameters_Amount>04</Parameters_Amount>
+    <Parameter_Order>03</Parameter_Order>
+    <Parameter_ID>pos</Parameter_ID>
+    <Parameter_Description>pos  :移動數量, 9  位數  10 進位(-99999999 ~ +99999999)
+若是 type = 0 or 1,這邊所代表的是距離單位,單位是 1um
+若是 type = 2,  這邊所代表的是 pulse 單位,單位是 1pulse</Parameter_Description>
+    <Data_Value />
+    <Min_Value>-99999999</Min_Value>
+    <Max_Value>99999999</Max_Value>
+    <Default_Value>0</Default_Value>
+    <Values_length>8</Values_length>
+    <Is_Fill>Y</Is_Fill>
+    <Action_Function>MoveDirect</Action_Function>
+  </Table>
+  <Table>
+    <Equipment_Type>Aligner</Equipment_Type>
+    <Equipment_Supplier>SANWA</Equipment_Supplier>
+    <Command_Type>GET</Command_Type>
+    <Command_ID>STS__</Command_ID>
+    <Command_Format>${0}{1}GET:STS__</Command_Format>
+    <Command_Name>Aligner狀態取得 </Command_Name>
+    <Command_Order>1</Command_Order>
+    <Parameters_Amount>1</Parameters_Amount>
+    <Parameter_Order>1</Parameter_Order>
+    <Parameter_ID>Null</Parameter_ID>
+    <Parameter_Description />
+    <Data_Value />
+    <Min_Value />
+    <Max_Value />
+    <Default_Value />
+    <Values_length />
+    <Is_Fill />
+    <Action_Function>DeviceStatus</Action_Function>
+  </Table>
+  <Table>
+    <Equipment_Type>Aligner</Equipment_Type>
+    <Equipment_Supplier>SANWA</Equipment_Supplier>
+    <Command_Type>GET</Command_Type>
+    <Command_ID>RIO__</Command_ID>
+    <Command_Format>${0}{1}GET:RIO__</Command_Format>
+    <Command_Name>IO狀態取得 </Command_Name>
+    <Command_Order>2</Command_Order>
+    <Parameters_Amount>1</Parameters_Amount>
+    <Parameter_Order>1</Parameter_Order>
+    <Parameter_ID>no</Parameter_ID>
+    <Parameter_Description>no  :IO 號碼。(000~999) * IO 分配表請參閱 Table 5, Table 6, Table 7</Parameter_Description>
+    <Data_Value />
+    <Min_Value>0</Min_Value>
+    <Max_Value>999</Max_Value>
+    <Default_Value>0</Default_Value>
+    <Values_length>3</Values_length>
+    <Is_Fill>Y</Is_Fill>
+    <Action_Function>DeviceStatusIO</Action_Function>
+  </Table>
+  <Table>
+    <Equipment_Type>Aligner</Equipment_Type>
+    <Equipment_Supplier>SANWA</Equipment_Supplier>
+    <Command_Type>GET</Command_Type>
+    <Command_ID>SP___</Command_ID>
+    <Command_Format>${0}{1}GET:SP___</Command_Format>
+    <Command_Name>Speed限制取得 </Command_Name>
+    <Command_Order>3</Command_Order>
+    <Parameters_Amount>1</Parameters_Amount>
+    <Parameter_Order>1</Parameter_Order>
+    <Parameter_ID>Null</Parameter_ID>
+    <Parameter_Description />
+    <Data_Value />
+    <Min_Value />
+    <Max_Value />
+    <Default_Value />
+    <Values_length />
+    <Is_Fill />
+    <Action_Function>DeviceStatusSpeed</Action_Function>
+  </Table>
+  <Table>
+    <Equipment_Type>Aligner</Equipment_Type>
+    <Equipment_Supplier>SANWA</Equipment_Supplier>
+    <Command_Type>GET</Command_Type>
+    <Command_ID>ERR__</Command_ID>
+    <Command_Format>${0}{1}GET:ERR__</Command_Format>
+    <Command_Name>Error履歷取得</Command_Name>
+    <Command_Order>4</Command_Order>
+    <Parameters_Amount>1</Parameters_Amount>
+    <Parameter_Order>1</Parameter_Order>
+    <Parameter_ID>no</Parameter_ID>
+    <Parameter_Description>no  :履歷號碼  2 位數  10 進位  (00 – 64)</Parameter_Description>
+    <Data_Value />
+    <Min_Value>0</Min_Value>
+    <Max_Value>64</Max_Value>
+    <Default_Value>0</Default_Value>
+    <Values_length>2</Values_length>
+    <Is_Fill>Y</Is_Fill>
+    <Action_Function>ErrorList</Action_Function>
+  </Table>
+  <Table>
+    <Equipment_Type>Aligner</Equipment_Type>
+    <Equipment_Supplier>SANWA</Equipment_Supplier>
+    <Command_Type>GET</Command_Type>
+    <Command_ID>SV___</Command_ID>
+    <Command_Format>${0}{1}GET:SV___</Command_Format>
+    <Command_Name>電磁閥狀態取得</Command_Name>
+    <Command_Order>5</Command_Order>
+    <Parameters_Amount>1</Parameters_Amount>
+    <Parameter_Order>1</Parameter_Order>
+    <Parameter_ID>no</Parameter_ID>
+    <Parameter_Description>no  :電磁閥號碼  (01~10) *電磁閥之相關定義  請參閱  Table 4</Parameter_Description>
+    <Data_Value />
+    <Min_Value>0</Min_Value>
+    <Max_Value>2</Max_Value>
+    <Default_Value>0</Default_Value>
+    <Values_length>1</Values_length>
+    <Is_Fill>N</Is_Fill>
+    <Action_Function>SolenoidValve</Action_Function>
+  </Table>
+  <Table>
+    <Equipment_Type>Aligner</Equipment_Type>
+    <Equipment_Supplier>SANWA</Equipment_Supplier>
+    <Command_Type>GET</Command_Type>
+    <Command_ID>PARAM</Command_ID>
+    <Command_Format>${0}{1}GET:PARAM</Command_Format>
+    <Command_Name>取得Aligner參數值</Command_Name>
+    <Command_Order>6</Command_Order>
+    <Parameters_Amount>1</Parameters_Amount>
+    <Parameter_Order>1</Parameter_Order>
+    <Parameter_ID>Type</Parameter_ID>
+    <Parameter_Description>Type  :  參數類別(0~9)
+0    : Options
+1    : Adjust
+Others  : Reserved</Parameter_Description>
+    <Data_Value />
+    <Min_Value>0</Min_Value>
+    <Max_Value>9</Max_Value>
+    <Default_Value>0</Default_Value>
+    <Values_length>1</Values_length>
+    <Is_Fill>N</Is_Fill>
+    <Action_Function>Parameter</Action_Function>
+  </Table>
+  <Table>
+    <Equipment_Type>Aligner</Equipment_Type>
+    <Equipment_Supplier>SANWA</Equipment_Supplier>
+    <Command_Type>GET</Command_Type>
+    <Command_ID>PARAM</Command_ID>
+    <Command_Format>${0}{1}GET:PARAM</Command_Format>
+    <Command_Name>取得Aligner參數值</Command_Name>
+    <Command_Order>6</Command_Order>
+    <Parameters_Amount>2</Parameters_Amount>
+    <Parameter_Order>2</Parameter_Order>
+    <Parameter_ID>No</Parameter_ID>
+    <Parameter_Description>No  :  參數號碼(000~999) ,參數定義請參考 Table 14,</Parameter_Description>
+    <Data_Value />
+    <Min_Value>0</Min_Value>
+    <Max_Value>999</Max_Value>
+    <Default_Value>0</Default_Value>
+    <Values_length>3</Values_length>
+    <Is_Fill>Y</Is_Fill>
+    <Action_Function>Parameter</Action_Function>
+  </Table>
+  <Table>
+    <Equipment_Type>Aligner</Equipment_Type>
+    <Equipment_Supplier>SANWA</Equipment_Supplier>
+    <Command_Type>GET</Command_Type>
+    <Command_ID>PARSY</Command_ID>
+    <Command_Format>${0}{1}GET:PARSY</Command_Format>
+    <Command_Name>取得Aligner參數詳細資料</Command_Name>
+    <Command_Order>7</Command_Order>
+    <Parameters_Amount>1</Parameters_Amount>
+    <Parameter_Order>1</Parameter_Order>
+    <Parameter_ID>Type</Parameter_ID>
+    <Parameter_Description>Type  :  參數類別(0~9)
+0    : Option
+1    : Adjust
+Others  : Reserved</Parameter_Description>
+    <Data_Value />
+    <Min_Value>0</Min_Value>
+    <Max_Value>9</Max_Value>
+    <Default_Value>0</Default_Value>
+    <Values_length>1</Values_length>
+    <Is_Fill>N</Is_Fill>
+    <Action_Function>PARSY</Action_Function>
+  </Table>
+  <Table>
+    <Equipment_Type>Aligner</Equipment_Type>
+    <Equipment_Supplier>SANWA</Equipment_Supplier>
+    <Command_Type>GET</Command_Type>
+    <Command_ID>PARSY</Command_ID>
+    <Command_Format>${0}{1}GET:PARSY</Command_Format>
+    <Command_Name>取得Aligner參數詳細資料</Command_Name>
+    <Command_Order>7</Command_Order>
+    <Parameters_Amount>2</Parameters_Amount>
+    <Parameter_Order>2</Parameter_Order>
+    <Parameter_ID>No</Parameter_ID>
+    <Parameter_Description>No  :  參數號碼(000~999)  請參考 Table 14,</Parameter_Description>
+    <Data_Value />
+    <Min_Value>0</Min_Value>
+    <Max_Value>999</Max_Value>
+    <Default_Value>1</Default_Value>
+    <Values_length>3</Values_length>
+    <Is_Fill>Y</Is_Fill>
+    <Action_Function>PARSY</Action_Function>
+  </Table>
+  <Table>
+    <Equipment_Type>Aligner</Equipment_Type>
+    <Equipment_Supplier>SANWA</Equipment_Supplier>
+    <Command_Type>GET</Command_Type>
+    <Command_ID>POS__</Command_ID>
+    <Command_Format>${0}{1}GET:POS__</Command_Format>
+    <Command_Name>取得目前Aligner各軸的位置</Command_Name>
+    <Command_Order>8</Command_Order>
+    <Parameters_Amount>1</Parameters_Amount>
+    <Parameter_Order>1</Parameter_Order>
+    <Parameter_ID>Type</Parameter_ID>
+    <Parameter_Description>Type: Command/Encoder  選擇
+1  : Robot 的 pulse command
+2  :  實際  Encoder  回傳值</Parameter_Description>
+    <Data_Value />
+    <Min_Value>1</Min_Value>
+    <Max_Value>2</Max_Value>
+    <Default_Value>1</Default_Value>
+    <Values_length>1</Values_length>
+    <Is_Fill>N</Is_Fill>
+    <Action_Function>ArmLocation</Action_Function>
+  </Table>
+  <Table>
+    <Equipment_Type>Aligner</Equipment_Type>
+    <Equipment_Supplier>SANWA</Equipment_Supplier>
+    <Command_Type>GET</Command_Type>
+    <Command_ID>POS__</Command_ID>
+    <Command_Format>${0}{1}GET:POS__</Command_Format>
+    <Command_Name>取得目前 Robot 各軸的位置</Command_Name>
+    <Command_Order>8</Command_Order>
+    <Parameters_Amount>2</Parameters_Amount>
+    <Parameter_Order>2</Parameter_Order>
+    <Parameter_ID>Unit</Parameter_ID>
+    <Parameter_Description>Unit:  單位選擇
+1  : um
+2  : pulse</Parameter_Description>
+    <Data_Value />
+    <Min_Value>1</Min_Value>
+    <Max_Value>2</Max_Value>
+    <Default_Value>1</Default_Value>
+    <Values_length>1</Values_length>
+    <Is_Fill>N</Is_Fill>
+    <Action_Function>ArmLocation</Action_Function>
+  </Table>
+  <Table>
+    <Equipment_Type>Aligner</Equipment_Type>
+    <Equipment_Supplier>SANWA</Equipment_Supplier>
+    <Command_Type>SET</Command_Type>
+    <Command_ID>RIO__</Command_ID>
+    <Command_Format>${0}{1}SET:RIO__</Command_Format>
+    <Command_Name>IO狀態設定 </Command_Name>
+    <Command_Order>1</Command_Order>
+    <Parameters_Amount>1</Parameters_Amount>
+    <Parameter_Order>1</Parameter_Order>
+    <Parameter_ID>no</Parameter_ID>
+    <Parameter_Description>no  :IO 號碼  (000~999)    *IO 表請參閱 Table 5,Table 6,Table 7</Parameter_Description>
+    <Data_Value />
+    <Min_Value>0</Min_Value>
+    <Max_Value>999</Max_Value>
+    <Default_Value>0</Default_Value>
+    <Values_length>3</Values_length>
+    <Is_Fill>Y</Is_Fill>
+    <Action_Function>DeviceStatusIO</Action_Function>
+  </Table>
+  <Table>
+    <Equipment_Type>Aligner</Equipment_Type>
+    <Equipment_Supplier>SANWA</Equipment_Supplier>
+    <Command_Type>SET</Command_Type>
+    <Command_ID>RIO__</Command_ID>
+    <Command_Format>${0}{1}SET:RIO__</Command_Format>
+    <Command_Name>IO狀態設定 </Command_Name>
+    <Command_Order>1</Command_Order>
+    <Parameters_Amount>2</Parameters_Amount>
+    <Parameter_Order>2</Parameter_Order>
+    <Parameter_ID>vl</Parameter_ID>
+    <Parameter_Description />
+    <Data_Value />
+    <Min_Value>0</Min_Value>
+    <Max_Value>1</Max_Value>
+    <Default_Value>0</Default_Value>
+    <Values_length>1</Values_length>
+    <Is_Fill>N</Is_Fill>
+    <Action_Function>DeviceStatusIO</Action_Function>
+  </Table>
+  <Table>
+    <Equipment_Type>Aligner</Equipment_Type>
+    <Equipment_Supplier>SANWA</Equipment_Supplier>
+    <Command_Type>SET</Command_Type>
+    <Command_ID>SP___</Command_ID>
+    <Command_Format>${0}{1}SET:SP___</Command_Format>
+    <Command_Name>速度限制設定</Command_Name>
+    <Command_Order>2</Command_Order>
+    <Parameters_Amount>1</Parameters_Amount>
+    <Parameter_Order>1</Parameter_Order>
+    <Parameter_ID>vl</Parameter_ID>
+    <Parameter_Description>vl  :Speed 限制，(00~99)</Parameter_Description>
+    <Data_Value />
+    <Min_Value>0</Min_Value>
+    <Max_Value>99</Max_Value>
+    <Default_Value>0</Default_Value>
+    <Values_length>2</Values_length>
+    <Is_Fill>Y</Is_Fill>
+    <Action_Function>DeviceStatusSpeed</Action_Function>
+  </Table>
+  <Table>
+    <Equipment_Type>Aligner</Equipment_Type>
+    <Equipment_Supplier>SANWA</Equipment_Supplier>
+    <Command_Type>SET</Command_Type>
+    <Command_ID>ALIGN</Command_ID>
+    <Command_Format>${0}{1}SET:ALIGN</Command_Format>
+    <Command_Name>設定晶圓(Wafer)大小 </Command_Name>
+    <Command_Order>3</Command_Order>
+    <Parameters_Amount>1</Parameters_Amount>
+    <Parameter_Order>1</Parameter_Order>
+    <Parameter_ID>vl</Parameter_ID>
+    <Parameter_Description>vl：Wafer Size 的半徑(um)，150000 代表 12 吋 Wafer，100000 代表 8 吋 Wafer </Parameter_Description>
+    <Data_Value />
+    <Min_Value>0</Min_Value>
+    <Max_Value>9999999</Max_Value>
+    <Default_Value>0</Default_Value>
+    <Values_length>7</Values_length>
+    <Is_Fill>Y</Is_Fill>
+    <Action_Function>Angle</Action_Function>
+  </Table>
+  <Table>
+    <Equipment_Type>Aligner</Equipment_Type>
+    <Equipment_Supplier>SANWA</Equipment_Supplier>
+    <Command_Type>SET</Command_Type>
+    <Command_ID>PAUSE</Command_ID>
+    <Command_Format>${0}{1}SET:PAUSE</Command_Format>
+    <Command_Name>動作暫停</Command_Name>
+    <Command_Order>4</Command_Order>
+    <Parameters_Amount>1</Parameters_Amount>
+    <Parameter_Order>1</Parameter_Order>
+    <Parameter_ID>Null</Parameter_ID>
+    <Parameter_Description />
+    <Data_Value />
+    <Min_Value />
+    <Max_Value />
+    <Default_Value />
+    <Values_length />
+    <Is_Fill />
+    <Action_Function>Pause</Action_Function>
+  </Table>
+  <Table>
+    <Equipment_Type>Aligner</Equipment_Type>
+    <Equipment_Supplier>SANWA</Equipment_Supplier>
+    <Command_Type>SET</Command_Type>
+    <Command_ID>CONT_</Command_ID>
+    <Command_Format>${0}{1}SET:CONT_</Command_Format>
+    <Command_Name>暫停解除</Command_Name>
+    <Command_Order>5</Command_Order>
+    <Parameters_Amount>1</Parameters_Amount>
+    <Parameter_Order>1</Parameter_Order>
+    <Parameter_ID>Null</Parameter_ID>
+    <Parameter_Description />
+    <Data_Value />
+    <Min_Value />
+    <Max_Value />
+    <Default_Value />
+    <Values_length />
+    <Is_Fill />
+    <Action_Function>Continue</Action_Function>
+  </Table>
+  <Table>
+    <Equipment_Type>Aligner</Equipment_Type>
+    <Equipment_Supplier>SANWA</Equipment_Supplier>
+    <Command_Type>SET</Command_Type>
+    <Command_ID>STOP_</Command_ID>
+    <Command_Format>${0}{1}SET:STOP_</Command_Format>
+    <Command_Name>動作停止</Command_Name>
+    <Command_Order>6</Command_Order>
+    <Parameters_Amount>1</Parameters_Amount>
+    <Parameter_Order>1</Parameter_Order>
+    <Parameter_ID>m1</Parameter_ID>
+    <Parameter_Description>m1  :
+0  :減速停止
+1  :立即停止</Parameter_Description>
+    <Data_Value />
+    <Min_Value>0</Min_Value>
+    <Max_Value>1</Max_Value>
+    <Default_Value>0</Default_Value>
+    <Values_length>1</Values_length>
+    <Is_Fill>N</Is_Fill>
+    <Action_Function>Stop</Action_Function>
+  </Table>
+  <Table>
+    <Equipment_Type>Aligner</Equipment_Type>
+    <Equipment_Supplier>SANWA</Equipment_Supplier>
+    <Command_Type>SET</Command_Type>
+    <Command_ID>MODE_</Command_ID>
+    <Command_Format>${0}{1}SET:MODE_</Command_Format>
+    <Command_Name>動作模式設定 </Command_Name>
+    <Command_Order>7</Command_Order>
+    <Parameters_Amount>1</Parameters_Amount>
+    <Parameter_Order>1</Parameter_Order>
+    <Parameter_ID>vl</Parameter_ID>
+    <Parameter_Description>vl  :動作模式選擇  (0~3)
+0  :Normal Mode   
+1  :Dry Mode   
+2  :Test Mode   
+3  :Step Mode</Parameter_Description>
+    <Data_Value />
+    <Min_Value>0</Min_Value>
+    <Max_Value>3</Max_Value>
+    <Default_Value>1</Default_Value>
+    <Values_length>1</Values_length>
+    <Is_Fill>N</Is_Fill>
+    <Action_Function>Mode</Action_Function>
+  </Table>
+  <Table>
+    <Equipment_Type>Aligner</Equipment_Type>
+    <Equipment_Supplier>SANWA</Equipment_Supplier>
+    <Command_Type>SET</Command_Type>
+    <Command_ID>STPDO</Command_ID>
+    <Command_Format>${0}{1}SET:STPDO</Command_Format>
+    <Command_Name>Step 動作等待解除</Command_Name>
+    <Command_Order>8</Command_Order>
+    <Parameters_Amount>1</Parameters_Amount>
+    <Parameter_Order>1</Parameter_Order>
+    <Parameter_ID>Null</Parameter_ID>
+    <Parameter_Description />
+    <Data_Value />
+    <Min_Value />
+    <Max_Value />
+    <Default_Value />
+    <Values_length />
+    <Is_Fill />
+    <Action_Function>STPDO</Action_Function>
+  </Table>
+  <Table>
+    <Equipment_Type>Aligner</Equipment_Type>
+    <Equipment_Supplier>SANWA</Equipment_Supplier>
+    <Command_Type>SET</Command_Type>
+    <Command_ID>RESET</Command_ID>
+    <Command_Format>${0}{1}SET:RESET</Command_Format>
+    <Command_Name>Error 解除</Command_Name>
+    <Command_Order>9</Command_Order>
+    <Parameters_Amount>1</Parameters_Amount>
+    <Parameter_Order>1</Parameter_Order>
+    <Parameter_ID>Null</Parameter_ID>
+    <Parameter_Description />
+    <Data_Value />
+    <Min_Value />
+    <Max_Value />
+    <Default_Value />
+    <Values_length />
+    <Is_Fill />
+    <Action_Function>ErrorReset</Action_Function>
+  </Table>
+  <Table>
+    <Equipment_Type>Aligner</Equipment_Type>
+    <Equipment_Supplier>SANWA</Equipment_Supplier>
+    <Command_Type>SET</Command_Type>
+    <Command_ID>SERVO</Command_ID>
+    <Command_Format>${0}{1}SET:SERVO</Command_Format>
+    <Command_Name>Servo On</Command_Name>
+    <Command_Order>10</Command_Order>
+    <Parameters_Amount>1</Parameters_Amount>
+    <Parameter_Order>1</Parameter_Order>
+    <Parameter_ID>sv</Parameter_ID>
+    <Parameter_Description>sv  :Servo ON / OFF 選擇  (0~1)
+0  :Servo OFF   
+1  :Servo ON</Parameter_Description>
+    <Data_Value />
+    <Min_Value>0</Min_Value>
+    <Max_Value>1</Max_Value>
+    <Default_Value>0</Default_Value>
+    <Values_length>1</Values_length>
+    <Is_Fill>N</Is_Fill>
+    <Action_Function>Excitation</Action_Function>
+  </Table>
+  <Table>
+    <Equipment_Type>Aligner</Equipment_Type>
+    <Equipment_Supplier>SANWA</Equipment_Supplier>
+    <Command_Type>SET</Command_Type>
+    <Command_ID>SV___</Command_ID>
+    <Command_Format>${0}{1}SET:SV___</Command_Format>
+    <Command_Name>電磁閥狀態設定</Command_Name>
+    <Command_Order>11</Command_Order>
+    <Parameters_Amount>1</Parameters_Amount>
+    <Parameter_Order>1</Parameter_Order>
+    <Parameter_ID>no</Parameter_ID>
+    <Parameter_Description>no  :電磁閥號碼
+01  R  軸吸著用電磁閥
+02  L  軸吸著用電磁閥
+03  R  軸吸著用電磁閥 Pad１
+04  R  軸吸著用電磁閥 Pad２
+05  L  軸吸著用電磁閥 Pad１
+06  L  軸吸著用電磁閥 Pad２
+07  R  軸 FORK 開闔電磁閥段數１
+08  R  軸 FORK 開闔電磁閥段數２
+09  L  軸 FORK 開闔電磁閥段數１
+10  L  軸 FORK 開闔電磁閥段數２</Parameter_Description>
+    <Data_Value />
+    <Min_Value>1</Min_Value>
+    <Max_Value>10</Max_Value>
+    <Default_Value>1</Default_Value>
+    <Values_length>2</Values_length>
+    <Is_Fill>Y</Is_Fill>
+    <Action_Function>SolenoidValve</Action_Function>
+  </Table>
+  <Table>
+    <Equipment_Type>Aligner</Equipment_Type>
+    <Equipment_Supplier>SANWA</Equipment_Supplier>
+    <Command_Type>SET</Command_Type>
+    <Command_ID>SV___</Command_ID>
+    <Command_Format>${0}{1}SET:SV___</Command_Format>
+    <Command_Name>電磁閥狀態設定</Command_Name>
+    <Command_Order>11</Command_Order>
+    <Parameters_Amount>2</Parameters_Amount>
+    <Parameter_Order>2</Parameter_Order>
+    <Parameter_ID>vl</Parameter_ID>
+    <Parameter_Description>vl  :狀態
+0  :OFF
+1  :ON</Parameter_Description>
+    <Data_Value />
+    <Min_Value>0</Min_Value>
+    <Max_Value>1</Max_Value>
+    <Default_Value>0</Default_Value>
+    <Values_length>1</Values_length>
+    <Is_Fill>N</Is_Fill>
+    <Action_Function>SolenoidValve</Action_Function>
+  </Table>
+  <Table>
+    <Equipment_Type>Aligner</Equipment_Type>
+    <Equipment_Supplier>SANWA</Equipment_Supplier>
+    <Command_Type>SET</Command_Type>
+    <Command_ID>LOGSV</Command_ID>
+    <Command_Format>${0}{1}SET:LOGSV</Command_Format>
+    <Command_Name>設定 Log file 儲存</Command_Name>
+    <Command_Order>12</Command_Order>
+    <Parameters_Amount>1</Parameters_Amount>
+    <Parameter_Order>1</Parameter_Order>
+    <Parameter_ID>Null</Parameter_ID>
+    <Parameter_Description />
+    <Data_Value />
+    <Min_Value />
+    <Max_Value />
+    <Default_Value />
+    <Values_length />
+    <Is_Fill />
+    <Action_Function>LogSave</Action_Function>
+  </Table>
+  <Table>
+    <Equipment_Type>Aligner</Equipment_Type>
+    <Equipment_Supplier>SANWA</Equipment_Supplier>
+    <Command_Type>SET</Command_Type>
+    <Command_ID>PARAM</Command_ID>
+    <Command_Format>${0}{1}SET:PARAM</Command_Format>
+    <Command_Name>設定Aligner參數值</Command_Name>
+    <Command_Order>13</Command_Order>
+    <Parameters_Amount>1</Parameters_Amount>
+    <Parameter_Order>1</Parameter_Order>
+    <Parameter_ID>Type</Parameter_ID>
+    <Parameter_Description>Type  :參數類別(0~9)
+0    :Option
+1    :Adjust
+Others  :Reserved</Parameter_Description>
+    <Data_Value />
+    <Min_Value>0</Min_Value>
+    <Max_Value>9</Max_Value>
+    <Default_Value>0</Default_Value>
+    <Values_length>1</Values_length>
+    <Is_Fill>N</Is_Fill>
+    <Action_Function>Parameter</Action_Function>
+  </Table>
+  <Table>
+    <Equipment_Type>Aligner</Equipment_Type>
+    <Equipment_Supplier>SANWA</Equipment_Supplier>
+    <Command_Type>SET</Command_Type>
+    <Command_ID>PARAM</Command_ID>
+    <Command_Format>${0}{1}SET:PARAM</Command_Format>
+    <Command_Name>設定Aligner參數值</Command_Name>
+    <Command_Order>13</Command_Order>
+    <Parameters_Amount>2</Parameters_Amount>
+    <Parameter_Order>2</Parameter_Order>
+    <Parameter_ID>No</Parameter_ID>
+    <Parameter_Description>No  :參數號碼(000~999),  請參考 Table 14,</Parameter_Description>
+    <Data_Value />
+    <Min_Value>0</Min_Value>
+    <Max_Value>999</Max_Value>
+    <Default_Value>0</Default_Value>
+    <Values_length>3</Values_length>
+    <Is_Fill>Y</Is_Fill>
+    <Action_Function>Parameter</Action_Function>
+  </Table>
+  <Table>
+    <Equipment_Type>Aligner</Equipment_Type>
+    <Equipment_Supplier>SANWA</Equipment_Supplier>
+    <Command_Type>SET</Command_Type>
+    <Command_ID>SAVE_</Command_ID>
+    <Command_Format>${0}{1}SET:SAVE_</Command_Format>
+    <Command_Name>儲存Aligner參數</Command_Name>
+    <Command_Order>14</Command_Order>
+    <Parameters_Amount>1</Parameters_Amount>
+    <Parameter_Order>1</Parameter_Order>
+    <Parameter_ID>Null</Parameter_ID>
+    <Parameter_Description />
+    <Data_Value />
+    <Min_Value />
+    <Max_Value />
+    <Default_Value />
+    <Values_length />
+    <Is_Fill />
+    <Action_Function>Save</Action_Function>
+  </Table>
+  <Table>
+    <Equipment_Type>Aligner</Equipment_Type>
+    <Equipment_Supplier>SANWA</Equipment_Supplier>
+    <Command_Type>CMD</Command_Type>
+    <Command_ID>HOME_</Command_ID>
+    <Command_Format>${0}{1}CMD:HOME_</Command_Format>
+    <Command_Name>各軸移動至 HOME 位置:Normal Home  </Command_Name>
+    <Command_Order>1</Command_Order>
+    <Parameters_Amount>1</Parameters_Amount>
+    <Parameter_Order>1</Parameter_Order>
+    <Parameter_ID>Null</Parameter_ID>
+    <Parameter_Description />
+    <Data_Value />
+    <Min_Value />
+    <Max_Value />
+    <Default_Value />
+    <Values_length />
+    <Is_Fill />
+    <Action_Function>Home</Action_Function>
+  </Table>
+  <Table>
+    <Equipment_Type>Aligner</Equipment_Type>
+    <Equipment_Supplier>SANWA</Equipment_Supplier>
+    <Command_Type>CMD</Command_Type>
+    <Command_ID>RHOME</Command_ID>
+    <Command_Format>${0}{1}CMD:RHOME</Command_Format>
+    <Command_Name>各軸回 ORG 的位置</Command_Name>
+    <Command_Order>2</Command_Order>
+    <Parameters_Amount>1</Parameters_Amount>
+    <Parameter_Order>1</Parameter_Order>
+    <Parameter_ID>Null</Parameter_ID>
+    <Parameter_Description />
+    <Data_Value />
+    <Min_Value />
+    <Max_Value />
+    <Default_Value />
+    <Values_length />
+    <Is_Fill />
+    <Action_Function>HOMEToOrgin</Action_Function>
+  </Table>
+  <Table>
+    <Equipment_Type>Aligner</Equipment_Type>
+    <Equipment_Supplier>SANWA</Equipment_Supplier>
+    <Command_Type>CMD</Command_Type>
+    <Command_ID>MOVED</Command_ID>
+    <Command_Format>${0}{1}CMD:MOVED</Command_Format>
+    <Command_Name>移動指定軸到指定點位</Command_Name>
+    <Command_Order>3</Command_Order>
+    <Parameters_Amount>1</Parameters_Amount>
+    <Parameter_Order>1</Parameter_Order>
+    <Parameter_ID>axis</Parameter_ID>
+    <Parameter_Description>axis  :軸, (01 ~ 16) ,軸資訊請參考 Table 9</Parameter_Description>
+    <Data_Value />
+    <Min_Value>1</Min_Value>
+    <Max_Value>16</Max_Value>
+    <Default_Value>1</Default_Value>
+    <Values_length>2</Values_length>
+    <Is_Fill>Y</Is_Fill>
+    <Action_Function>MoveDirect</Action_Function>
+  </Table>
+  <Table>
+    <Equipment_Type>Aligner</Equipment_Type>
+    <Equipment_Supplier>SANWA</Equipment_Supplier>
+    <Command_Type>CMD</Command_Type>
+    <Command_ID>MOVED</Command_ID>
+    <Command_Format>${0}{1}CMD:MOVED</Command_Format>
+    <Command_Name>移動指定軸到指定點位</Command_Name>
+    <Command_Order>3</Command_Order>
+    <Parameters_Amount>2</Parameters_Amount>
+    <Parameter_Order>2</Parameter_Order>
+    <Parameter_ID>type</Parameter_ID>
+    <Parameter_Description>type  :移動方式選擇
+0  : ABS:絕對位置
+1  : INC:相對位置
+2  : Pulse 數量</Parameter_Description>
+    <Data_Value />
+    <Min_Value>0</Min_Value>
+    <Max_Value>2</Max_Value>
+    <Default_Value>0</Default_Value>
+    <Values_length>1</Values_length>
+    <Is_Fill>N</Is_Fill>
+    <Action_Function>MoveDirect</Action_Function>
+  </Table>
+  <Table>
+    <Equipment_Type>Aligner</Equipment_Type>
+    <Equipment_Supplier>SANWA</Equipment_Supplier>
+    <Command_Type>CMD</Command_Type>
+    <Command_ID>ORG__</Command_ID>
+    <Command_Format>${0}{1}CMD:ORG__</Command_Format>
+    <Command_Name>ORG Search</Command_Name>
+    <Command_Order>4</Command_Order>
+    <Parameters_Amount>1</Parameters_Amount>
+    <Parameter_Order>1</Parameter_Order>
+    <Parameter_ID>Null</Parameter_ID>
+    <Parameter_Description />
+    <Data_Value />
+    <Min_Value />
+    <Max_Value />
+    <Default_Value />
+    <Values_length />
+    <Is_Fill />
+    <Action_Function>OrginSearch</Action_Function>
+  </Table>
+  <Table>
+    <Equipment_Type>Aligner</Equipment_Type>
+    <Equipment_Supplier>SANWA</Equipment_Supplier>
+    <Command_Type>CMD</Command_Type>
+    <Command_ID>EORG_</Command_ID>
+    <Command_Format>${0}{1}CMD:EORG_</Command_Format>
+    <Command_Name>單軸 ORG Search</Command_Name>
+    <Command_Order>5</Command_Order>
+    <Parameters_Amount>1</Parameters_Amount>
+    <Parameter_Order>1</Parameter_Order>
+    <Parameter_ID>axis</Parameter_ID>
+    <Parameter_Description>axis  :軸, (01 ~ 16) ,軸資訊請參考 Table 9</Parameter_Description>
+    <Data_Value />
+    <Min_Value>1</Min_Value>
+    <Max_Value>16</Max_Value>
+    <Default_Value>1</Default_Value>
+    <Values_length>2</Values_length>
+    <Is_Fill>Y</Is_Fill>
+    <Action_Function>OrginSearchSingle</Action_Function>
+  </Table>
+  <Table>
+    <Equipment_Type>Aligner</Equipment_Type>
+    <Equipment_Supplier>SANWA</Equipment_Supplier>
+    <Command_Type>CMD</Command_Type>
+    <Command_ID>RET__</Command_ID>
+    <Command_Format>${0}{1}CMD:RET__</Command_Format>
+    <Command_Name>Arm 原點移動</Command_Name>
+    <Command_Order>6</Command_Order>
+    <Parameters_Amount>1</Parameters_Amount>
+    <Parameter_Order>1</Parameter_Order>
+    <Parameter_ID>Null</Parameter_ID>
+    <Parameter_Description />
+    <Data_Value />
+    <Min_Value />
+    <Max_Value />
+    <Default_Value />
+    <Values_length />
+    <Is_Fill />
+    <Action_Function>ArmRetract</Action_Function>
+  </Table>
+  <Table>
+    <Equipment_Type>Aligner</Equipment_Type>
+    <Equipment_Supplier>SANWA</Equipment_Supplier>
+    <Command_Type>CMD</Command_Type>
+    <Command_ID>WHLD_</Command_ID>
+    <Command_Format>${0}{1}CMD:WHLD_</Command_Format>
+    <Command_Name>保持晶圓控制</Command_Name>
+    <Command_Order>7</Command_Order>
+    <Parameters_Amount>1</Parameters_Amount>
+    <Parameter_Order>1</Parameter_Order>
+    <Parameter_ID>arm</Parameter_ID>
+    <Parameter_Description>arm  :Arm 選擇  ( 1~2 )
+1  :R 軸
+2  :L 軸</Parameter_Description>
+    <Data_Value />
+    <Min_Value>1</Min_Value>
+    <Max_Value>2</Max_Value>
+    <Default_Value>1</Default_Value>
+    <Values_length>1</Values_length>
+    <Is_Fill>N</Is_Fill>
+    <Action_Function>WaferHold</Action_Function>
+  </Table>
+  <Table>
+    <Equipment_Type>Aligner</Equipment_Type>
+    <Equipment_Supplier>SANWA</Equipment_Supplier>
+    <Command_Type>CMD</Command_Type>
+    <Command_ID>WRLS_</Command_ID>
+    <Command_Format>${0}{1}CMD:WRLS_</Command_Format>
+    <Command_Name>釋放晶圓控制 </Command_Name>
+    <Command_Order>8</Command_Order>
+    <Parameters_Amount>1</Parameters_Amount>
+    <Parameter_Order>1</Parameter_Order>
+    <Parameter_ID>arm</Parameter_ID>
+    <Parameter_Description>arm  :Arm 選擇  ( 1~2 )
+1  :R 軸
+2  :L 軸</Parameter_Description>
+    <Data_Value />
+    <Min_Value>1</Min_Value>
+    <Max_Value>2</Max_Value>
+    <Default_Value>1</Default_Value>
+    <Values_length>1</Values_length>
+    <Is_Fill>N</Is_Fill>
+    <Action_Function>WaferRelease</Action_Function>
+  </Table>
+  <Table>
+    <Equipment_Type>Aligner</Equipment_Type>
+    <Equipment_Supplier>SANWA</Equipment_Supplier>
+    <Command_Type>CMD</Command_Type>
+    <Command_ID>ALIGN</Command_ID>
+    <Command_Format>${0}{1}CMD:ALIGN</Command_Format>
+    <Command_Name>釋放晶圓控制 </Command_Name>
+    <Command_Order>9</Command_Order>
+    <Parameters_Amount>1</Parameters_Amount>
+    <Parameter_Order>1</Parameter_Order>
+    <Parameter_ID>angle</Parameter_ID>
+    <Parameter_Description>angle：Align 後 Notch 所要移動的角度.  參考 Table 16 編號 169 參數</Parameter_Description>
+    <Data_Value />
+    <Min_Value>-180</Min_Value>
+    <Max_Value>180</Max_Value>
+    <Default_Value>3</Default_Value>
+    <Values_length>1</Values_length>
+    <Is_Fill>Y</Is_Fill>
+    <Action_Function>Align</Action_Function>
+  </Table>
+  <Table>
+    <Equipment_Type>OCR</Equipment_Type>
+    <Equipment_Supplier>HST</Equipment_Supplier>
+    <Command_Type>CMD</Command_Type>
+    <Command_ID>Read</Command_ID>
+    <Command_Name>Read</Command_Name>
+    <Command_Order>10</Command_Order>
+    <Parameters_Amount>01</Parameters_Amount>
+    <Parameter_Order>01</Parameter_Order>
+    <Parameter_ID>Null</Parameter_ID>
+    <Parameter_Description />
+    <Data_Value />
+    <Min_Value />
+    <Max_Value />
+    <Default_Value />
+    <Values_length />
+    <Is_Fill />
+    <Action_Function />
+  </Table>
+  <Table>
+    <Equipment_Type>OCR</Equipment_Type>
+    <Equipment_Supplier>COGNEX</Equipment_Supplier>
+    <Command_Type>CMD</Command_Type>
+    <Command_ID>Read</Command_ID>
+    <Command_Name>Read</Command_Name>
+    <Command_Order>09</Command_Order>
+    <Parameters_Amount>01</Parameters_Amount>
+    <Parameter_Order>01</Parameter_Order>
+    <Parameter_ID>iConfig</Parameter_ID>
+    <Parameter_Description />
+    <Data_Value />
+    <Min_Value>-1</Min_Value>
+    <Max_Value>49</Max_Value>
+    <Default_Value>3</Default_Value>
+    <Values_length>2</Values_length>
+    <Is_Fill>N</Is_Fill>
+    <Action_Function />
+  </Table>
+</DocumentElement>
