@@ -42,6 +42,10 @@
     <Reference Include="myButtonCheckTest">
       <HintPath>..\..\..\Downloads\myButtonCheckTest\myButtonCheckTest\bin\Debug\myButtonCheckTest.exe</HintPath>
     </Reference>
+    <Reference Include="Newtonsoft.Json, Version=11.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\Newtonsoft.Json.11.0.2\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
     <Reference Include="SplitButton">
       <HintPath>..\..\..\Downloads\SplitButton\bin\Debug\SplitButton.dll</HintPath>
     </Reference>
@@ -150,7 +154,9 @@
     <Compile Include="FormTeaching.designer.cs">
       <DependentUpon>FormTeaching.cs</DependentUpon>
     </Compile>
+    <Compile Include="UI_Update\Manual\PortStatusUpdate.cs" />
     <Compile Include="UI_Update\Monitoring\ConnectionStatusUpdate.cs" />
+    <Compile Include="UI_Update\Monitoring\NodeStatusUpdate.cs" />
     <EmbeddedResource Include="FormAlarm.resx">
       <DependentUpon>FormAlarm.cs</DependentUpon>
     </EmbeddedResource>

@@ -68,7 +68,7 @@ namespace Adam.UI_Update.Monitoring
                     Conn_gv.ClearSelection();
                 }
 
-                
+
             }
             catch
             {

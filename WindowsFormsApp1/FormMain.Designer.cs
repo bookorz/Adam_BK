@@ -134,7 +134,7 @@
             this.panel7 = new System.Windows.Forms.Panel();
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
-            this.groupBox4 = new System.Windows.Forms.GroupBox();
+            this.Aligner01_tb = new System.Windows.Forms.GroupBox();
             this.textBox9 = new System.Windows.Forms.TextBox();
             this.textBox8 = new System.Windows.Forms.TextBox();
             this.dataGridView7 = new System.Windows.Forms.DataGridView();
@@ -158,11 +158,11 @@
             this.label19 = new System.Windows.Forms.Label();
             this.label18 = new System.Windows.Forms.Label();
             this.label17 = new System.Windows.Forms.Label();
-            this.textBox11 = new System.Windows.Forms.TextBox();
+            this.Robot01_State = new System.Windows.Forms.TextBox();
             this.label16 = new System.Windows.Forms.Label();
-            this.textBox10 = new System.Windows.Forms.TextBox();
+            this.Aligner02_State = new System.Windows.Forms.TextBox();
             this.label15 = new System.Windows.Forms.Label();
-            this.textBox7 = new System.Windows.Forms.TextBox();
+            this.Aligner01_State = new System.Windows.Forms.TextBox();
             this.label13 = new System.Windows.Forms.Label();
             this.dataGridView12 = new System.Windows.Forms.DataGridView();
             this.dataGridViewTextBoxColumn25 = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -175,12 +175,12 @@
             this.textBox5 = new System.Windows.Forms.TextBox();
             this.textBox4 = new System.Windows.Forms.TextBox();
             this.textBox3 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.LoadPort02_State = new System.Windows.Forms.TextBox();
+            this.LoadPort03_State = new System.Windows.Forms.TextBox();
             this.label8 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
-            this.LoadPort01Value_tb = new System.Windows.Forms.TextBox();
+            this.LoadPort01_State = new System.Windows.Forms.TextBox();
             this.label12 = new System.Windows.Forms.Label();
             this.label11 = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
@@ -367,135 +367,6 @@
             this.tableLayoutPanel13 = new System.Windows.Forms.TableLayoutPanel();
             this.groupBox17 = new System.Windows.Forms.GroupBox();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
-            this.tabPage6 = new System.Windows.Forms.TabPage();
-            this.tableLayoutPanel26 = new System.Windows.Forms.TableLayoutPanel();
-            this.Command_Group_A = new System.Windows.Forms.GroupBox();
-            this.Btn_DoorDown_A = new System.Windows.Forms.Button();
-            this.Btn_Open_A = new System.Windows.Forms.Button();
-            this.Btn_Force_Init_A = new System.Windows.Forms.Button();
-            this.Btn_ClearSlotResult_A = new System.Windows.Forms.Button();
-            this.GroupBox33 = new System.Windows.Forms.GroupBox();
-            this.ChkWithSlotMap_A = new System.Windows.Forms.CheckBox();
-            this.Btn_LOAD_A = new System.Windows.Forms.Button();
-            this.Btn_UNLOAD_A = new System.Windows.Forms.Button();
-            this.Btn_Map_A = new System.Windows.Forms.Button();
-            this.groupBox24 = new System.Windows.Forms.GroupBox();
-            this.Lbl_FOUP_Arrived_A = new System.Windows.Forms.Label();
-            this.Btn_DoorUP_A = new System.Windows.Forms.Button();
-            this.groupBox25 = new System.Windows.Forms.GroupBox();
-            this.Btn_WaitPOS_A = new System.Windows.Forms.Button();
-            this.Btn_Mapper_OPEN_A = new System.Windows.Forms.Button();
-            this.Btn_Mapper_CLOSE_A = new System.Windows.Forms.Button();
-            this.Btn_StartPOS_A = new System.Windows.Forms.Button();
-            this.Btn_SlotMap_A = new System.Windows.Forms.Button();
-            this.TblPanel_A = new System.Windows.Forms.TableLayoutPanel();
-            this.Lab_A_Slot_01 = new System.Windows.Forms.Label();
-            this.label82 = new System.Windows.Forms.Label();
-            this.Lab_A_Slot_02 = new System.Windows.Forms.Label();
-            this.label83 = new System.Windows.Forms.Label();
-            this.Lab_A_Slot_03 = new System.Windows.Forms.Label();
-            this.label84 = new System.Windows.Forms.Label();
-            this.Lab_A_Slot_04 = new System.Windows.Forms.Label();
-            this.label85 = new System.Windows.Forms.Label();
-            this.Lab_A_Slot_05 = new System.Windows.Forms.Label();
-            this.label86 = new System.Windows.Forms.Label();
-            this.Lab_A_Slot_06 = new System.Windows.Forms.Label();
-            this.label87 = new System.Windows.Forms.Label();
-            this.Lab_A_Slot_07 = new System.Windows.Forms.Label();
-            this.label88 = new System.Windows.Forms.Label();
-            this.Lab_A_Slot_08 = new System.Windows.Forms.Label();
-            this.label89 = new System.Windows.Forms.Label();
-            this.Lab_A_Slot_09 = new System.Windows.Forms.Label();
-            this.label90 = new System.Windows.Forms.Label();
-            this.Lab_A_Slot_10 = new System.Windows.Forms.Label();
-            this.label91 = new System.Windows.Forms.Label();
-            this.Lab_A_Slot_11 = new System.Windows.Forms.Label();
-            this.label92 = new System.Windows.Forms.Label();
-            this.Lab_A_Slot_12 = new System.Windows.Forms.Label();
-            this.label93 = new System.Windows.Forms.Label();
-            this.Lab_A_Slot_13 = new System.Windows.Forms.Label();
-            this.label94 = new System.Windows.Forms.Label();
-            this.Lab_A_Slot_14 = new System.Windows.Forms.Label();
-            this.label95 = new System.Windows.Forms.Label();
-            this.Lab_A_Slot_15 = new System.Windows.Forms.Label();
-            this.label96 = new System.Windows.Forms.Label();
-            this.Lab_A_Slot_16 = new System.Windows.Forms.Label();
-            this.label97 = new System.Windows.Forms.Label();
-            this.Lab_A_Slot_17 = new System.Windows.Forms.Label();
-            this.label98 = new System.Windows.Forms.Label();
-            this.Lab_A_Slot_18 = new System.Windows.Forms.Label();
-            this.label99 = new System.Windows.Forms.Label();
-            this.Lab_A_Slot_19 = new System.Windows.Forms.Label();
-            this.label100 = new System.Windows.Forms.Label();
-            this.Lab_A_Slot_20 = new System.Windows.Forms.Label();
-            this.label101 = new System.Windows.Forms.Label();
-            this.Lab_A_Slot_21 = new System.Windows.Forms.Label();
-            this.label102 = new System.Windows.Forms.Label();
-            this.Lab_A_Slot_22 = new System.Windows.Forms.Label();
-            this.label103 = new System.Windows.Forms.Label();
-            this.Lab_A_Slot_23 = new System.Windows.Forms.Label();
-            this.label104 = new System.Windows.Forms.Label();
-            this.Lab_A_Slot_24 = new System.Windows.Forms.Label();
-            this.label105 = new System.Windows.Forms.Label();
-            this.Lab_A_Slot_25 = new System.Windows.Forms.Label();
-            this.label106 = new System.Windows.Forms.Label();
-            this.Btn_VacuumON_A = new System.Windows.Forms.Button();
-            this.label107 = new System.Windows.Forms.Label();
-            this.Btn_VacuumOFF_A = new System.Windows.Forms.Button();
-            this.Btn_Reset_A = new System.Windows.Forms.Button();
-            this.Btn_LPInit_A = new System.Windows.Forms.Button();
-            this.LblState_A = new System.Windows.Forms.Label();
-            this.Btn_ReadState_A = new System.Windows.Forms.Button();
-            this.LblVersion_A = new System.Windows.Forms.Label();
-            this.Btn_UnDock_A = new System.Windows.Forms.Button();
-            this.Btn_Clamp_A = new System.Windows.Forms.Button();
-            this.Btn_ReadVersion_A = new System.Windows.Forms.Button();
-            this.Btn_UnClamp_A = new System.Windows.Forms.Button();
-            this.Btn_Dock_A = new System.Windows.Forms.Button();
-            this.Btn_Close_A = new System.Windows.Forms.Button();
-            this.Btn_Unlatch_A = new System.Windows.Forms.Button();
-            this.Btn_Latch_A = new System.Windows.Forms.Button();
-            this.panel19 = new System.Windows.Forms.Panel();
-            this.GroupBox36 = new System.Windows.Forms.GroupBox();
-            this.Lab_StateCode_19_A = new System.Windows.Forms.Label();
-            this.Lab_StateCode_17_A = new System.Windows.Forms.Label();
-            this.Lab_StateCode_18_A = new System.Windows.Forms.Label();
-            this.Lab_StateCode_16_A = new System.Windows.Forms.Label();
-            this.Lab_StateCode_14_A = new System.Windows.Forms.Label();
-            this.Lab_StateCode_15_A = new System.Windows.Forms.Label();
-            this.Lab_StateCode_13_A = new System.Windows.Forms.Label();
-            this.Lab_StateCode_11_A = new System.Windows.Forms.Label();
-            this.Lab_StateCode_12_A = new System.Windows.Forms.Label();
-            this.label108 = new System.Windows.Forms.Label();
-            this.label109 = new System.Windows.Forms.Label();
-            this.label110 = new System.Windows.Forms.Label();
-            this.label111 = new System.Windows.Forms.Label();
-            this.label112 = new System.Windows.Forms.Label();
-            this.label113 = new System.Windows.Forms.Label();
-            this.label114 = new System.Windows.Forms.Label();
-            this.label115 = new System.Windows.Forms.Label();
-            this.label116 = new System.Windows.Forms.Label();
-            this.Lab_StateCode_10_A = new System.Windows.Forms.Label();
-            this.Lab_StateCode_8_A = new System.Windows.Forms.Label();
-            this.Lab_StateCode_9_A = new System.Windows.Forms.Label();
-            this.Lab_StateCode_7_A = new System.Windows.Forms.Label();
-            this.Lab_StateCode_4_A = new System.Windows.Forms.Label();
-            this.Lab_StateCode_5_A = new System.Windows.Forms.Label();
-            this.Lab_StateCode_3_A = new System.Windows.Forms.Label();
-            this.Lab_StateCode_1_A = new System.Windows.Forms.Label();
-            this.Lab_StateCode_2_A = new System.Windows.Forms.Label();
-            this.label117 = new System.Windows.Forms.Label();
-            this.label118 = new System.Windows.Forms.Label();
-            this.label119 = new System.Windows.Forms.Label();
-            this.label120 = new System.Windows.Forms.Label();
-            this.label121 = new System.Windows.Forms.Label();
-            this.label122 = new System.Windows.Forms.Label();
-            this.Label123 = new System.Windows.Forms.Label();
-            this.Label125 = new System.Windows.Forms.Label();
-            this.Label145 = new System.Windows.Forms.Label();
-            this.GroupBox35 = new System.Windows.Forms.GroupBox();
-            this.Btn_ClearMSG_A = new System.Windows.Forms.Button();
-            this.RTxt_Message_A = new System.Windows.Forms.RichTextBox();
             this.tabPage8 = new System.Windows.Forms.TabPage();
             this.tabControl3 = new System.Windows.Forms.TabControl();
             this.tabPage11 = new System.Windows.Forms.TabPage();
@@ -861,7 +732,7 @@
             this.tableLayoutPanel2.SuspendLayout();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
-            this.groupBox4.SuspendLayout();
+            this.Aligner01_tb.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView7)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView6)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView5)).BeginInit();
@@ -927,16 +798,6 @@
             this.tableLayoutPanel13.SuspendLayout();
             this.groupBox17.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
-            this.tabPage6.SuspendLayout();
-            this.tableLayoutPanel26.SuspendLayout();
-            this.Command_Group_A.SuspendLayout();
-            this.GroupBox33.SuspendLayout();
-            this.groupBox24.SuspendLayout();
-            this.groupBox25.SuspendLayout();
-            this.TblPanel_A.SuspendLayout();
-            this.panel19.SuspendLayout();
-            this.GroupBox36.SuspendLayout();
-            this.GroupBox35.SuspendLayout();
             this.tabPage8.SuspendLayout();
             this.tabControl3.SuspendLayout();
             this.tabPage11.SuspendLayout();
@@ -1871,7 +1732,7 @@
             this.Conn_gv.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
             dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("微軟正黑體", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("微軟正黑體", 12F);
             dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.ControlText;
             dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
             dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
@@ -1934,7 +1795,6 @@
             this.tabControl1.Controls.Add(this.tabPage4);
             this.tabControl1.Controls.Add(this.tabPage5);
             this.tabControl1.Controls.Add(this.tabPage9);
-            this.tabControl1.Controls.Add(this.tabPage6);
             this.tabControl1.Controls.Add(this.tabPage8);
             resources.ApplyResources(this.tabControl1, "tabControl1");
             this.tabControl1.Name = "tabControl1";
@@ -1947,48 +1807,48 @@
             this.tabPage1.BackColor = System.Drawing.SystemColors.Control;
             resources.ApplyResources(this.tabPage1, "tabPage1");
             this.tabPage1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.tabPage1.Controls.Add(this.groupBox4);
+            this.tabPage1.Controls.Add(this.Aligner01_tb);
             this.tabPage1.ForeColor = System.Drawing.SystemColors.ControlText;
             this.tabPage1.Name = "tabPage1";
             // 
-            // groupBox4
+            // Aligner01_tb
             // 
-            this.groupBox4.Controls.Add(this.textBox9);
-            this.groupBox4.Controls.Add(this.textBox8);
-            this.groupBox4.Controls.Add(this.dataGridView7);
-            this.groupBox4.Controls.Add(this.dataGridView6);
-            this.groupBox4.Controls.Add(this.dataGridView5);
-            this.groupBox4.Controls.Add(this.dataGridView4);
-            this.groupBox4.Controls.Add(this.dataGridView3);
-            this.groupBox4.Controls.Add(this.dataGridView1);
-            this.groupBox4.Controls.Add(this.groupBox6);
-            this.groupBox4.Controls.Add(this.textBox11);
-            this.groupBox4.Controls.Add(this.label16);
-            this.groupBox4.Controls.Add(this.textBox10);
-            this.groupBox4.Controls.Add(this.label15);
-            this.groupBox4.Controls.Add(this.textBox7);
-            this.groupBox4.Controls.Add(this.label13);
-            this.groupBox4.Controls.Add(this.dataGridView12);
-            this.groupBox4.Controls.Add(this.dataGridView11);
-            this.groupBox4.Controls.Add(this.dataGridView9);
-            this.groupBox4.Controls.Add(this.textBox6);
-            this.groupBox4.Controls.Add(this.textBox5);
-            this.groupBox4.Controls.Add(this.textBox4);
-            this.groupBox4.Controls.Add(this.textBox3);
-            this.groupBox4.Controls.Add(this.textBox2);
-            this.groupBox4.Controls.Add(this.textBox1);
-            this.groupBox4.Controls.Add(this.label8);
-            this.groupBox4.Controls.Add(this.label6);
-            this.groupBox4.Controls.Add(this.label5);
-            this.groupBox4.Controls.Add(this.LoadPort01Value_tb);
-            this.groupBox4.Controls.Add(this.label12);
-            this.groupBox4.Controls.Add(this.label11);
-            this.groupBox4.Controls.Add(this.label10);
-            this.groupBox4.Controls.Add(this.label9);
-            this.groupBox4.Controls.Add(this.LoadPort01);
-            resources.ApplyResources(this.groupBox4, "groupBox4");
-            this.groupBox4.Name = "groupBox4";
-            this.groupBox4.TabStop = false;
+            this.Aligner01_tb.Controls.Add(this.textBox9);
+            this.Aligner01_tb.Controls.Add(this.textBox8);
+            this.Aligner01_tb.Controls.Add(this.dataGridView7);
+            this.Aligner01_tb.Controls.Add(this.dataGridView6);
+            this.Aligner01_tb.Controls.Add(this.dataGridView5);
+            this.Aligner01_tb.Controls.Add(this.dataGridView4);
+            this.Aligner01_tb.Controls.Add(this.dataGridView3);
+            this.Aligner01_tb.Controls.Add(this.dataGridView1);
+            this.Aligner01_tb.Controls.Add(this.groupBox6);
+            this.Aligner01_tb.Controls.Add(this.Robot01_State);
+            this.Aligner01_tb.Controls.Add(this.label16);
+            this.Aligner01_tb.Controls.Add(this.Aligner02_State);
+            this.Aligner01_tb.Controls.Add(this.label15);
+            this.Aligner01_tb.Controls.Add(this.Aligner01_State);
+            this.Aligner01_tb.Controls.Add(this.label13);
+            this.Aligner01_tb.Controls.Add(this.dataGridView12);
+            this.Aligner01_tb.Controls.Add(this.dataGridView11);
+            this.Aligner01_tb.Controls.Add(this.dataGridView9);
+            this.Aligner01_tb.Controls.Add(this.textBox6);
+            this.Aligner01_tb.Controls.Add(this.textBox5);
+            this.Aligner01_tb.Controls.Add(this.textBox4);
+            this.Aligner01_tb.Controls.Add(this.textBox3);
+            this.Aligner01_tb.Controls.Add(this.LoadPort02_State);
+            this.Aligner01_tb.Controls.Add(this.LoadPort03_State);
+            this.Aligner01_tb.Controls.Add(this.label8);
+            this.Aligner01_tb.Controls.Add(this.label6);
+            this.Aligner01_tb.Controls.Add(this.label5);
+            this.Aligner01_tb.Controls.Add(this.LoadPort01_State);
+            this.Aligner01_tb.Controls.Add(this.label12);
+            this.Aligner01_tb.Controls.Add(this.label11);
+            this.Aligner01_tb.Controls.Add(this.label10);
+            this.Aligner01_tb.Controls.Add(this.label9);
+            this.Aligner01_tb.Controls.Add(this.LoadPort01);
+            resources.ApplyResources(this.Aligner01_tb, "Aligner01_tb");
+            this.Aligner01_tb.Name = "Aligner01_tb";
+            this.Aligner01_tb.TabStop = false;
             // 
             // textBox9
             // 
@@ -2250,12 +2110,12 @@
             this.label17.Name = "label17";
             this.label17.Click += new System.EventHandler(this.label17_Click);
             // 
-            // textBox11
+            // Robot01_State
             // 
-            resources.ApplyResources(this.textBox11, "textBox11");
-            this.textBox11.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
-            this.textBox11.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.textBox11.Name = "textBox11";
+            resources.ApplyResources(this.Robot01_State, "Robot01_State");
+            this.Robot01_State.BackColor = System.Drawing.Color.Yellow;
+            this.Robot01_State.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.Robot01_State.Name = "Robot01_State";
             // 
             // label16
             // 
@@ -2265,12 +2125,12 @@
             this.label16.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.label16.Name = "label16";
             // 
-            // textBox10
+            // Aligner02_State
             // 
-            resources.ApplyResources(this.textBox10, "textBox10");
-            this.textBox10.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
-            this.textBox10.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.textBox10.Name = "textBox10";
+            resources.ApplyResources(this.Aligner02_State, "Aligner02_State");
+            this.Aligner02_State.BackColor = System.Drawing.Color.Yellow;
+            this.Aligner02_State.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.Aligner02_State.Name = "Aligner02_State";
             // 
             // label15
             // 
@@ -2280,12 +2140,12 @@
             this.label15.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.label15.Name = "label15";
             // 
-            // textBox7
+            // Aligner01_State
             // 
-            resources.ApplyResources(this.textBox7, "textBox7");
-            this.textBox7.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
-            this.textBox7.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.textBox7.Name = "textBox7";
+            resources.ApplyResources(this.Aligner01_State, "Aligner01_State");
+            this.Aligner01_State.BackColor = System.Drawing.Color.Yellow;
+            this.Aligner01_State.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.Aligner01_State.Name = "Aligner01_State";
             // 
             // label13
             // 
@@ -2406,21 +2266,21 @@
             this.textBox3.ForeColor = System.Drawing.Color.Transparent;
             this.textBox3.Name = "textBox3";
             // 
-            // textBox2
+            // LoadPort02_State
             // 
-            this.textBox2.BackColor = System.Drawing.Color.DarkOrange;
-            this.textBox2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            resources.ApplyResources(this.textBox2, "textBox2");
-            this.textBox2.ForeColor = System.Drawing.Color.Transparent;
-            this.textBox2.Name = "textBox2";
+            this.LoadPort02_State.BackColor = System.Drawing.Color.DarkOrange;
+            this.LoadPort02_State.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            resources.ApplyResources(this.LoadPort02_State, "LoadPort02_State");
+            this.LoadPort02_State.ForeColor = System.Drawing.Color.Transparent;
+            this.LoadPort02_State.Name = "LoadPort02_State";
             // 
-            // textBox1
+            // LoadPort03_State
             // 
-            this.textBox1.BackColor = System.Drawing.Color.Blue;
-            this.textBox1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            resources.ApplyResources(this.textBox1, "textBox1");
-            this.textBox1.ForeColor = System.Drawing.Color.Transparent;
-            this.textBox1.Name = "textBox1";
+            this.LoadPort03_State.BackColor = System.Drawing.Color.Blue;
+            this.LoadPort03_State.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            resources.ApplyResources(this.LoadPort03_State, "LoadPort03_State");
+            this.LoadPort03_State.ForeColor = System.Drawing.Color.Transparent;
+            this.LoadPort03_State.Name = "LoadPort03_State";
             // 
             // label8
             // 
@@ -2449,13 +2309,13 @@
             this.label5.ForeColor = System.Drawing.Color.Black;
             this.label5.Name = "label5";
             // 
-            // LoadPort01Value_tb
+            // LoadPort01_State
             // 
-            this.LoadPort01Value_tb.BackColor = System.Drawing.Color.Green;
-            this.LoadPort01Value_tb.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            resources.ApplyResources(this.LoadPort01Value_tb, "LoadPort01Value_tb");
-            this.LoadPort01Value_tb.ForeColor = System.Drawing.Color.Transparent;
-            this.LoadPort01Value_tb.Name = "LoadPort01Value_tb";
+            this.LoadPort01_State.BackColor = System.Drawing.Color.Green;
+            this.LoadPort01_State.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            resources.ApplyResources(this.LoadPort01_State, "LoadPort01_State");
+            this.LoadPort01_State.ForeColor = System.Drawing.Color.Transparent;
+            this.LoadPort01_State.Name = "LoadPort01_State";
             // 
             // label12
             // 
@@ -4170,1041 +4030,6 @@
             this.pictureBox2.Image = global::Adam.Properties.Resources._2018_05_14_161525;
             this.pictureBox2.Name = "pictureBox2";
             this.pictureBox2.TabStop = false;
-            // 
-            // tabPage6
-            // 
-            this.tabPage6.BackColor = System.Drawing.SystemColors.Control;
-            this.tabPage6.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.tabPage6.Controls.Add(this.tableLayoutPanel26);
-            resources.ApplyResources(this.tabPage6, "tabPage6");
-            this.tabPage6.Name = "tabPage6";
-            // 
-            // tableLayoutPanel26
-            // 
-            resources.ApplyResources(this.tableLayoutPanel26, "tableLayoutPanel26");
-            this.tableLayoutPanel26.Controls.Add(this.Command_Group_A, 0, 0);
-            this.tableLayoutPanel26.Controls.Add(this.panel19, 1, 0);
-            this.tableLayoutPanel26.Name = "tableLayoutPanel26";
-            // 
-            // Command_Group_A
-            // 
-            this.Command_Group_A.Controls.Add(this.Btn_DoorDown_A);
-            this.Command_Group_A.Controls.Add(this.Btn_Open_A);
-            this.Command_Group_A.Controls.Add(this.Btn_Force_Init_A);
-            this.Command_Group_A.Controls.Add(this.Btn_ClearSlotResult_A);
-            this.Command_Group_A.Controls.Add(this.GroupBox33);
-            this.Command_Group_A.Controls.Add(this.Btn_Map_A);
-            this.Command_Group_A.Controls.Add(this.groupBox24);
-            this.Command_Group_A.Controls.Add(this.Btn_DoorUP_A);
-            this.Command_Group_A.Controls.Add(this.groupBox25);
-            this.Command_Group_A.Controls.Add(this.TblPanel_A);
-            this.Command_Group_A.Controls.Add(this.Btn_VacuumON_A);
-            this.Command_Group_A.Controls.Add(this.label107);
-            this.Command_Group_A.Controls.Add(this.Btn_VacuumOFF_A);
-            this.Command_Group_A.Controls.Add(this.Btn_Reset_A);
-            this.Command_Group_A.Controls.Add(this.Btn_LPInit_A);
-            this.Command_Group_A.Controls.Add(this.LblState_A);
-            this.Command_Group_A.Controls.Add(this.Btn_ReadState_A);
-            this.Command_Group_A.Controls.Add(this.LblVersion_A);
-            this.Command_Group_A.Controls.Add(this.Btn_UnDock_A);
-            this.Command_Group_A.Controls.Add(this.Btn_Clamp_A);
-            this.Command_Group_A.Controls.Add(this.Btn_ReadVersion_A);
-            this.Command_Group_A.Controls.Add(this.Btn_UnClamp_A);
-            this.Command_Group_A.Controls.Add(this.Btn_Dock_A);
-            this.Command_Group_A.Controls.Add(this.Btn_Close_A);
-            this.Command_Group_A.Controls.Add(this.Btn_Unlatch_A);
-            this.Command_Group_A.Controls.Add(this.Btn_Latch_A);
-            resources.ApplyResources(this.Command_Group_A, "Command_Group_A");
-            this.Command_Group_A.Name = "Command_Group_A";
-            this.Command_Group_A.TabStop = false;
-            this.Command_Group_A.Tag = "1";
-            // 
-            // Btn_DoorDown_A
-            // 
-            resources.ApplyResources(this.Btn_DoorDown_A, "Btn_DoorDown_A");
-            this.Btn_DoorDown_A.Name = "Btn_DoorDown_A";
-            this.Btn_DoorDown_A.Tag = "1";
-            this.Btn_DoorDown_A.UseVisualStyleBackColor = true;
-            // 
-            // Btn_Open_A
-            // 
-            resources.ApplyResources(this.Btn_Open_A, "Btn_Open_A");
-            this.Btn_Open_A.Name = "Btn_Open_A";
-            this.Btn_Open_A.Tag = "1";
-            this.Btn_Open_A.UseVisualStyleBackColor = true;
-            // 
-            // Btn_Force_Init_A
-            // 
-            resources.ApplyResources(this.Btn_Force_Init_A, "Btn_Force_Init_A");
-            this.Btn_Force_Init_A.Name = "Btn_Force_Init_A";
-            this.Btn_Force_Init_A.Tag = "1";
-            this.Btn_Force_Init_A.UseVisualStyleBackColor = true;
-            // 
-            // Btn_ClearSlotResult_A
-            // 
-            resources.ApplyResources(this.Btn_ClearSlotResult_A, "Btn_ClearSlotResult_A");
-            this.Btn_ClearSlotResult_A.Name = "Btn_ClearSlotResult_A";
-            this.Btn_ClearSlotResult_A.Tag = "1";
-            this.Btn_ClearSlotResult_A.UseVisualStyleBackColor = true;
-            // 
-            // GroupBox33
-            // 
-            this.GroupBox33.Controls.Add(this.ChkWithSlotMap_A);
-            this.GroupBox33.Controls.Add(this.Btn_LOAD_A);
-            this.GroupBox33.Controls.Add(this.Btn_UNLOAD_A);
-            resources.ApplyResources(this.GroupBox33, "GroupBox33");
-            this.GroupBox33.Name = "GroupBox33";
-            this.GroupBox33.TabStop = false;
-            this.GroupBox33.Tag = "1";
-            // 
-            // ChkWithSlotMap_A
-            // 
-            resources.ApplyResources(this.ChkWithSlotMap_A, "ChkWithSlotMap_A");
-            this.ChkWithSlotMap_A.Name = "ChkWithSlotMap_A";
-            this.ChkWithSlotMap_A.Tag = "1";
-            this.ChkWithSlotMap_A.UseVisualStyleBackColor = true;
-            // 
-            // Btn_LOAD_A
-            // 
-            resources.ApplyResources(this.Btn_LOAD_A, "Btn_LOAD_A");
-            this.Btn_LOAD_A.Name = "Btn_LOAD_A";
-            this.Btn_LOAD_A.Tag = "1";
-            this.Btn_LOAD_A.UseVisualStyleBackColor = true;
-            // 
-            // Btn_UNLOAD_A
-            // 
-            resources.ApplyResources(this.Btn_UNLOAD_A, "Btn_UNLOAD_A");
-            this.Btn_UNLOAD_A.Name = "Btn_UNLOAD_A";
-            this.Btn_UNLOAD_A.Tag = "1";
-            this.Btn_UNLOAD_A.UseVisualStyleBackColor = true;
-            // 
-            // Btn_Map_A
-            // 
-            resources.ApplyResources(this.Btn_Map_A, "Btn_Map_A");
-            this.Btn_Map_A.Name = "Btn_Map_A";
-            this.Btn_Map_A.Tag = "1";
-            this.Btn_Map_A.UseVisualStyleBackColor = true;
-            // 
-            // groupBox24
-            // 
-            this.groupBox24.Controls.Add(this.Lbl_FOUP_Arrived_A);
-            resources.ApplyResources(this.groupBox24, "groupBox24");
-            this.groupBox24.Name = "groupBox24";
-            this.groupBox24.TabStop = false;
-            this.groupBox24.Tag = "1";
-            // 
-            // Lbl_FOUP_Arrived_A
-            // 
-            this.Lbl_FOUP_Arrived_A.BackColor = System.Drawing.Color.Transparent;
-            this.Lbl_FOUP_Arrived_A.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            resources.ApplyResources(this.Lbl_FOUP_Arrived_A, "Lbl_FOUP_Arrived_A");
-            this.Lbl_FOUP_Arrived_A.Name = "Lbl_FOUP_Arrived_A";
-            this.Lbl_FOUP_Arrived_A.Tag = "1";
-            // 
-            // Btn_DoorUP_A
-            // 
-            resources.ApplyResources(this.Btn_DoorUP_A, "Btn_DoorUP_A");
-            this.Btn_DoorUP_A.Name = "Btn_DoorUP_A";
-            this.Btn_DoorUP_A.Tag = "1";
-            this.Btn_DoorUP_A.UseVisualStyleBackColor = true;
-            // 
-            // groupBox25
-            // 
-            this.groupBox25.Controls.Add(this.Btn_WaitPOS_A);
-            this.groupBox25.Controls.Add(this.Btn_Mapper_OPEN_A);
-            this.groupBox25.Controls.Add(this.Btn_Mapper_CLOSE_A);
-            this.groupBox25.Controls.Add(this.Btn_StartPOS_A);
-            this.groupBox25.Controls.Add(this.Btn_SlotMap_A);
-            resources.ApplyResources(this.groupBox25, "groupBox25");
-            this.groupBox25.Name = "groupBox25";
-            this.groupBox25.TabStop = false;
-            this.groupBox25.Tag = "1";
-            // 
-            // Btn_WaitPOS_A
-            // 
-            resources.ApplyResources(this.Btn_WaitPOS_A, "Btn_WaitPOS_A");
-            this.Btn_WaitPOS_A.Name = "Btn_WaitPOS_A";
-            this.Btn_WaitPOS_A.Tag = "1";
-            this.Btn_WaitPOS_A.UseVisualStyleBackColor = true;
-            // 
-            // Btn_Mapper_OPEN_A
-            // 
-            resources.ApplyResources(this.Btn_Mapper_OPEN_A, "Btn_Mapper_OPEN_A");
-            this.Btn_Mapper_OPEN_A.Name = "Btn_Mapper_OPEN_A";
-            this.Btn_Mapper_OPEN_A.Tag = "1";
-            this.Btn_Mapper_OPEN_A.UseVisualStyleBackColor = true;
-            // 
-            // Btn_Mapper_CLOSE_A
-            // 
-            resources.ApplyResources(this.Btn_Mapper_CLOSE_A, "Btn_Mapper_CLOSE_A");
-            this.Btn_Mapper_CLOSE_A.Name = "Btn_Mapper_CLOSE_A";
-            this.Btn_Mapper_CLOSE_A.Tag = "1";
-            this.Btn_Mapper_CLOSE_A.UseVisualStyleBackColor = true;
-            // 
-            // Btn_StartPOS_A
-            // 
-            resources.ApplyResources(this.Btn_StartPOS_A, "Btn_StartPOS_A");
-            this.Btn_StartPOS_A.Name = "Btn_StartPOS_A";
-            this.Btn_StartPOS_A.Tag = "1";
-            this.Btn_StartPOS_A.UseVisualStyleBackColor = true;
-            // 
-            // Btn_SlotMap_A
-            // 
-            resources.ApplyResources(this.Btn_SlotMap_A, "Btn_SlotMap_A");
-            this.Btn_SlotMap_A.Name = "Btn_SlotMap_A";
-            this.Btn_SlotMap_A.Tag = "1";
-            this.Btn_SlotMap_A.UseVisualStyleBackColor = true;
-            // 
-            // TblPanel_A
-            // 
-            this.TblPanel_A.BackColor = System.Drawing.Color.Silver;
-            resources.ApplyResources(this.TblPanel_A, "TblPanel_A");
-            this.TblPanel_A.Controls.Add(this.Lab_A_Slot_01, 1, 24);
-            this.TblPanel_A.Controls.Add(this.label82, 0, 24);
-            this.TblPanel_A.Controls.Add(this.Lab_A_Slot_02, 1, 23);
-            this.TblPanel_A.Controls.Add(this.label83, 0, 23);
-            this.TblPanel_A.Controls.Add(this.Lab_A_Slot_03, 1, 22);
-            this.TblPanel_A.Controls.Add(this.label84, 0, 22);
-            this.TblPanel_A.Controls.Add(this.Lab_A_Slot_04, 1, 21);
-            this.TblPanel_A.Controls.Add(this.label85, 0, 21);
-            this.TblPanel_A.Controls.Add(this.Lab_A_Slot_05, 1, 20);
-            this.TblPanel_A.Controls.Add(this.label86, 0, 20);
-            this.TblPanel_A.Controls.Add(this.Lab_A_Slot_06, 1, 19);
-            this.TblPanel_A.Controls.Add(this.label87, 0, 19);
-            this.TblPanel_A.Controls.Add(this.Lab_A_Slot_07, 1, 18);
-            this.TblPanel_A.Controls.Add(this.label88, 0, 18);
-            this.TblPanel_A.Controls.Add(this.Lab_A_Slot_08, 1, 17);
-            this.TblPanel_A.Controls.Add(this.label89, 0, 17);
-            this.TblPanel_A.Controls.Add(this.Lab_A_Slot_09, 1, 16);
-            this.TblPanel_A.Controls.Add(this.label90, 0, 16);
-            this.TblPanel_A.Controls.Add(this.Lab_A_Slot_10, 1, 15);
-            this.TblPanel_A.Controls.Add(this.label91, 0, 15);
-            this.TblPanel_A.Controls.Add(this.Lab_A_Slot_11, 1, 14);
-            this.TblPanel_A.Controls.Add(this.label92, 0, 14);
-            this.TblPanel_A.Controls.Add(this.Lab_A_Slot_12, 1, 13);
-            this.TblPanel_A.Controls.Add(this.label93, 0, 13);
-            this.TblPanel_A.Controls.Add(this.Lab_A_Slot_13, 1, 12);
-            this.TblPanel_A.Controls.Add(this.label94, 0, 12);
-            this.TblPanel_A.Controls.Add(this.Lab_A_Slot_14, 1, 11);
-            this.TblPanel_A.Controls.Add(this.label95, 0, 11);
-            this.TblPanel_A.Controls.Add(this.Lab_A_Slot_15, 1, 10);
-            this.TblPanel_A.Controls.Add(this.label96, 0, 10);
-            this.TblPanel_A.Controls.Add(this.Lab_A_Slot_16, 1, 9);
-            this.TblPanel_A.Controls.Add(this.label97, 0, 9);
-            this.TblPanel_A.Controls.Add(this.Lab_A_Slot_17, 1, 8);
-            this.TblPanel_A.Controls.Add(this.label98, 0, 8);
-            this.TblPanel_A.Controls.Add(this.Lab_A_Slot_18, 1, 7);
-            this.TblPanel_A.Controls.Add(this.label99, 0, 7);
-            this.TblPanel_A.Controls.Add(this.Lab_A_Slot_19, 1, 6);
-            this.TblPanel_A.Controls.Add(this.label100, 0, 6);
-            this.TblPanel_A.Controls.Add(this.Lab_A_Slot_20, 1, 5);
-            this.TblPanel_A.Controls.Add(this.label101, 0, 5);
-            this.TblPanel_A.Controls.Add(this.Lab_A_Slot_21, 1, 4);
-            this.TblPanel_A.Controls.Add(this.label102, 0, 4);
-            this.TblPanel_A.Controls.Add(this.Lab_A_Slot_22, 1, 3);
-            this.TblPanel_A.Controls.Add(this.label103, 0, 3);
-            this.TblPanel_A.Controls.Add(this.Lab_A_Slot_23, 1, 2);
-            this.TblPanel_A.Controls.Add(this.label104, 0, 2);
-            this.TblPanel_A.Controls.Add(this.Lab_A_Slot_24, 1, 1);
-            this.TblPanel_A.Controls.Add(this.label105, 0, 1);
-            this.TblPanel_A.Controls.Add(this.Lab_A_Slot_25, 1, 0);
-            this.TblPanel_A.Controls.Add(this.label106, 0, 0);
-            this.TblPanel_A.Name = "TblPanel_A";
-            this.TblPanel_A.Tag = "1";
-            // 
-            // Lab_A_Slot_01
-            // 
-            resources.ApplyResources(this.Lab_A_Slot_01, "Lab_A_Slot_01");
-            this.Lab_A_Slot_01.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.Lab_A_Slot_01.Name = "Lab_A_Slot_01";
-            this.Lab_A_Slot_01.Tag = "1";
-            // 
-            // label82
-            // 
-            this.label82.BackColor = System.Drawing.Color.White;
-            this.label82.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            resources.ApplyResources(this.label82, "label82");
-            this.label82.Name = "label82";
-            this.label82.Tag = "1";
-            // 
-            // Lab_A_Slot_02
-            // 
-            resources.ApplyResources(this.Lab_A_Slot_02, "Lab_A_Slot_02");
-            this.Lab_A_Slot_02.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.Lab_A_Slot_02.Name = "Lab_A_Slot_02";
-            this.Lab_A_Slot_02.Tag = "1";
-            // 
-            // label83
-            // 
-            this.label83.BackColor = System.Drawing.Color.White;
-            this.label83.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            resources.ApplyResources(this.label83, "label83");
-            this.label83.Name = "label83";
-            this.label83.Tag = "1";
-            // 
-            // Lab_A_Slot_03
-            // 
-            resources.ApplyResources(this.Lab_A_Slot_03, "Lab_A_Slot_03");
-            this.Lab_A_Slot_03.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.Lab_A_Slot_03.Name = "Lab_A_Slot_03";
-            this.Lab_A_Slot_03.Tag = "1";
-            // 
-            // label84
-            // 
-            this.label84.BackColor = System.Drawing.Color.White;
-            this.label84.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            resources.ApplyResources(this.label84, "label84");
-            this.label84.Name = "label84";
-            this.label84.Tag = "1";
-            // 
-            // Lab_A_Slot_04
-            // 
-            resources.ApplyResources(this.Lab_A_Slot_04, "Lab_A_Slot_04");
-            this.Lab_A_Slot_04.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.Lab_A_Slot_04.Name = "Lab_A_Slot_04";
-            this.Lab_A_Slot_04.Tag = "1";
-            // 
-            // label85
-            // 
-            this.label85.BackColor = System.Drawing.Color.White;
-            this.label85.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            resources.ApplyResources(this.label85, "label85");
-            this.label85.Name = "label85";
-            this.label85.Tag = "1";
-            // 
-            // Lab_A_Slot_05
-            // 
-            resources.ApplyResources(this.Lab_A_Slot_05, "Lab_A_Slot_05");
-            this.Lab_A_Slot_05.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.Lab_A_Slot_05.Name = "Lab_A_Slot_05";
-            this.Lab_A_Slot_05.Tag = "1";
-            // 
-            // label86
-            // 
-            this.label86.BackColor = System.Drawing.Color.White;
-            this.label86.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            resources.ApplyResources(this.label86, "label86");
-            this.label86.Name = "label86";
-            this.label86.Tag = "1";
-            // 
-            // Lab_A_Slot_06
-            // 
-            resources.ApplyResources(this.Lab_A_Slot_06, "Lab_A_Slot_06");
-            this.Lab_A_Slot_06.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.Lab_A_Slot_06.Name = "Lab_A_Slot_06";
-            this.Lab_A_Slot_06.Tag = "1";
-            // 
-            // label87
-            // 
-            this.label87.BackColor = System.Drawing.Color.White;
-            this.label87.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            resources.ApplyResources(this.label87, "label87");
-            this.label87.Name = "label87";
-            this.label87.Tag = "1";
-            // 
-            // Lab_A_Slot_07
-            // 
-            resources.ApplyResources(this.Lab_A_Slot_07, "Lab_A_Slot_07");
-            this.Lab_A_Slot_07.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.Lab_A_Slot_07.Name = "Lab_A_Slot_07";
-            this.Lab_A_Slot_07.Tag = "1";
-            // 
-            // label88
-            // 
-            this.label88.BackColor = System.Drawing.Color.White;
-            this.label88.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            resources.ApplyResources(this.label88, "label88");
-            this.label88.Name = "label88";
-            this.label88.Tag = "1";
-            // 
-            // Lab_A_Slot_08
-            // 
-            resources.ApplyResources(this.Lab_A_Slot_08, "Lab_A_Slot_08");
-            this.Lab_A_Slot_08.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.Lab_A_Slot_08.Name = "Lab_A_Slot_08";
-            this.Lab_A_Slot_08.Tag = "1";
-            // 
-            // label89
-            // 
-            this.label89.BackColor = System.Drawing.Color.White;
-            this.label89.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            resources.ApplyResources(this.label89, "label89");
-            this.label89.Name = "label89";
-            this.label89.Tag = "1";
-            // 
-            // Lab_A_Slot_09
-            // 
-            resources.ApplyResources(this.Lab_A_Slot_09, "Lab_A_Slot_09");
-            this.Lab_A_Slot_09.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.Lab_A_Slot_09.Name = "Lab_A_Slot_09";
-            this.Lab_A_Slot_09.Tag = "1";
-            // 
-            // label90
-            // 
-            this.label90.BackColor = System.Drawing.Color.White;
-            this.label90.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            resources.ApplyResources(this.label90, "label90");
-            this.label90.Name = "label90";
-            this.label90.Tag = "1";
-            // 
-            // Lab_A_Slot_10
-            // 
-            resources.ApplyResources(this.Lab_A_Slot_10, "Lab_A_Slot_10");
-            this.Lab_A_Slot_10.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.Lab_A_Slot_10.Name = "Lab_A_Slot_10";
-            this.Lab_A_Slot_10.Tag = "1";
-            // 
-            // label91
-            // 
-            this.label91.BackColor = System.Drawing.Color.White;
-            this.label91.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            resources.ApplyResources(this.label91, "label91");
-            this.label91.Name = "label91";
-            this.label91.Tag = "1";
-            // 
-            // Lab_A_Slot_11
-            // 
-            resources.ApplyResources(this.Lab_A_Slot_11, "Lab_A_Slot_11");
-            this.Lab_A_Slot_11.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.Lab_A_Slot_11.Name = "Lab_A_Slot_11";
-            this.Lab_A_Slot_11.Tag = "1";
-            // 
-            // label92
-            // 
-            this.label92.BackColor = System.Drawing.Color.White;
-            this.label92.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            resources.ApplyResources(this.label92, "label92");
-            this.label92.Name = "label92";
-            this.label92.Tag = "1";
-            // 
-            // Lab_A_Slot_12
-            // 
-            resources.ApplyResources(this.Lab_A_Slot_12, "Lab_A_Slot_12");
-            this.Lab_A_Slot_12.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.Lab_A_Slot_12.Name = "Lab_A_Slot_12";
-            this.Lab_A_Slot_12.Tag = "1";
-            // 
-            // label93
-            // 
-            this.label93.BackColor = System.Drawing.Color.White;
-            this.label93.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            resources.ApplyResources(this.label93, "label93");
-            this.label93.Name = "label93";
-            this.label93.Tag = "1";
-            // 
-            // Lab_A_Slot_13
-            // 
-            resources.ApplyResources(this.Lab_A_Slot_13, "Lab_A_Slot_13");
-            this.Lab_A_Slot_13.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.Lab_A_Slot_13.Name = "Lab_A_Slot_13";
-            this.Lab_A_Slot_13.Tag = "1";
-            // 
-            // label94
-            // 
-            this.label94.BackColor = System.Drawing.Color.White;
-            this.label94.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            resources.ApplyResources(this.label94, "label94");
-            this.label94.Name = "label94";
-            this.label94.Tag = "1";
-            // 
-            // Lab_A_Slot_14
-            // 
-            resources.ApplyResources(this.Lab_A_Slot_14, "Lab_A_Slot_14");
-            this.Lab_A_Slot_14.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.Lab_A_Slot_14.Name = "Lab_A_Slot_14";
-            this.Lab_A_Slot_14.Tag = "1";
-            // 
-            // label95
-            // 
-            this.label95.BackColor = System.Drawing.Color.White;
-            this.label95.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            resources.ApplyResources(this.label95, "label95");
-            this.label95.Name = "label95";
-            this.label95.Tag = "1";
-            // 
-            // Lab_A_Slot_15
-            // 
-            resources.ApplyResources(this.Lab_A_Slot_15, "Lab_A_Slot_15");
-            this.Lab_A_Slot_15.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.Lab_A_Slot_15.Name = "Lab_A_Slot_15";
-            this.Lab_A_Slot_15.Tag = "1";
-            // 
-            // label96
-            // 
-            this.label96.BackColor = System.Drawing.Color.White;
-            this.label96.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            resources.ApplyResources(this.label96, "label96");
-            this.label96.Name = "label96";
-            this.label96.Tag = "1";
-            // 
-            // Lab_A_Slot_16
-            // 
-            resources.ApplyResources(this.Lab_A_Slot_16, "Lab_A_Slot_16");
-            this.Lab_A_Slot_16.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.Lab_A_Slot_16.Name = "Lab_A_Slot_16";
-            this.Lab_A_Slot_16.Tag = "1";
-            // 
-            // label97
-            // 
-            this.label97.BackColor = System.Drawing.Color.White;
-            this.label97.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            resources.ApplyResources(this.label97, "label97");
-            this.label97.Name = "label97";
-            this.label97.Tag = "1";
-            // 
-            // Lab_A_Slot_17
-            // 
-            resources.ApplyResources(this.Lab_A_Slot_17, "Lab_A_Slot_17");
-            this.Lab_A_Slot_17.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.Lab_A_Slot_17.Name = "Lab_A_Slot_17";
-            this.Lab_A_Slot_17.Tag = "1";
-            // 
-            // label98
-            // 
-            this.label98.BackColor = System.Drawing.Color.White;
-            this.label98.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            resources.ApplyResources(this.label98, "label98");
-            this.label98.Name = "label98";
-            this.label98.Tag = "1";
-            // 
-            // Lab_A_Slot_18
-            // 
-            resources.ApplyResources(this.Lab_A_Slot_18, "Lab_A_Slot_18");
-            this.Lab_A_Slot_18.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.Lab_A_Slot_18.Name = "Lab_A_Slot_18";
-            this.Lab_A_Slot_18.Tag = "1";
-            // 
-            // label99
-            // 
-            this.label99.BackColor = System.Drawing.Color.White;
-            this.label99.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            resources.ApplyResources(this.label99, "label99");
-            this.label99.Name = "label99";
-            this.label99.Tag = "1";
-            // 
-            // Lab_A_Slot_19
-            // 
-            resources.ApplyResources(this.Lab_A_Slot_19, "Lab_A_Slot_19");
-            this.Lab_A_Slot_19.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.Lab_A_Slot_19.Name = "Lab_A_Slot_19";
-            this.Lab_A_Slot_19.Tag = "1";
-            // 
-            // label100
-            // 
-            this.label100.BackColor = System.Drawing.Color.White;
-            this.label100.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            resources.ApplyResources(this.label100, "label100");
-            this.label100.Name = "label100";
-            this.label100.Tag = "1";
-            // 
-            // Lab_A_Slot_20
-            // 
-            resources.ApplyResources(this.Lab_A_Slot_20, "Lab_A_Slot_20");
-            this.Lab_A_Slot_20.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.Lab_A_Slot_20.Name = "Lab_A_Slot_20";
-            this.Lab_A_Slot_20.Tag = "1";
-            // 
-            // label101
-            // 
-            this.label101.BackColor = System.Drawing.Color.White;
-            this.label101.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            resources.ApplyResources(this.label101, "label101");
-            this.label101.Name = "label101";
-            this.label101.Tag = "1";
-            // 
-            // Lab_A_Slot_21
-            // 
-            resources.ApplyResources(this.Lab_A_Slot_21, "Lab_A_Slot_21");
-            this.Lab_A_Slot_21.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.Lab_A_Slot_21.Name = "Lab_A_Slot_21";
-            this.Lab_A_Slot_21.Tag = "1";
-            // 
-            // label102
-            // 
-            this.label102.BackColor = System.Drawing.Color.White;
-            this.label102.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            resources.ApplyResources(this.label102, "label102");
-            this.label102.Name = "label102";
-            this.label102.Tag = "1";
-            // 
-            // Lab_A_Slot_22
-            // 
-            resources.ApplyResources(this.Lab_A_Slot_22, "Lab_A_Slot_22");
-            this.Lab_A_Slot_22.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.Lab_A_Slot_22.Name = "Lab_A_Slot_22";
-            this.Lab_A_Slot_22.Tag = "1";
-            // 
-            // label103
-            // 
-            this.label103.BackColor = System.Drawing.Color.White;
-            this.label103.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            resources.ApplyResources(this.label103, "label103");
-            this.label103.Name = "label103";
-            this.label103.Tag = "1";
-            // 
-            // Lab_A_Slot_23
-            // 
-            resources.ApplyResources(this.Lab_A_Slot_23, "Lab_A_Slot_23");
-            this.Lab_A_Slot_23.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.Lab_A_Slot_23.Name = "Lab_A_Slot_23";
-            this.Lab_A_Slot_23.Tag = "1";
-            // 
-            // label104
-            // 
-            this.label104.BackColor = System.Drawing.Color.White;
-            this.label104.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            resources.ApplyResources(this.label104, "label104");
-            this.label104.Name = "label104";
-            this.label104.Tag = "1";
-            // 
-            // Lab_A_Slot_24
-            // 
-            resources.ApplyResources(this.Lab_A_Slot_24, "Lab_A_Slot_24");
-            this.Lab_A_Slot_24.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.Lab_A_Slot_24.Name = "Lab_A_Slot_24";
-            this.Lab_A_Slot_24.Tag = "1";
-            // 
-            // label105
-            // 
-            this.label105.BackColor = System.Drawing.Color.White;
-            this.label105.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            resources.ApplyResources(this.label105, "label105");
-            this.label105.Name = "label105";
-            this.label105.Tag = "1";
-            // 
-            // Lab_A_Slot_25
-            // 
-            resources.ApplyResources(this.Lab_A_Slot_25, "Lab_A_Slot_25");
-            this.Lab_A_Slot_25.BackColor = System.Drawing.Color.Silver;
-            this.Lab_A_Slot_25.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.Lab_A_Slot_25.Name = "Lab_A_Slot_25";
-            this.Lab_A_Slot_25.Tag = "1";
-            // 
-            // label106
-            // 
-            this.label106.BackColor = System.Drawing.Color.White;
-            this.label106.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            resources.ApplyResources(this.label106, "label106");
-            this.label106.Name = "label106";
-            this.label106.Tag = "1";
-            // 
-            // Btn_VacuumON_A
-            // 
-            resources.ApplyResources(this.Btn_VacuumON_A, "Btn_VacuumON_A");
-            this.Btn_VacuumON_A.Name = "Btn_VacuumON_A";
-            this.Btn_VacuumON_A.Tag = "1";
-            this.Btn_VacuumON_A.UseVisualStyleBackColor = true;
-            // 
-            // label107
-            // 
-            resources.ApplyResources(this.label107, "label107");
-            this.label107.Name = "label107";
-            this.label107.Tag = "1";
-            // 
-            // Btn_VacuumOFF_A
-            // 
-            resources.ApplyResources(this.Btn_VacuumOFF_A, "Btn_VacuumOFF_A");
-            this.Btn_VacuumOFF_A.Name = "Btn_VacuumOFF_A";
-            this.Btn_VacuumOFF_A.Tag = "1";
-            this.Btn_VacuumOFF_A.UseVisualStyleBackColor = true;
-            // 
-            // Btn_Reset_A
-            // 
-            resources.ApplyResources(this.Btn_Reset_A, "Btn_Reset_A");
-            this.Btn_Reset_A.Name = "Btn_Reset_A";
-            this.Btn_Reset_A.Tag = "1";
-            this.Btn_Reset_A.UseVisualStyleBackColor = true;
-            // 
-            // Btn_LPInit_A
-            // 
-            resources.ApplyResources(this.Btn_LPInit_A, "Btn_LPInit_A");
-            this.Btn_LPInit_A.Name = "Btn_LPInit_A";
-            this.Btn_LPInit_A.Tag = "1";
-            this.Btn_LPInit_A.UseVisualStyleBackColor = true;
-            // 
-            // LblState_A
-            // 
-            this.LblState_A.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            resources.ApplyResources(this.LblState_A, "LblState_A");
-            this.LblState_A.Name = "LblState_A";
-            this.LblState_A.Tag = "1";
-            // 
-            // Btn_ReadState_A
-            // 
-            resources.ApplyResources(this.Btn_ReadState_A, "Btn_ReadState_A");
-            this.Btn_ReadState_A.Name = "Btn_ReadState_A";
-            this.Btn_ReadState_A.Tag = "1";
-            this.Btn_ReadState_A.UseVisualStyleBackColor = true;
-            // 
-            // LblVersion_A
-            // 
-            this.LblVersion_A.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            resources.ApplyResources(this.LblVersion_A, "LblVersion_A");
-            this.LblVersion_A.Name = "LblVersion_A";
-            this.LblVersion_A.Tag = "1";
-            // 
-            // Btn_UnDock_A
-            // 
-            resources.ApplyResources(this.Btn_UnDock_A, "Btn_UnDock_A");
-            this.Btn_UnDock_A.Name = "Btn_UnDock_A";
-            this.Btn_UnDock_A.Tag = "1";
-            this.Btn_UnDock_A.UseVisualStyleBackColor = true;
-            // 
-            // Btn_Clamp_A
-            // 
-            resources.ApplyResources(this.Btn_Clamp_A, "Btn_Clamp_A");
-            this.Btn_Clamp_A.Name = "Btn_Clamp_A";
-            this.Btn_Clamp_A.Tag = "1";
-            this.Btn_Clamp_A.UseVisualStyleBackColor = true;
-            // 
-            // Btn_ReadVersion_A
-            // 
-            resources.ApplyResources(this.Btn_ReadVersion_A, "Btn_ReadVersion_A");
-            this.Btn_ReadVersion_A.Name = "Btn_ReadVersion_A";
-            this.Btn_ReadVersion_A.Tag = "01";
-            this.Btn_ReadVersion_A.UseVisualStyleBackColor = true;
-            // 
-            // Btn_UnClamp_A
-            // 
-            resources.ApplyResources(this.Btn_UnClamp_A, "Btn_UnClamp_A");
-            this.Btn_UnClamp_A.Name = "Btn_UnClamp_A";
-            this.Btn_UnClamp_A.Tag = "1";
-            this.Btn_UnClamp_A.UseVisualStyleBackColor = true;
-            // 
-            // Btn_Dock_A
-            // 
-            resources.ApplyResources(this.Btn_Dock_A, "Btn_Dock_A");
-            this.Btn_Dock_A.Name = "Btn_Dock_A";
-            this.Btn_Dock_A.Tag = "1";
-            this.Btn_Dock_A.UseVisualStyleBackColor = true;
-            // 
-            // Btn_Close_A
-            // 
-            resources.ApplyResources(this.Btn_Close_A, "Btn_Close_A");
-            this.Btn_Close_A.Name = "Btn_Close_A";
-            this.Btn_Close_A.Tag = "1";
-            this.Btn_Close_A.UseVisualStyleBackColor = true;
-            // 
-            // Btn_Unlatch_A
-            // 
-            resources.ApplyResources(this.Btn_Unlatch_A, "Btn_Unlatch_A");
-            this.Btn_Unlatch_A.Name = "Btn_Unlatch_A";
-            this.Btn_Unlatch_A.Tag = "1";
-            this.Btn_Unlatch_A.UseVisualStyleBackColor = true;
-            // 
-            // Btn_Latch_A
-            // 
-            resources.ApplyResources(this.Btn_Latch_A, "Btn_Latch_A");
-            this.Btn_Latch_A.Name = "Btn_Latch_A";
-            this.Btn_Latch_A.Tag = "1";
-            this.Btn_Latch_A.UseVisualStyleBackColor = true;
-            // 
-            // panel19
-            // 
-            this.panel19.Controls.Add(this.GroupBox36);
-            this.panel19.Controls.Add(this.GroupBox35);
-            resources.ApplyResources(this.panel19, "panel19");
-            this.panel19.Name = "panel19";
-            // 
-            // GroupBox36
-            // 
-            resources.ApplyResources(this.GroupBox36, "GroupBox36");
-            this.GroupBox36.Controls.Add(this.Lab_StateCode_19_A);
-            this.GroupBox36.Controls.Add(this.Lab_StateCode_17_A);
-            this.GroupBox36.Controls.Add(this.Lab_StateCode_18_A);
-            this.GroupBox36.Controls.Add(this.Lab_StateCode_16_A);
-            this.GroupBox36.Controls.Add(this.Lab_StateCode_14_A);
-            this.GroupBox36.Controls.Add(this.Lab_StateCode_15_A);
-            this.GroupBox36.Controls.Add(this.Lab_StateCode_13_A);
-            this.GroupBox36.Controls.Add(this.Lab_StateCode_11_A);
-            this.GroupBox36.Controls.Add(this.Lab_StateCode_12_A);
-            this.GroupBox36.Controls.Add(this.label108);
-            this.GroupBox36.Controls.Add(this.label109);
-            this.GroupBox36.Controls.Add(this.label110);
-            this.GroupBox36.Controls.Add(this.label111);
-            this.GroupBox36.Controls.Add(this.label112);
-            this.GroupBox36.Controls.Add(this.label113);
-            this.GroupBox36.Controls.Add(this.label114);
-            this.GroupBox36.Controls.Add(this.label115);
-            this.GroupBox36.Controls.Add(this.label116);
-            this.GroupBox36.Controls.Add(this.Lab_StateCode_10_A);
-            this.GroupBox36.Controls.Add(this.Lab_StateCode_8_A);
-            this.GroupBox36.Controls.Add(this.Lab_StateCode_9_A);
-            this.GroupBox36.Controls.Add(this.Lab_StateCode_7_A);
-            this.GroupBox36.Controls.Add(this.Lab_StateCode_4_A);
-            this.GroupBox36.Controls.Add(this.Lab_StateCode_5_A);
-            this.GroupBox36.Controls.Add(this.Lab_StateCode_3_A);
-            this.GroupBox36.Controls.Add(this.Lab_StateCode_1_A);
-            this.GroupBox36.Controls.Add(this.Lab_StateCode_2_A);
-            this.GroupBox36.Controls.Add(this.label117);
-            this.GroupBox36.Controls.Add(this.label118);
-            this.GroupBox36.Controls.Add(this.label119);
-            this.GroupBox36.Controls.Add(this.label120);
-            this.GroupBox36.Controls.Add(this.label121);
-            this.GroupBox36.Controls.Add(this.label122);
-            this.GroupBox36.Controls.Add(this.Label123);
-            this.GroupBox36.Controls.Add(this.Label125);
-            this.GroupBox36.Controls.Add(this.Label145);
-            this.GroupBox36.Name = "GroupBox36";
-            this.GroupBox36.TabStop = false;
-            this.GroupBox36.Tag = "1";
-            // 
-            // Lab_StateCode_19_A
-            // 
-            this.Lab_StateCode_19_A.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            resources.ApplyResources(this.Lab_StateCode_19_A, "Lab_StateCode_19_A");
-            this.Lab_StateCode_19_A.Name = "Lab_StateCode_19_A";
-            this.Lab_StateCode_19_A.Tag = "1";
-            // 
-            // Lab_StateCode_17_A
-            // 
-            this.Lab_StateCode_17_A.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            resources.ApplyResources(this.Lab_StateCode_17_A, "Lab_StateCode_17_A");
-            this.Lab_StateCode_17_A.Name = "Lab_StateCode_17_A";
-            this.Lab_StateCode_17_A.Tag = "1";
-            // 
-            // Lab_StateCode_18_A
-            // 
-            this.Lab_StateCode_18_A.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            resources.ApplyResources(this.Lab_StateCode_18_A, "Lab_StateCode_18_A");
-            this.Lab_StateCode_18_A.Name = "Lab_StateCode_18_A";
-            this.Lab_StateCode_18_A.Tag = "1";
-            // 
-            // Lab_StateCode_16_A
-            // 
-            this.Lab_StateCode_16_A.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            resources.ApplyResources(this.Lab_StateCode_16_A, "Lab_StateCode_16_A");
-            this.Lab_StateCode_16_A.Name = "Lab_StateCode_16_A";
-            this.Lab_StateCode_16_A.Tag = "1";
-            // 
-            // Lab_StateCode_14_A
-            // 
-            this.Lab_StateCode_14_A.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            resources.ApplyResources(this.Lab_StateCode_14_A, "Lab_StateCode_14_A");
-            this.Lab_StateCode_14_A.Name = "Lab_StateCode_14_A";
-            this.Lab_StateCode_14_A.Tag = "1";
-            // 
-            // Lab_StateCode_15_A
-            // 
-            this.Lab_StateCode_15_A.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            resources.ApplyResources(this.Lab_StateCode_15_A, "Lab_StateCode_15_A");
-            this.Lab_StateCode_15_A.Name = "Lab_StateCode_15_A";
-            this.Lab_StateCode_15_A.Tag = "1";
-            // 
-            // Lab_StateCode_13_A
-            // 
-            this.Lab_StateCode_13_A.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            resources.ApplyResources(this.Lab_StateCode_13_A, "Lab_StateCode_13_A");
-            this.Lab_StateCode_13_A.Name = "Lab_StateCode_13_A";
-            this.Lab_StateCode_13_A.Tag = "1";
-            // 
-            // Lab_StateCode_11_A
-            // 
-            this.Lab_StateCode_11_A.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            resources.ApplyResources(this.Lab_StateCode_11_A, "Lab_StateCode_11_A");
-            this.Lab_StateCode_11_A.Name = "Lab_StateCode_11_A";
-            this.Lab_StateCode_11_A.Tag = "1";
-            // 
-            // Lab_StateCode_12_A
-            // 
-            this.Lab_StateCode_12_A.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            resources.ApplyResources(this.Lab_StateCode_12_A, "Lab_StateCode_12_A");
-            this.Lab_StateCode_12_A.Name = "Lab_StateCode_12_A";
-            this.Lab_StateCode_12_A.Tag = "1";
-            // 
-            // label108
-            // 
-            resources.ApplyResources(this.label108, "label108");
-            this.label108.Name = "label108";
-            this.label108.Tag = "1";
-            // 
-            // label109
-            // 
-            resources.ApplyResources(this.label109, "label109");
-            this.label109.Name = "label109";
-            this.label109.Tag = "1";
-            // 
-            // label110
-            // 
-            resources.ApplyResources(this.label110, "label110");
-            this.label110.Name = "label110";
-            this.label110.Tag = "1";
-            // 
-            // label111
-            // 
-            resources.ApplyResources(this.label111, "label111");
-            this.label111.Name = "label111";
-            this.label111.Tag = "1";
-            // 
-            // label112
-            // 
-            resources.ApplyResources(this.label112, "label112");
-            this.label112.Name = "label112";
-            this.label112.Tag = "1";
-            // 
-            // label113
-            // 
-            resources.ApplyResources(this.label113, "label113");
-            this.label113.Name = "label113";
-            this.label113.Tag = "1";
-            // 
-            // label114
-            // 
-            resources.ApplyResources(this.label114, "label114");
-            this.label114.Name = "label114";
-            this.label114.Tag = "1";
-            // 
-            // label115
-            // 
-            resources.ApplyResources(this.label115, "label115");
-            this.label115.Name = "label115";
-            this.label115.Tag = "1";
-            // 
-            // label116
-            // 
-            resources.ApplyResources(this.label116, "label116");
-            this.label116.Name = "label116";
-            this.label116.Tag = "1";
-            // 
-            // Lab_StateCode_10_A
-            // 
-            this.Lab_StateCode_10_A.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            resources.ApplyResources(this.Lab_StateCode_10_A, "Lab_StateCode_10_A");
-            this.Lab_StateCode_10_A.Name = "Lab_StateCode_10_A";
-            this.Lab_StateCode_10_A.Tag = "1";
-            // 
-            // Lab_StateCode_8_A
-            // 
-            this.Lab_StateCode_8_A.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            resources.ApplyResources(this.Lab_StateCode_8_A, "Lab_StateCode_8_A");
-            this.Lab_StateCode_8_A.Name = "Lab_StateCode_8_A";
-            this.Lab_StateCode_8_A.Tag = "1";
-            // 
-            // Lab_StateCode_9_A
-            // 
-            this.Lab_StateCode_9_A.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            resources.ApplyResources(this.Lab_StateCode_9_A, "Lab_StateCode_9_A");
-            this.Lab_StateCode_9_A.Name = "Lab_StateCode_9_A";
-            this.Lab_StateCode_9_A.Tag = "1";
-            // 
-            // Lab_StateCode_7_A
-            // 
-            this.Lab_StateCode_7_A.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            resources.ApplyResources(this.Lab_StateCode_7_A, "Lab_StateCode_7_A");
-            this.Lab_StateCode_7_A.Name = "Lab_StateCode_7_A";
-            this.Lab_StateCode_7_A.Tag = "1";
-            // 
-            // Lab_StateCode_4_A
-            // 
-            this.Lab_StateCode_4_A.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            resources.ApplyResources(this.Lab_StateCode_4_A, "Lab_StateCode_4_A");
-            this.Lab_StateCode_4_A.Name = "Lab_StateCode_4_A";
-            this.Lab_StateCode_4_A.Tag = "1";
-            // 
-            // Lab_StateCode_5_A
-            // 
-            this.Lab_StateCode_5_A.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            resources.ApplyResources(this.Lab_StateCode_5_A, "Lab_StateCode_5_A");
-            this.Lab_StateCode_5_A.Name = "Lab_StateCode_5_A";
-            this.Lab_StateCode_5_A.Tag = "1";
-            // 
-            // Lab_StateCode_3_A
-            // 
-            this.Lab_StateCode_3_A.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            resources.ApplyResources(this.Lab_StateCode_3_A, "Lab_StateCode_3_A");
-            this.Lab_StateCode_3_A.Name = "Lab_StateCode_3_A";
-            this.Lab_StateCode_3_A.Tag = "1";
-            // 
-            // Lab_StateCode_1_A
-            // 
-            this.Lab_StateCode_1_A.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            resources.ApplyResources(this.Lab_StateCode_1_A, "Lab_StateCode_1_A");
-            this.Lab_StateCode_1_A.Name = "Lab_StateCode_1_A";
-            this.Lab_StateCode_1_A.Tag = "1";
-            // 
-            // Lab_StateCode_2_A
-            // 
-            this.Lab_StateCode_2_A.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            resources.ApplyResources(this.Lab_StateCode_2_A, "Lab_StateCode_2_A");
-            this.Lab_StateCode_2_A.Name = "Lab_StateCode_2_A";
-            this.Lab_StateCode_2_A.Tag = "1";
-            // 
-            // label117
-            // 
-            resources.ApplyResources(this.label117, "label117");
-            this.label117.Name = "label117";
-            this.label117.Tag = "1";
-            // 
-            // label118
-            // 
-            resources.ApplyResources(this.label118, "label118");
-            this.label118.Name = "label118";
-            this.label118.Tag = "1";
-            // 
-            // label119
-            // 
-            resources.ApplyResources(this.label119, "label119");
-            this.label119.Name = "label119";
-            this.label119.Tag = "1";
-            // 
-            // label120
-            // 
-            resources.ApplyResources(this.label120, "label120");
-            this.label120.Name = "label120";
-            this.label120.Tag = "1";
-            // 
-            // label121
-            // 
-            resources.ApplyResources(this.label121, "label121");
-            this.label121.Name = "label121";
-            this.label121.Tag = "1";
-            // 
-            // label122
-            // 
-            resources.ApplyResources(this.label122, "label122");
-            this.label122.Name = "label122";
-            this.label122.Tag = "1";
-            // 
-            // Label123
-            // 
-            resources.ApplyResources(this.Label123, "Label123");
-            this.Label123.Name = "Label123";
-            this.Label123.Tag = "1";
-            // 
-            // Label125
-            // 
-            resources.ApplyResources(this.Label125, "Label125");
-            this.Label125.Name = "Label125";
-            this.Label125.Tag = "1";
-            // 
-            // Label145
-            // 
-            resources.ApplyResources(this.Label145, "Label145");
-            this.Label145.Name = "Label145";
-            this.Label145.Tag = "1";
-            // 
-            // GroupBox35
-            // 
-            resources.ApplyResources(this.GroupBox35, "GroupBox35");
-            this.GroupBox35.Controls.Add(this.Btn_ClearMSG_A);
-            this.GroupBox35.Controls.Add(this.RTxt_Message_A);
-            this.GroupBox35.Name = "GroupBox35";
-            this.GroupBox35.TabStop = false;
-            this.GroupBox35.Tag = "1";
-            // 
-            // Btn_ClearMSG_A
-            // 
-            resources.ApplyResources(this.Btn_ClearMSG_A, "Btn_ClearMSG_A");
-            this.Btn_ClearMSG_A.Name = "Btn_ClearMSG_A";
-            this.Btn_ClearMSG_A.Tag = "1";
-            this.Btn_ClearMSG_A.UseVisualStyleBackColor = true;
-            // 
-            // RTxt_Message_A
-            // 
-            resources.ApplyResources(this.RTxt_Message_A, "RTxt_Message_A");
-            this.RTxt_Message_A.Name = "RTxt_Message_A";
-            this.RTxt_Message_A.ReadOnly = true;
-            this.RTxt_Message_A.Tag = "1";
             // 
             // tabPage8
             // 
@@ -7543,6 +6368,7 @@
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
             this.Name = "FormMain";
+            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.Form1_Load);
             this.splitContainer5.Panel1.ResumeLayout(false);
             this.splitContainer5.Panel2.ResumeLayout(false);
@@ -7635,8 +6461,8 @@
             this.tableLayoutPanel2.ResumeLayout(false);
             this.tabControl1.ResumeLayout(false);
             this.tabPage1.ResumeLayout(false);
-            this.groupBox4.ResumeLayout(false);
-            this.groupBox4.PerformLayout();
+            this.Aligner01_tb.ResumeLayout(false);
+            this.Aligner01_tb.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView7)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView6)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView5)).EndInit();
@@ -7714,20 +6540,6 @@
             this.tableLayoutPanel13.ResumeLayout(false);
             this.groupBox17.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
-            this.tabPage6.ResumeLayout(false);
-            this.tableLayoutPanel26.ResumeLayout(false);
-            this.Command_Group_A.ResumeLayout(false);
-            this.Command_Group_A.PerformLayout();
-            this.GroupBox33.ResumeLayout(false);
-            this.GroupBox33.PerformLayout();
-            this.groupBox24.ResumeLayout(false);
-            this.groupBox25.ResumeLayout(false);
-            this.TblPanel_A.ResumeLayout(false);
-            this.TblPanel_A.PerformLayout();
-            this.panel19.ResumeLayout(false);
-            this.GroupBox36.ResumeLayout(false);
-            this.GroupBox36.PerformLayout();
-            this.GroupBox35.ResumeLayout(false);
             this.tabPage8.ResumeLayout(false);
             this.tabControl3.ResumeLayout(false);
             this.tabPage11.ResumeLayout(false);
@@ -7857,7 +6669,6 @@
         private System.Windows.Forms.TabPage tabPage4;
         private System.Windows.Forms.TabPage tabPage5;
         private System.Windows.Forms.TabPage tabPage9;
-        private System.Windows.Forms.TabPage tabPage6;
         private System.Windows.Forms.TabPage tabPage8;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
         private System.Windows.Forms.Button button8;
@@ -7877,7 +6688,7 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.GroupBox groupBox5;
-        private System.Windows.Forms.GroupBox groupBox4;
+        private System.Windows.Forms.GroupBox Aligner01_tb;
         private System.Windows.Forms.Button button14;
         private System.Windows.Forms.Button button13;
         private System.Windows.Forms.Button button12;
@@ -7889,11 +6700,11 @@
         private System.Windows.Forms.Button button17;
         private System.Windows.Forms.Button button16;
         private System.Windows.Forms.Button button15;
-        private System.Windows.Forms.TextBox textBox11;
+        private System.Windows.Forms.TextBox Robot01_State;
         private System.Windows.Forms.Label label16;
-        private System.Windows.Forms.TextBox textBox10;
+        private System.Windows.Forms.TextBox Aligner02_State;
         private System.Windows.Forms.Label label15;
-        private System.Windows.Forms.TextBox textBox7;
+        private System.Windows.Forms.TextBox Aligner01_State;
         private System.Windows.Forms.Label label13;
         private System.Windows.Forms.DataGridView dataGridView12;
         private System.Windows.Forms.DataGridView dataGridView11;
@@ -7902,12 +6713,12 @@
         private System.Windows.Forms.TextBox textBox5;
         private System.Windows.Forms.TextBox textBox4;
         private System.Windows.Forms.TextBox textBox3;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox LoadPort02_State;
+        private System.Windows.Forms.TextBox LoadPort03_State;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.TextBox LoadPort01Value_tb;
+        private System.Windows.Forms.TextBox LoadPort01_State;
         private System.Windows.Forms.Label label12;
         private System.Windows.Forms.Label label11;
         private System.Windows.Forms.Label label10;
@@ -8194,134 +7005,6 @@
         private System.Windows.Forms.Button button59;
         private System.Windows.Forms.Label label81;
         private System.Controls.SplitButton splitButton5;
-        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel26;
-        internal System.Windows.Forms.GroupBox Command_Group_A;
-        internal System.Windows.Forms.Button Btn_DoorDown_A;
-        internal System.Windows.Forms.Button Btn_Open_A;
-        internal System.Windows.Forms.Button Btn_Force_Init_A;
-        internal System.Windows.Forms.Button Btn_ClearSlotResult_A;
-        internal System.Windows.Forms.GroupBox GroupBox33;
-        internal System.Windows.Forms.CheckBox ChkWithSlotMap_A;
-        internal System.Windows.Forms.Button Btn_LOAD_A;
-        internal System.Windows.Forms.Button Btn_UNLOAD_A;
-        internal System.Windows.Forms.Button Btn_Map_A;
-        internal System.Windows.Forms.GroupBox groupBox24;
-        internal System.Windows.Forms.Label Lbl_FOUP_Arrived_A;
-        internal System.Windows.Forms.Button Btn_DoorUP_A;
-        internal System.Windows.Forms.GroupBox groupBox25;
-        internal System.Windows.Forms.Button Btn_WaitPOS_A;
-        internal System.Windows.Forms.Button Btn_Mapper_OPEN_A;
-        internal System.Windows.Forms.Button Btn_Mapper_CLOSE_A;
-        internal System.Windows.Forms.Button Btn_StartPOS_A;
-        internal System.Windows.Forms.Button Btn_SlotMap_A;
-        internal System.Windows.Forms.TableLayoutPanel TblPanel_A;
-        internal System.Windows.Forms.Label Lab_A_Slot_01;
-        internal System.Windows.Forms.Label label82;
-        internal System.Windows.Forms.Label Lab_A_Slot_02;
-        internal System.Windows.Forms.Label label83;
-        internal System.Windows.Forms.Label Lab_A_Slot_03;
-        internal System.Windows.Forms.Label label84;
-        internal System.Windows.Forms.Label Lab_A_Slot_04;
-        internal System.Windows.Forms.Label label85;
-        internal System.Windows.Forms.Label Lab_A_Slot_05;
-        internal System.Windows.Forms.Label label86;
-        internal System.Windows.Forms.Label Lab_A_Slot_06;
-        internal System.Windows.Forms.Label label87;
-        internal System.Windows.Forms.Label Lab_A_Slot_07;
-        internal System.Windows.Forms.Label label88;
-        internal System.Windows.Forms.Label Lab_A_Slot_08;
-        internal System.Windows.Forms.Label label89;
-        internal System.Windows.Forms.Label Lab_A_Slot_09;
-        internal System.Windows.Forms.Label label90;
-        internal System.Windows.Forms.Label Lab_A_Slot_10;
-        internal System.Windows.Forms.Label label91;
-        internal System.Windows.Forms.Label Lab_A_Slot_11;
-        internal System.Windows.Forms.Label label92;
-        internal System.Windows.Forms.Label Lab_A_Slot_12;
-        internal System.Windows.Forms.Label label93;
-        internal System.Windows.Forms.Label Lab_A_Slot_13;
-        internal System.Windows.Forms.Label label94;
-        internal System.Windows.Forms.Label Lab_A_Slot_14;
-        internal System.Windows.Forms.Label label95;
-        internal System.Windows.Forms.Label Lab_A_Slot_15;
-        internal System.Windows.Forms.Label label96;
-        internal System.Windows.Forms.Label Lab_A_Slot_16;
-        internal System.Windows.Forms.Label label97;
-        internal System.Windows.Forms.Label Lab_A_Slot_17;
-        internal System.Windows.Forms.Label label98;
-        internal System.Windows.Forms.Label Lab_A_Slot_18;
-        internal System.Windows.Forms.Label label99;
-        internal System.Windows.Forms.Label Lab_A_Slot_19;
-        internal System.Windows.Forms.Label label100;
-        internal System.Windows.Forms.Label Lab_A_Slot_20;
-        internal System.Windows.Forms.Label label101;
-        internal System.Windows.Forms.Label Lab_A_Slot_21;
-        internal System.Windows.Forms.Label label102;
-        internal System.Windows.Forms.Label Lab_A_Slot_22;
-        internal System.Windows.Forms.Label label103;
-        internal System.Windows.Forms.Label Lab_A_Slot_23;
-        internal System.Windows.Forms.Label label104;
-        internal System.Windows.Forms.Label Lab_A_Slot_24;
-        internal System.Windows.Forms.Label label105;
-        internal System.Windows.Forms.Label Lab_A_Slot_25;
-        internal System.Windows.Forms.Label label106;
-        internal System.Windows.Forms.Button Btn_VacuumON_A;
-        internal System.Windows.Forms.Label label107;
-        internal System.Windows.Forms.Button Btn_VacuumOFF_A;
-        internal System.Windows.Forms.Button Btn_Reset_A;
-        internal System.Windows.Forms.Button Btn_LPInit_A;
-        internal System.Windows.Forms.Label LblState_A;
-        internal System.Windows.Forms.Button Btn_ReadState_A;
-        internal System.Windows.Forms.Label LblVersion_A;
-        internal System.Windows.Forms.Button Btn_UnDock_A;
-        internal System.Windows.Forms.Button Btn_Clamp_A;
-        internal System.Windows.Forms.Button Btn_ReadVersion_A;
-        internal System.Windows.Forms.Button Btn_UnClamp_A;
-        internal System.Windows.Forms.Button Btn_Dock_A;
-        internal System.Windows.Forms.Button Btn_Close_A;
-        internal System.Windows.Forms.Button Btn_Unlatch_A;
-        internal System.Windows.Forms.Button Btn_Latch_A;
-        private System.Windows.Forms.Panel panel19;
-        internal System.Windows.Forms.GroupBox GroupBox36;
-        internal System.Windows.Forms.Label Lab_StateCode_19_A;
-        internal System.Windows.Forms.Label Lab_StateCode_17_A;
-        internal System.Windows.Forms.Label Lab_StateCode_18_A;
-        internal System.Windows.Forms.Label Lab_StateCode_16_A;
-        internal System.Windows.Forms.Label Lab_StateCode_14_A;
-        internal System.Windows.Forms.Label Lab_StateCode_15_A;
-        internal System.Windows.Forms.Label Lab_StateCode_13_A;
-        internal System.Windows.Forms.Label Lab_StateCode_11_A;
-        internal System.Windows.Forms.Label Lab_StateCode_12_A;
-        internal System.Windows.Forms.Label label108;
-        internal System.Windows.Forms.Label label109;
-        internal System.Windows.Forms.Label label110;
-        internal System.Windows.Forms.Label label111;
-        internal System.Windows.Forms.Label label112;
-        internal System.Windows.Forms.Label label113;
-        internal System.Windows.Forms.Label label114;
-        internal System.Windows.Forms.Label label115;
-        internal System.Windows.Forms.Label label116;
-        internal System.Windows.Forms.Label Lab_StateCode_10_A;
-        internal System.Windows.Forms.Label Lab_StateCode_8_A;
-        internal System.Windows.Forms.Label Lab_StateCode_9_A;
-        internal System.Windows.Forms.Label Lab_StateCode_7_A;
-        internal System.Windows.Forms.Label Lab_StateCode_4_A;
-        internal System.Windows.Forms.Label Lab_StateCode_5_A;
-        internal System.Windows.Forms.Label Lab_StateCode_3_A;
-        internal System.Windows.Forms.Label Lab_StateCode_1_A;
-        internal System.Windows.Forms.Label Lab_StateCode_2_A;
-        internal System.Windows.Forms.Label label117;
-        internal System.Windows.Forms.Label label118;
-        internal System.Windows.Forms.Label label119;
-        internal System.Windows.Forms.Label label120;
-        internal System.Windows.Forms.Label label121;
-        internal System.Windows.Forms.Label label122;
-        internal System.Windows.Forms.Label Label123;
-        internal System.Windows.Forms.Label Label125;
-        internal System.Windows.Forms.Label Label145;
-        internal System.Windows.Forms.GroupBox GroupBox35;
-        internal System.Windows.Forms.Button Btn_ClearMSG_A;
-        internal System.Windows.Forms.RichTextBox RTxt_Message_A;
         private System.Windows.Forms.TabControl tabControl3;
         private System.Windows.Forms.TabPage tabPage11;
         private System.Windows.Forms.GroupBox groupBox26;

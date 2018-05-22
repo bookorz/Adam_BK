@@ -40,9 +40,12 @@ ConnectionType:"Socket"
 {
 DeviceName:"LoadPortController01",
 DeviceType:"TDKController",
-IPAdress:"127.0.0.1",
-Port:23,
-ConnectionType:"Socket"
+PortName:"COM1",
+BaudRate:"9600",
+ParityBit:"None",
+DataBits:8,
+StopBit:"One",
+ConnectionType:"ComPort"
 },
 {
 DeviceName:"LoadPortController02",

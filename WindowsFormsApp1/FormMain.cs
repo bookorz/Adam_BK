@@ -14,6 +14,8 @@ using TransferControl.Management;
 using log4net.Config;
 using Adam.UI_Update.Monitoring;
 using log4net;
+using Newtonsoft.Json;
+using Adam.UI_Update.Manual;
 
 namespace Adam
 {
@@ -503,41 +505,110 @@ namespace Adam
         public void On_Command_Excuted(Node Node, Transaction Txn, ReturnMessage Msg)
         {
             logger.Debug("On_Command_Excuted");
+
+            switch (Node.Type)
+            {
+                case "LoadPort":
+                    ManualPortStatusUpdate.UpdateLog(Node.Name, Msg.Command);
+                    switch (Txn.Method)
+                    {
+                        case Transaction.Command.LoadPortType.ReadVersion:
+                            ManualPortStatusUpdate.UpdateVersion(Node.Name, Msg.Value);
+                            break;
+                        case Transaction.Command.LoadPortType.GetLED:
+                            ManualPortStatusUpdate.UpdateLED(Node.Name, Msg.Value);
+                            break;
+                        case Transaction.Command.LoadPortType.ReadStatus:
+                            ManualPortStatusUpdate.UpdateStatus(Node.Name, Msg.Value);
+                            break;
+                        case Transaction.Command.LoadPortType.GetCount:
+
+                            break;
+                        case Transaction.Command.LoadPortType.GetMapping:
+                            ManualPortStatusUpdate.UpdateMapping(Node.Name, Msg.Value);
+                            break;
+                    }
+
+                    break;
+            }
         }
 
         public void On_Command_Error(Node Node, Transaction Txn, ReturnMessage Msg)
         {
             logger.Debug("On_Command_Error");
+            switch (Node.Type)
+            {
+                case "LoadPort":
+                    ManualPortStatusUpdate.UpdateLog(Node.Name, Msg.Command);
+                    break;
+            }
+            
         }
 
         public void On_Command_Finished(Node Node, Transaction Txn, ReturnMessage Msg)
         {
             logger.Debug("On_Command_Finished");
+            Transaction txn = new Transaction();
+            switch (Node.Type)
+            {
+                case "LoadPort":
+                    ManualPortStatusUpdate.UpdateLog(Node.Name, Msg.Command);
+                    
+                    switch (Msg.Command)
+                    {
+                        case Transaction.Command.LoadPortType.MappingLoad:
+                            txn.Method = Transaction.Command.LoadPortType.GetMapping;
+                            Node.SendCommand(txn);
+                            break;
+                    }
+                    break;
+            }
+            
         }
 
         public void On_Command_TimeOut(Node Node, Transaction Txn)
         {
             logger.Debug("On_Command_TimeOut");
+            switch (Node.Type)
+            {
+                case "LoadPort":
+                    ManualPortStatusUpdate.UpdateLog(Node.Name, Txn.CommandEncodeStr + " Timeout!");
+                    break;
+            }
         }
 
         public void On_Event_Trigger(Node Node, ReturnMessage Msg)
         {
             logger.Debug("On_Event_Trigger");
+            Transaction txn = new Transaction();
+            switch (Node.Type)
+            {
+                case "LoadPort":
+                    ManualPortStatusUpdate.UpdateLog(Node.Name, Msg.Command);
+                    switch (Msg.Command)
+                    {
+                        case "MANSW":
+                            txn.Method = Transaction.Command.LoadPortType.MappingLoad;
+                            Node.SendCommand(txn);
+                            break;
+                    }
+                    break;
+            }
+            //logger.Debug(JsonConvert.SerializeObject(Msg));
+            
+            
         }
 
         public void On_Node_State_Changed(Node Node, string Status)
         {
             logger.Debug("On_Node_State_Changed");
+            NodeStatusUpdate.UpdateNodeState(Node.Name, Status);
         }
 
         public void On_Controller_State_Changed(string Device_ID, string Status)
         {
             ConnectionStatusUpdate.UpdateControllerStatus(Device_ID, Status);
             logger.Debug("On_Controller_State_Changed");
-
-            Transaction txn = new Transaction();
-
-            NodeManagement.Get("Robot01").SendCommand(txn);
         }
 
         public void On_Port_Finished(string PortName)
@@ -551,6 +622,8 @@ namespace Adam
         {
 
         }
+
+
 
         private void Mode_sw_Click(object sender, EventArgs e)
         {
@@ -588,45 +661,11 @@ namespace Adam
                     w.ProcessFlag = false;
                     w.FromPort = P1.Name;
                     w.Slot = i.ToString();
-                    w.Destination = "LoadPort08";
+                    w.Destination = "LoadPort02";
                     w.DestinationSlot = i.ToString(); ;
                     JobManagement.Add(w.Job_Id, w);
                     P1.JobList.TryAdd(w.Slot, w);
                 }
-
-
-
-
-                Node Aligner2 = NodeManagement.Get("Aligner02");
-                if (Aligner2 != null)
-                {
-                    Aligner2.LockByNode = "LoadPort05";
-                }
-
-                Node P2 = NodeManagement.Get("LoadPort05");
-                P2.Available = true;
-                P2.Fetchable = true;
-
-                P2.JobList.Clear();
-                for (int i = 1; i <= 25; i++)
-                {
-                    Job w = new Job();
-                    w.Job_Id = "Wafer" + (i + 25).ToString("000");
-
-                    w.AlignerFlag = true;
-                    w.OCRFlag = false;
-                    w.Position = P2.Name;
-                    w.ProcessFlag = false;
-                    w.FromPort = P2.Name;
-                    w.Slot = i.ToString();
-                    w.Destination = "LoadPort03";
-                    w.DestinationSlot = i.ToString(); ;
-                    JobManagement.Add(w.Job_Id, w);
-                    P2.JobList.TryAdd(w.Slot, w);
-                }
-
-
-
 
                 RouteCtrl.Auto("Normal");
             }

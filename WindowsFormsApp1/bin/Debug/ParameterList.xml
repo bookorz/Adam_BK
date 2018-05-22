@@ -7,9 +7,9 @@
     <Command_ID>STS__</Command_ID>
     <Command_Format>${0}{1}GET:STS__</Command_Format>
     <Command_Name>Robot 狀態取得</Command_Name>
-    <Command_Order>01</Command_Order>
-    <Parameters_Amount>01</Parameters_Amount>
-    <Parameter_Order>01</Parameter_Order>
+    <Command_Order>1</Command_Order>
+    <Parameters_Amount>1</Parameters_Amount>
+    <Parameter_Order>1</Parameter_Order>
     <Parameter_ID>Null</Parameter_ID>
     <Parameter_Description />
     <Data_Value />
@@ -27,9 +27,9 @@
     <Command_ID>RIO__</Command_ID>
     <Command_Format>${0}{1}GET:RIO__</Command_Format>
     <Command_Name>IO 狀態取得</Command_Name>
-    <Command_Order>02</Command_Order>
-    <Parameters_Amount>01</Parameters_Amount>
-    <Parameter_Order>01</Parameter_Order>
+    <Command_Order>2</Command_Order>
+    <Parameters_Amount>1</Parameters_Amount>
+    <Parameter_Order>1</Parameter_Order>
     <Parameter_ID>no</Parameter_ID>
     <Parameter_Description>no  :IO 號碼。(000~999) * IO 分配表請參閱 Table 5, Table 6, Table 7</Parameter_Description>
     <Data_Value />
@@ -47,12 +47,17 @@
     <Command_ID>SP___</Command_ID>
     <Command_Format>${0}{1}GET:SP___</Command_Format>
     <Command_Name>Speed 限制取得</Command_Name>
-    <Command_Order>03</Command_Order>
-    <Parameters_Amount>01</Parameters_Amount>
-    <Parameter_Order>01</Parameter_Order>
+    <Command_Order>3</Command_Order>
+    <Parameters_Amount>1</Parameters_Amount>
+    <Parameter_Order>1</Parameter_Order>
     <Parameter_ID>Null</Parameter_ID>
     <Parameter_Description />
     <Data_Value />
+    <Min_Value />
+    <Max_Value />
+    <Default_Value />
+    <Values_length />
+    <Is_Fill />
     <Action_Function>DeviceStatusSpeed</Action_Function>
   </Table>
   <Table>
@@ -62,9 +67,9 @@
     <Command_ID>ERR__</Command_ID>
     <Command_Format>${0}{1}GET:ERR__</Command_Format>
     <Command_Name>Error 履歷取得</Command_Name>
-    <Command_Order>04</Command_Order>
-    <Parameters_Amount>01</Parameters_Amount>
-    <Parameter_Order>01</Parameter_Order>
+    <Command_Order>4</Command_Order>
+    <Parameters_Amount>1</Parameters_Amount>
+    <Parameter_Order>1</Parameter_Order>
     <Parameter_ID>no</Parameter_ID>
     <Parameter_Description>no  :履歷號碼  2 位數  10 進位  (00 – 64)</Parameter_Description>
     <Data_Value />
@@ -82,14 +87,13 @@
     <Command_ID>MAP__</Command_ID>
     <Command_Format>${0}{1}GET:MAP__</Command_Format>
     <Command_Name>Mapping 結果取得</Command_Name>
-    <Command_Order>05</Command_Order>
-    <Parameters_Amount>01</Parameters_Amount>
-    <Parameter_Order>01</Parameter_Order>
+    <Command_Order>5</Command_Order>
+    <Parameters_Amount>1</Parameters_Amount>
+    <Parameter_Order>1</Parameter_Order>
     <Parameter_ID>no</Parameter_ID>
-    <Parameter_Description>no  :Data 選擇  (1~3) 
-  1  ：由下往上 Mapping Buffer1 之結果   
-  2  ：由上往下 Mapping Buffer2 之結果   
-  3  ：整合上下 Mapping 之結果</Parameter_Description>
+    <Parameter_Description>
+no  :Data 選擇  (1~3)   1  ：由下往上 Mapping Buffer1 之結果     2  ：由上往下 Mapping Buffer2 之結果     3  ：整合上下 Mapping 之結果
+</Parameter_Description>
     <Data_Value />
     <Min_Value>1</Min_Value>
     <Max_Value>3</Max_Value>
@@ -105,9 +109,9 @@
     <Command_ID>SV___</Command_ID>
     <Command_Format>${0}{1}GET:SV___</Command_Format>
     <Command_Name>電磁閥狀態取得</Command_Name>
-    <Command_Order>06</Command_Order>
-    <Parameters_Amount>01</Parameters_Amount>
-    <Parameter_Order>01</Parameter_Order>
+    <Command_Order>6</Command_Order>
+    <Parameters_Amount>1</Parameters_Amount>
+    <Parameter_Order>1</Parameter_Order>
     <Parameter_ID>no</Parameter_ID>
     <Parameter_Description>no  :電磁閥號碼  (01~10) *電磁閥之相關定義  請參閱  Table 4</Parameter_Description>
     <Data_Value />
@@ -125,9 +129,9 @@
     <Command_ID>TEACH</Command_ID>
     <Command_Format>${0}{1}GET:TEACH</Command_Format>
     <Command_Name>讀取 Point Data 裡的各軸位置(R~R1 六軸)</Command_Name>
-    <Command_Order>07</Command_Order>
-    <Parameters_Amount>01</Parameters_Amount>
-    <Parameter_Order>01</Parameter_Order>
+    <Command_Order>7</Command_Order>
+    <Parameters_Amount>1</Parameters_Amount>
+    <Parameter_Order>1</Parameter_Order>
     <Parameter_ID>pno</Parameter_ID>
     <Parameter_Description>pno    :Teach  點位</Parameter_Description>
     <Data_Value />
@@ -145,14 +149,13 @@
     <Command_ID>PARAM</Command_ID>
     <Command_Format>${0}{1}GET:PARAM</Command_Format>
     <Command_Name>取得 Robot 參數值</Command_Name>
-    <Command_Order>08</Command_Order>
-    <Parameters_Amount>01</Parameters_Amount>
-    <Parameter_Order>01</Parameter_Order>
+    <Command_Order>8</Command_Order>
+    <Parameters_Amount>1</Parameters_Amount>
+    <Parameter_Order>1</Parameter_Order>
     <Parameter_ID>Type</Parameter_ID>
-    <Parameter_Description>Type  :  參數類別(0~9) 
-0    : Options 
-1    : Adjust 
-Others  : Reserved</Parameter_Description>
+    <Parameter_Description>
+Type  :  參數類別(0~9) 0    : Options 1    : Adjust Others  : Reserved
+</Parameter_Description>
     <Data_Value />
     <Min_Value>0</Min_Value>
     <Max_Value>9</Max_Value>
@@ -168,9 +171,9 @@ Others  : Reserved</Parameter_Description>
     <Command_ID>PARAM</Command_ID>
     <Command_Format>${0}{1}GET:PARAM</Command_Format>
     <Command_Name>取得 Robot 參數值</Command_Name>
-    <Command_Order>08</Command_Order>
-    <Parameters_Amount>02</Parameters_Amount>
-    <Parameter_Order>02</Parameter_Order>
+    <Command_Order>8</Command_Order>
+    <Parameters_Amount>2</Parameters_Amount>
+    <Parameter_Order>2</Parameter_Order>
     <Parameter_ID>No</Parameter_ID>
     <Parameter_Description>No  :  參數號碼(000~999) ,參數定義請參考 Table 14,</Parameter_Description>
     <Data_Value />
@@ -188,14 +191,13 @@ Others  : Reserved</Parameter_Description>
     <Command_ID>PARSY</Command_ID>
     <Command_Format>${0}{1}GET:PARSY</Command_Format>
     <Command_Name>取得 Robot 參數詳細資料</Command_Name>
-    <Command_Order>09</Command_Order>
-    <Parameters_Amount>01</Parameters_Amount>
-    <Parameter_Order>01</Parameter_Order>
+    <Command_Order>9</Command_Order>
+    <Parameters_Amount>1</Parameters_Amount>
+    <Parameter_Order>1</Parameter_Order>
     <Parameter_ID>Type</Parameter_ID>
-    <Parameter_Description>Type  :  參數類別(0~9) 
-0    : Option 
-1    : Adjust 
-Others  : Reserved</Parameter_Description>
+    <Parameter_Description>
+Type  :  參數類別(0~9) 0    : Option 1    : Adjust Others  : Reserved
+</Parameter_Description>
     <Data_Value />
     <Min_Value>0</Min_Value>
     <Max_Value>9</Max_Value>
@@ -211,9 +213,9 @@ Others  : Reserved</Parameter_Description>
     <Command_ID>PARSY</Command_ID>
     <Command_Format>${0}{1}GET:PARSY</Command_Format>
     <Command_Name>取得 Robot 參數詳細資料</Command_Name>
-    <Command_Order>09</Command_Order>
-    <Parameters_Amount>02</Parameters_Amount>
-    <Parameter_Order>02</Parameter_Order>
+    <Command_Order>9</Command_Order>
+    <Parameters_Amount>2</Parameters_Amount>
+    <Parameter_Order>2</Parameter_Order>
     <Parameter_ID>No</Parameter_ID>
     <Parameter_Description>No  :  參數號碼(000~999)  請參考 Table 14,</Parameter_Description>
     <Data_Value />
@@ -232,8 +234,8 @@ Others  : Reserved</Parameter_Description>
     <Command_Format>${0}{1}GET:PDATA</Command_Format>
     <Command_Name>取得指定點位欄位的資訊</Command_Name>
     <Command_Order>10</Command_Order>
-    <Parameters_Amount>01</Parameters_Amount>
-    <Parameter_Order>01</Parameter_Order>
+    <Parameters_Amount>1</Parameters_Amount>
+    <Parameter_Order>1</Parameter_Order>
     <Parameter_ID>pno</Parameter_ID>
     <Parameter_Description>pno  : Teach  點位(1~1999)</Parameter_Description>
     <Data_Value />
@@ -252,8 +254,8 @@ Others  : Reserved</Parameter_Description>
     <Command_Format>${0}{1}GET:PDATA</Command_Format>
     <Command_Name>取得指定點位欄位的資訊</Command_Name>
     <Command_Order>10</Command_Order>
-    <Parameters_Amount>02</Parameters_Amount>
-    <Parameter_Order>02</Parameter_Order>
+    <Parameters_Amount>2</Parameters_Amount>
+    <Parameter_Order>2</Parameter_Order>
     <Parameter_ID>no</Parameter_ID>
     <Parameter_Description>no  :  參數號碼(000~124)  請參閱 2-6 Point Data  參數列表</Parameter_Description>
     <Data_Value />
@@ -272,12 +274,12 @@ Others  : Reserved</Parameter_Description>
     <Command_Format>${0}{1}GET:PNSTS</Command_Format>
     <Command_Name>取得 Panel(Wafer) 的狀態</Command_Name>
     <Command_Order>11</Command_Order>
-    <Parameters_Amount>01</Parameters_Amount>
-    <Parameter_Order>01</Parameter_Order>
+    <Parameters_Amount>1</Parameters_Amount>
+    <Parameter_Order>1</Parameter_Order>
     <Parameter_ID>arm</Parameter_ID>
-    <Parameter_Description>arm  : Arm  選擇 
-1  :R 軸 
-2  :L 軸</Parameter_Description>
+    <Parameter_Description>
+arm  : Arm  選擇 1  :R 軸 2  :L 軸
+</Parameter_Description>
     <Data_Value />
     <Min_Value>1</Min_Value>
     <Max_Value>2</Max_Value>
@@ -294,12 +296,12 @@ Others  : Reserved</Parameter_Description>
     <Command_Format>${0}{1}GET:POS__</Command_Format>
     <Command_Name>取得目前 Robot 各軸的位置</Command_Name>
     <Command_Order>12</Command_Order>
-    <Parameters_Amount>01</Parameters_Amount>
-    <Parameter_Order>01</Parameter_Order>
+    <Parameters_Amount>1</Parameters_Amount>
+    <Parameter_Order>1</Parameter_Order>
     <Parameter_ID>Type</Parameter_ID>
-    <Parameter_Description>Type: Command/Encoder  選擇 
-1  : Robot 的 pulse command 
-2  :  實際  Encoder  回傳值</Parameter_Description>
+    <Parameter_Description>
+Type: Command/Encoder  選擇 1  : Robot 的 pulse command 2  :  實際  Encoder  回傳值
+</Parameter_Description>
     <Data_Value />
     <Min_Value>1</Min_Value>
     <Max_Value>2</Max_Value>
@@ -316,12 +318,12 @@ Others  : Reserved</Parameter_Description>
     <Command_Format>${0}{1}GET:POS__</Command_Format>
     <Command_Name>取得目前 Robot 各軸的位置</Command_Name>
     <Command_Order>12</Command_Order>
-    <Parameters_Amount>02</Parameters_Amount>
-    <Parameter_Order>02</Parameter_Order>
+    <Parameters_Amount>2</Parameters_Amount>
+    <Parameter_Order>2</Parameter_Order>
     <Parameter_ID>Unit</Parameter_ID>
-    <Parameter_Description>Unit:  單位選擇 
-1  : um 
-2  : pulse</Parameter_Description>
+    <Parameter_Description>
+Unit:  單位選擇 1  : um 2  : pulse
+</Parameter_Description>
     <Data_Value />
     <Min_Value>1</Min_Value>
     <Max_Value>2</Max_Value>
@@ -338,13 +340,12 @@ Others  : Reserved</Parameter_Description>
     <Command_Format>${0}{1}GET:MAPT_</Command_Format>
     <Command_Name>取得 Mapping 厚度結果</Command_Name>
     <Command_Order>13</Command_Order>
-    <Parameters_Amount>01</Parameters_Amount>
-    <Parameter_Order>01</Parameter_Order>
+    <Parameters_Amount>1</Parameters_Amount>
+    <Parameter_Order>1</Parameter_Order>
     <Parameter_ID>no</Parameter_ID>
-    <Parameter_Description>no  :Data 選擇  (1~3)
-1  ：由下往上 Mapping Buffer1 之厚度結果
-2  ：由上往下 Mapping Buffer2 之厚度結果
-3  ：與 1 的結果相同</Parameter_Description>
+    <Parameter_Description>
+no  :Data 選擇  (1~3)1  ：由下往上 Mapping Buffer1 之厚度結果2  ：由上往下 Mapping Buffer2 之厚度結果3  ：與 1 的結果相同
+</Parameter_Description>
     <Data_Value />
     <Min_Value>1</Min_Value>
     <Max_Value>3</Max_Value>
@@ -360,9 +361,9 @@ Others  : Reserved</Parameter_Description>
     <Command_ID>RIO__</Command_ID>
     <Command_Format>${0}{1}SET:RIO__</Command_Format>
     <Command_Name>IO 狀態設定</Command_Name>
-    <Command_Order>01</Command_Order>
-    <Parameters_Amount>01</Parameters_Amount>
-    <Parameter_Order>01</Parameter_Order>
+    <Command_Order>1</Command_Order>
+    <Parameters_Amount>1</Parameters_Amount>
+    <Parameter_Order>1</Parameter_Order>
     <Parameter_ID>no</Parameter_ID>
     <Parameter_Description>no  :IO 號碼  (000~999)    *IO 表請參閱 Table 5,Table 6,Table 7</Parameter_Description>
     <Data_Value />
@@ -380,13 +381,13 @@ Others  : Reserved</Parameter_Description>
     <Command_ID>RIO__</Command_ID>
     <Command_Format>${0}{1}SET:RIO__</Command_Format>
     <Command_Name>IO 狀態設定</Command_Name>
-    <Command_Order>01</Command_Order>
-    <Parameters_Amount>02</Parameters_Amount>
-    <Parameter_Order>02</Parameter_Order>
+    <Command_Order>1</Command_Order>
+    <Parameters_Amount>2</Parameters_Amount>
+    <Parameter_Order>2</Parameter_Order>
     <Parameter_ID>vl</Parameter_ID>
-    <Parameter_Description>vl  :狀態
-0  :OFF
-1  :ON</Parameter_Description>
+    <Parameter_Description>
+vl  :狀態0  :OFF1  :ON
+</Parameter_Description>
     <Data_Value />
     <Min_Value>0</Min_Value>
     <Max_Value>1</Max_Value>
@@ -402,9 +403,9 @@ Others  : Reserved</Parameter_Description>
     <Command_ID>SP___</Command_ID>
     <Command_Format>${0}{1}SET:SP___</Command_Format>
     <Command_Name>速度限制設定</Command_Name>
-    <Command_Order>02</Command_Order>
-    <Parameters_Amount>01</Parameters_Amount>
-    <Parameter_Order>01</Parameter_Order>
+    <Command_Order>2</Command_Order>
+    <Parameters_Amount>1</Parameters_Amount>
+    <Parameter_Order>1</Parameter_Order>
     <Parameter_ID>vl</Parameter_ID>
     <Parameter_Description>vl  :Speed 限制，(00~99)</Parameter_Description>
     <Data_Value />
@@ -422,12 +423,17 @@ Others  : Reserved</Parameter_Description>
     <Command_ID>PAUSE</Command_ID>
     <Command_Format>${0}{1}SET:PAUSE</Command_Format>
     <Command_Name>動作暫停</Command_Name>
-    <Command_Order>03</Command_Order>
-    <Parameters_Amount>01</Parameters_Amount>
-    <Parameter_Order>01</Parameter_Order>
+    <Command_Order>3</Command_Order>
+    <Parameters_Amount>1</Parameters_Amount>
+    <Parameter_Order>1</Parameter_Order>
     <Parameter_ID>Null</Parameter_ID>
     <Parameter_Description />
     <Data_Value />
+    <Min_Value />
+    <Max_Value />
+    <Default_Value />
+    <Values_length />
+    <Is_Fill />
     <Action_Function>Pause</Action_Function>
   </Table>
   <Table>
@@ -437,12 +443,17 @@ Others  : Reserved</Parameter_Description>
     <Command_ID>CONT_</Command_ID>
     <Command_Format>${0}{1}SET:CONT_</Command_Format>
     <Command_Name>暫停解除</Command_Name>
-    <Command_Order>04</Command_Order>
-    <Parameters_Amount>01</Parameters_Amount>
-    <Parameter_Order>01</Parameter_Order>
+    <Command_Order>4</Command_Order>
+    <Parameters_Amount>1</Parameters_Amount>
+    <Parameter_Order>1</Parameter_Order>
     <Parameter_ID>Null</Parameter_ID>
     <Parameter_Description />
     <Data_Value />
+    <Min_Value />
+    <Max_Value />
+    <Default_Value />
+    <Values_length />
+    <Is_Fill />
     <Action_Function>Continue</Action_Function>
   </Table>
   <Table>
@@ -452,13 +463,13 @@ Others  : Reserved</Parameter_Description>
     <Command_ID>STOP_</Command_ID>
     <Command_Format>${0}{1}SET:STOP_</Command_Format>
     <Command_Name>動作停止</Command_Name>
-    <Command_Order>05</Command_Order>
-    <Parameters_Amount>01</Parameters_Amount>
-    <Parameter_Order>01</Parameter_Order>
+    <Command_Order>5</Command_Order>
+    <Parameters_Amount>1</Parameters_Amount>
+    <Parameter_Order>1</Parameter_Order>
     <Parameter_ID>m1</Parameter_ID>
-    <Parameter_Description>m1  :
-0  :減速停止
-1  :立即停止</Parameter_Description>
+    <Parameter_Description>
+m1  :0  :減速停止1  :立即停止
+</Parameter_Description>
     <Data_Value />
     <Min_Value>0</Min_Value>
     <Max_Value>1</Max_Value>
@@ -474,15 +485,13 @@ Others  : Reserved</Parameter_Description>
     <Command_ID>MODE_</Command_ID>
     <Command_Format>${0}{1}SET:MODE_</Command_Format>
     <Command_Name>Robot 動作模式選擇設定</Command_Name>
-    <Command_Order>06</Command_Order>
-    <Parameters_Amount>01</Parameters_Amount>
-    <Parameter_Order>01</Parameter_Order>
+    <Command_Order>6</Command_Order>
+    <Parameters_Amount>1</Parameters_Amount>
+    <Parameter_Order>1</Parameter_Order>
     <Parameter_ID>vl</Parameter_ID>
-    <Parameter_Description>vl  :動作模式選擇  (0~3) 
-0  :Normal Mode   
-1  :Dry Mode   
-2  :Test Mode   
-3  :Step Mode</Parameter_Description>
+    <Parameter_Description>
+vl  :動作模式選擇  (0~3) 0  :Normal Mode   1  :Dry Mode   2  :Test Mode   3  :Step Mode
+</Parameter_Description>
     <Data_Value />
     <Min_Value>0</Min_Value>
     <Max_Value>3</Max_Value>
@@ -498,12 +507,17 @@ Others  : Reserved</Parameter_Description>
     <Command_ID>STPDO</Command_ID>
     <Command_Format>${0}{1}SET:STPDO</Command_Format>
     <Command_Name>Step 動作等待解除</Command_Name>
-    <Command_Order>07</Command_Order>
-    <Parameters_Amount>01</Parameters_Amount>
-    <Parameter_Order>01</Parameter_Order>
+    <Command_Order>7</Command_Order>
+    <Parameters_Amount>1</Parameters_Amount>
+    <Parameter_Order>1</Parameter_Order>
     <Parameter_ID>Null</Parameter_ID>
     <Parameter_Description />
     <Data_Value />
+    <Min_Value />
+    <Max_Value />
+    <Default_Value />
+    <Values_length />
+    <Is_Fill />
     <Action_Function>STPDO</Action_Function>
   </Table>
   <Table>
@@ -513,12 +527,17 @@ Others  : Reserved</Parameter_Description>
     <Command_ID>RESET</Command_ID>
     <Command_Format>${0}{1}SET:RESET</Command_Format>
     <Command_Name>Error 解除</Command_Name>
-    <Command_Order>08</Command_Order>
-    <Parameters_Amount>01</Parameters_Amount>
-    <Parameter_Order>01</Parameter_Order>
+    <Command_Order>8</Command_Order>
+    <Parameters_Amount>1</Parameters_Amount>
+    <Parameter_Order>1</Parameter_Order>
     <Parameter_ID>Null</Parameter_ID>
     <Parameter_Description />
     <Data_Value />
+    <Min_Value />
+    <Max_Value />
+    <Default_Value />
+    <Values_length />
+    <Is_Fill />
     <Action_Function>ErrorReset</Action_Function>
   </Table>
   <Table>
@@ -528,13 +547,13 @@ Others  : Reserved</Parameter_Description>
     <Command_ID>SERVO</Command_ID>
     <Command_Format>${0}{1}SET:SERVO</Command_Format>
     <Command_Name>Servo On</Command_Name>
-    <Command_Order>09</Command_Order>
-    <Parameters_Amount>01</Parameters_Amount>
-    <Parameter_Order>01</Parameter_Order>
+    <Command_Order>9</Command_Order>
+    <Parameters_Amount>1</Parameters_Amount>
+    <Parameter_Order>1</Parameter_Order>
     <Parameter_ID>sv</Parameter_ID>
-    <Parameter_Description>sv  :Servo ON / OFF 選擇  (0~1) 
-0  :Servo OFF   
-1  :Servo ON</Parameter_Description>
+    <Parameter_Description>
+sv  :Servo ON / OFF 選擇  (0~1) 0  :Servo OFF   1  :Servo ON
+</Parameter_Description>
     <Data_Value />
     <Min_Value>0</Min_Value>
     <Max_Value>1</Max_Value>
@@ -551,20 +570,12 @@ Others  : Reserved</Parameter_Description>
     <Command_Format>${0}{1}SET:SV___</Command_Format>
     <Command_Name>電磁閥狀態設定</Command_Name>
     <Command_Order>10</Command_Order>
-    <Parameters_Amount>01</Parameters_Amount>
-    <Parameter_Order>01</Parameter_Order>
+    <Parameters_Amount>1</Parameters_Amount>
+    <Parameter_Order>1</Parameter_Order>
     <Parameter_ID>no</Parameter_ID>
-    <Parameter_Description>no  :電磁閥號碼
-01  R  軸吸著用電磁閥
-02  L  軸吸著用電磁閥
-03  R  軸吸著用電磁閥 Pad１
-04  R  軸吸著用電磁閥 Pad２
-05  L  軸吸著用電磁閥 Pad１
-06  L  軸吸著用電磁閥 Pad２
-07  R  軸 FORK 開闔電磁閥段數１
-08  R  軸 FORK 開闔電磁閥段數２
-09  L  軸 FORK 開闔電磁閥段數１
-10  L  軸 FORK 開闔電磁閥段數２</Parameter_Description>
+    <Parameter_Description>
+no  :電磁閥號碼01  R  軸吸著用電磁閥02  L  軸吸著用電磁閥03  R  軸吸著用電磁閥 Pad１04  R  軸吸著用電磁閥 Pad２05  L  軸吸著用電磁閥 Pad１06  L  軸吸著用電磁閥 Pad２07  R  軸 FORK 開闔電磁閥段數１08  R  軸 FORK 開闔電磁閥段數２09  L  軸 FORK 開闔電磁閥段數１10  L  軸 FORK 開闔電磁閥段數２
+</Parameter_Description>
     <Data_Value />
     <Min_Value>1</Min_Value>
     <Max_Value>10</Max_Value>
@@ -581,12 +592,12 @@ Others  : Reserved</Parameter_Description>
     <Command_Format>${0}{1}SET:SV___</Command_Format>
     <Command_Name>電磁閥狀態設定</Command_Name>
     <Command_Order>10</Command_Order>
-    <Parameters_Amount>02</Parameters_Amount>
-    <Parameter_Order>02</Parameter_Order>
+    <Parameters_Amount>2</Parameters_Amount>
+    <Parameter_Order>2</Parameter_Order>
     <Parameter_ID>vl</Parameter_ID>
-    <Parameter_Description>vl  :狀態
-0  :OFF
-1  :ON</Parameter_Description>
+    <Parameter_Description>
+vl  :狀態0  :OFF1  :ON
+</Parameter_Description>
     <Data_Value />
     <Min_Value>0</Min_Value>
     <Max_Value>1</Max_Value>
@@ -603,11 +614,16 @@ Others  : Reserved</Parameter_Description>
     <Command_Format>${0}{1}SET:LOGSV</Command_Format>
     <Command_Name>設定 Log file 儲存</Command_Name>
     <Command_Order>11</Command_Order>
-    <Parameters_Amount>01</Parameters_Amount>
-    <Parameter_Order>01</Parameter_Order>
+    <Parameters_Amount>1</Parameters_Amount>
+    <Parameter_Order>1</Parameter_Order>
     <Parameter_ID>Null</Parameter_ID>
     <Parameter_Description />
     <Data_Value />
+    <Min_Value />
+    <Max_Value />
+    <Default_Value />
+    <Values_length />
+    <Is_Fill />
     <Action_Function>LogSave</Action_Function>
   </Table>
   <Table>
@@ -618,8 +634,8 @@ Others  : Reserved</Parameter_Description>
     <Command_Format>${0}{1}SET:TEACH</Command_Format>
     <Command_Name>將目前各軸的位置寫入指定的 Point Data</Command_Name>
     <Command_Order>12</Command_Order>
-    <Parameters_Amount>01</Parameters_Amount>
-    <Parameter_Order>01</Parameter_Order>
+    <Parameters_Amount>1</Parameters_Amount>
+    <Parameter_Order>1</Parameter_Order>
     <Parameter_ID>pno</Parameter_ID>
     <Parameter_Description>pno  :Teaching  點位(0001 ~ 1999)</Parameter_Description>
     <Data_Value />
@@ -638,11 +654,16 @@ Others  : Reserved</Parameter_Description>
     <Command_Format>${0}{1}SET:SAVEP</Command_Format>
     <Command_Name>將 Point Data 存入 CF 卡</Command_Name>
     <Command_Order>13</Command_Order>
-    <Parameters_Amount>01</Parameters_Amount>
-    <Parameter_Order>01</Parameter_Order>
+    <Parameters_Amount>1</Parameters_Amount>
+    <Parameter_Order>1</Parameter_Order>
     <Parameter_ID>Null</Parameter_ID>
     <Parameter_Description />
     <Data_Value />
+    <Min_Value />
+    <Max_Value />
+    <Default_Value />
+    <Values_length />
+    <Is_Fill />
     <Action_Function>PointSave</Action_Function>
   </Table>
   <Table>
@@ -653,11 +674,16 @@ Others  : Reserved</Parameter_Description>
     <Command_Format>${0}{1}SET:LOADP</Command_Format>
     <Command_Name>將 Point Data 從 CF 卡載入</Command_Name>
     <Command_Order>14</Command_Order>
-    <Parameters_Amount>01</Parameters_Amount>
-    <Parameter_Order>01</Parameter_Order>
+    <Parameters_Amount>1</Parameters_Amount>
+    <Parameter_Order>1</Parameter_Order>
     <Parameter_ID>Null</Parameter_ID>
     <Parameter_Description />
     <Data_Value />
+    <Min_Value />
+    <Max_Value />
+    <Default_Value />
+    <Values_length />
+    <Is_Fill />
     <Action_Function>PointLoad</Action_Function>
   </Table>
   <Table>
@@ -668,13 +694,12 @@ Others  : Reserved</Parameter_Description>
     <Command_Format>${0}{1}SET:PARAM</Command_Format>
     <Command_Name>設定 Robot 參數值</Command_Name>
     <Command_Order>15</Command_Order>
-    <Parameters_Amount>01</Parameters_Amount>
-    <Parameter_Order>01</Parameter_Order>
+    <Parameters_Amount>1</Parameters_Amount>
+    <Parameter_Order>1</Parameter_Order>
     <Parameter_ID>Type</Parameter_ID>
-    <Parameter_Description>Type  :參數類別(0~9)
-0    :Option
-1    :Adjust
-Others  :Reserved</Parameter_Description>
+    <Parameter_Description>
+Type  :參數類別(0~9)0    :Option1    :AdjustOthers  :Reserved
+</Parameter_Description>
     <Data_Value />
     <Min_Value>0</Min_Value>
     <Max_Value>9</Max_Value>
@@ -691,8 +716,8 @@ Others  :Reserved</Parameter_Description>
     <Command_Format>${0}{1}SET:PARAM</Command_Format>
     <Command_Name>設定 Robot 參數值</Command_Name>
     <Command_Order>15</Command_Order>
-    <Parameters_Amount>02</Parameters_Amount>
-    <Parameter_Order>02</Parameter_Order>
+    <Parameters_Amount>2</Parameters_Amount>
+    <Parameter_Order>2</Parameter_Order>
     <Parameter_ID>No</Parameter_ID>
     <Parameter_Description>No  :參數號碼(000~999),  請參考 Table 14,</Parameter_Description>
     <Data_Value />
@@ -711,8 +736,8 @@ Others  :Reserved</Parameter_Description>
     <Command_Format>${0}{1}SET:PARAM</Command_Format>
     <Command_Name>設定 Robot 參數值</Command_Name>
     <Command_Order>15</Command_Order>
-    <Parameters_Amount>03</Parameters_Amount>
-    <Parameter_Order>03</Parameter_Order>
+    <Parameters_Amount>3</Parameters_Amount>
+    <Parameter_Order>3</Parameter_Order>
     <Parameter_ID>Data</Parameter_ID>
     <Parameter_Description>data  :  參數值(-99999999~+99999999)</Parameter_Description>
     <Data_Value />
@@ -731,11 +756,16 @@ Others  :Reserved</Parameter_Description>
     <Command_Format>${0}{1}SET:SAVE_</Command_Format>
     <Command_Name>儲存 Robot 參數</Command_Name>
     <Command_Order>16</Command_Order>
-    <Parameters_Amount>01</Parameters_Amount>
-    <Parameter_Order>01</Parameter_Order>
+    <Parameters_Amount>1</Parameters_Amount>
+    <Parameter_Order>1</Parameter_Order>
     <Parameter_ID>Null</Parameter_ID>
     <Parameter_Description />
     <Data_Value />
+    <Min_Value />
+    <Max_Value />
+    <Default_Value />
+    <Values_length />
+    <Is_Fill />
     <Action_Function>Save</Action_Function>
   </Table>
   <Table>
@@ -746,8 +776,8 @@ Others  :Reserved</Parameter_Description>
     <Command_Format>${0}{1}SET:ENCCL</Command_Format>
     <Command_Name>Absolute Encoder Alarm Clear</Command_Name>
     <Command_Order>17</Command_Order>
-    <Parameters_Amount>01</Parameters_Amount>
-    <Parameter_Order>01</Parameter_Order>
+    <Parameters_Amount>1</Parameters_Amount>
+    <Parameter_Order>1</Parameter_Order>
     <Parameter_ID>axis</Parameter_ID>
     <Parameter_Description>axis  :軸，(01~16)</Parameter_Description>
     <Data_Value />
@@ -766,8 +796,8 @@ Others  :Reserved</Parameter_Description>
     <Command_Format>${0}{1}SET:ENCOF</Command_Format>
     <Command_Name>Abssolute Encoder Offset</Command_Name>
     <Command_Order>18</Command_Order>
-    <Parameters_Amount>01</Parameters_Amount>
-    <Parameter_Order>01</Parameter_Order>
+    <Parameters_Amount>1</Parameters_Amount>
+    <Parameter_Order>1</Parameter_Order>
     <Parameter_ID>axis</Parameter_ID>
     <Parameter_Description>axis  :軸，(01 ~ 16)</Parameter_Description>
     <Data_Value />
@@ -786,8 +816,8 @@ Others  :Reserved</Parameter_Description>
     <Command_Format>${0}{1}SET:BATCL</Command_Format>
     <Command_Name>Battery Alarm Clear</Command_Name>
     <Command_Order>19</Command_Order>
-    <Parameters_Amount>01</Parameters_Amount>
-    <Parameter_Order>01</Parameter_Order>
+    <Parameters_Amount>1</Parameters_Amount>
+    <Parameter_Order>1</Parameter_Order>
     <Parameter_ID>axis</Parameter_ID>
     <Parameter_Description>axis  :軸，(01 ~ 16)</Parameter_Description>
     <Data_Value />
@@ -806,8 +836,8 @@ Others  :Reserved</Parameter_Description>
     <Command_Format>${0}{1}SET:PDATA</Command_Format>
     <Command_Name>設定指定點位參數</Command_Name>
     <Command_Order>20</Command_Order>
-    <Parameters_Amount>01</Parameters_Amount>
-    <Parameter_Order>01</Parameter_Order>
+    <Parameters_Amount>1</Parameters_Amount>
+    <Parameter_Order>1</Parameter_Order>
     <Parameter_ID>pno</Parameter_ID>
     <Parameter_Description>pno  : Teach  點位(1~1999)</Parameter_Description>
     <Data_Value />
@@ -826,8 +856,8 @@ Others  :Reserved</Parameter_Description>
     <Command_Format>${0}{1}SET:PDATA</Command_Format>
     <Command_Name>設定指定點位參數</Command_Name>
     <Command_Order>20</Command_Order>
-    <Parameters_Amount>02</Parameters_Amount>
-    <Parameter_Order>02</Parameter_Order>
+    <Parameters_Amount>2</Parameters_Amount>
+    <Parameter_Order>2</Parameter_Order>
     <Parameter_ID>no</Parameter_ID>
     <Parameter_Description>no  :  參數號碼(000~124)  請參閱 2-6 Point Data  參數列表</Parameter_Description>
     <Data_Value />
@@ -846,8 +876,8 @@ Others  :Reserved</Parameter_Description>
     <Command_Format>${0}{1}SET:PDATA</Command_Format>
     <Command_Name>設定指定點位參數</Command_Name>
     <Command_Order>20</Command_Order>
-    <Parameters_Amount>03</Parameters_Amount>
-    <Parameter_Order>03</Parameter_Order>
+    <Parameters_Amount>3</Parameters_Amount>
+    <Parameter_Order>3</Parameter_Order>
     <Parameter_ID>data</Parameter_ID>
     <Parameter_Description>data  :  參數值(-99999999~+99999999)</Parameter_Description>
     <Data_Value />
@@ -865,12 +895,17 @@ Others  :Reserved</Parameter_Description>
     <Command_ID>HOME_</Command_ID>
     <Command_Format>${0}{1}CMD:HOME_</Command_Format>
     <Command_Name>各軸移動至 HOME 位置</Command_Name>
-    <Command_Order>01</Command_Order>
-    <Parameters_Amount>01</Parameters_Amount>
-    <Parameter_Order>01</Parameter_Order>
+    <Command_Order>1</Command_Order>
+    <Parameters_Amount>1</Parameters_Amount>
+    <Parameter_Order>1</Parameter_Order>
     <Parameter_ID>Null</Parameter_ID>
     <Parameter_Description />
     <Data_Value />
+    <Min_Value />
+    <Max_Value />
+    <Default_Value />
+    <Values_length />
+    <Is_Fill />
     <Action_Function>Home</Action_Function>
   </Table>
   <Table>
@@ -880,12 +915,17 @@ Others  :Reserved</Parameter_Description>
     <Command_ID>SHOME</Command_ID>
     <Command_Format>${0}{1}CMD:SHOME</Command_Format>
     <Command_Name>各軸安全回 HOME 位置</Command_Name>
-    <Command_Order>02</Command_Order>
-    <Parameters_Amount>01</Parameters_Amount>
-    <Parameter_Order>01</Parameter_Order>
+    <Command_Order>2</Command_Order>
+    <Parameters_Amount>1</Parameters_Amount>
+    <Parameter_Order>1</Parameter_Order>
     <Parameter_ID>Null</Parameter_ID>
     <Parameter_Description />
     <Data_Value />
+    <Min_Value />
+    <Max_Value />
+    <Default_Value />
+    <Values_length />
+    <Is_Fill />
     <Action_Function>HOMEToSafety</Action_Function>
   </Table>
   <Table>
@@ -895,12 +935,17 @@ Others  :Reserved</Parameter_Description>
     <Command_ID>RHOME</Command_ID>
     <Command_Format>${0}{1}CMD:RHOME</Command_Format>
     <Command_Name>各軸回 ORG 的位置</Command_Name>
-    <Command_Order>03</Command_Order>
-    <Parameters_Amount>01</Parameters_Amount>
-    <Parameter_Order>01</Parameter_Order>
+    <Command_Order>3</Command_Order>
+    <Parameters_Amount>1</Parameters_Amount>
+    <Parameter_Order>1</Parameter_Order>
     <Parameter_ID>Null</Parameter_ID>
     <Parameter_Description />
     <Data_Value />
+    <Min_Value />
+    <Max_Value />
+    <Default_Value />
+    <Values_length />
+    <Is_Fill />
     <Action_Function>HOMEToOrgin</Action_Function>
   </Table>
   <Table>
@@ -910,9 +955,9 @@ Others  :Reserved</Parameter_Description>
     <Command_ID>GET__</Command_ID>
     <Command_Format>${0}{1}CMD:GET__</Command_Format>
     <Command_Name>取片</Command_Name>
-    <Command_Order>04</Command_Order>
-    <Parameters_Amount>01</Parameters_Amount>
-    <Parameter_Order>01</Parameter_Order>
+    <Command_Order>4</Command_Order>
+    <Parameters_Amount>1</Parameters_Amount>
+    <Parameter_Order>1</Parameter_Order>
     <Parameter_ID>pno</Parameter_ID>
     <Parameter_Description>pno  :Point 編號，4 位數 10 進位  (0001 ~ 1999)</Parameter_Description>
     <Data_Value />
@@ -930,9 +975,9 @@ Others  :Reserved</Parameter_Description>
     <Command_ID>GET__</Command_ID>
     <Command_Format>${0}{1}CMD:GET__</Command_Format>
     <Command_Name>取片</Command_Name>
-    <Command_Order>04</Command_Order>
-    <Parameters_Amount>02</Parameters_Amount>
-    <Parameter_Order>02</Parameter_Order>
+    <Command_Order>4</Command_Order>
+    <Parameters_Amount>2</Parameters_Amount>
+    <Parameter_Order>2</Parameter_Order>
     <Parameter_ID>slot</Parameter_ID>
     <Parameter_Description>slot  :Slot，3 位數 10 進位  (001 ~ Point Data  內設定 slot  的值)</Parameter_Description>
     <Data_Value />
@@ -950,14 +995,13 @@ Others  :Reserved</Parameter_Description>
     <Command_ID>GET__</Command_ID>
     <Command_Format>${0}{1}CMD:GET__</Command_Format>
     <Command_Name>取片</Command_Name>
-    <Command_Order>04</Command_Order>
-    <Parameters_Amount>03</Parameters_Amount>
-    <Parameter_Order>03</Parameter_Order>
+    <Command_Order>4</Command_Order>
+    <Parameters_Amount>3</Parameters_Amount>
+    <Parameter_Order>3</Parameter_Order>
     <Parameter_ID>arm</Parameter_ID>
-    <Parameter_Description>arm  :Arm  選擇  ( 1~3) 
-1  :R 軸   
-2  :L 軸   
-3  :R+L 軸  (Point Data : 102RL-GorP =1)</Parameter_Description>
+    <Parameter_Description>
+arm  :Arm  選擇  ( 1~3) 1  :R 軸   2  :L 軸   3  :R+L 軸  (Point Data : 102RL-GorP =1)
+</Parameter_Description>
     <Data_Value />
     <Min_Value>1</Min_Value>
     <Max_Value>3</Max_Value>
@@ -973,13 +1017,13 @@ Others  :Reserved</Parameter_Description>
     <Command_ID>GET__</Command_ID>
     <Command_Format>${0}{1}CMD:GET__</Command_Format>
     <Command_Name>取片</Command_Name>
-    <Command_Order>04</Command_Order>
-    <Parameters_Amount>04</Parameters_Amount>
-    <Parameter_Order>04</Parameter_Order>
+    <Command_Order>4</Command_Order>
+    <Parameters_Amount>4</Parameters_Amount>
+    <Parameter_Order>4</Parameter_Order>
     <Parameter_ID>al</Parameter_ID>
-    <Parameter_Description>al  :Alignment 選擇   
-0  :無  Alignment   
-1  :有  Alignment</Parameter_Description>
+    <Parameter_Description>
+al  :Alignment 選擇   0  :無  Alignment   1  :有  Alignment
+</Parameter_Description>
     <Data_Value />
     <Min_Value>0</Min_Value>
     <Max_Value>1</Max_Value>
@@ -995,17 +1039,13 @@ Others  :Reserved</Parameter_Description>
     <Command_ID>GET__</Command_ID>
     <Command_Format>${0}{1}CMD:GET__</Command_Format>
     <Command_Name>取片</Command_Name>
-    <Command_Order>04</Command_Order>
-    <Parameters_Amount>05</Parameters_Amount>
-    <Parameter_Order>05</Parameter_Order>
+    <Command_Order>4</Command_Order>
+    <Parameters_Amount>5</Parameters_Amount>
+    <Parameter_Order>5</Parameter_Order>
     <Parameter_ID>opt</Parameter_ID>
-    <Parameter_Description>opt  :Option (詳細動作請參閱標準動作說明)
-0  :無指定
-1  :Z  軸移動至  Panel  下點位，Arm 伸出後就停止動作
-2  :Arm 伸出後，Z  軸上升至取片位置後就停止動作
-3  :繼續執行 1or 2 後續的動作 (必須前一個指令有下過 1 或是 2 的 option)
-4  :Micro Step 的功能開啟(Clamp type  不支援 option4 的選項,Vacuum
-    type 某些機型不支援)</Parameter_Description>
+    <Parameter_Description>
+opt  :Option (詳細動作請參閱標準動作說明)0  :無指定1  :Z  軸移動至  Panel  下點位，Arm 伸出後就停止動作2  :Arm 伸出後，Z  軸上升至取片位置後就停止動作3  :繼續執行 1or 2 後續的動作 (必須前一個指令有下過 1 或是 2 的 option)4  :Micro Step 的功能開啟(Clamp type  不支援 option4 的選項,Vacuum    type 某些機型不支援)
+</Parameter_Description>
     <Data_Value />
     <Min_Value>0</Min_Value>
     <Max_Value>4</Max_Value>
@@ -1021,9 +1061,9 @@ Others  :Reserved</Parameter_Description>
     <Command_ID>PUT__</Command_ID>
     <Command_Format>${0}{1}CMD:PUT__</Command_Format>
     <Command_Name>放片</Command_Name>
-    <Command_Order>05</Command_Order>
-    <Parameters_Amount>01</Parameters_Amount>
-    <Parameter_Order>01</Parameter_Order>
+    <Command_Order>5</Command_Order>
+    <Parameters_Amount>1</Parameters_Amount>
+    <Parameter_Order>1</Parameter_Order>
     <Parameter_ID>pno</Parameter_ID>
     <Parameter_Description>pno  :Point 編號，4 位數 10 進位  (0001 ~ 1999)</Parameter_Description>
     <Data_Value />
@@ -1041,9 +1081,9 @@ Others  :Reserved</Parameter_Description>
     <Command_ID>PUT__</Command_ID>
     <Command_Format>${0}{1}CMD:PUT__</Command_Format>
     <Command_Name>放片</Command_Name>
-    <Command_Order>05</Command_Order>
-    <Parameters_Amount>02</Parameters_Amount>
-    <Parameter_Order>02</Parameter_Order>
+    <Command_Order>5</Command_Order>
+    <Parameters_Amount>2</Parameters_Amount>
+    <Parameter_Order>2</Parameter_Order>
     <Parameter_ID>slot</Parameter_ID>
     <Parameter_Description>slot  :Slot，3 位數 10 進位  (001 ~ Point Data  內設定 slot  的值)</Parameter_Description>
     <Data_Value />
@@ -1061,14 +1101,13 @@ Others  :Reserved</Parameter_Description>
     <Command_ID>PUT__</Command_ID>
     <Command_Format>${0}{1}CMD:PUT__</Command_Format>
     <Command_Name>放片</Command_Name>
-    <Command_Order>05</Command_Order>
-    <Parameters_Amount>03</Parameters_Amount>
-    <Parameter_Order>03</Parameter_Order>
+    <Command_Order>5</Command_Order>
+    <Parameters_Amount>3</Parameters_Amount>
+    <Parameter_Order>3</Parameter_Order>
     <Parameter_ID>arm</Parameter_ID>
-    <Parameter_Description>arm  :Arm  選擇  ( 1~3 ) 
-1  :R 軸   
-2  :L 軸   
-3  :R+L 軸(Point Data : 102RL-GorP =1)</Parameter_Description>
+    <Parameter_Description>
+arm  :Arm  選擇  ( 1~3 ) 1  :R 軸   2  :L 軸   3  :R+L 軸(Point Data : 102RL-GorP =1)
+</Parameter_Description>
     <Data_Value />
     <Min_Value>1</Min_Value>
     <Max_Value>3</Max_Value>
@@ -1084,16 +1123,13 @@ Others  :Reserved</Parameter_Description>
     <Command_ID>PUT__</Command_ID>
     <Command_Format>${0}{1}CMD:PUT__</Command_Format>
     <Command_Name>放片</Command_Name>
-    <Command_Order>05</Command_Order>
-    <Parameters_Amount>04</Parameters_Amount>
-    <Parameter_Order>04</Parameter_Order>
+    <Command_Order>5</Command_Order>
+    <Parameters_Amount>4</Parameters_Amount>
+    <Parameter_Order>4</Parameter_Order>
     <Parameter_ID>opt</Parameter_ID>
-    <Parameter_Description>opt  :Option (詳細動作請參閱標準動作說明) 
-0  :無指定,   
-1  :Z  軸移動至  Panel  上點位，Arm 伸出後就停止動作 
-2  :Z 中間位置停止(Teaching 位置  + Z 軸下降設定距離)   
-3    :繼續執行 1 or 2  後續的動作(必須前一個指令有下過  1  或是  2 的 option)
-4  : Micro Step 的功能開啟(Clamp Type 不支援 option 4 的選項)</Parameter_Description>
+    <Parameter_Description>
+opt  :Option (詳細動作請參閱標準動作說明) 0  :無指定,   1  :Z  軸移動至  Panel  上點位，Arm 伸出後就停止動作 2  :Z 中間位置停止(Teaching 位置  + Z 軸下降設定距離)   3    :繼續執行 1 or 2  後續的動作(必須前一個指令有下過  1  或是  2 的 option)4  : Micro Step 的功能開啟(Clamp Type 不支援 option 4 的選項)
+</Parameter_Description>
     <Data_Value />
     <Min_Value>0</Min_Value>
     <Max_Value>4</Max_Value>
@@ -1109,9 +1145,9 @@ Others  :Reserved</Parameter_Description>
     <Command_ID>CARRY</Command_ID>
     <Command_Format>${0}{1}CMD:CARRY</Command_Format>
     <Command_Name>取片+放片 動作指令(Exchange)</Command_Name>
-    <Command_Order>06</Command_Order>
-    <Parameters_Amount>01</Parameters_Amount>
-    <Parameter_Order>01</Parameter_Order>
+    <Command_Order>6</Command_Order>
+    <Parameters_Amount>1</Parameters_Amount>
+    <Parameter_Order>1</Parameter_Order>
     <Parameter_ID>gpno</Parameter_ID>
     <Parameter_Description>gpno  :Point 編號。(0001 ~ 1999)</Parameter_Description>
     <Data_Value />
@@ -1129,9 +1165,9 @@ Others  :Reserved</Parameter_Description>
     <Command_ID>CARRY</Command_ID>
     <Command_Format>${0}{1}CMD:CARRY</Command_Format>
     <Command_Name>取片+放片 動作指令(Exchange)</Command_Name>
-    <Command_Order>06</Command_Order>
-    <Parameters_Amount>02</Parameters_Amount>
-    <Parameter_Order>02</Parameter_Order>
+    <Command_Order>6</Command_Order>
+    <Parameters_Amount>2</Parameters_Amount>
+    <Parameter_Order>2</Parameter_Order>
     <Parameter_ID>gslot</Parameter_ID>
     <Parameter_Description>gslot  :Slot 編號。3 位數 10 進位  (001 ~ Point Data  內設定 slot  的值)</Parameter_Description>
     <Data_Value />
@@ -1149,13 +1185,13 @@ Others  :Reserved</Parameter_Description>
     <Command_ID>CARRY</Command_ID>
     <Command_Format>${0}{1}CMD:CARRY</Command_Format>
     <Command_Name>取片+放片 動作指令(Exchange)</Command_Name>
-    <Command_Order>06</Command_Order>
-    <Parameters_Amount>03</Parameters_Amount>
-    <Parameter_Order>03</Parameter_Order>
+    <Command_Order>6</Command_Order>
+    <Parameters_Amount>3</Parameters_Amount>
+    <Parameter_Order>3</Parameter_Order>
     <Parameter_ID>garm</Parameter_ID>
-    <Parameter_Description>garm  :Arm 選擇  ( 1~2 ) 
-1  :R 軸
-2  :L 軸</Parameter_Description>
+    <Parameter_Description>
+garm  :Arm 選擇  ( 1~2 ) 1  :R 軸2  :L 軸
+</Parameter_Description>
     <Data_Value />
     <Min_Value>1</Min_Value>
     <Max_Value>2</Max_Value>
@@ -1171,9 +1207,9 @@ Others  :Reserved</Parameter_Description>
     <Command_ID>CARRY</Command_ID>
     <Command_Format>${0}{1}CMD:CARRY</Command_Format>
     <Command_Name>取片+放片 動作指令(Exchange)</Command_Name>
-    <Command_Order>06</Command_Order>
-    <Parameters_Amount>04</Parameters_Amount>
-    <Parameter_Order>03</Parameter_Order>
+    <Command_Order>6</Command_Order>
+    <Parameters_Amount>4</Parameters_Amount>
+    <Parameter_Order>3</Parameter_Order>
     <Parameter_ID>ppno</Parameter_ID>
     <Parameter_Description>ppno  :Point 編號。(0001 ~ 1999)</Parameter_Description>
     <Data_Value />
@@ -1191,9 +1227,9 @@ Others  :Reserved</Parameter_Description>
     <Command_ID>CARRY</Command_ID>
     <Command_Format>${0}{1}CMD:CARRY</Command_Format>
     <Command_Name>取片+放片 動作指令(Exchange)</Command_Name>
-    <Command_Order>06</Command_Order>
-    <Parameters_Amount>05</Parameters_Amount>
-    <Parameter_Order>04</Parameter_Order>
+    <Command_Order>6</Command_Order>
+    <Parameters_Amount>5</Parameters_Amount>
+    <Parameter_Order>4</Parameter_Order>
     <Parameter_ID>pslot</Parameter_ID>
     <Parameter_Description>pslot  :Slot 編號。3 位數 10 進位  (001 ~ Point Data  內設定 slot  的值)</Parameter_Description>
     <Data_Value />
@@ -1211,13 +1247,13 @@ Others  :Reserved</Parameter_Description>
     <Command_ID>CARRY</Command_ID>
     <Command_Format>${0}{1}CMD:CARRY</Command_Format>
     <Command_Name>取片+放片 動作指令(Exchange)</Command_Name>
-    <Command_Order>06</Command_Order>
-    <Parameters_Amount>06</Parameters_Amount>
-    <Parameter_Order>05</Parameter_Order>
+    <Command_Order>6</Command_Order>
+    <Parameters_Amount>6</Parameters_Amount>
+    <Parameter_Order>5</Parameter_Order>
     <Parameter_ID>parm</Parameter_ID>
-    <Parameter_Description>parm  :Arm 選擇( 1~2 )
-1  :R 軸   
-2  :L 軸</Parameter_Description>
+    <Parameter_Description>
+parm  :Arm 選擇( 1~2 )1  :R 軸   2  :L 軸
+</Parameter_Description>
     <Data_Value />
     <Min_Value>1</Min_Value>
     <Max_Value>2</Max_Value>
@@ -1233,9 +1269,9 @@ Others  :Reserved</Parameter_Description>
     <Command_ID>GETW_</Command_ID>
     <Command_Format>${0}{1}CMD:GETW_</Command_Format>
     <Command_Name>取片 SXZ 軸到位後停止</Command_Name>
-    <Command_Order>07</Command_Order>
-    <Parameters_Amount>01</Parameters_Amount>
-    <Parameter_Order>01</Parameter_Order>
+    <Command_Order>7</Command_Order>
+    <Parameters_Amount>1</Parameters_Amount>
+    <Parameter_Order>1</Parameter_Order>
     <Parameter_ID>pno</Parameter_ID>
     <Parameter_Description>pno  :Point 編號，(0001 ~ 1999)</Parameter_Description>
     <Data_Value />
@@ -1253,9 +1289,9 @@ Others  :Reserved</Parameter_Description>
     <Command_ID>GETW_</Command_ID>
     <Command_Format>${0}{1}CMD:GETW_</Command_Format>
     <Command_Name>取片 SXZ 軸到位後停止</Command_Name>
-    <Command_Order>07</Command_Order>
-    <Parameters_Amount>02</Parameters_Amount>
-    <Parameter_Order>02</Parameter_Order>
+    <Command_Order>7</Command_Order>
+    <Parameters_Amount>2</Parameters_Amount>
+    <Parameter_Order>2</Parameter_Order>
     <Parameter_ID>slot</Parameter_ID>
     <Parameter_Description>slot  :Slot，3 位數 10 進位  (001 ~ Point Data  內設定 slot  的值)</Parameter_Description>
     <Data_Value />
@@ -1273,13 +1309,13 @@ Others  :Reserved</Parameter_Description>
     <Command_ID>GETW_</Command_ID>
     <Command_Format>${0}{1}CMD:GETW_</Command_Format>
     <Command_Name>取片 SXZ 軸到位後停止</Command_Name>
-    <Command_Order>07</Command_Order>
-    <Parameters_Amount>03</Parameters_Amount>
-    <Parameter_Order>03</Parameter_Order>
+    <Command_Order>7</Command_Order>
+    <Parameters_Amount>3</Parameters_Amount>
+    <Parameter_Order>3</Parameter_Order>
     <Parameter_ID>arm</Parameter_ID>
-    <Parameter_Description>arm  :Arm  選擇  ( 1~2 )
-1  :R 軸   
-2  :L 軸</Parameter_Description>
+    <Parameter_Description>
+arm  :Arm  選擇  ( 1~2 )1  :R 軸   2  :L 軸
+</Parameter_Description>
     <Data_Value />
     <Min_Value>1</Min_Value>
     <Max_Value>2</Max_Value>
@@ -1295,9 +1331,9 @@ Others  :Reserved</Parameter_Description>
     <Command_ID>PUTW_</Command_ID>
     <Command_Format>${0}{1}CMD:PUTW_</Command_Format>
     <Command_Name>放片 SXZ 軸到位後停止</Command_Name>
-    <Command_Order>08</Command_Order>
-    <Parameters_Amount>01</Parameters_Amount>
-    <Parameter_Order>01</Parameter_Order>
+    <Command_Order>8</Command_Order>
+    <Parameters_Amount>1</Parameters_Amount>
+    <Parameter_Order>1</Parameter_Order>
     <Parameter_ID>pno</Parameter_ID>
     <Parameter_Description>pno  :Point 編號，(0001 ~ 1999)</Parameter_Description>
     <Data_Value />
@@ -1315,9 +1351,9 @@ Others  :Reserved</Parameter_Description>
     <Command_ID>PUTW_</Command_ID>
     <Command_Format>${0}{1}CMD:PUTW_</Command_Format>
     <Command_Name>放片 SXZ 軸到位後停止</Command_Name>
-    <Command_Order>08</Command_Order>
-    <Parameters_Amount>02</Parameters_Amount>
-    <Parameter_Order>02</Parameter_Order>
+    <Command_Order>8</Command_Order>
+    <Parameters_Amount>2</Parameters_Amount>
+    <Parameter_Order>2</Parameter_Order>
     <Parameter_ID>slot</Parameter_ID>
     <Parameter_Description>slot  :Slot，3 位數 10 進位  (001 ~ Point Data  內設定 slot  的值)</Parameter_Description>
     <Data_Value />
@@ -1335,13 +1371,13 @@ Others  :Reserved</Parameter_Description>
     <Command_ID>PUTW_</Command_ID>
     <Command_Format>${0}{1}CMD:PUTW_</Command_Format>
     <Command_Name>放片 SXZ 軸到位後停止</Command_Name>
-    <Command_Order>08</Command_Order>
-    <Parameters_Amount>03</Parameters_Amount>
-    <Parameter_Order>03</Parameter_Order>
+    <Command_Order>8</Command_Order>
+    <Parameters_Amount>3</Parameters_Amount>
+    <Parameter_Order>3</Parameter_Order>
     <Parameter_ID>arm</Parameter_ID>
-    <Parameter_Description>arm  :Arm  選擇  ( 1~2 )
-1  :R 軸
-2  :L 軸</Parameter_Description>
+    <Parameter_Description>
+arm  :Arm  選擇  ( 1~2 )1  :R 軸2  :L 軸
+</Parameter_Description>
     <Data_Value />
     <Min_Value>1</Min_Value>
     <Max_Value>2</Max_Value>
@@ -1357,9 +1393,9 @@ Others  :Reserved</Parameter_Description>
     <Command_ID>RET__</Command_ID>
     <Command_Format>${0}{1}CMD:RET__</Command_Format>
     <Command_Name>Arm 回 HOME 位置</Command_Name>
-    <Command_Order>09</Command_Order>
-    <Parameters_Amount>01</Parameters_Amount>
-    <Parameter_Order>01</Parameter_Order>
+    <Command_Order>9</Command_Order>
+    <Parameters_Amount>1</Parameters_Amount>
+    <Parameter_Order>1</Parameter_Order>
     <Parameter_ID>Null</Parameter_ID>
     <Parameter_Description />
     <Data_Value />
@@ -1378,8 +1414,8 @@ Others  :Reserved</Parameter_Description>
     <Command_Format>${0}{1}CMD:MOVED</Command_Format>
     <Command_Name>移動指定軸到指定點位</Command_Name>
     <Command_Order>10</Command_Order>
-    <Parameters_Amount>01</Parameters_Amount>
-    <Parameter_Order>01</Parameter_Order>
+    <Parameters_Amount>1</Parameters_Amount>
+    <Parameter_Order>1</Parameter_Order>
     <Parameter_ID>axis</Parameter_ID>
     <Parameter_Description>axis  :軸, (01 ~ 16) ,軸資訊請參考 Table 9</Parameter_Description>
     <Data_Value />
@@ -1398,13 +1434,12 @@ Others  :Reserved</Parameter_Description>
     <Command_Format>${0}{1}CMD:MOVED</Command_Format>
     <Command_Name>移動指定軸到指定點位</Command_Name>
     <Command_Order>10</Command_Order>
-    <Parameters_Amount>02</Parameters_Amount>
-    <Parameter_Order>02</Parameter_Order>
+    <Parameters_Amount>2</Parameters_Amount>
+    <Parameter_Order>2</Parameter_Order>
     <Parameter_ID>type</Parameter_ID>
-    <Parameter_Description>type  :移動方式選擇
-0  : ABS:絕對位置
-1  : INC:相對位置
-2  : Pulse 數量</Parameter_Description>
+    <Parameter_Description>
+type  :移動方式選擇0  : ABS:絕對位置1  : INC:相對位置2  : Pulse 數量
+</Parameter_Description>
     <Data_Value />
     <Min_Value>0</Min_Value>
     <Max_Value>2</Max_Value>
@@ -1421,8 +1456,8 @@ Others  :Reserved</Parameter_Description>
     <Command_Format>${0}{1}CMD:ORG__</Command_Format>
     <Command_Name>ORG Search</Command_Name>
     <Command_Order>11</Command_Order>
-    <Parameters_Amount>01</Parameters_Amount>
-    <Parameter_Order>01</Parameter_Order>
+    <Parameters_Amount>1</Parameters_Amount>
+    <Parameter_Order>1</Parameter_Order>
     <Parameter_ID>Null</Parameter_ID>
     <Parameter_Description />
     <Data_Value />
@@ -1441,8 +1476,8 @@ Others  :Reserved</Parameter_Description>
     <Command_Format>${0}{1}CMD:EORG_</Command_Format>
     <Command_Name>單軸 ORG Search</Command_Name>
     <Command_Order>12</Command_Order>
-    <Parameters_Amount>01</Parameters_Amount>
-    <Parameter_Order>01</Parameter_Order>
+    <Parameters_Amount>1</Parameters_Amount>
+    <Parameter_Order>1</Parameter_Order>
     <Parameter_ID>axis</Parameter_ID>
     <Parameter_Description>axis  :軸, (01 ~ 16) ,軸資訊請參考 Table 9</Parameter_Description>
     <Data_Value />
@@ -1461,12 +1496,12 @@ Others  :Reserved</Parameter_Description>
     <Command_Format>${0}{1}CMD:WHLD_</Command_Format>
     <Command_Name>Panel(Wafer) 保持</Command_Name>
     <Command_Order>13</Command_Order>
-    <Parameters_Amount>01</Parameters_Amount>
-    <Parameter_Order>01</Parameter_Order>
+    <Parameters_Amount>1</Parameters_Amount>
+    <Parameter_Order>1</Parameter_Order>
     <Parameter_ID>arm</Parameter_ID>
-    <Parameter_Description>arm  :Arm 選擇  ( 1~2 )
-1  :R 軸
-2  :L 軸</Parameter_Description>
+    <Parameter_Description>
+arm  :Arm 選擇  ( 1~2 )1  :R 軸2  :L 軸
+</Parameter_Description>
     <Data_Value />
     <Min_Value>1</Min_Value>
     <Max_Value>2</Max_Value>
@@ -1483,12 +1518,12 @@ Others  :Reserved</Parameter_Description>
     <Command_Format>${0}{1}CMD:WRLS_</Command_Format>
     <Command_Name>Panel(Wafer) 解除</Command_Name>
     <Command_Order>14</Command_Order>
-    <Parameters_Amount>01</Parameters_Amount>
-    <Parameter_Order>01</Parameter_Order>
+    <Parameters_Amount>1</Parameters_Amount>
+    <Parameter_Order>1</Parameter_Order>
     <Parameter_ID>arm</Parameter_ID>
-    <Parameter_Description>arm  :Arm 選擇  ( 1~2 )
-1  :R 軸
-2  :L 軸</Parameter_Description>
+    <Parameter_Description>
+arm  :Arm 選擇  ( 1~2 )1  :R 軸2  :L 軸
+</Parameter_Description>
     <Data_Value />
     <Min_Value>1</Min_Value>
     <Max_Value>2</Max_Value>
@@ -1505,8 +1540,8 @@ Others  :Reserved</Parameter_Description>
     <Command_Format>${0}{1}CMD:ALX__</Command_Format>
     <Command_Name>端面檢出 (option)</Command_Name>
     <Command_Order>15</Command_Order>
-    <Parameters_Amount>01</Parameters_Amount>
-    <Parameter_Order>01</Parameter_Order>
+    <Parameters_Amount>1</Parameters_Amount>
+    <Parameter_Order>1</Parameter_Order>
     <Parameter_ID>pno</Parameter_ID>
     <Parameter_Description>pno  :Point 編號。(0001 ~ 1999)</Parameter_Description>
     <Data_Value />
@@ -1525,12 +1560,12 @@ Others  :Reserved</Parameter_Description>
     <Command_Format>${0}{1}CMD:ALX__</Command_Format>
     <Command_Name>端面檢出 (option)</Command_Name>
     <Command_Order>15</Command_Order>
-    <Parameters_Amount>02</Parameters_Amount>
-    <Parameter_Order>02</Parameter_Order>
+    <Parameters_Amount>2</Parameters_Amount>
+    <Parameter_Order>2</Parameter_Order>
     <Parameter_ID>arm</Parameter_ID>
-    <Parameter_Description>arm  :Arm 選擇。  ( 1~2 )   
-1  :R 軸
-2  :L 軸</Parameter_Description>
+    <Parameter_Description>
+arm  :Arm 選擇。  ( 1~2 )   1  :R 軸2  :L 軸
+</Parameter_Description>
     <Data_Value />
     <Min_Value>1</Min_Value>
     <Max_Value>2</Max_Value>
@@ -1547,12 +1582,12 @@ Others  :Reserved</Parameter_Description>
     <Command_Format>${0}{1}CMD:FORK_</Command_Format>
     <Command_Name>Fork 開合位置變更 (option)</Command_Name>
     <Command_Order>16</Command_Order>
-    <Parameters_Amount>01</Parameters_Amount>
-    <Parameter_Order>01</Parameter_Order>
+    <Parameters_Amount>1</Parameters_Amount>
+    <Parameter_Order>1</Parameter_Order>
     <Parameter_ID>arm</Parameter_ID>
-    <Parameter_Description>arm  :Arm 選擇。  ( 1~2 )   
-1  :R 軸
-2  :L 軸</Parameter_Description>
+    <Parameter_Description>
+arm  :Arm 選擇。  ( 1~2 )   1  :R 軸2  :L 軸
+</Parameter_Description>
     <Data_Value />
     <Min_Value>1</Min_Value>
     <Max_Value>2</Max_Value>
@@ -1569,8 +1604,8 @@ Others  :Reserved</Parameter_Description>
     <Command_Format>${0}{1}CMD:FORK_</Command_Format>
     <Command_Name>Fork 開合位置變更 (option)</Command_Name>
     <Command_Order>16</Command_Order>
-    <Parameters_Amount>02</Parameters_Amount>
-    <Parameter_Order>02</Parameter_Order>
+    <Parameters_Amount>2</Parameters_Amount>
+    <Parameter_Order>2</Parameter_Order>
     <Parameter_ID>fork</Parameter_ID>
     <Parameter_Description>fork  :開合位置選擇  ( 0~3 )</Parameter_Description>
     <Data_Value />
@@ -1589,8 +1624,8 @@ Others  :Reserved</Parameter_Description>
     <Command_Format>${0}{1}CMD:FORK_</Command_Format>
     <Command_Name>Fork 開合位置變更 (option)</Command_Name>
     <Command_Order>16</Command_Order>
-    <Parameters_Amount>03</Parameters_Amount>
-    <Parameter_Order>03</Parameter_Order>
+    <Parameters_Amount>3</Parameters_Amount>
+    <Parameter_Order>3</Parameter_Order>
     <Parameter_ID>vac</Parameter_ID>
     <Parameter_Description>vac  :Pad 電磁閥選擇  ( 0~3 )</Parameter_Description>
     <Data_Value />
@@ -1609,22 +1644,18 @@ Others  :Reserved</Parameter_Description>
     <Command_Format>${0}{1}CMD:FRKCB</Command_Format>
     <Command_Name>Fork Calibration (option)</Command_Name>
     <Command_Order>17</Command_Order>
-    <Parameters_Amount>01</Parameters_Amount>
-    <Parameter_Order>01</Parameter_Order>
-    <Parameter_ID>Null</Parameter_ID>
-    <Parameter_Description>arm  :Arm 選擇。  ( 1~3 )   
-1  :R 軸
-2  :L 軸
-3  :R+L  軸</Parameter_Description>
-    <Data_Value>arm  :Arm 選擇。  ( 1~3 )   
-1  :R 軸
-2  :L 軸
-3  :R+L  軸</Data_Value>
-    <Min_Value />
-    <Max_Value />
-    <Default_Value />
-    <Values_length />
-    <Is_Fill />
+    <Parameters_Amount>1</Parameters_Amount>
+    <Parameter_Order>1</Parameter_Order>
+    <Parameter_ID>arm</Parameter_ID>
+    <Parameter_Description>
+arm  :Arm 選擇。  ( 1~2 )   1  :R 軸2  :L 軸
+</Parameter_Description>
+    <Data_Value />
+    <Min_Value>1</Min_Value>
+    <Max_Value>2</Max_Value>
+    <Default_Value>1</Default_Value>
+    <Values_length>1</Values_length>
+    <Is_Fill>N</Is_Fill>
     <Action_Function />
   </Table>
   <Table>
@@ -1635,8 +1666,8 @@ Others  :Reserved</Parameter_Description>
     <Command_Format>${0}{1}CMD:MAP__</Command_Format>
     <Command_Name>Mapping (option)</Command_Name>
     <Command_Order>18</Command_Order>
-    <Parameters_Amount>01</Parameters_Amount>
-    <Parameter_Order>01</Parameter_Order>
+    <Parameters_Amount>1</Parameters_Amount>
+    <Parameter_Order>1</Parameter_Order>
     <Parameter_ID>pno</Parameter_ID>
     <Parameter_Description>pno  :Point Data 編號。(0001 ~ 1999)</Parameter_Description>
     <Data_Value />
@@ -1655,8 +1686,8 @@ Others  :Reserved</Parameter_Description>
     <Command_Format>${0}{1}CMD:MAP__</Command_Format>
     <Command_Name>Mapping (option)</Command_Name>
     <Command_Order>18</Command_Order>
-    <Parameters_Amount>02</Parameters_Amount>
-    <Parameter_Order>02</Parameter_Order>
+    <Parameters_Amount>2</Parameters_Amount>
+    <Parameter_Order>2</Parameter_Order>
     <Parameter_ID>col</Parameter_ID>
     <Parameter_Description>col  :Cassette  列編號。(1 ~ Point Data 內設定 col  的值)</Parameter_Description>
     <Data_Value />
@@ -1675,12 +1706,12 @@ Others  :Reserved</Parameter_Description>
     <Command_Format>${0}{1}CMD:MAP__</Command_Format>
     <Command_Name>Mapping (option)</Command_Name>
     <Command_Order>18</Command_Order>
-    <Parameters_Amount>03</Parameters_Amount>
-    <Parameter_Order>03</Parameter_Order>
+    <Parameters_Amount>3</Parameters_Amount>
+    <Parameter_Order>3</Parameter_Order>
     <Parameter_ID>slot</Parameter_ID>
-    <Parameter_Description>slot  :Slot  編號。(000~ Point Data  內設定 slot  的值) 
-0    :掃描全部  Slot 
-Others  :從指定的 Slot 開始掃描</Parameter_Description>
+    <Parameter_Description>
+slot  :Slot  編號。(000~ Point Data  內設定 slot  的值) 0    :掃描全部  Slot Others  :從指定的 Slot 開始掃描
+</Parameter_Description>
     <Data_Value />
     <Min_Value>1</Min_Value>
     <Max_Value>50</Max_Value>
@@ -1697,12 +1728,12 @@ Others  :從指定的 Slot 開始掃描</Parameter_Description>
     <Command_Format>${0}{1}CMD:MULSE</Command_Format>
     <Command_Name>Multi Panel 選擇命令 (option)</Command_Name>
     <Command_Order>19</Command_Order>
-    <Parameters_Amount>01</Parameters_Amount>
-    <Parameter_Order>01</Parameter_Order>
+    <Parameters_Amount>1</Parameters_Amount>
+    <Parameter_Order>1</Parameter_Order>
     <Parameter_ID>Arm</Parameter_ID>
-    <Parameter_Description>Arm  :1 或 2，R 或Ｌ軸選擇
-1:  Ｒ軸
-2:  Ｌ軸</Parameter_Description>
+    <Parameter_Description>
+Arm  :1 或 2，R 或Ｌ軸選擇1:  Ｒ軸2:  Ｌ軸
+</Parameter_Description>
     <Data_Value />
     <Min_Value>1</Min_Value>
     <Max_Value>2</Max_Value>
@@ -1719,12 +1750,12 @@ Others  :從指定的 Slot 開始掃描</Parameter_Description>
     <Command_Format>${0}{1}CMD:MULSE</Command_Format>
     <Command_Name>Multi Panel 選擇命令 (option)</Command_Name>
     <Command_Order>19</Command_Order>
-    <Parameters_Amount>02</Parameters_Amount>
-    <Parameter_Order>02</Parameter_Order>
+    <Parameters_Amount>2</Parameters_Amount>
+    <Parameter_Order>2</Parameter_Order>
     <Parameter_ID>no1</Parameter_ID>
-    <Parameter_Description>no1~16:  選擇指定的 Panel   
-0 :  關閉 
-1 :  開啟</Parameter_Description>
+    <Parameter_Description>
+no1~16:  選擇指定的 Panel   0 :  關閉 1 :  開啟
+</Parameter_Description>
     <Data_Value />
     <Min_Value>0</Min_Value>
     <Max_Value>1</Max_Value>
@@ -1741,12 +1772,12 @@ Others  :從指定的 Slot 開始掃描</Parameter_Description>
     <Command_Format>${0}{1}CMD:MULSE</Command_Format>
     <Command_Name>Multi Panel 選擇命令 (option)</Command_Name>
     <Command_Order>19</Command_Order>
-    <Parameters_Amount>03</Parameters_Amount>
-    <Parameter_Order>03</Parameter_Order>
+    <Parameters_Amount>3</Parameters_Amount>
+    <Parameter_Order>3</Parameter_Order>
     <Parameter_ID>no2</Parameter_ID>
-    <Parameter_Description>no1~16:  選擇指定的 Panel   
-0 :  關閉 
-1 :  開啟</Parameter_Description>
+    <Parameter_Description>
+no1~16:  選擇指定的 Panel   0 :  關閉 1 :  開啟
+</Parameter_Description>
     <Data_Value />
     <Min_Value>0</Min_Value>
     <Max_Value>1</Max_Value>
@@ -1763,12 +1794,12 @@ Others  :從指定的 Slot 開始掃描</Parameter_Description>
     <Command_Format>${0}{1}CMD:MULSE</Command_Format>
     <Command_Name>Multi Panel 選擇命令 (option)</Command_Name>
     <Command_Order>19</Command_Order>
-    <Parameters_Amount>04</Parameters_Amount>
-    <Parameter_Order>04</Parameter_Order>
+    <Parameters_Amount>4</Parameters_Amount>
+    <Parameter_Order>4</Parameter_Order>
     <Parameter_ID>no3</Parameter_ID>
-    <Parameter_Description>no1~16:  選擇指定的 Panel   
-0 :  關閉 
-1 :  開啟</Parameter_Description>
+    <Parameter_Description>
+no1~16:  選擇指定的 Panel   0 :  關閉 1 :  開啟
+</Parameter_Description>
     <Data_Value />
     <Min_Value>0</Min_Value>
     <Max_Value>1</Max_Value>
@@ -1785,12 +1816,12 @@ Others  :從指定的 Slot 開始掃描</Parameter_Description>
     <Command_Format>${0}{1}CMD:MULSE</Command_Format>
     <Command_Name>Multi Panel 選擇命令 (option)</Command_Name>
     <Command_Order>19</Command_Order>
-    <Parameters_Amount>05</Parameters_Amount>
-    <Parameter_Order>05</Parameter_Order>
+    <Parameters_Amount>5</Parameters_Amount>
+    <Parameter_Order>5</Parameter_Order>
     <Parameter_ID>no4</Parameter_ID>
-    <Parameter_Description>no1~16:  選擇指定的 Panel   
-0 :  關閉 
-1 :  開啟</Parameter_Description>
+    <Parameter_Description>
+no1~16:  選擇指定的 Panel   0 :  關閉 1 :  開啟
+</Parameter_Description>
     <Data_Value />
     <Min_Value>0</Min_Value>
     <Max_Value>1</Max_Value>
@@ -1807,12 +1838,12 @@ Others  :從指定的 Slot 開始掃描</Parameter_Description>
     <Command_Format>${0}{1}CMD:MULSE</Command_Format>
     <Command_Name>Multi Panel 選擇命令 (option)</Command_Name>
     <Command_Order>19</Command_Order>
-    <Parameters_Amount>06</Parameters_Amount>
-    <Parameter_Order>06</Parameter_Order>
+    <Parameters_Amount>6</Parameters_Amount>
+    <Parameter_Order>6</Parameter_Order>
     <Parameter_ID>no5</Parameter_ID>
-    <Parameter_Description>no1~16:  選擇指定的 Panel   
-0 :  關閉 
-1 :  開啟</Parameter_Description>
+    <Parameter_Description>
+no1~16:  選擇指定的 Panel   0 :  關閉 1 :  開啟
+</Parameter_Description>
     <Data_Value />
     <Min_Value>0</Min_Value>
     <Max_Value>1</Max_Value>
@@ -1829,12 +1860,12 @@ Others  :從指定的 Slot 開始掃描</Parameter_Description>
     <Command_Format>${0}{1}CMD:MULSE</Command_Format>
     <Command_Name>Multi Panel 選擇命令 (option)</Command_Name>
     <Command_Order>19</Command_Order>
-    <Parameters_Amount>07</Parameters_Amount>
-    <Parameter_Order>07</Parameter_Order>
+    <Parameters_Amount>7</Parameters_Amount>
+    <Parameter_Order>7</Parameter_Order>
     <Parameter_ID>no6</Parameter_ID>
-    <Parameter_Description>no1~16:  選擇指定的 Panel   
-0 :  關閉 
-1 :  開啟</Parameter_Description>
+    <Parameter_Description>
+no1~16:  選擇指定的 Panel   0 :  關閉 1 :  開啟
+</Parameter_Description>
     <Data_Value />
     <Min_Value>0</Min_Value>
     <Max_Value>1</Max_Value>
@@ -1851,12 +1882,12 @@ Others  :從指定的 Slot 開始掃描</Parameter_Description>
     <Command_Format>${0}{1}CMD:MULSE</Command_Format>
     <Command_Name>Multi Panel 選擇命令 (option)</Command_Name>
     <Command_Order>19</Command_Order>
-    <Parameters_Amount>08</Parameters_Amount>
-    <Parameter_Order>08</Parameter_Order>
+    <Parameters_Amount>8</Parameters_Amount>
+    <Parameter_Order>8</Parameter_Order>
     <Parameter_ID>no7</Parameter_ID>
-    <Parameter_Description>no1~16:  選擇指定的 Panel   
-0 :  關閉 
-1 :  開啟</Parameter_Description>
+    <Parameter_Description>
+no1~16:  選擇指定的 Panel   0 :  關閉 1 :  開啟
+</Parameter_Description>
     <Data_Value />
     <Min_Value>0</Min_Value>
     <Max_Value>1</Max_Value>
@@ -1873,12 +1904,12 @@ Others  :從指定的 Slot 開始掃描</Parameter_Description>
     <Command_Format>${0}{1}CMD:MULSE</Command_Format>
     <Command_Name>Multi Panel 選擇命令 (option)</Command_Name>
     <Command_Order>19</Command_Order>
-    <Parameters_Amount>09</Parameters_Amount>
-    <Parameter_Order>09</Parameter_Order>
+    <Parameters_Amount>9</Parameters_Amount>
+    <Parameter_Order>9</Parameter_Order>
     <Parameter_ID>no8</Parameter_ID>
-    <Parameter_Description>no1~16:  選擇指定的 Panel   
-0 :  關閉 
-1 :  開啟</Parameter_Description>
+    <Parameter_Description>
+no1~16:  選擇指定的 Panel   0 :  關閉 1 :  開啟
+</Parameter_Description>
     <Data_Value />
     <Min_Value>0</Min_Value>
     <Max_Value>1</Max_Value>
@@ -1898,9 +1929,9 @@ Others  :從指定的 Slot 開始掃描</Parameter_Description>
     <Parameters_Amount>10</Parameters_Amount>
     <Parameter_Order>10</Parameter_Order>
     <Parameter_ID>no9</Parameter_ID>
-    <Parameter_Description>no1~16:  選擇指定的 Panel   
-0 :  關閉 
-1 :  開啟</Parameter_Description>
+    <Parameter_Description>
+no1~16:  選擇指定的 Panel   0 :  關閉 1 :  開啟
+</Parameter_Description>
     <Data_Value />
     <Min_Value>0</Min_Value>
     <Max_Value>1</Max_Value>
@@ -1920,9 +1951,9 @@ Others  :從指定的 Slot 開始掃描</Parameter_Description>
     <Parameters_Amount>11</Parameters_Amount>
     <Parameter_Order>11</Parameter_Order>
     <Parameter_ID>no10</Parameter_ID>
-    <Parameter_Description>no1~16:  選擇指定的 Panel   
-0 :  關閉 
-1 :  開啟</Parameter_Description>
+    <Parameter_Description>
+no1~16:  選擇指定的 Panel   0 :  關閉 1 :  開啟
+</Parameter_Description>
     <Data_Value />
     <Min_Value>0</Min_Value>
     <Max_Value>1</Max_Value>
@@ -1942,9 +1973,9 @@ Others  :從指定的 Slot 開始掃描</Parameter_Description>
     <Parameters_Amount>12</Parameters_Amount>
     <Parameter_Order>12</Parameter_Order>
     <Parameter_ID>no11</Parameter_ID>
-    <Parameter_Description>no1~16:  選擇指定的 Panel   
-0 :  關閉 
-1 :  開啟</Parameter_Description>
+    <Parameter_Description>
+no1~16:  選擇指定的 Panel   0 :  關閉 1 :  開啟
+</Parameter_Description>
     <Data_Value />
     <Min_Value>0</Min_Value>
     <Max_Value>1</Max_Value>
@@ -1964,9 +1995,9 @@ Others  :從指定的 Slot 開始掃描</Parameter_Description>
     <Parameters_Amount>13</Parameters_Amount>
     <Parameter_Order>13</Parameter_Order>
     <Parameter_ID>no12</Parameter_ID>
-    <Parameter_Description>no1~16:  選擇指定的 Panel   
-0 :  關閉 
-1 :  開啟</Parameter_Description>
+    <Parameter_Description>
+no1~16:  選擇指定的 Panel   0 :  關閉 1 :  開啟
+</Parameter_Description>
     <Data_Value />
     <Min_Value>0</Min_Value>
     <Max_Value>1</Max_Value>
@@ -1986,9 +2017,9 @@ Others  :從指定的 Slot 開始掃描</Parameter_Description>
     <Parameters_Amount>14</Parameters_Amount>
     <Parameter_Order>14</Parameter_Order>
     <Parameter_ID>no13</Parameter_ID>
-    <Parameter_Description>no1~16:  選擇指定的 Panel   
-0 :  關閉 
-1 :  開啟</Parameter_Description>
+    <Parameter_Description>
+no1~16:  選擇指定的 Panel   0 :  關閉 1 :  開啟
+</Parameter_Description>
     <Data_Value />
     <Min_Value>0</Min_Value>
     <Max_Value>1</Max_Value>
@@ -2008,9 +2039,9 @@ Others  :從指定的 Slot 開始掃描</Parameter_Description>
     <Parameters_Amount>15</Parameters_Amount>
     <Parameter_Order>15</Parameter_Order>
     <Parameter_ID>no14</Parameter_ID>
-    <Parameter_Description>no1~16:  選擇指定的 Panel   
-0 :  關閉 
-1 :  開啟</Parameter_Description>
+    <Parameter_Description>
+no1~16:  選擇指定的 Panel   0 :  關閉 1 :  開啟
+</Parameter_Description>
     <Data_Value />
     <Min_Value>0</Min_Value>
     <Max_Value>1</Max_Value>
@@ -2030,9 +2061,9 @@ Others  :從指定的 Slot 開始掃描</Parameter_Description>
     <Parameters_Amount>16</Parameters_Amount>
     <Parameter_Order>16</Parameter_Order>
     <Parameter_ID>no15</Parameter_ID>
-    <Parameter_Description>no1~16:  選擇指定的 Panel   
-0 :  關閉 
-1 :  開啟</Parameter_Description>
+    <Parameter_Description>
+no1~16:  選擇指定的 Panel   0 :  關閉 1 :  開啟
+</Parameter_Description>
     <Data_Value />
     <Min_Value>0</Min_Value>
     <Max_Value>1</Max_Value>
@@ -2052,9 +2083,9 @@ Others  :從指定的 Slot 開始掃描</Parameter_Description>
     <Parameters_Amount>17</Parameters_Amount>
     <Parameter_Order>17</Parameter_Order>
     <Parameter_ID>no16</Parameter_ID>
-    <Parameter_Description>no1~16:  選擇指定的 Panel   
-0 :  關閉 
-1 :  開啟</Parameter_Description>
+    <Parameter_Description>
+no1~16:  選擇指定的 Panel   0 :  關閉 1 :  開啟
+</Parameter_Description>
     <Data_Value />
     <Min_Value>0</Min_Value>
     <Max_Value>1</Max_Value>
@@ -2071,12 +2102,12 @@ Others  :從指定的 Slot 開始掃描</Parameter_Description>
     <Command_Format>${0}{1}CMD:MOVED</Command_Format>
     <Command_Name>移動指定軸到指定點位</Command_Name>
     <Command_Order>19</Command_Order>
-    <Parameters_Amount>04</Parameters_Amount>
-    <Parameter_Order>03</Parameter_Order>
+    <Parameters_Amount>4</Parameters_Amount>
+    <Parameter_Order>3</Parameter_Order>
     <Parameter_ID>pos</Parameter_ID>
-    <Parameter_Description>pos  :移動數量, 9  位數  10 進位(-99999999 ~ +99999999)
-若是 type = 0 or 1,這邊所代表的是距離單位,單位是 1um
-若是 type = 2,  這邊所代表的是 pulse 單位,單位是 1pulse</Parameter_Description>
+    <Parameter_Description>
+pos  :移動數量, 9  位數  10 進位(-99999999 ~ +99999999)若是 type = 0 or 1,這邊所代表的是距離單位,單位是 1um若是 type = 2,  這邊所代表的是 pulse 單位,單位是 1pulse
+</Parameter_Description>
     <Data_Value />
     <Min_Value>-99999999</Min_Value>
     <Max_Value>99999999</Max_Value>
@@ -2196,10 +2227,9 @@ Others  :從指定的 Slot 開始掃描</Parameter_Description>
     <Parameters_Amount>1</Parameters_Amount>
     <Parameter_Order>1</Parameter_Order>
     <Parameter_ID>Type</Parameter_ID>
-    <Parameter_Description>Type  :  參數類別(0~9)
-0    : Options
-1    : Adjust
-Others  : Reserved</Parameter_Description>
+    <Parameter_Description>
+Type  :  參數類別(0~9)0    : Options1    : AdjustOthers  : Reserved
+</Parameter_Description>
     <Data_Value />
     <Min_Value>0</Min_Value>
     <Max_Value>9</Max_Value>
@@ -2239,10 +2269,9 @@ Others  : Reserved</Parameter_Description>
     <Parameters_Amount>1</Parameters_Amount>
     <Parameter_Order>1</Parameter_Order>
     <Parameter_ID>Type</Parameter_ID>
-    <Parameter_Description>Type  :  參數類別(0~9)
-0    : Option
-1    : Adjust
-Others  : Reserved</Parameter_Description>
+    <Parameter_Description>
+Type  :  參數類別(0~9)0    : Option1    : AdjustOthers  : Reserved
+</Parameter_Description>
     <Data_Value />
     <Min_Value>0</Min_Value>
     <Max_Value>9</Max_Value>
@@ -2282,9 +2311,9 @@ Others  : Reserved</Parameter_Description>
     <Parameters_Amount>1</Parameters_Amount>
     <Parameter_Order>1</Parameter_Order>
     <Parameter_ID>Type</Parameter_ID>
-    <Parameter_Description>Type: Command/Encoder  選擇
-1  : Robot 的 pulse command
-2  :  實際  Encoder  回傳值</Parameter_Description>
+    <Parameter_Description>
+Type: Command/Encoder  選擇1  : Robot 的 pulse command2  :  實際  Encoder  回傳值
+</Parameter_Description>
     <Data_Value />
     <Min_Value>1</Min_Value>
     <Max_Value>2</Max_Value>
@@ -2304,9 +2333,9 @@ Others  : Reserved</Parameter_Description>
     <Parameters_Amount>2</Parameters_Amount>
     <Parameter_Order>2</Parameter_Order>
     <Parameter_ID>Unit</Parameter_ID>
-    <Parameter_Description>Unit:  單位選擇
-1  : um
-2  : pulse</Parameter_Description>
+    <Parameter_Description>
+Unit:  單位選擇1  : um2  : pulse
+</Parameter_Description>
     <Data_Value />
     <Min_Value>1</Min_Value>
     <Max_Value>2</Max_Value>
@@ -2446,9 +2475,9 @@ Others  : Reserved</Parameter_Description>
     <Parameters_Amount>1</Parameters_Amount>
     <Parameter_Order>1</Parameter_Order>
     <Parameter_ID>m1</Parameter_ID>
-    <Parameter_Description>m1  :
-0  :減速停止
-1  :立即停止</Parameter_Description>
+    <Parameter_Description>
+m1  :0  :減速停止1  :立即停止
+</Parameter_Description>
     <Data_Value />
     <Min_Value>0</Min_Value>
     <Max_Value>1</Max_Value>
@@ -2468,11 +2497,9 @@ Others  : Reserved</Parameter_Description>
     <Parameters_Amount>1</Parameters_Amount>
     <Parameter_Order>1</Parameter_Order>
     <Parameter_ID>vl</Parameter_ID>
-    <Parameter_Description>vl  :動作模式選擇  (0~3)
-0  :Normal Mode   
-1  :Dry Mode   
-2  :Test Mode   
-3  :Step Mode</Parameter_Description>
+    <Parameter_Description>
+vl  :動作模式選擇  (0~3)0  :Normal Mode   1  :Dry Mode   2  :Test Mode   3  :Step Mode
+</Parameter_Description>
     <Data_Value />
     <Min_Value>0</Min_Value>
     <Max_Value>3</Max_Value>
@@ -2532,9 +2559,9 @@ Others  : Reserved</Parameter_Description>
     <Parameters_Amount>1</Parameters_Amount>
     <Parameter_Order>1</Parameter_Order>
     <Parameter_ID>sv</Parameter_ID>
-    <Parameter_Description>sv  :Servo ON / OFF 選擇  (0~1)
-0  :Servo OFF   
-1  :Servo ON</Parameter_Description>
+    <Parameter_Description>
+sv  :Servo ON / OFF 選擇  (0~1)0  :Servo OFF   1  :Servo ON
+</Parameter_Description>
     <Data_Value />
     <Min_Value>0</Min_Value>
     <Max_Value>1</Max_Value>
@@ -2554,17 +2581,9 @@ Others  : Reserved</Parameter_Description>
     <Parameters_Amount>1</Parameters_Amount>
     <Parameter_Order>1</Parameter_Order>
     <Parameter_ID>no</Parameter_ID>
-    <Parameter_Description>no  :電磁閥號碼
-01  R  軸吸著用電磁閥
-02  L  軸吸著用電磁閥
-03  R  軸吸著用電磁閥 Pad１
-04  R  軸吸著用電磁閥 Pad２
-05  L  軸吸著用電磁閥 Pad１
-06  L  軸吸著用電磁閥 Pad２
-07  R  軸 FORK 開闔電磁閥段數１
-08  R  軸 FORK 開闔電磁閥段數２
-09  L  軸 FORK 開闔電磁閥段數１
-10  L  軸 FORK 開闔電磁閥段數２</Parameter_Description>
+    <Parameter_Description>
+no  :電磁閥號碼01  R  軸吸著用電磁閥02  L  軸吸著用電磁閥03  R  軸吸著用電磁閥 Pad１04  R  軸吸著用電磁閥 Pad２05  L  軸吸著用電磁閥 Pad１06  L  軸吸著用電磁閥 Pad２07  R  軸 FORK 開闔電磁閥段數１08  R  軸 FORK 開闔電磁閥段數２09  L  軸 FORK 開闔電磁閥段數１10  L  軸 FORK 開闔電磁閥段數２
+</Parameter_Description>
     <Data_Value />
     <Min_Value>1</Min_Value>
     <Max_Value>10</Max_Value>
@@ -2584,9 +2603,9 @@ Others  : Reserved</Parameter_Description>
     <Parameters_Amount>2</Parameters_Amount>
     <Parameter_Order>2</Parameter_Order>
     <Parameter_ID>vl</Parameter_ID>
-    <Parameter_Description>vl  :狀態
-0  :OFF
-1  :ON</Parameter_Description>
+    <Parameter_Description>
+vl  :狀態0  :OFF1  :ON
+</Parameter_Description>
     <Data_Value />
     <Min_Value>0</Min_Value>
     <Max_Value>1</Max_Value>
@@ -2626,10 +2645,9 @@ Others  : Reserved</Parameter_Description>
     <Parameters_Amount>1</Parameters_Amount>
     <Parameter_Order>1</Parameter_Order>
     <Parameter_ID>Type</Parameter_ID>
-    <Parameter_Description>Type  :參數類別(0~9)
-0    :Option
-1    :Adjust
-Others  :Reserved</Parameter_Description>
+    <Parameter_Description>
+Type  :參數類別(0~9)0    :Option1    :AdjustOthers  :Reserved
+</Parameter_Description>
     <Data_Value />
     <Min_Value>0</Min_Value>
     <Max_Value>9</Max_Value>
@@ -2749,10 +2767,9 @@ Others  :Reserved</Parameter_Description>
     <Parameters_Amount>2</Parameters_Amount>
     <Parameter_Order>2</Parameter_Order>
     <Parameter_ID>type</Parameter_ID>
-    <Parameter_Description>type  :移動方式選擇
-0  : ABS:絕對位置
-1  : INC:相對位置
-2  : Pulse 數量</Parameter_Description>
+    <Parameter_Description>
+type  :移動方式選擇0  : ABS:絕對位置1  : INC:相對位置2  : Pulse 數量
+</Parameter_Description>
     <Data_Value />
     <Min_Value>0</Min_Value>
     <Max_Value>2</Max_Value>
@@ -2832,9 +2849,9 @@ Others  :Reserved</Parameter_Description>
     <Parameters_Amount>1</Parameters_Amount>
     <Parameter_Order>1</Parameter_Order>
     <Parameter_ID>arm</Parameter_ID>
-    <Parameter_Description>arm  :Arm 選擇  ( 1~2 )
-1  :R 軸
-2  :L 軸</Parameter_Description>
+    <Parameter_Description>
+arm  :Arm 選擇  ( 1~2 )1  :R 軸2  :L 軸
+</Parameter_Description>
     <Data_Value />
     <Min_Value>1</Min_Value>
     <Max_Value>2</Max_Value>
@@ -2854,9 +2871,9 @@ Others  :Reserved</Parameter_Description>
     <Parameters_Amount>1</Parameters_Amount>
     <Parameter_Order>1</Parameter_Order>
     <Parameter_ID>arm</Parameter_ID>
-    <Parameter_Description>arm  :Arm 選擇  ( 1~2 )
-1  :R 軸
-2  :L 軸</Parameter_Description>
+    <Parameter_Description>
+arm  :Arm 選擇  ( 1~2 )1  :R 軸2  :L 軸
+</Parameter_Description>
     <Data_Value />
     <Min_Value>1</Min_Value>
     <Max_Value>2</Max_Value>
@@ -2869,9 +2886,9 @@ Others  :Reserved</Parameter_Description>
     <Equipment_Type>Aligner</Equipment_Type>
     <Equipment_Supplier>SANWA</Equipment_Supplier>
     <Command_Type>CMD</Command_Type>
-    <Command_ID>ALIGN</Command_ID>
+    <Command_ID>Align</Command_ID>
     <Command_Format>${0}{1}CMD:ALIGN</Command_Format>
-    <Command_Name>釋放晶圓控制 </Command_Name>
+    <Command_Name>執行尋找晶圓(Wafer)缺口後移動至所需的角度位置</Command_Name>
     <Command_Order>9</Command_Order>
     <Parameters_Amount>1</Parameters_Amount>
     <Parameter_Order>1</Parameter_Order>
@@ -2890,10 +2907,11 @@ Others  :Reserved</Parameter_Description>
     <Equipment_Supplier>HST</Equipment_Supplier>
     <Command_Type>CMD</Command_Type>
     <Command_ID>Read</Command_ID>
+    <Command_Format />
     <Command_Name>Read</Command_Name>
     <Command_Order>10</Command_Order>
-    <Parameters_Amount>01</Parameters_Amount>
-    <Parameter_Order>01</Parameter_Order>
+    <Parameters_Amount>1</Parameters_Amount>
+    <Parameter_Order>1</Parameter_Order>
     <Parameter_ID>Null</Parameter_ID>
     <Parameter_Description />
     <Data_Value />
@@ -2909,10 +2927,11 @@ Others  :Reserved</Parameter_Description>
     <Equipment_Supplier>COGNEX</Equipment_Supplier>
     <Command_Type>CMD</Command_Type>
     <Command_ID>Read</Command_ID>
+    <Command_Format />
     <Command_Name>Read</Command_Name>
-    <Command_Order>09</Command_Order>
-    <Parameters_Amount>01</Parameters_Amount>
-    <Parameter_Order>01</Parameter_Order>
+    <Command_Order>9</Command_Order>
+    <Parameters_Amount>1</Parameters_Amount>
+    <Parameter_Order>1</Parameter_Order>
     <Parameter_ID>iConfig</Parameter_ID>
     <Parameter_Description />
     <Data_Value />
@@ -2922,5 +2941,2885 @@ Others  :Reserved</Parameter_Description>
     <Values_length>2</Values_length>
     <Is_Fill>N</Is_Fill>
     <Action_Function />
+  </Table>
+  <Table>
+    <Equipment_Type>LoadPort</Equipment_Type>
+    <Equipment_Supplier>TDK</Equipment_Supplier>
+    <Command_Type>SET</Command_Type>
+    <Command_ID>RESET</Command_ID>
+    <Command_Format>SET:RESET;</Command_Format>
+    <Command_Name>錯誤重置</Command_Name>
+    <Command_Order>9</Command_Order>
+    <Parameters_Amount>1</Parameters_Amount>
+    <Parameter_Order>1</Parameter_Order>
+    <Parameter_ID>Null</Parameter_ID>
+    <Parameter_Description />
+    <Data_Value />
+    <Min_Value />
+    <Max_Value />
+    <Default_Value />
+    <Values_length />
+    <Is_Fill />
+    <Action_Function>Reset</Action_Function>
+  </Table>
+  <Table>
+    <Equipment_Type>LoadPort</Equipment_Type>
+    <Equipment_Supplier>TDK</Equipment_Supplier>
+    <Command_Type>SET</Command_Type>
+    <Command_ID>INITL</Command_ID>
+    <Command_Format>SET:INITL;</Command_Format>
+    <Command_Name>程式初始化（內部狀態初始化）*它不運作。</Command_Name>
+    <Command_Order>1</Command_Order>
+    <Parameters_Amount>1</Parameters_Amount>
+    <Parameter_Order>1</Parameter_Order>
+    <Parameter_ID>Null</Parameter_ID>
+    <Parameter_Description />
+    <Data_Value />
+    <Min_Value />
+    <Max_Value />
+    <Default_Value />
+    <Values_length />
+    <Is_Fill />
+    <Action_Function>Initialization</Action_Function>
+  </Table>
+  <Table>
+    <Equipment_Type>LoadPort</Equipment_Type>
+    <Equipment_Supplier>TDK</Equipment_Supplier>
+    <Command_Type>SET</Command_Type>
+    <Command_ID>LON07</Command_ID>
+    <Command_Format>SET:LON07;</Command_Format>
+    <Command_Name>STATUS 1 指示燈 開</Command_Name>
+    <Command_Order>2</Command_Order>
+    <Parameters_Amount>1</Parameters_Amount>
+    <Parameter_Order>1</Parameter_Order>
+    <Parameter_ID>Null</Parameter_ID>
+    <Parameter_Description />
+    <Data_Value />
+    <Min_Value />
+    <Max_Value />
+    <Default_Value />
+    <Values_length />
+    <Is_Fill />
+    <Action_Function>Status01_ON</Action_Function>
+  </Table>
+  <Table>
+    <Equipment_Type>LoadPort</Equipment_Type>
+    <Equipment_Supplier>TDK</Equipment_Supplier>
+    <Command_Type>SET</Command_Type>
+    <Command_ID>LBL07</Command_ID>
+    <Command_Format>SET:LBL07;</Command_Format>
+    <Command_Name>STATUS 1 指示燈 閃爍</Command_Name>
+    <Command_Order>3</Command_Order>
+    <Parameters_Amount>1</Parameters_Amount>
+    <Parameter_Order>1</Parameter_Order>
+    <Parameter_ID>Null</Parameter_ID>
+    <Parameter_Description />
+    <Data_Value />
+    <Min_Value />
+    <Max_Value />
+    <Default_Value />
+    <Values_length />
+    <Is_Fill />
+    <Action_Function>Status01_Flashes</Action_Function>
+  </Table>
+  <Table>
+    <Equipment_Type>LoadPort</Equipment_Type>
+    <Equipment_Supplier>TDK</Equipment_Supplier>
+    <Command_Type>SET</Command_Type>
+    <Command_ID>LOF07</Command_ID>
+    <Command_Format>SET:LOF07;</Command_Format>
+    <Command_Name>STATUS 1 指示燈 關</Command_Name>
+    <Command_Order>4</Command_Order>
+    <Parameters_Amount>1</Parameters_Amount>
+    <Parameter_Order>1</Parameter_Order>
+    <Parameter_ID>Null</Parameter_ID>
+    <Parameter_Description />
+    <Data_Value />
+    <Min_Value />
+    <Max_Value />
+    <Default_Value />
+    <Values_length />
+    <Is_Fill />
+    <Action_Function>Status01_OFF</Action_Function>
+  </Table>
+  <Table>
+    <Equipment_Type>LoadPort</Equipment_Type>
+    <Equipment_Supplier>TDK</Equipment_Supplier>
+    <Command_Type>SET</Command_Type>
+    <Command_ID>LON08</Command_ID>
+    <Command_Format>SET:LON08;</Command_Format>
+    <Command_Name>STATUS 2 指示燈 開</Command_Name>
+    <Command_Order>5</Command_Order>
+    <Parameters_Amount>1</Parameters_Amount>
+    <Parameter_Order>1</Parameter_Order>
+    <Parameter_ID>Null</Parameter_ID>
+    <Parameter_Description />
+    <Data_Value />
+    <Min_Value />
+    <Max_Value />
+    <Default_Value />
+    <Values_length />
+    <Is_Fill />
+    <Action_Function>Status02_ON</Action_Function>
+  </Table>
+  <Table>
+    <Equipment_Type>LoadPort</Equipment_Type>
+    <Equipment_Supplier>TDK</Equipment_Supplier>
+    <Command_Type>SET</Command_Type>
+    <Command_ID>LBL08</Command_ID>
+    <Command_Format>SET:LBL08;</Command_Format>
+    <Command_Name>STATUS 2 指示燈 閃爍</Command_Name>
+    <Command_Order>6</Command_Order>
+    <Parameters_Amount>1</Parameters_Amount>
+    <Parameter_Order>1</Parameter_Order>
+    <Parameter_ID>Null</Parameter_ID>
+    <Parameter_Description />
+    <Data_Value />
+    <Min_Value />
+    <Max_Value />
+    <Default_Value />
+    <Values_length />
+    <Is_Fill />
+    <Action_Function>Status02_Flashes</Action_Function>
+  </Table>
+  <Table>
+    <Equipment_Type>LoadPort</Equipment_Type>
+    <Equipment_Supplier>TDK</Equipment_Supplier>
+    <Command_Type>SET</Command_Type>
+    <Command_ID>LOF08</Command_ID>
+    <Command_Format>SET:LOF08;</Command_Format>
+    <Command_Name>STATUS 2 指示燈 關</Command_Name>
+    <Command_Order>7</Command_Order>
+    <Parameters_Amount>1</Parameters_Amount>
+    <Parameter_Order>1</Parameter_Order>
+    <Parameter_ID>Null</Parameter_ID>
+    <Parameter_Description />
+    <Data_Value />
+    <Min_Value />
+    <Max_Value />
+    <Default_Value />
+    <Values_length />
+    <Is_Fill />
+    <Action_Function>Status02_OFF</Action_Function>
+  </Table>
+  <Table>
+    <Equipment_Type>LoadPort</Equipment_Type>
+    <Equipment_Supplier>TDK</Equipment_Supplier>
+    <Command_Type>SET</Command_Type>
+    <Command_ID>LON01</Command_ID>
+    <Command_Format>SET:LON01;</Command_Format>
+    <Command_Name>LOAD 指示燈 開</Command_Name>
+    <Command_Order>8</Command_Order>
+    <Parameters_Amount>1</Parameters_Amount>
+    <Parameter_Order>1</Parameter_Order>
+    <Parameter_ID>Null</Parameter_ID>
+    <Parameter_Description />
+    <Data_Value />
+    <Min_Value />
+    <Max_Value />
+    <Default_Value />
+    <Values_length />
+    <Is_Fill />
+    <Action_Function>Load_ON</Action_Function>
+  </Table>
+  <Table>
+    <Equipment_Type>LoadPort</Equipment_Type>
+    <Equipment_Supplier>TDK</Equipment_Supplier>
+    <Command_Type>SET</Command_Type>
+    <Command_ID>LBL01</Command_ID>
+    <Command_Format>SET:LBL01;</Command_Format>
+    <Command_Name>LOAD 指示燈 閃爍</Command_Name>
+    <Command_Order>9</Command_Order>
+    <Parameters_Amount>1</Parameters_Amount>
+    <Parameter_Order>1</Parameter_Order>
+    <Parameter_ID>Null</Parameter_ID>
+    <Parameter_Description />
+    <Data_Value />
+    <Min_Value />
+    <Max_Value />
+    <Default_Value />
+    <Values_length />
+    <Is_Fill />
+    <Action_Function>Load_Flashes</Action_Function>
+  </Table>
+  <Table>
+    <Equipment_Type>LoadPort</Equipment_Type>
+    <Equipment_Supplier>TDK</Equipment_Supplier>
+    <Command_Type>SET</Command_Type>
+    <Command_ID>LOF01</Command_ID>
+    <Command_Format>SET:LOF01;</Command_Format>
+    <Command_Name>LOAD 指示燈 關</Command_Name>
+    <Command_Order>10</Command_Order>
+    <Parameters_Amount>1</Parameters_Amount>
+    <Parameter_Order>1</Parameter_Order>
+    <Parameter_ID>Null</Parameter_ID>
+    <Parameter_Description />
+    <Data_Value />
+    <Min_Value />
+    <Max_Value />
+    <Default_Value />
+    <Values_length />
+    <Is_Fill />
+    <Action_Function>Load_OFF</Action_Function>
+  </Table>
+  <Table>
+    <Equipment_Type>LoadPort</Equipment_Type>
+    <Equipment_Supplier>TDK</Equipment_Supplier>
+    <Command_Type>SET</Command_Type>
+    <Command_ID>LON02</Command_ID>
+    <Command_Format>SET:LON02;</Command_Format>
+    <Command_Name>UNLOAD 指示燈 開</Command_Name>
+    <Command_Order>11</Command_Order>
+    <Parameters_Amount>1</Parameters_Amount>
+    <Parameter_Order>1</Parameter_Order>
+    <Parameter_ID>Null</Parameter_ID>
+    <Parameter_Description />
+    <Data_Value />
+    <Min_Value />
+    <Max_Value />
+    <Default_Value />
+    <Values_length />
+    <Is_Fill />
+    <Action_Function>Unload_ON</Action_Function>
+  </Table>
+  <Table>
+    <Equipment_Type>LoadPort</Equipment_Type>
+    <Equipment_Supplier>TDK</Equipment_Supplier>
+    <Command_Type>SET</Command_Type>
+    <Command_ID>LBL02</Command_ID>
+    <Command_Format>SET:LBL02;</Command_Format>
+    <Command_Name>UNLOAD 指示燈 閃爍</Command_Name>
+    <Command_Order>12</Command_Order>
+    <Parameters_Amount>1</Parameters_Amount>
+    <Parameter_Order>1</Parameter_Order>
+    <Parameter_ID>Null</Parameter_ID>
+    <Parameter_Description />
+    <Data_Value />
+    <Min_Value />
+    <Max_Value />
+    <Default_Value />
+    <Values_length />
+    <Is_Fill />
+    <Action_Function>Unload_Flashes</Action_Function>
+  </Table>
+  <Table>
+    <Equipment_Type>LoadPort</Equipment_Type>
+    <Equipment_Supplier>TDK</Equipment_Supplier>
+    <Command_Type>SET</Command_Type>
+    <Command_ID>LOF02</Command_ID>
+    <Command_Format>SET:LOF02;</Command_Format>
+    <Command_Name>UNLOAD 指示燈 關</Command_Name>
+    <Command_Order>13</Command_Order>
+    <Parameters_Amount>1</Parameters_Amount>
+    <Parameter_Order>1</Parameter_Order>
+    <Parameter_ID>Null</Parameter_ID>
+    <Parameter_Description />
+    <Data_Value />
+    <Min_Value />
+    <Max_Value />
+    <Default_Value />
+    <Values_length />
+    <Is_Fill />
+    <Action_Function>Unload_OFF</Action_Function>
+  </Table>
+  <Table>
+    <Equipment_Type>LoadPort</Equipment_Type>
+    <Equipment_Supplier>TDK</Equipment_Supplier>
+    <Command_Type>SET</Command_Type>
+    <Command_ID>LON03</Command_ID>
+    <Command_Format>SET:LON03;</Command_Format>
+    <Command_Name>OP. ACCESS 指示燈 開</Command_Name>
+    <Command_Order>14</Command_Order>
+    <Parameters_Amount>1</Parameters_Amount>
+    <Parameter_Order>1</Parameter_Order>
+    <Parameter_ID>Null</Parameter_ID>
+    <Parameter_Description />
+    <Data_Value />
+    <Min_Value />
+    <Max_Value />
+    <Default_Value />
+    <Values_length />
+    <Is_Fill />
+    <Action_Function>OpAccess_ON</Action_Function>
+  </Table>
+  <Table>
+    <Equipment_Type>LoadPort</Equipment_Type>
+    <Equipment_Supplier>TDK</Equipment_Supplier>
+    <Command_Type>SET</Command_Type>
+    <Command_ID>LBL03</Command_ID>
+    <Command_Format>SET:LBL03;</Command_Format>
+    <Command_Name>OP. ACCESS 指示燈 閃爍</Command_Name>
+    <Command_Order>15</Command_Order>
+    <Parameters_Amount>1</Parameters_Amount>
+    <Parameter_Order>1</Parameter_Order>
+    <Parameter_ID>Null</Parameter_ID>
+    <Parameter_Description />
+    <Data_Value />
+    <Min_Value />
+    <Max_Value />
+    <Default_Value />
+    <Values_length />
+    <Is_Fill />
+    <Action_Function>OpAccess_Flashes</Action_Function>
+  </Table>
+  <Table>
+    <Equipment_Type>LoadPort</Equipment_Type>
+    <Equipment_Supplier>TDK</Equipment_Supplier>
+    <Command_Type>SET</Command_Type>
+    <Command_ID>LOF03</Command_ID>
+    <Command_Format>SET:LOF03;</Command_Format>
+    <Command_Name>OP. ACCESS 指示燈 關</Command_Name>
+    <Command_Order>16</Command_Order>
+    <Parameters_Amount>1</Parameters_Amount>
+    <Parameter_Order>1</Parameter_Order>
+    <Parameter_ID>Null</Parameter_ID>
+    <Parameter_Description />
+    <Data_Value />
+    <Min_Value />
+    <Max_Value />
+    <Default_Value />
+    <Values_length />
+    <Is_Fill />
+    <Action_Function>OpAccess_OFF</Action_Function>
+  </Table>
+  <Table>
+    <Equipment_Type>LoadPort</Equipment_Type>
+    <Equipment_Supplier>TDK</Equipment_Supplier>
+    <Command_Type>SET</Command_Type>
+    <Command_ID>LON04</Command_ID>
+    <Command_Format>SET:LON04;</Command_Format>
+    <Command_Name>PRESENCE 指示燈 開</Command_Name>
+    <Command_Order>17</Command_Order>
+    <Parameters_Amount>1</Parameters_Amount>
+    <Parameter_Order>1</Parameter_Order>
+    <Parameter_ID>Null</Parameter_ID>
+    <Parameter_Description />
+    <Data_Value />
+    <Min_Value />
+    <Max_Value />
+    <Default_Value />
+    <Values_length />
+    <Is_Fill />
+    <Action_Function>Presence_ON</Action_Function>
+  </Table>
+  <Table>
+    <Equipment_Type>LoadPort</Equipment_Type>
+    <Equipment_Supplier>TDK</Equipment_Supplier>
+    <Command_Type>SET</Command_Type>
+    <Command_ID>LBL04</Command_ID>
+    <Command_Format>SET:LBL04;</Command_Format>
+    <Command_Name>PRESENCE 指示燈 閃爍</Command_Name>
+    <Command_Order>18</Command_Order>
+    <Parameters_Amount>1</Parameters_Amount>
+    <Parameter_Order>1</Parameter_Order>
+    <Parameter_ID>Null</Parameter_ID>
+    <Parameter_Description />
+    <Data_Value />
+    <Min_Value />
+    <Max_Value />
+    <Default_Value />
+    <Values_length />
+    <Is_Fill />
+    <Action_Function>Presence_Flashes</Action_Function>
+  </Table>
+  <Table>
+    <Equipment_Type>LoadPort</Equipment_Type>
+    <Equipment_Supplier>TDK</Equipment_Supplier>
+    <Command_Type>SET</Command_Type>
+    <Command_ID>LOF04</Command_ID>
+    <Command_Format>SET:LOF04;</Command_Format>
+    <Command_Name>PRESENCE 指示燈 關</Command_Name>
+    <Command_Order>19</Command_Order>
+    <Parameters_Amount>1</Parameters_Amount>
+    <Parameter_Order>1</Parameter_Order>
+    <Parameter_ID>Null</Parameter_ID>
+    <Parameter_Description />
+    <Data_Value />
+    <Min_Value />
+    <Max_Value />
+    <Default_Value />
+    <Values_length />
+    <Is_Fill />
+    <Action_Function>Presence_OFF</Action_Function>
+  </Table>
+  <Table>
+    <Equipment_Type>LoadPort</Equipment_Type>
+    <Equipment_Supplier>TDK</Equipment_Supplier>
+    <Command_Type>SET</Command_Type>
+    <Command_ID>LON05</Command_ID>
+    <Command_Format>SET:LON05;</Command_Format>
+    <Command_Name>PLACEMENT 指示燈 開</Command_Name>
+    <Command_Order>20</Command_Order>
+    <Parameters_Amount>1</Parameters_Amount>
+    <Parameter_Order>1</Parameter_Order>
+    <Parameter_ID>Null</Parameter_ID>
+    <Parameter_Description />
+    <Data_Value />
+    <Min_Value />
+    <Max_Value />
+    <Default_Value />
+    <Values_length />
+    <Is_Fill />
+    <Action_Function>Placement_ON</Action_Function>
+  </Table>
+  <Table>
+    <Equipment_Type>LoadPort</Equipment_Type>
+    <Equipment_Supplier>TDK</Equipment_Supplier>
+    <Command_Type>SET</Command_Type>
+    <Command_ID>LBL05</Command_ID>
+    <Command_Format>SET:LBL05;</Command_Format>
+    <Command_Name>PLACEMENT 指示燈 閃爍</Command_Name>
+    <Command_Order>21</Command_Order>
+    <Parameters_Amount>1</Parameters_Amount>
+    <Parameter_Order>1</Parameter_Order>
+    <Parameter_ID>Null</Parameter_ID>
+    <Parameter_Description />
+    <Data_Value />
+    <Min_Value />
+    <Max_Value />
+    <Default_Value />
+    <Values_length />
+    <Is_Fill />
+    <Action_Function>Placement_Flashes</Action_Function>
+  </Table>
+  <Table>
+    <Equipment_Type>LoadPort</Equipment_Type>
+    <Equipment_Supplier>TDK</Equipment_Supplier>
+    <Command_Type>SET</Command_Type>
+    <Command_ID>LOF05</Command_ID>
+    <Command_Format>SET:LOF05;</Command_Format>
+    <Command_Name>PLACEMENT 指示燈 關</Command_Name>
+    <Command_Order>22</Command_Order>
+    <Parameters_Amount>1</Parameters_Amount>
+    <Parameter_Order>1</Parameter_Order>
+    <Parameter_ID>Null</Parameter_ID>
+    <Parameter_Description />
+    <Data_Value />
+    <Min_Value />
+    <Max_Value />
+    <Default_Value />
+    <Values_length />
+    <Is_Fill />
+    <Action_Function>Placement_OFF</Action_Function>
+  </Table>
+  <Table>
+    <Equipment_Type>LoadPort</Equipment_Type>
+    <Equipment_Supplier>TDK</Equipment_Supplier>
+    <Command_Type>MOD</Command_Type>
+    <Command_ID>ONMGV</Command_ID>
+    <Command_Format>MOD:ONMGV;</Command_Format>
+    <Command_Name>變更為 Online 模式</Command_Name>
+    <Command_Order>1</Command_Order>
+    <Parameters_Amount>1</Parameters_Amount>
+    <Parameter_Order>1</Parameter_Order>
+    <Parameter_ID>Null</Parameter_ID>
+    <Parameter_Description />
+    <Data_Value />
+    <Min_Value />
+    <Max_Value />
+    <Default_Value />
+    <Values_length />
+    <Is_Fill />
+    <Action_Function>Online</Action_Function>
+  </Table>
+  <Table>
+    <Equipment_Type>LoadPort</Equipment_Type>
+    <Equipment_Supplier>TDK</Equipment_Supplier>
+    <Command_Type>MOD</Command_Type>
+    <Command_ID>MENTE</Command_ID>
+    <Command_Format>MOD:MENTE;</Command_Format>
+    <Command_Name>變更為 維護模式</Command_Name>
+    <Command_Order>2</Command_Order>
+    <Parameters_Amount>1</Parameters_Amount>
+    <Parameter_Order>1</Parameter_Order>
+    <Parameter_ID>Null</Parameter_ID>
+    <Parameter_Description />
+    <Data_Value />
+    <Min_Value />
+    <Max_Value />
+    <Default_Value />
+    <Values_length />
+    <Is_Fill />
+    <Action_Function>Maintenance</Action_Function>
+  </Table>
+  <Table>
+    <Equipment_Type>LoadPort</Equipment_Type>
+    <Equipment_Supplier>TDK</Equipment_Supplier>
+    <Command_Type>GET</Command_Type>
+    <Command_ID>STATE</Command_ID>
+    <Command_Format>GET:STATE;</Command_Format>
+    <Command_Name>取回目前狀態</Command_Name>
+    <Command_Order>9</Command_Order>
+    <Parameters_Amount>1</Parameters_Amount>
+    <Parameter_Order>1</Parameter_Order>
+    <Parameter_ID>Null</Parameter_ID>
+    <Parameter_Description />
+    <Data_Value />
+    <Min_Value />
+    <Max_Value />
+    <Default_Value />
+    <Values_length />
+    <Is_Fill />
+    <Action_Function>Status</Action_Function>
+  </Table>
+  <Table>
+    <Equipment_Type>LoadPort</Equipment_Type>
+    <Equipment_Supplier>TDK</Equipment_Supplier>
+    <Command_Type>GET</Command_Type>
+    <Command_ID>VERSN</Command_ID>
+    <Command_Format>GET:VERSN;</Command_Format>
+    <Command_Name>取回目前版本</Command_Name>
+    <Command_Order>9</Command_Order>
+    <Parameters_Amount>1</Parameters_Amount>
+    <Parameter_Order>1</Parameter_Order>
+    <Parameter_ID>Null</Parameter_ID>
+    <Parameter_Description />
+    <Data_Value />
+    <Min_Value />
+    <Max_Value />
+    <Default_Value />
+    <Values_length />
+    <Is_Fill />
+    <Action_Function>Version</Action_Function>
+  </Table>
+  <Table>
+    <Equipment_Type>LoadPort</Equipment_Type>
+    <Equipment_Supplier>TDK</Equipment_Supplier>
+    <Command_Type>GET</Command_Type>
+    <Command_ID>LEDST</Command_ID>
+    <Command_Format>GET:LEDST;</Command_Format>
+    <Command_Name>取回LED燈號狀態</Command_Name>
+    <Command_Order>9</Command_Order>
+    <Parameters_Amount>1</Parameters_Amount>
+    <Parameter_Order>1</Parameter_Order>
+    <Parameter_ID>Null</Parameter_ID>
+    <Parameter_Description />
+    <Data_Value />
+    <Min_Value />
+    <Max_Value />
+    <Default_Value />
+    <Values_length />
+    <Is_Fill />
+    <Action_Function>LEDStatus</Action_Function>
+  </Table>
+  <Table>
+    <Equipment_Type>LoadPort</Equipment_Type>
+    <Equipment_Supplier>TDK</Equipment_Supplier>
+    <Command_Type>GET</Command_Type>
+    <Command_ID>MAPDT</Command_ID>
+    <Command_Format>GET:MAPDT;</Command_Format>
+    <Command_Name>取回 Wafer 掃描狀態 遞減排序</Command_Name>
+    <Command_Order>9</Command_Order>
+    <Parameters_Amount>1</Parameters_Amount>
+    <Parameter_Order>1</Parameter_Order>
+    <Parameter_ID>Null</Parameter_ID>
+    <Parameter_Description />
+    <Data_Value />
+    <Min_Value />
+    <Max_Value />
+    <Default_Value />
+    <Values_length />
+    <Is_Fill />
+    <Action_Function>WaferSorting_Desc</Action_Function>
+  </Table>
+  <Table>
+    <Equipment_Type>LoadPort</Equipment_Type>
+    <Equipment_Supplier>TDK</Equipment_Supplier>
+    <Command_Type>GET</Command_Type>
+    <Command_ID>MAPRD</Command_ID>
+    <Command_Format>GET:MAPRD;</Command_Format>
+    <Command_Name>取回 Wafer 掃描狀態 遞增排序</Command_Name>
+    <Command_Order>9</Command_Order>
+    <Parameters_Amount>1</Parameters_Amount>
+    <Parameter_Order>1</Parameter_Order>
+    <Parameter_ID>Null</Parameter_ID>
+    <Parameter_Description />
+    <Data_Value />
+    <Min_Value />
+    <Max_Value />
+    <Default_Value />
+    <Values_length />
+    <Is_Fill />
+    <Action_Function>WaferSorting_Asc</Action_Function>
+  </Table>
+  <Table>
+    <Equipment_Type>LoadPort</Equipment_Type>
+    <Equipment_Supplier>TDK</Equipment_Supplier>
+    <Command_Type>GET</Command_Type>
+    <Command_ID>WFCNT</Command_ID>
+    <Command_Format>GET:WFCNT;</Command_Format>
+    <Command_Name>取回 Wafer 數量</Command_Name>
+    <Command_Order>9</Command_Order>
+    <Parameters_Amount>1</Parameters_Amount>
+    <Parameter_Order>1</Parameter_Order>
+    <Parameter_ID>Null</Parameter_ID>
+    <Parameter_Description />
+    <Data_Value />
+    <Min_Value />
+    <Max_Value />
+    <Default_Value />
+    <Values_length />
+    <Is_Fill />
+    <Action_Function>WaferQuantity</Action_Function>
+  </Table>
+  <Table>
+    <Equipment_Type>LoadPort</Equipment_Type>
+    <Equipment_Supplier>TDK</Equipment_Supplier>
+    <Command_Type>MOV</Command_Type>
+    <Command_ID>ORGSH</Command_ID>
+    <Command_Format>MOV:ORGSH;</Command_Format>
+    <Command_Name>移動到初始位置</Command_Name>
+    <Command_Order>1</Command_Order>
+    <Parameters_Amount>1</Parameters_Amount>
+    <Parameter_Order>1</Parameter_Order>
+    <Parameter_ID>Null</Parameter_ID>
+    <Parameter_Description />
+    <Data_Value />
+    <Min_Value />
+    <Max_Value />
+    <Default_Value />
+    <Values_length />
+    <Is_Fill />
+    <Action_Function>InitialPosition</Action_Function>
+  </Table>
+  <Table>
+    <Equipment_Type>LoadPort</Equipment_Type>
+    <Equipment_Supplier>TDK</Equipment_Supplier>
+    <Command_Type>MOV</Command_Type>
+    <Command_ID>ABORG</Command_ID>
+    <Command_Format>MOV:ABORG;</Command_Format>
+    <Command_Name>強行移動到初始位置</Command_Name>
+    <Command_Order>2</Command_Order>
+    <Parameters_Amount>1</Parameters_Amount>
+    <Parameter_Order>1</Parameter_Order>
+    <Parameter_ID>Null</Parameter_ID>
+    <Parameter_Description />
+    <Data_Value />
+    <Min_Value />
+    <Max_Value />
+    <Default_Value />
+    <Values_length />
+    <Is_Fill />
+    <Action_Function>ForcedInitialPosition</Action_Function>
+  </Table>
+  <Table>
+    <Equipment_Type>LoadPort</Equipment_Type>
+    <Equipment_Supplier>TDK</Equipment_Supplier>
+    <Command_Type>MOV</Command_Type>
+    <Command_ID>CLOAD</Command_ID>
+    <Command_Format>MOV:CLOAD;</Command_Format>
+    <Command_Name>使FOUP加載（設備通過）狀態</Command_Name>
+    <Command_Order>3</Command_Order>
+    <Parameters_Amount>1</Parameters_Amount>
+    <Parameter_Order>1</Parameter_Order>
+    <Parameter_ID>Null</Parameter_ID>
+    <Parameter_Description />
+    <Data_Value />
+    <Min_Value />
+    <Max_Value />
+    <Default_Value />
+    <Values_length />
+    <Is_Fill />
+    <Action_Function>Load</Action_Function>
+  </Table>
+  <Table>
+    <Equipment_Type>LoadPort</Equipment_Type>
+    <Equipment_Supplier>TDK</Equipment_Supplier>
+    <Command_Type>MOV</Command_Type>
+    <Command_ID>CLDDK</Command_ID>
+    <Command_Format>MOV:CLDDK;</Command_Format>
+    <Command_Name>在CLOAD的程序中，使其處於狀態直到門打開</Command_Name>
+    <Command_Order>4</Command_Order>
+    <Parameters_Amount>1</Parameters_Amount>
+    <Parameter_Order>1</Parameter_Order>
+    <Parameter_ID>Null</Parameter_ID>
+    <Parameter_Description />
+    <Data_Value />
+    <Min_Value />
+    <Max_Value />
+    <Default_Value />
+    <Values_length />
+    <Is_Fill />
+    <Action_Function>DockingPosition</Action_Function>
+  </Table>
+  <Table>
+    <Equipment_Type>LoadPort</Equipment_Type>
+    <Equipment_Supplier>TDK</Equipment_Supplier>
+    <Command_Type>MOV</Command_Type>
+    <Command_ID>CLDYD</Command_ID>
+    <Command_Format>MOV:CLDYD;</Command_Format>
+    <Command_Name>執行移動到FOUP夾具和Y軸對接位置</Command_Name>
+    <Command_Order>5</Command_Order>
+    <Parameters_Amount>1</Parameters_Amount>
+    <Parameter_Order>1</Parameter_Order>
+    <Parameter_ID>Null</Parameter_ID>
+    <Parameter_Description />
+    <Data_Value />
+    <Min_Value />
+    <Max_Value />
+    <Default_Value />
+    <Values_length />
+    <Is_Fill />
+    <Action_Function>DockingPositionNoVac</Action_Function>
+  </Table>
+  <Table>
+    <Equipment_Type>LoadPort</Equipment_Type>
+    <Equipment_Supplier>TDK</Equipment_Supplier>
+    <Command_Type>MOV</Command_Type>
+    <Command_ID>CLDOP</Command_ID>
+    <Command_Format>MOV:CLDOP;</Command_Format>
+    <Command_Name>在CLDDK後繼續加載FOUP</Command_Name>
+    <Command_Order>6</Command_Order>
+    <Parameters_Amount>1</Parameters_Amount>
+    <Parameter_Order>1</Parameter_Order>
+    <Parameter_ID>Null</Parameter_ID>
+    <Parameter_Description />
+    <Data_Value />
+    <Min_Value />
+    <Max_Value />
+    <Default_Value />
+    <Values_length />
+    <Is_Fill />
+    <Action_Function>DockingPositionAfterLoad</Action_Function>
+  </Table>
+  <Table>
+    <Equipment_Type>LoadPort</Equipment_Type>
+    <Equipment_Supplier>TDK</Equipment_Supplier>
+    <Command_Type>MOV</Command_Type>
+    <Command_ID>CLDMP</Command_ID>
+    <Command_Format>MOV:CLDMP;</Command_Format>
+    <Command_Name>映射後使FOUP加載狀態</Command_Name>
+    <Command_Order>7</Command_Order>
+    <Parameters_Amount>1</Parameters_Amount>
+    <Parameter_Order>1</Parameter_Order>
+    <Parameter_ID>Null</Parameter_ID>
+    <Parameter_Description />
+    <Data_Value />
+    <Min_Value />
+    <Max_Value />
+    <Default_Value />
+    <Values_length />
+    <Is_Fill />
+    <Action_Function>MappingLoad</Action_Function>
+  </Table>
+  <Table>
+    <Equipment_Type>LoadPort</Equipment_Type>
+    <Equipment_Supplier>TDK</Equipment_Supplier>
+    <Command_Type>MOV</Command_Type>
+    <Command_ID>CLMPO</Command_ID>
+    <Command_Format>MOV:CLMPO;</Command_Format>
+    <Command_Name>在CLDDK之後繼續並在映射後設置為加載狀態</Command_Name>
+    <Command_Order>8</Command_Order>
+    <Parameters_Amount>1</Parameters_Amount>
+    <Parameter_Order>1</Parameter_Order>
+    <Parameter_ID>Null</Parameter_ID>
+    <Parameter_Description />
+    <Data_Value />
+    <Min_Value />
+    <Max_Value />
+    <Default_Value />
+    <Values_length />
+    <Is_Fill />
+    <Action_Function>DockingPositionAfterMapping</Action_Function>
+  </Table>
+  <Table>
+    <Equipment_Type>LoadPort</Equipment_Type>
+    <Equipment_Supplier>TDK</Equipment_Supplier>
+    <Command_Type>MOV</Command_Type>
+    <Command_ID>CULOD</Command_ID>
+    <Command_Format>MOV:CULOD;</Command_Format>
+    <Command_Name>設置FOUP卸載（執行位置）狀態</Command_Name>
+    <Command_Order>9</Command_Order>
+    <Parameters_Amount>1</Parameters_Amount>
+    <Parameter_Order>1</Parameter_Order>
+    <Parameter_ID>Null</Parameter_ID>
+    <Parameter_Description />
+    <Data_Value />
+    <Min_Value />
+    <Max_Value />
+    <Default_Value />
+    <Values_length />
+    <Is_Fill />
+    <Action_Function>Unload</Action_Function>
+  </Table>
+  <Table>
+    <Equipment_Type>LoadPort</Equipment_Type>
+    <Equipment_Supplier>TDK</Equipment_Supplier>
+    <Command_Type>MOV</Command_Type>
+    <Command_ID>CULDK</Command_ID>
+    <Command_Format>MOV:CULDK;</Command_Format>
+    <Command_Name>關閉CULOD的門</Command_Name>
+    <Command_Order>10</Command_Order>
+    <Parameters_Amount>1</Parameters_Amount>
+    <Parameter_Order>1</Parameter_Order>
+    <Parameter_ID>Null</Parameter_ID>
+    <Parameter_Description />
+    <Data_Value />
+    <Min_Value />
+    <Max_Value />
+    <Default_Value />
+    <Values_length />
+    <Is_Fill />
+    <Action_Function>UntilDoorClose</Action_Function>
+  </Table>
+  <Table>
+    <Equipment_Type>LoadPort</Equipment_Type>
+    <Equipment_Supplier>TDK</Equipment_Supplier>
+    <Command_Type>MOV</Command_Type>
+    <Command_ID>CUDCL</Command_ID>
+    <Command_Format>MOV:CUDCL;</Command_Format>
+    <Command_Name>在CULDK之後解除夾緊狀態的FOUP</Command_Name>
+    <Command_Order>11</Command_Order>
+    <Parameters_Amount>1</Parameters_Amount>
+    <Parameter_Order>1</Parameter_Order>
+    <Parameter_ID>Null</Parameter_ID>
+    <Parameter_Description />
+    <Data_Value />
+    <Min_Value />
+    <Max_Value />
+    <Default_Value />
+    <Values_length />
+    <Is_Fill />
+    <Action_Function>DoorCloseAfterUndock</Action_Function>
+  </Table>
+  <Table>
+    <Equipment_Type>LoadPort</Equipment_Type>
+    <Equipment_Supplier>TDK</Equipment_Supplier>
+    <Command_Type>MOV</Command_Type>
+    <Command_ID>CUDNC</Command_ID>
+    <Command_Format>MOV:CUDNC;</Command_Format>
+    <Command_Name>在CULDK之後將FOUP置於卸載狀態</Command_Name>
+    <Command_Order>12</Command_Order>
+    <Parameters_Amount>1</Parameters_Amount>
+    <Parameter_Order>1</Parameter_Order>
+    <Parameter_ID>Null</Parameter_ID>
+    <Parameter_Description />
+    <Data_Value />
+    <Min_Value />
+    <Max_Value />
+    <Default_Value />
+    <Values_length />
+    <Is_Fill />
+    <Action_Function>DoorCloseAfterUnload</Action_Function>
+  </Table>
+  <Table>
+    <Equipment_Type>LoadPort</Equipment_Type>
+    <Equipment_Supplier>TDK</Equipment_Supplier>
+    <Command_Type>MOV</Command_Type>
+    <Command_ID>CULYD</Command_ID>
+    <Command_Format>MOV:CULYD;</Command_Format>
+    <Command_Name>卸載到對接狀態</Command_Name>
+    <Command_Order>13</Command_Order>
+    <Parameters_Amount>1</Parameters_Amount>
+    <Parameter_Order>1</Parameter_Order>
+    <Parameter_ID>Null</Parameter_ID>
+    <Parameter_Description />
+    <Data_Value />
+    <Min_Value />
+    <Max_Value />
+    <Default_Value />
+    <Values_length />
+    <Is_Fill />
+    <Action_Function>UntilDoorCloseVacOFF</Action_Function>
+  </Table>
+  <Table>
+    <Equipment_Type>LoadPort</Equipment_Type>
+    <Equipment_Supplier>TDK</Equipment_Supplier>
+    <Command_Type>MOV</Command_Type>
+    <Command_ID>CULFC</Command_ID>
+    <Command_Format>MOV:CULFC;</Command_Format>
+    <Command_Name>卸下FOUP之前卸下它</Command_Name>
+    <Command_Order>14</Command_Order>
+    <Parameters_Amount>1</Parameters_Amount>
+    <Parameter_Order>1</Parameter_Order>
+    <Parameter_ID>Null</Parameter_ID>
+    <Parameter_Description />
+    <Data_Value />
+    <Min_Value />
+    <Max_Value />
+    <Default_Value />
+    <Values_length />
+    <Is_Fill />
+    <Action_Function>UntilUndock</Action_Function>
+  </Table>
+  <Table>
+    <Equipment_Type>LoadPort</Equipment_Type>
+    <Equipment_Supplier>TDK</Equipment_Supplier>
+    <Command_Type>MOV</Command_Type>
+    <Command_ID>CUDMP</Command_ID>
+    <Command_Format>MOV:CUDMP;</Command_Format>
+    <Command_Name>從加載狀態映射到卸載狀態。</Command_Name>
+    <Command_Order>15</Command_Order>
+    <Parameters_Amount>1</Parameters_Amount>
+    <Parameter_Order>1</Parameter_Order>
+    <Parameter_ID>Null</Parameter_ID>
+    <Parameter_Description />
+    <Data_Value />
+    <Min_Value />
+    <Max_Value />
+    <Default_Value />
+    <Values_length />
+    <Is_Fill />
+    <Action_Function>MapAndUnload</Action_Function>
+  </Table>
+  <Table>
+    <Equipment_Type>LoadPort</Equipment_Type>
+    <Equipment_Supplier>TDK</Equipment_Supplier>
+    <Command_Type>MOV</Command_Type>
+    <Command_ID>CUMDK</Command_ID>
+    <Command_Format>MOV:CUMDK;</Command_Format>
+    <Command_Name>從負載狀態到關門狀態的映射</Command_Name>
+    <Command_Order>16</Command_Order>
+    <Parameters_Amount>1</Parameters_Amount>
+    <Parameter_Order>1</Parameter_Order>
+    <Parameter_ID>Null</Parameter_ID>
+    <Parameter_Description />
+    <Data_Value />
+    <Min_Value />
+    <Max_Value />
+    <Default_Value />
+    <Values_length />
+    <Is_Fill />
+    <Action_Function>MapAndUntilDoorClose</Action_Function>
+  </Table>
+  <Table>
+    <Equipment_Type>LoadPort</Equipment_Type>
+    <Equipment_Supplier>TDK</Equipment_Supplier>
+    <Command_Type>EVT</Command_Type>
+    <Command_ID>EVTON</Command_ID>
+    <Command_Format>EVT:EVTON;</Command_Format>
+    <Command_Name>所有事件報告開始（不包括FOUP事件）</Command_Name>
+    <Command_Order>1</Command_Order>
+    <Parameters_Amount>1</Parameters_Amount>
+    <Parameter_Order>1</Parameter_Order>
+    <Parameter_ID>Null</Parameter_ID>
+    <Parameter_Description />
+    <Data_Value />
+    <Min_Value />
+    <Max_Value />
+    <Default_Value />
+    <Values_length />
+    <Is_Fill />
+    <Action_Function />
+  </Table>
+  <Table>
+    <Equipment_Type>LoadPort</Equipment_Type>
+    <Equipment_Supplier>TDK</Equipment_Supplier>
+    <Command_Type>EVT</Command_Type>
+    <Command_ID>EVTOF</Command_ID>
+    <Command_Format>EVT:EVTOF;</Command_Format>
+    <Command_Name>停止所有事件報告（不包括FOUP事件）</Command_Name>
+    <Command_Order>2</Command_Order>
+    <Parameters_Amount>1</Parameters_Amount>
+    <Parameter_Order>1</Parameter_Order>
+    <Parameter_ID>Null</Parameter_ID>
+    <Parameter_Description />
+    <Data_Value />
+    <Min_Value />
+    <Max_Value />
+    <Default_Value />
+    <Values_length />
+    <Is_Fill />
+    <Action_Function />
+  </Table>
+  <Table>
+    <Equipment_Type>LoadPort</Equipment_Type>
+    <Equipment_Supplier>TDK</Equipment_Supplier>
+    <Command_Type>EVT</Command_Type>
+    <Command_ID>FPEON</Command_ID>
+    <Command_Format>EVT:FPEON;</Command_Format>
+    <Command_Name>FOUP事件報告開始</Command_Name>
+    <Command_Order>3</Command_Order>
+    <Parameters_Amount>1</Parameters_Amount>
+    <Parameter_Order>1</Parameter_Order>
+    <Parameter_ID>Null</Parameter_ID>
+    <Parameter_Description />
+    <Data_Value />
+    <Min_Value />
+    <Max_Value />
+    <Default_Value />
+    <Values_length />
+    <Is_Fill />
+    <Action_Function />
+  </Table>
+  <Table>
+    <Equipment_Type>LoadPort</Equipment_Type>
+    <Equipment_Supplier>TDK</Equipment_Supplier>
+    <Command_Type>EVT</Command_Type>
+    <Command_ID>FPEOF</Command_ID>
+    <Command_Format>EVT:FPEOF;</Command_Format>
+    <Command_Name>停止FOUP事件報告</Command_Name>
+    <Command_Order>4</Command_Order>
+    <Parameters_Amount>1</Parameters_Amount>
+    <Parameter_Order>1</Parameter_Order>
+    <Parameter_ID>Null</Parameter_ID>
+    <Parameter_Description />
+    <Data_Value />
+    <Min_Value />
+    <Max_Value />
+    <Default_Value />
+    <Values_length />
+    <Is_Fill />
+    <Action_Function />
+  </Table>
+  <Table>
+    <Equipment_Type>LoadPort</Equipment_Type>
+    <Equipment_Supplier>TDK</Equipment_Supplier>
+    <Command_Type>MOV</Command_Type>
+    <Command_ID>CUMFC</Command_ID>
+    <Command_Format>MOV:CUMFC;</Command_Format>
+    <Command_Name>從加載狀態映射到鬆開之前的狀態</Command_Name>
+    <Command_Order>17</Command_Order>
+    <Parameters_Amount>1</Parameters_Amount>
+    <Parameter_Order>1</Parameter_Order>
+    <Parameter_ID>Null</Parameter_ID>
+    <Parameter_Description />
+    <Data_Value />
+    <Min_Value />
+    <Max_Value />
+    <Default_Value />
+    <Values_length />
+    <Is_Fill />
+    <Action_Function>MapAndUntilUndock</Action_Function>
+  </Table>
+  <Table>
+    <Equipment_Type>LoadPort</Equipment_Type>
+    <Equipment_Supplier>TDK</Equipment_Supplier>
+    <Command_Type>MOV</Command_Type>
+    <Command_ID>MAPDO</Command_ID>
+    <Command_Format>MOV:MAPDO;</Command_Format>
+    <Command_Name>當FOUP處於加載狀態時執行映射操作</Command_Name>
+    <Command_Order>18</Command_Order>
+    <Parameters_Amount>1</Parameters_Amount>
+    <Parameter_Order>1</Parameter_Order>
+    <Parameter_ID>Null</Parameter_ID>
+    <Parameter_Description />
+    <Data_Value />
+    <Min_Value />
+    <Max_Value />
+    <Default_Value />
+    <Values_length />
+    <Is_Fill />
+    <Action_Function>MappingInLoad</Action_Function>
+  </Table>
+  <Table>
+    <Equipment_Type>LoadPort</Equipment_Type>
+    <Equipment_Supplier>TDK</Equipment_Supplier>
+    <Command_Type>MOV</Command_Type>
+    <Command_ID>REMAP</Command_ID>
+    <Command_Format>MOV:REMAP;</Command_Format>
+    <Command_Name>映射操作在中斷時重新開始</Command_Name>
+    <Command_Order>19</Command_Order>
+    <Parameters_Amount>1</Parameters_Amount>
+    <Parameter_Order>1</Parameter_Order>
+    <Parameter_ID>Null</Parameter_ID>
+    <Parameter_Description />
+    <Data_Value />
+    <Min_Value />
+    <Max_Value />
+    <Default_Value />
+    <Values_length />
+    <Is_Fill />
+    <Action_Function>RetryMapping</Action_Function>
+  </Table>
+  <Table>
+    <Equipment_Type>LoadPort</Equipment_Type>
+    <Equipment_Supplier>TDK</Equipment_Supplier>
+    <Command_Type>MOV</Command_Type>
+    <Command_ID>PODOP</Command_ID>
+    <Command_Format>MOV:PODOP;</Command_Format>
+    <Command_Name>FOUP夾子打開</Command_Name>
+    <Command_Order>20</Command_Order>
+    <Parameters_Amount>1</Parameters_Amount>
+    <Parameter_Order>1</Parameter_Order>
+    <Parameter_ID>Null</Parameter_ID>
+    <Parameter_Description />
+    <Data_Value />
+    <Min_Value />
+    <Max_Value />
+    <Default_Value />
+    <Values_length />
+    <Is_Fill />
+    <Action_Function>FOUPClampRelease</Action_Function>
+  </Table>
+  <Table>
+    <Equipment_Type>LoadPort</Equipment_Type>
+    <Equipment_Supplier>TDK</Equipment_Supplier>
+    <Command_Type>MOV</Command_Type>
+    <Command_ID>PODCL</Command_ID>
+    <Command_Format>MOV:PODCL;</Command_Format>
+    <Command_Name>FOUP夾鉗關閉</Command_Name>
+    <Command_Order>21</Command_Order>
+    <Parameters_Amount>1</Parameters_Amount>
+    <Parameter_Order>1</Parameter_Order>
+    <Parameter_ID>Null</Parameter_ID>
+    <Parameter_Description />
+    <Data_Value />
+    <Min_Value />
+    <Max_Value />
+    <Default_Value />
+    <Values_length />
+    <Is_Fill />
+    <Action_Function>FOUPClampFix</Action_Function>
+  </Table>
+  <Table>
+    <Equipment_Type>LoadPort</Equipment_Type>
+    <Equipment_Supplier>TDK</Equipment_Supplier>
+    <Command_Type>MOV</Command_Type>
+    <Command_ID>VACON</Command_ID>
+    <Command_Format>MOV:VACON;</Command_Format>
+    <Command_Name>吸附ON</Command_Name>
+    <Command_Order>22</Command_Order>
+    <Parameters_Amount>1</Parameters_Amount>
+    <Parameter_Order>1</Parameter_Order>
+    <Parameter_ID>Null</Parameter_ID>
+    <Parameter_Description />
+    <Data_Value />
+    <Min_Value />
+    <Max_Value />
+    <Default_Value />
+    <Values_length />
+    <Is_Fill />
+    <Action_Function>VacuumON</Action_Function>
+  </Table>
+  <Table>
+    <Equipment_Type>LoadPort</Equipment_Type>
+    <Equipment_Supplier>TDK</Equipment_Supplier>
+    <Command_Type>MOV</Command_Type>
+    <Command_ID>VACOF</Command_ID>
+    <Command_Format>MOV:VACOF;</Command_Format>
+    <Command_Name>吸附關閉</Command_Name>
+    <Command_Order>23</Command_Order>
+    <Parameters_Amount>1</Parameters_Amount>
+    <Parameter_Order>1</Parameter_Order>
+    <Parameter_ID>Null</Parameter_ID>
+    <Parameter_Description />
+    <Data_Value />
+    <Min_Value />
+    <Max_Value />
+    <Default_Value />
+    <Values_length />
+    <Is_Fill />
+    <Action_Function>VacuumOFF</Action_Function>
+  </Table>
+  <Table>
+    <Equipment_Type>LoadPort</Equipment_Type>
+    <Equipment_Supplier>TDK</Equipment_Supplier>
+    <Command_Type>MOV</Command_Type>
+    <Command_ID>DOROP</Command_ID>
+    <Command_Format>MOV:DOROP;</Command_Format>
+    <Command_Name>鎖銷鑰匙打開（FOUP門鎖解鎖）</Command_Name>
+    <Command_Order>24</Command_Order>
+    <Parameters_Amount>1</Parameters_Amount>
+    <Parameter_Order>1</Parameter_Order>
+    <Parameter_ID>Null</Parameter_ID>
+    <Parameter_Description />
+    <Data_Value />
+    <Min_Value />
+    <Max_Value />
+    <Default_Value />
+    <Values_length />
+    <Is_Fill />
+    <Action_Function>LatchkeyRelease</Action_Function>
+  </Table>
+  <Table>
+    <Equipment_Type>LoadPort</Equipment_Type>
+    <Equipment_Supplier>TDK</Equipment_Supplier>
+    <Command_Type>MOV</Command_Type>
+    <Command_ID>DORCL</Command_ID>
+    <Command_Format>MOV:DORCL;</Command_Format>
+    <Command_Name>鎖扣鑰匙關閉（FOUP門鎖離合器）</Command_Name>
+    <Command_Order>25</Command_Order>
+    <Parameters_Amount>1</Parameters_Amount>
+    <Parameter_Order>1</Parameter_Order>
+    <Parameter_ID>Null</Parameter_ID>
+    <Parameter_Description />
+    <Data_Value />
+    <Min_Value />
+    <Max_Value />
+    <Default_Value />
+    <Values_length />
+    <Is_Fill />
+    <Action_Function>LatchkeyFix</Action_Function>
+  </Table>
+  <Table>
+    <Equipment_Type>LoadPort</Equipment_Type>
+    <Equipment_Supplier>TDK</Equipment_Supplier>
+    <Command_Type>MOV</Command_Type>
+    <Command_ID>MAPOP</Command_ID>
+    <Command_Format>MOV:MAPOP;</Command_Format>
+    <Command_Name>Mapper胳膊打開</Command_Name>
+    <Command_Order>26</Command_Order>
+    <Parameters_Amount>1</Parameters_Amount>
+    <Parameter_Order>1</Parameter_Order>
+    <Parameter_ID>Null</Parameter_ID>
+    <Parameter_Description />
+    <Data_Value />
+    <Min_Value />
+    <Max_Value />
+    <Default_Value />
+    <Values_length />
+    <Is_Fill />
+    <Action_Function>MapperArmOpen</Action_Function>
+  </Table>
+  <Table>
+    <Equipment_Type>LoadPort</Equipment_Type>
+    <Equipment_Supplier>TDK</Equipment_Supplier>
+    <Command_Type>MOV</Command_Type>
+    <Command_ID>MAPCL</Command_ID>
+    <Command_Format>MOV:MAPCL;</Command_Format>
+    <Command_Name>Mapper手臂關閉</Command_Name>
+    <Command_Order>27</Command_Order>
+    <Parameters_Amount>1</Parameters_Amount>
+    <Parameter_Order>1</Parameter_Order>
+    <Parameter_ID>Null</Parameter_ID>
+    <Parameter_Description />
+    <Data_Value />
+    <Min_Value />
+    <Max_Value />
+    <Default_Value />
+    <Values_length />
+    <Is_Fill />
+    <Action_Function>MapperArmClose</Action_Function>
+  </Table>
+  <Table>
+    <Equipment_Type>LoadPort</Equipment_Type>
+    <Equipment_Supplier>TDK</Equipment_Supplier>
+    <Command_Type>MOV</Command_Type>
+    <Command_ID>ZDRUP</Command_ID>
+    <Command_Format>MOV:ZDRUP;</Command_Format>
+    <Command_Name>移動到Z軸上升位置（開門位置）</Command_Name>
+    <Command_Order>28</Command_Order>
+    <Parameters_Amount>1</Parameters_Amount>
+    <Parameter_Order>1</Parameter_Order>
+    <Parameter_ID>Null</Parameter_ID>
+    <Parameter_Description />
+    <Data_Value />
+    <Min_Value />
+    <Max_Value />
+    <Default_Value />
+    <Values_length />
+    <Is_Fill />
+    <Action_Function>DoorUp</Action_Function>
+  </Table>
+  <Table>
+    <Equipment_Type>LoadPort</Equipment_Type>
+    <Equipment_Supplier>TDK</Equipment_Supplier>
+    <Command_Type>MOV</Command_Type>
+    <Command_ID>ZDRDW</Command_ID>
+    <Command_Format>MOV:ZDRDW;</Command_Format>
+    <Command_Name>移動到Z軸下降位置（傳送裝置傳送可能位置）</Command_Name>
+    <Command_Order>29</Command_Order>
+    <Parameters_Amount>1</Parameters_Amount>
+    <Parameter_Order>1</Parameter_Order>
+    <Parameter_ID>Null</Parameter_ID>
+    <Parameter_Description />
+    <Data_Value />
+    <Min_Value />
+    <Max_Value />
+    <Default_Value />
+    <Values_length />
+    <Is_Fill />
+    <Action_Function>DoorDown</Action_Function>
+  </Table>
+  <Table>
+    <Equipment_Type>LoadPort</Equipment_Type>
+    <Equipment_Supplier>TDK</Equipment_Supplier>
+    <Command_Type>MOV</Command_Type>
+    <Command_ID>ZDRMP</Command_ID>
+    <Command_Format>MOV:ZDRMP;</Command_Format>
+    <Command_Name>向下並映射到Z軸映射結束位置</Command_Name>
+    <Command_Order>30</Command_Order>
+    <Parameters_Amount>1</Parameters_Amount>
+    <Parameter_Order>1</Parameter_Order>
+    <Parameter_ID>Null</Parameter_ID>
+    <Parameter_Description />
+    <Data_Value />
+    <Min_Value />
+    <Max_Value />
+    <Default_Value />
+    <Values_length />
+    <Is_Fill />
+    <Action_Function>MappingDown</Action_Function>
+  </Table>
+  <Table>
+    <Equipment_Type>LoadPort</Equipment_Type>
+    <Equipment_Supplier>TDK</Equipment_Supplier>
+    <Command_Type>MOV</Command_Type>
+    <Command_ID>ZMPST</Command_ID>
+    <Command_Format>MOV:ZMPST;</Command_Format>
+    <Command_Name>將映射器移動到開始位置</Command_Name>
+    <Command_Order>31</Command_Order>
+    <Parameters_Amount>1</Parameters_Amount>
+    <Parameter_Order>1</Parameter_Order>
+    <Parameter_ID>Null</Parameter_ID>
+    <Parameter_Description />
+    <Data_Value />
+    <Min_Value />
+    <Max_Value />
+    <Default_Value />
+    <Values_length />
+    <Is_Fill />
+    <Action_Function>MapperStartPosition</Action_Function>
+  </Table>
+  <Table>
+    <Equipment_Type>LoadPort</Equipment_Type>
+    <Equipment_Supplier>TDK</Equipment_Supplier>
+    <Command_Type>MOV</Command_Type>
+    <Command_ID>(ZMPED)</Command_ID>
+    <Command_Format>MOV:ZMPED;</Command_Format>
+    <Command_Name>將映射器移動到待機位置（兼容性命令）</Command_Name>
+    <Command_Order>32</Command_Order>
+    <Parameters_Amount>1</Parameters_Amount>
+    <Parameter_Order>1</Parameter_Order>
+    <Parameter_ID>Null</Parameter_ID>
+    <Parameter_Description />
+    <Data_Value />
+    <Min_Value />
+    <Max_Value />
+    <Default_Value />
+    <Values_length />
+    <Is_Fill />
+    <Action_Function>MapperWaitPosition</Action_Function>
+  </Table>
+  <Table>
+    <Equipment_Type>LoadPort</Equipment_Type>
+    <Equipment_Supplier>TDK</Equipment_Supplier>
+    <Command_Type>MOV</Command_Type>
+    <Command_ID>(MSTON)</Command_ID>
+    <Command_Format>MOV:MSTON;</Command_Format>
+    <Command_Name>無動作（打開地圖燈停止）</Command_Name>
+    <Command_Order>33</Command_Order>
+    <Parameters_Amount>1</Parameters_Amount>
+    <Parameter_Order>1</Parameter_Order>
+    <Parameter_ID>Null</Parameter_ID>
+    <Parameter_Description />
+    <Data_Value />
+    <Min_Value />
+    <Max_Value />
+    <Default_Value />
+    <Values_length />
+    <Is_Fill />
+    <Action_Function>MapperStopperON</Action_Function>
+  </Table>
+  <Table>
+    <Equipment_Type>LoadPort</Equipment_Type>
+    <Equipment_Supplier>TDK</Equipment_Supplier>
+    <Command_Type>MOV</Command_Type>
+    <Command_ID>(MSTOF)</Command_ID>
+    <Command_Format>MOV:MSTOF;</Command_Format>
+    <Command_Name>無動作（製圖員關閉）</Command_Name>
+    <Command_Order>34</Command_Order>
+    <Parameters_Amount>1</Parameters_Amount>
+    <Parameter_Order>1</Parameter_Order>
+    <Parameter_ID>Null</Parameter_ID>
+    <Parameter_Description />
+    <Data_Value />
+    <Min_Value />
+    <Max_Value />
+    <Default_Value />
+    <Values_length />
+    <Is_Fill />
+    <Action_Function>MapperStopperOFF</Action_Function>
+  </Table>
+  <Table>
+    <Equipment_Type>LoadPort</Equipment_Type>
+    <Equipment_Supplier>TDK</Equipment_Supplier>
+    <Command_Type>MOV</Command_Type>
+    <Command_ID>YWAIT</Command_ID>
+    <Command_Format>MOV:YWAIT;</Command_Format>
+    <Command_Name>移至Y軸取消鎖定位置</Command_Name>
+    <Command_Order>35</Command_Order>
+    <Parameters_Amount>1</Parameters_Amount>
+    <Parameter_Order>1</Parameter_Order>
+    <Parameter_ID>Null</Parameter_ID>
+    <Parameter_Description />
+    <Data_Value />
+    <Min_Value />
+    <Max_Value />
+    <Default_Value />
+    <Values_length />
+    <Is_Fill />
+    <Action_Function>Undock</Action_Function>
+  </Table>
+  <Table>
+    <Equipment_Type>LoadPort</Equipment_Type>
+    <Equipment_Supplier>TDK</Equipment_Supplier>
+    <Command_Type>MOV</Command_Type>
+    <Command_ID>YDOOR</Command_ID>
+    <Command_Format>MOV:YDOOR;</Command_Format>
+    <Command_Name>移至Y軸停靠位置</Command_Name>
+    <Command_Order>36</Command_Order>
+    <Parameters_Amount>1</Parameters_Amount>
+    <Parameter_Order>1</Parameter_Order>
+    <Parameter_ID>Null</Parameter_ID>
+    <Parameter_Description />
+    <Data_Value />
+    <Min_Value />
+    <Max_Value />
+    <Default_Value />
+    <Values_length />
+    <Is_Fill />
+    <Action_Function>Dock</Action_Function>
+  </Table>
+  <Table>
+    <Equipment_Type>LoadPort</Equipment_Type>
+    <Equipment_Supplier>TDK</Equipment_Supplier>
+    <Command_Type>MOV</Command_Type>
+    <Command_ID>DORBK</Command_ID>
+    <Command_Format>MOV:DORBK;</Command_Format>
+    <Command_Name>移至開門位置</Command_Name>
+    <Command_Order>37</Command_Order>
+    <Parameters_Amount>1</Parameters_Amount>
+    <Parameter_Order>1</Parameter_Order>
+    <Parameter_ID>Null</Parameter_ID>
+    <Parameter_Description />
+    <Data_Value />
+    <Min_Value />
+    <Max_Value />
+    <Default_Value />
+    <Values_length />
+    <Is_Fill />
+    <Action_Function>DoorOpen</Action_Function>
+  </Table>
+  <Table>
+    <Equipment_Type>LoadPort</Equipment_Type>
+    <Equipment_Supplier>TDK</Equipment_Supplier>
+    <Command_Type>MOV</Command_Type>
+    <Command_ID>DORFW</Command_ID>
+    <Command_Format>MOV:DORFW;</Command_Format>
+    <Command_Name>移至門關閉位置</Command_Name>
+    <Command_Order>38</Command_Order>
+    <Parameters_Amount>1</Parameters_Amount>
+    <Parameter_Order>1</Parameter_Order>
+    <Parameter_ID>Null</Parameter_ID>
+    <Parameter_Description />
+    <Data_Value />
+    <Min_Value />
+    <Max_Value />
+    <Default_Value />
+    <Values_length />
+    <Is_Fill />
+    <Action_Function>DoorClose</Action_Function>
+  </Table>
+  <Table>
+    <Equipment_Type>LoadPort</Equipment_Type>
+    <Equipment_Supplier>TDK</Equipment_Supplier>
+    <Command_Type>MOV</Command_Type>
+    <Command_ID>RETRY</Command_ID>
+    <Command_Format>MOV:RETRY;</Command_Format>
+    <Command_Name>重試可恢復的錯誤</Command_Name>
+    <Command_Order>39</Command_Order>
+    <Parameters_Amount>1</Parameters_Amount>
+    <Parameter_Order>1</Parameter_Order>
+    <Parameter_ID>Null</Parameter_ID>
+    <Parameter_Description />
+    <Data_Value />
+    <Min_Value />
+    <Max_Value />
+    <Default_Value />
+    <Values_length />
+    <Is_Fill />
+    <Action_Function>Retry</Action_Function>
+  </Table>
+  <Table>
+    <Equipment_Type>LoadPort</Equipment_Type>
+    <Equipment_Supplier>TDK</Equipment_Supplier>
+    <Command_Type>MOV</Command_Type>
+    <Command_ID>STOP_</Command_ID>
+    <Command_Format>MOV:STOP_;</Command_Format>
+    <Command_Name>立即停止並命令中止</Command_Name>
+    <Command_Order>40</Command_Order>
+    <Parameters_Amount>1</Parameters_Amount>
+    <Parameter_Order>1</Parameter_Order>
+    <Parameter_ID>Null</Parameter_ID>
+    <Parameter_Description />
+    <Data_Value />
+    <Min_Value />
+    <Max_Value />
+    <Default_Value />
+    <Values_length />
+    <Is_Fill />
+    <Action_Function>Stop</Action_Function>
+  </Table>
+  <Table>
+    <Equipment_Type>LoadPort</Equipment_Type>
+    <Equipment_Supplier>TDK</Equipment_Supplier>
+    <Command_Type>MOV</Command_Type>
+    <Command_ID>PAUSE</Command_ID>
+    <Command_Format>MOV:PAUSE;</Command_Format>
+    <Command_Name>立即停止</Command_Name>
+    <Command_Order>41</Command_Order>
+    <Parameters_Amount>1</Parameters_Amount>
+    <Parameter_Order>1</Parameter_Order>
+    <Parameter_ID>Null</Parameter_ID>
+    <Parameter_Description />
+    <Data_Value />
+    <Min_Value />
+    <Max_Value />
+    <Default_Value />
+    <Values_length />
+    <Is_Fill />
+    <Action_Function>Pause</Action_Function>
+  </Table>
+  <Table>
+    <Equipment_Type>LoadPort</Equipment_Type>
+    <Equipment_Supplier>TDK</Equipment_Supplier>
+    <Command_Type>MOV</Command_Type>
+    <Command_ID>ABORT</Command_ID>
+    <Command_Format>MOV:ABORT;</Command_Format>
+    <Command_Name>命令中止</Command_Name>
+    <Command_Order>42</Command_Order>
+    <Parameters_Amount>1</Parameters_Amount>
+    <Parameter_Order>1</Parameter_Order>
+    <Parameter_ID>Null</Parameter_ID>
+    <Parameter_Description />
+    <Data_Value />
+    <Min_Value />
+    <Max_Value />
+    <Default_Value />
+    <Values_length />
+    <Is_Fill />
+    <Action_Function>Abort</Action_Function>
+  </Table>
+  <Table>
+    <Equipment_Type>LoadPort</Equipment_Type>
+    <Equipment_Supplier>TDK</Equipment_Supplier>
+    <Command_Type>MOV</Command_Type>
+    <Command_ID>RESUM</Command_ID>
+    <Command_Format>MOV:RESUM;</Command_Format>
+    <Command_Name>操作繼續</Command_Name>
+    <Command_Order>43</Command_Order>
+    <Parameters_Amount>1</Parameters_Amount>
+    <Parameter_Order>1</Parameter_Order>
+    <Parameter_ID>Null</Parameter_ID>
+    <Parameter_Description />
+    <Data_Value />
+    <Min_Value />
+    <Max_Value />
+    <Default_Value />
+    <Values_length />
+    <Is_Fill />
+    <Action_Function>Resum</Action_Function>
+  </Table>
+  <Table>
+    <Equipment_Type>LoadPort</Equipment_Type>
+    <Equipment_Supplier>TDK</Equipment_Supplier>
+    <Command_Type>FIN</Command_Type>
+    <Command_ID>RESET</Command_ID>
+    <Command_Format>FIN:RESET;</Command_Format>
+    <Command_Name>錯誤重置</Command_Name>
+    <Command_Order>1</Command_Order>
+    <Parameters_Amount>1</Parameters_Amount>
+    <Parameter_Order>1</Parameter_Order>
+    <Parameter_ID>Null</Parameter_ID>
+    <Parameter_Description />
+    <Data_Value />
+    <Min_Value />
+    <Max_Value />
+    <Default_Value />
+    <Values_length />
+    <Is_Fill />
+    <Action_Function>Reset</Action_Function>
+  </Table>
+  <Table>
+    <Equipment_Type>LoadPort</Equipment_Type>
+    <Equipment_Supplier>TDK</Equipment_Supplier>
+    <Command_Type>FIN</Command_Type>
+    <Command_ID>INITL</Command_ID>
+    <Command_Format>FIN:INITL;</Command_Format>
+    <Command_Name>程式初始化（內部狀態初始化）*它不運作。</Command_Name>
+    <Command_Order>2</Command_Order>
+    <Parameters_Amount>1</Parameters_Amount>
+    <Parameter_Order>1</Parameter_Order>
+    <Parameter_ID>Null</Parameter_ID>
+    <Parameter_Description />
+    <Data_Value />
+    <Min_Value />
+    <Max_Value />
+    <Default_Value />
+    <Values_length />
+    <Is_Fill />
+    <Action_Function>Initialization</Action_Function>
+  </Table>
+  <Table>
+    <Equipment_Type>LoadPort</Equipment_Type>
+    <Equipment_Supplier>TDK</Equipment_Supplier>
+    <Command_Type>FIN</Command_Type>
+    <Command_ID>LON07</Command_ID>
+    <Command_Format>FIN:LON07;</Command_Format>
+    <Command_Name>STATUS 1 指示燈 開</Command_Name>
+    <Command_Order>3</Command_Order>
+    <Parameters_Amount>1</Parameters_Amount>
+    <Parameter_Order>1</Parameter_Order>
+    <Parameter_ID>Null</Parameter_ID>
+    <Parameter_Description />
+    <Data_Value />
+    <Min_Value />
+    <Max_Value />
+    <Default_Value />
+    <Values_length />
+    <Is_Fill />
+    <Action_Function>Status01_ON</Action_Function>
+  </Table>
+  <Table>
+    <Equipment_Type>LoadPort</Equipment_Type>
+    <Equipment_Supplier>TDK</Equipment_Supplier>
+    <Command_Type>FIN</Command_Type>
+    <Command_ID>LBL07</Command_ID>
+    <Command_Format>FIN:LBL07;</Command_Format>
+    <Command_Name>STATUS 1 指示燈 閃爍</Command_Name>
+    <Command_Order>4</Command_Order>
+    <Parameters_Amount>1</Parameters_Amount>
+    <Parameter_Order>1</Parameter_Order>
+    <Parameter_ID>Null</Parameter_ID>
+    <Parameter_Description />
+    <Data_Value />
+    <Min_Value />
+    <Max_Value />
+    <Default_Value />
+    <Values_length />
+    <Is_Fill />
+    <Action_Function>Status01_Flashes</Action_Function>
+  </Table>
+  <Table>
+    <Equipment_Type>LoadPort</Equipment_Type>
+    <Equipment_Supplier>TDK</Equipment_Supplier>
+    <Command_Type>FIN</Command_Type>
+    <Command_ID>LOF07</Command_ID>
+    <Command_Format>FIN:LOF07;</Command_Format>
+    <Command_Name>STATUS 1 指示燈 關</Command_Name>
+    <Command_Order>5</Command_Order>
+    <Parameters_Amount>1</Parameters_Amount>
+    <Parameter_Order>1</Parameter_Order>
+    <Parameter_ID>Null</Parameter_ID>
+    <Parameter_Description />
+    <Data_Value />
+    <Min_Value />
+    <Max_Value />
+    <Default_Value />
+    <Values_length />
+    <Is_Fill />
+    <Action_Function>Status01_OFF</Action_Function>
+  </Table>
+  <Table>
+    <Equipment_Type>LoadPort</Equipment_Type>
+    <Equipment_Supplier>TDK</Equipment_Supplier>
+    <Command_Type>FIN</Command_Type>
+    <Command_ID>LON08</Command_ID>
+    <Command_Format>FIN:LON08;</Command_Format>
+    <Command_Name>STATUS 2 指示燈 開</Command_Name>
+    <Command_Order>6</Command_Order>
+    <Parameters_Amount>1</Parameters_Amount>
+    <Parameter_Order>1</Parameter_Order>
+    <Parameter_ID>Null</Parameter_ID>
+    <Parameter_Description />
+    <Data_Value />
+    <Min_Value />
+    <Max_Value />
+    <Default_Value />
+    <Values_length />
+    <Is_Fill />
+    <Action_Function>Status02_ON</Action_Function>
+  </Table>
+  <Table>
+    <Equipment_Type>LoadPort</Equipment_Type>
+    <Equipment_Supplier>TDK</Equipment_Supplier>
+    <Command_Type>FIN</Command_Type>
+    <Command_ID>LBL08</Command_ID>
+    <Command_Format>FIN:LBL08;</Command_Format>
+    <Command_Name>STATUS 2 指示燈 閃爍</Command_Name>
+    <Command_Order>7</Command_Order>
+    <Parameters_Amount>1</Parameters_Amount>
+    <Parameter_Order>1</Parameter_Order>
+    <Parameter_ID>Null</Parameter_ID>
+    <Parameter_Description />
+    <Data_Value />
+    <Min_Value />
+    <Max_Value />
+    <Default_Value />
+    <Values_length />
+    <Is_Fill />
+    <Action_Function>Status02_Flashes</Action_Function>
+  </Table>
+  <Table>
+    <Equipment_Type>LoadPort</Equipment_Type>
+    <Equipment_Supplier>TDK</Equipment_Supplier>
+    <Command_Type>FIN</Command_Type>
+    <Command_ID>LOF08</Command_ID>
+    <Command_Format>FIN:LOF08;</Command_Format>
+    <Command_Name>STATUS 2 指示燈 關</Command_Name>
+    <Command_Order>8</Command_Order>
+    <Parameters_Amount>1</Parameters_Amount>
+    <Parameter_Order>1</Parameter_Order>
+    <Parameter_ID>Null</Parameter_ID>
+    <Parameter_Description />
+    <Data_Value />
+    <Min_Value />
+    <Max_Value />
+    <Default_Value />
+    <Values_length />
+    <Is_Fill />
+    <Action_Function>Status02_OFF</Action_Function>
+  </Table>
+  <Table>
+    <Equipment_Type>LoadPort</Equipment_Type>
+    <Equipment_Supplier>TDK</Equipment_Supplier>
+    <Command_Type>FIN</Command_Type>
+    <Command_ID>LON01</Command_ID>
+    <Command_Format>FIN:LON01;</Command_Format>
+    <Command_Name>LOAD 指示燈 開</Command_Name>
+    <Command_Order>9</Command_Order>
+    <Parameters_Amount>1</Parameters_Amount>
+    <Parameter_Order>1</Parameter_Order>
+    <Parameter_ID>Null</Parameter_ID>
+    <Parameter_Description />
+    <Data_Value />
+    <Min_Value />
+    <Max_Value />
+    <Default_Value />
+    <Values_length />
+    <Is_Fill />
+    <Action_Function>Load_ON</Action_Function>
+  </Table>
+  <Table>
+    <Equipment_Type>LoadPort</Equipment_Type>
+    <Equipment_Supplier>TDK</Equipment_Supplier>
+    <Command_Type>FIN</Command_Type>
+    <Command_ID>LBL01</Command_ID>
+    <Command_Format>FIN:LBL01;</Command_Format>
+    <Command_Name>LOAD 指示燈 閃爍</Command_Name>
+    <Command_Order>10</Command_Order>
+    <Parameters_Amount>1</Parameters_Amount>
+    <Parameter_Order>1</Parameter_Order>
+    <Parameter_ID>Null</Parameter_ID>
+    <Parameter_Description />
+    <Data_Value />
+    <Min_Value />
+    <Max_Value />
+    <Default_Value />
+    <Values_length />
+    <Is_Fill />
+    <Action_Function>Load_Flashes</Action_Function>
+  </Table>
+  <Table>
+    <Equipment_Type>LoadPort</Equipment_Type>
+    <Equipment_Supplier>TDK</Equipment_Supplier>
+    <Command_Type>FIN</Command_Type>
+    <Command_ID>LOF01</Command_ID>
+    <Command_Format>FIN:LOF01;</Command_Format>
+    <Command_Name>LOAD 指示燈 關</Command_Name>
+    <Command_Order>11</Command_Order>
+    <Parameters_Amount>1</Parameters_Amount>
+    <Parameter_Order>1</Parameter_Order>
+    <Parameter_ID>Null</Parameter_ID>
+    <Parameter_Description />
+    <Data_Value />
+    <Min_Value />
+    <Max_Value />
+    <Default_Value />
+    <Values_length />
+    <Is_Fill />
+    <Action_Function>Load_OFF</Action_Function>
+  </Table>
+  <Table>
+    <Equipment_Type>LoadPort</Equipment_Type>
+    <Equipment_Supplier>TDK</Equipment_Supplier>
+    <Command_Type>FIN</Command_Type>
+    <Command_ID>LON02</Command_ID>
+    <Command_Format>FIN:LON02;</Command_Format>
+    <Command_Name>UNLOAD 指示燈 開</Command_Name>
+    <Command_Order>12</Command_Order>
+    <Parameters_Amount>1</Parameters_Amount>
+    <Parameter_Order>1</Parameter_Order>
+    <Parameter_ID>Null</Parameter_ID>
+    <Parameter_Description />
+    <Data_Value />
+    <Min_Value />
+    <Max_Value />
+    <Default_Value />
+    <Values_length />
+    <Is_Fill />
+    <Action_Function>Unload_ON</Action_Function>
+  </Table>
+  <Table>
+    <Equipment_Type>LoadPort</Equipment_Type>
+    <Equipment_Supplier>TDK</Equipment_Supplier>
+    <Command_Type>FIN</Command_Type>
+    <Command_ID>LBL02</Command_ID>
+    <Command_Format>FIN:LBL02;</Command_Format>
+    <Command_Name>UNLOAD 指示燈 閃爍</Command_Name>
+    <Command_Order>13</Command_Order>
+    <Parameters_Amount>1</Parameters_Amount>
+    <Parameter_Order>1</Parameter_Order>
+    <Parameter_ID>Null</Parameter_ID>
+    <Parameter_Description />
+    <Data_Value />
+    <Min_Value />
+    <Max_Value />
+    <Default_Value />
+    <Values_length />
+    <Is_Fill />
+    <Action_Function>Unload_Flashes</Action_Function>
+  </Table>
+  <Table>
+    <Equipment_Type>LoadPort</Equipment_Type>
+    <Equipment_Supplier>TDK</Equipment_Supplier>
+    <Command_Type>FIN</Command_Type>
+    <Command_ID>LOF02</Command_ID>
+    <Command_Format>FIN:LOF02;</Command_Format>
+    <Command_Name>UNLOAD 指示燈 關</Command_Name>
+    <Command_Order>14</Command_Order>
+    <Parameters_Amount>1</Parameters_Amount>
+    <Parameter_Order>1</Parameter_Order>
+    <Parameter_ID>Null</Parameter_ID>
+    <Parameter_Description />
+    <Data_Value />
+    <Min_Value />
+    <Max_Value />
+    <Default_Value />
+    <Values_length />
+    <Is_Fill />
+    <Action_Function>Unload_OFF</Action_Function>
+  </Table>
+  <Table>
+    <Equipment_Type>LoadPort</Equipment_Type>
+    <Equipment_Supplier>TDK</Equipment_Supplier>
+    <Command_Type>FIN</Command_Type>
+    <Command_ID>LON03</Command_ID>
+    <Command_Format>FIN:LON03;</Command_Format>
+    <Command_Name>OP. ACCESS 指示燈 開</Command_Name>
+    <Command_Order>15</Command_Order>
+    <Parameters_Amount>1</Parameters_Amount>
+    <Parameter_Order>1</Parameter_Order>
+    <Parameter_ID>Null</Parameter_ID>
+    <Parameter_Description />
+    <Data_Value />
+    <Min_Value />
+    <Max_Value />
+    <Default_Value />
+    <Values_length />
+    <Is_Fill />
+    <Action_Function>OpAccess_ON</Action_Function>
+  </Table>
+  <Table>
+    <Equipment_Type>LoadPort</Equipment_Type>
+    <Equipment_Supplier>TDK</Equipment_Supplier>
+    <Command_Type>FIN</Command_Type>
+    <Command_ID>LBL03</Command_ID>
+    <Command_Format>FIN:LBL03;</Command_Format>
+    <Command_Name>OP. ACCESS 指示燈 閃爍</Command_Name>
+    <Command_Order>16</Command_Order>
+    <Parameters_Amount>1</Parameters_Amount>
+    <Parameter_Order>1</Parameter_Order>
+    <Parameter_ID>Null</Parameter_ID>
+    <Parameter_Description />
+    <Data_Value />
+    <Min_Value />
+    <Max_Value />
+    <Default_Value />
+    <Values_length />
+    <Is_Fill />
+    <Action_Function>OpAccess_Flashes</Action_Function>
+  </Table>
+  <Table>
+    <Equipment_Type>LoadPort</Equipment_Type>
+    <Equipment_Supplier>TDK</Equipment_Supplier>
+    <Command_Type>FIN</Command_Type>
+    <Command_ID>LOF03</Command_ID>
+    <Command_Format>FIN:LOF03;</Command_Format>
+    <Command_Name>OP. ACCESS 指示燈 關</Command_Name>
+    <Command_Order>17</Command_Order>
+    <Parameters_Amount>1</Parameters_Amount>
+    <Parameter_Order>1</Parameter_Order>
+    <Parameter_ID>Null</Parameter_ID>
+    <Parameter_Description />
+    <Data_Value />
+    <Min_Value />
+    <Max_Value />
+    <Default_Value />
+    <Values_length />
+    <Is_Fill />
+    <Action_Function>OpAccess_OFF</Action_Function>
+  </Table>
+  <Table>
+    <Equipment_Type>LoadPort</Equipment_Type>
+    <Equipment_Supplier>TDK</Equipment_Supplier>
+    <Command_Type>FIN</Command_Type>
+    <Command_ID>LON04</Command_ID>
+    <Command_Format>FIN:LON04;</Command_Format>
+    <Command_Name>PRESENCE 指示燈 開</Command_Name>
+    <Command_Order>18</Command_Order>
+    <Parameters_Amount>1</Parameters_Amount>
+    <Parameter_Order>1</Parameter_Order>
+    <Parameter_ID>Null</Parameter_ID>
+    <Parameter_Description />
+    <Data_Value />
+    <Min_Value />
+    <Max_Value />
+    <Default_Value />
+    <Values_length />
+    <Is_Fill />
+    <Action_Function>Presence_ON</Action_Function>
+  </Table>
+  <Table>
+    <Equipment_Type>LoadPort</Equipment_Type>
+    <Equipment_Supplier>TDK</Equipment_Supplier>
+    <Command_Type>FIN</Command_Type>
+    <Command_ID>LBL04</Command_ID>
+    <Command_Format>FIN:LBL04;</Command_Format>
+    <Command_Name>PRESENCE 指示燈 閃爍</Command_Name>
+    <Command_Order>19</Command_Order>
+    <Parameters_Amount>1</Parameters_Amount>
+    <Parameter_Order>1</Parameter_Order>
+    <Parameter_ID>Null</Parameter_ID>
+    <Parameter_Description />
+    <Data_Value />
+    <Min_Value />
+    <Max_Value />
+    <Default_Value />
+    <Values_length />
+    <Is_Fill />
+    <Action_Function>Presence_Flashes</Action_Function>
+  </Table>
+  <Table>
+    <Equipment_Type>LoadPort</Equipment_Type>
+    <Equipment_Supplier>TDK</Equipment_Supplier>
+    <Command_Type>FIN</Command_Type>
+    <Command_ID>LOF04</Command_ID>
+    <Command_Format>FIN:LOF04;</Command_Format>
+    <Command_Name>PRESENCE 指示燈 關</Command_Name>
+    <Command_Order>20</Command_Order>
+    <Parameters_Amount>1</Parameters_Amount>
+    <Parameter_Order>1</Parameter_Order>
+    <Parameter_ID>Null</Parameter_ID>
+    <Parameter_Description />
+    <Data_Value />
+    <Min_Value />
+    <Max_Value />
+    <Default_Value />
+    <Values_length />
+    <Is_Fill />
+    <Action_Function>Presence_OFF</Action_Function>
+  </Table>
+  <Table>
+    <Equipment_Type>LoadPort</Equipment_Type>
+    <Equipment_Supplier>TDK</Equipment_Supplier>
+    <Command_Type>FIN</Command_Type>
+    <Command_ID>LON05</Command_ID>
+    <Command_Format>FIN:LON05;</Command_Format>
+    <Command_Name>PLACEMENT 指示燈 開</Command_Name>
+    <Command_Order>21</Command_Order>
+    <Parameters_Amount>1</Parameters_Amount>
+    <Parameter_Order>1</Parameter_Order>
+    <Parameter_ID>Null</Parameter_ID>
+    <Parameter_Description />
+    <Data_Value />
+    <Min_Value />
+    <Max_Value />
+    <Default_Value />
+    <Values_length />
+    <Is_Fill />
+    <Action_Function>Placement_ON</Action_Function>
+  </Table>
+  <Table>
+    <Equipment_Type>LoadPort</Equipment_Type>
+    <Equipment_Supplier>TDK</Equipment_Supplier>
+    <Command_Type>FIN</Command_Type>
+    <Command_ID>LBL05</Command_ID>
+    <Command_Format>FIN:LBL05;</Command_Format>
+    <Command_Name>PLACEMENT 指示燈 閃爍</Command_Name>
+    <Command_Order>22</Command_Order>
+    <Parameters_Amount>1</Parameters_Amount>
+    <Parameter_Order>1</Parameter_Order>
+    <Parameter_ID>Null</Parameter_ID>
+    <Parameter_Description />
+    <Data_Value />
+    <Min_Value />
+    <Max_Value />
+    <Default_Value />
+    <Values_length />
+    <Is_Fill />
+    <Action_Function>Placement_Flashes</Action_Function>
+  </Table>
+  <Table>
+    <Equipment_Type>LoadPort</Equipment_Type>
+    <Equipment_Supplier>TDK</Equipment_Supplier>
+    <Command_Type>FIN</Command_Type>
+    <Command_ID>LOF05</Command_ID>
+    <Command_Format>FIN:LOF05;</Command_Format>
+    <Command_Name>PLACEMENT 指示燈 關</Command_Name>
+    <Command_Order>23</Command_Order>
+    <Parameters_Amount>1</Parameters_Amount>
+    <Parameter_Order>1</Parameter_Order>
+    <Parameter_ID>Null</Parameter_ID>
+    <Parameter_Description />
+    <Data_Value />
+    <Min_Value />
+    <Max_Value />
+    <Default_Value />
+    <Values_length />
+    <Is_Fill />
+    <Action_Function>Placement_OFF</Action_Function>
+  </Table>
+  <Table>
+    <Equipment_Type>LoadPort</Equipment_Type>
+    <Equipment_Supplier>TDK</Equipment_Supplier>
+    <Command_Type>FIN</Command_Type>
+    <Command_ID>ORGSH</Command_ID>
+    <Command_Format>FIN:ORGSH;</Command_Format>
+    <Command_Name>移動到初始位置</Command_Name>
+    <Command_Order>24</Command_Order>
+    <Parameters_Amount>1</Parameters_Amount>
+    <Parameter_Order>1</Parameter_Order>
+    <Parameter_ID>Null</Parameter_ID>
+    <Parameter_Description />
+    <Data_Value />
+    <Min_Value />
+    <Max_Value />
+    <Default_Value />
+    <Values_length />
+    <Is_Fill />
+    <Action_Function>InitialPosition</Action_Function>
+  </Table>
+  <Table>
+    <Equipment_Type>LoadPort</Equipment_Type>
+    <Equipment_Supplier>TDK</Equipment_Supplier>
+    <Command_Type>FIN</Command_Type>
+    <Command_ID>ABORG</Command_ID>
+    <Command_Format>FIN:ABORG;</Command_Format>
+    <Command_Name>強行移動到初始位置</Command_Name>
+    <Command_Order>25</Command_Order>
+    <Parameters_Amount>1</Parameters_Amount>
+    <Parameter_Order>1</Parameter_Order>
+    <Parameter_ID>Null</Parameter_ID>
+    <Parameter_Description />
+    <Data_Value />
+    <Min_Value />
+    <Max_Value />
+    <Default_Value />
+    <Values_length />
+    <Is_Fill />
+    <Action_Function>ForcedInitialPosition</Action_Function>
+  </Table>
+  <Table>
+    <Equipment_Type>LoadPort</Equipment_Type>
+    <Equipment_Supplier>TDK</Equipment_Supplier>
+    <Command_Type>FIN</Command_Type>
+    <Command_ID>CLOAD</Command_ID>
+    <Command_Format>FIN:CLOAD;</Command_Format>
+    <Command_Name>使FOUP加載（設備通過）狀態</Command_Name>
+    <Command_Order>26</Command_Order>
+    <Parameters_Amount>1</Parameters_Amount>
+    <Parameter_Order>1</Parameter_Order>
+    <Parameter_ID>Null</Parameter_ID>
+    <Parameter_Description />
+    <Data_Value />
+    <Min_Value />
+    <Max_Value />
+    <Default_Value />
+    <Values_length />
+    <Is_Fill />
+    <Action_Function>Load</Action_Function>
+  </Table>
+  <Table>
+    <Equipment_Type>LoadPort</Equipment_Type>
+    <Equipment_Supplier>TDK</Equipment_Supplier>
+    <Command_Type>FIN</Command_Type>
+    <Command_ID>CLDDK</Command_ID>
+    <Command_Format>FIN:CLDDK;</Command_Format>
+    <Command_Name>在CLOAD的程序中，使其處於狀態直到門打開</Command_Name>
+    <Command_Order>27</Command_Order>
+    <Parameters_Amount>1</Parameters_Amount>
+    <Parameter_Order>1</Parameter_Order>
+    <Parameter_ID>Null</Parameter_ID>
+    <Parameter_Description />
+    <Data_Value />
+    <Min_Value />
+    <Max_Value />
+    <Default_Value />
+    <Values_length />
+    <Is_Fill />
+    <Action_Function>DockingPosition</Action_Function>
+  </Table>
+  <Table>
+    <Equipment_Type>LoadPort</Equipment_Type>
+    <Equipment_Supplier>TDK</Equipment_Supplier>
+    <Command_Type>FIN</Command_Type>
+    <Command_ID>CLDYD</Command_ID>
+    <Command_Format>FIN:CLDYD;</Command_Format>
+    <Command_Name>執行移動到FOUP夾具和Y軸對接位置</Command_Name>
+    <Command_Order>28</Command_Order>
+    <Parameters_Amount>1</Parameters_Amount>
+    <Parameter_Order>1</Parameter_Order>
+    <Parameter_ID>Null</Parameter_ID>
+    <Parameter_Description />
+    <Data_Value />
+    <Min_Value />
+    <Max_Value />
+    <Default_Value />
+    <Values_length />
+    <Is_Fill />
+    <Action_Function>DockingPositionNoVac</Action_Function>
+  </Table>
+  <Table>
+    <Equipment_Type>LoadPort</Equipment_Type>
+    <Equipment_Supplier>TDK</Equipment_Supplier>
+    <Command_Type>FIN</Command_Type>
+    <Command_ID>CLDOP</Command_ID>
+    <Command_Format>FIN:CLDOP;</Command_Format>
+    <Command_Name>在CLDDK後繼續加載FOUP</Command_Name>
+    <Command_Order>29</Command_Order>
+    <Parameters_Amount>1</Parameters_Amount>
+    <Parameter_Order>1</Parameter_Order>
+    <Parameter_ID>Null</Parameter_ID>
+    <Parameter_Description />
+    <Data_Value />
+    <Min_Value />
+    <Max_Value />
+    <Default_Value />
+    <Values_length />
+    <Is_Fill />
+    <Action_Function>DockingPositionAfterLoad</Action_Function>
+  </Table>
+  <Table>
+    <Equipment_Type>LoadPort</Equipment_Type>
+    <Equipment_Supplier>TDK</Equipment_Supplier>
+    <Command_Type>FIN</Command_Type>
+    <Command_ID>CLDMP</Command_ID>
+    <Command_Format>FIN:CLDMP;</Command_Format>
+    <Command_Name>映射後使FOUP加載狀態</Command_Name>
+    <Command_Order>30</Command_Order>
+    <Parameters_Amount>1</Parameters_Amount>
+    <Parameter_Order>1</Parameter_Order>
+    <Parameter_ID>Null</Parameter_ID>
+    <Parameter_Description />
+    <Data_Value />
+    <Min_Value />
+    <Max_Value />
+    <Default_Value />
+    <Values_length />
+    <Is_Fill />
+    <Action_Function>MappingLoad</Action_Function>
+  </Table>
+  <Table>
+    <Equipment_Type>LoadPort</Equipment_Type>
+    <Equipment_Supplier>TDK</Equipment_Supplier>
+    <Command_Type>FIN</Command_Type>
+    <Command_ID>CLMPO</Command_ID>
+    <Command_Format>FIN:CLMPO;</Command_Format>
+    <Command_Name>在CLDDK之後繼續並在映射後設置為加載狀態</Command_Name>
+    <Command_Order>31</Command_Order>
+    <Parameters_Amount>1</Parameters_Amount>
+    <Parameter_Order>1</Parameter_Order>
+    <Parameter_ID>Null</Parameter_ID>
+    <Parameter_Description />
+    <Data_Value />
+    <Min_Value />
+    <Max_Value />
+    <Default_Value />
+    <Values_length />
+    <Is_Fill />
+    <Action_Function>DockingPositionAfterMapping</Action_Function>
+  </Table>
+  <Table>
+    <Equipment_Type>LoadPort</Equipment_Type>
+    <Equipment_Supplier>TDK</Equipment_Supplier>
+    <Command_Type>FIN</Command_Type>
+    <Command_ID>CULOD</Command_ID>
+    <Command_Format>FIN:CULOD;</Command_Format>
+    <Command_Name>設置FOUP卸載（執行位置）狀態</Command_Name>
+    <Command_Order>32</Command_Order>
+    <Parameters_Amount>1</Parameters_Amount>
+    <Parameter_Order>1</Parameter_Order>
+    <Parameter_ID>Null</Parameter_ID>
+    <Parameter_Description />
+    <Data_Value />
+    <Min_Value />
+    <Max_Value />
+    <Default_Value />
+    <Values_length />
+    <Is_Fill />
+    <Action_Function>Unload</Action_Function>
+  </Table>
+  <Table>
+    <Equipment_Type>LoadPort</Equipment_Type>
+    <Equipment_Supplier>TDK</Equipment_Supplier>
+    <Command_Type>FIN</Command_Type>
+    <Command_ID>CULDK</Command_ID>
+    <Command_Format>FIN:CULDK;</Command_Format>
+    <Command_Name>關閉CULOD的門</Command_Name>
+    <Command_Order>33</Command_Order>
+    <Parameters_Amount>1</Parameters_Amount>
+    <Parameter_Order>1</Parameter_Order>
+    <Parameter_ID>Null</Parameter_ID>
+    <Parameter_Description />
+    <Data_Value />
+    <Min_Value />
+    <Max_Value />
+    <Default_Value />
+    <Values_length />
+    <Is_Fill />
+    <Action_Function>UntilDoorClose</Action_Function>
+  </Table>
+  <Table>
+    <Equipment_Type>LoadPort</Equipment_Type>
+    <Equipment_Supplier>TDK</Equipment_Supplier>
+    <Command_Type>FIN</Command_Type>
+    <Command_ID>CUDCL</Command_ID>
+    <Command_Format>FIN:CUDCL;</Command_Format>
+    <Command_Name>在CULDK之後解除夾緊狀態的FOUP</Command_Name>
+    <Command_Order>34</Command_Order>
+    <Parameters_Amount>1</Parameters_Amount>
+    <Parameter_Order>1</Parameter_Order>
+    <Parameter_ID>Null</Parameter_ID>
+    <Parameter_Description />
+    <Data_Value />
+    <Min_Value />
+    <Max_Value />
+    <Default_Value />
+    <Values_length />
+    <Is_Fill />
+    <Action_Function>DoorCloseAfterUndock</Action_Function>
+  </Table>
+  <Table>
+    <Equipment_Type>LoadPort</Equipment_Type>
+    <Equipment_Supplier>TDK</Equipment_Supplier>
+    <Command_Type>FIN</Command_Type>
+    <Command_ID>CUDNC</Command_ID>
+    <Command_Format>FIN:CUDNC;</Command_Format>
+    <Command_Name>在CULDK之後將FOUP置於卸載狀態</Command_Name>
+    <Command_Order>35</Command_Order>
+    <Parameters_Amount>1</Parameters_Amount>
+    <Parameter_Order>1</Parameter_Order>
+    <Parameter_ID>Null</Parameter_ID>
+    <Parameter_Description />
+    <Data_Value />
+    <Min_Value />
+    <Max_Value />
+    <Default_Value />
+    <Values_length />
+    <Is_Fill />
+    <Action_Function>DoorCloseAfterUnload</Action_Function>
+  </Table>
+  <Table>
+    <Equipment_Type>LoadPort</Equipment_Type>
+    <Equipment_Supplier>TDK</Equipment_Supplier>
+    <Command_Type>FIN</Command_Type>
+    <Command_ID>CULYD</Command_ID>
+    <Command_Format>FIN:CULYD;</Command_Format>
+    <Command_Name>卸載到對接狀態</Command_Name>
+    <Command_Order>36</Command_Order>
+    <Parameters_Amount>1</Parameters_Amount>
+    <Parameter_Order>1</Parameter_Order>
+    <Parameter_ID>Null</Parameter_ID>
+    <Parameter_Description />
+    <Data_Value />
+    <Min_Value />
+    <Max_Value />
+    <Default_Value />
+    <Values_length />
+    <Is_Fill />
+    <Action_Function>UntilDoorCloseVacOFF</Action_Function>
+  </Table>
+  <Table>
+    <Equipment_Type>LoadPort</Equipment_Type>
+    <Equipment_Supplier>TDK</Equipment_Supplier>
+    <Command_Type>FIN</Command_Type>
+    <Command_ID>CULFC</Command_ID>
+    <Command_Format>FIN:CULFC;</Command_Format>
+    <Command_Name>卸下FOUP之前卸下它</Command_Name>
+    <Command_Order>37</Command_Order>
+    <Parameters_Amount>1</Parameters_Amount>
+    <Parameter_Order>1</Parameter_Order>
+    <Parameter_ID>Null</Parameter_ID>
+    <Parameter_Description />
+    <Data_Value />
+    <Min_Value />
+    <Max_Value />
+    <Default_Value />
+    <Values_length />
+    <Is_Fill />
+    <Action_Function>UntilUndock</Action_Function>
+  </Table>
+  <Table>
+    <Equipment_Type>LoadPort</Equipment_Type>
+    <Equipment_Supplier>TDK</Equipment_Supplier>
+    <Command_Type>FIN</Command_Type>
+    <Command_ID>CUDMP</Command_ID>
+    <Command_Format>FIN:CUDMP;</Command_Format>
+    <Command_Name>從加載狀態映射到卸載狀態。</Command_Name>
+    <Command_Order>38</Command_Order>
+    <Parameters_Amount>1</Parameters_Amount>
+    <Parameter_Order>1</Parameter_Order>
+    <Parameter_ID>Null</Parameter_ID>
+    <Parameter_Description />
+    <Data_Value />
+    <Min_Value />
+    <Max_Value />
+    <Default_Value />
+    <Values_length />
+    <Is_Fill />
+    <Action_Function>MapAndUnload</Action_Function>
+  </Table>
+  <Table>
+    <Equipment_Type>LoadPort</Equipment_Type>
+    <Equipment_Supplier>TDK</Equipment_Supplier>
+    <Command_Type>FIN</Command_Type>
+    <Command_ID>CUMDK</Command_ID>
+    <Command_Format>FIN:CUMDK;</Command_Format>
+    <Command_Name>從負載狀態到關門狀態的映射</Command_Name>
+    <Command_Order>39</Command_Order>
+    <Parameters_Amount>1</Parameters_Amount>
+    <Parameter_Order>1</Parameter_Order>
+    <Parameter_ID>Null</Parameter_ID>
+    <Parameter_Description />
+    <Data_Value />
+    <Min_Value />
+    <Max_Value />
+    <Default_Value />
+    <Values_length />
+    <Is_Fill />
+    <Action_Function>MapAndUntilDoorClose</Action_Function>
+  </Table>
+  <Table>
+    <Equipment_Type>LoadPort</Equipment_Type>
+    <Equipment_Supplier>TDK</Equipment_Supplier>
+    <Command_Type>FIN</Command_Type>
+    <Command_ID>CUMFC</Command_ID>
+    <Command_Format>FIN:CUMFC;</Command_Format>
+    <Command_Name>從加載狀態映射到鬆開之前的狀態</Command_Name>
+    <Command_Order>40</Command_Order>
+    <Parameters_Amount>1</Parameters_Amount>
+    <Parameter_Order>1</Parameter_Order>
+    <Parameter_ID>Null</Parameter_ID>
+    <Parameter_Description />
+    <Data_Value />
+    <Min_Value />
+    <Max_Value />
+    <Default_Value />
+    <Values_length />
+    <Is_Fill />
+    <Action_Function>MapAndUntilUndock</Action_Function>
+  </Table>
+  <Table>
+    <Equipment_Type>LoadPort</Equipment_Type>
+    <Equipment_Supplier>TDK</Equipment_Supplier>
+    <Command_Type>FIN</Command_Type>
+    <Command_ID>MAPDO</Command_ID>
+    <Command_Format>FIN:MAPDO;</Command_Format>
+    <Command_Name>當FOUP處於加載狀態時執行映射操作</Command_Name>
+    <Command_Order>41</Command_Order>
+    <Parameters_Amount>1</Parameters_Amount>
+    <Parameter_Order>1</Parameter_Order>
+    <Parameter_ID>Null</Parameter_ID>
+    <Parameter_Description />
+    <Data_Value />
+    <Min_Value />
+    <Max_Value />
+    <Default_Value />
+    <Values_length />
+    <Is_Fill />
+    <Action_Function>MappingInLoad</Action_Function>
+  </Table>
+  <Table>
+    <Equipment_Type>LoadPort</Equipment_Type>
+    <Equipment_Supplier>TDK</Equipment_Supplier>
+    <Command_Type>FIN</Command_Type>
+    <Command_ID>REMAP</Command_ID>
+    <Command_Format>FIN:REMAP;</Command_Format>
+    <Command_Name>映射操作在中斷時重新開始</Command_Name>
+    <Command_Order>42</Command_Order>
+    <Parameters_Amount>1</Parameters_Amount>
+    <Parameter_Order>1</Parameter_Order>
+    <Parameter_ID>Null</Parameter_ID>
+    <Parameter_Description />
+    <Data_Value />
+    <Min_Value />
+    <Max_Value />
+    <Default_Value />
+    <Values_length />
+    <Is_Fill />
+    <Action_Function>RetryMapping</Action_Function>
+  </Table>
+  <Table>
+    <Equipment_Type>LoadPort</Equipment_Type>
+    <Equipment_Supplier>TDK</Equipment_Supplier>
+    <Command_Type>FIN</Command_Type>
+    <Command_ID>PODOP</Command_ID>
+    <Command_Format>FIN:PODOP;</Command_Format>
+    <Command_Name>FOUP夾子打開</Command_Name>
+    <Command_Order>43</Command_Order>
+    <Parameters_Amount>1</Parameters_Amount>
+    <Parameter_Order>1</Parameter_Order>
+    <Parameter_ID>Null</Parameter_ID>
+    <Parameter_Description />
+    <Data_Value />
+    <Min_Value />
+    <Max_Value />
+    <Default_Value />
+    <Values_length />
+    <Is_Fill />
+    <Action_Function>FOUPClampRelease</Action_Function>
+  </Table>
+  <Table>
+    <Equipment_Type>LoadPort</Equipment_Type>
+    <Equipment_Supplier>TDK</Equipment_Supplier>
+    <Command_Type>FIN</Command_Type>
+    <Command_ID>PODCL</Command_ID>
+    <Command_Format>FIN:PODCL;</Command_Format>
+    <Command_Name>FOUP夾鉗關閉</Command_Name>
+    <Command_Order>44</Command_Order>
+    <Parameters_Amount>1</Parameters_Amount>
+    <Parameter_Order>1</Parameter_Order>
+    <Parameter_ID>Null</Parameter_ID>
+    <Parameter_Description />
+    <Data_Value />
+    <Min_Value />
+    <Max_Value />
+    <Default_Value />
+    <Values_length />
+    <Is_Fill />
+    <Action_Function>FOUPClampFix</Action_Function>
+  </Table>
+  <Table>
+    <Equipment_Type>LoadPort</Equipment_Type>
+    <Equipment_Supplier>TDK</Equipment_Supplier>
+    <Command_Type>FIN</Command_Type>
+    <Command_ID>VACON</Command_ID>
+    <Command_Format>FIN:VACON;</Command_Format>
+    <Command_Name>吸附ON</Command_Name>
+    <Command_Order>45</Command_Order>
+    <Parameters_Amount>1</Parameters_Amount>
+    <Parameter_Order>1</Parameter_Order>
+    <Parameter_ID>Null</Parameter_ID>
+    <Parameter_Description />
+    <Data_Value />
+    <Min_Value />
+    <Max_Value />
+    <Default_Value />
+    <Values_length />
+    <Is_Fill />
+    <Action_Function>VacuumON</Action_Function>
+  </Table>
+  <Table>
+    <Equipment_Type>LoadPort</Equipment_Type>
+    <Equipment_Supplier>TDK</Equipment_Supplier>
+    <Command_Type>FIN</Command_Type>
+    <Command_ID>VACOF</Command_ID>
+    <Command_Format>FIN:VACOF;</Command_Format>
+    <Command_Name>吸附關閉</Command_Name>
+    <Command_Order>46</Command_Order>
+    <Parameters_Amount>1</Parameters_Amount>
+    <Parameter_Order>1</Parameter_Order>
+    <Parameter_ID>Null</Parameter_ID>
+    <Parameter_Description />
+    <Data_Value />
+    <Min_Value />
+    <Max_Value />
+    <Default_Value />
+    <Values_length />
+    <Is_Fill />
+    <Action_Function>VacuumOFF</Action_Function>
+  </Table>
+  <Table>
+    <Equipment_Type>LoadPort</Equipment_Type>
+    <Equipment_Supplier>TDK</Equipment_Supplier>
+    <Command_Type>FIN</Command_Type>
+    <Command_ID>DOROP</Command_ID>
+    <Command_Format>FIN:DOROP;</Command_Format>
+    <Command_Name>鎖銷鑰匙打開（FOUP門鎖解鎖）</Command_Name>
+    <Command_Order>47</Command_Order>
+    <Parameters_Amount>1</Parameters_Amount>
+    <Parameter_Order>1</Parameter_Order>
+    <Parameter_ID>Null</Parameter_ID>
+    <Parameter_Description />
+    <Data_Value />
+    <Min_Value />
+    <Max_Value />
+    <Default_Value />
+    <Values_length />
+    <Is_Fill />
+    <Action_Function>LatchkeyRelease</Action_Function>
+  </Table>
+  <Table>
+    <Equipment_Type>LoadPort</Equipment_Type>
+    <Equipment_Supplier>TDK</Equipment_Supplier>
+    <Command_Type>FIN</Command_Type>
+    <Command_ID>DORCL</Command_ID>
+    <Command_Format>FIN:DORCL;</Command_Format>
+    <Command_Name>鎖扣鑰匙關閉（FOUP門鎖離合器）</Command_Name>
+    <Command_Order>48</Command_Order>
+    <Parameters_Amount>1</Parameters_Amount>
+    <Parameter_Order>1</Parameter_Order>
+    <Parameter_ID>Null</Parameter_ID>
+    <Parameter_Description />
+    <Data_Value />
+    <Min_Value />
+    <Max_Value />
+    <Default_Value />
+    <Values_length />
+    <Is_Fill />
+    <Action_Function>LatchkeyFix</Action_Function>
+  </Table>
+  <Table>
+    <Equipment_Type>LoadPort</Equipment_Type>
+    <Equipment_Supplier>TDK</Equipment_Supplier>
+    <Command_Type>FIN</Command_Type>
+    <Command_ID>MAPOP</Command_ID>
+    <Command_Format>FIN:MAPOP;</Command_Format>
+    <Command_Name>Mapper胳膊打開</Command_Name>
+    <Command_Order>49</Command_Order>
+    <Parameters_Amount>1</Parameters_Amount>
+    <Parameter_Order>1</Parameter_Order>
+    <Parameter_ID>Null</Parameter_ID>
+    <Parameter_Description />
+    <Data_Value />
+    <Min_Value />
+    <Max_Value />
+    <Default_Value />
+    <Values_length />
+    <Is_Fill />
+    <Action_Function>MapperArmOpen</Action_Function>
+  </Table>
+  <Table>
+    <Equipment_Type>LoadPort</Equipment_Type>
+    <Equipment_Supplier>TDK</Equipment_Supplier>
+    <Command_Type>FIN</Command_Type>
+    <Command_ID>MAPCL</Command_ID>
+    <Command_Format>FIN:MAPCL;</Command_Format>
+    <Command_Name>Mapper手臂關閉</Command_Name>
+    <Command_Order>50</Command_Order>
+    <Parameters_Amount>1</Parameters_Amount>
+    <Parameter_Order>1</Parameter_Order>
+    <Parameter_ID>Null</Parameter_ID>
+    <Parameter_Description />
+    <Data_Value />
+    <Min_Value />
+    <Max_Value />
+    <Default_Value />
+    <Values_length />
+    <Is_Fill />
+    <Action_Function>MapperArmClose</Action_Function>
+  </Table>
+  <Table>
+    <Equipment_Type>LoadPort</Equipment_Type>
+    <Equipment_Supplier>TDK</Equipment_Supplier>
+    <Command_Type>FIN</Command_Type>
+    <Command_ID>ZDRUP</Command_ID>
+    <Command_Format>FIN:ZDRUP;</Command_Format>
+    <Command_Name>移動到Z軸上升位置（開門位置）</Command_Name>
+    <Command_Order>51</Command_Order>
+    <Parameters_Amount>1</Parameters_Amount>
+    <Parameter_Order>1</Parameter_Order>
+    <Parameter_ID>Null</Parameter_ID>
+    <Parameter_Description />
+    <Data_Value />
+    <Min_Value />
+    <Max_Value />
+    <Default_Value />
+    <Values_length />
+    <Is_Fill />
+    <Action_Function>DoorUp</Action_Function>
+  </Table>
+  <Table>
+    <Equipment_Type>LoadPort</Equipment_Type>
+    <Equipment_Supplier>TDK</Equipment_Supplier>
+    <Command_Type>FIN</Command_Type>
+    <Command_ID>ZDRDW</Command_ID>
+    <Command_Format>FIN:ZDRDW;</Command_Format>
+    <Command_Name>移動到Z軸下降位置（傳送裝置傳送可能位置）</Command_Name>
+    <Command_Order>52</Command_Order>
+    <Parameters_Amount>1</Parameters_Amount>
+    <Parameter_Order>1</Parameter_Order>
+    <Parameter_ID>Null</Parameter_ID>
+    <Parameter_Description />
+    <Data_Value />
+    <Min_Value />
+    <Max_Value />
+    <Default_Value />
+    <Values_length />
+    <Is_Fill />
+    <Action_Function>DoorDown</Action_Function>
+  </Table>
+  <Table>
+    <Equipment_Type>LoadPort</Equipment_Type>
+    <Equipment_Supplier>TDK</Equipment_Supplier>
+    <Command_Type>FIN</Command_Type>
+    <Command_ID>ZDRMP</Command_ID>
+    <Command_Format>FIN:ZDRMP;</Command_Format>
+    <Command_Name>向下並映射到Z軸映射結束位置</Command_Name>
+    <Command_Order>53</Command_Order>
+    <Parameters_Amount>1</Parameters_Amount>
+    <Parameter_Order>1</Parameter_Order>
+    <Parameter_ID>Null</Parameter_ID>
+    <Parameter_Description />
+    <Data_Value />
+    <Min_Value />
+    <Max_Value />
+    <Default_Value />
+    <Values_length />
+    <Is_Fill />
+    <Action_Function>MappingDown</Action_Function>
+  </Table>
+  <Table>
+    <Equipment_Type>LoadPort</Equipment_Type>
+    <Equipment_Supplier>TDK</Equipment_Supplier>
+    <Command_Type>FIN</Command_Type>
+    <Command_ID>ZMPST</Command_ID>
+    <Command_Format>FIN:ZMPST;</Command_Format>
+    <Command_Name>將映射器移動到開始位置</Command_Name>
+    <Command_Order>54</Command_Order>
+    <Parameters_Amount>1</Parameters_Amount>
+    <Parameter_Order>1</Parameter_Order>
+    <Parameter_ID>Null</Parameter_ID>
+    <Parameter_Description />
+    <Data_Value />
+    <Min_Value />
+    <Max_Value />
+    <Default_Value />
+    <Values_length />
+    <Is_Fill />
+    <Action_Function>MapperStartPosition</Action_Function>
+  </Table>
+  <Table>
+    <Equipment_Type>LoadPort</Equipment_Type>
+    <Equipment_Supplier>TDK</Equipment_Supplier>
+    <Command_Type>FIN</Command_Type>
+    <Command_ID>(ZMPED)</Command_ID>
+    <Command_Format>FIN:ZMPED;</Command_Format>
+    <Command_Name>將映射器移動到待機位置（兼容性命令）</Command_Name>
+    <Command_Order>55</Command_Order>
+    <Parameters_Amount>1</Parameters_Amount>
+    <Parameter_Order>1</Parameter_Order>
+    <Parameter_ID>Null</Parameter_ID>
+    <Parameter_Description />
+    <Data_Value />
+    <Min_Value />
+    <Max_Value />
+    <Default_Value />
+    <Values_length />
+    <Is_Fill />
+    <Action_Function>MapperWaitPosition</Action_Function>
+  </Table>
+  <Table>
+    <Equipment_Type>LoadPort</Equipment_Type>
+    <Equipment_Supplier>TDK</Equipment_Supplier>
+    <Command_Type>FIN</Command_Type>
+    <Command_ID>(MSTON)</Command_ID>
+    <Command_Format>FIN:MSTON;</Command_Format>
+    <Command_Name>無動作（打開地圖燈停止）</Command_Name>
+    <Command_Order>56</Command_Order>
+    <Parameters_Amount>1</Parameters_Amount>
+    <Parameter_Order>1</Parameter_Order>
+    <Parameter_ID>Null</Parameter_ID>
+    <Parameter_Description />
+    <Data_Value />
+    <Min_Value />
+    <Max_Value />
+    <Default_Value />
+    <Values_length />
+    <Is_Fill />
+    <Action_Function>MapperStopperON</Action_Function>
+  </Table>
+  <Table>
+    <Equipment_Type>LoadPort</Equipment_Type>
+    <Equipment_Supplier>TDK</Equipment_Supplier>
+    <Command_Type>FIN</Command_Type>
+    <Command_ID>(MSTOF)</Command_ID>
+    <Command_Format>FIN:MSTOF;</Command_Format>
+    <Command_Name>無動作（製圖員關閉）</Command_Name>
+    <Command_Order>57</Command_Order>
+    <Parameters_Amount>1</Parameters_Amount>
+    <Parameter_Order>1</Parameter_Order>
+    <Parameter_ID>Null</Parameter_ID>
+    <Parameter_Description />
+    <Data_Value />
+    <Min_Value />
+    <Max_Value />
+    <Default_Value />
+    <Values_length />
+    <Is_Fill />
+    <Action_Function>MapperStopperOFF</Action_Function>
+  </Table>
+  <Table>
+    <Equipment_Type>LoadPort</Equipment_Type>
+    <Equipment_Supplier>TDK</Equipment_Supplier>
+    <Command_Type>FIN</Command_Type>
+    <Command_ID>YWAIT</Command_ID>
+    <Command_Format>FIN:YWAIT;</Command_Format>
+    <Command_Name>移至Y軸取消鎖定位置</Command_Name>
+    <Command_Order>58</Command_Order>
+    <Parameters_Amount>1</Parameters_Amount>
+    <Parameter_Order>1</Parameter_Order>
+    <Parameter_ID>Null</Parameter_ID>
+    <Parameter_Description />
+    <Data_Value />
+    <Min_Value />
+    <Max_Value />
+    <Default_Value />
+    <Values_length />
+    <Is_Fill />
+    <Action_Function>Undock</Action_Function>
+  </Table>
+  <Table>
+    <Equipment_Type>LoadPort</Equipment_Type>
+    <Equipment_Supplier>TDK</Equipment_Supplier>
+    <Command_Type>FIN</Command_Type>
+    <Command_ID>YDOOR</Command_ID>
+    <Command_Format>FIN:YDOOR;</Command_Format>
+    <Command_Name>移至Y軸停靠位置</Command_Name>
+    <Command_Order>59</Command_Order>
+    <Parameters_Amount>1</Parameters_Amount>
+    <Parameter_Order>1</Parameter_Order>
+    <Parameter_ID>Null</Parameter_ID>
+    <Parameter_Description />
+    <Data_Value />
+    <Min_Value />
+    <Max_Value />
+    <Default_Value />
+    <Values_length />
+    <Is_Fill />
+    <Action_Function>Dock</Action_Function>
+  </Table>
+  <Table>
+    <Equipment_Type>LoadPort</Equipment_Type>
+    <Equipment_Supplier>TDK</Equipment_Supplier>
+    <Command_Type>FIN</Command_Type>
+    <Command_ID>DORBK</Command_ID>
+    <Command_Format>FIN:DORBK;</Command_Format>
+    <Command_Name>移至開門位置</Command_Name>
+    <Command_Order>60</Command_Order>
+    <Parameters_Amount>1</Parameters_Amount>
+    <Parameter_Order>1</Parameter_Order>
+    <Parameter_ID>Null</Parameter_ID>
+    <Parameter_Description />
+    <Data_Value />
+    <Min_Value />
+    <Max_Value />
+    <Default_Value />
+    <Values_length />
+    <Is_Fill />
+    <Action_Function>DoorOpen</Action_Function>
+  </Table>
+  <Table>
+    <Equipment_Type>LoadPort</Equipment_Type>
+    <Equipment_Supplier>TDK</Equipment_Supplier>
+    <Command_Type>FIN</Command_Type>
+    <Command_ID>DORFW</Command_ID>
+    <Command_Format>FIN:DORFW;</Command_Format>
+    <Command_Name>移至門關閉位置</Command_Name>
+    <Command_Order>61</Command_Order>
+    <Parameters_Amount>1</Parameters_Amount>
+    <Parameter_Order>1</Parameter_Order>
+    <Parameter_ID>Null</Parameter_ID>
+    <Parameter_Description />
+    <Data_Value />
+    <Min_Value />
+    <Max_Value />
+    <Default_Value />
+    <Values_length />
+    <Is_Fill />
+    <Action_Function>DoorClose</Action_Function>
+  </Table>
+  <Table>
+    <Equipment_Type>LoadPort</Equipment_Type>
+    <Equipment_Supplier>TDK</Equipment_Supplier>
+    <Command_Type>FIN</Command_Type>
+    <Command_ID>RETRY</Command_ID>
+    <Command_Format>FIN:RETRY;</Command_Format>
+    <Command_Name>重試可恢復的錯誤</Command_Name>
+    <Command_Order>62</Command_Order>
+    <Parameters_Amount>1</Parameters_Amount>
+    <Parameter_Order>1</Parameter_Order>
+    <Parameter_ID>Null</Parameter_ID>
+    <Parameter_Description />
+    <Data_Value />
+    <Min_Value />
+    <Max_Value />
+    <Default_Value />
+    <Values_length />
+    <Is_Fill />
+    <Action_Function>Retry</Action_Function>
+  </Table>
+  <Table>
+    <Equipment_Type>LoadPort</Equipment_Type>
+    <Equipment_Supplier>TDK</Equipment_Supplier>
+    <Command_Type>FIN</Command_Type>
+    <Command_ID>STOP_</Command_ID>
+    <Command_Format>FIN:STOP_;</Command_Format>
+    <Command_Name>立即停止並命令中止</Command_Name>
+    <Command_Order>63</Command_Order>
+    <Parameters_Amount>1</Parameters_Amount>
+    <Parameter_Order>1</Parameter_Order>
+    <Parameter_ID>Null</Parameter_ID>
+    <Parameter_Description />
+    <Data_Value />
+    <Min_Value />
+    <Max_Value />
+    <Default_Value />
+    <Values_length />
+    <Is_Fill />
+    <Action_Function>Stop</Action_Function>
+  </Table>
+  <Table>
+    <Equipment_Type>LoadPort</Equipment_Type>
+    <Equipment_Supplier>TDK</Equipment_Supplier>
+    <Command_Type>FIN</Command_Type>
+    <Command_ID>PAUSE</Command_ID>
+    <Command_Format>FIN:PAUSE;</Command_Format>
+    <Command_Name>立即停止</Command_Name>
+    <Command_Order>64</Command_Order>
+    <Parameters_Amount>1</Parameters_Amount>
+    <Parameter_Order>1</Parameter_Order>
+    <Parameter_ID>Null</Parameter_ID>
+    <Parameter_Description />
+    <Data_Value />
+    <Min_Value />
+    <Max_Value />
+    <Default_Value />
+    <Values_length />
+    <Is_Fill />
+    <Action_Function>Pause</Action_Function>
+  </Table>
+  <Table>
+    <Equipment_Type>LoadPort</Equipment_Type>
+    <Equipment_Supplier>TDK</Equipment_Supplier>
+    <Command_Type>FIN</Command_Type>
+    <Command_ID>ABORT</Command_ID>
+    <Command_Format>FIN:ABORT;</Command_Format>
+    <Command_Name>命令中止</Command_Name>
+    <Command_Order>65</Command_Order>
+    <Parameters_Amount>1</Parameters_Amount>
+    <Parameter_Order>1</Parameter_Order>
+    <Parameter_ID>Null</Parameter_ID>
+    <Parameter_Description />
+    <Data_Value />
+    <Min_Value />
+    <Max_Value />
+    <Default_Value />
+    <Values_length />
+    <Is_Fill />
+    <Action_Function>Abort</Action_Function>
+  </Table>
+  <Table>
+    <Equipment_Type>LoadPort</Equipment_Type>
+    <Equipment_Supplier>TDK</Equipment_Supplier>
+    <Command_Type>FIN</Command_Type>
+    <Command_ID>RESUM</Command_ID>
+    <Command_Format>FIN:RESUM;</Command_Format>
+    <Command_Name>操作繼續</Command_Name>
+    <Command_Order>66</Command_Order>
+    <Parameters_Amount>1</Parameters_Amount>
+    <Parameter_Order>1</Parameter_Order>
+    <Parameter_ID>Null</Parameter_ID>
+    <Parameter_Description />
+    <Data_Value />
+    <Min_Value />
+    <Max_Value />
+    <Default_Value />
+    <Values_length />
+    <Is_Fill />
+    <Action_Function>Resum</Action_Function>
   </Table>
 </DocumentElement>
