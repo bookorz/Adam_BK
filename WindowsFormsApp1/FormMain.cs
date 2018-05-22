@@ -678,6 +678,7 @@ namespace Adam
                 EnablePage(hiddenPages[0], true);
                 RouteCtrl.Stop();//book
                 //test
+				//yyyy
             }
         }
     }
