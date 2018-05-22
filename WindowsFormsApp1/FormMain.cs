@@ -448,10 +448,6 @@ namespace Adam
 
         }
 
-        private void tabControl1_SelectedIndexChanged(object sender, EventArgs e)
-        {
-
-        }
 
         private List<TabPage> hiddenPages = new List<TabPage>();
 
@@ -679,6 +675,21 @@ namespace Adam
                 RouteCtrl.Stop();//book
                 //test
 				//yyyy
+            }
+        }
+
+        private void tabControl1_Selected(object sender, TabControlEventArgs e)
+        {
+            switch (e.TabPage.Text)
+            {
+                case "Status":
+                    System.Text.StringBuilder messageBoxCS = new System.Text.StringBuilder();
+                    messageBoxCS.AppendFormat("{0} = {1}", "TabPage", e.TabPage.Text);
+                    messageBoxCS.AppendLine();
+                    MessageBox.Show(messageBoxCS.ToString(), "Selected Event");
+                    break;
+                default:
+                    break;
             }
         }
     }

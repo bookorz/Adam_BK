@@ -30,7 +30,7 @@
         {
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormMain));
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             this.splitContainer5 = new System.Windows.Forms.SplitContainer();
             this.label23 = new System.Windows.Forms.Label();
             this.textBox14 = new System.Windows.Forms.TextBox();
@@ -133,7 +133,7 @@
             this.panel6 = new System.Windows.Forms.Panel();
             this.panel7 = new System.Windows.Forms.Panel();
             this.tabControl1 = new System.Windows.Forms.TabControl();
-            this.tabPage1 = new System.Windows.Forms.TabPage();
+            this.tabMonitor = new System.Windows.Forms.TabPage();
             this.Aligner01_tb = new System.Windows.Forms.GroupBox();
             this.textBox9 = new System.Windows.Forms.TextBox();
             this.textBox8 = new System.Windows.Forms.TextBox();
@@ -188,7 +188,7 @@
             this.LoadPort01 = new System.Windows.Forms.DataGridView();
             this.Slot = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.WaferID = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.tabPage2 = new System.Windows.Forms.TabPage();
+            this.tabComm = new System.Windows.Forms.TabPage();
             this.groupBox8 = new System.Windows.Forms.GroupBox();
             this.tableLayoutPanel4 = new System.Windows.Forms.TableLayoutPanel();
             this.groupBox9 = new System.Windows.Forms.GroupBox();
@@ -198,7 +198,7 @@
             this.button23 = new System.Windows.Forms.Button();
             this.groupBox7 = new System.Windows.Forms.GroupBox();
             this.listBox1 = new System.Windows.Forms.ListBox();
-            this.tabPage3 = new System.Windows.Forms.TabPage();
+            this.tabMapping = new System.Windows.Forms.TabPage();
             this.tableLayoutPanel14 = new System.Windows.Forms.TableLayoutPanel();
             this.groupBox14 = new System.Windows.Forms.GroupBox();
             this.dataGridView20 = new System.Windows.Forms.DataGridView();
@@ -245,6 +245,21 @@
             this.dataGridViewTextBoxColumn35 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.label44 = new System.Windows.Forms.Label();
             this.textBox21 = new System.Windows.Forms.TextBox();
+            this.tabStatus = new System.Windows.Forms.TabPage();
+            this.tableLayoutPanel28 = new System.Windows.Forms.TableLayoutPanel();
+            this.tblLayoutL1 = new System.Windows.Forms.TableLayoutPanel();
+            this.tblLayoutL2 = new System.Windows.Forms.TableLayoutPanel();
+            this.tblLayoutL3 = new System.Windows.Forms.TableLayoutPanel();
+            this.tblLayoutL4 = new System.Windows.Forms.TableLayoutPanel();
+            this.tblLayoutL5 = new System.Windows.Forms.TableLayoutPanel();
+            this.tblLayoutL6 = new System.Windows.Forms.TableLayoutPanel();
+            this.tblLayoutL7 = new System.Windows.Forms.TableLayoutPanel();
+            this.tblLayoutL8 = new System.Windows.Forms.TableLayoutPanel();
+            this.tableLayoutPanel26 = new System.Windows.Forms.TableLayoutPanel();
+            this.tblLayoutR1 = new System.Windows.Forms.TableLayoutPanel();
+            this.tblLayoutR2 = new System.Windows.Forms.TableLayoutPanel();
+            this.tblLayoutA1 = new System.Windows.Forms.TableLayoutPanel();
+            this.tblLayoutA2 = new System.Windows.Forms.TableLayoutPanel();
             this.tabPage4 = new System.Windows.Forms.TabPage();
             this.tabControl2 = new System.Windows.Forms.TabControl();
             this.tabPage7 = new System.Windows.Forms.TabPage();
@@ -363,11 +378,11 @@
             this.button48 = new System.Windows.Forms.Button();
             this.label75 = new System.Windows.Forms.Label();
             this.textBox34 = new System.Windows.Forms.TextBox();
-            this.tabPage9 = new System.Windows.Forms.TabPage();
+            this.tabOCR = new System.Windows.Forms.TabPage();
             this.tableLayoutPanel13 = new System.Windows.Forms.TableLayoutPanel();
             this.groupBox17 = new System.Windows.Forms.GroupBox();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
-            this.tabPage8 = new System.Windows.Forms.TabPage();
+            this.tabSetting = new System.Windows.Forms.TabPage();
             this.tabControl3 = new System.Windows.Forms.TabControl();
             this.tabPage11 = new System.Windows.Forms.TabPage();
             this.groupBox26 = new System.Windows.Forms.GroupBox();
@@ -731,7 +746,7 @@
             this.groupBox2.SuspendLayout();
             this.tableLayoutPanel2.SuspendLayout();
             this.tabControl1.SuspendLayout();
-            this.tabPage1.SuspendLayout();
+            this.tabMonitor.SuspendLayout();
             this.Aligner01_tb.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView7)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView6)).BeginInit();
@@ -745,14 +760,14 @@
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView11)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView9)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.LoadPort01)).BeginInit();
-            this.tabPage2.SuspendLayout();
+            this.tabComm.SuspendLayout();
             this.groupBox8.SuspendLayout();
             this.tableLayoutPanel4.SuspendLayout();
             this.groupBox9.SuspendLayout();
             this.groupBox10.SuspendLayout();
             this.tableLayoutPanel11.SuspendLayout();
             this.groupBox7.SuspendLayout();
-            this.tabPage3.SuspendLayout();
+            this.tabMapping.SuspendLayout();
             this.tableLayoutPanel14.SuspendLayout();
             this.groupBox14.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView20)).BeginInit();
@@ -773,6 +788,9 @@
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView16)).BeginInit();
             this.tableLayoutPanel21.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView18)).BeginInit();
+            this.tabStatus.SuspendLayout();
+            this.tableLayoutPanel28.SuspendLayout();
+            this.tableLayoutPanel26.SuspendLayout();
             this.tabPage4.SuspendLayout();
             this.tabControl2.SuspendLayout();
             this.tabPage7.SuspendLayout();
@@ -794,11 +812,11 @@
             this.groupBox22.SuspendLayout();
             this.panel15.SuspendLayout();
             this.panel16.SuspendLayout();
-            this.tabPage9.SuspendLayout();
+            this.tabOCR.SuspendLayout();
             this.tableLayoutPanel13.SuspendLayout();
             this.groupBox17.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
-            this.tabPage8.SuspendLayout();
+            this.tabSetting.SuspendLayout();
             this.tabControl3.SuspendLayout();
             this.tabPage11.SuspendLayout();
             this.groupBox26.SuspendLayout();
@@ -1730,14 +1748,14 @@
             this.Conn_gv.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.Conn_gv.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
             this.Conn_gv.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("微軟正黑體", 12F);
-            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.Conn_gv.DefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("微軟正黑體", 12F);
+            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.Conn_gv.DefaultCellStyle = dataGridViewCellStyle1;
             resources.ApplyResources(this.Conn_gv, "Conn_gv");
             this.Conn_gv.MultiSelect = false;
             this.Conn_gv.Name = "Conn_gv";
@@ -1789,27 +1807,28 @@
             // 
             // tabControl1
             // 
-            this.tabControl1.Controls.Add(this.tabPage1);
-            this.tabControl1.Controls.Add(this.tabPage2);
-            this.tabControl1.Controls.Add(this.tabPage3);
+            this.tabControl1.Controls.Add(this.tabMonitor);
+            this.tabControl1.Controls.Add(this.tabComm);
+            this.tabControl1.Controls.Add(this.tabMapping);
+            this.tabControl1.Controls.Add(this.tabStatus);
             this.tabControl1.Controls.Add(this.tabPage4);
             this.tabControl1.Controls.Add(this.tabPage5);
-            this.tabControl1.Controls.Add(this.tabPage9);
-            this.tabControl1.Controls.Add(this.tabPage8);
+            this.tabControl1.Controls.Add(this.tabOCR);
+            this.tabControl1.Controls.Add(this.tabSetting);
             resources.ApplyResources(this.tabControl1, "tabControl1");
             this.tabControl1.Name = "tabControl1";
             this.tabControl1.SelectedIndex = 0;
             this.tabControl1.SizeMode = System.Windows.Forms.TabSizeMode.Fixed;
-            this.tabControl1.SelectedIndexChanged += new System.EventHandler(this.tabControl1_SelectedIndexChanged);
+            this.tabControl1.Selected += new System.Windows.Forms.TabControlEventHandler(this.tabControl1_Selected);
             // 
-            // tabPage1
+            // tabMonitor
             // 
-            this.tabPage1.BackColor = System.Drawing.SystemColors.Control;
-            resources.ApplyResources(this.tabPage1, "tabPage1");
-            this.tabPage1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.tabPage1.Controls.Add(this.Aligner01_tb);
-            this.tabPage1.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.tabPage1.Name = "tabPage1";
+            this.tabMonitor.BackColor = System.Drawing.SystemColors.Control;
+            resources.ApplyResources(this.tabMonitor, "tabMonitor");
+            this.tabMonitor.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.tabMonitor.Controls.Add(this.Aligner01_tb);
+            this.tabMonitor.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.tabMonitor.Name = "tabMonitor";
             // 
             // Aligner01_tb
             // 
@@ -2389,14 +2408,14 @@
             this.WaferID.ReadOnly = true;
             this.WaferID.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
             // 
-            // tabPage2
+            // tabComm
             // 
-            this.tabPage2.BackColor = System.Drawing.SystemColors.Control;
-            this.tabPage2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.tabPage2.Controls.Add(this.groupBox8);
-            this.tabPage2.Controls.Add(this.groupBox7);
-            resources.ApplyResources(this.tabPage2, "tabPage2");
-            this.tabPage2.Name = "tabPage2";
+            this.tabComm.BackColor = System.Drawing.SystemColors.Control;
+            this.tabComm.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.tabComm.Controls.Add(this.groupBox8);
+            this.tabComm.Controls.Add(this.groupBox7);
+            resources.ApplyResources(this.tabComm, "tabComm");
+            this.tabComm.Name = "tabComm";
             // 
             // groupBox8
             // 
@@ -2465,13 +2484,13 @@
             this.listBox1.FormattingEnabled = true;
             this.listBox1.Name = "listBox1";
             // 
-            // tabPage3
+            // tabMapping
             // 
-            this.tabPage3.BackColor = System.Drawing.SystemColors.Control;
-            this.tabPage3.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.tabPage3.Controls.Add(this.tableLayoutPanel14);
-            resources.ApplyResources(this.tabPage3, "tabPage3");
-            this.tabPage3.Name = "tabPage3";
+            this.tabMapping.BackColor = System.Drawing.SystemColors.Control;
+            this.tabMapping.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.tabMapping.Controls.Add(this.tableLayoutPanel14);
+            resources.ApplyResources(this.tabMapping, "tabMapping");
+            this.tabMapping.Name = "tabMapping";
             // 
             // tableLayoutPanel14
             // 
@@ -2947,6 +2966,97 @@
             resources.ApplyResources(this.textBox21, "textBox21");
             this.textBox21.ForeColor = System.Drawing.Color.Transparent;
             this.textBox21.Name = "textBox21";
+            // 
+            // tabStatus
+            // 
+            this.tabStatus.BackColor = System.Drawing.SystemColors.Control;
+            this.tabStatus.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.tabStatus.Controls.Add(this.tableLayoutPanel28);
+            this.tabStatus.Controls.Add(this.tableLayoutPanel26);
+            resources.ApplyResources(this.tabStatus, "tabStatus");
+            this.tabStatus.Name = "tabStatus";
+            // 
+            // tableLayoutPanel28
+            // 
+            resources.ApplyResources(this.tableLayoutPanel28, "tableLayoutPanel28");
+            this.tableLayoutPanel28.Controls.Add(this.tblLayoutL1, 0, 0);
+            this.tableLayoutPanel28.Controls.Add(this.tblLayoutL2, 1, 0);
+            this.tableLayoutPanel28.Controls.Add(this.tblLayoutL3, 2, 0);
+            this.tableLayoutPanel28.Controls.Add(this.tblLayoutL4, 3, 0);
+            this.tableLayoutPanel28.Controls.Add(this.tblLayoutL5, 4, 0);
+            this.tableLayoutPanel28.Controls.Add(this.tblLayoutL6, 5, 0);
+            this.tableLayoutPanel28.Controls.Add(this.tblLayoutL7, 6, 0);
+            this.tableLayoutPanel28.Controls.Add(this.tblLayoutL8, 7, 0);
+            this.tableLayoutPanel28.Name = "tableLayoutPanel28";
+            // 
+            // tblLayoutL1
+            // 
+            resources.ApplyResources(this.tblLayoutL1, "tblLayoutL1");
+            this.tblLayoutL1.Name = "tblLayoutL1";
+            // 
+            // tblLayoutL2
+            // 
+            resources.ApplyResources(this.tblLayoutL2, "tblLayoutL2");
+            this.tblLayoutL2.Name = "tblLayoutL2";
+            // 
+            // tblLayoutL3
+            // 
+            resources.ApplyResources(this.tblLayoutL3, "tblLayoutL3");
+            this.tblLayoutL3.Name = "tblLayoutL3";
+            // 
+            // tblLayoutL4
+            // 
+            resources.ApplyResources(this.tblLayoutL4, "tblLayoutL4");
+            this.tblLayoutL4.Name = "tblLayoutL4";
+            // 
+            // tblLayoutL5
+            // 
+            resources.ApplyResources(this.tblLayoutL5, "tblLayoutL5");
+            this.tblLayoutL5.Name = "tblLayoutL5";
+            // 
+            // tblLayoutL6
+            // 
+            resources.ApplyResources(this.tblLayoutL6, "tblLayoutL6");
+            this.tblLayoutL6.Name = "tblLayoutL6";
+            // 
+            // tblLayoutL7
+            // 
+            resources.ApplyResources(this.tblLayoutL7, "tblLayoutL7");
+            this.tblLayoutL7.Name = "tblLayoutL7";
+            // 
+            // tblLayoutL8
+            // 
+            resources.ApplyResources(this.tblLayoutL8, "tblLayoutL8");
+            this.tblLayoutL8.Name = "tblLayoutL8";
+            // 
+            // tableLayoutPanel26
+            // 
+            resources.ApplyResources(this.tableLayoutPanel26, "tableLayoutPanel26");
+            this.tableLayoutPanel26.Controls.Add(this.tblLayoutR1, 0, 0);
+            this.tableLayoutPanel26.Controls.Add(this.tblLayoutR2, 1, 0);
+            this.tableLayoutPanel26.Controls.Add(this.tblLayoutA1, 0, 1);
+            this.tableLayoutPanel26.Controls.Add(this.tblLayoutA2, 1, 1);
+            this.tableLayoutPanel26.Name = "tableLayoutPanel26";
+            // 
+            // tblLayoutR1
+            // 
+            resources.ApplyResources(this.tblLayoutR1, "tblLayoutR1");
+            this.tblLayoutR1.Name = "tblLayoutR1";
+            // 
+            // tblLayoutR2
+            // 
+            resources.ApplyResources(this.tblLayoutR2, "tblLayoutR2");
+            this.tblLayoutR2.Name = "tblLayoutR2";
+            // 
+            // tblLayoutA1
+            // 
+            resources.ApplyResources(this.tblLayoutA1, "tblLayoutA1");
+            this.tblLayoutA1.Name = "tblLayoutA1";
+            // 
+            // tblLayoutA2
+            // 
+            resources.ApplyResources(this.tblLayoutA2, "tblLayoutA2");
+            this.tblLayoutA2.Name = "tblLayoutA2";
             // 
             // tabPage4
             // 
@@ -4002,13 +4112,13 @@
             this.textBox34.Name = "textBox34";
             this.textBox34.ReadOnly = true;
             // 
-            // tabPage9
+            // tabOCR
             // 
-            this.tabPage9.BackColor = System.Drawing.SystemColors.Control;
-            this.tabPage9.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.tabPage9.Controls.Add(this.tableLayoutPanel13);
-            resources.ApplyResources(this.tabPage9, "tabPage9");
-            this.tabPage9.Name = "tabPage9";
+            this.tabOCR.BackColor = System.Drawing.SystemColors.Control;
+            this.tabOCR.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.tabOCR.Controls.Add(this.tableLayoutPanel13);
+            resources.ApplyResources(this.tabOCR, "tabOCR");
+            this.tabOCR.Name = "tabOCR";
             // 
             // tableLayoutPanel13
             // 
@@ -4031,13 +4141,13 @@
             this.pictureBox2.Name = "pictureBox2";
             this.pictureBox2.TabStop = false;
             // 
-            // tabPage8
+            // tabSetting
             // 
-            this.tabPage8.BackColor = System.Drawing.SystemColors.Control;
-            this.tabPage8.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.tabPage8.Controls.Add(this.tabControl3);
-            resources.ApplyResources(this.tabPage8, "tabPage8");
-            this.tabPage8.Name = "tabPage8";
+            this.tabSetting.BackColor = System.Drawing.SystemColors.Control;
+            this.tabSetting.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.tabSetting.Controls.Add(this.tabControl3);
+            resources.ApplyResources(this.tabSetting, "tabSetting");
+            this.tabSetting.Name = "tabSetting";
             // 
             // tabControl3
             // 
@@ -6460,7 +6570,7 @@
             this.groupBox2.ResumeLayout(false);
             this.tableLayoutPanel2.ResumeLayout(false);
             this.tabControl1.ResumeLayout(false);
-            this.tabPage1.ResumeLayout(false);
+            this.tabMonitor.ResumeLayout(false);
             this.Aligner01_tb.ResumeLayout(false);
             this.Aligner01_tb.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView7)).EndInit();
@@ -6475,14 +6585,14 @@
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView11)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView9)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.LoadPort01)).EndInit();
-            this.tabPage2.ResumeLayout(false);
+            this.tabComm.ResumeLayout(false);
             this.groupBox8.ResumeLayout(false);
             this.tableLayoutPanel4.ResumeLayout(false);
             this.groupBox9.ResumeLayout(false);
             this.groupBox10.ResumeLayout(false);
             this.tableLayoutPanel11.ResumeLayout(false);
             this.groupBox7.ResumeLayout(false);
-            this.tabPage3.ResumeLayout(false);
+            this.tabMapping.ResumeLayout(false);
             this.tableLayoutPanel14.ResumeLayout(false);
             this.groupBox14.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView20)).EndInit();
@@ -6510,6 +6620,9 @@
             this.tableLayoutPanel21.ResumeLayout(false);
             this.tableLayoutPanel21.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView18)).EndInit();
+            this.tabStatus.ResumeLayout(false);
+            this.tableLayoutPanel28.ResumeLayout(false);
+            this.tableLayoutPanel26.ResumeLayout(false);
             this.tabPage4.ResumeLayout(false);
             this.tabControl2.ResumeLayout(false);
             this.tabPage7.ResumeLayout(false);
@@ -6536,11 +6649,11 @@
             this.panel15.ResumeLayout(false);
             this.panel16.ResumeLayout(false);
             this.panel16.PerformLayout();
-            this.tabPage9.ResumeLayout(false);
+            this.tabOCR.ResumeLayout(false);
             this.tableLayoutPanel13.ResumeLayout(false);
             this.groupBox17.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
-            this.tabPage8.ResumeLayout(false);
+            this.tabSetting.ResumeLayout(false);
             this.tabControl3.ResumeLayout(false);
             this.tabPage11.ResumeLayout(false);
             this.groupBox26.ResumeLayout(false);
@@ -6660,16 +6773,16 @@
 
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.TabControl tabControl1;
-        private System.Windows.Forms.TabPage tabPage1;
-        private System.Windows.Forms.TabPage tabPage2;
+        private System.Windows.Forms.TabPage tabMonitor;
+        private System.Windows.Forms.TabPage tabComm;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Panel panel4;
         private System.Windows.Forms.Panel panel3;
-        private System.Windows.Forms.TabPage tabPage3;
+        private System.Windows.Forms.TabPage tabMapping;
         private System.Windows.Forms.TabPage tabPage4;
         private System.Windows.Forms.TabPage tabPage5;
-        private System.Windows.Forms.TabPage tabPage9;
-        private System.Windows.Forms.TabPage tabPage8;
+        private System.Windows.Forms.TabPage tabOCR;
+        private System.Windows.Forms.TabPage tabSetting;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
         private System.Windows.Forms.Button button8;
         private System.Windows.Forms.Button button5;
@@ -7278,6 +7391,21 @@
         private System.Windows.Forms.Button button71;
         private System.Windows.Forms.Label label194;
         private System.Windows.Forms.Label label193;
+        private System.Windows.Forms.TabPage tabStatus;
+        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel28;
+        private System.Windows.Forms.TableLayoutPanel tblLayoutL1;
+        private System.Windows.Forms.TableLayoutPanel tblLayoutL2;
+        private System.Windows.Forms.TableLayoutPanel tblLayoutL3;
+        private System.Windows.Forms.TableLayoutPanel tblLayoutL4;
+        private System.Windows.Forms.TableLayoutPanel tblLayoutL5;
+        private System.Windows.Forms.TableLayoutPanel tblLayoutL6;
+        private System.Windows.Forms.TableLayoutPanel tblLayoutL7;
+        private System.Windows.Forms.TableLayoutPanel tblLayoutL8;
+        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel26;
+        private System.Windows.Forms.TableLayoutPanel tblLayoutR1;
+        private System.Windows.Forms.TableLayoutPanel tblLayoutR2;
+        private System.Windows.Forms.TableLayoutPanel tblLayoutA1;
+        private System.Windows.Forms.TableLayoutPanel tblLayoutA2;
     }
 }
 
