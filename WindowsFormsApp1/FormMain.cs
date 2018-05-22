@@ -676,7 +676,7 @@ namespace Adam
                 splitButton5.Enabled = true;
                 button70.Enabled = true;
                 EnablePage(hiddenPages[0], true);
-                RouteCtrl.Stop();
+                RouteCtrl.Stop();//test GIT steven
             }
         }
     }
