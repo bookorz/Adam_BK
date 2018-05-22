@@ -7,7 +7,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Adam", "WindowsFormsApp1\Ad
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TransferControl", "..\TransferControl\TransferControl\TransferControl.csproj", "{316CCD27-C53F-42F2-AD5E-5CA897DD9AB8}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SANWA", "..\SANWA Function\SANWA\SANWA\SANWA.csproj", "{4EED2ED4-A72E-4F24-8D80-EF2F0B24FCF1}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SANWA", "..\SANWAFunction\SANWA\SANWA\SANWA.csproj", "{4EED2ED4-A72E-4F24-8D80-EF2F0B24FCF1}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
