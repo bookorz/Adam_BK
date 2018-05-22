@@ -241,7 +241,7 @@
     <None Include="Resources\like.png" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\..\SANWA Function\SANWA\SANWA\SANWA.csproj">
+    <ProjectReference Include="..\..\SANWAFunction\SANWA\SANWA\SANWA.csproj">
       <Project>{4eed2ed4-a72e-4f24-8d80-ef2f0b24fcf1}</Project>
       <Name>SANWA</Name>
     </ProjectReference>
