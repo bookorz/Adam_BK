@@ -635,7 +635,7 @@ namespace Adam
                 splitButton5.BackColor = Color.Red;
                 splitButton5.Enabled = false;
                 button70.Enabled = false;
-                EnablePage(tabControl1.TabPages[7], false);
+                EnablePage(tabControl1.TabPages[5], false);
 
 
 
