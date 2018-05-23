@@ -93,6 +93,36 @@ namespace Adam.Properties {
         /// <summary>
         ///   查詢類型 System.Drawing.Bitmap 的當地語系化資源。
         /// </summary>
+        internal static System.Drawing.Bitmap sanwa_aligner_status {
+            get {
+                object obj = ResourceManager.GetObject("sanwa_aligner_status", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   查詢類型 System.Drawing.Bitmap 的當地語系化資源。
+        /// </summary>
+        internal static System.Drawing.Bitmap sanwa_robot_status {
+            get {
+                object obj = ResourceManager.GetObject("sanwa_robot_status", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   查詢類型 System.Drawing.Bitmap 的當地語系化資源。
+        /// </summary>
+        internal static System.Drawing.Bitmap tdk_loadport_status {
+            get {
+                object obj = ResourceManager.GetObject("tdk_loadport_status", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   查詢類型 System.Drawing.Bitmap 的當地語系化資源。
+        /// </summary>
         internal static System.Drawing.Bitmap WafID_VBNETEmbedded {
             get {
                 object obj = ResourceManager.GetObject("WafID_VBNETEmbedded", resourceCulture);

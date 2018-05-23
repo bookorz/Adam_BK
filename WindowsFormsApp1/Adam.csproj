@@ -62,6 +62,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="ConfigUtil.cs" />
     <Compile Include="FormAlarm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -250,6 +251,12 @@
       <Name>TransferControl</Name>
     </ProjectReference>
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <None Include="Resources\sanwa_robot_status.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Resources\sanwa_aligner_status.png" />
+    <Content Include="Resources\tdk_loadport_status.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

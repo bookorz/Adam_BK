@@ -16,6 +16,7 @@ using Adam.UI_Update.Monitoring;
 using log4net;
 using Newtonsoft.Json;
 using Adam.UI_Update.Manual;
+using System.Collections;
 
 namespace Adam
 {
@@ -76,6 +77,11 @@ namespace Adam
             dgDevice.Rows.Add("Load Port", "TDK", 3, "", "LoadPort03", true);
             dgDevice.Rows.Add("DIO", "Advantech", 1, "", "DIO1", true);
             dgDevice.Rows.Add("DIO", "Advantech", 2, "", "DIO2", true);
+
+            //vSBRobotStatus.Maximum = pbRobotState.Width - pnlRobotState.Width + vSBRobotStatus.Width; 水平
+            vSBRobotStatus.Maximum = pbRobotState.Height - pnlRobotState.Height + 40 ;//+ vSBRobotStatus.Height
+            vSBAlignerStatus.Maximum = pbAlignerState.Height - pnlAlignerState.Height + 40;// + vSBAlignerStatus.Height
+            vSBPortStatus.Maximum = pbPortState.Height - pnlPortState.Height  + 40;//+ vSBPortStatus.Height
         }
 
         private void Initialize()
@@ -683,14 +689,75 @@ namespace Adam
             switch (e.TabPage.Text)
             {
                 case "Status":
-                    System.Text.StringBuilder messageBoxCS = new System.Text.StringBuilder();
-                    messageBoxCS.AppendFormat("{0} = {1}", "TabPage", e.TabPage.Text);
-                    messageBoxCS.AppendLine();
-                    MessageBox.Show(messageBoxCS.ToString(), "Selected Event");
+                    //System.Text.StringBuilder messageBoxCS = new System.Text.StringBuilder();
+                    //messageBoxCS.AppendFormat("{0} = {1}", "TabPage", e.TabPage.Text);
+                    //messageBoxCS.AppendLine();
+                    //MessageBox.Show(messageBoxCS.ToString(), "Selected Event");
+                    ArrayList tbllayout = new ArrayList();
+                    //tbllayout.Add(tblLayoutR1);
+                    //tbllayout.Add(tblLayoutR2);
+                    //tbllayout.Add(tblLayoutA1);
+                    //tbllayout.Add(tblLayoutA2);
+                    /*tbllayout.Add(tblLayoutL1);
+                    tbllayout.Add(tblLayoutL2);
+                    tbllayout.Add(tblLayoutL3);
+                    tbllayout.Add(tblLayoutL4);
+                    tbllayout.Add(tblLayoutL5);
+                    tbllayout.Add(tblLayoutL6);
+                    tbllayout.Add(tblLayoutL7);
+                    tbllayout.Add(tblLayoutL8);*/
+
+                    foreach (TableLayoutPanel pnl in tbllayout)
+                    {                        
+                        for (int c = 0; c < pnl.ColumnCount; c++)
+                        {
+                            for (int r = 0; r < pnl.RowCount; r++)
+                            {
+                                var control = pnl.GetControlFromPosition(c, r);
+                                pnl.Controls.Remove(control);
+                            }
+                        }
+                    }
+                    
+                    /*for (int c=0; c< tblLayoutA1.ColumnCount;c++)
+                    {
+                        for (int r = 0; r < tblLayoutA1.RowCount; r++)
+                        {
+                            tblLayoutA1.Controls.RemoveByKey("status" + c + r);
+                            Label kuma = new System.Windows.Forms.Label();
+                            kuma.BackColor = System.Drawing.Color.Gold;
+                            kuma.Dock = DockStyle.Fill;
+                            kuma.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+                            kuma.Name = "status" + c + r;
+                            kuma.Text = "status" + c + r + (new Random()).Next(100);
+                            kuma.TextAlign = ContentAlignment.MiddleCenter;
+                            tblLayoutA1.Controls.Add(kuma, c, r);
+                        }
+                    }*/
                     break;
                 default:
                     break;
             }
+        }
+
+        private void label82_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void vSBRobotStatus_Scroll(object sender, ScrollEventArgs e)
+        {
+            pbRobotState.Top = -vSBRobotStatus.Value;
+        }
+
+        private void vSBAlignerStatus_Scroll(object sender, ScrollEventArgs e)
+        {
+            pbAlignerState.Top = -vSBAlignerStatus.Value;
+        }
+
+        private void vSBPortStatus_Scroll(object sender, ScrollEventArgs e)
+        {
+            pbPortState.Top = -vSBPortStatus.Value;
         }
     }
 }
