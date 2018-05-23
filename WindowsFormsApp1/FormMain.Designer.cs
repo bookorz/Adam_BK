@@ -31,6 +31,72 @@
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormMain));
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle9 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle10 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle11 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle12 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle13 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle14 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle15 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle16 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle17 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle18 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle19 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle20 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle21 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle22 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle23 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle24 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle25 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle26 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle27 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle28 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle29 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle30 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle31 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle32 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle33 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle34 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle35 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle36 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle37 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle38 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle39 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle40 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle41 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle42 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle43 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle44 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle45 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle46 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle47 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle48 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle49 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle50 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle51 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle52 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle53 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle54 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle55 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle56 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle57 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle58 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle59 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle60 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle61 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle62 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle63 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle64 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle65 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle66 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle67 = new System.Windows.Forms.DataGridViewCellStyle();
             this.splitContainer5 = new System.Windows.Forms.SplitContainer();
             this.label23 = new System.Windows.Forms.Label();
             this.textBox14 = new System.Windows.Forms.TextBox();
@@ -92,6 +158,7 @@
             this.button28 = new System.Windows.Forms.Button();
             this.textBox23 = new System.Windows.Forms.TextBox();
             this.label50 = new System.Windows.Forms.Label();
+            this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.splitContainer13 = new System.Windows.Forms.SplitContainer();
             this.groupBox54 = new System.Windows.Forms.GroupBox();
             this.label197 = new System.Windows.Forms.Label();
@@ -122,6 +189,7 @@
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
             this.Conn_gv = new System.Windows.Forms.DataGridView();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
@@ -244,131 +312,110 @@
             this.label44 = new System.Windows.Forms.Label();
             this.textBox21 = new System.Windows.Forms.TextBox();
             this.tabStatus = new System.Windows.Forms.TabPage();
-            this.dataGridView2 = new System.Windows.Forms.DataGridView();
             this.tableLayoutPanel26 = new System.Windows.Forms.TableLayoutPanel();
+            this.dgvRstatus = new System.Windows.Forms.DataGridView();
+            this.Column0 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column7 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column8 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column9 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column10 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column11 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column12 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column13 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column14 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column15 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column16 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column17 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column18 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column19 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column20 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column21 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column22 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column23 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column24 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column25 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column26 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column27 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column28 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column29 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column30 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column31 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column32 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.pnlRobotState = new System.Windows.Forms.Panel();
             this.vSBRobotStatus = new System.Windows.Forms.VScrollBar();
-            this.tabPage4 = new System.Windows.Forms.TabPage();
-            this.tabControl2 = new System.Windows.Forms.TabControl();
-            this.tabPage7 = new System.Windows.Forms.TabPage();
-            this.groupBox20 = new System.Windows.Forms.GroupBox();
-            this.panel9 = new System.Windows.Forms.Panel();
-            this.tableLayoutPanel23 = new System.Windows.Forms.TableLayoutPanel();
-            this.tableLayoutPanel24 = new System.Windows.Forms.TableLayoutPanel();
-            this.panel12 = new System.Windows.Forms.Panel();
-            this.label56 = new System.Windows.Forms.Label();
-            this.label57 = new System.Windows.Forms.Label();
-            this.comboBox9 = new System.Windows.Forms.ComboBox();
-            this.button31 = new System.Windows.Forms.Button();
-            this.label58 = new System.Windows.Forms.Label();
-            this.button32 = new System.Windows.Forms.Button();
-            this.label59 = new System.Windows.Forms.Label();
-            this.button33 = new System.Windows.Forms.Button();
-            this.label60 = new System.Windows.Forms.Label();
-            this.label61 = new System.Windows.Forms.Label();
-            this.label62 = new System.Windows.Forms.Label();
-            this.comboBox10 = new System.Windows.Forms.ComboBox();
-            this.comboBox11 = new System.Windows.Forms.ComboBox();
-            this.comboBox12 = new System.Windows.Forms.ComboBox();
-            this.panel11 = new System.Windows.Forms.Panel();
-            this.label7 = new System.Windows.Forms.Label();
-            this.label14 = new System.Windows.Forms.Label();
-            this.comboBox3 = new System.Windows.Forms.ComboBox();
-            this.button26 = new System.Windows.Forms.Button();
-            this.label51 = new System.Windows.Forms.Label();
-            this.label52 = new System.Windows.Forms.Label();
-            this.button29 = new System.Windows.Forms.Button();
-            this.label53 = new System.Windows.Forms.Label();
-            this.label54 = new System.Windows.Forms.Label();
-            this.button30 = new System.Windows.Forms.Button();
-            this.label55 = new System.Windows.Forms.Label();
-            this.comboBox7 = new System.Windows.Forms.ComboBox();
-            this.comboBox4 = new System.Windows.Forms.ComboBox();
-            this.comboBox5 = new System.Windows.Forms.ComboBox();
-            this.panel10 = new System.Windows.Forms.Panel();
-            this.button1 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
-            this.button4 = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
-            this.groupBox21 = new System.Windows.Forms.GroupBox();
-            this.panel13 = new System.Windows.Forms.Panel();
-            this.panel14 = new System.Windows.Forms.Panel();
-            this.button34 = new System.Windows.Forms.Button();
-            this.button35 = new System.Windows.Forms.Button();
-            this.button36 = new System.Windows.Forms.Button();
-            this.label63 = new System.Windows.Forms.Label();
-            this.textBox24 = new System.Windows.Forms.TextBox();
-            this.textBox25 = new System.Windows.Forms.TextBox();
-            this.textBox26 = new System.Windows.Forms.TextBox();
-            this.label64 = new System.Windows.Forms.Label();
-            this.button37 = new System.Windows.Forms.Button();
-            this.label65 = new System.Windows.Forms.Label();
-            this.textBox27 = new System.Windows.Forms.TextBox();
-            this.label66 = new System.Windows.Forms.Label();
-            this.textBox28 = new System.Windows.Forms.TextBox();
-            this.label67 = new System.Windows.Forms.Label();
-            this.label68 = new System.Windows.Forms.Label();
-            this.label69 = new System.Windows.Forms.Label();
-            this.tabPage10 = new System.Windows.Forms.TabPage();
-            this.tabPage5 = new System.Windows.Forms.TabPage();
-            this.tableLayoutPanel25 = new System.Windows.Forms.TableLayoutPanel();
-            this.groupBox23 = new System.Windows.Forms.GroupBox();
-            this.panel17 = new System.Windows.Forms.Panel();
-            this.panel18 = new System.Windows.Forms.Panel();
-            this.textBox35 = new System.Windows.Forms.TextBox();
-            this.textBox36 = new System.Windows.Forms.TextBox();
-            this.button49 = new System.Windows.Forms.Button();
-            this.button50 = new System.Windows.Forms.Button();
-            this.button51 = new System.Windows.Forms.Button();
-            this.textBox37 = new System.Windows.Forms.TextBox();
-            this.label76 = new System.Windows.Forms.Label();
-            this.button52 = new System.Windows.Forms.Button();
-            this.comboBox2 = new System.Windows.Forms.ComboBox();
-            this.textBox38 = new System.Windows.Forms.TextBox();
-            this.label77 = new System.Windows.Forms.Label();
-            this.button53 = new System.Windows.Forms.Button();
-            this.button54 = new System.Windows.Forms.Button();
-            this.label78 = new System.Windows.Forms.Label();
-            this.button55 = new System.Windows.Forms.Button();
-            this.button56 = new System.Windows.Forms.Button();
-            this.textBox39 = new System.Windows.Forms.TextBox();
-            this.button57 = new System.Windows.Forms.Button();
-            this.button58 = new System.Windows.Forms.Button();
-            this.label79 = new System.Windows.Forms.Label();
-            this.textBox40 = new System.Windows.Forms.TextBox();
-            this.label80 = new System.Windows.Forms.Label();
-            this.button59 = new System.Windows.Forms.Button();
-            this.label81 = new System.Windows.Forms.Label();
-            this.groupBox22 = new System.Windows.Forms.GroupBox();
-            this.panel15 = new System.Windows.Forms.Panel();
-            this.panel16 = new System.Windows.Forms.Panel();
-            this.button38 = new System.Windows.Forms.Button();
-            this.button39 = new System.Windows.Forms.Button();
-            this.button40 = new System.Windows.Forms.Button();
-            this.textBox29 = new System.Windows.Forms.TextBox();
-            this.label70 = new System.Windows.Forms.Label();
-            this.button41 = new System.Windows.Forms.Button();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
-            this.textBox30 = new System.Windows.Forms.TextBox();
-            this.label71 = new System.Windows.Forms.Label();
-            this.button42 = new System.Windows.Forms.Button();
-            this.button43 = new System.Windows.Forms.Button();
-            this.label72 = new System.Windows.Forms.Label();
-            this.textBox31 = new System.Windows.Forms.TextBox();
-            this.button44 = new System.Windows.Forms.Button();
-            this.button45 = new System.Windows.Forms.Button();
-            this.textBox32 = new System.Windows.Forms.TextBox();
-            this.button46 = new System.Windows.Forms.Button();
-            this.button47 = new System.Windows.Forms.Button();
-            this.label73 = new System.Windows.Forms.Label();
-            this.textBox33 = new System.Windows.Forms.TextBox();
-            this.label74 = new System.Windows.Forms.Label();
-            this.button48 = new System.Windows.Forms.Button();
-            this.label75 = new System.Windows.Forms.Label();
-            this.textBox34 = new System.Windows.Forms.TextBox();
+            this.pbRobotState = new System.Windows.Forms.PictureBox();
+            this.pnlAlignerState = new System.Windows.Forms.Panel();
+            this.vSBAlignerStatus = new System.Windows.Forms.VScrollBar();
+            this.pbAlignerState = new System.Windows.Forms.PictureBox();
+            this.pnlPortState = new System.Windows.Forms.Panel();
+            this.vSBPortStatus = new System.Windows.Forms.VScrollBar();
+            this.pbPortState = new System.Windows.Forms.PictureBox();
+            this.dgvLstatus = new System.Windows.Forms.DataGridView();
+            this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn14 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn16 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn17 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn20 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn21 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn30 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn32 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn34 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn36 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn40 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn41 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn42 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn43 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn44 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn45 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn46 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn47 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn48 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dgvAstatus = new System.Windows.Forms.DataGridView();
+            this.dataGridViewTextBoxColumn49 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn50 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn51 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn52 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn53 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn54 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn55 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn56 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn57 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn58 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn59 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn60 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn61 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn62 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn63 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn64 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn65 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn66 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn67 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn68 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn69 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn70 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn71 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn72 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn73 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn74 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn75 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn76 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn77 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn78 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn79 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn80 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn81 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.tabOCR = new System.Windows.Forms.TabPage();
             this.tableLayoutPanel13 = new System.Windows.Forms.TableLayoutPanel();
             this.groupBox17 = new System.Windows.Forms.GroupBox();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.tabSetting = new System.Windows.Forms.TabPage();
             this.tabControl3 = new System.Windows.Forms.TabControl();
             this.tabPage11 = new System.Windows.Forms.TabPage();
@@ -643,115 +690,16 @@
             this.splitButton5 = new System.Controls.SplitButton();
             this.contextMenuStrip4 = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.runingToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.toolStripMenuItem4 = new System.Windows.Forms.ToolStripMenuItem();
-            this.toolStripMenuItem5 = new System.Windows.Forms.ToolStripMenuItem();
-            this.toolStripMenuItem6 = new System.Windows.Forms.ToolStripMenuItem();
-            this.toolStripMenuItem7 = new System.Windows.Forms.ToolStripMenuItem();
+            this.initToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.orgToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.manualToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.ioToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.settingToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.toolStripMenuItem8 = new System.Windows.Forms.ToolStripMenuItem();
-            this.toolStripMenuItem9 = new System.Windows.Forms.ToolStripMenuItem();
-            this.toolStripMenuItem10 = new System.Windows.Forms.ToolStripMenuItem();
+            this.llSetToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.unitdatatoolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.transTestToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.terminalToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.panel3 = new System.Windows.Forms.Panel();
-            this.pnlAlignerState = new System.Windows.Forms.Panel();
-            this.pnlPortState = new System.Windows.Forms.Panel();
-            this.vSBAlignerStatus = new System.Windows.Forms.VScrollBar();
-            this.vSBPortStatus = new System.Windows.Forms.VScrollBar();
-            this.pbRobotState = new System.Windows.Forms.PictureBox();
-            this.pbAlignerState = new System.Windows.Forms.PictureBox();
-            this.pbPortState = new System.Windows.Forms.PictureBox();
-            this.pictureBox3 = new System.Windows.Forms.PictureBox();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
-            this.dataGridView8 = new System.Windows.Forms.DataGridView();
-            this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn14 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn16 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn17 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn20 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn21 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn30 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn32 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn34 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn36 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn40 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn41 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn42 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn43 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn44 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn45 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn46 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn47 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn48 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column0 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column7 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column8 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column9 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column10 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column11 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column12 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column13 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column14 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column15 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column16 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column17 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column18 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column19 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column20 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column21 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column22 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column23 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column24 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column25 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column26 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column27 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column28 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column29 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column30 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column31 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column32 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridView10 = new System.Windows.Forms.DataGridView();
-            this.dataGridViewTextBoxColumn49 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn50 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn51 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn52 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn53 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn54 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn55 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn56 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn57 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn58 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn59 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn60 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn61 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn62 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn63 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn64 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn65 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn66 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn67 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn68 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn69 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn70 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn71 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn72 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn73 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn74 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn75 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn76 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn77 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn78 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn79 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn80 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn81 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer5)).BeginInit();
             this.splitContainer5.Panel1.SuspendLayout();
             this.splitContainer5.Panel2.SuspendLayout();
@@ -816,6 +764,7 @@
             this.splitContainer12.Panel2.SuspendLayout();
             this.splitContainer12.SuspendLayout();
             this.groupBox18.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer13)).BeginInit();
             this.splitContainer13.Panel1.SuspendLayout();
             this.splitContainer13.Panel2.SuspendLayout();
@@ -825,6 +774,7 @@
             this.groupBox5.SuspendLayout();
             this.panel1.SuspendLayout();
             this.groupBox1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.groupBox3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.Conn_gv)).BeginInit();
             this.groupBox2.SuspendLayout();
@@ -873,33 +823,20 @@
             this.tableLayoutPanel21.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView18)).BeginInit();
             this.tabStatus.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).BeginInit();
             this.tableLayoutPanel26.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvRstatus)).BeginInit();
             this.pnlRobotState.SuspendLayout();
-            this.tabPage4.SuspendLayout();
-            this.tabControl2.SuspendLayout();
-            this.tabPage7.SuspendLayout();
-            this.groupBox20.SuspendLayout();
-            this.panel9.SuspendLayout();
-            this.tableLayoutPanel23.SuspendLayout();
-            this.tableLayoutPanel24.SuspendLayout();
-            this.panel12.SuspendLayout();
-            this.panel11.SuspendLayout();
-            this.panel10.SuspendLayout();
-            this.groupBox21.SuspendLayout();
-            this.panel13.SuspendLayout();
-            this.panel14.SuspendLayout();
-            this.tabPage5.SuspendLayout();
-            this.tableLayoutPanel25.SuspendLayout();
-            this.groupBox23.SuspendLayout();
-            this.panel17.SuspendLayout();
-            this.panel18.SuspendLayout();
-            this.groupBox22.SuspendLayout();
-            this.panel15.SuspendLayout();
-            this.panel16.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pbRobotState)).BeginInit();
+            this.pnlAlignerState.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pbAlignerState)).BeginInit();
+            this.pnlPortState.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pbPortState)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvLstatus)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvAstatus)).BeginInit();
             this.tabOCR.SuspendLayout();
             this.tableLayoutPanel13.SuspendLayout();
             this.groupBox17.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.tabSetting.SuspendLayout();
             this.tabControl3.SuspendLayout();
             this.tabPage11.SuspendLayout();
@@ -983,16 +920,6 @@
             this.contextMenuStrip1.SuspendLayout();
             this.contextMenuStrip4.SuspendLayout();
             this.panel3.SuspendLayout();
-            this.pnlAlignerState.SuspendLayout();
-            this.pnlPortState.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pbRobotState)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pbAlignerState)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pbPortState)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView8)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView10)).BeginInit();
             this.SuspendLayout();
             // 
             // splitContainer5
@@ -1580,6 +1507,13 @@
             this.label50.Name = "label50";
             this.label50.Click += new System.EventHandler(this.label50_Click);
             // 
+            // pictureBox3
+            // 
+            resources.ApplyResources(this.pictureBox3, "pictureBox3");
+            this.pictureBox3.Image = global::Adam.Properties.Resources.WafID_VBNETEmbedded;
+            this.pictureBox3.Name = "pictureBox3";
+            this.pictureBox3.TabStop = false;
+            // 
             // splitContainer13
             // 
             resources.ApplyResources(this.splitContainer13, "splitContainer13");
@@ -1634,10 +1568,10 @@
             // 
             // groupBox19
             // 
-            this.groupBox19.Controls.Add(this.label194);
-            this.groupBox19.Controls.Add(this.label193);
             this.groupBox19.Controls.Add(this.Connection);
             this.groupBox19.Controls.Add(this.button27);
+            this.groupBox19.Controls.Add(this.label194);
+            this.groupBox19.Controls.Add(this.label193);
             resources.ApplyResources(this.groupBox19, "groupBox19");
             this.groupBox19.Name = "groupBox19";
             this.groupBox19.TabStop = false;
@@ -1815,6 +1749,12 @@
             resources.ApplyResources(this.label1, "label1");
             this.label1.Name = "label1";
             // 
+            // pictureBox1
+            // 
+            resources.ApplyResources(this.pictureBox1, "pictureBox1");
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.TabStop = false;
+            // 
             // groupBox3
             // 
             resources.ApplyResources(this.groupBox3, "groupBox3");
@@ -1892,8 +1832,6 @@
             this.tabControl1.Controls.Add(this.tabComm);
             this.tabControl1.Controls.Add(this.tabMapping);
             this.tabControl1.Controls.Add(this.tabStatus);
-            this.tabControl1.Controls.Add(this.tabPage4);
-            this.tabControl1.Controls.Add(this.tabPage5);
             this.tabControl1.Controls.Add(this.tabOCR);
             this.tabControl1.Controls.Add(this.tabSetting);
             resources.ApplyResources(this.tabControl1, "tabControl1");
@@ -3056,10 +2994,23 @@
             resources.ApplyResources(this.tabStatus, "tabStatus");
             this.tabStatus.Name = "tabStatus";
             // 
-            // dataGridView2
+            // tableLayoutPanel26
             // 
-            this.dataGridView2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView2.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            resources.ApplyResources(this.tableLayoutPanel26, "tableLayoutPanel26");
+            this.tableLayoutPanel26.Controls.Add(this.dgvRstatus, 0, 0);
+            this.tableLayoutPanel26.Controls.Add(this.pnlRobotState, 1, 0);
+            this.tableLayoutPanel26.Controls.Add(this.pnlAlignerState, 1, 1);
+            this.tableLayoutPanel26.Controls.Add(this.pnlPortState, 1, 2);
+            this.tableLayoutPanel26.Controls.Add(this.dgvLstatus, 0, 2);
+            this.tableLayoutPanel26.Controls.Add(this.dgvAstatus, 0, 1);
+            this.tableLayoutPanel26.Name = "tableLayoutPanel26";
+            // 
+            // dgvRstatus
+            // 
+            this.dgvRstatus.AllowUserToDeleteRows = false;
+            this.dgvRstatus.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.dgvRstatus.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvRstatus.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.Column0,
             this.Column1,
             this.Column2,
@@ -3093,20 +3044,274 @@
             this.Column30,
             this.Column31,
             this.Column32});
-            resources.ApplyResources(this.dataGridView2, "dataGridView2");
-            this.dataGridView2.Name = "dataGridView2";
-            this.dataGridView2.RowTemplate.Height = 24;
+            resources.ApplyResources(this.dgvRstatus, "dgvRstatus");
+            this.dgvRstatus.Name = "dgvRstatus";
+            this.dgvRstatus.ReadOnly = true;
+            this.dgvRstatus.RowTemplate.Height = 24;
             // 
-            // tableLayoutPanel26
+            // Column0
             // 
-            resources.ApplyResources(this.tableLayoutPanel26, "tableLayoutPanel26");
-            this.tableLayoutPanel26.Controls.Add(this.dataGridView2, 0, 0);
-            this.tableLayoutPanel26.Controls.Add(this.pnlRobotState, 1, 0);
-            this.tableLayoutPanel26.Controls.Add(this.pnlAlignerState, 1, 1);
-            this.tableLayoutPanel26.Controls.Add(this.pnlPortState, 1, 2);
-            this.tableLayoutPanel26.Controls.Add(this.dataGridView8, 0, 2);
-            this.tableLayoutPanel26.Controls.Add(this.dataGridView10, 0, 1);
-            this.tableLayoutPanel26.Name = "tableLayoutPanel26";
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            this.Column0.DefaultCellStyle = dataGridViewCellStyle2;
+            resources.ApplyResources(this.Column0, "Column0");
+            this.Column0.Name = "Column0";
+            this.Column0.ReadOnly = true;
+            // 
+            // Column1
+            // 
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            this.Column1.DefaultCellStyle = dataGridViewCellStyle3;
+            resources.ApplyResources(this.Column1, "Column1");
+            this.Column1.Name = "Column1";
+            this.Column1.ReadOnly = true;
+            // 
+            // Column2
+            // 
+            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            this.Column2.DefaultCellStyle = dataGridViewCellStyle4;
+            resources.ApplyResources(this.Column2, "Column2");
+            this.Column2.Name = "Column2";
+            this.Column2.ReadOnly = true;
+            // 
+            // Column3
+            // 
+            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            this.Column3.DefaultCellStyle = dataGridViewCellStyle5;
+            resources.ApplyResources(this.Column3, "Column3");
+            this.Column3.Name = "Column3";
+            this.Column3.ReadOnly = true;
+            // 
+            // Column4
+            // 
+            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            this.Column4.DefaultCellStyle = dataGridViewCellStyle6;
+            resources.ApplyResources(this.Column4, "Column4");
+            this.Column4.Name = "Column4";
+            this.Column4.ReadOnly = true;
+            // 
+            // Column5
+            // 
+            dataGridViewCellStyle7.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            this.Column5.DefaultCellStyle = dataGridViewCellStyle7;
+            resources.ApplyResources(this.Column5, "Column5");
+            this.Column5.Name = "Column5";
+            this.Column5.ReadOnly = true;
+            // 
+            // Column6
+            // 
+            dataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            this.Column6.DefaultCellStyle = dataGridViewCellStyle8;
+            resources.ApplyResources(this.Column6, "Column6");
+            this.Column6.Name = "Column6";
+            this.Column6.ReadOnly = true;
+            // 
+            // Column7
+            // 
+            dataGridViewCellStyle9.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            this.Column7.DefaultCellStyle = dataGridViewCellStyle9;
+            resources.ApplyResources(this.Column7, "Column7");
+            this.Column7.Name = "Column7";
+            this.Column7.ReadOnly = true;
+            // 
+            // Column8
+            // 
+            dataGridViewCellStyle10.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            this.Column8.DefaultCellStyle = dataGridViewCellStyle10;
+            resources.ApplyResources(this.Column8, "Column8");
+            this.Column8.Name = "Column8";
+            this.Column8.ReadOnly = true;
+            // 
+            // Column9
+            // 
+            dataGridViewCellStyle11.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            this.Column9.DefaultCellStyle = dataGridViewCellStyle11;
+            resources.ApplyResources(this.Column9, "Column9");
+            this.Column9.Name = "Column9";
+            this.Column9.ReadOnly = true;
+            // 
+            // Column10
+            // 
+            dataGridViewCellStyle12.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            this.Column10.DefaultCellStyle = dataGridViewCellStyle12;
+            resources.ApplyResources(this.Column10, "Column10");
+            this.Column10.Name = "Column10";
+            this.Column10.ReadOnly = true;
+            // 
+            // Column11
+            // 
+            dataGridViewCellStyle13.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            this.Column11.DefaultCellStyle = dataGridViewCellStyle13;
+            resources.ApplyResources(this.Column11, "Column11");
+            this.Column11.Name = "Column11";
+            this.Column11.ReadOnly = true;
+            // 
+            // Column12
+            // 
+            dataGridViewCellStyle14.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            this.Column12.DefaultCellStyle = dataGridViewCellStyle14;
+            resources.ApplyResources(this.Column12, "Column12");
+            this.Column12.Name = "Column12";
+            this.Column12.ReadOnly = true;
+            // 
+            // Column13
+            // 
+            dataGridViewCellStyle15.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            this.Column13.DefaultCellStyle = dataGridViewCellStyle15;
+            resources.ApplyResources(this.Column13, "Column13");
+            this.Column13.Name = "Column13";
+            this.Column13.ReadOnly = true;
+            // 
+            // Column14
+            // 
+            dataGridViewCellStyle16.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            this.Column14.DefaultCellStyle = dataGridViewCellStyle16;
+            resources.ApplyResources(this.Column14, "Column14");
+            this.Column14.Name = "Column14";
+            this.Column14.ReadOnly = true;
+            // 
+            // Column15
+            // 
+            dataGridViewCellStyle17.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            this.Column15.DefaultCellStyle = dataGridViewCellStyle17;
+            resources.ApplyResources(this.Column15, "Column15");
+            this.Column15.Name = "Column15";
+            this.Column15.ReadOnly = true;
+            // 
+            // Column16
+            // 
+            dataGridViewCellStyle18.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            this.Column16.DefaultCellStyle = dataGridViewCellStyle18;
+            resources.ApplyResources(this.Column16, "Column16");
+            this.Column16.Name = "Column16";
+            this.Column16.ReadOnly = true;
+            // 
+            // Column17
+            // 
+            dataGridViewCellStyle19.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            this.Column17.DefaultCellStyle = dataGridViewCellStyle19;
+            resources.ApplyResources(this.Column17, "Column17");
+            this.Column17.Name = "Column17";
+            this.Column17.ReadOnly = true;
+            // 
+            // Column18
+            // 
+            dataGridViewCellStyle20.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            this.Column18.DefaultCellStyle = dataGridViewCellStyle20;
+            resources.ApplyResources(this.Column18, "Column18");
+            this.Column18.Name = "Column18";
+            this.Column18.ReadOnly = true;
+            // 
+            // Column19
+            // 
+            dataGridViewCellStyle21.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            this.Column19.DefaultCellStyle = dataGridViewCellStyle21;
+            resources.ApplyResources(this.Column19, "Column19");
+            this.Column19.Name = "Column19";
+            this.Column19.ReadOnly = true;
+            // 
+            // Column20
+            // 
+            dataGridViewCellStyle22.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            this.Column20.DefaultCellStyle = dataGridViewCellStyle22;
+            resources.ApplyResources(this.Column20, "Column20");
+            this.Column20.Name = "Column20";
+            this.Column20.ReadOnly = true;
+            // 
+            // Column21
+            // 
+            dataGridViewCellStyle23.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            this.Column21.DefaultCellStyle = dataGridViewCellStyle23;
+            resources.ApplyResources(this.Column21, "Column21");
+            this.Column21.Name = "Column21";
+            this.Column21.ReadOnly = true;
+            // 
+            // Column22
+            // 
+            dataGridViewCellStyle24.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            this.Column22.DefaultCellStyle = dataGridViewCellStyle24;
+            resources.ApplyResources(this.Column22, "Column22");
+            this.Column22.Name = "Column22";
+            this.Column22.ReadOnly = true;
+            // 
+            // Column23
+            // 
+            dataGridViewCellStyle25.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            this.Column23.DefaultCellStyle = dataGridViewCellStyle25;
+            resources.ApplyResources(this.Column23, "Column23");
+            this.Column23.Name = "Column23";
+            this.Column23.ReadOnly = true;
+            // 
+            // Column24
+            // 
+            dataGridViewCellStyle26.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            this.Column24.DefaultCellStyle = dataGridViewCellStyle26;
+            resources.ApplyResources(this.Column24, "Column24");
+            this.Column24.Name = "Column24";
+            this.Column24.ReadOnly = true;
+            // 
+            // Column25
+            // 
+            dataGridViewCellStyle27.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            this.Column25.DefaultCellStyle = dataGridViewCellStyle27;
+            resources.ApplyResources(this.Column25, "Column25");
+            this.Column25.Name = "Column25";
+            this.Column25.ReadOnly = true;
+            // 
+            // Column26
+            // 
+            dataGridViewCellStyle28.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            this.Column26.DefaultCellStyle = dataGridViewCellStyle28;
+            resources.ApplyResources(this.Column26, "Column26");
+            this.Column26.Name = "Column26";
+            this.Column26.ReadOnly = true;
+            // 
+            // Column27
+            // 
+            dataGridViewCellStyle29.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            this.Column27.DefaultCellStyle = dataGridViewCellStyle29;
+            resources.ApplyResources(this.Column27, "Column27");
+            this.Column27.Name = "Column27";
+            this.Column27.ReadOnly = true;
+            // 
+            // Column28
+            // 
+            dataGridViewCellStyle30.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            this.Column28.DefaultCellStyle = dataGridViewCellStyle30;
+            resources.ApplyResources(this.Column28, "Column28");
+            this.Column28.Name = "Column28";
+            this.Column28.ReadOnly = true;
+            // 
+            // Column29
+            // 
+            dataGridViewCellStyle31.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            this.Column29.DefaultCellStyle = dataGridViewCellStyle31;
+            resources.ApplyResources(this.Column29, "Column29");
+            this.Column29.Name = "Column29";
+            this.Column29.ReadOnly = true;
+            // 
+            // Column30
+            // 
+            dataGridViewCellStyle32.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            this.Column30.DefaultCellStyle = dataGridViewCellStyle32;
+            resources.ApplyResources(this.Column30, "Column30");
+            this.Column30.Name = "Column30";
+            this.Column30.ReadOnly = true;
+            // 
+            // Column31
+            // 
+            dataGridViewCellStyle33.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            this.Column31.DefaultCellStyle = dataGridViewCellStyle33;
+            resources.ApplyResources(this.Column31, "Column31");
+            this.Column31.Name = "Column31";
+            this.Column31.ReadOnly = true;
+            // 
+            // Column32
+            // 
+            dataGridViewCellStyle34.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            this.Column32.DefaultCellStyle = dataGridViewCellStyle34;
+            resources.ApplyResources(this.Column32, "Column32");
+            this.Column32.Name = "Column32";
+            this.Column32.ReadOnly = true;
             // 
             // pnlRobotState
             // 
@@ -3122,1059 +3327,523 @@
             this.vSBRobotStatus.Name = "vSBRobotStatus";
             this.vSBRobotStatus.Scroll += new System.Windows.Forms.ScrollEventHandler(this.vSBRobotStatus_Scroll);
             // 
-            // tabPage4
-            // 
-            this.tabPage4.BackColor = System.Drawing.SystemColors.Control;
-            this.tabPage4.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.tabPage4.Controls.Add(this.tabControl2);
-            resources.ApplyResources(this.tabPage4, "tabPage4");
-            this.tabPage4.Name = "tabPage4";
-            // 
-            // tabControl2
-            // 
-            this.tabControl2.Controls.Add(this.tabPage7);
-            this.tabControl2.Controls.Add(this.tabPage10);
-            resources.ApplyResources(this.tabControl2, "tabControl2");
-            this.tabControl2.Name = "tabControl2";
-            this.tabControl2.SelectedIndex = 0;
-            this.tabControl2.SizeMode = System.Windows.Forms.TabSizeMode.Fixed;
-            // 
-            // tabPage7
-            // 
-            this.tabPage7.BackColor = System.Drawing.Color.Gainsboro;
-            this.tabPage7.Controls.Add(this.groupBox20);
-            this.tabPage7.Controls.Add(this.groupBox21);
-            resources.ApplyResources(this.tabPage7, "tabPage7");
-            this.tabPage7.Name = "tabPage7";
-            // 
-            // groupBox20
-            // 
-            this.groupBox20.BackColor = System.Drawing.SystemColors.ControlLight;
-            resources.ApplyResources(this.groupBox20, "groupBox20");
-            this.groupBox20.Controls.Add(this.panel9);
-            this.groupBox20.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.groupBox20.Name = "groupBox20";
-            this.groupBox20.TabStop = false;
-            // 
-            // panel9
-            // 
-            this.panel9.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panel9.Controls.Add(this.tableLayoutPanel23);
-            resources.ApplyResources(this.panel9, "panel9");
-            this.panel9.Name = "panel9";
-            // 
-            // tableLayoutPanel23
-            // 
-            resources.ApplyResources(this.tableLayoutPanel23, "tableLayoutPanel23");
-            this.tableLayoutPanel23.Controls.Add(this.tableLayoutPanel24, 0, 0);
-            this.tableLayoutPanel23.Controls.Add(this.panel10, 0, 1);
-            this.tableLayoutPanel23.Name = "tableLayoutPanel23";
-            // 
-            // tableLayoutPanel24
-            // 
-            resources.ApplyResources(this.tableLayoutPanel24, "tableLayoutPanel24");
-            this.tableLayoutPanel24.Controls.Add(this.panel12, 0, 0);
-            this.tableLayoutPanel24.Controls.Add(this.panel11, 1, 0);
-            this.tableLayoutPanel24.Name = "tableLayoutPanel24";
+            // pbRobotState
+            // 
+            this.pbRobotState.Image = global::Adam.Properties.Resources.sanwa_robot_status;
+            resources.ApplyResources(this.pbRobotState, "pbRobotState");
+            this.pbRobotState.InitialImage = global::Adam.Properties.Resources.sanwa_robot_status;
+            this.pbRobotState.Name = "pbRobotState";
+            this.pbRobotState.TabStop = false;
+            // 
+            // pnlAlignerState
+            // 
+            this.pnlAlignerState.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.pnlAlignerState.Controls.Add(this.vSBAlignerStatus);
+            this.pnlAlignerState.Controls.Add(this.pbAlignerState);
+            resources.ApplyResources(this.pnlAlignerState, "pnlAlignerState");
+            this.pnlAlignerState.Name = "pnlAlignerState";
+            // 
+            // vSBAlignerStatus
+            // 
+            resources.ApplyResources(this.vSBAlignerStatus, "vSBAlignerStatus");
+            this.vSBAlignerStatus.Name = "vSBAlignerStatus";
+            this.vSBAlignerStatus.Scroll += new System.Windows.Forms.ScrollEventHandler(this.vSBAlignerStatus_Scroll);
+            // 
+            // pbAlignerState
+            // 
+            this.pbAlignerState.Image = global::Adam.Properties.Resources.sanwa_aligner_status;
+            resources.ApplyResources(this.pbAlignerState, "pbAlignerState");
+            this.pbAlignerState.InitialImage = global::Adam.Properties.Resources.sanwa_robot_status;
+            this.pbAlignerState.Name = "pbAlignerState";
+            this.pbAlignerState.TabStop = false;
+            // 
+            // pnlPortState
+            // 
+            this.pnlPortState.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.pnlPortState.Controls.Add(this.vSBPortStatus);
+            this.pnlPortState.Controls.Add(this.pbPortState);
+            resources.ApplyResources(this.pnlPortState, "pnlPortState");
+            this.pnlPortState.Name = "pnlPortState";
+            // 
+            // vSBPortStatus
+            // 
+            resources.ApplyResources(this.vSBPortStatus, "vSBPortStatus");
+            this.vSBPortStatus.Name = "vSBPortStatus";
+            this.vSBPortStatus.Scroll += new System.Windows.Forms.ScrollEventHandler(this.vSBPortStatus_Scroll);
+            // 
+            // pbPortState
+            // 
+            this.pbPortState.Image = global::Adam.Properties.Resources.tdk_loadport_status;
+            resources.ApplyResources(this.pbPortState, "pbPortState");
+            this.pbPortState.InitialImage = global::Adam.Properties.Resources.sanwa_robot_status;
+            this.pbPortState.Name = "pbPortState";
+            this.pbPortState.TabStop = false;
             // 
-            // panel12
+            // dgvLstatus
             // 
-            this.panel12.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.panel12.Controls.Add(this.label56);
-            this.panel12.Controls.Add(this.label57);
-            this.panel12.Controls.Add(this.comboBox9);
-            this.panel12.Controls.Add(this.button31);
-            this.panel12.Controls.Add(this.label58);
-            this.panel12.Controls.Add(this.button32);
-            this.panel12.Controls.Add(this.label59);
-            this.panel12.Controls.Add(this.button33);
-            this.panel12.Controls.Add(this.label60);
-            this.panel12.Controls.Add(this.label61);
-            this.panel12.Controls.Add(this.label62);
-            this.panel12.Controls.Add(this.comboBox10);
-            this.panel12.Controls.Add(this.comboBox11);
-            this.panel12.Controls.Add(this.comboBox12);
-            resources.ApplyResources(this.panel12, "panel12");
-            this.panel12.Name = "panel12";
-            // 
-            // label56
-            // 
-            resources.ApplyResources(this.label56, "label56");
-            this.label56.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.label56.Name = "label56";
-            // 
-            // label57
-            // 
-            resources.ApplyResources(this.label57, "label57");
-            this.label57.Name = "label57";
-            // 
-            // comboBox9
-            // 
-            this.comboBox9.FormattingEnabled = true;
-            this.comboBox9.Items.AddRange(new object[] {
-            resources.GetString("comboBox9.Items"),
-            resources.GetString("comboBox9.Items1"),
-            resources.GetString("comboBox9.Items2"),
-            resources.GetString("comboBox9.Items3"),
-            resources.GetString("comboBox9.Items4"),
-            resources.GetString("comboBox9.Items5")});
-            resources.ApplyResources(this.comboBox9, "comboBox9");
-            this.comboBox9.Name = "comboBox9";
-            // 
-            // button31
-            // 
-            this.button31.BackColor = System.Drawing.Color.DarkGray;
-            this.button31.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.button31.FlatAppearance.BorderSize = 2;
-            resources.ApplyResources(this.button31, "button31");
-            this.button31.Name = "button31";
-            this.button31.UseVisualStyleBackColor = false;
-            // 
-            // label58
-            // 
-            resources.ApplyResources(this.label58, "label58");
-            this.label58.Name = "label58";
-            // 
-            // button32
-            // 
-            this.button32.BackColor = System.Drawing.Color.DarkGray;
-            this.button32.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.button32.FlatAppearance.BorderSize = 2;
-            resources.ApplyResources(this.button32, "button32");
-            this.button32.Name = "button32";
-            this.button32.UseVisualStyleBackColor = false;
-            // 
-            // label59
-            // 
-            resources.ApplyResources(this.label59, "label59");
-            this.label59.Name = "label59";
-            // 
-            // button33
-            // 
-            this.button33.BackColor = System.Drawing.Color.DarkGray;
-            this.button33.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.button33.FlatAppearance.BorderSize = 2;
-            resources.ApplyResources(this.button33, "button33");
-            this.button33.Name = "button33";
-            this.button33.UseVisualStyleBackColor = false;
-            // 
-            // label60
-            // 
-            resources.ApplyResources(this.label60, "label60");
-            this.label60.Name = "label60";
-            // 
-            // label61
-            // 
-            resources.ApplyResources(this.label61, "label61");
-            this.label61.Name = "label61";
-            // 
-            // label62
-            // 
-            resources.ApplyResources(this.label62, "label62");
-            this.label62.Name = "label62";
-            // 
-            // comboBox10
-            // 
-            this.comboBox10.FormattingEnabled = true;
-            this.comboBox10.Items.AddRange(new object[] {
-            resources.GetString("comboBox10.Items"),
-            resources.GetString("comboBox10.Items1"),
-            resources.GetString("comboBox10.Items2"),
-            resources.GetString("comboBox10.Items3"),
-            resources.GetString("comboBox10.Items4"),
-            resources.GetString("comboBox10.Items5"),
-            resources.GetString("comboBox10.Items6"),
-            resources.GetString("comboBox10.Items7"),
-            resources.GetString("comboBox10.Items8"),
-            resources.GetString("comboBox10.Items9"),
-            resources.GetString("comboBox10.Items10"),
-            resources.GetString("comboBox10.Items11"),
-            resources.GetString("comboBox10.Items12"),
-            resources.GetString("comboBox10.Items13"),
-            resources.GetString("comboBox10.Items14"),
-            resources.GetString("comboBox10.Items15"),
-            resources.GetString("comboBox10.Items16"),
-            resources.GetString("comboBox10.Items17"),
-            resources.GetString("comboBox10.Items18"),
-            resources.GetString("comboBox10.Items19"),
-            resources.GetString("comboBox10.Items20"),
-            resources.GetString("comboBox10.Items21"),
-            resources.GetString("comboBox10.Items22"),
-            resources.GetString("comboBox10.Items23"),
-            resources.GetString("comboBox10.Items24")});
-            resources.ApplyResources(this.comboBox10, "comboBox10");
-            this.comboBox10.Name = "comboBox10";
-            // 
-            // comboBox11
-            // 
-            this.comboBox11.FormattingEnabled = true;
-            this.comboBox11.Items.AddRange(new object[] {
-            resources.GetString("comboBox11.Items"),
-            resources.GetString("comboBox11.Items1"),
-            resources.GetString("comboBox11.Items2"),
-            resources.GetString("comboBox11.Items3"),
-            resources.GetString("comboBox11.Items4"),
-            resources.GetString("comboBox11.Items5"),
-            resources.GetString("comboBox11.Items6"),
-            resources.GetString("comboBox11.Items7"),
-            resources.GetString("comboBox11.Items8"),
-            resources.GetString("comboBox11.Items9")});
-            resources.ApplyResources(this.comboBox11, "comboBox11");
-            this.comboBox11.Name = "comboBox11";
-            // 
-            // comboBox12
-            // 
-            this.comboBox12.FormattingEnabled = true;
-            this.comboBox12.Items.AddRange(new object[] {
-            resources.GetString("comboBox12.Items"),
-            resources.GetString("comboBox12.Items1")});
-            resources.ApplyResources(this.comboBox12, "comboBox12");
-            this.comboBox12.Name = "comboBox12";
-            // 
-            // panel11
-            // 
-            this.panel11.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.panel11.Controls.Add(this.label7);
-            this.panel11.Controls.Add(this.label14);
-            this.panel11.Controls.Add(this.comboBox3);
-            this.panel11.Controls.Add(this.button26);
-            this.panel11.Controls.Add(this.label51);
-            this.panel11.Controls.Add(this.label52);
-            this.panel11.Controls.Add(this.button29);
-            this.panel11.Controls.Add(this.label53);
-            this.panel11.Controls.Add(this.label54);
-            this.panel11.Controls.Add(this.button30);
-            this.panel11.Controls.Add(this.label55);
-            this.panel11.Controls.Add(this.comboBox7);
-            this.panel11.Controls.Add(this.comboBox4);
-            this.panel11.Controls.Add(this.comboBox5);
-            resources.ApplyResources(this.panel11, "panel11");
-            this.panel11.Name = "panel11";
-            // 
-            // label7
-            // 
-            resources.ApplyResources(this.label7, "label7");
-            this.label7.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.label7.Name = "label7";
-            // 
-            // label14
-            // 
-            resources.ApplyResources(this.label14, "label14");
-            this.label14.Name = "label14";
-            // 
-            // comboBox3
-            // 
-            this.comboBox3.FormattingEnabled = true;
-            this.comboBox3.Items.AddRange(new object[] {
-            resources.GetString("comboBox3.Items"),
-            resources.GetString("comboBox3.Items1"),
-            resources.GetString("comboBox3.Items2"),
-            resources.GetString("comboBox3.Items3"),
-            resources.GetString("comboBox3.Items4"),
-            resources.GetString("comboBox3.Items5")});
-            resources.ApplyResources(this.comboBox3, "comboBox3");
-            this.comboBox3.Name = "comboBox3";
-            // 
-            // button26
-            // 
-            this.button26.BackColor = System.Drawing.Color.DarkGray;
-            this.button26.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.button26.FlatAppearance.BorderSize = 2;
-            resources.ApplyResources(this.button26, "button26");
-            this.button26.Name = "button26";
-            this.button26.UseVisualStyleBackColor = false;
-            // 
-            // label51
-            // 
-            resources.ApplyResources(this.label51, "label51");
-            this.label51.Name = "label51";
-            // 
-            // label52
-            // 
-            resources.ApplyResources(this.label52, "label52");
-            this.label52.Name = "label52";
-            // 
-            // button29
-            // 
-            this.button29.BackColor = System.Drawing.Color.DarkGray;
-            this.button29.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.button29.FlatAppearance.BorderSize = 2;
-            resources.ApplyResources(this.button29, "button29");
-            this.button29.Name = "button29";
-            this.button29.UseVisualStyleBackColor = false;
-            // 
-            // label53
-            // 
-            resources.ApplyResources(this.label53, "label53");
-            this.label53.Name = "label53";
-            // 
-            // label54
-            // 
-            resources.ApplyResources(this.label54, "label54");
-            this.label54.Name = "label54";
-            // 
-            // button30
-            // 
-            this.button30.BackColor = System.Drawing.Color.DarkGray;
-            this.button30.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.button30.FlatAppearance.BorderSize = 2;
-            resources.ApplyResources(this.button30, "button30");
-            this.button30.Name = "button30";
-            this.button30.UseVisualStyleBackColor = false;
-            // 
-            // label55
-            // 
-            resources.ApplyResources(this.label55, "label55");
-            this.label55.Name = "label55";
-            // 
-            // comboBox7
-            // 
-            this.comboBox7.FormattingEnabled = true;
-            this.comboBox7.Items.AddRange(new object[] {
-            resources.GetString("comboBox7.Items"),
-            resources.GetString("comboBox7.Items1"),
-            resources.GetString("comboBox7.Items2"),
-            resources.GetString("comboBox7.Items3"),
-            resources.GetString("comboBox7.Items4"),
-            resources.GetString("comboBox7.Items5"),
-            resources.GetString("comboBox7.Items6"),
-            resources.GetString("comboBox7.Items7"),
-            resources.GetString("comboBox7.Items8"),
-            resources.GetString("comboBox7.Items9"),
-            resources.GetString("comboBox7.Items10"),
-            resources.GetString("comboBox7.Items11"),
-            resources.GetString("comboBox7.Items12"),
-            resources.GetString("comboBox7.Items13"),
-            resources.GetString("comboBox7.Items14"),
-            resources.GetString("comboBox7.Items15"),
-            resources.GetString("comboBox7.Items16"),
-            resources.GetString("comboBox7.Items17"),
-            resources.GetString("comboBox7.Items18"),
-            resources.GetString("comboBox7.Items19"),
-            resources.GetString("comboBox7.Items20"),
-            resources.GetString("comboBox7.Items21"),
-            resources.GetString("comboBox7.Items22"),
-            resources.GetString("comboBox7.Items23"),
-            resources.GetString("comboBox7.Items24")});
-            resources.ApplyResources(this.comboBox7, "comboBox7");
-            this.comboBox7.Name = "comboBox7";
-            // 
-            // comboBox4
-            // 
-            this.comboBox4.FormattingEnabled = true;
-            this.comboBox4.Items.AddRange(new object[] {
-            resources.GetString("comboBox4.Items"),
-            resources.GetString("comboBox4.Items1"),
-            resources.GetString("comboBox4.Items2"),
-            resources.GetString("comboBox4.Items3"),
-            resources.GetString("comboBox4.Items4"),
-            resources.GetString("comboBox4.Items5"),
-            resources.GetString("comboBox4.Items6"),
-            resources.GetString("comboBox4.Items7"),
-            resources.GetString("comboBox4.Items8"),
-            resources.GetString("comboBox4.Items9")});
-            resources.ApplyResources(this.comboBox4, "comboBox4");
-            this.comboBox4.Name = "comboBox4";
-            // 
-            // comboBox5
-            // 
-            this.comboBox5.FormattingEnabled = true;
-            this.comboBox5.Items.AddRange(new object[] {
-            resources.GetString("comboBox5.Items"),
-            resources.GetString("comboBox5.Items1")});
-            resources.ApplyResources(this.comboBox5, "comboBox5");
-            this.comboBox5.Name = "comboBox5";
-            // 
-            // panel10
-            // 
-            this.panel10.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.panel10.Controls.Add(this.button1);
-            this.panel10.Controls.Add(this.button2);
-            this.panel10.Controls.Add(this.button4);
-            this.panel10.Controls.Add(this.button3);
-            resources.ApplyResources(this.panel10, "panel10");
-            this.panel10.Name = "panel10";
-            // 
-            // button1
-            // 
-            this.button1.BackColor = System.Drawing.Color.DarkGray;
-            this.button1.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.button1.FlatAppearance.BorderSize = 2;
-            resources.ApplyResources(this.button1, "button1");
-            this.button1.Name = "button1";
-            this.button1.UseVisualStyleBackColor = false;
-            // 
-            // button2
-            // 
-            this.button2.BackColor = System.Drawing.Color.DarkGray;
-            this.button2.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.button2.FlatAppearance.BorderSize = 2;
-            resources.ApplyResources(this.button2, "button2");
-            this.button2.Name = "button2";
-            this.button2.UseVisualStyleBackColor = false;
-            // 
-            // button4
-            // 
-            this.button4.BackColor = System.Drawing.Color.DarkGray;
-            this.button4.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.button4.FlatAppearance.BorderSize = 2;
-            resources.ApplyResources(this.button4, "button4");
-            this.button4.Name = "button4";
-            this.button4.UseVisualStyleBackColor = false;
-            // 
-            // button3
-            // 
-            this.button3.BackColor = System.Drawing.Color.DarkGray;
-            this.button3.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.button3.FlatAppearance.BorderSize = 2;
-            resources.ApplyResources(this.button3, "button3");
-            this.button3.Name = "button3";
-            this.button3.UseVisualStyleBackColor = false;
-            // 
-            // groupBox21
-            // 
-            this.groupBox21.BackColor = System.Drawing.SystemColors.ControlLight;
-            resources.ApplyResources(this.groupBox21, "groupBox21");
-            this.groupBox21.Controls.Add(this.panel13);
-            this.groupBox21.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.groupBox21.Name = "groupBox21";
-            this.groupBox21.TabStop = false;
-            // 
-            // panel13
-            // 
-            this.panel13.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panel13.Controls.Add(this.panel14);
-            resources.ApplyResources(this.panel13, "panel13");
-            this.panel13.Name = "panel13";
-            // 
-            // panel14
-            // 
-            this.panel14.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.panel14.Controls.Add(this.button34);
-            this.panel14.Controls.Add(this.button35);
-            this.panel14.Controls.Add(this.button36);
-            this.panel14.Controls.Add(this.label63);
-            this.panel14.Controls.Add(this.textBox24);
-            this.panel14.Controls.Add(this.textBox25);
-            this.panel14.Controls.Add(this.textBox26);
-            this.panel14.Controls.Add(this.label64);
-            this.panel14.Controls.Add(this.button37);
-            this.panel14.Controls.Add(this.label65);
-            this.panel14.Controls.Add(this.textBox27);
-            this.panel14.Controls.Add(this.label66);
-            this.panel14.Controls.Add(this.textBox28);
-            this.panel14.Controls.Add(this.label67);
-            this.panel14.Controls.Add(this.label68);
-            this.panel14.Controls.Add(this.label69);
-            resources.ApplyResources(this.panel14, "panel14");
-            this.panel14.Name = "panel14";
-            // 
-            // button34
-            // 
-            this.button34.BackColor = System.Drawing.Color.DarkGray;
-            this.button34.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.button34.FlatAppearance.BorderSize = 2;
-            resources.ApplyResources(this.button34, "button34");
-            this.button34.Name = "button34";
-            this.button34.UseVisualStyleBackColor = false;
-            // 
-            // button35
-            // 
-            this.button35.BackColor = System.Drawing.Color.DarkGray;
-            this.button35.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.button35.FlatAppearance.BorderSize = 2;
-            resources.ApplyResources(this.button35, "button35");
-            this.button35.Name = "button35";
-            this.button35.UseVisualStyleBackColor = false;
-            // 
-            // button36
-            // 
-            this.button36.BackColor = System.Drawing.Color.DarkGray;
-            this.button36.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.button36.FlatAppearance.BorderSize = 2;
-            resources.ApplyResources(this.button36, "button36");
-            this.button36.Name = "button36";
-            this.button36.UseVisualStyleBackColor = false;
-            // 
-            // label63
-            // 
-            resources.ApplyResources(this.label63, "label63");
-            this.label63.Name = "label63";
-            // 
-            // textBox24
-            // 
-            this.textBox24.BackColor = System.Drawing.Color.OrangeRed;
-            this.textBox24.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            resources.ApplyResources(this.textBox24, "textBox24");
-            this.textBox24.Name = "textBox24";
-            // 
-            // textBox25
-            // 
-            this.textBox25.BackColor = System.Drawing.Color.ForestGreen;
-            this.textBox25.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            resources.ApplyResources(this.textBox25, "textBox25");
-            this.textBox25.Name = "textBox25";
-            // 
-            // textBox26
-            // 
-            this.textBox26.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.textBox26.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            resources.ApplyResources(this.textBox26, "textBox26");
-            this.textBox26.Name = "textBox26";
-            // 
-            // label64
-            // 
-            resources.ApplyResources(this.label64, "label64");
-            this.label64.Name = "label64";
-            // 
-            // button37
-            // 
-            this.button37.BackColor = System.Drawing.Color.DarkGray;
-            this.button37.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.button37.FlatAppearance.BorderSize = 2;
-            resources.ApplyResources(this.button37, "button37");
-            this.button37.Name = "button37";
-            this.button37.UseVisualStyleBackColor = false;
-            // 
-            // label65
-            // 
-            resources.ApplyResources(this.label65, "label65");
-            this.label65.Name = "label65";
-            // 
-            // textBox27
-            // 
-            this.textBox27.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.textBox27.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            resources.ApplyResources(this.textBox27, "textBox27");
-            this.textBox27.Name = "textBox27";
-            // 
-            // label66
-            // 
-            resources.ApplyResources(this.label66, "label66");
-            this.label66.Name = "label66";
-            // 
-            // textBox28
-            // 
-            this.textBox28.BackColor = System.Drawing.Color.OrangeRed;
-            this.textBox28.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            resources.ApplyResources(this.textBox28, "textBox28");
-            this.textBox28.Name = "textBox28";
-            // 
-            // label67
-            // 
-            resources.ApplyResources(this.label67, "label67");
-            this.label67.Name = "label67";
-            // 
-            // label68
-            // 
-            resources.ApplyResources(this.label68, "label68");
-            this.label68.Name = "label68";
-            // 
-            // label69
-            // 
-            resources.ApplyResources(this.label69, "label69");
-            this.label69.Name = "label69";
-            // 
-            // tabPage10
-            // 
-            this.tabPage10.BackColor = System.Drawing.Color.LightGoldenrodYellow;
-            resources.ApplyResources(this.tabPage10, "tabPage10");
-            this.tabPage10.Name = "tabPage10";
-            // 
-            // tabPage5
-            // 
-            this.tabPage5.BackColor = System.Drawing.SystemColors.Control;
-            this.tabPage5.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.tabPage5.Controls.Add(this.tableLayoutPanel25);
-            resources.ApplyResources(this.tabPage5, "tabPage5");
-            this.tabPage5.Name = "tabPage5";
-            // 
-            // tableLayoutPanel25
-            // 
-            resources.ApplyResources(this.tableLayoutPanel25, "tableLayoutPanel25");
-            this.tableLayoutPanel25.Controls.Add(this.groupBox23, 0, 0);
-            this.tableLayoutPanel25.Controls.Add(this.groupBox22, 0, 0);
-            this.tableLayoutPanel25.Name = "tableLayoutPanel25";
-            // 
-            // groupBox23
-            // 
-            this.groupBox23.BackColor = System.Drawing.SystemColors.ControlLight;
-            resources.ApplyResources(this.groupBox23, "groupBox23");
-            this.groupBox23.Controls.Add(this.panel17);
-            this.groupBox23.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.groupBox23.Name = "groupBox23";
-            this.groupBox23.TabStop = false;
-            // 
-            // panel17
-            // 
-            this.panel17.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panel17.Controls.Add(this.panel18);
-            resources.ApplyResources(this.panel17, "panel17");
-            this.panel17.Name = "panel17";
-            // 
-            // panel18
-            // 
-            this.panel18.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.panel18.Controls.Add(this.textBox35);
-            this.panel18.Controls.Add(this.textBox36);
-            this.panel18.Controls.Add(this.button49);
-            this.panel18.Controls.Add(this.button50);
-            this.panel18.Controls.Add(this.button51);
-            this.panel18.Controls.Add(this.textBox37);
-            this.panel18.Controls.Add(this.label76);
-            this.panel18.Controls.Add(this.button52);
-            this.panel18.Controls.Add(this.comboBox2);
-            this.panel18.Controls.Add(this.textBox38);
-            this.panel18.Controls.Add(this.label77);
-            this.panel18.Controls.Add(this.button53);
-            this.panel18.Controls.Add(this.button54);
-            this.panel18.Controls.Add(this.label78);
-            this.panel18.Controls.Add(this.button55);
-            this.panel18.Controls.Add(this.button56);
-            this.panel18.Controls.Add(this.textBox39);
-            this.panel18.Controls.Add(this.button57);
-            this.panel18.Controls.Add(this.button58);
-            this.panel18.Controls.Add(this.label79);
-            this.panel18.Controls.Add(this.textBox40);
-            this.panel18.Controls.Add(this.label80);
-            this.panel18.Controls.Add(this.button59);
-            this.panel18.Controls.Add(this.label81);
-            resources.ApplyResources(this.panel18, "panel18");
-            this.panel18.Name = "panel18";
-            // 
-            // textBox35
-            // 
-            this.textBox35.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.textBox35.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            resources.ApplyResources(this.textBox35, "textBox35");
-            this.textBox35.Name = "textBox35";
-            this.textBox35.ReadOnly = true;
-            // 
-            // textBox36
-            // 
-            this.textBox36.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.textBox36.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            resources.ApplyResources(this.textBox36, "textBox36");
-            this.textBox36.Name = "textBox36";
-            this.textBox36.ReadOnly = true;
-            // 
-            // button49
-            // 
-            this.button49.BackColor = System.Drawing.Color.DarkGray;
-            resources.ApplyResources(this.button49, "button49");
-            this.button49.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.button49.FlatAppearance.BorderSize = 2;
-            this.button49.Name = "button49";
-            this.button49.UseVisualStyleBackColor = false;
-            // 
-            // button50
-            // 
-            this.button50.BackColor = System.Drawing.Color.DarkGray;
-            this.button50.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.button50.FlatAppearance.BorderSize = 2;
-            resources.ApplyResources(this.button50, "button50");
-            this.button50.Name = "button50";
-            this.button50.UseVisualStyleBackColor = false;
-            // 
-            // button51
-            // 
-            this.button51.BackColor = System.Drawing.Color.DarkGray;
-            this.button51.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.button51.FlatAppearance.BorderSize = 2;
-            resources.ApplyResources(this.button51, "button51");
-            this.button51.Name = "button51";
-            this.button51.UseVisualStyleBackColor = false;
-            // 
-            // textBox37
-            // 
-            this.textBox37.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.textBox37.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            resources.ApplyResources(this.textBox37, "textBox37");
-            this.textBox37.Name = "textBox37";
-            this.textBox37.ReadOnly = true;
-            // 
-            // label76
-            // 
-            resources.ApplyResources(this.label76, "label76");
-            this.label76.Name = "label76";
-            // 
-            // button52
-            // 
-            this.button52.BackColor = System.Drawing.Color.DarkGray;
-            this.button52.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.button52.FlatAppearance.BorderSize = 2;
-            resources.ApplyResources(this.button52, "button52");
-            this.button52.Name = "button52";
-            this.button52.UseVisualStyleBackColor = false;
-            // 
-            // comboBox2
-            // 
-            this.comboBox2.FormattingEnabled = true;
-            this.comboBox2.Items.AddRange(new object[] {
-            resources.GetString("comboBox2.Items"),
-            resources.GetString("comboBox2.Items1"),
-            resources.GetString("comboBox2.Items2"),
-            resources.GetString("comboBox2.Items3"),
-            resources.GetString("comboBox2.Items4"),
-            resources.GetString("comboBox2.Items5"),
-            resources.GetString("comboBox2.Items6"),
-            resources.GetString("comboBox2.Items7"),
-            resources.GetString("comboBox2.Items8"),
-            resources.GetString("comboBox2.Items9")});
-            resources.ApplyResources(this.comboBox2, "comboBox2");
-            this.comboBox2.Name = "comboBox2";
-            // 
-            // textBox38
-            // 
-            this.textBox38.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.textBox38.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            resources.ApplyResources(this.textBox38, "textBox38");
-            this.textBox38.Name = "textBox38";
-            this.textBox38.ReadOnly = true;
-            // 
-            // label77
-            // 
-            resources.ApplyResources(this.label77, "label77");
-            this.label77.Name = "label77";
-            // 
-            // button53
-            // 
-            this.button53.BackColor = System.Drawing.Color.DarkGray;
-            this.button53.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.button53.FlatAppearance.BorderSize = 2;
-            resources.ApplyResources(this.button53, "button53");
-            this.button53.Name = "button53";
-            this.button53.UseVisualStyleBackColor = false;
-            // 
-            // button54
-            // 
-            this.button54.BackColor = System.Drawing.Color.DarkGray;
-            resources.ApplyResources(this.button54, "button54");
-            this.button54.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.button54.FlatAppearance.BorderSize = 2;
-            this.button54.Name = "button54";
-            this.button54.UseVisualStyleBackColor = false;
-            // 
-            // label78
-            // 
-            resources.ApplyResources(this.label78, "label78");
-            this.label78.Name = "label78";
-            // 
-            // button55
-            // 
-            this.button55.BackColor = System.Drawing.Color.DarkGray;
-            resources.ApplyResources(this.button55, "button55");
-            this.button55.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.button55.FlatAppearance.BorderSize = 2;
-            this.button55.Name = "button55";
-            this.button55.UseVisualStyleBackColor = false;
-            // 
-            // button56
-            // 
-            this.button56.BackColor = System.Drawing.Color.DarkGray;
-            resources.ApplyResources(this.button56, "button56");
-            this.button56.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.button56.FlatAppearance.BorderSize = 2;
-            this.button56.Name = "button56";
-            this.button56.UseVisualStyleBackColor = false;
-            // 
-            // textBox39
-            // 
-            this.textBox39.BackColor = System.Drawing.Color.Green;
-            this.textBox39.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            resources.ApplyResources(this.textBox39, "textBox39");
-            this.textBox39.Name = "textBox39";
-            this.textBox39.ReadOnly = true;
-            // 
-            // button57
-            // 
-            this.button57.BackColor = System.Drawing.Color.DarkGray;
-            this.button57.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.button57.FlatAppearance.BorderSize = 2;
-            resources.ApplyResources(this.button57, "button57");
-            this.button57.Name = "button57";
-            this.button57.UseVisualStyleBackColor = false;
-            // 
-            // button58
-            // 
-            this.button58.BackColor = System.Drawing.Color.DarkGray;
-            this.button58.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.button58.FlatAppearance.BorderSize = 2;
-            resources.ApplyResources(this.button58, "button58");
-            this.button58.Name = "button58";
-            this.button58.UseVisualStyleBackColor = false;
-            // 
-            // label79
-            // 
-            resources.ApplyResources(this.label79, "label79");
-            this.label79.Name = "label79";
-            // 
-            // textBox40
-            // 
-            this.textBox40.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.textBox40.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            resources.ApplyResources(this.textBox40, "textBox40");
-            this.textBox40.Name = "textBox40";
-            this.textBox40.ReadOnly = true;
-            // 
-            // label80
-            // 
-            resources.ApplyResources(this.label80, "label80");
-            this.label80.Name = "label80";
-            // 
-            // button59
-            // 
-            this.button59.BackColor = System.Drawing.Color.DarkGray;
-            resources.ApplyResources(this.button59, "button59");
-            this.button59.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.button59.FlatAppearance.BorderSize = 2;
-            this.button59.Name = "button59";
-            this.button59.UseVisualStyleBackColor = false;
-            // 
-            // label81
-            // 
-            resources.ApplyResources(this.label81, "label81");
-            this.label81.Name = "label81";
-            // 
-            // groupBox22
-            // 
-            this.groupBox22.BackColor = System.Drawing.SystemColors.ControlLight;
-            resources.ApplyResources(this.groupBox22, "groupBox22");
-            this.groupBox22.Controls.Add(this.panel15);
-            this.groupBox22.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.groupBox22.Name = "groupBox22";
-            this.groupBox22.TabStop = false;
-            // 
-            // panel15
-            // 
-            this.panel15.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panel15.Controls.Add(this.panel16);
-            resources.ApplyResources(this.panel15, "panel15");
-            this.panel15.Name = "panel15";
-            // 
-            // panel16
-            // 
-            this.panel16.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.panel16.Controls.Add(this.button38);
-            this.panel16.Controls.Add(this.button39);
-            this.panel16.Controls.Add(this.button40);
-            this.panel16.Controls.Add(this.textBox29);
-            this.panel16.Controls.Add(this.label70);
-            this.panel16.Controls.Add(this.button41);
-            this.panel16.Controls.Add(this.comboBox1);
-            this.panel16.Controls.Add(this.textBox30);
-            this.panel16.Controls.Add(this.label71);
-            this.panel16.Controls.Add(this.button42);
-            this.panel16.Controls.Add(this.button43);
-            this.panel16.Controls.Add(this.label72);
-            this.panel16.Controls.Add(this.textBox31);
-            this.panel16.Controls.Add(this.button44);
-            this.panel16.Controls.Add(this.button45);
-            this.panel16.Controls.Add(this.textBox32);
-            this.panel16.Controls.Add(this.button46);
-            this.panel16.Controls.Add(this.button47);
-            this.panel16.Controls.Add(this.label73);
-            this.panel16.Controls.Add(this.textBox33);
-            this.panel16.Controls.Add(this.label74);
-            this.panel16.Controls.Add(this.button48);
-            this.panel16.Controls.Add(this.label75);
-            this.panel16.Controls.Add(this.textBox34);
-            resources.ApplyResources(this.panel16, "panel16");
-            this.panel16.Name = "panel16";
-            // 
-            // button38
-            // 
-            this.button38.BackColor = System.Drawing.Color.DarkGray;
-            resources.ApplyResources(this.button38, "button38");
-            this.button38.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.button38.FlatAppearance.BorderSize = 2;
-            this.button38.Name = "button38";
-            this.button38.UseVisualStyleBackColor = false;
-            // 
-            // button39
-            // 
-            this.button39.BackColor = System.Drawing.Color.DarkGray;
-            this.button39.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.button39.FlatAppearance.BorderSize = 2;
-            resources.ApplyResources(this.button39, "button39");
-            this.button39.Name = "button39";
-            this.button39.UseVisualStyleBackColor = false;
-            // 
-            // button40
-            // 
-            this.button40.BackColor = System.Drawing.Color.DarkGray;
-            this.button40.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.button40.FlatAppearance.BorderSize = 2;
-            resources.ApplyResources(this.button40, "button40");
-            this.button40.Name = "button40";
-            this.button40.UseVisualStyleBackColor = false;
-            // 
-            // textBox29
-            // 
-            this.textBox29.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.textBox29.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            resources.ApplyResources(this.textBox29, "textBox29");
-            this.textBox29.Name = "textBox29";
-            this.textBox29.ReadOnly = true;
-            // 
-            // label70
-            // 
-            resources.ApplyResources(this.label70, "label70");
-            this.label70.Name = "label70";
-            // 
-            // button41
-            // 
-            this.button41.BackColor = System.Drawing.Color.DarkGray;
-            this.button41.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.button41.FlatAppearance.BorderSize = 2;
-            resources.ApplyResources(this.button41, "button41");
-            this.button41.Name = "button41";
-            this.button41.UseVisualStyleBackColor = false;
-            // 
-            // comboBox1
-            // 
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Items.AddRange(new object[] {
-            resources.GetString("comboBox1.Items"),
-            resources.GetString("comboBox1.Items1"),
-            resources.GetString("comboBox1.Items2"),
-            resources.GetString("comboBox1.Items3"),
-            resources.GetString("comboBox1.Items4"),
-            resources.GetString("comboBox1.Items5"),
-            resources.GetString("comboBox1.Items6"),
-            resources.GetString("comboBox1.Items7"),
-            resources.GetString("comboBox1.Items8"),
-            resources.GetString("comboBox1.Items9")});
-            resources.ApplyResources(this.comboBox1, "comboBox1");
-            this.comboBox1.Name = "comboBox1";
-            // 
-            // textBox30
-            // 
-            this.textBox30.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.textBox30.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            resources.ApplyResources(this.textBox30, "textBox30");
-            this.textBox30.Name = "textBox30";
-            this.textBox30.ReadOnly = true;
-            // 
-            // label71
-            // 
-            resources.ApplyResources(this.label71, "label71");
-            this.label71.Name = "label71";
-            // 
-            // button42
-            // 
-            this.button42.BackColor = System.Drawing.Color.DarkGray;
-            resources.ApplyResources(this.button42, "button42");
-            this.button42.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.button42.FlatAppearance.BorderSize = 2;
-            this.button42.Name = "button42";
-            this.button42.UseVisualStyleBackColor = false;
-            // 
-            // button43
-            // 
-            this.button43.BackColor = System.Drawing.Color.DarkGray;
-            this.button43.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.button43.FlatAppearance.BorderSize = 2;
-            resources.ApplyResources(this.button43, "button43");
-            this.button43.Name = "button43";
-            this.button43.UseVisualStyleBackColor = false;
-            // 
-            // label72
-            // 
-            resources.ApplyResources(this.label72, "label72");
-            this.label72.Name = "label72";
-            // 
-            // textBox31
-            // 
-            this.textBox31.BackColor = System.Drawing.Color.OrangeRed;
-            this.textBox31.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            resources.ApplyResources(this.textBox31, "textBox31");
-            this.textBox31.Name = "textBox31";
-            this.textBox31.ReadOnly = true;
-            // 
-            // button44
-            // 
-            this.button44.BackColor = System.Drawing.Color.DarkGray;
-            resources.ApplyResources(this.button44, "button44");
-            this.button44.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.button44.FlatAppearance.BorderSize = 2;
-            this.button44.Name = "button44";
-            this.button44.UseVisualStyleBackColor = false;
-            // 
-            // button45
-            // 
-            this.button45.BackColor = System.Drawing.Color.DarkGray;
-            this.button45.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.button45.FlatAppearance.BorderSize = 2;
-            resources.ApplyResources(this.button45, "button45");
-            this.button45.Name = "button45";
-            this.button45.UseVisualStyleBackColor = false;
-            // 
-            // textBox32
-            // 
-            this.textBox32.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.textBox32.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            resources.ApplyResources(this.textBox32, "textBox32");
-            this.textBox32.Name = "textBox32";
-            this.textBox32.ReadOnly = true;
-            // 
-            // button46
-            // 
-            this.button46.BackColor = System.Drawing.Color.DarkGray;
-            this.button46.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.button46.FlatAppearance.BorderSize = 2;
-            resources.ApplyResources(this.button46, "button46");
-            this.button46.Name = "button46";
-            this.button46.UseVisualStyleBackColor = false;
-            // 
-            // button47
-            // 
-            this.button47.BackColor = System.Drawing.Color.DarkGray;
-            this.button47.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.button47.FlatAppearance.BorderSize = 2;
-            resources.ApplyResources(this.button47, "button47");
-            this.button47.Name = "button47";
-            this.button47.UseVisualStyleBackColor = false;
-            // 
-            // label73
-            // 
-            resources.ApplyResources(this.label73, "label73");
-            this.label73.Name = "label73";
-            // 
-            // textBox33
-            // 
-            this.textBox33.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.textBox33.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            resources.ApplyResources(this.textBox33, "textBox33");
-            this.textBox33.Name = "textBox33";
-            this.textBox33.ReadOnly = true;
-            // 
-            // label74
-            // 
-            resources.ApplyResources(this.label74, "label74");
-            this.label74.Name = "label74";
-            // 
-            // button48
-            // 
-            this.button48.BackColor = System.Drawing.Color.DarkGray;
-            resources.ApplyResources(this.button48, "button48");
-            this.button48.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.button48.FlatAppearance.BorderSize = 2;
-            this.button48.Name = "button48";
-            this.button48.UseVisualStyleBackColor = false;
-            // 
-            // label75
-            // 
-            resources.ApplyResources(this.label75, "label75");
-            this.label75.Name = "label75";
-            // 
-            // textBox34
-            // 
-            this.textBox34.BackColor = System.Drawing.Color.OrangeRed;
-            this.textBox34.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            resources.ApplyResources(this.textBox34, "textBox34");
-            this.textBox34.Name = "textBox34";
-            this.textBox34.ReadOnly = true;
+            this.dgvLstatus.AllowUserToDeleteRows = false;
+            this.dgvLstatus.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.dgvLstatus.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvLstatus.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.dataGridViewTextBoxColumn1,
+            this.dataGridViewTextBoxColumn2,
+            this.dataGridViewTextBoxColumn3,
+            this.dataGridViewTextBoxColumn14,
+            this.dataGridViewTextBoxColumn16,
+            this.dataGridViewTextBoxColumn17,
+            this.dataGridViewTextBoxColumn20,
+            this.dataGridViewTextBoxColumn21,
+            this.dataGridViewTextBoxColumn30,
+            this.dataGridViewTextBoxColumn32,
+            this.dataGridViewTextBoxColumn34,
+            this.dataGridViewTextBoxColumn36,
+            this.dataGridViewTextBoxColumn40,
+            this.dataGridViewTextBoxColumn41,
+            this.dataGridViewTextBoxColumn42,
+            this.dataGridViewTextBoxColumn43,
+            this.dataGridViewTextBoxColumn44,
+            this.dataGridViewTextBoxColumn45,
+            this.dataGridViewTextBoxColumn46,
+            this.dataGridViewTextBoxColumn47,
+            this.dataGridViewTextBoxColumn48});
+            resources.ApplyResources(this.dgvLstatus, "dgvLstatus");
+            this.dgvLstatus.Name = "dgvLstatus";
+            this.dgvLstatus.ReadOnly = true;
+            this.dgvLstatus.RowTemplate.Height = 24;
+            // 
+            // dataGridViewTextBoxColumn1
+            // 
+            resources.ApplyResources(this.dataGridViewTextBoxColumn1, "dataGridViewTextBoxColumn1");
+            this.dataGridViewTextBoxColumn1.Name = "dataGridViewTextBoxColumn1";
+            this.dataGridViewTextBoxColumn1.ReadOnly = true;
+            // 
+            // dataGridViewTextBoxColumn2
+            // 
+            resources.ApplyResources(this.dataGridViewTextBoxColumn2, "dataGridViewTextBoxColumn2");
+            this.dataGridViewTextBoxColumn2.Name = "dataGridViewTextBoxColumn2";
+            this.dataGridViewTextBoxColumn2.ReadOnly = true;
+            // 
+            // dataGridViewTextBoxColumn3
+            // 
+            resources.ApplyResources(this.dataGridViewTextBoxColumn3, "dataGridViewTextBoxColumn3");
+            this.dataGridViewTextBoxColumn3.Name = "dataGridViewTextBoxColumn3";
+            this.dataGridViewTextBoxColumn3.ReadOnly = true;
+            // 
+            // dataGridViewTextBoxColumn14
+            // 
+            resources.ApplyResources(this.dataGridViewTextBoxColumn14, "dataGridViewTextBoxColumn14");
+            this.dataGridViewTextBoxColumn14.Name = "dataGridViewTextBoxColumn14";
+            this.dataGridViewTextBoxColumn14.ReadOnly = true;
+            // 
+            // dataGridViewTextBoxColumn16
+            // 
+            resources.ApplyResources(this.dataGridViewTextBoxColumn16, "dataGridViewTextBoxColumn16");
+            this.dataGridViewTextBoxColumn16.Name = "dataGridViewTextBoxColumn16";
+            this.dataGridViewTextBoxColumn16.ReadOnly = true;
+            // 
+            // dataGridViewTextBoxColumn17
+            // 
+            resources.ApplyResources(this.dataGridViewTextBoxColumn17, "dataGridViewTextBoxColumn17");
+            this.dataGridViewTextBoxColumn17.Name = "dataGridViewTextBoxColumn17";
+            this.dataGridViewTextBoxColumn17.ReadOnly = true;
+            // 
+            // dataGridViewTextBoxColumn20
+            // 
+            resources.ApplyResources(this.dataGridViewTextBoxColumn20, "dataGridViewTextBoxColumn20");
+            this.dataGridViewTextBoxColumn20.Name = "dataGridViewTextBoxColumn20";
+            this.dataGridViewTextBoxColumn20.ReadOnly = true;
+            // 
+            // dataGridViewTextBoxColumn21
+            // 
+            resources.ApplyResources(this.dataGridViewTextBoxColumn21, "dataGridViewTextBoxColumn21");
+            this.dataGridViewTextBoxColumn21.Name = "dataGridViewTextBoxColumn21";
+            this.dataGridViewTextBoxColumn21.ReadOnly = true;
+            // 
+            // dataGridViewTextBoxColumn30
+            // 
+            resources.ApplyResources(this.dataGridViewTextBoxColumn30, "dataGridViewTextBoxColumn30");
+            this.dataGridViewTextBoxColumn30.Name = "dataGridViewTextBoxColumn30";
+            this.dataGridViewTextBoxColumn30.ReadOnly = true;
+            // 
+            // dataGridViewTextBoxColumn32
+            // 
+            resources.ApplyResources(this.dataGridViewTextBoxColumn32, "dataGridViewTextBoxColumn32");
+            this.dataGridViewTextBoxColumn32.Name = "dataGridViewTextBoxColumn32";
+            this.dataGridViewTextBoxColumn32.ReadOnly = true;
+            // 
+            // dataGridViewTextBoxColumn34
+            // 
+            resources.ApplyResources(this.dataGridViewTextBoxColumn34, "dataGridViewTextBoxColumn34");
+            this.dataGridViewTextBoxColumn34.Name = "dataGridViewTextBoxColumn34";
+            this.dataGridViewTextBoxColumn34.ReadOnly = true;
+            // 
+            // dataGridViewTextBoxColumn36
+            // 
+            resources.ApplyResources(this.dataGridViewTextBoxColumn36, "dataGridViewTextBoxColumn36");
+            this.dataGridViewTextBoxColumn36.Name = "dataGridViewTextBoxColumn36";
+            this.dataGridViewTextBoxColumn36.ReadOnly = true;
+            // 
+            // dataGridViewTextBoxColumn40
+            // 
+            resources.ApplyResources(this.dataGridViewTextBoxColumn40, "dataGridViewTextBoxColumn40");
+            this.dataGridViewTextBoxColumn40.Name = "dataGridViewTextBoxColumn40";
+            this.dataGridViewTextBoxColumn40.ReadOnly = true;
+            // 
+            // dataGridViewTextBoxColumn41
+            // 
+            resources.ApplyResources(this.dataGridViewTextBoxColumn41, "dataGridViewTextBoxColumn41");
+            this.dataGridViewTextBoxColumn41.Name = "dataGridViewTextBoxColumn41";
+            this.dataGridViewTextBoxColumn41.ReadOnly = true;
+            // 
+            // dataGridViewTextBoxColumn42
+            // 
+            resources.ApplyResources(this.dataGridViewTextBoxColumn42, "dataGridViewTextBoxColumn42");
+            this.dataGridViewTextBoxColumn42.Name = "dataGridViewTextBoxColumn42";
+            this.dataGridViewTextBoxColumn42.ReadOnly = true;
+            // 
+            // dataGridViewTextBoxColumn43
+            // 
+            resources.ApplyResources(this.dataGridViewTextBoxColumn43, "dataGridViewTextBoxColumn43");
+            this.dataGridViewTextBoxColumn43.Name = "dataGridViewTextBoxColumn43";
+            this.dataGridViewTextBoxColumn43.ReadOnly = true;
+            // 
+            // dataGridViewTextBoxColumn44
+            // 
+            resources.ApplyResources(this.dataGridViewTextBoxColumn44, "dataGridViewTextBoxColumn44");
+            this.dataGridViewTextBoxColumn44.Name = "dataGridViewTextBoxColumn44";
+            this.dataGridViewTextBoxColumn44.ReadOnly = true;
+            // 
+            // dataGridViewTextBoxColumn45
+            // 
+            resources.ApplyResources(this.dataGridViewTextBoxColumn45, "dataGridViewTextBoxColumn45");
+            this.dataGridViewTextBoxColumn45.Name = "dataGridViewTextBoxColumn45";
+            this.dataGridViewTextBoxColumn45.ReadOnly = true;
+            // 
+            // dataGridViewTextBoxColumn46
+            // 
+            resources.ApplyResources(this.dataGridViewTextBoxColumn46, "dataGridViewTextBoxColumn46");
+            this.dataGridViewTextBoxColumn46.Name = "dataGridViewTextBoxColumn46";
+            this.dataGridViewTextBoxColumn46.ReadOnly = true;
+            // 
+            // dataGridViewTextBoxColumn47
+            // 
+            resources.ApplyResources(this.dataGridViewTextBoxColumn47, "dataGridViewTextBoxColumn47");
+            this.dataGridViewTextBoxColumn47.Name = "dataGridViewTextBoxColumn47";
+            this.dataGridViewTextBoxColumn47.ReadOnly = true;
+            // 
+            // dataGridViewTextBoxColumn48
+            // 
+            resources.ApplyResources(this.dataGridViewTextBoxColumn48, "dataGridViewTextBoxColumn48");
+            this.dataGridViewTextBoxColumn48.Name = "dataGridViewTextBoxColumn48";
+            this.dataGridViewTextBoxColumn48.ReadOnly = true;
+            // 
+            // dgvAstatus
+            // 
+            this.dgvAstatus.AllowUserToDeleteRows = false;
+            this.dgvAstatus.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.dgvAstatus.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvAstatus.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.dataGridViewTextBoxColumn49,
+            this.dataGridViewTextBoxColumn50,
+            this.dataGridViewTextBoxColumn51,
+            this.dataGridViewTextBoxColumn52,
+            this.dataGridViewTextBoxColumn53,
+            this.dataGridViewTextBoxColumn54,
+            this.dataGridViewTextBoxColumn55,
+            this.dataGridViewTextBoxColumn56,
+            this.dataGridViewTextBoxColumn57,
+            this.dataGridViewTextBoxColumn58,
+            this.dataGridViewTextBoxColumn59,
+            this.dataGridViewTextBoxColumn60,
+            this.dataGridViewTextBoxColumn61,
+            this.dataGridViewTextBoxColumn62,
+            this.dataGridViewTextBoxColumn63,
+            this.dataGridViewTextBoxColumn64,
+            this.dataGridViewTextBoxColumn65,
+            this.dataGridViewTextBoxColumn66,
+            this.dataGridViewTextBoxColumn67,
+            this.dataGridViewTextBoxColumn68,
+            this.dataGridViewTextBoxColumn69,
+            this.dataGridViewTextBoxColumn70,
+            this.dataGridViewTextBoxColumn71,
+            this.dataGridViewTextBoxColumn72,
+            this.dataGridViewTextBoxColumn73,
+            this.dataGridViewTextBoxColumn74,
+            this.dataGridViewTextBoxColumn75,
+            this.dataGridViewTextBoxColumn76,
+            this.dataGridViewTextBoxColumn77,
+            this.dataGridViewTextBoxColumn78,
+            this.dataGridViewTextBoxColumn79,
+            this.dataGridViewTextBoxColumn80,
+            this.dataGridViewTextBoxColumn81});
+            resources.ApplyResources(this.dgvAstatus, "dgvAstatus");
+            this.dgvAstatus.Name = "dgvAstatus";
+            this.dgvAstatus.ReadOnly = true;
+            this.dgvAstatus.RowTemplate.Height = 24;
+            // 
+            // dataGridViewTextBoxColumn49
+            // 
+            dataGridViewCellStyle35.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            this.dataGridViewTextBoxColumn49.DefaultCellStyle = dataGridViewCellStyle35;
+            resources.ApplyResources(this.dataGridViewTextBoxColumn49, "dataGridViewTextBoxColumn49");
+            this.dataGridViewTextBoxColumn49.Name = "dataGridViewTextBoxColumn49";
+            this.dataGridViewTextBoxColumn49.ReadOnly = true;
+            // 
+            // dataGridViewTextBoxColumn50
+            // 
+            dataGridViewCellStyle36.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            this.dataGridViewTextBoxColumn50.DefaultCellStyle = dataGridViewCellStyle36;
+            resources.ApplyResources(this.dataGridViewTextBoxColumn50, "dataGridViewTextBoxColumn50");
+            this.dataGridViewTextBoxColumn50.Name = "dataGridViewTextBoxColumn50";
+            this.dataGridViewTextBoxColumn50.ReadOnly = true;
+            // 
+            // dataGridViewTextBoxColumn51
+            // 
+            dataGridViewCellStyle37.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            this.dataGridViewTextBoxColumn51.DefaultCellStyle = dataGridViewCellStyle37;
+            resources.ApplyResources(this.dataGridViewTextBoxColumn51, "dataGridViewTextBoxColumn51");
+            this.dataGridViewTextBoxColumn51.Name = "dataGridViewTextBoxColumn51";
+            this.dataGridViewTextBoxColumn51.ReadOnly = true;
+            // 
+            // dataGridViewTextBoxColumn52
+            // 
+            dataGridViewCellStyle38.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            this.dataGridViewTextBoxColumn52.DefaultCellStyle = dataGridViewCellStyle38;
+            resources.ApplyResources(this.dataGridViewTextBoxColumn52, "dataGridViewTextBoxColumn52");
+            this.dataGridViewTextBoxColumn52.Name = "dataGridViewTextBoxColumn52";
+            this.dataGridViewTextBoxColumn52.ReadOnly = true;
+            // 
+            // dataGridViewTextBoxColumn53
+            // 
+            dataGridViewCellStyle39.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            this.dataGridViewTextBoxColumn53.DefaultCellStyle = dataGridViewCellStyle39;
+            resources.ApplyResources(this.dataGridViewTextBoxColumn53, "dataGridViewTextBoxColumn53");
+            this.dataGridViewTextBoxColumn53.Name = "dataGridViewTextBoxColumn53";
+            this.dataGridViewTextBoxColumn53.ReadOnly = true;
+            // 
+            // dataGridViewTextBoxColumn54
+            // 
+            dataGridViewCellStyle40.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            this.dataGridViewTextBoxColumn54.DefaultCellStyle = dataGridViewCellStyle40;
+            resources.ApplyResources(this.dataGridViewTextBoxColumn54, "dataGridViewTextBoxColumn54");
+            this.dataGridViewTextBoxColumn54.Name = "dataGridViewTextBoxColumn54";
+            this.dataGridViewTextBoxColumn54.ReadOnly = true;
+            // 
+            // dataGridViewTextBoxColumn55
+            // 
+            dataGridViewCellStyle41.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            this.dataGridViewTextBoxColumn55.DefaultCellStyle = dataGridViewCellStyle41;
+            resources.ApplyResources(this.dataGridViewTextBoxColumn55, "dataGridViewTextBoxColumn55");
+            this.dataGridViewTextBoxColumn55.Name = "dataGridViewTextBoxColumn55";
+            this.dataGridViewTextBoxColumn55.ReadOnly = true;
+            // 
+            // dataGridViewTextBoxColumn56
+            // 
+            dataGridViewCellStyle42.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            this.dataGridViewTextBoxColumn56.DefaultCellStyle = dataGridViewCellStyle42;
+            resources.ApplyResources(this.dataGridViewTextBoxColumn56, "dataGridViewTextBoxColumn56");
+            this.dataGridViewTextBoxColumn56.Name = "dataGridViewTextBoxColumn56";
+            this.dataGridViewTextBoxColumn56.ReadOnly = true;
+            // 
+            // dataGridViewTextBoxColumn57
+            // 
+            dataGridViewCellStyle43.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            this.dataGridViewTextBoxColumn57.DefaultCellStyle = dataGridViewCellStyle43;
+            resources.ApplyResources(this.dataGridViewTextBoxColumn57, "dataGridViewTextBoxColumn57");
+            this.dataGridViewTextBoxColumn57.Name = "dataGridViewTextBoxColumn57";
+            this.dataGridViewTextBoxColumn57.ReadOnly = true;
+            // 
+            // dataGridViewTextBoxColumn58
+            // 
+            dataGridViewCellStyle44.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            this.dataGridViewTextBoxColumn58.DefaultCellStyle = dataGridViewCellStyle44;
+            resources.ApplyResources(this.dataGridViewTextBoxColumn58, "dataGridViewTextBoxColumn58");
+            this.dataGridViewTextBoxColumn58.Name = "dataGridViewTextBoxColumn58";
+            this.dataGridViewTextBoxColumn58.ReadOnly = true;
+            // 
+            // dataGridViewTextBoxColumn59
+            // 
+            dataGridViewCellStyle45.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            this.dataGridViewTextBoxColumn59.DefaultCellStyle = dataGridViewCellStyle45;
+            resources.ApplyResources(this.dataGridViewTextBoxColumn59, "dataGridViewTextBoxColumn59");
+            this.dataGridViewTextBoxColumn59.Name = "dataGridViewTextBoxColumn59";
+            this.dataGridViewTextBoxColumn59.ReadOnly = true;
+            // 
+            // dataGridViewTextBoxColumn60
+            // 
+            dataGridViewCellStyle46.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            this.dataGridViewTextBoxColumn60.DefaultCellStyle = dataGridViewCellStyle46;
+            resources.ApplyResources(this.dataGridViewTextBoxColumn60, "dataGridViewTextBoxColumn60");
+            this.dataGridViewTextBoxColumn60.Name = "dataGridViewTextBoxColumn60";
+            this.dataGridViewTextBoxColumn60.ReadOnly = true;
+            // 
+            // dataGridViewTextBoxColumn61
+            // 
+            dataGridViewCellStyle47.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            this.dataGridViewTextBoxColumn61.DefaultCellStyle = dataGridViewCellStyle47;
+            resources.ApplyResources(this.dataGridViewTextBoxColumn61, "dataGridViewTextBoxColumn61");
+            this.dataGridViewTextBoxColumn61.Name = "dataGridViewTextBoxColumn61";
+            this.dataGridViewTextBoxColumn61.ReadOnly = true;
+            // 
+            // dataGridViewTextBoxColumn62
+            // 
+            dataGridViewCellStyle48.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            this.dataGridViewTextBoxColumn62.DefaultCellStyle = dataGridViewCellStyle48;
+            resources.ApplyResources(this.dataGridViewTextBoxColumn62, "dataGridViewTextBoxColumn62");
+            this.dataGridViewTextBoxColumn62.Name = "dataGridViewTextBoxColumn62";
+            this.dataGridViewTextBoxColumn62.ReadOnly = true;
+            // 
+            // dataGridViewTextBoxColumn63
+            // 
+            dataGridViewCellStyle49.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            this.dataGridViewTextBoxColumn63.DefaultCellStyle = dataGridViewCellStyle49;
+            resources.ApplyResources(this.dataGridViewTextBoxColumn63, "dataGridViewTextBoxColumn63");
+            this.dataGridViewTextBoxColumn63.Name = "dataGridViewTextBoxColumn63";
+            this.dataGridViewTextBoxColumn63.ReadOnly = true;
+            // 
+            // dataGridViewTextBoxColumn64
+            // 
+            dataGridViewCellStyle50.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            this.dataGridViewTextBoxColumn64.DefaultCellStyle = dataGridViewCellStyle50;
+            resources.ApplyResources(this.dataGridViewTextBoxColumn64, "dataGridViewTextBoxColumn64");
+            this.dataGridViewTextBoxColumn64.Name = "dataGridViewTextBoxColumn64";
+            this.dataGridViewTextBoxColumn64.ReadOnly = true;
+            // 
+            // dataGridViewTextBoxColumn65
+            // 
+            dataGridViewCellStyle51.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            this.dataGridViewTextBoxColumn65.DefaultCellStyle = dataGridViewCellStyle51;
+            resources.ApplyResources(this.dataGridViewTextBoxColumn65, "dataGridViewTextBoxColumn65");
+            this.dataGridViewTextBoxColumn65.Name = "dataGridViewTextBoxColumn65";
+            this.dataGridViewTextBoxColumn65.ReadOnly = true;
+            // 
+            // dataGridViewTextBoxColumn66
+            // 
+            dataGridViewCellStyle52.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            this.dataGridViewTextBoxColumn66.DefaultCellStyle = dataGridViewCellStyle52;
+            resources.ApplyResources(this.dataGridViewTextBoxColumn66, "dataGridViewTextBoxColumn66");
+            this.dataGridViewTextBoxColumn66.Name = "dataGridViewTextBoxColumn66";
+            this.dataGridViewTextBoxColumn66.ReadOnly = true;
+            // 
+            // dataGridViewTextBoxColumn67
+            // 
+            dataGridViewCellStyle53.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            this.dataGridViewTextBoxColumn67.DefaultCellStyle = dataGridViewCellStyle53;
+            resources.ApplyResources(this.dataGridViewTextBoxColumn67, "dataGridViewTextBoxColumn67");
+            this.dataGridViewTextBoxColumn67.Name = "dataGridViewTextBoxColumn67";
+            this.dataGridViewTextBoxColumn67.ReadOnly = true;
+            // 
+            // dataGridViewTextBoxColumn68
+            // 
+            dataGridViewCellStyle54.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            this.dataGridViewTextBoxColumn68.DefaultCellStyle = dataGridViewCellStyle54;
+            resources.ApplyResources(this.dataGridViewTextBoxColumn68, "dataGridViewTextBoxColumn68");
+            this.dataGridViewTextBoxColumn68.Name = "dataGridViewTextBoxColumn68";
+            this.dataGridViewTextBoxColumn68.ReadOnly = true;
+            // 
+            // dataGridViewTextBoxColumn69
+            // 
+            dataGridViewCellStyle55.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            this.dataGridViewTextBoxColumn69.DefaultCellStyle = dataGridViewCellStyle55;
+            resources.ApplyResources(this.dataGridViewTextBoxColumn69, "dataGridViewTextBoxColumn69");
+            this.dataGridViewTextBoxColumn69.Name = "dataGridViewTextBoxColumn69";
+            this.dataGridViewTextBoxColumn69.ReadOnly = true;
+            // 
+            // dataGridViewTextBoxColumn70
+            // 
+            dataGridViewCellStyle56.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            this.dataGridViewTextBoxColumn70.DefaultCellStyle = dataGridViewCellStyle56;
+            resources.ApplyResources(this.dataGridViewTextBoxColumn70, "dataGridViewTextBoxColumn70");
+            this.dataGridViewTextBoxColumn70.Name = "dataGridViewTextBoxColumn70";
+            this.dataGridViewTextBoxColumn70.ReadOnly = true;
+            // 
+            // dataGridViewTextBoxColumn71
+            // 
+            dataGridViewCellStyle57.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            this.dataGridViewTextBoxColumn71.DefaultCellStyle = dataGridViewCellStyle57;
+            resources.ApplyResources(this.dataGridViewTextBoxColumn71, "dataGridViewTextBoxColumn71");
+            this.dataGridViewTextBoxColumn71.Name = "dataGridViewTextBoxColumn71";
+            this.dataGridViewTextBoxColumn71.ReadOnly = true;
+            // 
+            // dataGridViewTextBoxColumn72
+            // 
+            dataGridViewCellStyle58.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            this.dataGridViewTextBoxColumn72.DefaultCellStyle = dataGridViewCellStyle58;
+            resources.ApplyResources(this.dataGridViewTextBoxColumn72, "dataGridViewTextBoxColumn72");
+            this.dataGridViewTextBoxColumn72.Name = "dataGridViewTextBoxColumn72";
+            this.dataGridViewTextBoxColumn72.ReadOnly = true;
+            // 
+            // dataGridViewTextBoxColumn73
+            // 
+            dataGridViewCellStyle59.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            this.dataGridViewTextBoxColumn73.DefaultCellStyle = dataGridViewCellStyle59;
+            resources.ApplyResources(this.dataGridViewTextBoxColumn73, "dataGridViewTextBoxColumn73");
+            this.dataGridViewTextBoxColumn73.Name = "dataGridViewTextBoxColumn73";
+            this.dataGridViewTextBoxColumn73.ReadOnly = true;
+            // 
+            // dataGridViewTextBoxColumn74
+            // 
+            dataGridViewCellStyle60.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            this.dataGridViewTextBoxColumn74.DefaultCellStyle = dataGridViewCellStyle60;
+            resources.ApplyResources(this.dataGridViewTextBoxColumn74, "dataGridViewTextBoxColumn74");
+            this.dataGridViewTextBoxColumn74.Name = "dataGridViewTextBoxColumn74";
+            this.dataGridViewTextBoxColumn74.ReadOnly = true;
+            // 
+            // dataGridViewTextBoxColumn75
+            // 
+            dataGridViewCellStyle61.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            this.dataGridViewTextBoxColumn75.DefaultCellStyle = dataGridViewCellStyle61;
+            resources.ApplyResources(this.dataGridViewTextBoxColumn75, "dataGridViewTextBoxColumn75");
+            this.dataGridViewTextBoxColumn75.Name = "dataGridViewTextBoxColumn75";
+            this.dataGridViewTextBoxColumn75.ReadOnly = true;
+            // 
+            // dataGridViewTextBoxColumn76
+            // 
+            dataGridViewCellStyle62.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            this.dataGridViewTextBoxColumn76.DefaultCellStyle = dataGridViewCellStyle62;
+            resources.ApplyResources(this.dataGridViewTextBoxColumn76, "dataGridViewTextBoxColumn76");
+            this.dataGridViewTextBoxColumn76.Name = "dataGridViewTextBoxColumn76";
+            this.dataGridViewTextBoxColumn76.ReadOnly = true;
+            // 
+            // dataGridViewTextBoxColumn77
+            // 
+            dataGridViewCellStyle63.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            this.dataGridViewTextBoxColumn77.DefaultCellStyle = dataGridViewCellStyle63;
+            resources.ApplyResources(this.dataGridViewTextBoxColumn77, "dataGridViewTextBoxColumn77");
+            this.dataGridViewTextBoxColumn77.Name = "dataGridViewTextBoxColumn77";
+            this.dataGridViewTextBoxColumn77.ReadOnly = true;
+            // 
+            // dataGridViewTextBoxColumn78
+            // 
+            dataGridViewCellStyle64.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            this.dataGridViewTextBoxColumn78.DefaultCellStyle = dataGridViewCellStyle64;
+            resources.ApplyResources(this.dataGridViewTextBoxColumn78, "dataGridViewTextBoxColumn78");
+            this.dataGridViewTextBoxColumn78.Name = "dataGridViewTextBoxColumn78";
+            this.dataGridViewTextBoxColumn78.ReadOnly = true;
+            // 
+            // dataGridViewTextBoxColumn79
+            // 
+            dataGridViewCellStyle65.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            this.dataGridViewTextBoxColumn79.DefaultCellStyle = dataGridViewCellStyle65;
+            resources.ApplyResources(this.dataGridViewTextBoxColumn79, "dataGridViewTextBoxColumn79");
+            this.dataGridViewTextBoxColumn79.Name = "dataGridViewTextBoxColumn79";
+            this.dataGridViewTextBoxColumn79.ReadOnly = true;
+            // 
+            // dataGridViewTextBoxColumn80
+            // 
+            dataGridViewCellStyle66.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            this.dataGridViewTextBoxColumn80.DefaultCellStyle = dataGridViewCellStyle66;
+            resources.ApplyResources(this.dataGridViewTextBoxColumn80, "dataGridViewTextBoxColumn80");
+            this.dataGridViewTextBoxColumn80.Name = "dataGridViewTextBoxColumn80";
+            this.dataGridViewTextBoxColumn80.ReadOnly = true;
+            // 
+            // dataGridViewTextBoxColumn81
+            // 
+            dataGridViewCellStyle67.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            this.dataGridViewTextBoxColumn81.DefaultCellStyle = dataGridViewCellStyle67;
+            resources.ApplyResources(this.dataGridViewTextBoxColumn81, "dataGridViewTextBoxColumn81");
+            this.dataGridViewTextBoxColumn81.Name = "dataGridViewTextBoxColumn81";
+            this.dataGridViewTextBoxColumn81.ReadOnly = true;
             // 
             // tabOCR
             // 
@@ -4197,6 +3866,13 @@
             resources.ApplyResources(this.groupBox17, "groupBox17");
             this.groupBox17.Name = "groupBox17";
             this.groupBox17.TabStop = false;
+            // 
+            // pictureBox2
+            // 
+            resources.ApplyResources(this.pictureBox2, "pictureBox2");
+            this.pictureBox2.Image = global::Adam.Properties.Resources._2018_05_14_161525;
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.TabStop = false;
             // 
             // tabSetting
             // 
@@ -6448,14 +6124,14 @@
             resources.ApplyResources(this.contextMenuStrip4, "contextMenuStrip4");
             this.contextMenuStrip4.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.runingToolStripMenuItem,
-            this.toolStripMenuItem4,
-            this.toolStripMenuItem5,
-            this.toolStripMenuItem6,
-            this.toolStripMenuItem7,
+            this.initToolStripMenuItem,
+            this.orgToolStripMenuItem,
+            this.manualToolStripMenuItem,
+            this.ioToolStripMenuItem,
             this.settingToolStripMenuItem,
-            this.toolStripMenuItem8,
-            this.toolStripMenuItem9,
-            this.toolStripMenuItem10,
+            this.llSetToolStripMenuItem,
+            this.unitdatatoolStripMenuItem,
+            this.transTestToolStripMenuItem,
             this.terminalToolStripMenuItem});
             this.contextMenuStrip4.Name = "contextMenuStrip1";
             this.contextMenuStrip4.ShowCheckMargin = true;
@@ -6466,29 +6142,29 @@
             resources.ApplyResources(this.runingToolStripMenuItem, "runingToolStripMenuItem");
             this.runingToolStripMenuItem.Click += new System.EventHandler(this.runingToolStripMenuItem_Click);
             // 
-            // toolStripMenuItem4
+            // initToolStripMenuItem
             // 
-            this.toolStripMenuItem4.Name = "toolStripMenuItem4";
-            resources.ApplyResources(this.toolStripMenuItem4, "toolStripMenuItem4");
-            this.toolStripMenuItem4.Click += new System.EventHandler(this.toolStripMenuItem4_Click);
+            this.initToolStripMenuItem.Name = "initToolStripMenuItem";
+            resources.ApplyResources(this.initToolStripMenuItem, "initToolStripMenuItem");
+            this.initToolStripMenuItem.Click += new System.EventHandler(this.toolStripMenuItem4_Click);
             // 
-            // toolStripMenuItem5
+            // orgToolStripMenuItem
             // 
-            this.toolStripMenuItem5.Name = "toolStripMenuItem5";
-            resources.ApplyResources(this.toolStripMenuItem5, "toolStripMenuItem5");
-            this.toolStripMenuItem5.Click += new System.EventHandler(this.toolStripMenuItem5_Click);
+            this.orgToolStripMenuItem.Name = "orgToolStripMenuItem";
+            resources.ApplyResources(this.orgToolStripMenuItem, "orgToolStripMenuItem");
+            this.orgToolStripMenuItem.Click += new System.EventHandler(this.toolStripMenuItem5_Click);
             // 
-            // toolStripMenuItem6
+            // manualToolStripMenuItem
             // 
-            this.toolStripMenuItem6.Name = "toolStripMenuItem6";
-            resources.ApplyResources(this.toolStripMenuItem6, "toolStripMenuItem6");
-            this.toolStripMenuItem6.Click += new System.EventHandler(this.toolStripMenuItem6_Click);
+            this.manualToolStripMenuItem.Name = "manualToolStripMenuItem";
+            resources.ApplyResources(this.manualToolStripMenuItem, "manualToolStripMenuItem");
+            this.manualToolStripMenuItem.Click += new System.EventHandler(this.toolStripMenuItem6_Click);
             // 
-            // toolStripMenuItem7
+            // ioToolStripMenuItem
             // 
-            this.toolStripMenuItem7.Name = "toolStripMenuItem7";
-            resources.ApplyResources(this.toolStripMenuItem7, "toolStripMenuItem7");
-            this.toolStripMenuItem7.Click += new System.EventHandler(this.toolStripMenuItem7_Click);
+            this.ioToolStripMenuItem.Name = "ioToolStripMenuItem";
+            resources.ApplyResources(this.ioToolStripMenuItem, "ioToolStripMenuItem");
+            this.ioToolStripMenuItem.Click += new System.EventHandler(this.toolStripMenuItem7_Click);
             // 
             // settingToolStripMenuItem
             // 
@@ -6496,23 +6172,23 @@
             resources.ApplyResources(this.settingToolStripMenuItem, "settingToolStripMenuItem");
             this.settingToolStripMenuItem.Click += new System.EventHandler(this.settingToolStripMenuItem_Click);
             // 
-            // toolStripMenuItem8
+            // llSetToolStripMenuItem
             // 
-            this.toolStripMenuItem8.Name = "toolStripMenuItem8";
-            resources.ApplyResources(this.toolStripMenuItem8, "toolStripMenuItem8");
-            this.toolStripMenuItem8.Click += new System.EventHandler(this.toolStripMenuItem8_Click);
+            this.llSetToolStripMenuItem.Name = "llSetToolStripMenuItem";
+            resources.ApplyResources(this.llSetToolStripMenuItem, "llSetToolStripMenuItem");
+            this.llSetToolStripMenuItem.Click += new System.EventHandler(this.toolStripMenuItem8_Click);
             // 
-            // toolStripMenuItem9
+            // unitdatatoolStripMenuItem
             // 
-            this.toolStripMenuItem9.Name = "toolStripMenuItem9";
-            resources.ApplyResources(this.toolStripMenuItem9, "toolStripMenuItem9");
-            this.toolStripMenuItem9.Click += new System.EventHandler(this.toolStripMenuItem9_Click);
+            this.unitdatatoolStripMenuItem.Name = "unitdatatoolStripMenuItem";
+            resources.ApplyResources(this.unitdatatoolStripMenuItem, "unitdatatoolStripMenuItem");
+            this.unitdatatoolStripMenuItem.Click += new System.EventHandler(this.toolStripMenuItem9_Click);
             // 
-            // toolStripMenuItem10
+            // transTestToolStripMenuItem
             // 
-            this.toolStripMenuItem10.Name = "toolStripMenuItem10";
-            resources.ApplyResources(this.toolStripMenuItem10, "toolStripMenuItem10");
-            this.toolStripMenuItem10.Click += new System.EventHandler(this.toolStripMenuItem10_Click);
+            this.transTestToolStripMenuItem.Name = "transTestToolStripMenuItem";
+            resources.ApplyResources(this.transTestToolStripMenuItem, "transTestToolStripMenuItem");
+            this.transTestToolStripMenuItem.Click += new System.EventHandler(this.toolStripMenuItem10_Click);
             // 
             // terminalToolStripMenuItem
             // 
@@ -6527,583 +6203,6 @@
             resources.ApplyResources(this.panel3, "panel3");
             this.panel3.Name = "panel3";
             this.panel3.Paint += new System.Windows.Forms.PaintEventHandler(this.panel3_Paint);
-            // 
-            // pnlAlignerState
-            // 
-            this.pnlAlignerState.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.pnlAlignerState.Controls.Add(this.vSBAlignerStatus);
-            this.pnlAlignerState.Controls.Add(this.pbAlignerState);
-            resources.ApplyResources(this.pnlAlignerState, "pnlAlignerState");
-            this.pnlAlignerState.Name = "pnlAlignerState";
-            // 
-            // pnlPortState
-            // 
-            this.pnlPortState.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.pnlPortState.Controls.Add(this.vSBPortStatus);
-            this.pnlPortState.Controls.Add(this.pbPortState);
-            resources.ApplyResources(this.pnlPortState, "pnlPortState");
-            this.pnlPortState.Name = "pnlPortState";
-            // 
-            // vSBAlignerStatus
-            // 
-            resources.ApplyResources(this.vSBAlignerStatus, "vSBAlignerStatus");
-            this.vSBAlignerStatus.Name = "vSBAlignerStatus";
-            this.vSBAlignerStatus.Scroll += new System.Windows.Forms.ScrollEventHandler(this.vSBAlignerStatus_Scroll);
-            // 
-            // vSBPortStatus
-            // 
-            resources.ApplyResources(this.vSBPortStatus, "vSBPortStatus");
-            this.vSBPortStatus.Name = "vSBPortStatus";
-            this.vSBPortStatus.Scroll += new System.Windows.Forms.ScrollEventHandler(this.vSBPortStatus_Scroll);
-            // 
-            // pbRobotState
-            // 
-            this.pbRobotState.Image = global::Adam.Properties.Resources.sanwa_robot_status;
-            resources.ApplyResources(this.pbRobotState, "pbRobotState");
-            this.pbRobotState.InitialImage = global::Adam.Properties.Resources.sanwa_robot_status;
-            this.pbRobotState.Name = "pbRobotState";
-            this.pbRobotState.TabStop = false;
-            // 
-            // pbAlignerState
-            // 
-            this.pbAlignerState.Image = global::Adam.Properties.Resources.sanwa_aligner_status;
-            resources.ApplyResources(this.pbAlignerState, "pbAlignerState");
-            this.pbAlignerState.InitialImage = global::Adam.Properties.Resources.sanwa_robot_status;
-            this.pbAlignerState.Name = "pbAlignerState";
-            this.pbAlignerState.TabStop = false;
-            // 
-            // pbPortState
-            // 
-            this.pbPortState.Image = global::Adam.Properties.Resources.tdk_loadport_status;
-            resources.ApplyResources(this.pbPortState, "pbPortState");
-            this.pbPortState.InitialImage = global::Adam.Properties.Resources.sanwa_robot_status;
-            this.pbPortState.Name = "pbPortState";
-            this.pbPortState.TabStop = false;
-            // 
-            // pictureBox3
-            // 
-            resources.ApplyResources(this.pictureBox3, "pictureBox3");
-            this.pictureBox3.Image = global::Adam.Properties.Resources.WafID_VBNETEmbedded;
-            this.pictureBox3.Name = "pictureBox3";
-            this.pictureBox3.TabStop = false;
-            // 
-            // pictureBox1
-            // 
-            resources.ApplyResources(this.pictureBox1, "pictureBox1");
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.TabStop = false;
-            // 
-            // pictureBox2
-            // 
-            resources.ApplyResources(this.pictureBox2, "pictureBox2");
-            this.pictureBox2.Image = global::Adam.Properties.Resources._2018_05_14_161525;
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.TabStop = false;
-            // 
-            // dataGridView8
-            // 
-            this.dataGridView8.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView8.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.dataGridViewTextBoxColumn1,
-            this.dataGridViewTextBoxColumn2,
-            this.dataGridViewTextBoxColumn3,
-            this.dataGridViewTextBoxColumn14,
-            this.dataGridViewTextBoxColumn16,
-            this.dataGridViewTextBoxColumn17,
-            this.dataGridViewTextBoxColumn20,
-            this.dataGridViewTextBoxColumn21,
-            this.dataGridViewTextBoxColumn30,
-            this.dataGridViewTextBoxColumn32,
-            this.dataGridViewTextBoxColumn34,
-            this.dataGridViewTextBoxColumn36,
-            this.dataGridViewTextBoxColumn40,
-            this.dataGridViewTextBoxColumn41,
-            this.dataGridViewTextBoxColumn42,
-            this.dataGridViewTextBoxColumn43,
-            this.dataGridViewTextBoxColumn44,
-            this.dataGridViewTextBoxColumn45,
-            this.dataGridViewTextBoxColumn46,
-            this.dataGridViewTextBoxColumn47,
-            this.dataGridViewTextBoxColumn48});
-            resources.ApplyResources(this.dataGridView8, "dataGridView8");
-            this.dataGridView8.Name = "dataGridView8";
-            this.dataGridView8.RowTemplate.Height = 24;
-            // 
-            // dataGridViewTextBoxColumn1
-            // 
-            resources.ApplyResources(this.dataGridViewTextBoxColumn1, "dataGridViewTextBoxColumn1");
-            this.dataGridViewTextBoxColumn1.Name = "dataGridViewTextBoxColumn1";
-            // 
-            // dataGridViewTextBoxColumn2
-            // 
-            resources.ApplyResources(this.dataGridViewTextBoxColumn2, "dataGridViewTextBoxColumn2");
-            this.dataGridViewTextBoxColumn2.Name = "dataGridViewTextBoxColumn2";
-            // 
-            // dataGridViewTextBoxColumn3
-            // 
-            resources.ApplyResources(this.dataGridViewTextBoxColumn3, "dataGridViewTextBoxColumn3");
-            this.dataGridViewTextBoxColumn3.Name = "dataGridViewTextBoxColumn3";
-            // 
-            // dataGridViewTextBoxColumn14
-            // 
-            resources.ApplyResources(this.dataGridViewTextBoxColumn14, "dataGridViewTextBoxColumn14");
-            this.dataGridViewTextBoxColumn14.Name = "dataGridViewTextBoxColumn14";
-            // 
-            // dataGridViewTextBoxColumn16
-            // 
-            resources.ApplyResources(this.dataGridViewTextBoxColumn16, "dataGridViewTextBoxColumn16");
-            this.dataGridViewTextBoxColumn16.Name = "dataGridViewTextBoxColumn16";
-            // 
-            // dataGridViewTextBoxColumn17
-            // 
-            resources.ApplyResources(this.dataGridViewTextBoxColumn17, "dataGridViewTextBoxColumn17");
-            this.dataGridViewTextBoxColumn17.Name = "dataGridViewTextBoxColumn17";
-            // 
-            // dataGridViewTextBoxColumn20
-            // 
-            resources.ApplyResources(this.dataGridViewTextBoxColumn20, "dataGridViewTextBoxColumn20");
-            this.dataGridViewTextBoxColumn20.Name = "dataGridViewTextBoxColumn20";
-            // 
-            // dataGridViewTextBoxColumn21
-            // 
-            resources.ApplyResources(this.dataGridViewTextBoxColumn21, "dataGridViewTextBoxColumn21");
-            this.dataGridViewTextBoxColumn21.Name = "dataGridViewTextBoxColumn21";
-            // 
-            // dataGridViewTextBoxColumn30
-            // 
-            resources.ApplyResources(this.dataGridViewTextBoxColumn30, "dataGridViewTextBoxColumn30");
-            this.dataGridViewTextBoxColumn30.Name = "dataGridViewTextBoxColumn30";
-            // 
-            // dataGridViewTextBoxColumn32
-            // 
-            resources.ApplyResources(this.dataGridViewTextBoxColumn32, "dataGridViewTextBoxColumn32");
-            this.dataGridViewTextBoxColumn32.Name = "dataGridViewTextBoxColumn32";
-            // 
-            // dataGridViewTextBoxColumn34
-            // 
-            resources.ApplyResources(this.dataGridViewTextBoxColumn34, "dataGridViewTextBoxColumn34");
-            this.dataGridViewTextBoxColumn34.Name = "dataGridViewTextBoxColumn34";
-            // 
-            // dataGridViewTextBoxColumn36
-            // 
-            resources.ApplyResources(this.dataGridViewTextBoxColumn36, "dataGridViewTextBoxColumn36");
-            this.dataGridViewTextBoxColumn36.Name = "dataGridViewTextBoxColumn36";
-            // 
-            // dataGridViewTextBoxColumn40
-            // 
-            resources.ApplyResources(this.dataGridViewTextBoxColumn40, "dataGridViewTextBoxColumn40");
-            this.dataGridViewTextBoxColumn40.Name = "dataGridViewTextBoxColumn40";
-            // 
-            // dataGridViewTextBoxColumn41
-            // 
-            resources.ApplyResources(this.dataGridViewTextBoxColumn41, "dataGridViewTextBoxColumn41");
-            this.dataGridViewTextBoxColumn41.Name = "dataGridViewTextBoxColumn41";
-            // 
-            // dataGridViewTextBoxColumn42
-            // 
-            resources.ApplyResources(this.dataGridViewTextBoxColumn42, "dataGridViewTextBoxColumn42");
-            this.dataGridViewTextBoxColumn42.Name = "dataGridViewTextBoxColumn42";
-            // 
-            // dataGridViewTextBoxColumn43
-            // 
-            resources.ApplyResources(this.dataGridViewTextBoxColumn43, "dataGridViewTextBoxColumn43");
-            this.dataGridViewTextBoxColumn43.Name = "dataGridViewTextBoxColumn43";
-            // 
-            // dataGridViewTextBoxColumn44
-            // 
-            resources.ApplyResources(this.dataGridViewTextBoxColumn44, "dataGridViewTextBoxColumn44");
-            this.dataGridViewTextBoxColumn44.Name = "dataGridViewTextBoxColumn44";
-            // 
-            // dataGridViewTextBoxColumn45
-            // 
-            resources.ApplyResources(this.dataGridViewTextBoxColumn45, "dataGridViewTextBoxColumn45");
-            this.dataGridViewTextBoxColumn45.Name = "dataGridViewTextBoxColumn45";
-            // 
-            // dataGridViewTextBoxColumn46
-            // 
-            resources.ApplyResources(this.dataGridViewTextBoxColumn46, "dataGridViewTextBoxColumn46");
-            this.dataGridViewTextBoxColumn46.Name = "dataGridViewTextBoxColumn46";
-            // 
-            // dataGridViewTextBoxColumn47
-            // 
-            resources.ApplyResources(this.dataGridViewTextBoxColumn47, "dataGridViewTextBoxColumn47");
-            this.dataGridViewTextBoxColumn47.Name = "dataGridViewTextBoxColumn47";
-            // 
-            // dataGridViewTextBoxColumn48
-            // 
-            resources.ApplyResources(this.dataGridViewTextBoxColumn48, "dataGridViewTextBoxColumn48");
-            this.dataGridViewTextBoxColumn48.Name = "dataGridViewTextBoxColumn48";
-            // 
-            // Column0
-            // 
-            resources.ApplyResources(this.Column0, "Column0");
-            this.Column0.Name = "Column0";
-            // 
-            // Column1
-            // 
-            resources.ApplyResources(this.Column1, "Column1");
-            this.Column1.Name = "Column1";
-            // 
-            // Column2
-            // 
-            resources.ApplyResources(this.Column2, "Column2");
-            this.Column2.Name = "Column2";
-            // 
-            // Column3
-            // 
-            resources.ApplyResources(this.Column3, "Column3");
-            this.Column3.Name = "Column3";
-            // 
-            // Column4
-            // 
-            resources.ApplyResources(this.Column4, "Column4");
-            this.Column4.Name = "Column4";
-            // 
-            // Column5
-            // 
-            resources.ApplyResources(this.Column5, "Column5");
-            this.Column5.Name = "Column5";
-            // 
-            // Column6
-            // 
-            resources.ApplyResources(this.Column6, "Column6");
-            this.Column6.Name = "Column6";
-            // 
-            // Column7
-            // 
-            resources.ApplyResources(this.Column7, "Column7");
-            this.Column7.Name = "Column7";
-            // 
-            // Column8
-            // 
-            resources.ApplyResources(this.Column8, "Column8");
-            this.Column8.Name = "Column8";
-            // 
-            // Column9
-            // 
-            resources.ApplyResources(this.Column9, "Column9");
-            this.Column9.Name = "Column9";
-            // 
-            // Column10
-            // 
-            resources.ApplyResources(this.Column10, "Column10");
-            this.Column10.Name = "Column10";
-            // 
-            // Column11
-            // 
-            resources.ApplyResources(this.Column11, "Column11");
-            this.Column11.Name = "Column11";
-            // 
-            // Column12
-            // 
-            resources.ApplyResources(this.Column12, "Column12");
-            this.Column12.Name = "Column12";
-            // 
-            // Column13
-            // 
-            resources.ApplyResources(this.Column13, "Column13");
-            this.Column13.Name = "Column13";
-            // 
-            // Column14
-            // 
-            resources.ApplyResources(this.Column14, "Column14");
-            this.Column14.Name = "Column14";
-            // 
-            // Column15
-            // 
-            resources.ApplyResources(this.Column15, "Column15");
-            this.Column15.Name = "Column15";
-            // 
-            // Column16
-            // 
-            resources.ApplyResources(this.Column16, "Column16");
-            this.Column16.Name = "Column16";
-            // 
-            // Column17
-            // 
-            resources.ApplyResources(this.Column17, "Column17");
-            this.Column17.Name = "Column17";
-            // 
-            // Column18
-            // 
-            resources.ApplyResources(this.Column18, "Column18");
-            this.Column18.Name = "Column18";
-            // 
-            // Column19
-            // 
-            resources.ApplyResources(this.Column19, "Column19");
-            this.Column19.Name = "Column19";
-            // 
-            // Column20
-            // 
-            resources.ApplyResources(this.Column20, "Column20");
-            this.Column20.Name = "Column20";
-            // 
-            // Column21
-            // 
-            resources.ApplyResources(this.Column21, "Column21");
-            this.Column21.Name = "Column21";
-            // 
-            // Column22
-            // 
-            resources.ApplyResources(this.Column22, "Column22");
-            this.Column22.Name = "Column22";
-            // 
-            // Column23
-            // 
-            resources.ApplyResources(this.Column23, "Column23");
-            this.Column23.Name = "Column23";
-            // 
-            // Column24
-            // 
-            resources.ApplyResources(this.Column24, "Column24");
-            this.Column24.Name = "Column24";
-            // 
-            // Column25
-            // 
-            resources.ApplyResources(this.Column25, "Column25");
-            this.Column25.Name = "Column25";
-            // 
-            // Column26
-            // 
-            resources.ApplyResources(this.Column26, "Column26");
-            this.Column26.Name = "Column26";
-            // 
-            // Column27
-            // 
-            resources.ApplyResources(this.Column27, "Column27");
-            this.Column27.Name = "Column27";
-            // 
-            // Column28
-            // 
-            resources.ApplyResources(this.Column28, "Column28");
-            this.Column28.Name = "Column28";
-            // 
-            // Column29
-            // 
-            resources.ApplyResources(this.Column29, "Column29");
-            this.Column29.Name = "Column29";
-            // 
-            // Column30
-            // 
-            resources.ApplyResources(this.Column30, "Column30");
-            this.Column30.Name = "Column30";
-            // 
-            // Column31
-            // 
-            resources.ApplyResources(this.Column31, "Column31");
-            this.Column31.Name = "Column31";
-            // 
-            // Column32
-            // 
-            resources.ApplyResources(this.Column32, "Column32");
-            this.Column32.Name = "Column32";
-            // 
-            // dataGridView10
-            // 
-            this.dataGridView10.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView10.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.dataGridViewTextBoxColumn49,
-            this.dataGridViewTextBoxColumn50,
-            this.dataGridViewTextBoxColumn51,
-            this.dataGridViewTextBoxColumn52,
-            this.dataGridViewTextBoxColumn53,
-            this.dataGridViewTextBoxColumn54,
-            this.dataGridViewTextBoxColumn55,
-            this.dataGridViewTextBoxColumn56,
-            this.dataGridViewTextBoxColumn57,
-            this.dataGridViewTextBoxColumn58,
-            this.dataGridViewTextBoxColumn59,
-            this.dataGridViewTextBoxColumn60,
-            this.dataGridViewTextBoxColumn61,
-            this.dataGridViewTextBoxColumn62,
-            this.dataGridViewTextBoxColumn63,
-            this.dataGridViewTextBoxColumn64,
-            this.dataGridViewTextBoxColumn65,
-            this.dataGridViewTextBoxColumn66,
-            this.dataGridViewTextBoxColumn67,
-            this.dataGridViewTextBoxColumn68,
-            this.dataGridViewTextBoxColumn69,
-            this.dataGridViewTextBoxColumn70,
-            this.dataGridViewTextBoxColumn71,
-            this.dataGridViewTextBoxColumn72,
-            this.dataGridViewTextBoxColumn73,
-            this.dataGridViewTextBoxColumn74,
-            this.dataGridViewTextBoxColumn75,
-            this.dataGridViewTextBoxColumn76,
-            this.dataGridViewTextBoxColumn77,
-            this.dataGridViewTextBoxColumn78,
-            this.dataGridViewTextBoxColumn79,
-            this.dataGridViewTextBoxColumn80,
-            this.dataGridViewTextBoxColumn81});
-            resources.ApplyResources(this.dataGridView10, "dataGridView10");
-            this.dataGridView10.Name = "dataGridView10";
-            this.dataGridView10.RowTemplate.Height = 24;
-            // 
-            // dataGridViewTextBoxColumn49
-            // 
-            resources.ApplyResources(this.dataGridViewTextBoxColumn49, "dataGridViewTextBoxColumn49");
-            this.dataGridViewTextBoxColumn49.Name = "dataGridViewTextBoxColumn49";
-            // 
-            // dataGridViewTextBoxColumn50
-            // 
-            resources.ApplyResources(this.dataGridViewTextBoxColumn50, "dataGridViewTextBoxColumn50");
-            this.dataGridViewTextBoxColumn50.Name = "dataGridViewTextBoxColumn50";
-            // 
-            // dataGridViewTextBoxColumn51
-            // 
-            resources.ApplyResources(this.dataGridViewTextBoxColumn51, "dataGridViewTextBoxColumn51");
-            this.dataGridViewTextBoxColumn51.Name = "dataGridViewTextBoxColumn51";
-            // 
-            // dataGridViewTextBoxColumn52
-            // 
-            resources.ApplyResources(this.dataGridViewTextBoxColumn52, "dataGridViewTextBoxColumn52");
-            this.dataGridViewTextBoxColumn52.Name = "dataGridViewTextBoxColumn52";
-            // 
-            // dataGridViewTextBoxColumn53
-            // 
-            resources.ApplyResources(this.dataGridViewTextBoxColumn53, "dataGridViewTextBoxColumn53");
-            this.dataGridViewTextBoxColumn53.Name = "dataGridViewTextBoxColumn53";
-            // 
-            // dataGridViewTextBoxColumn54
-            // 
-            resources.ApplyResources(this.dataGridViewTextBoxColumn54, "dataGridViewTextBoxColumn54");
-            this.dataGridViewTextBoxColumn54.Name = "dataGridViewTextBoxColumn54";
-            // 
-            // dataGridViewTextBoxColumn55
-            // 
-            resources.ApplyResources(this.dataGridViewTextBoxColumn55, "dataGridViewTextBoxColumn55");
-            this.dataGridViewTextBoxColumn55.Name = "dataGridViewTextBoxColumn55";
-            // 
-            // dataGridViewTextBoxColumn56
-            // 
-            resources.ApplyResources(this.dataGridViewTextBoxColumn56, "dataGridViewTextBoxColumn56");
-            this.dataGridViewTextBoxColumn56.Name = "dataGridViewTextBoxColumn56";
-            // 
-            // dataGridViewTextBoxColumn57
-            // 
-            resources.ApplyResources(this.dataGridViewTextBoxColumn57, "dataGridViewTextBoxColumn57");
-            this.dataGridViewTextBoxColumn57.Name = "dataGridViewTextBoxColumn57";
-            // 
-            // dataGridViewTextBoxColumn58
-            // 
-            resources.ApplyResources(this.dataGridViewTextBoxColumn58, "dataGridViewTextBoxColumn58");
-            this.dataGridViewTextBoxColumn58.Name = "dataGridViewTextBoxColumn58";
-            // 
-            // dataGridViewTextBoxColumn59
-            // 
-            resources.ApplyResources(this.dataGridViewTextBoxColumn59, "dataGridViewTextBoxColumn59");
-            this.dataGridViewTextBoxColumn59.Name = "dataGridViewTextBoxColumn59";
-            // 
-            // dataGridViewTextBoxColumn60
-            // 
-            resources.ApplyResources(this.dataGridViewTextBoxColumn60, "dataGridViewTextBoxColumn60");
-            this.dataGridViewTextBoxColumn60.Name = "dataGridViewTextBoxColumn60";
-            // 
-            // dataGridViewTextBoxColumn61
-            // 
-            resources.ApplyResources(this.dataGridViewTextBoxColumn61, "dataGridViewTextBoxColumn61");
-            this.dataGridViewTextBoxColumn61.Name = "dataGridViewTextBoxColumn61";
-            // 
-            // dataGridViewTextBoxColumn62
-            // 
-            resources.ApplyResources(this.dataGridViewTextBoxColumn62, "dataGridViewTextBoxColumn62");
-            this.dataGridViewTextBoxColumn62.Name = "dataGridViewTextBoxColumn62";
-            // 
-            // dataGridViewTextBoxColumn63
-            // 
-            resources.ApplyResources(this.dataGridViewTextBoxColumn63, "dataGridViewTextBoxColumn63");
-            this.dataGridViewTextBoxColumn63.Name = "dataGridViewTextBoxColumn63";
-            // 
-            // dataGridViewTextBoxColumn64
-            // 
-            resources.ApplyResources(this.dataGridViewTextBoxColumn64, "dataGridViewTextBoxColumn64");
-            this.dataGridViewTextBoxColumn64.Name = "dataGridViewTextBoxColumn64";
-            // 
-            // dataGridViewTextBoxColumn65
-            // 
-            resources.ApplyResources(this.dataGridViewTextBoxColumn65, "dataGridViewTextBoxColumn65");
-            this.dataGridViewTextBoxColumn65.Name = "dataGridViewTextBoxColumn65";
-            // 
-            // dataGridViewTextBoxColumn66
-            // 
-            resources.ApplyResources(this.dataGridViewTextBoxColumn66, "dataGridViewTextBoxColumn66");
-            this.dataGridViewTextBoxColumn66.Name = "dataGridViewTextBoxColumn66";
-            // 
-            // dataGridViewTextBoxColumn67
-            // 
-            resources.ApplyResources(this.dataGridViewTextBoxColumn67, "dataGridViewTextBoxColumn67");
-            this.dataGridViewTextBoxColumn67.Name = "dataGridViewTextBoxColumn67";
-            // 
-            // dataGridViewTextBoxColumn68
-            // 
-            resources.ApplyResources(this.dataGridViewTextBoxColumn68, "dataGridViewTextBoxColumn68");
-            this.dataGridViewTextBoxColumn68.Name = "dataGridViewTextBoxColumn68";
-            // 
-            // dataGridViewTextBoxColumn69
-            // 
-            resources.ApplyResources(this.dataGridViewTextBoxColumn69, "dataGridViewTextBoxColumn69");
-            this.dataGridViewTextBoxColumn69.Name = "dataGridViewTextBoxColumn69";
-            // 
-            // dataGridViewTextBoxColumn70
-            // 
-            resources.ApplyResources(this.dataGridViewTextBoxColumn70, "dataGridViewTextBoxColumn70");
-            this.dataGridViewTextBoxColumn70.Name = "dataGridViewTextBoxColumn70";
-            // 
-            // dataGridViewTextBoxColumn71
-            // 
-            resources.ApplyResources(this.dataGridViewTextBoxColumn71, "dataGridViewTextBoxColumn71");
-            this.dataGridViewTextBoxColumn71.Name = "dataGridViewTextBoxColumn71";
-            // 
-            // dataGridViewTextBoxColumn72
-            // 
-            resources.ApplyResources(this.dataGridViewTextBoxColumn72, "dataGridViewTextBoxColumn72");
-            this.dataGridViewTextBoxColumn72.Name = "dataGridViewTextBoxColumn72";
-            // 
-            // dataGridViewTextBoxColumn73
-            // 
-            resources.ApplyResources(this.dataGridViewTextBoxColumn73, "dataGridViewTextBoxColumn73");
-            this.dataGridViewTextBoxColumn73.Name = "dataGridViewTextBoxColumn73";
-            // 
-            // dataGridViewTextBoxColumn74
-            // 
-            resources.ApplyResources(this.dataGridViewTextBoxColumn74, "dataGridViewTextBoxColumn74");
-            this.dataGridViewTextBoxColumn74.Name = "dataGridViewTextBoxColumn74";
-            // 
-            // dataGridViewTextBoxColumn75
-            // 
-            resources.ApplyResources(this.dataGridViewTextBoxColumn75, "dataGridViewTextBoxColumn75");
-            this.dataGridViewTextBoxColumn75.Name = "dataGridViewTextBoxColumn75";
-            // 
-            // dataGridViewTextBoxColumn76
-            // 
-            resources.ApplyResources(this.dataGridViewTextBoxColumn76, "dataGridViewTextBoxColumn76");
-            this.dataGridViewTextBoxColumn76.Name = "dataGridViewTextBoxColumn76";
-            // 
-            // dataGridViewTextBoxColumn77
-            // 
-            resources.ApplyResources(this.dataGridViewTextBoxColumn77, "dataGridViewTextBoxColumn77");
-            this.dataGridViewTextBoxColumn77.Name = "dataGridViewTextBoxColumn77";
-            // 
-            // dataGridViewTextBoxColumn78
-            // 
-            resources.ApplyResources(this.dataGridViewTextBoxColumn78, "dataGridViewTextBoxColumn78");
-            this.dataGridViewTextBoxColumn78.Name = "dataGridViewTextBoxColumn78";
-            // 
-            // dataGridViewTextBoxColumn79
-            // 
-            resources.ApplyResources(this.dataGridViewTextBoxColumn79, "dataGridViewTextBoxColumn79");
-            this.dataGridViewTextBoxColumn79.Name = "dataGridViewTextBoxColumn79";
-            // 
-            // dataGridViewTextBoxColumn80
-            // 
-            resources.ApplyResources(this.dataGridViewTextBoxColumn80, "dataGridViewTextBoxColumn80");
-            this.dataGridViewTextBoxColumn80.Name = "dataGridViewTextBoxColumn80";
-            // 
-            // dataGridViewTextBoxColumn81
-            // 
-            resources.ApplyResources(this.dataGridViewTextBoxColumn81, "dataGridViewTextBoxColumn81");
-            this.dataGridViewTextBoxColumn81.Name = "dataGridViewTextBoxColumn81";
             // 
             // FormMain
             // 
@@ -7184,6 +6283,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer12)).EndInit();
             this.splitContainer12.ResumeLayout(false);
             this.groupBox18.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             this.splitContainer13.Panel1.ResumeLayout(false);
             this.splitContainer13.Panel2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer13)).EndInit();
@@ -7197,6 +6297,7 @@
             this.panel1.PerformLayout();
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.groupBox3.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.Conn_gv)).EndInit();
             this.groupBox2.ResumeLayout(false);
@@ -7253,39 +6354,23 @@
             this.tableLayoutPanel21.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView18)).EndInit();
             this.tabStatus.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).EndInit();
             this.tableLayoutPanel26.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.dgvRstatus)).EndInit();
             this.pnlRobotState.ResumeLayout(false);
             this.pnlRobotState.PerformLayout();
-            this.tabPage4.ResumeLayout(false);
-            this.tabControl2.ResumeLayout(false);
-            this.tabPage7.ResumeLayout(false);
-            this.groupBox20.ResumeLayout(false);
-            this.panel9.ResumeLayout(false);
-            this.tableLayoutPanel23.ResumeLayout(false);
-            this.tableLayoutPanel24.ResumeLayout(false);
-            this.panel12.ResumeLayout(false);
-            this.panel12.PerformLayout();
-            this.panel11.ResumeLayout(false);
-            this.panel11.PerformLayout();
-            this.panel10.ResumeLayout(false);
-            this.groupBox21.ResumeLayout(false);
-            this.panel13.ResumeLayout(false);
-            this.panel14.ResumeLayout(false);
-            this.panel14.PerformLayout();
-            this.tabPage5.ResumeLayout(false);
-            this.tableLayoutPanel25.ResumeLayout(false);
-            this.groupBox23.ResumeLayout(false);
-            this.panel17.ResumeLayout(false);
-            this.panel18.ResumeLayout(false);
-            this.panel18.PerformLayout();
-            this.groupBox22.ResumeLayout(false);
-            this.panel15.ResumeLayout(false);
-            this.panel16.ResumeLayout(false);
-            this.panel16.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pbRobotState)).EndInit();
+            this.pnlAlignerState.ResumeLayout(false);
+            this.pnlAlignerState.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pbAlignerState)).EndInit();
+            this.pnlPortState.ResumeLayout(false);
+            this.pnlPortState.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pbPortState)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvLstatus)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvAstatus)).EndInit();
             this.tabOCR.ResumeLayout(false);
             this.tableLayoutPanel13.ResumeLayout(false);
             this.groupBox17.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.tabSetting.ResumeLayout(false);
             this.tabControl3.ResumeLayout(false);
             this.tabPage11.ResumeLayout(false);
@@ -7398,18 +6483,6 @@
             this.contextMenuStrip1.ResumeLayout(false);
             this.contextMenuStrip4.ResumeLayout(false);
             this.panel3.ResumeLayout(false);
-            this.pnlAlignerState.ResumeLayout(false);
-            this.pnlAlignerState.PerformLayout();
-            this.pnlPortState.ResumeLayout(false);
-            this.pnlPortState.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pbRobotState)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pbAlignerState)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pbPortState)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView8)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView10)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -7424,8 +6497,6 @@
         private System.Windows.Forms.Panel panel4;
         private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.TabPage tabMapping;
-        private System.Windows.Forms.TabPage tabPage4;
-        private System.Windows.Forms.TabPage tabPage5;
         private System.Windows.Forms.TabPage tabOCR;
         private System.Windows.Forms.TabPage tabSetting;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
@@ -7646,122 +6717,6 @@
         private System.Controls.SplitButton splitButton4;
         private System.Windows.Forms.ContextMenuStrip contextMenuStrip3;
         private System.Windows.Forms.ToolStripMenuItem toolStripMenuItem3;
-        private System.Windows.Forms.TabControl tabControl2;
-        private System.Windows.Forms.TabPage tabPage7;
-        private System.Windows.Forms.GroupBox groupBox20;
-        private System.Windows.Forms.Panel panel9;
-        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel23;
-        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel24;
-        private System.Windows.Forms.Panel panel12;
-        private System.Windows.Forms.Label label56;
-        private System.Windows.Forms.Label label57;
-        private System.Windows.Forms.ComboBox comboBox9;
-        private System.Windows.Forms.Button button31;
-        private System.Windows.Forms.Label label58;
-        private System.Windows.Forms.Button button32;
-        private System.Windows.Forms.Label label59;
-        private System.Windows.Forms.Button button33;
-        private System.Windows.Forms.Label label60;
-        private System.Windows.Forms.Label label61;
-        private System.Windows.Forms.Label label62;
-        private System.Windows.Forms.ComboBox comboBox10;
-        private System.Windows.Forms.ComboBox comboBox11;
-        private System.Windows.Forms.ComboBox comboBox12;
-        private System.Windows.Forms.Panel panel11;
-        private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.Label label14;
-        private System.Windows.Forms.ComboBox comboBox3;
-        private System.Windows.Forms.Button button26;
-        private System.Windows.Forms.Label label51;
-        private System.Windows.Forms.Label label52;
-        private System.Windows.Forms.Button button29;
-        private System.Windows.Forms.Label label53;
-        private System.Windows.Forms.Label label54;
-        private System.Windows.Forms.Button button30;
-        private System.Windows.Forms.Label label55;
-        private System.Windows.Forms.ComboBox comboBox7;
-        private System.Windows.Forms.ComboBox comboBox4;
-        private System.Windows.Forms.ComboBox comboBox5;
-        private System.Windows.Forms.Panel panel10;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Button button4;
-        private System.Windows.Forms.Button button3;
-        private System.Windows.Forms.GroupBox groupBox21;
-        private System.Windows.Forms.Panel panel13;
-        private System.Windows.Forms.Panel panel14;
-        private System.Windows.Forms.Button button34;
-        private System.Windows.Forms.Button button35;
-        private System.Windows.Forms.Button button36;
-        private System.Windows.Forms.Label label63;
-        private System.Windows.Forms.TextBox textBox24;
-        private System.Windows.Forms.TextBox textBox25;
-        private System.Windows.Forms.TextBox textBox26;
-        private System.Windows.Forms.Label label64;
-        private System.Windows.Forms.Button button37;
-        private System.Windows.Forms.Label label65;
-        private System.Windows.Forms.TextBox textBox27;
-        private System.Windows.Forms.Label label66;
-        private System.Windows.Forms.TextBox textBox28;
-        private System.Windows.Forms.Label label67;
-        private System.Windows.Forms.Label label68;
-        private System.Windows.Forms.Label label69;
-        private System.Windows.Forms.TabPage tabPage10;
-        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel25;
-        private System.Windows.Forms.GroupBox groupBox22;
-        private System.Windows.Forms.Panel panel15;
-        private System.Windows.Forms.Panel panel16;
-        private System.Windows.Forms.Button button38;
-        private System.Windows.Forms.Button button39;
-        private System.Windows.Forms.Button button40;
-        private System.Windows.Forms.TextBox textBox29;
-        private System.Windows.Forms.Label label70;
-        private System.Windows.Forms.Button button41;
-        private System.Windows.Forms.ComboBox comboBox1;
-        private System.Windows.Forms.TextBox textBox30;
-        private System.Windows.Forms.Label label71;
-        private System.Windows.Forms.Button button42;
-        private System.Windows.Forms.Button button43;
-        private System.Windows.Forms.Label label72;
-        private System.Windows.Forms.TextBox textBox31;
-        private System.Windows.Forms.Button button44;
-        private System.Windows.Forms.Button button45;
-        private System.Windows.Forms.TextBox textBox32;
-        private System.Windows.Forms.Button button46;
-        private System.Windows.Forms.Button button47;
-        private System.Windows.Forms.Label label73;
-        private System.Windows.Forms.TextBox textBox33;
-        private System.Windows.Forms.Label label74;
-        private System.Windows.Forms.Button button48;
-        private System.Windows.Forms.Label label75;
-        private System.Windows.Forms.TextBox textBox34;
-        private System.Windows.Forms.GroupBox groupBox23;
-        private System.Windows.Forms.Panel panel17;
-        private System.Windows.Forms.Panel panel18;
-        private System.Windows.Forms.TextBox textBox35;
-        private System.Windows.Forms.TextBox textBox36;
-        private System.Windows.Forms.Button button49;
-        private System.Windows.Forms.Button button50;
-        private System.Windows.Forms.Button button51;
-        private System.Windows.Forms.TextBox textBox37;
-        private System.Windows.Forms.Label label76;
-        private System.Windows.Forms.Button button52;
-        private System.Windows.Forms.ComboBox comboBox2;
-        private System.Windows.Forms.TextBox textBox38;
-        private System.Windows.Forms.Label label77;
-        private System.Windows.Forms.Button button53;
-        private System.Windows.Forms.Button button54;
-        private System.Windows.Forms.Label label78;
-        private System.Windows.Forms.Button button55;
-        private System.Windows.Forms.Button button56;
-        private System.Windows.Forms.TextBox textBox39;
-        private System.Windows.Forms.Button button57;
-        private System.Windows.Forms.Button button58;
-        private System.Windows.Forms.Label label79;
-        private System.Windows.Forms.TextBox textBox40;
-        private System.Windows.Forms.Label label80;
-        private System.Windows.Forms.Button button59;
-        private System.Windows.Forms.Label label81;
         private System.Controls.SplitButton splitButton5;
         private System.Windows.Forms.TabControl tabControl3;
         private System.Windows.Forms.TabPage tabPage11;
@@ -8017,13 +6972,13 @@
         private System.Windows.Forms.Label label192;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel27;
         private System.Windows.Forms.ContextMenuStrip contextMenuStrip4;
-        private System.Windows.Forms.ToolStripMenuItem toolStripMenuItem4;
-        private System.Windows.Forms.ToolStripMenuItem toolStripMenuItem5;
-        private System.Windows.Forms.ToolStripMenuItem toolStripMenuItem6;
-        private System.Windows.Forms.ToolStripMenuItem toolStripMenuItem7;
-        private System.Windows.Forms.ToolStripMenuItem toolStripMenuItem8;
-        private System.Windows.Forms.ToolStripMenuItem toolStripMenuItem9;
-        private System.Windows.Forms.ToolStripMenuItem toolStripMenuItem10;
+        private System.Windows.Forms.ToolStripMenuItem initToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem orgToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem manualToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem ioToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem llSetToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem unitdatatoolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem transTestToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem settingToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem terminalToolStripMenuItem;
         private System.Windows.Forms.Button button70;
@@ -8038,7 +6993,7 @@
         private System.Windows.Forms.Label label193;
         private System.Windows.Forms.TabPage tabStatus;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel26;
-        private System.Windows.Forms.DataGridView dataGridView2;
+        private System.Windows.Forms.DataGridView dgvRstatus;
         private System.Windows.Forms.Panel pnlRobotState;
         private System.Windows.Forms.VScrollBar vSBRobotStatus;
         private System.Windows.Forms.PictureBox pbRobotState;
@@ -8048,6 +7003,28 @@
         private System.Windows.Forms.Panel pnlPortState;
         private System.Windows.Forms.VScrollBar vSBPortStatus;
         private System.Windows.Forms.PictureBox pbPortState;
+        private System.Windows.Forms.DataGridView dgvLstatus;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn2;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn3;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn14;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn16;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn17;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn20;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn21;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn30;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn32;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn34;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn36;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn40;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn41;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn42;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn43;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn44;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn45;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn46;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn47;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn48;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column0;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column2;
@@ -8081,29 +7058,7 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn Column30;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column31;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column32;
-        private System.Windows.Forms.DataGridView dataGridView8;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn2;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn3;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn14;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn16;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn17;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn20;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn21;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn30;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn32;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn34;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn36;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn40;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn41;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn42;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn43;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn44;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn45;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn46;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn47;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn48;
-        private System.Windows.Forms.DataGridView dataGridView10;
+        private System.Windows.Forms.DataGridView dgvAstatus;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn49;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn50;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn51;

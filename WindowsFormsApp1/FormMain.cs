@@ -689,51 +689,56 @@ namespace Adam
             switch (e.TabPage.Text)
             {
                 case "Status":
-                    //System.Text.StringBuilder messageBoxCS = new System.Text.StringBuilder();
-                    //messageBoxCS.AppendFormat("{0} = {1}", "TabPage", e.TabPage.Text);
-                    //messageBoxCS.AppendLine();
-                    //MessageBox.Show(messageBoxCS.ToString(), "Selected Event");
-                    ArrayList tbllayout = new ArrayList();
-                    //tbllayout.Add(tblLayoutR1);
-                    //tbllayout.Add(tblLayoutR2);
-                    //tbllayout.Add(tblLayoutA1);
-                    //tbllayout.Add(tblLayoutA2);
-                    /*tbllayout.Add(tblLayoutL1);
-                    tbllayout.Add(tblLayoutL2);
-                    tbllayout.Add(tblLayoutL3);
-                    tbllayout.Add(tblLayoutL4);
-                    tbllayout.Add(tblLayoutL5);
-                    tbllayout.Add(tblLayoutL6);
-                    tbllayout.Add(tblLayoutL7);
-                    tbllayout.Add(tblLayoutL8);*/
+                    string[] r_status = new string[] { "01010101011111010111101111101011", "01011101011111010111101010101011" };
+                    string[] a_status = new string[] { "01110101011111010111101010101011", "11010101011111010111101010101011" };
+                    string[] l_status = new string[] { "111101010?1?2101100?", "1211010101?210?11001", "1111010101?2101100?1", "1111010101?210?11001",
+                                                       "2111010101?210?11001", "111101?0101210?11001", "1011010101?210?11001", "011101?101210?11001"};
 
-                    foreach (TableLayoutPanel pnl in tbllayout)
-                    {                        
-                        for (int c = 0; c < pnl.ColumnCount; c++)
-                        {
-                            for (int r = 0; r < pnl.RowCount; r++)
-                            {
-                                var control = pnl.GetControlFromPosition(c, r);
-                                pnl.Controls.Remove(control);
-                            }
-                        }
-                    }
-                    
-                    /*for (int c=0; c< tblLayoutA1.ColumnCount;c++)
+                    //add robot status
+                    dgvRstatus.Rows.Clear();
+                    for (int i = 0; i < r_status.Length ; i++)
                     {
-                        for (int r = 0; r < tblLayoutA1.RowCount; r++)
+                        DataGridViewRow row = (DataGridViewRow)dgvRstatus.Rows[0].Clone();
+                        String robot = "Robot" + (i + 1);
+                        row.Cells[0].Value = robot;
+                        for(int j = 0; j < r_status[i].Length; j++)
                         {
-                            tblLayoutA1.Controls.RemoveByKey("status" + c + r);
-                            Label kuma = new System.Windows.Forms.Label();
-                            kuma.BackColor = System.Drawing.Color.Gold;
-                            kuma.Dock = DockStyle.Fill;
-                            kuma.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-                            kuma.Name = "status" + c + r;
-                            kuma.Text = "status" + c + r + (new Random()).Next(100);
-                            kuma.TextAlign = ContentAlignment.MiddleCenter;
-                            tblLayoutA1.Controls.Add(kuma, c, r);
+                            string status = r_status[i].Substring(j, 1);
+                            row.Cells[j + 1].Value = status;
+                            row.Cells[j + 1].Style.BackColor = ConfigUtil.GetStatusColor("Robot","Sanwa", status);
                         }
-                    }*/
+                        dgvRstatus.Rows.Add(row);
+                    }
+                    //add aligner status
+                    dgvAstatus.Rows.Clear();
+                    for (int i = 0; i < a_status.Length ; i++)
+                    {
+                        DataGridViewRow row = (DataGridViewRow)dgvAstatus.Rows[0].Clone();
+                        String robot = "Aligner" + (i + 1);
+                        row.Cells[0].Value = robot;
+                        for (int j = 0; j < a_status[i].Length; j++)
+                        {
+                            string status = a_status[i].Substring(j, 1);
+                            row.Cells[j + 1].Value = status;
+                            row.Cells[j + 1].Style.BackColor = ConfigUtil.GetStatusColor("Aligner", "Sanwa", status);
+                        }
+                        dgvAstatus.Rows.Add(row);
+                    }
+                    //add load port status        
+                    dgvLstatus.Rows.Clear();
+                    for (int i = 0; i < l_status.Length ; i++)
+                    {
+                        DataGridViewRow row = (DataGridViewRow)dgvLstatus.Rows[0].Clone();
+                        String robot = "LoadPort" + (i + 1);
+                        row.Cells[0].Value = robot;
+                        for (int j = 0; j < l_status[i].Length; j++)
+                        {
+                            string status = l_status[i].Substring(j, 1);
+                            row.Cells[j + 1].Value = status;
+                            row.Cells[j + 1].Style.BackColor = ConfigUtil.GetStatusColor("LoadPort", "TDK", status);
+                        }
+                        dgvLstatus.Rows.Add(row);
+                    }
                     break;
                 default:
                     break;

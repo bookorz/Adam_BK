@@ -1,13 +1,14 @@
 ﻿using System;
 using System.Collections;
 using System.Collections.Generic;
+using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
 namespace Adam
 {
-    class ConfigUtil
+    static class ConfigUtil
     {
         public class digitState
         {
@@ -19,7 +20,36 @@ namespace Adam
                 this.define = define;
             }
         }
-        public List<KeyValuePair<string, int>> GetPointList()
+        static public Color GetStatusColor(string device_type, string vendor, string status)
+        {
+            Color color = Color.White;
+            switch (status)
+            {
+                case "0":
+                    color = Color.LightGray;
+                    break;
+                case "1":
+                    color = Color.LightPink;
+                    break;
+                case "2":
+                    color = Color.Yellow;
+                    break;
+                case "3":
+                    color = Color.DimGray;
+                    break;
+                case "4":
+                    color = Color.DarkViolet;
+                    break;
+                case "5":
+                    color = Color.LightGreen;
+                    break;
+                case "?":
+                    color = Color.Gray;
+                    break;
+            }
+            return color;
+        }
+        static public List<KeyValuePair<string, int>> GetPointList()
         {
             var list = new List<KeyValuePair<string, int>>() {
                 new KeyValuePair<string, int>("Port1", 1201),
@@ -35,7 +65,7 @@ namespace Adam
             };
             return list;
         }
-        public digitState[] GetRobotStatusItem(string vendor)
+        static public digitState[] GetRobotStatusItem(string vendor)
         {
             digitState[] states ; 
             switch (vendor){
@@ -144,7 +174,7 @@ namespace Adam
             }         
             return states;          
         }
-        public digitState[] GetLoadPortStatusItem(string vendor)
+        static public digitState[] GetLoadPortStatusItem(string vendor)
         {
             digitState[] states;
             switch (vendor)
