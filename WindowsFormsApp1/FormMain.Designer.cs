@@ -105,16 +105,16 @@
             this.Connection = new myButtonCheckTest.myButtonCheck();
             this.button27 = new System.Windows.Forms.Button();
             this.groupBox5 = new System.Windows.Forms.GroupBox();
-            this.button17 = new System.Windows.Forms.Button();
-            this.button16 = new System.Windows.Forms.Button();
-            this.button15 = new System.Windows.Forms.Button();
-            this.button14 = new System.Windows.Forms.Button();
-            this.button13 = new System.Windows.Forms.Button();
-            this.button12 = new System.Windows.Forms.Button();
-            this.button11 = new System.Windows.Forms.Button();
-            this.button10 = new System.Windows.Forms.Button();
-            this.button9 = new System.Windows.Forms.Button();
-            this.button7 = new System.Windows.Forms.Button();
+            this.DifferentialManometer_Signal = new System.Windows.Forms.Button();
+            this.LoadPortAir_Signal = new System.Windows.Forms.Button();
+            this.SafetyRelay_Signal = new System.Windows.Forms.Button();
+            this.DifferentialPressure_Signal = new System.Windows.Forms.Button();
+            this.Ionizer_Signal = new System.Windows.Forms.Button();
+            this.FFU_Signal = new System.Windows.Forms.Button();
+            this.DrivePower_Signal = new System.Windows.Forms.Button();
+            this.Air_Signal = new System.Windows.Forms.Button();
+            this.Vacuum_Signal = new System.Windows.Forms.Button();
+            this.DoorSwitch_Signal = new System.Windows.Forms.Button();
             this.button6 = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
@@ -128,10 +128,10 @@
             this.Conn_gv = new System.Windows.Forms.DataGridView();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
-            this.panel8 = new System.Windows.Forms.Panel();
-            this.panel5 = new System.Windows.Forms.Panel();
-            this.panel6 = new System.Windows.Forms.Panel();
-            this.panel7 = new System.Windows.Forms.Panel();
+            this.Blue_St = new System.Windows.Forms.Panel();
+            this.Red_St = new System.Windows.Forms.Panel();
+            this.Orange_St = new System.Windows.Forms.Panel();
+            this.Green_St = new System.Windows.Forms.Panel();
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
             this.Aligner01_tb = new System.Windows.Forms.GroupBox();
@@ -651,6 +651,10 @@
             this.toolStripMenuItem10 = new System.Windows.Forms.ToolStripMenuItem();
             this.terminalToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.panel3 = new System.Windows.Forms.Panel();
+            this.button7 = new System.Windows.Forms.Button();
+            this.button9 = new System.Windows.Forms.Button();
+            this.button10 = new System.Windows.Forms.Button();
+            this.button11 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer5)).BeginInit();
             this.splitContainer5.Panel1.SuspendLayout();
             this.splitContainer5.Panel2.SuspendLayout();
@@ -730,6 +734,10 @@
             ((System.ComponentModel.ISupportInitialize)(this.Conn_gv)).BeginInit();
             this.groupBox2.SuspendLayout();
             this.tableLayoutPanel2.SuspendLayout();
+            this.Blue_St.SuspendLayout();
+            this.Red_St.SuspendLayout();
+            this.Orange_St.SuspendLayout();
+            this.Green_St.SuspendLayout();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             this.Aligner01_tb.SuspendLayout();
@@ -1566,92 +1574,92 @@
             // 
             // groupBox5
             // 
-            this.groupBox5.Controls.Add(this.button17);
-            this.groupBox5.Controls.Add(this.button16);
-            this.groupBox5.Controls.Add(this.button15);
-            this.groupBox5.Controls.Add(this.button14);
-            this.groupBox5.Controls.Add(this.button13);
-            this.groupBox5.Controls.Add(this.button12);
-            this.groupBox5.Controls.Add(this.button11);
-            this.groupBox5.Controls.Add(this.button10);
-            this.groupBox5.Controls.Add(this.button9);
-            this.groupBox5.Controls.Add(this.button7);
+            this.groupBox5.Controls.Add(this.DifferentialManometer_Signal);
+            this.groupBox5.Controls.Add(this.LoadPortAir_Signal);
+            this.groupBox5.Controls.Add(this.SafetyRelay_Signal);
+            this.groupBox5.Controls.Add(this.DifferentialPressure_Signal);
+            this.groupBox5.Controls.Add(this.Ionizer_Signal);
+            this.groupBox5.Controls.Add(this.FFU_Signal);
+            this.groupBox5.Controls.Add(this.DrivePower_Signal);
+            this.groupBox5.Controls.Add(this.Air_Signal);
+            this.groupBox5.Controls.Add(this.Vacuum_Signal);
+            this.groupBox5.Controls.Add(this.DoorSwitch_Signal);
             this.groupBox5.Controls.Add(this.button6);
             resources.ApplyResources(this.groupBox5, "groupBox5");
             this.groupBox5.Name = "groupBox5";
             this.groupBox5.TabStop = false;
             this.groupBox5.Enter += new System.EventHandler(this.groupBox5_Enter);
             // 
-            // button17
+            // DifferentialManometer_Signal
             // 
-            resources.ApplyResources(this.button17, "button17");
-            this.button17.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
-            this.button17.Name = "button17";
-            this.button17.UseVisualStyleBackColor = false;
+            resources.ApplyResources(this.DifferentialManometer_Signal, "DifferentialManometer_Signal");
+            this.DifferentialManometer_Signal.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
+            this.DifferentialManometer_Signal.Name = "DifferentialManometer_Signal";
+            this.DifferentialManometer_Signal.UseVisualStyleBackColor = false;
             // 
-            // button16
+            // LoadPortAir_Signal
             // 
-            resources.ApplyResources(this.button16, "button16");
-            this.button16.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
-            this.button16.Name = "button16";
-            this.button16.UseVisualStyleBackColor = false;
+            resources.ApplyResources(this.LoadPortAir_Signal, "LoadPortAir_Signal");
+            this.LoadPortAir_Signal.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
+            this.LoadPortAir_Signal.Name = "LoadPortAir_Signal";
+            this.LoadPortAir_Signal.UseVisualStyleBackColor = false;
             // 
-            // button15
+            // SafetyRelay_Signal
             // 
-            resources.ApplyResources(this.button15, "button15");
-            this.button15.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
-            this.button15.Name = "button15";
-            this.button15.UseVisualStyleBackColor = false;
+            resources.ApplyResources(this.SafetyRelay_Signal, "SafetyRelay_Signal");
+            this.SafetyRelay_Signal.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
+            this.SafetyRelay_Signal.Name = "SafetyRelay_Signal";
+            this.SafetyRelay_Signal.UseVisualStyleBackColor = false;
             // 
-            // button14
+            // DifferentialPressure_Signal
             // 
-            resources.ApplyResources(this.button14, "button14");
-            this.button14.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
-            this.button14.Name = "button14";
-            this.button14.UseVisualStyleBackColor = false;
+            resources.ApplyResources(this.DifferentialPressure_Signal, "DifferentialPressure_Signal");
+            this.DifferentialPressure_Signal.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
+            this.DifferentialPressure_Signal.Name = "DifferentialPressure_Signal";
+            this.DifferentialPressure_Signal.UseVisualStyleBackColor = false;
             // 
-            // button13
+            // Ionizer_Signal
             // 
-            resources.ApplyResources(this.button13, "button13");
-            this.button13.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
-            this.button13.Name = "button13";
-            this.button13.UseVisualStyleBackColor = false;
+            resources.ApplyResources(this.Ionizer_Signal, "Ionizer_Signal");
+            this.Ionizer_Signal.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
+            this.Ionizer_Signal.Name = "Ionizer_Signal";
+            this.Ionizer_Signal.UseVisualStyleBackColor = false;
             // 
-            // button12
+            // FFU_Signal
             // 
-            resources.ApplyResources(this.button12, "button12");
-            this.button12.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
-            this.button12.Name = "button12";
-            this.button12.UseVisualStyleBackColor = false;
+            resources.ApplyResources(this.FFU_Signal, "FFU_Signal");
+            this.FFU_Signal.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
+            this.FFU_Signal.Name = "FFU_Signal";
+            this.FFU_Signal.UseVisualStyleBackColor = false;
             // 
-            // button11
+            // DrivePower_Signal
             // 
-            resources.ApplyResources(this.button11, "button11");
-            this.button11.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
-            this.button11.Name = "button11";
-            this.button11.UseVisualStyleBackColor = false;
+            resources.ApplyResources(this.DrivePower_Signal, "DrivePower_Signal");
+            this.DrivePower_Signal.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
+            this.DrivePower_Signal.Name = "DrivePower_Signal";
+            this.DrivePower_Signal.UseVisualStyleBackColor = false;
             // 
-            // button10
+            // Air_Signal
             // 
-            resources.ApplyResources(this.button10, "button10");
-            this.button10.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
-            this.button10.Name = "button10";
-            this.button10.UseVisualStyleBackColor = false;
+            resources.ApplyResources(this.Air_Signal, "Air_Signal");
+            this.Air_Signal.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
+            this.Air_Signal.Name = "Air_Signal";
+            this.Air_Signal.UseVisualStyleBackColor = false;
             // 
-            // button9
+            // Vacuum_Signal
             // 
-            resources.ApplyResources(this.button9, "button9");
-            this.button9.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
-            this.button9.Name = "button9";
-            this.button9.UseVisualStyleBackColor = false;
+            resources.ApplyResources(this.Vacuum_Signal, "Vacuum_Signal");
+            this.Vacuum_Signal.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
+            this.Vacuum_Signal.Name = "Vacuum_Signal";
+            this.Vacuum_Signal.UseVisualStyleBackColor = false;
             // 
-            // button7
+            // DoorSwitch_Signal
             // 
-            resources.ApplyResources(this.button7, "button7");
-            this.button7.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
-            this.button7.Name = "button7";
-            this.button7.UseVisualStyleBackColor = false;
-            this.button7.Click += new System.EventHandler(this.button7_Click);
+            resources.ApplyResources(this.DoorSwitch_Signal, "DoorSwitch_Signal");
+            this.DoorSwitch_Signal.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
+            this.DoorSwitch_Signal.Name = "DoorSwitch_Signal";
+            this.DoorSwitch_Signal.UseVisualStyleBackColor = false;
+            this.DoorSwitch_Signal.Click += new System.EventHandler(this.button7_Click);
             // 
             // button6
             // 
@@ -1757,35 +1765,43 @@
             // tableLayoutPanel2
             // 
             resources.ApplyResources(this.tableLayoutPanel2, "tableLayoutPanel2");
-            this.tableLayoutPanel2.Controls.Add(this.panel8, 0, 3);
-            this.tableLayoutPanel2.Controls.Add(this.panel5, 0, 0);
-            this.tableLayoutPanel2.Controls.Add(this.panel6, 0, 1);
-            this.tableLayoutPanel2.Controls.Add(this.panel7, 0, 2);
+            this.tableLayoutPanel2.Controls.Add(this.Blue_St, 0, 3);
+            this.tableLayoutPanel2.Controls.Add(this.Red_St, 0, 0);
+            this.tableLayoutPanel2.Controls.Add(this.Orange_St, 0, 1);
+            this.tableLayoutPanel2.Controls.Add(this.Green_St, 0, 2);
             this.tableLayoutPanel2.Name = "tableLayoutPanel2";
             // 
-            // panel8
+            // Blue_St
             // 
-            this.panel8.BackColor = System.Drawing.Color.Blue;
-            resources.ApplyResources(this.panel8, "panel8");
-            this.panel8.Name = "panel8";
+            this.Blue_St.BackColor = System.Drawing.Color.Blue;
+            resources.ApplyResources(this.Blue_St, "Blue_St");
+            this.Blue_St.Controls.Add(this.button11);
+            this.Blue_St.Name = "Blue_St";
+            this.Blue_St.Click += new System.EventHandler(this.Blue_St_Click);
             // 
-            // panel5
+            // Red_St
             // 
-            this.panel5.BackColor = System.Drawing.Color.Red;
-            resources.ApplyResources(this.panel5, "panel5");
-            this.panel5.Name = "panel5";
+            this.Red_St.BackColor = System.Drawing.Color.Red;
+            resources.ApplyResources(this.Red_St, "Red_St");
+            this.Red_St.Controls.Add(this.button7);
+            this.Red_St.Name = "Red_St";
+            this.Red_St.Click += new System.EventHandler(this.panel5_Click);
             // 
-            // panel6
+            // Orange_St
             // 
-            this.panel6.BackColor = System.Drawing.Color.DarkOrange;
-            resources.ApplyResources(this.panel6, "panel6");
-            this.panel6.Name = "panel6";
+            this.Orange_St.BackColor = System.Drawing.Color.DarkOrange;
+            resources.ApplyResources(this.Orange_St, "Orange_St");
+            this.Orange_St.Controls.Add(this.button9);
+            this.Orange_St.Name = "Orange_St";
+            this.Orange_St.Click += new System.EventHandler(this.Orange_St_Click);
             // 
-            // panel7
+            // Green_St
             // 
-            this.panel7.BackColor = System.Drawing.Color.Green;
-            resources.ApplyResources(this.panel7, "panel7");
-            this.panel7.Name = "panel7";
+            this.Green_St.BackColor = System.Drawing.Color.Green;
+            resources.ApplyResources(this.Green_St, "Green_St");
+            this.Green_St.Controls.Add(this.button10);
+            this.Green_St.Name = "Green_St";
+            this.Green_St.Click += new System.EventHandler(this.Green_St_Click);
             // 
             // tabControl1
             // 
@@ -6361,6 +6377,34 @@
             this.panel3.Name = "panel3";
             this.panel3.Paint += new System.Windows.Forms.PaintEventHandler(this.panel3_Paint);
             // 
+            // button7
+            // 
+            resources.ApplyResources(this.button7, "button7");
+            this.button7.Name = "button7";
+            this.button7.UseVisualStyleBackColor = true;
+            this.button7.Click += new System.EventHandler(this.button7_Click_1);
+            // 
+            // button9
+            // 
+            resources.ApplyResources(this.button9, "button9");
+            this.button9.Name = "button9";
+            this.button9.UseVisualStyleBackColor = true;
+            this.button9.Click += new System.EventHandler(this.button9_Click);
+            // 
+            // button10
+            // 
+            resources.ApplyResources(this.button10, "button10");
+            this.button10.Name = "button10";
+            this.button10.UseVisualStyleBackColor = true;
+            this.button10.Click += new System.EventHandler(this.button10_Click);
+            // 
+            // button11
+            // 
+            resources.ApplyResources(this.button11, "button11");
+            this.button11.Name = "button11";
+            this.button11.UseVisualStyleBackColor = true;
+            this.button11.Click += new System.EventHandler(this.button11_Click);
+            // 
             // FormMain
             // 
             resources.ApplyResources(this, "$this");
@@ -6459,6 +6503,10 @@
             ((System.ComponentModel.ISupportInitialize)(this.Conn_gv)).EndInit();
             this.groupBox2.ResumeLayout(false);
             this.tableLayoutPanel2.ResumeLayout(false);
+            this.Blue_St.ResumeLayout(false);
+            this.Red_St.ResumeLayout(false);
+            this.Orange_St.ResumeLayout(false);
+            this.Green_St.ResumeLayout(false);
             this.tabControl1.ResumeLayout(false);
             this.tabPage1.ResumeLayout(false);
             this.Aligner01_tb.ResumeLayout(false);
@@ -6675,10 +6723,10 @@
         private System.Windows.Forms.Button button5;
         private System.Windows.Forms.GroupBox groupBox2;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel2;
-        private System.Windows.Forms.Panel panel8;
-        private System.Windows.Forms.Panel panel5;
-        private System.Windows.Forms.Panel panel6;
-        private System.Windows.Forms.Panel panel7;
+        private System.Windows.Forms.Panel Blue_St;
+        private System.Windows.Forms.Panel Red_St;
+        private System.Windows.Forms.Panel Orange_St;
+        private System.Windows.Forms.Panel Green_St;
         private System.Windows.Forms.GroupBox groupBox3;
         private System.Windows.Forms.DataGridView Conn_gv;
         private System.Windows.Forms.PictureBox pictureBox1;
@@ -6689,17 +6737,17 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.GroupBox groupBox5;
         private System.Windows.Forms.GroupBox Aligner01_tb;
-        private System.Windows.Forms.Button button14;
-        private System.Windows.Forms.Button button13;
-        private System.Windows.Forms.Button button12;
-        private System.Windows.Forms.Button button11;
-        private System.Windows.Forms.Button button10;
-        private System.Windows.Forms.Button button9;
-        private System.Windows.Forms.Button button7;
+        private System.Windows.Forms.Button DifferentialPressure_Signal;
+        private System.Windows.Forms.Button Ionizer_Signal;
+        private System.Windows.Forms.Button FFU_Signal;
+        private System.Windows.Forms.Button DrivePower_Signal;
+        private System.Windows.Forms.Button Air_Signal;
+        private System.Windows.Forms.Button Vacuum_Signal;
+        private System.Windows.Forms.Button DoorSwitch_Signal;
         private System.Windows.Forms.Button button6;
-        private System.Windows.Forms.Button button17;
-        private System.Windows.Forms.Button button16;
-        private System.Windows.Forms.Button button15;
+        private System.Windows.Forms.Button DifferentialManometer_Signal;
+        private System.Windows.Forms.Button LoadPortAir_Signal;
+        private System.Windows.Forms.Button SafetyRelay_Signal;
         private System.Windows.Forms.TextBox Robot01_State;
         private System.Windows.Forms.Label label16;
         private System.Windows.Forms.TextBox Aligner02_State;
@@ -7278,6 +7326,10 @@
         private System.Windows.Forms.Button button71;
         private System.Windows.Forms.Label label194;
         private System.Windows.Forms.Label label193;
+        private System.Windows.Forms.Button button7;
+        private System.Windows.Forms.Button button9;
+        private System.Windows.Forms.Button button11;
+        private System.Windows.Forms.Button button10;
     }
 }
 

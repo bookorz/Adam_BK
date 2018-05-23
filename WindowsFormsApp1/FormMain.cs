@@ -16,20 +16,22 @@ using Adam.UI_Update.Monitoring;
 using log4net;
 using Newtonsoft.Json;
 using Adam.UI_Update.Manual;
+using DIOControl;
+using Adam.UI_Update.Layout;
 
 namespace Adam
 {
-    public partial class FormMain : Form, IEngineReport
+    public partial class FormMain : Form, IEngineReport, IDIOTriggerReport
     {
         public static RouteControl RouteCtrl;
+        public static DIO DigitalDIO;
         private static readonly ILog logger = LogManager.GetLogger(typeof(FormMain));
 
         public FormMain()
         {
             InitializeComponent();
             XmlConfigurator.Configure();
-            Initialize();
-            RouteCtrl = new RouteControl(this);
+            
 
             ts.SelectedIndex = 0;
             t2.Text = "CURRENT USER NAME";
@@ -80,7 +82,9 @@ namespace Adam
 
         private void Initialize()
         {
-            PathManagement.LoadConfig();
+            PathManagement.LoadConfig();          
+            RouteCtrl = new RouteControl(this);
+            DigitalDIO = new DIO(this);
         }
 
         private void panel2_Paint(object sender, PaintEventArgs e)
@@ -95,6 +99,8 @@ namespace Adam
 
         private void Form1_Load(object sender, EventArgs e)
         {
+            Initialize();
+
             DataTable dtConnectStatus = new DataTable();
             DataTable dtLoadPort01 = new DataTable();
             DataTable dtAligner01 = new DataTable();
@@ -680,6 +686,97 @@ namespace Adam
                 //test
 				//yyyy
             }
+        }
+
+        public void On_Data_Chnaged(string Parameter, string Value)
+        {
+            switch (Parameter)
+            {
+                case "Red":
+                case "Orange":
+                case "Green":
+                case "Blue":
+                    DIOUpdate.UpdateSignalTower(Parameter, Value);
+                    break;
+                default:
+                    DIOUpdate.UpdateDIOStatus(Parameter, Value);
+                    break;
+            }
+            
+
+        }
+
+        public void On_Error_Occurred(string ErrorMsg)
+        {
+            
+        }
+
+        private void panel5_Click(object sender, EventArgs e)
+        {
+            if (Red_St.BackColor == Color.Red) {
+                DigitalDIO.SetIO("Red", "false");
+            }
+            else
+            {
+                DigitalDIO.SetIO("Red","true");
+            }
+            
+        }
+
+        private void Orange_St_Click(object sender, EventArgs e)
+        {
+            if (Orange_St.BackColor == Color.DarkOrange)
+            {
+                DigitalDIO.SetIO("Orange", "false");
+            }
+            else
+            {
+                DigitalDIO.SetIO("Orange", "true");
+            }
+        }
+
+        private void Green_St_Click(object sender, EventArgs e)
+        {
+            if (Green_St.BackColor == Color.Green)
+            {
+                DigitalDIO.SetIO("Green", "false");
+            }
+            else
+            {
+                DigitalDIO.SetIO("Green", "true");
+            }
+        }
+
+        private void Blue_St_Click(object sender, EventArgs e)
+        {
+            if (Blue_St.BackColor == Color.Blue)
+            {
+                DigitalDIO.SetIO("Blue", "false");
+            }
+            else
+            {
+                DigitalDIO.SetIO("Blue", "true");
+            }
+        }
+
+        private void button7_Click_1(object sender, EventArgs e)
+        {
+            DigitalDIO.SetBlink("Red","TRUE");
+        }
+
+        private void button9_Click(object sender, EventArgs e)
+        {
+            DigitalDIO.SetBlink("Orange", "TRUE");
+        }
+
+        private void button10_Click(object sender, EventArgs e)
+        {
+            DigitalDIO.SetBlink("Green", "TRUE");
+        }
+
+        private void button11_Click(object sender, EventArgs e)
+        {
+            DigitalDIO.SetBlink("Blue", "TRUE");
         }
     }
 }

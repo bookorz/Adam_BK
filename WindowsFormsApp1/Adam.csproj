@@ -37,7 +37,7 @@
   <ItemGroup>
     <Reference Include="log4net, Version=2.0.8.0, Culture=neutral, PublicKeyToken=669e0ddf0bb1aa2a, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\..\..\..\Downloads\log4net-2.0.8-bin-newkey\log4net-2.0.8\bin\net\4.5\release\log4net.dll</HintPath>
+      <HintPath>..\..\SANWA-Function-For-Test\log4net.dll</HintPath>
     </Reference>
     <Reference Include="myButtonCheckTest">
       <HintPath>..\..\..\Downloads\myButtonCheckTest\myButtonCheckTest\bin\Debug\myButtonCheckTest.exe</HintPath>
@@ -154,6 +154,7 @@
     <Compile Include="FormTeaching.designer.cs">
       <DependentUpon>FormTeaching.cs</DependentUpon>
     </Compile>
+    <Compile Include="UI_Update\Layout\DIOUpdate.cs" />
     <Compile Include="UI_Update\Manual\PortStatusUpdate.cs" />
     <Compile Include="UI_Update\Monitoring\ConnectionStatusUpdate.cs" />
     <Compile Include="UI_Update\Monitoring\NodeStatusUpdate.cs" />
@@ -241,6 +242,10 @@
     <None Include="Resources\like.png" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\..\DIOControl\DIOControl\DIOControl.csproj">
+      <Project>{21adfcfc-11c7-4982-af57-09002ed8e961}</Project>
+      <Name>DIOControl</Name>
+    </ProjectReference>
     <ProjectReference Include="..\..\SANWAFunction\SANWA\SANWA\SANWA.csproj">
       <Project>{4eed2ed4-a72e-4f24-8d80-ef2f0b24fcf1}</Project>
       <Name>SANWA</Name>
