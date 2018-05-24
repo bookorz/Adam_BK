@@ -35,7 +35,7 @@ Name:"OCR01",
 Controller:"OCRController01",
 AdrNo:"1",
 Type:"OCR",
-Brand:"Cognex",
+Brand:"HST",
 RouteTable:[
 {NodeName:"Aligner01",NodeType:"Aligner"}
 ]
