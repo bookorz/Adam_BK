@@ -2,3 +2,10 @@
 /Adam.csprojAssemblyReference.cache
 /Adam.exe
 /Adam.pdb
+/Adam.FormMain.resources
+/Adam.csproj.GenerateResource.cache
+/Adam.csprojResolveAssemblyReference.cache
+*.csproj.GenerateResource.cache
+*.csprojResolveAssemblyReference.cache
+/Adam.Properties.Resources.resources
+/DesignTimeResolveAssemblyReferencesInput.cache

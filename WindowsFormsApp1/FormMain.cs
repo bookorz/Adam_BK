@@ -1,4 +1,4 @@
-﻿using SANWA.Utility;
+using SANWA.Utility;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -16,22 +16,21 @@ using Adam.UI_Update.Monitoring;
 using log4net;
 using Newtonsoft.Json;
 using Adam.UI_Update.Manual;
-using DIOControl;
-using Adam.UI_Update.Layout;
+using System.Collections;
 
 namespace Adam
 {
-    public partial class FormMain : Form, IEngineReport, IDIOTriggerReport
+    public partial class FormMain : Form, IEngineReport
     {
         public static RouteControl RouteCtrl;
-        public static DIO DigitalDIO;
         private static readonly ILog logger = LogManager.GetLogger(typeof(FormMain));
 
         public FormMain()
         {
             InitializeComponent();
             XmlConfigurator.Configure();
-            
+            Initialize();
+            RouteCtrl = new RouteControl(this);
 
             ts.SelectedIndex = 0;
             t2.Text = "CURRENT USER NAME";
@@ -78,13 +77,16 @@ namespace Adam
             dgDevice.Rows.Add("Load Port", "TDK", 3, "", "LoadPort03", true);
             dgDevice.Rows.Add("DIO", "Advantech", 1, "", "DIO1", true);
             dgDevice.Rows.Add("DIO", "Advantech", 2, "", "DIO2", true);
+
+            //vSBRobotStatus.Maximum = pbRobotState.Width - pnlRobotState.Width + vSBRobotStatus.Width; 水平
+            vSBRobotStatus.Maximum = pbRobotState.Height - pnlRobotState.Height + 40 ;//+ vSBRobotStatus.Height
+            vSBAlignerStatus.Maximum = pbAlignerState.Height - pnlAlignerState.Height + 40;// + vSBAlignerStatus.Height
+            vSBPortStatus.Maximum = pbPortState.Height - pnlPortState.Height  + 40;//+ vSBPortStatus.Height
         }
 
         private void Initialize()
         {
-            PathManagement.LoadConfig();          
-            RouteCtrl = new RouteControl(this);
-            DigitalDIO = new DIO(this);
+            PathManagement.LoadConfig();
         }
 
         private void panel2_Paint(object sender, PaintEventArgs e)
@@ -99,8 +101,6 @@ namespace Adam
 
         private void Form1_Load(object sender, EventArgs e)
         {
-            Initialize();
-
             DataTable dtConnectStatus = new DataTable();
             DataTable dtLoadPort01 = new DataTable();
             DataTable dtAligner01 = new DataTable();
@@ -454,10 +454,6 @@ namespace Adam
 
         }
 
-        private void tabControl1_SelectedIndexChanged(object sender, EventArgs e)
-        {
-
-        }
 
         private List<TabPage> hiddenPages = new List<TabPage>();
 
@@ -639,7 +635,7 @@ namespace Adam
                 splitButton5.BackColor = Color.Red;
                 splitButton5.Enabled = false;
                 button70.Enabled = false;
-                EnablePage(tabControl1.TabPages[7], false);
+                EnablePage(tabControl1.TabPages[5], false);
 
 
 
@@ -688,95 +684,85 @@ namespace Adam
             }
         }
 
-        public void On_Data_Chnaged(string Parameter, string Value)
+        private void tabControl1_Selected(object sender, TabControlEventArgs e)
         {
-            switch (Parameter)
+            switch (e.TabPage.Text)
             {
-                case "Red":
-                case "Orange":
-                case "Green":
-                case "Blue":
-                    DIOUpdate.UpdateSignalTower(Parameter, Value);
+                case "Status":
+                    string[] r_status = new string[] { "01010101011111010111101111101011", "01011101011111010111101010101011" };
+                    string[] a_status = new string[] { "01110101011111010111101010101011", "11010101011111010111101010101011" };
+                    string[] l_status = new string[] { "111101010?1?2101100?", "1211010101?210?11001", "1111010101?2101100?1", "1111010101?210?11001",
+                                                       "2111010101?210?11001", "111101?0101210?11001", "1011010101?210?11001", "011101?101210?11001"};
+
+                    //add robot status
+                    dgvRstatus.Rows.Clear();
+                    for (int i = 0; i < r_status.Length ; i++)
+                    {
+                        DataGridViewRow row = (DataGridViewRow)dgvRstatus.Rows[0].Clone();
+                        String robot = "Robot" + (i + 1);
+                        row.Cells[0].Value = robot;
+                        for(int j = 0; j < r_status[i].Length; j++)
+                        {
+                            string status = r_status[i].Substring(j, 1);
+                            row.Cells[j + 1].Value = status;
+                            row.Cells[j + 1].Style.BackColor = ConfigUtil.GetStatusColor("Robot","Sanwa", status);
+                        }
+                        dgvRstatus.Rows.Add(row);
+                    }
+                    //add aligner status
+                    dgvAstatus.Rows.Clear();
+                    for (int i = 0; i < a_status.Length ; i++)
+                    {
+                        DataGridViewRow row = (DataGridViewRow)dgvAstatus.Rows[0].Clone();
+                        String robot = "Aligner" + (i + 1);
+                        row.Cells[0].Value = robot;
+                        for (int j = 0; j < a_status[i].Length; j++)
+                        {
+                            string status = a_status[i].Substring(j, 1);
+                            row.Cells[j + 1].Value = status;
+                            row.Cells[j + 1].Style.BackColor = ConfigUtil.GetStatusColor("Aligner", "Sanwa", status);
+                        }
+                        dgvAstatus.Rows.Add(row);
+                    }
+                    //add load port status        
+                    dgvLstatus.Rows.Clear();
+                    for (int i = 0; i < l_status.Length ; i++)
+                    {
+                        DataGridViewRow row = (DataGridViewRow)dgvLstatus.Rows[0].Clone();
+                        String robot = "LoadPort" + (i + 1);
+                        row.Cells[0].Value = robot;
+                        for (int j = 0; j < l_status[i].Length; j++)
+                        {
+                            string status = l_status[i].Substring(j, 1);
+                            row.Cells[j + 1].Value = status;
+                            row.Cells[j + 1].Style.BackColor = ConfigUtil.GetStatusColor("LoadPort", "TDK", status);
+                        }
+                        dgvLstatus.Rows.Add(row);
+                    }
                     break;
                 default:
-                    DIOUpdate.UpdateDIOStatus(Parameter, Value);
                     break;
             }
-            
+        }
+
+        private void label82_Click(object sender, EventArgs e)
+        {
 
         }
 
-        public void On_Error_Occurred(string ErrorMsg)
+        private void vSBRobotStatus_Scroll(object sender, ScrollEventArgs e)
         {
-            
+            pbRobotState.Top = -vSBRobotStatus.Value;
         }
 
-        private void panel5_Click(object sender, EventArgs e)
+        private void vSBAlignerStatus_Scroll(object sender, ScrollEventArgs e)
         {
-            if (Red_St.BackColor == Color.Red) {
-                DigitalDIO.SetIO("Red", "false");
-            }
-            else
-            {
-                DigitalDIO.SetIO("Red","true");
-            }
-            
+            pbAlignerState.Top = -vSBAlignerStatus.Value;
         }
 
-        private void Orange_St_Click(object sender, EventArgs e)
+        private void vSBPortStatus_Scroll(object sender, ScrollEventArgs e)
         {
-            if (Orange_St.BackColor == Color.DarkOrange)
-            {
-                DigitalDIO.SetIO("Orange", "false");
-            }
-            else
-            {
-                DigitalDIO.SetIO("Orange", "true");
-            }
-        }
-
-        private void Green_St_Click(object sender, EventArgs e)
-        {
-            if (Green_St.BackColor == Color.Green)
-            {
-                DigitalDIO.SetIO("Green", "false");
-            }
-            else
-            {
-                DigitalDIO.SetIO("Green", "true");
-            }
-        }
-
-        private void Blue_St_Click(object sender, EventArgs e)
-        {
-            if (Blue_St.BackColor == Color.Blue)
-            {
-                DigitalDIO.SetIO("Blue", "false");
-            }
-            else
-            {
-                DigitalDIO.SetIO("Blue", "true");
-            }
-        }
-
-        private void button7_Click_1(object sender, EventArgs e)
-        {
-            DigitalDIO.SetBlink("Red","TRUE");
-        }
-
-        private void button9_Click(object sender, EventArgs e)
-        {
-            DigitalDIO.SetBlink("Orange", "TRUE");
-        }
-
-        private void button10_Click(object sender, EventArgs e)
-        {
-            DigitalDIO.SetBlink("Green", "TRUE");
-        }
-
-        private void button11_Click(object sender, EventArgs e)
-        {
-            DigitalDIO.SetBlink("Blue", "TRUE");
+            pbPortState.Top = -vSBPortStatus.Value;
         }
     }
 }

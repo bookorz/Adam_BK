@@ -62,6 +62,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="ConfigUtil.cs" />
     <Compile Include="FormAlarm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -154,7 +155,6 @@
     <Compile Include="FormTeaching.designer.cs">
       <DependentUpon>FormTeaching.cs</DependentUpon>
     </Compile>
-    <Compile Include="UI_Update\Layout\DIOUpdate.cs" />
     <Compile Include="UI_Update\Manual\PortStatusUpdate.cs" />
     <Compile Include="UI_Update\Monitoring\ConnectionStatusUpdate.cs" />
     <Compile Include="UI_Update\Monitoring\NodeStatusUpdate.cs" />
@@ -242,10 +242,6 @@
     <None Include="Resources\like.png" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\..\DIOControl\DIOControl\DIOControl.csproj">
-      <Project>{21adfcfc-11c7-4982-af57-09002ed8e961}</Project>
-      <Name>DIOControl</Name>
-    </ProjectReference>
     <ProjectReference Include="..\..\SANWAFunction\SANWA\SANWA\SANWA.csproj">
       <Project>{4eed2ed4-a72e-4f24-8d80-ef2f0b24fcf1}</Project>
       <Name>SANWA</Name>
@@ -255,6 +251,12 @@
       <Name>TransferControl</Name>
     </ProjectReference>
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <None Include="Resources\sanwa_robot_status.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Resources\sanwa_aligner_status.png" />
+    <Content Include="Resources\tdk_loadport_status.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
