@@ -30,7 +30,145 @@
         {
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
+            this.groupBox20 = new System.Windows.Forms.GroupBox();
+            this.panel9 = new System.Windows.Forms.Panel();
+            this.tableLayoutPanel23 = new System.Windows.Forms.TableLayoutPanel();
+            this.tableLayoutPanel24 = new System.Windows.Forms.TableLayoutPanel();
+            this.panel12 = new System.Windows.Forms.Panel();
+            this.label56 = new System.Windows.Forms.Label();
+            this.label57 = new System.Windows.Forms.Label();
+            this.cbRA1Point = new System.Windows.Forms.ComboBox();
+            this.label58 = new System.Windows.Forms.Label();
+            this.btnRMoveDown = new System.Windows.Forms.Button();
+            this.btnRGetWait = new System.Windows.Forms.Button();
+            this.label59 = new System.Windows.Forms.Label();
+            this.btnRGet = new System.Windows.Forms.Button();
+            this.label60 = new System.Windows.Forms.Label();
+            this.label61 = new System.Windows.Forms.Label();
+            this.cbRA1Slot = new System.Windows.Forms.ComboBox();
+            this.cbRA1Arm = new System.Windows.Forms.ComboBox();
+            this.panel11 = new System.Windows.Forms.Panel();
+            this.label7 = new System.Windows.Forms.Label();
+            this.label14 = new System.Windows.Forms.Label();
+            this.cbRA2Point = new System.Windows.Forms.ComboBox();
+            this.btnRMoveUp = new System.Windows.Forms.Button();
+            this.label51 = new System.Windows.Forms.Label();
+            this.label52 = new System.Windows.Forms.Label();
+            this.btnRPutWait = new System.Windows.Forms.Button();
+            this.label53 = new System.Windows.Forms.Label();
+            this.label54 = new System.Windows.Forms.Label();
+            this.btnRPut = new System.Windows.Forms.Button();
+            this.cbRA2Slot = new System.Windows.Forms.ComboBox();
+            this.cbRA2Arm = new System.Windows.Forms.ComboBox();
+            this.panel10 = new System.Windows.Forms.Panel();
+            this.btnRPutPut = new System.Windows.Forms.Button();
+            this.btnRPutGet = new System.Windows.Forms.Button();
+            this.btnRGetGet = new System.Windows.Forms.Button();
+            this.btnRGetPut = new System.Windows.Forms.Button();
+            this.groupBox21 = new System.Windows.Forms.GroupBox();
+            this.panel13 = new System.Windows.Forms.Panel();
+            this.panel14 = new System.Windows.Forms.Panel();
+            this.btnRHome = new System.Windows.Forms.Button();
+            this.btnRDisConn = new System.Windows.Forms.Button();
+            this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.btnRLVacuOff = new System.Windows.Forms.Button();
+            this.btnRLVacuOn = new System.Windows.Forms.Button();
+            this.label65 = new System.Windows.Forms.Label();
+            this.tbRLVacuSolenoid = new System.Windows.Forms.TextBox();
+            this.tbRRVacuSolenoid = new System.Windows.Forms.TextBox();
+            this.btnRRVacuOff = new System.Windows.Forms.Button();
+            this.btnRRVacuOn = new System.Windows.Forms.Button();
+            this.label3 = new System.Windows.Forms.Label();
+            this.btnRChgSpeed = new System.Windows.Forms.Button();
+            this.btnRConn = new System.Windows.Forms.Button();
+            this.btnROrg = new System.Windows.Forms.Button();
+            this.btnRInit = new System.Windows.Forms.Button();
+            this.tbRLwaferSensor = new System.Windows.Forms.TextBox();
+            this.cbRNewSpeed = new System.Windows.Forms.ComboBox();
+            this.tbRSpeed = new System.Windows.Forms.TextBox();
+            this.label2 = new System.Windows.Forms.Label();
+            this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.label1 = new System.Windows.Forms.Label();
+            this.rbR2 = new System.Windows.Forms.RadioButton();
+            this.rbR1 = new System.Windows.Forms.RadioButton();
+            this.label63 = new System.Windows.Forms.Label();
+            this.tbRStatus = new System.Windows.Forms.TextBox();
+            this.label64 = new System.Windows.Forms.Label();
+            this.label66 = new System.Windows.Forms.Label();
+            this.tbRRwaferSensor = new System.Windows.Forms.TextBox();
+            this.label67 = new System.Windows.Forms.Label();
+            this.label68 = new System.Windows.Forms.Label();
+            this.label69 = new System.Windows.Forms.Label();
             this.tabPage2 = new System.Windows.Forms.TabPage();
+            this.tableLayoutPanel25 = new System.Windows.Forms.TableLayoutPanel();
+            this.groupBox23 = new System.Windows.Forms.GroupBox();
+            this.panel17 = new System.Windows.Forms.Panel();
+            this.panel18 = new System.Windows.Forms.Panel();
+            this.btnA2Org = new System.Windows.Forms.Button();
+            this.tbA2WaferSensor = new System.Windows.Forms.TextBox();
+            this.tbA2Servo = new System.Windows.Forms.TextBox();
+            this.label18 = new System.Windows.Forms.Label();
+            this.tbA2Status = new System.Windows.Forms.TextBox();
+            this.label17 = new System.Windows.Forms.Label();
+            this.btnA2Conn = new System.Windows.Forms.Button();
+            this.tbA2Error = new System.Windows.Forms.TextBox();
+            this.btnA2VacuOn = new System.Windows.Forms.Button();
+            this.cbA2Angle = new System.Windows.Forms.ComboBox();
+            this.btnA2Reset = new System.Windows.Forms.Button();
+            this.label16 = new System.Windows.Forms.Label();
+            this.btnA2Init = new System.Windows.Forms.Button();
+            this.tbA2Speed = new System.Windows.Forms.TextBox();
+            this.btnA2DisConn = new System.Windows.Forms.Button();
+            this.dudA2AngleOffset = new System.Windows.Forms.DomainUpDown();
+            this.btnA2VacuOff = new System.Windows.Forms.Button();
+            this.label15 = new System.Windows.Forms.Label();
+            this.btnA2ServoOff = new System.Windows.Forms.Button();
+            this.label13 = new System.Windows.Forms.Label();
+            this.btnA2Home = new System.Windows.Forms.Button();
+            this.label12 = new System.Windows.Forms.Label();
+            this.btnA2ServoOn = new System.Windows.Forms.Button();
+            this.label8 = new System.Windows.Forms.Label();
+            this.label11 = new System.Windows.Forms.Label();
+            this.label9 = new System.Windows.Forms.Label();
+            this.btnA2ChgSpeed = new System.Windows.Forms.Button();
+            this.btnA2Align = new System.Windows.Forms.Button();
+            this.label10 = new System.Windows.Forms.Label();
+            this.tbA2VacSolenoid = new System.Windows.Forms.TextBox();
+            this.cbA2SpeedNew = new System.Windows.Forms.ComboBox();
+            this.groupBox22 = new System.Windows.Forms.GroupBox();
+            this.panel15 = new System.Windows.Forms.Panel();
+            this.panel16 = new System.Windows.Forms.Panel();
+            this.btnA1Org = new System.Windows.Forms.Button();
+            this.label6 = new System.Windows.Forms.Label();
+            this.label48 = new System.Windows.Forms.Label();
+            this.tbA1Error = new System.Windows.Forms.TextBox();
+            this.cbA1Angle = new System.Windows.Forms.ComboBox();
+            this.label70 = new System.Windows.Forms.Label();
+            this.tbA1Speed = new System.Windows.Forms.TextBox();
+            this.dudA1AngleOffset = new System.Windows.Forms.DomainUpDown();
+            this.label71 = new System.Windows.Forms.Label();
+            this.label72 = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
+            this.tbA1Servo = new System.Windows.Forms.TextBox();
+            this.tbA1Status = new System.Windows.Forms.TextBox();
+            this.label5 = new System.Windows.Forms.Label();
+            this.btnA1ChgSpeed = new System.Windows.Forms.Button();
+            this.label73 = new System.Windows.Forms.Label();
+            this.cbA1SpeedNew = new System.Windows.Forms.ComboBox();
+            this.tbA1VacSolenoid = new System.Windows.Forms.TextBox();
+            this.btnA1Align = new System.Windows.Forms.Button();
+            this.label74 = new System.Windows.Forms.Label();
+            this.label75 = new System.Windows.Forms.Label();
+            this.btnA1ServoOn = new System.Windows.Forms.Button();
+            this.tbA1WaferSensor = new System.Windows.Forms.TextBox();
+            this.btnA1Home = new System.Windows.Forms.Button();
+            this.btnA1ServoOff = new System.Windows.Forms.Button();
+            this.btnA1VacuOff = new System.Windows.Forms.Button();
+            this.btnA1DisConn = new System.Windows.Forms.Button();
+            this.btnA1Init = new System.Windows.Forms.Button();
+            this.btnA1Reset = new System.Windows.Forms.Button();
+            this.btnA1Conn = new System.Windows.Forms.Button();
+            this.btnA1VacuOn = new System.Windows.Forms.Button();
             this.tabPage3 = new System.Windows.Forms.TabPage();
             this.Command_Group_A = new System.Windows.Forms.GroupBox();
             this.LblLED_A = new System.Windows.Forms.Label();
@@ -161,136 +299,8 @@
             this.Btn_DoorClose_A = new System.Windows.Forms.Button();
             this.Btn_UnLatchDoor_A = new System.Windows.Forms.Button();
             this.Btn_LatchDoor_A = new System.Windows.Forms.Button();
-            this.groupBox20 = new System.Windows.Forms.GroupBox();
-            this.panel9 = new System.Windows.Forms.Panel();
-            this.tableLayoutPanel23 = new System.Windows.Forms.TableLayoutPanel();
-            this.tableLayoutPanel24 = new System.Windows.Forms.TableLayoutPanel();
-            this.panel12 = new System.Windows.Forms.Panel();
-            this.label56 = new System.Windows.Forms.Label();
-            this.label57 = new System.Windows.Forms.Label();
-            this.comboBox9 = new System.Windows.Forms.ComboBox();
-            this.button31 = new System.Windows.Forms.Button();
-            this.label58 = new System.Windows.Forms.Label();
-            this.button32 = new System.Windows.Forms.Button();
-            this.label59 = new System.Windows.Forms.Label();
-            this.button33 = new System.Windows.Forms.Button();
-            this.label60 = new System.Windows.Forms.Label();
-            this.label61 = new System.Windows.Forms.Label();
-            this.label62 = new System.Windows.Forms.Label();
-            this.comboBox10 = new System.Windows.Forms.ComboBox();
-            this.comboBox11 = new System.Windows.Forms.ComboBox();
-            this.comboBox12 = new System.Windows.Forms.ComboBox();
-            this.panel11 = new System.Windows.Forms.Panel();
-            this.label7 = new System.Windows.Forms.Label();
-            this.label14 = new System.Windows.Forms.Label();
-            this.comboBox3 = new System.Windows.Forms.ComboBox();
-            this.button26 = new System.Windows.Forms.Button();
-            this.label51 = new System.Windows.Forms.Label();
-            this.label52 = new System.Windows.Forms.Label();
-            this.button29 = new System.Windows.Forms.Button();
-            this.label53 = new System.Windows.Forms.Label();
-            this.label54 = new System.Windows.Forms.Label();
-            this.button30 = new System.Windows.Forms.Button();
-            this.label55 = new System.Windows.Forms.Label();
-            this.comboBox7 = new System.Windows.Forms.ComboBox();
-            this.comboBox4 = new System.Windows.Forms.ComboBox();
-            this.comboBox5 = new System.Windows.Forms.ComboBox();
-            this.panel10 = new System.Windows.Forms.Panel();
-            this.button1 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
-            this.button4 = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
-            this.groupBox21 = new System.Windows.Forms.GroupBox();
-            this.panel13 = new System.Windows.Forms.Panel();
-            this.panel14 = new System.Windows.Forms.Panel();
-            this.button34 = new System.Windows.Forms.Button();
-            this.button35 = new System.Windows.Forms.Button();
-            this.button36 = new System.Windows.Forms.Button();
-            this.label63 = new System.Windows.Forms.Label();
-            this.textBox24 = new System.Windows.Forms.TextBox();
-            this.textBox25 = new System.Windows.Forms.TextBox();
-            this.textBox26 = new System.Windows.Forms.TextBox();
-            this.label64 = new System.Windows.Forms.Label();
-            this.button37 = new System.Windows.Forms.Button();
-            this.label65 = new System.Windows.Forms.Label();
-            this.textBox27 = new System.Windows.Forms.TextBox();
-            this.label66 = new System.Windows.Forms.Label();
-            this.textBox28 = new System.Windows.Forms.TextBox();
-            this.label67 = new System.Windows.Forms.Label();
-            this.label68 = new System.Windows.Forms.Label();
-            this.label69 = new System.Windows.Forms.Label();
-            this.tableLayoutPanel25 = new System.Windows.Forms.TableLayoutPanel();
-            this.groupBox23 = new System.Windows.Forms.GroupBox();
-            this.panel17 = new System.Windows.Forms.Panel();
-            this.panel18 = new System.Windows.Forms.Panel();
-            this.textBox35 = new System.Windows.Forms.TextBox();
-            this.textBox36 = new System.Windows.Forms.TextBox();
-            this.button49 = new System.Windows.Forms.Button();
-            this.button50 = new System.Windows.Forms.Button();
-            this.button51 = new System.Windows.Forms.Button();
-            this.textBox37 = new System.Windows.Forms.TextBox();
-            this.label76 = new System.Windows.Forms.Label();
-            this.button52 = new System.Windows.Forms.Button();
-            this.comboBox2 = new System.Windows.Forms.ComboBox();
-            this.textBox38 = new System.Windows.Forms.TextBox();
-            this.label77 = new System.Windows.Forms.Label();
-            this.button53 = new System.Windows.Forms.Button();
-            this.button54 = new System.Windows.Forms.Button();
-            this.label78 = new System.Windows.Forms.Label();
-            this.button55 = new System.Windows.Forms.Button();
-            this.button56 = new System.Windows.Forms.Button();
-            this.textBox39 = new System.Windows.Forms.TextBox();
-            this.button57 = new System.Windows.Forms.Button();
-            this.button58 = new System.Windows.Forms.Button();
-            this.label79 = new System.Windows.Forms.Label();
-            this.textBox40 = new System.Windows.Forms.TextBox();
-            this.label80 = new System.Windows.Forms.Label();
-            this.button59 = new System.Windows.Forms.Button();
-            this.label81 = new System.Windows.Forms.Label();
-            this.groupBox22 = new System.Windows.Forms.GroupBox();
-            this.panel15 = new System.Windows.Forms.Panel();
-            this.panel16 = new System.Windows.Forms.Panel();
-            this.textBox29 = new System.Windows.Forms.TextBox();
-            this.label70 = new System.Windows.Forms.Label();
-            this.textBox30 = new System.Windows.Forms.TextBox();
-            this.label71 = new System.Windows.Forms.Label();
-            this.label72 = new System.Windows.Forms.Label();
-            this.textBox31 = new System.Windows.Forms.TextBox();
-            this.textBox32 = new System.Windows.Forms.TextBox();
-            this.label73 = new System.Windows.Forms.Label();
-            this.textBox33 = new System.Windows.Forms.TextBox();
-            this.label74 = new System.Windows.Forms.Label();
-            this.label75 = new System.Windows.Forms.Label();
-            this.textBox34 = new System.Windows.Forms.TextBox();
-            this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.radioButton1 = new System.Windows.Forms.RadioButton();
-            this.radioButton2 = new System.Windows.Forms.RadioButton();
-            this.button5 = new System.Windows.Forms.Button();
-            this.button6 = new System.Windows.Forms.Button();
-            this.button7 = new System.Windows.Forms.Button();
-            this.button8 = new System.Windows.Forms.Button();
-            this.button9 = new System.Windows.Forms.Button();
-            this.button10 = new System.Windows.Forms.Button();
-            this.button11 = new System.Windows.Forms.Button();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
-            this.button12 = new System.Windows.Forms.Button();
-            this.button13 = new System.Windows.Forms.Button();
-            this.button14 = new System.Windows.Forms.Button();
-            this.button15 = new System.Windows.Forms.Button();
-            this.button16 = new System.Windows.Forms.Button();
-            this.button17 = new System.Windows.Forms.Button();
-            this.label1 = new System.Windows.Forms.Label();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
-            this.tabPage2.SuspendLayout();
-            this.tabPage3.SuspendLayout();
-            this.Command_Group_A.SuspendLayout();
-            this.groupBox10.SuspendLayout();
-            this.GroupBox36.SuspendLayout();
-            this.GroupBox35.SuspendLayout();
-            this.groupBox9.SuspendLayout();
-            this.groupBox25.SuspendLayout();
-            this.TblPanel_A.SuspendLayout();
             this.groupBox20.SuspendLayout();
             this.panel9.SuspendLayout();
             this.tableLayoutPanel23.SuspendLayout();
@@ -301,6 +311,9 @@
             this.groupBox21.SuspendLayout();
             this.panel13.SuspendLayout();
             this.panel14.SuspendLayout();
+            this.groupBox2.SuspendLayout();
+            this.groupBox1.SuspendLayout();
+            this.tabPage2.SuspendLayout();
             this.tableLayoutPanel25.SuspendLayout();
             this.groupBox23.SuspendLayout();
             this.panel17.SuspendLayout();
@@ -308,7 +321,14 @@
             this.groupBox22.SuspendLayout();
             this.panel15.SuspendLayout();
             this.panel16.SuspendLayout();
-            this.groupBox1.SuspendLayout();
+            this.tabPage3.SuspendLayout();
+            this.Command_Group_A.SuspendLayout();
+            this.groupBox10.SuspendLayout();
+            this.GroupBox36.SuspendLayout();
+            this.GroupBox35.SuspendLayout();
+            this.groupBox9.SuspendLayout();
+            this.groupBox25.SuspendLayout();
+            this.TblPanel_A.SuspendLayout();
             this.SuspendLayout();
             // 
             // tabControl1
@@ -334,6 +354,999 @@
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "Robot";
             // 
+            // groupBox20
+            // 
+            this.groupBox20.BackColor = System.Drawing.SystemColors.ControlLight;
+            this.groupBox20.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.groupBox20.Controls.Add(this.panel9);
+            this.groupBox20.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.groupBox20.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.groupBox20.Font = new System.Drawing.Font("微軟正黑體", 18F);
+            this.groupBox20.Location = new System.Drawing.Point(680, 3);
+            this.groupBox20.Name = "groupBox20";
+            this.groupBox20.Size = new System.Drawing.Size(804, 795);
+            this.groupBox20.TabIndex = 20;
+            this.groupBox20.TabStop = false;
+            this.groupBox20.Text = "GET and PUT Commands";
+            // 
+            // panel9
+            // 
+            this.panel9.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel9.Controls.Add(this.tableLayoutPanel23);
+            this.panel9.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel9.Location = new System.Drawing.Point(3, 35);
+            this.panel9.Name = "panel9";
+            this.panel9.Padding = new System.Windows.Forms.Padding(20);
+            this.panel9.Size = new System.Drawing.Size(798, 757);
+            this.panel9.TabIndex = 51;
+            // 
+            // tableLayoutPanel23
+            // 
+            this.tableLayoutPanel23.ColumnCount = 1;
+            this.tableLayoutPanel23.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.tableLayoutPanel23.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 20F));
+            this.tableLayoutPanel23.Controls.Add(this.tableLayoutPanel24, 0, 0);
+            this.tableLayoutPanel23.Controls.Add(this.panel10, 0, 1);
+            this.tableLayoutPanel23.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.tableLayoutPanel23.Location = new System.Drawing.Point(20, 20);
+            this.tableLayoutPanel23.Name = "tableLayoutPanel23";
+            this.tableLayoutPanel23.RowCount = 2;
+            this.tableLayoutPanel23.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 70.76923F));
+            this.tableLayoutPanel23.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 29.23077F));
+            this.tableLayoutPanel23.Size = new System.Drawing.Size(756, 715);
+            this.tableLayoutPanel23.TabIndex = 52;
+            // 
+            // tableLayoutPanel24
+            // 
+            this.tableLayoutPanel24.ColumnCount = 2;
+            this.tableLayoutPanel24.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutPanel24.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutPanel24.Controls.Add(this.panel12, 0, 0);
+            this.tableLayoutPanel24.Controls.Add(this.panel11, 1, 0);
+            this.tableLayoutPanel24.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.tableLayoutPanel24.Location = new System.Drawing.Point(3, 3);
+            this.tableLayoutPanel24.Name = "tableLayoutPanel24";
+            this.tableLayoutPanel24.RowCount = 1;
+            this.tableLayoutPanel24.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.tableLayoutPanel24.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 500F));
+            this.tableLayoutPanel24.Size = new System.Drawing.Size(750, 500);
+            this.tableLayoutPanel24.TabIndex = 0;
+            // 
+            // panel12
+            // 
+            this.panel12.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.panel12.Controls.Add(this.label56);
+            this.panel12.Controls.Add(this.label57);
+            this.panel12.Controls.Add(this.cbRA1Point);
+            this.panel12.Controls.Add(this.label58);
+            this.panel12.Controls.Add(this.btnRMoveDown);
+            this.panel12.Controls.Add(this.btnRGetWait);
+            this.panel12.Controls.Add(this.label59);
+            this.panel12.Controls.Add(this.btnRGet);
+            this.panel12.Controls.Add(this.label60);
+            this.panel12.Controls.Add(this.label61);
+            this.panel12.Controls.Add(this.cbRA1Slot);
+            this.panel12.Controls.Add(this.cbRA1Arm);
+            this.panel12.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel12.Location = new System.Drawing.Point(3, 3);
+            this.panel12.Name = "panel12";
+            this.panel12.Size = new System.Drawing.Size(369, 494);
+            this.panel12.TabIndex = 50;
+            // 
+            // label56
+            // 
+            this.label56.AutoSize = true;
+            this.label56.Font = new System.Drawing.Font("微軟正黑體", 18F);
+            this.label56.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
+            this.label56.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.label56.Location = new System.Drawing.Point(138, 13);
+            this.label56.Name = "label56";
+            this.label56.Size = new System.Drawing.Size(86, 30);
+            this.label56.TabIndex = 47;
+            this.label56.Text = "Area 1";
+            // 
+            // label57
+            // 
+            this.label57.AutoSize = true;
+            this.label57.Font = new System.Drawing.Font("微軟正黑體", 18F);
+            this.label57.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.label57.Location = new System.Drawing.Point(29, 49);
+            this.label57.Name = "label57";
+            this.label57.Size = new System.Drawing.Size(94, 30);
+            this.label57.TabIndex = 21;
+            this.label57.Text = "Station";
+            // 
+            // cbRA1Point
+            // 
+            this.cbRA1Point.FormattingEnabled = true;
+            this.cbRA1Point.Items.AddRange(new object[] {
+            "Port_A",
+            "Port_B",
+            "Port_C",
+            "Port_D",
+            "Aligner1",
+            "Aligner2"});
+            this.cbRA1Point.Location = new System.Drawing.Point(129, 60);
+            this.cbRA1Point.Name = "cbRA1Point";
+            this.cbRA1Point.Size = new System.Drawing.Size(208, 38);
+            this.cbRA1Point.TabIndex = 22;
+            // 
+            // label58
+            // 
+            this.label58.AutoSize = true;
+            this.label58.Font = new System.Drawing.Font("微軟正黑體", 18F);
+            this.label58.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.label58.Location = new System.Drawing.Point(30, 79);
+            this.label58.Name = "label58";
+            this.label58.Size = new System.Drawing.Size(88, 30);
+            this.label58.TabIndex = 23;
+            this.label58.Text = "(Point)";
+            // 
+            // btnRMoveDown
+            // 
+            this.btnRMoveDown.BackColor = System.Drawing.Color.DarkGray;
+            this.btnRMoveDown.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.btnRMoveDown.FlatAppearance.BorderSize = 2;
+            this.btnRMoveDown.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnRMoveDown.Font = new System.Drawing.Font("微軟正黑體", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
+            this.btnRMoveDown.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.btnRMoveDown.Location = new System.Drawing.Point(57, 389);
+            this.btnRMoveDown.Name = "btnRMoveDown";
+            this.btnRMoveDown.Size = new System.Drawing.Size(280, 45);
+            this.btnRMoveDown.TabIndex = 47;
+            this.btnRMoveDown.Text = "Move Stage Down";
+            this.btnRMoveDown.UseVisualStyleBackColor = false;
+            this.btnRMoveDown.Click += new System.EventHandler(this.RobotFunction_Click);
+            // 
+            // btnRGetWait
+            // 
+            this.btnRGetWait.BackColor = System.Drawing.Color.DarkGray;
+            this.btnRGetWait.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.btnRGetWait.FlatAppearance.BorderSize = 2;
+            this.btnRGetWait.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnRGetWait.Font = new System.Drawing.Font("微軟正黑體", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
+            this.btnRGetWait.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.btnRGetWait.Location = new System.Drawing.Point(57, 328);
+            this.btnRGetWait.Name = "btnRGetWait";
+            this.btnRGetWait.Size = new System.Drawing.Size(280, 45);
+            this.btnRGetWait.TabIndex = 44;
+            this.btnRGetWait.Text = "Get Wait";
+            this.btnRGetWait.UseVisualStyleBackColor = false;
+            this.btnRGetWait.Click += new System.EventHandler(this.RobotFunction_Click);
+            // 
+            // label59
+            // 
+            this.label59.AutoSize = true;
+            this.label59.Font = new System.Drawing.Font("微軟正黑體", 18F);
+            this.label59.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.label59.Location = new System.Drawing.Point(61, 120);
+            this.label59.Name = "label59";
+            this.label59.Size = new System.Drawing.Size(57, 30);
+            this.label59.TabIndex = 27;
+            this.label59.Text = "Slot";
+            // 
+            // btnRGet
+            // 
+            this.btnRGet.BackColor = System.Drawing.Color.DarkGray;
+            this.btnRGet.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.btnRGet.FlatAppearance.BorderSize = 2;
+            this.btnRGet.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnRGet.Font = new System.Drawing.Font("微軟正黑體", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
+            this.btnRGet.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.btnRGet.Location = new System.Drawing.Point(57, 268);
+            this.btnRGet.Name = "btnRGet";
+            this.btnRGet.Size = new System.Drawing.Size(280, 45);
+            this.btnRGet.TabIndex = 18;
+            this.btnRGet.Text = "Get";
+            this.btnRGet.UseVisualStyleBackColor = false;
+            this.btnRGet.Click += new System.EventHandler(this.RobotFunction_Click);
+            // 
+            // label60
+            // 
+            this.label60.AutoSize = true;
+            this.label60.Font = new System.Drawing.Font("微軟正黑體", 18F);
+            this.label60.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.label60.Location = new System.Drawing.Point(37, 150);
+            this.label60.Name = "label60";
+            this.label60.Size = new System.Drawing.Size(81, 30);
+            this.label60.TabIndex = 29;
+            this.label60.Text = "(1-25)";
+            // 
+            // label61
+            // 
+            this.label61.AutoSize = true;
+            this.label61.Font = new System.Drawing.Font("微軟正黑體", 18F);
+            this.label61.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.label61.Location = new System.Drawing.Point(52, 203);
+            this.label61.Name = "label61";
+            this.label61.Size = new System.Drawing.Size(61, 30);
+            this.label61.TabIndex = 33;
+            this.label61.Text = "Arm";
+            // 
+            // cbRA1Slot
+            // 
+            this.cbRA1Slot.FormattingEnabled = true;
+            this.cbRA1Slot.Items.AddRange(new object[] {
+            "1",
+            "2",
+            "3",
+            "4",
+            "5",
+            "6",
+            "7",
+            "8",
+            "9",
+            "10",
+            "11",
+            "12",
+            "13",
+            "14",
+            "15",
+            "16",
+            "17",
+            "18",
+            "19",
+            "20",
+            "21",
+            "22",
+            "23",
+            "24",
+            "25"});
+            this.cbRA1Slot.Location = new System.Drawing.Point(129, 130);
+            this.cbRA1Slot.Name = "cbRA1Slot";
+            this.cbRA1Slot.Size = new System.Drawing.Size(208, 38);
+            this.cbRA1Slot.TabIndex = 40;
+            // 
+            // cbRA1Arm
+            // 
+            this.cbRA1Arm.FormattingEnabled = true;
+            this.cbRA1Arm.Items.AddRange(new object[] {
+            "Upper",
+            "Lower"});
+            this.cbRA1Arm.Location = new System.Drawing.Point(129, 200);
+            this.cbRA1Arm.Name = "cbRA1Arm";
+            this.cbRA1Arm.Size = new System.Drawing.Size(208, 38);
+            this.cbRA1Arm.TabIndex = 41;
+            // 
+            // panel11
+            // 
+            this.panel11.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.panel11.Controls.Add(this.label7);
+            this.panel11.Controls.Add(this.label14);
+            this.panel11.Controls.Add(this.cbRA2Point);
+            this.panel11.Controls.Add(this.btnRMoveUp);
+            this.panel11.Controls.Add(this.label51);
+            this.panel11.Controls.Add(this.label52);
+            this.panel11.Controls.Add(this.btnRPutWait);
+            this.panel11.Controls.Add(this.label53);
+            this.panel11.Controls.Add(this.label54);
+            this.panel11.Controls.Add(this.btnRPut);
+            this.panel11.Controls.Add(this.cbRA2Slot);
+            this.panel11.Controls.Add(this.cbRA2Arm);
+            this.panel11.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel11.Location = new System.Drawing.Point(378, 3);
+            this.panel11.Name = "panel11";
+            this.panel11.Size = new System.Drawing.Size(369, 494);
+            this.panel11.TabIndex = 49;
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Font = new System.Drawing.Font("微軟正黑體", 18F);
+            this.label7.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
+            this.label7.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.label7.Location = new System.Drawing.Point(141, 13);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(86, 30);
+            this.label7.TabIndex = 48;
+            this.label7.Text = "Area 2";
+            // 
+            // label14
+            // 
+            this.label14.AutoSize = true;
+            this.label14.Font = new System.Drawing.Font("微軟正黑體", 18F);
+            this.label14.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.label14.Location = new System.Drawing.Point(30, 49);
+            this.label14.Name = "label14";
+            this.label14.Size = new System.Drawing.Size(94, 30);
+            this.label14.TabIndex = 21;
+            this.label14.Text = "Station";
+            // 
+            // cbRA2Point
+            // 
+            this.cbRA2Point.FormattingEnabled = true;
+            this.cbRA2Point.Items.AddRange(new object[] {
+            "Port_A",
+            "Port_B",
+            "Port_C",
+            "Port_D",
+            "Aligner1",
+            "Aligner2"});
+            this.cbRA2Point.Location = new System.Drawing.Point(130, 60);
+            this.cbRA2Point.Name = "cbRA2Point";
+            this.cbRA2Point.Size = new System.Drawing.Size(208, 38);
+            this.cbRA2Point.TabIndex = 22;
+            // 
+            // btnRMoveUp
+            // 
+            this.btnRMoveUp.BackColor = System.Drawing.Color.DarkGray;
+            this.btnRMoveUp.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.btnRMoveUp.FlatAppearance.BorderSize = 2;
+            this.btnRMoveUp.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnRMoveUp.Font = new System.Drawing.Font("微軟正黑體", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
+            this.btnRMoveUp.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.btnRMoveUp.Location = new System.Drawing.Point(58, 389);
+            this.btnRMoveUp.Name = "btnRMoveUp";
+            this.btnRMoveUp.Size = new System.Drawing.Size(280, 45);
+            this.btnRMoveUp.TabIndex = 46;
+            this.btnRMoveUp.Text = "Move Stage Up";
+            this.btnRMoveUp.UseVisualStyleBackColor = false;
+            this.btnRMoveUp.Click += new System.EventHandler(this.RobotFunction_Click);
+            // 
+            // label51
+            // 
+            this.label51.AutoSize = true;
+            this.label51.Font = new System.Drawing.Font("微軟正黑體", 18F);
+            this.label51.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.label51.Location = new System.Drawing.Point(31, 79);
+            this.label51.Name = "label51";
+            this.label51.Size = new System.Drawing.Size(88, 30);
+            this.label51.TabIndex = 23;
+            this.label51.Text = "(Point)";
+            // 
+            // label52
+            // 
+            this.label52.AutoSize = true;
+            this.label52.Font = new System.Drawing.Font("微軟正黑體", 18F);
+            this.label52.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.label52.Location = new System.Drawing.Point(62, 120);
+            this.label52.Name = "label52";
+            this.label52.Size = new System.Drawing.Size(57, 30);
+            this.label52.TabIndex = 27;
+            this.label52.Text = "Slot";
+            // 
+            // btnRPutWait
+            // 
+            this.btnRPutWait.BackColor = System.Drawing.Color.DarkGray;
+            this.btnRPutWait.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.btnRPutWait.FlatAppearance.BorderSize = 2;
+            this.btnRPutWait.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnRPutWait.Font = new System.Drawing.Font("微軟正黑體", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
+            this.btnRPutWait.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.btnRPutWait.Location = new System.Drawing.Point(58, 328);
+            this.btnRPutWait.Name = "btnRPutWait";
+            this.btnRPutWait.Size = new System.Drawing.Size(280, 45);
+            this.btnRPutWait.TabIndex = 45;
+            this.btnRPutWait.Text = "Put Wait";
+            this.btnRPutWait.UseVisualStyleBackColor = false;
+            this.btnRPutWait.Click += new System.EventHandler(this.RobotFunction_Click);
+            // 
+            // label53
+            // 
+            this.label53.AutoSize = true;
+            this.label53.Font = new System.Drawing.Font("微軟正黑體", 18F);
+            this.label53.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.label53.Location = new System.Drawing.Point(38, 150);
+            this.label53.Name = "label53";
+            this.label53.Size = new System.Drawing.Size(81, 30);
+            this.label53.TabIndex = 29;
+            this.label53.Text = "(1-25)";
+            // 
+            // label54
+            // 
+            this.label54.AutoSize = true;
+            this.label54.Font = new System.Drawing.Font("微軟正黑體", 18F);
+            this.label54.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.label54.Location = new System.Drawing.Point(53, 203);
+            this.label54.Name = "label54";
+            this.label54.Size = new System.Drawing.Size(61, 30);
+            this.label54.TabIndex = 33;
+            this.label54.Text = "Arm";
+            // 
+            // btnRPut
+            // 
+            this.btnRPut.BackColor = System.Drawing.Color.DarkGray;
+            this.btnRPut.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.btnRPut.FlatAppearance.BorderSize = 2;
+            this.btnRPut.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnRPut.Font = new System.Drawing.Font("微軟正黑體", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
+            this.btnRPut.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.btnRPut.Location = new System.Drawing.Point(58, 268);
+            this.btnRPut.Name = "btnRPut";
+            this.btnRPut.Size = new System.Drawing.Size(280, 45);
+            this.btnRPut.TabIndex = 43;
+            this.btnRPut.Text = "Put";
+            this.btnRPut.UseVisualStyleBackColor = false;
+            this.btnRPut.Click += new System.EventHandler(this.RobotFunction_Click);
+            // 
+            // cbRA2Slot
+            // 
+            this.cbRA2Slot.FormattingEnabled = true;
+            this.cbRA2Slot.Items.AddRange(new object[] {
+            "1",
+            "2",
+            "3",
+            "4",
+            "5",
+            "6",
+            "7",
+            "8",
+            "9",
+            "10",
+            "11",
+            "12",
+            "13",
+            "14",
+            "15",
+            "16",
+            "17",
+            "18",
+            "19",
+            "20",
+            "21",
+            "22",
+            "23",
+            "24",
+            "25"});
+            this.cbRA2Slot.Location = new System.Drawing.Point(130, 130);
+            this.cbRA2Slot.Name = "cbRA2Slot";
+            this.cbRA2Slot.Size = new System.Drawing.Size(208, 38);
+            this.cbRA2Slot.TabIndex = 40;
+            // 
+            // cbRA2Arm
+            // 
+            this.cbRA2Arm.FormattingEnabled = true;
+            this.cbRA2Arm.Items.AddRange(new object[] {
+            "Upper",
+            "Lower"});
+            this.cbRA2Arm.Location = new System.Drawing.Point(130, 200);
+            this.cbRA2Arm.Name = "cbRA2Arm";
+            this.cbRA2Arm.Size = new System.Drawing.Size(208, 38);
+            this.cbRA2Arm.TabIndex = 41;
+            // 
+            // panel10
+            // 
+            this.panel10.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.panel10.Controls.Add(this.btnRPutPut);
+            this.panel10.Controls.Add(this.btnRPutGet);
+            this.panel10.Controls.Add(this.btnRGetGet);
+            this.panel10.Controls.Add(this.btnRGetPut);
+            this.panel10.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel10.Location = new System.Drawing.Point(3, 509);
+            this.panel10.Name = "panel10";
+            this.panel10.Size = new System.Drawing.Size(750, 203);
+            this.panel10.TabIndex = 51;
+            // 
+            // btnRPutPut
+            // 
+            this.btnRPutPut.BackColor = System.Drawing.Color.DarkGray;
+            this.btnRPutPut.Enabled = false;
+            this.btnRPutPut.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.btnRPutPut.FlatAppearance.BorderSize = 2;
+            this.btnRPutPut.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnRPutPut.Font = new System.Drawing.Font("微軟正黑體", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
+            this.btnRPutPut.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.btnRPutPut.Location = new System.Drawing.Point(60, 19);
+            this.btnRPutPut.Name = "btnRPutPut";
+            this.btnRPutPut.Size = new System.Drawing.Size(280, 45);
+            this.btnRPutPut.TabIndex = 51;
+            this.btnRPutPut.Text = "PutPut";
+            this.btnRPutPut.UseVisualStyleBackColor = false;
+            this.btnRPutPut.Click += new System.EventHandler(this.RobotFunction_Click);
+            // 
+            // btnRPutGet
+            // 
+            this.btnRPutGet.BackColor = System.Drawing.Color.DarkGray;
+            this.btnRPutGet.Enabled = false;
+            this.btnRPutGet.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.btnRPutGet.FlatAppearance.BorderSize = 2;
+            this.btnRPutGet.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnRPutGet.Font = new System.Drawing.Font("微軟正黑體", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
+            this.btnRPutGet.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.btnRPutGet.Location = new System.Drawing.Point(436, 77);
+            this.btnRPutGet.Name = "btnRPutGet";
+            this.btnRPutGet.Size = new System.Drawing.Size(280, 45);
+            this.btnRPutGet.TabIndex = 50;
+            this.btnRPutGet.Text = "PutGet";
+            this.btnRPutGet.UseVisualStyleBackColor = false;
+            this.btnRPutGet.Click += new System.EventHandler(this.RobotFunction_Click);
+            // 
+            // btnRGetGet
+            // 
+            this.btnRGetGet.BackColor = System.Drawing.Color.DarkGray;
+            this.btnRGetGet.Enabled = false;
+            this.btnRGetGet.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.btnRGetGet.FlatAppearance.BorderSize = 2;
+            this.btnRGetGet.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnRGetGet.Font = new System.Drawing.Font("微軟正黑體", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
+            this.btnRGetGet.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.btnRGetGet.Location = new System.Drawing.Point(436, 19);
+            this.btnRGetGet.Name = "btnRGetGet";
+            this.btnRGetGet.Size = new System.Drawing.Size(280, 45);
+            this.btnRGetGet.TabIndex = 48;
+            this.btnRGetGet.Text = "GetGet";
+            this.btnRGetGet.UseVisualStyleBackColor = false;
+            this.btnRGetGet.Click += new System.EventHandler(this.RobotFunction_Click);
+            // 
+            // btnRGetPut
+            // 
+            this.btnRGetPut.BackColor = System.Drawing.Color.DarkGray;
+            this.btnRGetPut.Enabled = false;
+            this.btnRGetPut.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.btnRGetPut.FlatAppearance.BorderSize = 2;
+            this.btnRGetPut.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnRGetPut.Font = new System.Drawing.Font("微軟正黑體", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
+            this.btnRGetPut.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.btnRGetPut.Location = new System.Drawing.Point(60, 77);
+            this.btnRGetPut.Name = "btnRGetPut";
+            this.btnRGetPut.Size = new System.Drawing.Size(280, 45);
+            this.btnRGetPut.TabIndex = 49;
+            this.btnRGetPut.Text = "GetPut";
+            this.btnRGetPut.UseVisualStyleBackColor = false;
+            this.btnRGetPut.Click += new System.EventHandler(this.RobotFunction_Click);
+            // 
+            // groupBox21
+            // 
+            this.groupBox21.BackColor = System.Drawing.SystemColors.ControlLight;
+            this.groupBox21.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.groupBox21.Controls.Add(this.panel13);
+            this.groupBox21.Dock = System.Windows.Forms.DockStyle.Left;
+            this.groupBox21.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.groupBox21.Font = new System.Drawing.Font("微軟正黑體", 18F);
+            this.groupBox21.Location = new System.Drawing.Point(3, 3);
+            this.groupBox21.Name = "groupBox21";
+            this.groupBox21.Size = new System.Drawing.Size(677, 795);
+            this.groupBox21.TabIndex = 19;
+            this.groupBox21.TabStop = false;
+            this.groupBox21.Text = "Status";
+            // 
+            // panel13
+            // 
+            this.panel13.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel13.Controls.Add(this.panel14);
+            this.panel13.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel13.Location = new System.Drawing.Point(3, 35);
+            this.panel13.Name = "panel13";
+            this.panel13.Padding = new System.Windows.Forms.Padding(20);
+            this.panel13.Size = new System.Drawing.Size(671, 757);
+            this.panel13.TabIndex = 19;
+            // 
+            // panel14
+            // 
+            this.panel14.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.panel14.Controls.Add(this.btnRHome);
+            this.panel14.Controls.Add(this.btnRDisConn);
+            this.panel14.Controls.Add(this.groupBox2);
+            this.panel14.Controls.Add(this.label3);
+            this.panel14.Controls.Add(this.btnRChgSpeed);
+            this.panel14.Controls.Add(this.btnRConn);
+            this.panel14.Controls.Add(this.btnROrg);
+            this.panel14.Controls.Add(this.btnRInit);
+            this.panel14.Controls.Add(this.tbRLwaferSensor);
+            this.panel14.Controls.Add(this.cbRNewSpeed);
+            this.panel14.Controls.Add(this.tbRSpeed);
+            this.panel14.Controls.Add(this.label2);
+            this.panel14.Controls.Add(this.groupBox1);
+            this.panel14.Controls.Add(this.label63);
+            this.panel14.Controls.Add(this.tbRStatus);
+            this.panel14.Controls.Add(this.label64);
+            this.panel14.Controls.Add(this.label66);
+            this.panel14.Controls.Add(this.tbRRwaferSensor);
+            this.panel14.Controls.Add(this.label67);
+            this.panel14.Controls.Add(this.label68);
+            this.panel14.Controls.Add(this.label69);
+            this.panel14.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel14.Location = new System.Drawing.Point(20, 20);
+            this.panel14.Name = "panel14";
+            this.panel14.Size = new System.Drawing.Size(629, 715);
+            this.panel14.TabIndex = 18;
+            // 
+            // btnRHome
+            // 
+            this.btnRHome.BackColor = System.Drawing.Color.DarkGray;
+            this.btnRHome.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.btnRHome.FlatAppearance.BorderSize = 2;
+            this.btnRHome.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnRHome.Font = new System.Drawing.Font("微軟正黑體", 14.25F);
+            this.btnRHome.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.btnRHome.Location = new System.Drawing.Point(488, 156);
+            this.btnRHome.Name = "btnRHome";
+            this.btnRHome.Size = new System.Drawing.Size(123, 46);
+            this.btnRHome.TabIndex = 82;
+            this.btnRHome.Text = "Home";
+            this.btnRHome.UseVisualStyleBackColor = false;
+            this.btnRHome.Click += new System.EventHandler(this.RobotFunction_Click);
+            // 
+            // btnRDisConn
+            // 
+            this.btnRDisConn.BackColor = System.Drawing.Color.DarkGray;
+            this.btnRDisConn.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.btnRDisConn.FlatAppearance.BorderSize = 2;
+            this.btnRDisConn.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnRDisConn.Font = new System.Drawing.Font("微軟正黑體", 14.25F);
+            this.btnRDisConn.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.btnRDisConn.Location = new System.Drawing.Point(488, 96);
+            this.btnRDisConn.Name = "btnRDisConn";
+            this.btnRDisConn.Size = new System.Drawing.Size(123, 46);
+            this.btnRDisConn.TabIndex = 81;
+            this.btnRDisConn.Text = "Disconnect";
+            this.btnRDisConn.UseVisualStyleBackColor = false;
+            this.btnRDisConn.Click += new System.EventHandler(this.RobotFunction_Click);
+            // 
+            // groupBox2
+            // 
+            this.groupBox2.Controls.Add(this.btnRLVacuOff);
+            this.groupBox2.Controls.Add(this.btnRLVacuOn);
+            this.groupBox2.Controls.Add(this.label65);
+            this.groupBox2.Controls.Add(this.tbRLVacuSolenoid);
+            this.groupBox2.Controls.Add(this.tbRRVacuSolenoid);
+            this.groupBox2.Controls.Add(this.btnRRVacuOff);
+            this.groupBox2.Controls.Add(this.btnRRVacuOn);
+            this.groupBox2.Location = new System.Drawing.Point(1, 461);
+            this.groupBox2.Name = "groupBox2";
+            this.groupBox2.Size = new System.Drawing.Size(579, 130);
+            this.groupBox2.TabIndex = 80;
+            this.groupBox2.TabStop = false;
+            // 
+            // btnRLVacuOff
+            // 
+            this.btnRLVacuOff.BackColor = System.Drawing.Color.DarkGray;
+            this.btnRLVacuOff.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.btnRLVacuOff.FlatAppearance.BorderSize = 2;
+            this.btnRLVacuOff.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnRLVacuOff.Font = new System.Drawing.Font("微軟正黑體", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
+            this.btnRLVacuOff.Location = new System.Drawing.Point(423, 73);
+            this.btnRLVacuOff.Name = "btnRLVacuOff";
+            this.btnRLVacuOff.Size = new System.Drawing.Size(48, 45);
+            this.btnRLVacuOff.TabIndex = 79;
+            this.btnRLVacuOff.Text = "Off";
+            this.btnRLVacuOff.UseVisualStyleBackColor = false;
+            this.btnRLVacuOff.Click += new System.EventHandler(this.RobotFunction_Click);
+            // 
+            // btnRLVacuOn
+            // 
+            this.btnRLVacuOn.BackColor = System.Drawing.Color.DarkGray;
+            this.btnRLVacuOn.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.btnRLVacuOn.FlatAppearance.BorderSize = 2;
+            this.btnRLVacuOn.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnRLVacuOn.Font = new System.Drawing.Font("微軟正黑體", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
+            this.btnRLVacuOn.Location = new System.Drawing.Point(365, 73);
+            this.btnRLVacuOn.Name = "btnRLVacuOn";
+            this.btnRLVacuOn.Size = new System.Drawing.Size(48, 45);
+            this.btnRLVacuOn.TabIndex = 78;
+            this.btnRLVacuOn.Text = "On";
+            this.btnRLVacuOn.UseVisualStyleBackColor = false;
+            this.btnRLVacuOn.Click += new System.EventHandler(this.RobotFunction_Click);
+            // 
+            // label65
+            // 
+            this.label65.AutoSize = true;
+            this.label65.Font = new System.Drawing.Font("微軟正黑體", 18F);
+            this.label65.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.label65.Location = new System.Drawing.Point(2, 35);
+            this.label65.Name = "label65";
+            this.label65.Size = new System.Drawing.Size(212, 30);
+            this.label65.TabIndex = 3;
+            this.label65.Text = "Vacuum Solenoid";
+            // 
+            // tbRLVacuSolenoid
+            // 
+            this.tbRLVacuSolenoid.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.tbRLVacuSolenoid.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.tbRLVacuSolenoid.Location = new System.Drawing.Point(365, 35);
+            this.tbRLVacuSolenoid.Name = "tbRLVacuSolenoid";
+            this.tbRLVacuSolenoid.ReadOnly = true;
+            this.tbRLVacuSolenoid.Size = new System.Drawing.Size(106, 32);
+            this.tbRLVacuSolenoid.TabIndex = 15;
+            this.tbRLVacuSolenoid.Text = "OFF";
+            this.tbRLVacuSolenoid.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // tbRRVacuSolenoid
+            // 
+            this.tbRRVacuSolenoid.BackColor = System.Drawing.Color.OrangeRed;
+            this.tbRRVacuSolenoid.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.tbRRVacuSolenoid.Location = new System.Drawing.Point(223, 35);
+            this.tbRRVacuSolenoid.Name = "tbRRVacuSolenoid";
+            this.tbRRVacuSolenoid.ReadOnly = true;
+            this.tbRRVacuSolenoid.Size = new System.Drawing.Size(106, 32);
+            this.tbRRVacuSolenoid.TabIndex = 16;
+            this.tbRRVacuSolenoid.Text = "ON";
+            this.tbRRVacuSolenoid.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // btnRRVacuOff
+            // 
+            this.btnRRVacuOff.BackColor = System.Drawing.Color.DarkGray;
+            this.btnRRVacuOff.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.btnRRVacuOff.FlatAppearance.BorderSize = 2;
+            this.btnRRVacuOff.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnRRVacuOff.Font = new System.Drawing.Font("微軟正黑體", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
+            this.btnRRVacuOff.Location = new System.Drawing.Point(281, 73);
+            this.btnRRVacuOff.Name = "btnRRVacuOff";
+            this.btnRRVacuOff.Size = new System.Drawing.Size(48, 45);
+            this.btnRRVacuOff.TabIndex = 77;
+            this.btnRRVacuOff.Text = "Off";
+            this.btnRRVacuOff.UseVisualStyleBackColor = false;
+            this.btnRRVacuOff.Click += new System.EventHandler(this.RobotFunction_Click);
+            // 
+            // btnRRVacuOn
+            // 
+            this.btnRRVacuOn.BackColor = System.Drawing.Color.DarkGray;
+            this.btnRRVacuOn.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.btnRRVacuOn.FlatAppearance.BorderSize = 2;
+            this.btnRRVacuOn.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnRRVacuOn.Font = new System.Drawing.Font("微軟正黑體", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
+            this.btnRRVacuOn.Location = new System.Drawing.Point(223, 73);
+            this.btnRRVacuOn.Name = "btnRRVacuOn";
+            this.btnRRVacuOn.Size = new System.Drawing.Size(48, 45);
+            this.btnRRVacuOn.TabIndex = 76;
+            this.btnRRVacuOn.Text = "On";
+            this.btnRRVacuOn.UseVisualStyleBackColor = false;
+            this.btnRRVacuOn.Click += new System.EventHandler(this.RobotFunction_Click);
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("微軟正黑體", 18F);
+            this.label3.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.label3.Location = new System.Drawing.Point(38, 286);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(180, 30);
+            this.label3.TabIndex = 74;
+            this.label3.Text = "New Speed(%)";
+            // 
+            // btnRChgSpeed
+            // 
+            this.btnRChgSpeed.BackColor = System.Drawing.Color.DarkGray;
+            this.btnRChgSpeed.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.btnRChgSpeed.FlatAppearance.BorderSize = 2;
+            this.btnRChgSpeed.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnRChgSpeed.Font = new System.Drawing.Font("微軟正黑體", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
+            this.btnRChgSpeed.Location = new System.Drawing.Point(349, 276);
+            this.btnRChgSpeed.Name = "btnRChgSpeed";
+            this.btnRChgSpeed.Size = new System.Drawing.Size(123, 45);
+            this.btnRChgSpeed.TabIndex = 73;
+            this.btnRChgSpeed.Text = "Change";
+            this.btnRChgSpeed.UseVisualStyleBackColor = false;
+            this.btnRChgSpeed.Click += new System.EventHandler(this.RobotFunction_Click);
+            // 
+            // btnRConn
+            // 
+            this.btnRConn.BackColor = System.Drawing.Color.DarkGray;
+            this.btnRConn.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.btnRConn.FlatAppearance.BorderSize = 2;
+            this.btnRConn.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnRConn.Font = new System.Drawing.Font("微軟正黑體", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
+            this.btnRConn.Location = new System.Drawing.Point(349, 96);
+            this.btnRConn.Name = "btnRConn";
+            this.btnRConn.Size = new System.Drawing.Size(123, 45);
+            this.btnRConn.TabIndex = 72;
+            this.btnRConn.Text = "Connect";
+            this.btnRConn.UseVisualStyleBackColor = false;
+            this.btnRConn.Click += new System.EventHandler(this.RobotFunction_Click);
+            // 
+            // btnROrg
+            // 
+            this.btnROrg.BackColor = System.Drawing.Color.DarkGray;
+            this.btnROrg.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.btnROrg.FlatAppearance.BorderSize = 2;
+            this.btnROrg.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnROrg.Font = new System.Drawing.Font("微軟正黑體", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
+            this.btnROrg.Location = new System.Drawing.Point(349, 156);
+            this.btnROrg.Name = "btnROrg";
+            this.btnROrg.Size = new System.Drawing.Size(123, 45);
+            this.btnROrg.TabIndex = 71;
+            this.btnROrg.Text = "Origin";
+            this.btnROrg.UseVisualStyleBackColor = false;
+            this.btnROrg.Click += new System.EventHandler(this.RobotFunction_Click);
+            // 
+            // btnRInit
+            // 
+            this.btnRInit.BackColor = System.Drawing.Color.DarkGray;
+            this.btnRInit.Enabled = false;
+            this.btnRInit.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.btnRInit.FlatAppearance.BorderSize = 2;
+            this.btnRInit.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnRInit.Font = new System.Drawing.Font("微軟正黑體", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
+            this.btnRInit.Location = new System.Drawing.Point(207, 156);
+            this.btnRInit.Name = "btnRInit";
+            this.btnRInit.Size = new System.Drawing.Size(123, 45);
+            this.btnRInit.TabIndex = 70;
+            this.btnRInit.Text = "Initialize";
+            this.btnRInit.UseVisualStyleBackColor = false;
+            this.btnRInit.Click += new System.EventHandler(this.RobotFunction_Click);
+            // 
+            // tbRLwaferSensor
+            // 
+            this.tbRLwaferSensor.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.tbRLwaferSensor.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.tbRLwaferSensor.Location = new System.Drawing.Point(366, 421);
+            this.tbRLwaferSensor.Name = "tbRLwaferSensor";
+            this.tbRLwaferSensor.ReadOnly = true;
+            this.tbRLwaferSensor.Size = new System.Drawing.Size(106, 32);
+            this.tbRLwaferSensor.TabIndex = 10;
+            this.tbRLwaferSensor.Text = "OFF";
+            this.tbRLwaferSensor.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // cbRNewSpeed
+            // 
+            this.cbRNewSpeed.FormattingEnabled = true;
+            this.cbRNewSpeed.Items.AddRange(new object[] {
+            "10",
+            "20",
+            "30",
+            "40",
+            "50",
+            "60",
+            "70",
+            "80",
+            "90",
+            "0(100)"});
+            this.cbRNewSpeed.Location = new System.Drawing.Point(224, 283);
+            this.cbRNewSpeed.Name = "cbRNewSpeed";
+            this.cbRNewSpeed.Size = new System.Drawing.Size(106, 38);
+            this.cbRNewSpeed.TabIndex = 53;
+            // 
+            // tbRSpeed
+            // 
+            this.tbRSpeed.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.tbRSpeed.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.tbRSpeed.Location = new System.Drawing.Point(224, 234);
+            this.tbRSpeed.Name = "tbRSpeed";
+            this.tbRSpeed.ReadOnly = true;
+            this.tbRSpeed.Size = new System.Drawing.Size(106, 32);
+            this.tbRSpeed.TabIndex = 52;
+            this.tbRSpeed.Text = "0";
+            this.tbRSpeed.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("微軟正黑體", 18F);
+            this.label2.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.label2.Location = new System.Drawing.Point(3, 236);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(215, 30);
+            this.label2.TabIndex = 51;
+            this.label2.Text = "Current Speed(%)";
+            // 
+            // groupBox1
+            // 
+            this.groupBox1.Controls.Add(this.label1);
+            this.groupBox1.Controls.Add(this.rbR2);
+            this.groupBox1.Controls.Add(this.rbR1);
+            this.groupBox1.Font = new System.Drawing.Font("微軟正黑體", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
+            this.groupBox1.Location = new System.Drawing.Point(18, 19);
+            this.groupBox1.Name = "groupBox1";
+            this.groupBox1.Size = new System.Drawing.Size(582, 64);
+            this.groupBox1.TabIndex = 20;
+            this.groupBox1.TabStop = false;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("微軟正黑體", 18F);
+            this.label1.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.label1.Location = new System.Drawing.Point(149, 26);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(82, 30);
+            this.label1.TabIndex = 25;
+            this.label1.Text = "Robot";
+            // 
+            // rbR2
+            // 
+            this.rbR2.AutoSize = true;
+            this.rbR2.Font = new System.Drawing.Font("微軟正黑體", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
+            this.rbR2.Location = new System.Drawing.Point(417, 24);
+            this.rbR2.Name = "rbR2";
+            this.rbR2.Size = new System.Drawing.Size(114, 34);
+            this.rbR2.TabIndex = 1;
+            this.rbR2.TabStop = true;
+            this.rbR2.Text = "Robot2";
+            this.rbR2.UseVisualStyleBackColor = true;
+            // 
+            // rbR1
+            // 
+            this.rbR1.AutoSize = true;
+            this.rbR1.Checked = true;
+            this.rbR1.Font = new System.Drawing.Font("微軟正黑體", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
+            this.rbR1.Location = new System.Drawing.Point(270, 24);
+            this.rbR1.Name = "rbR1";
+            this.rbR1.Size = new System.Drawing.Size(114, 34);
+            this.rbR1.TabIndex = 0;
+            this.rbR1.TabStop = true;
+            this.rbR1.Text = "Robot1";
+            this.rbR1.UseVisualStyleBackColor = true;
+            // 
+            // label63
+            // 
+            this.label63.AutoSize = true;
+            this.label63.Font = new System.Drawing.Font("微軟正黑體", 18F);
+            this.label63.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.label63.Location = new System.Drawing.Point(59, 103);
+            this.label63.Name = "label63";
+            this.label63.Size = new System.Drawing.Size(159, 30);
+            this.label63.TabIndex = 0;
+            this.label63.Text = "Robot Status";
+            // 
+            // tbRStatus
+            // 
+            this.tbRStatus.BackColor = System.Drawing.Color.ForestGreen;
+            this.tbRStatus.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.tbRStatus.Location = new System.Drawing.Point(224, 103);
+            this.tbRStatus.Name = "tbRStatus";
+            this.tbRStatus.ReadOnly = true;
+            this.tbRStatus.Size = new System.Drawing.Size(106, 32);
+            this.tbRStatus.TabIndex = 1;
+            this.tbRStatus.Text = "RUN";
+            this.tbRStatus.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // label64
+            // 
+            this.label64.AutoSize = true;
+            this.label64.Font = new System.Drawing.Font("微軟正黑體", 18F);
+            this.label64.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.label64.Location = new System.Drawing.Point(53, 423);
+            this.label64.Name = "label64";
+            this.label64.Size = new System.Drawing.Size(165, 30);
+            this.label64.TabIndex = 2;
+            this.label64.Text = "Wafer Sensor";
+            // 
+            // label66
+            // 
+            this.label66.AutoSize = true;
+            this.label66.Font = new System.Drawing.Font("微軟正黑體", 18F);
+            this.label66.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.label66.Location = new System.Drawing.Point(192, 349);
+            this.label66.Name = "label66";
+            this.label66.Size = new System.Drawing.Size(138, 30);
+            this.label66.TabIndex = 4;
+            this.label66.Text = "Upper Arm";
+            // 
+            // tbRRwaferSensor
+            // 
+            this.tbRRwaferSensor.BackColor = System.Drawing.Color.OrangeRed;
+            this.tbRRwaferSensor.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.tbRRwaferSensor.Location = new System.Drawing.Point(224, 423);
+            this.tbRRwaferSensor.Name = "tbRRwaferSensor";
+            this.tbRRwaferSensor.ReadOnly = true;
+            this.tbRRwaferSensor.Size = new System.Drawing.Size(106, 32);
+            this.tbRRwaferSensor.TabIndex = 8;
+            this.tbRRwaferSensor.Text = "ON";
+            this.tbRRwaferSensor.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // label67
+            // 
+            this.label67.AutoSize = true;
+            this.label67.Font = new System.Drawing.Font("微軟正黑體", 18F);
+            this.label67.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.label67.Location = new System.Drawing.Point(336, 349);
+            this.label67.Name = "label67";
+            this.label67.Size = new System.Drawing.Size(136, 30);
+            this.label67.TabIndex = 5;
+            this.label67.Text = "Lower Arm";
+            // 
+            // label68
+            // 
+            this.label68.AutoSize = true;
+            this.label68.Font = new System.Drawing.Font("微軟正黑體", 18F);
+            this.label68.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.label68.Location = new System.Drawing.Point(379, 379);
+            this.label68.Name = "label68";
+            this.label68.Size = new System.Drawing.Size(93, 30);
+            this.label68.TabIndex = 7;
+            this.label68.Text = "(L Axis)";
+            // 
+            // label69
+            // 
+            this.label69.AutoSize = true;
+            this.label69.Font = new System.Drawing.Font("微軟正黑體", 18F);
+            this.label69.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.label69.Location = new System.Drawing.Point(234, 379);
+            this.label69.Name = "label69";
+            this.label69.Size = new System.Drawing.Size(96, 30);
+            this.label69.TabIndex = 6;
+            this.label69.Text = "(R Axis)";
+            // 
             // tabPage2
             // 
             this.tabPage2.BackColor = System.Drawing.SystemColors.ControlLight;
@@ -344,6 +1357,1006 @@
             this.tabPage2.Size = new System.Drawing.Size(1487, 801);
             this.tabPage2.TabIndex = 1;
             this.tabPage2.Text = "Aligner";
+            // 
+            // tableLayoutPanel25
+            // 
+            this.tableLayoutPanel25.ColumnCount = 2;
+            this.tableLayoutPanel25.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutPanel25.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutPanel25.Controls.Add(this.groupBox23, 0, 0);
+            this.tableLayoutPanel25.Controls.Add(this.groupBox22, 0, 0);
+            this.tableLayoutPanel25.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.tableLayoutPanel25.Location = new System.Drawing.Point(3, 3);
+            this.tableLayoutPanel25.Name = "tableLayoutPanel25";
+            this.tableLayoutPanel25.RowCount = 1;
+            this.tableLayoutPanel25.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.tableLayoutPanel25.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 795F));
+            this.tableLayoutPanel25.Size = new System.Drawing.Size(1481, 795);
+            this.tableLayoutPanel25.TabIndex = 1;
+            // 
+            // groupBox23
+            // 
+            this.groupBox23.BackColor = System.Drawing.SystemColors.ControlLight;
+            this.groupBox23.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.groupBox23.Controls.Add(this.panel17);
+            this.groupBox23.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.groupBox23.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.groupBox23.Font = new System.Drawing.Font("微軟正黑體", 18F);
+            this.groupBox23.Location = new System.Drawing.Point(743, 3);
+            this.groupBox23.Name = "groupBox23";
+            this.groupBox23.Size = new System.Drawing.Size(735, 789);
+            this.groupBox23.TabIndex = 2;
+            this.groupBox23.TabStop = false;
+            this.groupBox23.Text = "Aligner2";
+            // 
+            // panel17
+            // 
+            this.panel17.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel17.Controls.Add(this.panel18);
+            this.panel17.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel17.Location = new System.Drawing.Point(3, 35);
+            this.panel17.Name = "panel17";
+            this.panel17.Padding = new System.Windows.Forms.Padding(20);
+            this.panel17.Size = new System.Drawing.Size(729, 751);
+            this.panel17.TabIndex = 19;
+            // 
+            // panel18
+            // 
+            this.panel18.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.panel18.Controls.Add(this.btnA2Org);
+            this.panel18.Controls.Add(this.tbA2WaferSensor);
+            this.panel18.Controls.Add(this.tbA2Servo);
+            this.panel18.Controls.Add(this.label18);
+            this.panel18.Controls.Add(this.tbA2Status);
+            this.panel18.Controls.Add(this.label17);
+            this.panel18.Controls.Add(this.btnA2Conn);
+            this.panel18.Controls.Add(this.tbA2Error);
+            this.panel18.Controls.Add(this.btnA2VacuOn);
+            this.panel18.Controls.Add(this.cbA2Angle);
+            this.panel18.Controls.Add(this.btnA2Reset);
+            this.panel18.Controls.Add(this.label16);
+            this.panel18.Controls.Add(this.btnA2Init);
+            this.panel18.Controls.Add(this.tbA2Speed);
+            this.panel18.Controls.Add(this.btnA2DisConn);
+            this.panel18.Controls.Add(this.dudA2AngleOffset);
+            this.panel18.Controls.Add(this.btnA2VacuOff);
+            this.panel18.Controls.Add(this.label15);
+            this.panel18.Controls.Add(this.btnA2ServoOff);
+            this.panel18.Controls.Add(this.label13);
+            this.panel18.Controls.Add(this.btnA2Home);
+            this.panel18.Controls.Add(this.label12);
+            this.panel18.Controls.Add(this.btnA2ServoOn);
+            this.panel18.Controls.Add(this.label8);
+            this.panel18.Controls.Add(this.label11);
+            this.panel18.Controls.Add(this.label9);
+            this.panel18.Controls.Add(this.btnA2ChgSpeed);
+            this.panel18.Controls.Add(this.btnA2Align);
+            this.panel18.Controls.Add(this.label10);
+            this.panel18.Controls.Add(this.tbA2VacSolenoid);
+            this.panel18.Controls.Add(this.cbA2SpeedNew);
+            this.panel18.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel18.Location = new System.Drawing.Point(20, 20);
+            this.panel18.Name = "panel18";
+            this.panel18.Size = new System.Drawing.Size(687, 709);
+            this.panel18.TabIndex = 18;
+            // 
+            // btnA2Org
+            // 
+            this.btnA2Org.BackColor = System.Drawing.Color.DarkGray;
+            this.btnA2Org.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.btnA2Org.FlatAppearance.BorderSize = 2;
+            this.btnA2Org.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnA2Org.Font = new System.Drawing.Font("微軟正黑體", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
+            this.btnA2Org.Location = new System.Drawing.Point(378, 98);
+            this.btnA2Org.Name = "btnA2Org";
+            this.btnA2Org.Size = new System.Drawing.Size(118, 45);
+            this.btnA2Org.TabIndex = 94;
+            this.btnA2Org.Text = "Origin";
+            this.btnA2Org.UseVisualStyleBackColor = false;
+            this.btnA2Org.Click += new System.EventHandler(this.AlignerFunction_Click);
+            // 
+            // tbA2WaferSensor
+            // 
+            this.tbA2WaferSensor.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.tbA2WaferSensor.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.tbA2WaferSensor.Location = new System.Drawing.Point(235, 231);
+            this.tbA2WaferSensor.Name = "tbA2WaferSensor";
+            this.tbA2WaferSensor.ReadOnly = true;
+            this.tbA2WaferSensor.Size = new System.Drawing.Size(118, 32);
+            this.tbA2WaferSensor.TabIndex = 56;
+            this.tbA2WaferSensor.Text = "OFF";
+            this.tbA2WaferSensor.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // tbA2Servo
+            // 
+            this.tbA2Servo.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.tbA2Servo.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.tbA2Servo.Location = new System.Drawing.Point(235, 174);
+            this.tbA2Servo.Name = "tbA2Servo";
+            this.tbA2Servo.ReadOnly = true;
+            this.tbA2Servo.Size = new System.Drawing.Size(118, 32);
+            this.tbA2Servo.TabIndex = 56;
+            this.tbA2Servo.Text = "OFF";
+            this.tbA2Servo.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // label18
+            // 
+            this.label18.AutoSize = true;
+            this.label18.Font = new System.Drawing.Font("微軟正黑體", 18F);
+            this.label18.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.label18.Location = new System.Drawing.Point(46, 395);
+            this.label18.Name = "label18";
+            this.label18.Size = new System.Drawing.Size(180, 30);
+            this.label18.TabIndex = 93;
+            this.label18.Text = "New Speed(%)";
+            // 
+            // tbA2Status
+            // 
+            this.tbA2Status.BackColor = System.Drawing.Color.Green;
+            this.tbA2Status.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.tbA2Status.Location = new System.Drawing.Point(235, 34);
+            this.tbA2Status.Name = "tbA2Status";
+            this.tbA2Status.ReadOnly = true;
+            this.tbA2Status.Size = new System.Drawing.Size(118, 32);
+            this.tbA2Status.TabIndex = 20;
+            this.tbA2Status.Text = "IDLE";
+            this.tbA2Status.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // label17
+            // 
+            this.label17.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.label17.AutoSize = true;
+            this.label17.Font = new System.Drawing.Font("微軟正黑體", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
+            this.label17.Location = new System.Drawing.Point(143, 525);
+            this.label17.Name = "label17";
+            this.label17.Size = new System.Drawing.Size(80, 30);
+            this.label17.TabIndex = 91;
+            this.label17.Text = "Angle";
+            this.label17.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            // 
+            // btnA2Conn
+            // 
+            this.btnA2Conn.BackColor = System.Drawing.Color.DarkGray;
+            this.btnA2Conn.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.btnA2Conn.FlatAppearance.BorderSize = 2;
+            this.btnA2Conn.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnA2Conn.Font = new System.Drawing.Font("微軟正黑體", 14.25F);
+            this.btnA2Conn.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.btnA2Conn.Location = new System.Drawing.Point(378, 28);
+            this.btnA2Conn.Name = "btnA2Conn";
+            this.btnA2Conn.Size = new System.Drawing.Size(118, 46);
+            this.btnA2Conn.TabIndex = 21;
+            this.btnA2Conn.Text = "Connect";
+            this.btnA2Conn.UseVisualStyleBackColor = false;
+            this.btnA2Conn.Click += new System.EventHandler(this.AlignerFunction_Click);
+            // 
+            // tbA2Error
+            // 
+            this.tbA2Error.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.tbA2Error.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.tbA2Error.Location = new System.Drawing.Point(235, 458);
+            this.tbA2Error.Name = "tbA2Error";
+            this.tbA2Error.ReadOnly = true;
+            this.tbA2Error.Size = new System.Drawing.Size(263, 32);
+            this.tbA2Error.TabIndex = 52;
+            this.tbA2Error.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // btnA2VacuOn
+            // 
+            this.btnA2VacuOn.BackColor = System.Drawing.Color.DarkGray;
+            this.btnA2VacuOn.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.btnA2VacuOn.FlatAppearance.BorderSize = 2;
+            this.btnA2VacuOn.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnA2VacuOn.Font = new System.Drawing.Font("微軟正黑體", 14.25F);
+            this.btnA2VacuOn.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.btnA2VacuOn.Location = new System.Drawing.Point(378, 274);
+            this.btnA2VacuOn.Name = "btnA2VacuOn";
+            this.btnA2VacuOn.Size = new System.Drawing.Size(55, 46);
+            this.btnA2VacuOn.TabIndex = 19;
+            this.btnA2VacuOn.Text = "On";
+            this.btnA2VacuOn.UseVisualStyleBackColor = false;
+            this.btnA2VacuOn.Click += new System.EventHandler(this.AlignerFunction_Click);
+            // 
+            // cbA2Angle
+            // 
+            this.cbA2Angle.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.cbA2Angle.Font = new System.Drawing.Font("微軟正黑體", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
+            this.cbA2Angle.FormattingEnabled = true;
+            this.cbA2Angle.Items.AddRange(new object[] {
+            "0",
+            "90",
+            "180",
+            "270"});
+            this.cbA2Angle.Location = new System.Drawing.Point(235, 522);
+            this.cbA2Angle.Name = "cbA2Angle";
+            this.cbA2Angle.Size = new System.Drawing.Size(95, 35);
+            this.cbA2Angle.TabIndex = 88;
+            // 
+            // btnA2Reset
+            // 
+            this.btnA2Reset.BackColor = System.Drawing.Color.DarkGray;
+            this.btnA2Reset.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.btnA2Reset.FlatAppearance.BorderSize = 2;
+            this.btnA2Reset.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnA2Reset.Font = new System.Drawing.Font("微軟正黑體", 14.25F);
+            this.btnA2Reset.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.btnA2Reset.Location = new System.Drawing.Point(519, 452);
+            this.btnA2Reset.Name = "btnA2Reset";
+            this.btnA2Reset.Size = new System.Drawing.Size(118, 46);
+            this.btnA2Reset.TabIndex = 17;
+            this.btnA2Reset.Text = "Reset";
+            this.btnA2Reset.UseVisualStyleBackColor = false;
+            this.btnA2Reset.Click += new System.EventHandler(this.AlignerFunction_Click);
+            // 
+            // label16
+            // 
+            this.label16.AutoSize = true;
+            this.label16.Font = new System.Drawing.Font("微軟正黑體", 18F);
+            this.label16.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.label16.Location = new System.Drawing.Point(104, 458);
+            this.label16.Name = "label16";
+            this.label16.Size = new System.Drawing.Size(119, 30);
+            this.label16.TabIndex = 51;
+            this.label16.Text = "Last Error";
+            // 
+            // btnA2Init
+            // 
+            this.btnA2Init.BackColor = System.Drawing.Color.DarkGray;
+            this.btnA2Init.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.btnA2Init.FlatAppearance.BorderSize = 2;
+            this.btnA2Init.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnA2Init.Font = new System.Drawing.Font("微軟正黑體", 14.25F);
+            this.btnA2Init.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.btnA2Init.Location = new System.Drawing.Point(235, 98);
+            this.btnA2Init.Name = "btnA2Init";
+            this.btnA2Init.Size = new System.Drawing.Size(118, 46);
+            this.btnA2Init.TabIndex = 53;
+            this.btnA2Init.Text = "Initialize";
+            this.btnA2Init.UseVisualStyleBackColor = false;
+            this.btnA2Init.Click += new System.EventHandler(this.AlignerFunction_Click);
+            // 
+            // tbA2Speed
+            // 
+            this.tbA2Speed.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.tbA2Speed.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.tbA2Speed.Location = new System.Drawing.Point(235, 337);
+            this.tbA2Speed.Name = "tbA2Speed";
+            this.tbA2Speed.ReadOnly = true;
+            this.tbA2Speed.Size = new System.Drawing.Size(118, 32);
+            this.tbA2Speed.TabIndex = 28;
+            this.tbA2Speed.Text = "90";
+            this.tbA2Speed.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // btnA2DisConn
+            // 
+            this.btnA2DisConn.BackColor = System.Drawing.Color.DarkGray;
+            this.btnA2DisConn.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.btnA2DisConn.FlatAppearance.BorderSize = 2;
+            this.btnA2DisConn.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnA2DisConn.Font = new System.Drawing.Font("微軟正黑體", 14.25F);
+            this.btnA2DisConn.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.btnA2DisConn.Location = new System.Drawing.Point(519, 28);
+            this.btnA2DisConn.Name = "btnA2DisConn";
+            this.btnA2DisConn.Size = new System.Drawing.Size(118, 46);
+            this.btnA2DisConn.TabIndex = 22;
+            this.btnA2DisConn.Text = "Disconnect";
+            this.btnA2DisConn.UseVisualStyleBackColor = false;
+            this.btnA2DisConn.Click += new System.EventHandler(this.AlignerFunction_Click);
+            // 
+            // dudA2AngleOffset
+            // 
+            this.dudA2AngleOffset.Font = new System.Drawing.Font("微軟正黑體", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
+            this.dudA2AngleOffset.Location = new System.Drawing.Point(378, 522);
+            this.dudA2AngleOffset.Name = "dudA2AngleOffset";
+            this.dudA2AngleOffset.Size = new System.Drawing.Size(103, 33);
+            this.dudA2AngleOffset.TabIndex = 89;
+            // 
+            // btnA2VacuOff
+            // 
+            this.btnA2VacuOff.BackColor = System.Drawing.Color.DarkGray;
+            this.btnA2VacuOff.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.btnA2VacuOff.FlatAppearance.BorderSize = 2;
+            this.btnA2VacuOff.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnA2VacuOff.Font = new System.Drawing.Font("微軟正黑體", 14.25F);
+            this.btnA2VacuOff.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.btnA2VacuOff.Location = new System.Drawing.Point(441, 274);
+            this.btnA2VacuOff.Name = "btnA2VacuOff";
+            this.btnA2VacuOff.Size = new System.Drawing.Size(55, 46);
+            this.btnA2VacuOff.TabIndex = 2;
+            this.btnA2VacuOff.Text = "Off";
+            this.btnA2VacuOff.UseVisualStyleBackColor = false;
+            this.btnA2VacuOff.Click += new System.EventHandler(this.AlignerFunction_Click);
+            // 
+            // label15
+            // 
+            this.label15.AutoSize = true;
+            this.label15.Font = new System.Drawing.Font("微軟正黑體", 18F);
+            this.label15.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.label15.Location = new System.Drawing.Point(14, 337);
+            this.label15.Name = "label15";
+            this.label15.Size = new System.Drawing.Size(215, 30);
+            this.label15.TabIndex = 27;
+            this.label15.Text = "Current Speed(%)";
+            // 
+            // btnA2ServoOff
+            // 
+            this.btnA2ServoOff.BackColor = System.Drawing.Color.DarkGray;
+            this.btnA2ServoOff.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.btnA2ServoOff.FlatAppearance.BorderSize = 2;
+            this.btnA2ServoOff.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnA2ServoOff.Font = new System.Drawing.Font("微軟正黑體", 14.25F);
+            this.btnA2ServoOff.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.btnA2ServoOff.Location = new System.Drawing.Point(519, 168);
+            this.btnA2ServoOff.Name = "btnA2ServoOff";
+            this.btnA2ServoOff.Size = new System.Drawing.Size(118, 46);
+            this.btnA2ServoOff.TabIndex = 25;
+            this.btnA2ServoOff.Text = "Servo Off";
+            this.btnA2ServoOff.UseVisualStyleBackColor = false;
+            this.btnA2ServoOff.Click += new System.EventHandler(this.AlignerFunction_Click);
+            // 
+            // label13
+            // 
+            this.label13.AutoSize = true;
+            this.label13.Font = new System.Drawing.Font("微軟正黑體", 18F);
+            this.label13.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.label13.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.label13.Location = new System.Drawing.Point(149, 170);
+            this.label13.Name = "label13";
+            this.label13.Size = new System.Drawing.Size(77, 30);
+            this.label13.TabIndex = 23;
+            this.label13.Text = "Servo";
+            // 
+            // btnA2Home
+            // 
+            this.btnA2Home.BackColor = System.Drawing.Color.DarkGray;
+            this.btnA2Home.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.btnA2Home.FlatAppearance.BorderSize = 2;
+            this.btnA2Home.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnA2Home.Font = new System.Drawing.Font("微軟正黑體", 14.25F);
+            this.btnA2Home.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.btnA2Home.Location = new System.Drawing.Point(519, 98);
+            this.btnA2Home.Name = "btnA2Home";
+            this.btnA2Home.Size = new System.Drawing.Size(118, 46);
+            this.btnA2Home.TabIndex = 54;
+            this.btnA2Home.Text = "Home";
+            this.btnA2Home.UseVisualStyleBackColor = false;
+            this.btnA2Home.Click += new System.EventHandler(this.AlignerFunction_Click);
+            // 
+            // label12
+            // 
+            this.label12.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.label12.AutoSize = true;
+            this.label12.Font = new System.Drawing.Font("微軟正黑體", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
+            this.label12.Location = new System.Drawing.Point(327, 521);
+            this.label12.Name = "label12";
+            this.label12.Size = new System.Drawing.Size(46, 27);
+            this.label12.TabIndex = 87;
+            this.label12.Text = " ° +";
+            this.label12.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            // 
+            // btnA2ServoOn
+            // 
+            this.btnA2ServoOn.BackColor = System.Drawing.Color.DarkGray;
+            this.btnA2ServoOn.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.btnA2ServoOn.FlatAppearance.BorderSize = 2;
+            this.btnA2ServoOn.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnA2ServoOn.Font = new System.Drawing.Font("微軟正黑體", 14.25F);
+            this.btnA2ServoOn.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.btnA2ServoOn.Location = new System.Drawing.Point(378, 168);
+            this.btnA2ServoOn.Name = "btnA2ServoOn";
+            this.btnA2ServoOn.Size = new System.Drawing.Size(118, 46);
+            this.btnA2ServoOn.TabIndex = 26;
+            this.btnA2ServoOn.Text = "Servo On";
+            this.btnA2ServoOn.UseVisualStyleBackColor = false;
+            this.btnA2ServoOn.Click += new System.EventHandler(this.AlignerFunction_Click);
+            // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.Font = new System.Drawing.Font("微軟正黑體", 18F);
+            this.label8.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.label8.Location = new System.Drawing.Point(14, 280);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(212, 30);
+            this.label8.TabIndex = 3;
+            this.label8.Text = "Vacuum Solenoid";
+            // 
+            // label11
+            // 
+            this.label11.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.label11.AutoSize = true;
+            this.label11.Font = new System.Drawing.Font("微軟正黑體", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
+            this.label11.Location = new System.Drawing.Point(473, 520);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(31, 27);
+            this.label11.TabIndex = 90;
+            this.label11.Text = " ° ";
+            this.label11.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.Font = new System.Drawing.Font("微軟正黑體", 18F);
+            this.label9.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.label9.Location = new System.Drawing.Point(58, 231);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(165, 30);
+            this.label9.TabIndex = 2;
+            this.label9.Text = "Wafer Sensor";
+            // 
+            // btnA2ChgSpeed
+            // 
+            this.btnA2ChgSpeed.BackColor = System.Drawing.Color.DarkGray;
+            this.btnA2ChgSpeed.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.btnA2ChgSpeed.FlatAppearance.BorderSize = 2;
+            this.btnA2ChgSpeed.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnA2ChgSpeed.Font = new System.Drawing.Font("微軟正黑體", 14.25F);
+            this.btnA2ChgSpeed.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.btnA2ChgSpeed.Location = new System.Drawing.Point(378, 389);
+            this.btnA2ChgSpeed.Name = "btnA2ChgSpeed";
+            this.btnA2ChgSpeed.Size = new System.Drawing.Size(126, 46);
+            this.btnA2ChgSpeed.TabIndex = 50;
+            this.btnA2ChgSpeed.Text = "Change";
+            this.btnA2ChgSpeed.UseVisualStyleBackColor = false;
+            this.btnA2ChgSpeed.Click += new System.EventHandler(this.AlignerFunction_Click);
+            // 
+            // btnA2Align
+            // 
+            this.btnA2Align.BackColor = System.Drawing.Color.DarkGray;
+            this.btnA2Align.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.btnA2Align.FlatAppearance.BorderSize = 2;
+            this.btnA2Align.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnA2Align.Font = new System.Drawing.Font("微軟正黑體", 14.25F);
+            this.btnA2Align.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.btnA2Align.Location = new System.Drawing.Point(519, 519);
+            this.btnA2Align.Name = "btnA2Align";
+            this.btnA2Align.Size = new System.Drawing.Size(118, 46);
+            this.btnA2Align.TabIndex = 55;
+            this.btnA2Align.Text = "Align";
+            this.btnA2Align.UseVisualStyleBackColor = false;
+            this.btnA2Align.Click += new System.EventHandler(this.AlignerFunction_Click);
+            // 
+            // label10
+            // 
+            this.label10.AutoSize = true;
+            this.label10.Font = new System.Drawing.Font("微軟正黑體", 18F);
+            this.label10.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.label10.Location = new System.Drawing.Point(51, 34);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(172, 30);
+            this.label10.TabIndex = 0;
+            this.label10.Text = "Aligner Status";
+            // 
+            // tbA2VacSolenoid
+            // 
+            this.tbA2VacSolenoid.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.tbA2VacSolenoid.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.tbA2VacSolenoid.Location = new System.Drawing.Point(235, 286);
+            this.tbA2VacSolenoid.Name = "tbA2VacSolenoid";
+            this.tbA2VacSolenoid.ReadOnly = true;
+            this.tbA2VacSolenoid.Size = new System.Drawing.Size(118, 32);
+            this.tbA2VacSolenoid.TabIndex = 15;
+            this.tbA2VacSolenoid.Text = "OFF";
+            this.tbA2VacSolenoid.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // cbA2SpeedNew
+            // 
+            this.cbA2SpeedNew.FormattingEnabled = true;
+            this.cbA2SpeedNew.Items.AddRange(new object[] {
+            "10",
+            "20",
+            "30",
+            "40",
+            "50",
+            "60",
+            "70",
+            "80",
+            "90",
+            "0(100)"});
+            this.cbA2SpeedNew.Location = new System.Drawing.Point(235, 392);
+            this.cbA2SpeedNew.Name = "cbA2SpeedNew";
+            this.cbA2SpeedNew.Size = new System.Drawing.Size(118, 38);
+            this.cbA2SpeedNew.TabIndex = 49;
+            // 
+            // groupBox22
+            // 
+            this.groupBox22.BackColor = System.Drawing.SystemColors.ControlLight;
+            this.groupBox22.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.groupBox22.Controls.Add(this.panel15);
+            this.groupBox22.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.groupBox22.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.groupBox22.Font = new System.Drawing.Font("微軟正黑體", 18F);
+            this.groupBox22.Location = new System.Drawing.Point(3, 3);
+            this.groupBox22.Name = "groupBox22";
+            this.groupBox22.Size = new System.Drawing.Size(734, 789);
+            this.groupBox22.TabIndex = 1;
+            this.groupBox22.TabStop = false;
+            this.groupBox22.Text = "Aligner1";
+            // 
+            // panel15
+            // 
+            this.panel15.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel15.Controls.Add(this.panel16);
+            this.panel15.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel15.Location = new System.Drawing.Point(3, 35);
+            this.panel15.Name = "panel15";
+            this.panel15.Padding = new System.Windows.Forms.Padding(20);
+            this.panel15.Size = new System.Drawing.Size(728, 751);
+            this.panel15.TabIndex = 19;
+            // 
+            // panel16
+            // 
+            this.panel16.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.panel16.Controls.Add(this.btnA1Org);
+            this.panel16.Controls.Add(this.label6);
+            this.panel16.Controls.Add(this.label48);
+            this.panel16.Controls.Add(this.tbA1Error);
+            this.panel16.Controls.Add(this.cbA1Angle);
+            this.panel16.Controls.Add(this.label70);
+            this.panel16.Controls.Add(this.tbA1Speed);
+            this.panel16.Controls.Add(this.dudA1AngleOffset);
+            this.panel16.Controls.Add(this.label71);
+            this.panel16.Controls.Add(this.label72);
+            this.panel16.Controls.Add(this.label4);
+            this.panel16.Controls.Add(this.tbA1Servo);
+            this.panel16.Controls.Add(this.tbA1Status);
+            this.panel16.Controls.Add(this.label5);
+            this.panel16.Controls.Add(this.btnA1ChgSpeed);
+            this.panel16.Controls.Add(this.label73);
+            this.panel16.Controls.Add(this.cbA1SpeedNew);
+            this.panel16.Controls.Add(this.tbA1VacSolenoid);
+            this.panel16.Controls.Add(this.btnA1Align);
+            this.panel16.Controls.Add(this.label74);
+            this.panel16.Controls.Add(this.label75);
+            this.panel16.Controls.Add(this.btnA1ServoOn);
+            this.panel16.Controls.Add(this.tbA1WaferSensor);
+            this.panel16.Controls.Add(this.btnA1Home);
+            this.panel16.Controls.Add(this.btnA1ServoOff);
+            this.panel16.Controls.Add(this.btnA1VacuOff);
+            this.panel16.Controls.Add(this.btnA1DisConn);
+            this.panel16.Controls.Add(this.btnA1Init);
+            this.panel16.Controls.Add(this.btnA1Reset);
+            this.panel16.Controls.Add(this.btnA1Conn);
+            this.panel16.Controls.Add(this.btnA1VacuOn);
+            this.panel16.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel16.Location = new System.Drawing.Point(20, 20);
+            this.panel16.Name = "panel16";
+            this.panel16.Size = new System.Drawing.Size(686, 709);
+            this.panel16.TabIndex = 18;
+            // 
+            // btnA1Org
+            // 
+            this.btnA1Org.BackColor = System.Drawing.Color.DarkGray;
+            this.btnA1Org.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.btnA1Org.FlatAppearance.BorderSize = 2;
+            this.btnA1Org.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnA1Org.Font = new System.Drawing.Font("微軟正黑體", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
+            this.btnA1Org.Location = new System.Drawing.Point(371, 104);
+            this.btnA1Org.Name = "btnA1Org";
+            this.btnA1Org.Size = new System.Drawing.Size(118, 45);
+            this.btnA1Org.TabIndex = 94;
+            this.btnA1Org.Text = "Origin";
+            this.btnA1Org.UseVisualStyleBackColor = false;
+            this.btnA1Org.Click += new System.EventHandler(this.AlignerFunction_Click);
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Font = new System.Drawing.Font("微軟正黑體", 18F);
+            this.label6.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.label6.Location = new System.Drawing.Point(39, 401);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(180, 30);
+            this.label6.TabIndex = 93;
+            this.label6.Text = "New Speed(%)";
+            // 
+            // label48
+            // 
+            this.label48.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.label48.AutoSize = true;
+            this.label48.Font = new System.Drawing.Font("微軟正黑體", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
+            this.label48.Location = new System.Drawing.Point(136, 531);
+            this.label48.Name = "label48";
+            this.label48.Size = new System.Drawing.Size(80, 30);
+            this.label48.TabIndex = 91;
+            this.label48.Text = "Angle";
+            this.label48.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            // 
+            // tbA1Error
+            // 
+            this.tbA1Error.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.tbA1Error.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.tbA1Error.Location = new System.Drawing.Point(228, 464);
+            this.tbA1Error.Name = "tbA1Error";
+            this.tbA1Error.ReadOnly = true;
+            this.tbA1Error.Size = new System.Drawing.Size(263, 32);
+            this.tbA1Error.TabIndex = 52;
+            this.tbA1Error.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // cbA1Angle
+            // 
+            this.cbA1Angle.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.cbA1Angle.Font = new System.Drawing.Font("微軟正黑體", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
+            this.cbA1Angle.FormattingEnabled = true;
+            this.cbA1Angle.Items.AddRange(new object[] {
+            "0",
+            "90",
+            "180",
+            "270"});
+            this.cbA1Angle.Location = new System.Drawing.Point(228, 528);
+            this.cbA1Angle.Name = "cbA1Angle";
+            this.cbA1Angle.Size = new System.Drawing.Size(95, 35);
+            this.cbA1Angle.TabIndex = 88;
+            // 
+            // label70
+            // 
+            this.label70.AutoSize = true;
+            this.label70.Font = new System.Drawing.Font("微軟正黑體", 18F);
+            this.label70.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.label70.Location = new System.Drawing.Point(97, 464);
+            this.label70.Name = "label70";
+            this.label70.Size = new System.Drawing.Size(119, 30);
+            this.label70.TabIndex = 51;
+            this.label70.Text = "Last Error";
+            // 
+            // tbA1Speed
+            // 
+            this.tbA1Speed.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.tbA1Speed.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.tbA1Speed.Location = new System.Drawing.Point(228, 343);
+            this.tbA1Speed.Name = "tbA1Speed";
+            this.tbA1Speed.ReadOnly = true;
+            this.tbA1Speed.Size = new System.Drawing.Size(118, 32);
+            this.tbA1Speed.TabIndex = 28;
+            this.tbA1Speed.Text = "90";
+            this.tbA1Speed.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // dudA1AngleOffset
+            // 
+            this.dudA1AngleOffset.Font = new System.Drawing.Font("微軟正黑體", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
+            this.dudA1AngleOffset.Location = new System.Drawing.Point(371, 528);
+            this.dudA1AngleOffset.Name = "dudA1AngleOffset";
+            this.dudA1AngleOffset.Size = new System.Drawing.Size(103, 33);
+            this.dudA1AngleOffset.TabIndex = 89;
+            // 
+            // label71
+            // 
+            this.label71.AutoSize = true;
+            this.label71.Font = new System.Drawing.Font("微軟正黑體", 18F);
+            this.label71.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.label71.Location = new System.Drawing.Point(7, 343);
+            this.label71.Name = "label71";
+            this.label71.Size = new System.Drawing.Size(215, 30);
+            this.label71.TabIndex = 27;
+            this.label71.Text = "Current Speed(%)";
+            // 
+            // label72
+            // 
+            this.label72.AutoSize = true;
+            this.label72.Font = new System.Drawing.Font("微軟正黑體", 18F);
+            this.label72.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.label72.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.label72.Location = new System.Drawing.Point(142, 176);
+            this.label72.Name = "label72";
+            this.label72.Size = new System.Drawing.Size(77, 30);
+            this.label72.TabIndex = 23;
+            this.label72.Text = "Servo";
+            // 
+            // label4
+            // 
+            this.label4.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("微軟正黑體", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
+            this.label4.Location = new System.Drawing.Point(320, 527);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(46, 27);
+            this.label4.TabIndex = 87;
+            this.label4.Text = " ° +";
+            this.label4.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            // 
+            // tbA1Servo
+            // 
+            this.tbA1Servo.BackColor = System.Drawing.Color.OrangeRed;
+            this.tbA1Servo.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.tbA1Servo.Location = new System.Drawing.Point(228, 174);
+            this.tbA1Servo.Name = "tbA1Servo";
+            this.tbA1Servo.ReadOnly = true;
+            this.tbA1Servo.Size = new System.Drawing.Size(118, 32);
+            this.tbA1Servo.TabIndex = 24;
+            this.tbA1Servo.Text = "ON";
+            this.tbA1Servo.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // tbA1Status
+            // 
+            this.tbA1Status.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.tbA1Status.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.tbA1Status.Location = new System.Drawing.Point(228, 40);
+            this.tbA1Status.Name = "tbA1Status";
+            this.tbA1Status.ReadOnly = true;
+            this.tbA1Status.Size = new System.Drawing.Size(118, 32);
+            this.tbA1Status.TabIndex = 20;
+            this.tbA1Status.Text = "N/A";
+            this.tbA1Status.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // label5
+            // 
+            this.label5.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.label5.AutoSize = true;
+            this.label5.Font = new System.Drawing.Font("微軟正黑體", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
+            this.label5.Location = new System.Drawing.Point(466, 526);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(31, 27);
+            this.label5.TabIndex = 90;
+            this.label5.Text = " ° ";
+            this.label5.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            // 
+            // btnA1ChgSpeed
+            // 
+            this.btnA1ChgSpeed.BackColor = System.Drawing.Color.DarkGray;
+            this.btnA1ChgSpeed.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.btnA1ChgSpeed.FlatAppearance.BorderSize = 2;
+            this.btnA1ChgSpeed.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnA1ChgSpeed.Font = new System.Drawing.Font("微軟正黑體", 14.25F);
+            this.btnA1ChgSpeed.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.btnA1ChgSpeed.Location = new System.Drawing.Point(371, 395);
+            this.btnA1ChgSpeed.Name = "btnA1ChgSpeed";
+            this.btnA1ChgSpeed.Size = new System.Drawing.Size(126, 46);
+            this.btnA1ChgSpeed.TabIndex = 50;
+            this.btnA1ChgSpeed.Text = "Change";
+            this.btnA1ChgSpeed.UseVisualStyleBackColor = false;
+            this.btnA1ChgSpeed.Click += new System.EventHandler(this.AlignerFunction_Click);
+            // 
+            // label73
+            // 
+            this.label73.AutoSize = true;
+            this.label73.Font = new System.Drawing.Font("微軟正黑體", 18F);
+            this.label73.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.label73.Location = new System.Drawing.Point(44, 40);
+            this.label73.Name = "label73";
+            this.label73.Size = new System.Drawing.Size(172, 30);
+            this.label73.TabIndex = 0;
+            this.label73.Text = "Aligner Status";
+            // 
+            // cbA1SpeedNew
+            // 
+            this.cbA1SpeedNew.FormattingEnabled = true;
+            this.cbA1SpeedNew.Items.AddRange(new object[] {
+            "10",
+            "20",
+            "30",
+            "40",
+            "50",
+            "60",
+            "70",
+            "80",
+            "90",
+            "0(100)"});
+            this.cbA1SpeedNew.Location = new System.Drawing.Point(228, 398);
+            this.cbA1SpeedNew.Name = "cbA1SpeedNew";
+            this.cbA1SpeedNew.Size = new System.Drawing.Size(118, 38);
+            this.cbA1SpeedNew.TabIndex = 49;
+            // 
+            // tbA1VacSolenoid
+            // 
+            this.tbA1VacSolenoid.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.tbA1VacSolenoid.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.tbA1VacSolenoid.Location = new System.Drawing.Point(228, 286);
+            this.tbA1VacSolenoid.Name = "tbA1VacSolenoid";
+            this.tbA1VacSolenoid.ReadOnly = true;
+            this.tbA1VacSolenoid.Size = new System.Drawing.Size(118, 32);
+            this.tbA1VacSolenoid.TabIndex = 15;
+            this.tbA1VacSolenoid.Text = "OFF";
+            this.tbA1VacSolenoid.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // btnA1Align
+            // 
+            this.btnA1Align.BackColor = System.Drawing.Color.DarkGray;
+            this.btnA1Align.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.btnA1Align.FlatAppearance.BorderSize = 2;
+            this.btnA1Align.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnA1Align.Font = new System.Drawing.Font("微軟正黑體", 14.25F);
+            this.btnA1Align.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.btnA1Align.Location = new System.Drawing.Point(512, 525);
+            this.btnA1Align.Name = "btnA1Align";
+            this.btnA1Align.Size = new System.Drawing.Size(118, 46);
+            this.btnA1Align.TabIndex = 55;
+            this.btnA1Align.Text = "Align";
+            this.btnA1Align.UseVisualStyleBackColor = false;
+            this.btnA1Align.Click += new System.EventHandler(this.AlignerFunction_Click);
+            // 
+            // label74
+            // 
+            this.label74.AutoSize = true;
+            this.label74.Font = new System.Drawing.Font("微軟正黑體", 18F);
+            this.label74.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.label74.Location = new System.Drawing.Point(51, 231);
+            this.label74.Name = "label74";
+            this.label74.Size = new System.Drawing.Size(165, 30);
+            this.label74.TabIndex = 2;
+            this.label74.Text = "Wafer Sensor";
+            // 
+            // label75
+            // 
+            this.label75.AutoSize = true;
+            this.label75.Font = new System.Drawing.Font("微軟正黑體", 18F);
+            this.label75.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.label75.Location = new System.Drawing.Point(7, 286);
+            this.label75.Name = "label75";
+            this.label75.Size = new System.Drawing.Size(212, 30);
+            this.label75.TabIndex = 3;
+            this.label75.Text = "Vacuum Solenoid";
+            // 
+            // btnA1ServoOn
+            // 
+            this.btnA1ServoOn.BackColor = System.Drawing.Color.DarkGray;
+            this.btnA1ServoOn.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.btnA1ServoOn.FlatAppearance.BorderSize = 2;
+            this.btnA1ServoOn.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnA1ServoOn.Font = new System.Drawing.Font("微軟正黑體", 14.25F);
+            this.btnA1ServoOn.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.btnA1ServoOn.Location = new System.Drawing.Point(371, 168);
+            this.btnA1ServoOn.Name = "btnA1ServoOn";
+            this.btnA1ServoOn.Size = new System.Drawing.Size(118, 46);
+            this.btnA1ServoOn.TabIndex = 26;
+            this.btnA1ServoOn.Text = "Servo On";
+            this.btnA1ServoOn.UseVisualStyleBackColor = false;
+            this.btnA1ServoOn.Click += new System.EventHandler(this.AlignerFunction_Click);
+            // 
+            // tbA1WaferSensor
+            // 
+            this.tbA1WaferSensor.BackColor = System.Drawing.Color.OrangeRed;
+            this.tbA1WaferSensor.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.tbA1WaferSensor.Location = new System.Drawing.Point(228, 231);
+            this.tbA1WaferSensor.Name = "tbA1WaferSensor";
+            this.tbA1WaferSensor.ReadOnly = true;
+            this.tbA1WaferSensor.Size = new System.Drawing.Size(118, 32);
+            this.tbA1WaferSensor.TabIndex = 8;
+            this.tbA1WaferSensor.Text = "ON";
+            this.tbA1WaferSensor.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // btnA1Home
+            // 
+            this.btnA1Home.BackColor = System.Drawing.Color.DarkGray;
+            this.btnA1Home.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.btnA1Home.FlatAppearance.BorderSize = 2;
+            this.btnA1Home.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnA1Home.Font = new System.Drawing.Font("微軟正黑體", 14.25F);
+            this.btnA1Home.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.btnA1Home.Location = new System.Drawing.Point(512, 104);
+            this.btnA1Home.Name = "btnA1Home";
+            this.btnA1Home.Size = new System.Drawing.Size(118, 46);
+            this.btnA1Home.TabIndex = 54;
+            this.btnA1Home.Text = "Home";
+            this.btnA1Home.UseVisualStyleBackColor = false;
+            this.btnA1Home.Click += new System.EventHandler(this.AlignerFunction_Click);
+            // 
+            // btnA1ServoOff
+            // 
+            this.btnA1ServoOff.BackColor = System.Drawing.Color.DarkGray;
+            this.btnA1ServoOff.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.btnA1ServoOff.FlatAppearance.BorderSize = 2;
+            this.btnA1ServoOff.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnA1ServoOff.Font = new System.Drawing.Font("微軟正黑體", 14.25F);
+            this.btnA1ServoOff.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.btnA1ServoOff.Location = new System.Drawing.Point(512, 168);
+            this.btnA1ServoOff.Name = "btnA1ServoOff";
+            this.btnA1ServoOff.Size = new System.Drawing.Size(118, 46);
+            this.btnA1ServoOff.TabIndex = 25;
+            this.btnA1ServoOff.Text = "Servo Off";
+            this.btnA1ServoOff.UseVisualStyleBackColor = false;
+            this.btnA1ServoOff.Click += new System.EventHandler(this.AlignerFunction_Click);
+            // 
+            // btnA1VacuOff
+            // 
+            this.btnA1VacuOff.BackColor = System.Drawing.Color.DarkGray;
+            this.btnA1VacuOff.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.btnA1VacuOff.FlatAppearance.BorderSize = 2;
+            this.btnA1VacuOff.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnA1VacuOff.Font = new System.Drawing.Font("微軟正黑體", 14.25F);
+            this.btnA1VacuOff.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.btnA1VacuOff.Location = new System.Drawing.Point(434, 280);
+            this.btnA1VacuOff.Name = "btnA1VacuOff";
+            this.btnA1VacuOff.Size = new System.Drawing.Size(55, 46);
+            this.btnA1VacuOff.TabIndex = 2;
+            this.btnA1VacuOff.Text = "Off";
+            this.btnA1VacuOff.UseVisualStyleBackColor = false;
+            this.btnA1VacuOff.Click += new System.EventHandler(this.AlignerFunction_Click);
+            // 
+            // btnA1DisConn
+            // 
+            this.btnA1DisConn.BackColor = System.Drawing.Color.DarkGray;
+            this.btnA1DisConn.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.btnA1DisConn.FlatAppearance.BorderSize = 2;
+            this.btnA1DisConn.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnA1DisConn.Font = new System.Drawing.Font("微軟正黑體", 14.25F);
+            this.btnA1DisConn.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.btnA1DisConn.Location = new System.Drawing.Point(512, 34);
+            this.btnA1DisConn.Name = "btnA1DisConn";
+            this.btnA1DisConn.Size = new System.Drawing.Size(118, 46);
+            this.btnA1DisConn.TabIndex = 22;
+            this.btnA1DisConn.Text = "Disconnect";
+            this.btnA1DisConn.UseVisualStyleBackColor = false;
+            this.btnA1DisConn.Click += new System.EventHandler(this.AlignerFunction_Click);
+            // 
+            // btnA1Init
+            // 
+            this.btnA1Init.BackColor = System.Drawing.Color.DarkGray;
+            this.btnA1Init.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.btnA1Init.FlatAppearance.BorderSize = 2;
+            this.btnA1Init.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnA1Init.Font = new System.Drawing.Font("微軟正黑體", 14.25F);
+            this.btnA1Init.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.btnA1Init.Location = new System.Drawing.Point(228, 104);
+            this.btnA1Init.Name = "btnA1Init";
+            this.btnA1Init.Size = new System.Drawing.Size(118, 46);
+            this.btnA1Init.TabIndex = 53;
+            this.btnA1Init.Text = "Initialize";
+            this.btnA1Init.UseVisualStyleBackColor = false;
+            this.btnA1Init.Click += new System.EventHandler(this.AlignerFunction_Click);
+            // 
+            // btnA1Reset
+            // 
+            this.btnA1Reset.BackColor = System.Drawing.Color.DarkGray;
+            this.btnA1Reset.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.btnA1Reset.FlatAppearance.BorderSize = 2;
+            this.btnA1Reset.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnA1Reset.Font = new System.Drawing.Font("微軟正黑體", 14.25F);
+            this.btnA1Reset.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.btnA1Reset.Location = new System.Drawing.Point(512, 458);
+            this.btnA1Reset.Name = "btnA1Reset";
+            this.btnA1Reset.Size = new System.Drawing.Size(118, 46);
+            this.btnA1Reset.TabIndex = 17;
+            this.btnA1Reset.Text = "Reset";
+            this.btnA1Reset.UseVisualStyleBackColor = false;
+            this.btnA1Reset.Click += new System.EventHandler(this.AlignerFunction_Click);
+            // 
+            // btnA1Conn
+            // 
+            this.btnA1Conn.BackColor = System.Drawing.Color.DarkGray;
+            this.btnA1Conn.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.btnA1Conn.FlatAppearance.BorderSize = 2;
+            this.btnA1Conn.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnA1Conn.Font = new System.Drawing.Font("微軟正黑體", 14.25F);
+            this.btnA1Conn.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.btnA1Conn.Location = new System.Drawing.Point(371, 34);
+            this.btnA1Conn.Name = "btnA1Conn";
+            this.btnA1Conn.Size = new System.Drawing.Size(118, 46);
+            this.btnA1Conn.TabIndex = 21;
+            this.btnA1Conn.Text = "Connect";
+            this.btnA1Conn.UseVisualStyleBackColor = false;
+            this.btnA1Conn.Click += new System.EventHandler(this.AlignerFunction_Click);
+            // 
+            // btnA1VacuOn
+            // 
+            this.btnA1VacuOn.BackColor = System.Drawing.Color.DarkGray;
+            this.btnA1VacuOn.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.btnA1VacuOn.FlatAppearance.BorderSize = 2;
+            this.btnA1VacuOn.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnA1VacuOn.Font = new System.Drawing.Font("微軟正黑體", 14.25F);
+            this.btnA1VacuOn.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.btnA1VacuOn.Location = new System.Drawing.Point(371, 280);
+            this.btnA1VacuOn.Name = "btnA1VacuOn";
+            this.btnA1VacuOn.Size = new System.Drawing.Size(55, 46);
+            this.btnA1VacuOn.TabIndex = 19;
+            this.btnA1VacuOn.Text = "On";
+            this.btnA1VacuOn.UseVisualStyleBackColor = false;
+            this.btnA1VacuOn.Click += new System.EventHandler(this.AlignerFunction_Click);
             // 
             // tabPage3
             // 
@@ -2171,1700 +4184,6 @@
             this.Btn_LatchDoor_A.UseVisualStyleBackColor = true;
             this.Btn_LatchDoor_A.Click += new System.EventHandler(this.PortFunction_Click);
             // 
-            // groupBox20
-            // 
-            this.groupBox20.BackColor = System.Drawing.SystemColors.ControlLight;
-            this.groupBox20.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.groupBox20.Controls.Add(this.panel9);
-            this.groupBox20.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.groupBox20.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.groupBox20.Font = new System.Drawing.Font("微軟正黑體", 18F);
-            this.groupBox20.Location = new System.Drawing.Point(680, 3);
-            this.groupBox20.Name = "groupBox20";
-            this.groupBox20.Size = new System.Drawing.Size(804, 795);
-            this.groupBox20.TabIndex = 20;
-            this.groupBox20.TabStop = false;
-            this.groupBox20.Text = "GET and PUT Commands";
-            // 
-            // panel9
-            // 
-            this.panel9.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panel9.Controls.Add(this.tableLayoutPanel23);
-            this.panel9.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel9.Location = new System.Drawing.Point(3, 35);
-            this.panel9.Name = "panel9";
-            this.panel9.Padding = new System.Windows.Forms.Padding(20);
-            this.panel9.Size = new System.Drawing.Size(798, 757);
-            this.panel9.TabIndex = 51;
-            // 
-            // tableLayoutPanel23
-            // 
-            this.tableLayoutPanel23.ColumnCount = 1;
-            this.tableLayoutPanel23.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel23.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 20F));
-            this.tableLayoutPanel23.Controls.Add(this.tableLayoutPanel24, 0, 0);
-            this.tableLayoutPanel23.Controls.Add(this.panel10, 0, 1);
-            this.tableLayoutPanel23.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tableLayoutPanel23.Location = new System.Drawing.Point(20, 20);
-            this.tableLayoutPanel23.Name = "tableLayoutPanel23";
-            this.tableLayoutPanel23.RowCount = 2;
-            this.tableLayoutPanel23.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 76.14534F));
-            this.tableLayoutPanel23.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 23.85466F));
-            this.tableLayoutPanel23.Size = new System.Drawing.Size(756, 715);
-            this.tableLayoutPanel23.TabIndex = 52;
-            // 
-            // tableLayoutPanel24
-            // 
-            this.tableLayoutPanel24.ColumnCount = 2;
-            this.tableLayoutPanel24.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel24.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel24.Controls.Add(this.panel12, 0, 0);
-            this.tableLayoutPanel24.Controls.Add(this.panel11, 1, 0);
-            this.tableLayoutPanel24.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tableLayoutPanel24.Location = new System.Drawing.Point(3, 3);
-            this.tableLayoutPanel24.Name = "tableLayoutPanel24";
-            this.tableLayoutPanel24.RowCount = 1;
-            this.tableLayoutPanel24.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel24.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 476F));
-            this.tableLayoutPanel24.Size = new System.Drawing.Size(750, 538);
-            this.tableLayoutPanel24.TabIndex = 0;
-            // 
-            // panel12
-            // 
-            this.panel12.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.panel12.Controls.Add(this.label56);
-            this.panel12.Controls.Add(this.label57);
-            this.panel12.Controls.Add(this.comboBox9);
-            this.panel12.Controls.Add(this.button31);
-            this.panel12.Controls.Add(this.label58);
-            this.panel12.Controls.Add(this.button32);
-            this.panel12.Controls.Add(this.label59);
-            this.panel12.Controls.Add(this.button33);
-            this.panel12.Controls.Add(this.label60);
-            this.panel12.Controls.Add(this.label61);
-            this.panel12.Controls.Add(this.label62);
-            this.panel12.Controls.Add(this.comboBox10);
-            this.panel12.Controls.Add(this.comboBox11);
-            this.panel12.Controls.Add(this.comboBox12);
-            this.panel12.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel12.Location = new System.Drawing.Point(3, 3);
-            this.panel12.Name = "panel12";
-            this.panel12.Size = new System.Drawing.Size(369, 532);
-            this.panel12.TabIndex = 50;
-            // 
-            // label56
-            // 
-            this.label56.AutoSize = true;
-            this.label56.Font = new System.Drawing.Font("微軟正黑體", 18F);
-            this.label56.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.label56.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.label56.Location = new System.Drawing.Point(139, -2);
-            this.label56.Name = "label56";
-            this.label56.Size = new System.Drawing.Size(86, 30);
-            this.label56.TabIndex = 47;
-            this.label56.Text = "Area 1";
-            // 
-            // label57
-            // 
-            this.label57.AutoSize = true;
-            this.label57.Font = new System.Drawing.Font("微軟正黑體", 18F);
-            this.label57.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.label57.Location = new System.Drawing.Point(44, 30);
-            this.label57.Name = "label57";
-            this.label57.Size = new System.Drawing.Size(94, 30);
-            this.label57.TabIndex = 21;
-            this.label57.Text = "Station";
-            // 
-            // comboBox9
-            // 
-            this.comboBox9.FormattingEnabled = true;
-            this.comboBox9.Items.AddRange(new object[] {
-            "Port_A",
-            "Port_B",
-            "Port_C",
-            "Port_D",
-            "Aligner1",
-            "Aligner2"});
-            this.comboBox9.Location = new System.Drawing.Point(144, 41);
-            this.comboBox9.Name = "comboBox9";
-            this.comboBox9.Size = new System.Drawing.Size(208, 38);
-            this.comboBox9.TabIndex = 22;
-            // 
-            // button31
-            // 
-            this.button31.BackColor = System.Drawing.Color.DarkGray;
-            this.button31.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.button31.FlatAppearance.BorderSize = 2;
-            this.button31.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.button31.Font = new System.Drawing.Font("微軟正黑體", 14.25F);
-            this.button31.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.button31.Location = new System.Drawing.Point(72, 413);
-            this.button31.Name = "button31";
-            this.button31.Size = new System.Drawing.Size(280, 45);
-            this.button31.TabIndex = 46;
-            this.button31.Text = "Move Stage Up";
-            this.button31.UseVisualStyleBackColor = false;
-            // 
-            // label58
-            // 
-            this.label58.AutoSize = true;
-            this.label58.Font = new System.Drawing.Font("微軟正黑體", 18F);
-            this.label58.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.label58.Location = new System.Drawing.Point(45, 60);
-            this.label58.Name = "label58";
-            this.label58.Size = new System.Drawing.Size(88, 30);
-            this.label58.TabIndex = 23;
-            this.label58.Text = "(Point)";
-            // 
-            // button32
-            // 
-            this.button32.BackColor = System.Drawing.Color.DarkGray;
-            this.button32.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.button32.FlatAppearance.BorderSize = 2;
-            this.button32.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.button32.Font = new System.Drawing.Font("微軟正黑體", 14.25F);
-            this.button32.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.button32.Location = new System.Drawing.Point(72, 362);
-            this.button32.Name = "button32";
-            this.button32.Size = new System.Drawing.Size(280, 45);
-            this.button32.TabIndex = 44;
-            this.button32.Text = "Get Wait";
-            this.button32.UseVisualStyleBackColor = false;
-            // 
-            // label59
-            // 
-            this.label59.AutoSize = true;
-            this.label59.Font = new System.Drawing.Font("微軟正黑體", 18F);
-            this.label59.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.label59.Location = new System.Drawing.Point(76, 101);
-            this.label59.Name = "label59";
-            this.label59.Size = new System.Drawing.Size(57, 30);
-            this.label59.TabIndex = 27;
-            this.label59.Text = "Slot";
-            // 
-            // button33
-            // 
-            this.button33.BackColor = System.Drawing.Color.DarkGray;
-            this.button33.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.button33.FlatAppearance.BorderSize = 2;
-            this.button33.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.button33.Font = new System.Drawing.Font("微軟正黑體", 14.25F);
-            this.button33.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.button33.Location = new System.Drawing.Point(72, 311);
-            this.button33.Name = "button33";
-            this.button33.Size = new System.Drawing.Size(280, 45);
-            this.button33.TabIndex = 18;
-            this.button33.Text = "Get";
-            this.button33.UseVisualStyleBackColor = false;
-            // 
-            // label60
-            // 
-            this.label60.AutoSize = true;
-            this.label60.Font = new System.Drawing.Font("微軟正黑體", 18F);
-            this.label60.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.label60.Location = new System.Drawing.Point(52, 131);
-            this.label60.Name = "label60";
-            this.label60.Size = new System.Drawing.Size(81, 30);
-            this.label60.TabIndex = 29;
-            this.label60.Text = "(1-25)";
-            // 
-            // label61
-            // 
-            this.label61.AutoSize = true;
-            this.label61.Font = new System.Drawing.Font("微軟正黑體", 18F);
-            this.label61.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.label61.Location = new System.Drawing.Point(67, 184);
-            this.label61.Name = "label61";
-            this.label61.Size = new System.Drawing.Size(61, 30);
-            this.label61.TabIndex = 33;
-            this.label61.Text = "Arm";
-            // 
-            // label62
-            // 
-            this.label62.AutoSize = true;
-            this.label62.Font = new System.Drawing.Font("微軟正黑體", 18F);
-            this.label62.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.label62.Location = new System.Drawing.Point(26, 254);
-            this.label62.Name = "label62";
-            this.label62.Size = new System.Drawing.Size(112, 30);
-            this.label62.TabIndex = 39;
-            this.label62.Text = "% Speed";
-            // 
-            // comboBox10
-            // 
-            this.comboBox10.FormattingEnabled = true;
-            this.comboBox10.Items.AddRange(new object[] {
-            "1",
-            "2",
-            "3",
-            "4",
-            "5",
-            "6",
-            "7",
-            "8",
-            "9",
-            "10",
-            "11",
-            "12",
-            "13",
-            "14",
-            "15",
-            "16",
-            "17",
-            "18",
-            "19",
-            "20",
-            "21",
-            "22",
-            "23",
-            "24",
-            "25"});
-            this.comboBox10.Location = new System.Drawing.Point(144, 111);
-            this.comboBox10.Name = "comboBox10";
-            this.comboBox10.Size = new System.Drawing.Size(208, 38);
-            this.comboBox10.TabIndex = 40;
-            // 
-            // comboBox11
-            // 
-            this.comboBox11.FormattingEnabled = true;
-            this.comboBox11.Items.AddRange(new object[] {
-            "10",
-            "20",
-            "30",
-            "40",
-            "50",
-            "60",
-            "70",
-            "80",
-            "90",
-            "0(100)"});
-            this.comboBox11.Location = new System.Drawing.Point(144, 241);
-            this.comboBox11.Name = "comboBox11";
-            this.comboBox11.Size = new System.Drawing.Size(208, 38);
-            this.comboBox11.TabIndex = 42;
-            // 
-            // comboBox12
-            // 
-            this.comboBox12.FormattingEnabled = true;
-            this.comboBox12.Items.AddRange(new object[] {
-            "Upper",
-            "Lower"});
-            this.comboBox12.Location = new System.Drawing.Point(144, 181);
-            this.comboBox12.Name = "comboBox12";
-            this.comboBox12.Size = new System.Drawing.Size(208, 38);
-            this.comboBox12.TabIndex = 41;
-            // 
-            // panel11
-            // 
-            this.panel11.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.panel11.Controls.Add(this.label7);
-            this.panel11.Controls.Add(this.label14);
-            this.panel11.Controls.Add(this.comboBox3);
-            this.panel11.Controls.Add(this.button26);
-            this.panel11.Controls.Add(this.label51);
-            this.panel11.Controls.Add(this.label52);
-            this.panel11.Controls.Add(this.button29);
-            this.panel11.Controls.Add(this.label53);
-            this.panel11.Controls.Add(this.label54);
-            this.panel11.Controls.Add(this.button30);
-            this.panel11.Controls.Add(this.label55);
-            this.panel11.Controls.Add(this.comboBox7);
-            this.panel11.Controls.Add(this.comboBox4);
-            this.panel11.Controls.Add(this.comboBox5);
-            this.panel11.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel11.Location = new System.Drawing.Point(378, 3);
-            this.panel11.Name = "panel11";
-            this.panel11.Size = new System.Drawing.Size(369, 532);
-            this.panel11.TabIndex = 49;
-            // 
-            // label7
-            // 
-            this.label7.AutoSize = true;
-            this.label7.Font = new System.Drawing.Font("微軟正黑體", 18F);
-            this.label7.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.label7.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.label7.Location = new System.Drawing.Point(139, -2);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(86, 30);
-            this.label7.TabIndex = 48;
-            this.label7.Text = "Area 2";
-            // 
-            // label14
-            // 
-            this.label14.AutoSize = true;
-            this.label14.Font = new System.Drawing.Font("微軟正黑體", 18F);
-            this.label14.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.label14.Location = new System.Drawing.Point(44, 30);
-            this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(94, 30);
-            this.label14.TabIndex = 21;
-            this.label14.Text = "Station";
-            // 
-            // comboBox3
-            // 
-            this.comboBox3.FormattingEnabled = true;
-            this.comboBox3.Items.AddRange(new object[] {
-            "Port_A",
-            "Port_B",
-            "Port_C",
-            "Port_D",
-            "Aligner1",
-            "Aligner2"});
-            this.comboBox3.Location = new System.Drawing.Point(144, 41);
-            this.comboBox3.Name = "comboBox3";
-            this.comboBox3.Size = new System.Drawing.Size(208, 38);
-            this.comboBox3.TabIndex = 22;
-            // 
-            // button26
-            // 
-            this.button26.BackColor = System.Drawing.Color.DarkGray;
-            this.button26.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.button26.FlatAppearance.BorderSize = 2;
-            this.button26.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.button26.Font = new System.Drawing.Font("微軟正黑體", 14.25F);
-            this.button26.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.button26.Location = new System.Drawing.Point(72, 413);
-            this.button26.Name = "button26";
-            this.button26.Size = new System.Drawing.Size(280, 45);
-            this.button26.TabIndex = 47;
-            this.button26.Text = "Move Stage Down";
-            this.button26.UseVisualStyleBackColor = false;
-            // 
-            // label51
-            // 
-            this.label51.AutoSize = true;
-            this.label51.Font = new System.Drawing.Font("微軟正黑體", 18F);
-            this.label51.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.label51.Location = new System.Drawing.Point(45, 60);
-            this.label51.Name = "label51";
-            this.label51.Size = new System.Drawing.Size(88, 30);
-            this.label51.TabIndex = 23;
-            this.label51.Text = "(Point)";
-            // 
-            // label52
-            // 
-            this.label52.AutoSize = true;
-            this.label52.Font = new System.Drawing.Font("微軟正黑體", 18F);
-            this.label52.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.label52.Location = new System.Drawing.Point(76, 101);
-            this.label52.Name = "label52";
-            this.label52.Size = new System.Drawing.Size(57, 30);
-            this.label52.TabIndex = 27;
-            this.label52.Text = "Slot";
-            // 
-            // button29
-            // 
-            this.button29.BackColor = System.Drawing.Color.DarkGray;
-            this.button29.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.button29.FlatAppearance.BorderSize = 2;
-            this.button29.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.button29.Font = new System.Drawing.Font("微軟正黑體", 14.25F);
-            this.button29.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.button29.Location = new System.Drawing.Point(72, 362);
-            this.button29.Name = "button29";
-            this.button29.Size = new System.Drawing.Size(280, 45);
-            this.button29.TabIndex = 45;
-            this.button29.Text = "Put Wait";
-            this.button29.UseVisualStyleBackColor = false;
-            // 
-            // label53
-            // 
-            this.label53.AutoSize = true;
-            this.label53.Font = new System.Drawing.Font("微軟正黑體", 18F);
-            this.label53.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.label53.Location = new System.Drawing.Point(52, 131);
-            this.label53.Name = "label53";
-            this.label53.Size = new System.Drawing.Size(81, 30);
-            this.label53.TabIndex = 29;
-            this.label53.Text = "(1-25)";
-            // 
-            // label54
-            // 
-            this.label54.AutoSize = true;
-            this.label54.Font = new System.Drawing.Font("微軟正黑體", 18F);
-            this.label54.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.label54.Location = new System.Drawing.Point(67, 184);
-            this.label54.Name = "label54";
-            this.label54.Size = new System.Drawing.Size(61, 30);
-            this.label54.TabIndex = 33;
-            this.label54.Text = "Arm";
-            // 
-            // button30
-            // 
-            this.button30.BackColor = System.Drawing.Color.DarkGray;
-            this.button30.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.button30.FlatAppearance.BorderSize = 2;
-            this.button30.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.button30.Font = new System.Drawing.Font("微軟正黑體", 14.25F);
-            this.button30.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.button30.Location = new System.Drawing.Point(72, 311);
-            this.button30.Name = "button30";
-            this.button30.Size = new System.Drawing.Size(280, 45);
-            this.button30.TabIndex = 43;
-            this.button30.Text = "Put";
-            this.button30.UseVisualStyleBackColor = false;
-            // 
-            // label55
-            // 
-            this.label55.AutoSize = true;
-            this.label55.Font = new System.Drawing.Font("微軟正黑體", 18F);
-            this.label55.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.label55.Location = new System.Drawing.Point(26, 254);
-            this.label55.Name = "label55";
-            this.label55.Size = new System.Drawing.Size(112, 30);
-            this.label55.TabIndex = 39;
-            this.label55.Text = "% Speed";
-            // 
-            // comboBox7
-            // 
-            this.comboBox7.FormattingEnabled = true;
-            this.comboBox7.Items.AddRange(new object[] {
-            "1",
-            "2",
-            "3",
-            "4",
-            "5",
-            "6",
-            "7",
-            "8",
-            "9",
-            "10",
-            "11",
-            "12",
-            "13",
-            "14",
-            "15",
-            "16",
-            "17",
-            "18",
-            "19",
-            "20",
-            "21",
-            "22",
-            "23",
-            "24",
-            "25"});
-            this.comboBox7.Location = new System.Drawing.Point(144, 111);
-            this.comboBox7.Name = "comboBox7";
-            this.comboBox7.Size = new System.Drawing.Size(208, 38);
-            this.comboBox7.TabIndex = 40;
-            // 
-            // comboBox4
-            // 
-            this.comboBox4.FormattingEnabled = true;
-            this.comboBox4.Items.AddRange(new object[] {
-            "10",
-            "20",
-            "30",
-            "40",
-            "50",
-            "60",
-            "70",
-            "80",
-            "90",
-            "0(100)"});
-            this.comboBox4.Location = new System.Drawing.Point(144, 251);
-            this.comboBox4.Name = "comboBox4";
-            this.comboBox4.Size = new System.Drawing.Size(208, 38);
-            this.comboBox4.TabIndex = 42;
-            // 
-            // comboBox5
-            // 
-            this.comboBox5.FormattingEnabled = true;
-            this.comboBox5.Items.AddRange(new object[] {
-            "Upper",
-            "Lower"});
-            this.comboBox5.Location = new System.Drawing.Point(144, 181);
-            this.comboBox5.Name = "comboBox5";
-            this.comboBox5.Size = new System.Drawing.Size(208, 38);
-            this.comboBox5.TabIndex = 41;
-            // 
-            // panel10
-            // 
-            this.panel10.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.panel10.Controls.Add(this.button1);
-            this.panel10.Controls.Add(this.button2);
-            this.panel10.Controls.Add(this.button4);
-            this.panel10.Controls.Add(this.button3);
-            this.panel10.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel10.Location = new System.Drawing.Point(3, 547);
-            this.panel10.Name = "panel10";
-            this.panel10.Size = new System.Drawing.Size(750, 165);
-            this.panel10.TabIndex = 51;
-            // 
-            // button1
-            // 
-            this.button1.BackColor = System.Drawing.Color.DarkGray;
-            this.button1.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.button1.FlatAppearance.BorderSize = 2;
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.button1.Font = new System.Drawing.Font("微軟正黑體", 14.25F);
-            this.button1.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.button1.Location = new System.Drawing.Point(3, 3);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(367, 45);
-            this.button1.TabIndex = 51;
-            this.button1.Text = "PutPut";
-            this.button1.UseVisualStyleBackColor = false;
-            // 
-            // button2
-            // 
-            this.button2.BackColor = System.Drawing.Color.DarkGray;
-            this.button2.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.button2.FlatAppearance.BorderSize = 2;
-            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.button2.Font = new System.Drawing.Font("微軟正黑體", 14.25F);
-            this.button2.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.button2.Location = new System.Drawing.Point(376, 54);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(367, 45);
-            this.button2.TabIndex = 50;
-            this.button2.Text = "PutGet";
-            this.button2.UseVisualStyleBackColor = false;
-            // 
-            // button4
-            // 
-            this.button4.BackColor = System.Drawing.Color.DarkGray;
-            this.button4.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.button4.FlatAppearance.BorderSize = 2;
-            this.button4.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.button4.Font = new System.Drawing.Font("微軟正黑體", 14.25F);
-            this.button4.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.button4.Location = new System.Drawing.Point(378, 3);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(367, 45);
-            this.button4.TabIndex = 48;
-            this.button4.Text = "GetGet";
-            this.button4.UseVisualStyleBackColor = false;
-            // 
-            // button3
-            // 
-            this.button3.BackColor = System.Drawing.Color.DarkGray;
-            this.button3.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.button3.FlatAppearance.BorderSize = 2;
-            this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.button3.Font = new System.Drawing.Font("微軟正黑體", 14.25F);
-            this.button3.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.button3.Location = new System.Drawing.Point(3, 54);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(367, 45);
-            this.button3.TabIndex = 49;
-            this.button3.Text = "GetPut";
-            this.button3.UseVisualStyleBackColor = false;
-            // 
-            // groupBox21
-            // 
-            this.groupBox21.BackColor = System.Drawing.SystemColors.ControlLight;
-            this.groupBox21.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.groupBox21.Controls.Add(this.panel13);
-            this.groupBox21.Dock = System.Windows.Forms.DockStyle.Left;
-            this.groupBox21.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.groupBox21.Font = new System.Drawing.Font("微軟正黑體", 18F);
-            this.groupBox21.Location = new System.Drawing.Point(3, 3);
-            this.groupBox21.Name = "groupBox21";
-            this.groupBox21.Size = new System.Drawing.Size(677, 795);
-            this.groupBox21.TabIndex = 19;
-            this.groupBox21.TabStop = false;
-            this.groupBox21.Text = "Status";
-            // 
-            // panel13
-            // 
-            this.panel13.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panel13.Controls.Add(this.panel14);
-            this.panel13.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel13.Location = new System.Drawing.Point(3, 35);
-            this.panel13.Name = "panel13";
-            this.panel13.Padding = new System.Windows.Forms.Padding(20);
-            this.panel13.Size = new System.Drawing.Size(671, 757);
-            this.panel13.TabIndex = 19;
-            // 
-            // panel14
-            // 
-            this.panel14.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.panel14.Controls.Add(this.button16);
-            this.panel14.Controls.Add(this.button17);
-            this.panel14.Controls.Add(this.groupBox1);
-            this.panel14.Controls.Add(this.button34);
-            this.panel14.Controls.Add(this.button35);
-            this.panel14.Controls.Add(this.button36);
-            this.panel14.Controls.Add(this.label63);
-            this.panel14.Controls.Add(this.textBox24);
-            this.panel14.Controls.Add(this.textBox25);
-            this.panel14.Controls.Add(this.textBox26);
-            this.panel14.Controls.Add(this.label64);
-            this.panel14.Controls.Add(this.button37);
-            this.panel14.Controls.Add(this.label65);
-            this.panel14.Controls.Add(this.textBox27);
-            this.panel14.Controls.Add(this.label66);
-            this.panel14.Controls.Add(this.textBox28);
-            this.panel14.Controls.Add(this.label67);
-            this.panel14.Controls.Add(this.label68);
-            this.panel14.Controls.Add(this.label69);
-            this.panel14.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel14.Location = new System.Drawing.Point(20, 20);
-            this.panel14.Name = "panel14";
-            this.panel14.Size = new System.Drawing.Size(629, 715);
-            this.panel14.TabIndex = 18;
-            // 
-            // button34
-            // 
-            this.button34.BackColor = System.Drawing.Color.DarkGray;
-            this.button34.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.button34.FlatAppearance.BorderSize = 2;
-            this.button34.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.button34.Font = new System.Drawing.Font("微軟正黑體", 14.25F);
-            this.button34.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.button34.Location = new System.Drawing.Point(418, 341);
-            this.button34.Name = "button34";
-            this.button34.Size = new System.Drawing.Size(125, 57);
-            this.button34.TabIndex = 19;
-            this.button34.Text = "Vacuum On";
-            this.button34.UseVisualStyleBackColor = false;
-            // 
-            // button35
-            // 
-            this.button35.BackColor = System.Drawing.Color.DarkGray;
-            this.button35.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.button35.FlatAppearance.BorderSize = 2;
-            this.button35.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.button35.Font = new System.Drawing.Font("微軟正黑體", 14.25F);
-            this.button35.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.button35.Location = new System.Drawing.Point(234, 413);
-            this.button35.Name = "button35";
-            this.button35.Size = new System.Drawing.Size(129, 57);
-            this.button35.TabIndex = 18;
-            this.button35.Text = "Vacuum Off";
-            this.button35.UseVisualStyleBackColor = false;
-            // 
-            // button36
-            // 
-            this.button36.BackColor = System.Drawing.Color.DarkGray;
-            this.button36.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.button36.FlatAppearance.BorderSize = 2;
-            this.button36.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.button36.Font = new System.Drawing.Font("微軟正黑體", 14.25F);
-            this.button36.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.button36.Location = new System.Drawing.Point(234, 341);
-            this.button36.Name = "button36";
-            this.button36.Size = new System.Drawing.Size(129, 57);
-            this.button36.TabIndex = 17;
-            this.button36.Text = "Vacuum On";
-            this.button36.UseVisualStyleBackColor = false;
-            // 
-            // label63
-            // 
-            this.label63.AutoSize = true;
-            this.label63.Font = new System.Drawing.Font("微軟正黑體", 18F);
-            this.label63.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.label63.Location = new System.Drawing.Point(56, 95);
-            this.label63.Name = "label63";
-            this.label63.Size = new System.Drawing.Size(159, 30);
-            this.label63.TabIndex = 0;
-            this.label63.Text = "Robot Status";
-            // 
-            // textBox24
-            // 
-            this.textBox24.BackColor = System.Drawing.Color.OrangeRed;
-            this.textBox24.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBox24.Location = new System.Drawing.Point(234, 284);
-            this.textBox24.Name = "textBox24";
-            this.textBox24.Size = new System.Drawing.Size(129, 32);
-            this.textBox24.TabIndex = 16;
-            this.textBox24.Text = "ON";
-            this.textBox24.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            // 
-            // textBox25
-            // 
-            this.textBox25.BackColor = System.Drawing.Color.ForestGreen;
-            this.textBox25.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBox25.Location = new System.Drawing.Point(234, 95);
-            this.textBox25.Name = "textBox25";
-            this.textBox25.Size = new System.Drawing.Size(129, 32);
-            this.textBox25.TabIndex = 1;
-            this.textBox25.Text = "RUN";
-            this.textBox25.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            // 
-            // textBox26
-            // 
-            this.textBox26.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.textBox26.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBox26.Location = new System.Drawing.Point(418, 284);
-            this.textBox26.Name = "textBox26";
-            this.textBox26.Size = new System.Drawing.Size(129, 32);
-            this.textBox26.TabIndex = 15;
-            this.textBox26.Text = "OFF";
-            this.textBox26.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            // 
-            // label64
-            // 
-            this.label64.AutoSize = true;
-            this.label64.Font = new System.Drawing.Font("微軟正黑體", 18F);
-            this.label64.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.label64.Location = new System.Drawing.Point(50, 232);
-            this.label64.Name = "label64";
-            this.label64.Size = new System.Drawing.Size(165, 30);
-            this.label64.TabIndex = 2;
-            this.label64.Text = "Wafer Sensor";
-            // 
-            // button37
-            // 
-            this.button37.BackColor = System.Drawing.Color.DarkGray;
-            this.button37.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.button37.FlatAppearance.BorderSize = 2;
-            this.button37.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.button37.Font = new System.Drawing.Font("微軟正黑體", 14.25F);
-            this.button37.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.button37.Location = new System.Drawing.Point(418, 413);
-            this.button37.Name = "button37";
-            this.button37.Size = new System.Drawing.Size(129, 57);
-            this.button37.TabIndex = 2;
-            this.button37.Text = "Vacuum Off";
-            this.button37.UseVisualStyleBackColor = false;
-            // 
-            // label65
-            // 
-            this.label65.AutoSize = true;
-            this.label65.Font = new System.Drawing.Font("微軟正黑體", 18F);
-            this.label65.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.label65.Location = new System.Drawing.Point(3, 284);
-            this.label65.Name = "label65";
-            this.label65.Size = new System.Drawing.Size(212, 30);
-            this.label65.TabIndex = 3;
-            this.label65.Text = "Vacuum Solenoid";
-            // 
-            // textBox27
-            // 
-            this.textBox27.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.textBox27.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBox27.Location = new System.Drawing.Point(418, 232);
-            this.textBox27.Name = "textBox27";
-            this.textBox27.Size = new System.Drawing.Size(129, 32);
-            this.textBox27.TabIndex = 10;
-            this.textBox27.Text = "OFF";
-            this.textBox27.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            // 
-            // label66
-            // 
-            this.label66.AutoSize = true;
-            this.label66.Font = new System.Drawing.Font("微軟正黑體", 18F);
-            this.label66.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.label66.Location = new System.Drawing.Point(244, 156);
-            this.label66.Name = "label66";
-            this.label66.Size = new System.Drawing.Size(138, 30);
-            this.label66.TabIndex = 4;
-            this.label66.Text = "Upper Arm";
-            // 
-            // textBox28
-            // 
-            this.textBox28.BackColor = System.Drawing.Color.OrangeRed;
-            this.textBox28.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBox28.Location = new System.Drawing.Point(234, 232);
-            this.textBox28.Name = "textBox28";
-            this.textBox28.Size = new System.Drawing.Size(129, 32);
-            this.textBox28.TabIndex = 8;
-            this.textBox28.Text = "ON";
-            this.textBox28.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            // 
-            // label67
-            // 
-            this.label67.AutoSize = true;
-            this.label67.Font = new System.Drawing.Font("微軟正黑體", 18F);
-            this.label67.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.label67.Location = new System.Drawing.Point(430, 156);
-            this.label67.Name = "label67";
-            this.label67.Size = new System.Drawing.Size(136, 30);
-            this.label67.TabIndex = 5;
-            this.label67.Text = "Lower Arm";
-            // 
-            // label68
-            // 
-            this.label68.AutoSize = true;
-            this.label68.Font = new System.Drawing.Font("微軟正黑體", 18F);
-            this.label68.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.label68.Location = new System.Drawing.Point(450, 186);
-            this.label68.Name = "label68";
-            this.label68.Size = new System.Drawing.Size(93, 30);
-            this.label68.TabIndex = 7;
-            this.label68.Text = "(L Axis)";
-            // 
-            // label69
-            // 
-            this.label69.AutoSize = true;
-            this.label69.Font = new System.Drawing.Font("微軟正黑體", 18F);
-            this.label69.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.label69.Location = new System.Drawing.Point(267, 186);
-            this.label69.Name = "label69";
-            this.label69.Size = new System.Drawing.Size(96, 30);
-            this.label69.TabIndex = 6;
-            this.label69.Text = "(R Axis)";
-            // 
-            // tableLayoutPanel25
-            // 
-            this.tableLayoutPanel25.ColumnCount = 2;
-            this.tableLayoutPanel25.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel25.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel25.Controls.Add(this.groupBox23, 0, 0);
-            this.tableLayoutPanel25.Controls.Add(this.groupBox22, 0, 0);
-            this.tableLayoutPanel25.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tableLayoutPanel25.Location = new System.Drawing.Point(3, 3);
-            this.tableLayoutPanel25.Name = "tableLayoutPanel25";
-            this.tableLayoutPanel25.RowCount = 1;
-            this.tableLayoutPanel25.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel25.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 762F));
-            this.tableLayoutPanel25.Size = new System.Drawing.Size(1481, 795);
-            this.tableLayoutPanel25.TabIndex = 1;
-            // 
-            // groupBox23
-            // 
-            this.groupBox23.BackColor = System.Drawing.SystemColors.ControlLight;
-            this.groupBox23.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.groupBox23.Controls.Add(this.panel17);
-            this.groupBox23.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.groupBox23.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.groupBox23.Font = new System.Drawing.Font("微軟正黑體", 18F);
-            this.groupBox23.Location = new System.Drawing.Point(743, 3);
-            this.groupBox23.Name = "groupBox23";
-            this.groupBox23.Size = new System.Drawing.Size(735, 789);
-            this.groupBox23.TabIndex = 2;
-            this.groupBox23.TabStop = false;
-            this.groupBox23.Text = "Aligner2";
-            // 
-            // panel17
-            // 
-            this.panel17.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panel17.Controls.Add(this.panel18);
-            this.panel17.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel17.Location = new System.Drawing.Point(3, 35);
-            this.panel17.Name = "panel17";
-            this.panel17.Padding = new System.Windows.Forms.Padding(20);
-            this.panel17.Size = new System.Drawing.Size(729, 751);
-            this.panel17.TabIndex = 19;
-            // 
-            // panel18
-            // 
-            this.panel18.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.panel18.Controls.Add(this.textBox35);
-            this.panel18.Controls.Add(this.textBox36);
-            this.panel18.Controls.Add(this.button49);
-            this.panel18.Controls.Add(this.button50);
-            this.panel18.Controls.Add(this.button51);
-            this.panel18.Controls.Add(this.textBox37);
-            this.panel18.Controls.Add(this.label76);
-            this.panel18.Controls.Add(this.button52);
-            this.panel18.Controls.Add(this.comboBox2);
-            this.panel18.Controls.Add(this.textBox38);
-            this.panel18.Controls.Add(this.label77);
-            this.panel18.Controls.Add(this.button53);
-            this.panel18.Controls.Add(this.button54);
-            this.panel18.Controls.Add(this.label78);
-            this.panel18.Controls.Add(this.button55);
-            this.panel18.Controls.Add(this.button56);
-            this.panel18.Controls.Add(this.textBox39);
-            this.panel18.Controls.Add(this.button57);
-            this.panel18.Controls.Add(this.button58);
-            this.panel18.Controls.Add(this.label79);
-            this.panel18.Controls.Add(this.textBox40);
-            this.panel18.Controls.Add(this.label80);
-            this.panel18.Controls.Add(this.button59);
-            this.panel18.Controls.Add(this.label81);
-            this.panel18.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel18.Location = new System.Drawing.Point(20, 20);
-            this.panel18.Name = "panel18";
-            this.panel18.Size = new System.Drawing.Size(687, 709);
-            this.panel18.TabIndex = 18;
-            // 
-            // textBox35
-            // 
-            this.textBox35.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.textBox35.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBox35.Location = new System.Drawing.Point(242, 139);
-            this.textBox35.Name = "textBox35";
-            this.textBox35.ReadOnly = true;
-            this.textBox35.Size = new System.Drawing.Size(118, 32);
-            this.textBox35.TabIndex = 57;
-            this.textBox35.Text = "OFF";
-            this.textBox35.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            // 
-            // textBox36
-            // 
-            this.textBox36.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.textBox36.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBox36.Location = new System.Drawing.Point(242, 87);
-            this.textBox36.Name = "textBox36";
-            this.textBox36.ReadOnly = true;
-            this.textBox36.Size = new System.Drawing.Size(118, 32);
-            this.textBox36.TabIndex = 56;
-            this.textBox36.Text = "OFF";
-            this.textBox36.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            // 
-            // button49
-            // 
-            this.button49.BackColor = System.Drawing.Color.DarkGray;
-            this.button49.Enabled = false;
-            this.button49.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.button49.FlatAppearance.BorderSize = 2;
-            this.button49.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.button49.Font = new System.Drawing.Font("微軟正黑體", 14.25F);
-            this.button49.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.button49.Location = new System.Drawing.Point(526, 358);
-            this.button49.Name = "button49";
-            this.button49.Size = new System.Drawing.Size(126, 46);
-            this.button49.TabIndex = 55;
-            this.button49.Text = "Align";
-            this.button49.UseVisualStyleBackColor = false;
-            // 
-            // button50
-            // 
-            this.button50.BackColor = System.Drawing.Color.DarkGray;
-            this.button50.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.button50.FlatAppearance.BorderSize = 2;
-            this.button50.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.button50.Font = new System.Drawing.Font("微軟正黑體", 14.25F);
-            this.button50.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.button50.Location = new System.Drawing.Point(385, 358);
-            this.button50.Name = "button50";
-            this.button50.Size = new System.Drawing.Size(126, 46);
-            this.button50.TabIndex = 54;
-            this.button50.Text = "Home";
-            this.button50.UseVisualStyleBackColor = false;
-            // 
-            // button51
-            // 
-            this.button51.BackColor = System.Drawing.Color.DarkGray;
-            this.button51.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.button51.FlatAppearance.BorderSize = 2;
-            this.button51.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.button51.Font = new System.Drawing.Font("微軟正黑體", 14.25F);
-            this.button51.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.button51.Location = new System.Drawing.Point(242, 358);
-            this.button51.Name = "button51";
-            this.button51.Size = new System.Drawing.Size(126, 46);
-            this.button51.TabIndex = 53;
-            this.button51.Text = "Initialize";
-            this.button51.UseVisualStyleBackColor = false;
-            // 
-            // textBox37
-            // 
-            this.textBox37.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.textBox37.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBox37.Location = new System.Drawing.Point(241, 307);
-            this.textBox37.Name = "textBox37";
-            this.textBox37.ReadOnly = true;
-            this.textBox37.Size = new System.Drawing.Size(270, 32);
-            this.textBox37.TabIndex = 52;
-            this.textBox37.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            // 
-            // label76
-            // 
-            this.label76.AutoSize = true;
-            this.label76.Font = new System.Drawing.Font("微軟正黑體", 18F);
-            this.label76.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.label76.Location = new System.Drawing.Point(111, 309);
-            this.label76.Name = "label76";
-            this.label76.Size = new System.Drawing.Size(119, 30);
-            this.label76.TabIndex = 51;
-            this.label76.Text = "Last Error";
-            // 
-            // button52
-            // 
-            this.button52.BackColor = System.Drawing.Color.DarkGray;
-            this.button52.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.button52.FlatAppearance.BorderSize = 2;
-            this.button52.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.button52.Font = new System.Drawing.Font("微軟正黑體", 14.25F);
-            this.button52.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.button52.Location = new System.Drawing.Point(526, 244);
-            this.button52.Name = "button52";
-            this.button52.Size = new System.Drawing.Size(126, 46);
-            this.button52.TabIndex = 50;
-            this.button52.Text = "Change";
-            this.button52.UseVisualStyleBackColor = false;
-            // 
-            // comboBox2
-            // 
-            this.comboBox2.FormattingEnabled = true;
-            this.comboBox2.Items.AddRange(new object[] {
-            "10",
-            "20",
-            "30",
-            "40",
-            "50",
-            "60",
-            "70",
-            "80",
-            "90",
-            "0(100)"});
-            this.comboBox2.Location = new System.Drawing.Point(385, 248);
-            this.comboBox2.Name = "comboBox2";
-            this.comboBox2.Size = new System.Drawing.Size(126, 38);
-            this.comboBox2.TabIndex = 49;
-            // 
-            // textBox38
-            // 
-            this.textBox38.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.textBox38.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBox38.Location = new System.Drawing.Point(242, 251);
-            this.textBox38.Name = "textBox38";
-            this.textBox38.ReadOnly = true;
-            this.textBox38.Size = new System.Drawing.Size(118, 32);
-            this.textBox38.TabIndex = 28;
-            this.textBox38.Text = "0";
-            this.textBox38.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            // 
-            // label77
-            // 
-            this.label77.AutoSize = true;
-            this.label77.Font = new System.Drawing.Font("微軟正黑體", 18F);
-            this.label77.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.label77.Location = new System.Drawing.Point(21, 251);
-            this.label77.Name = "label77";
-            this.label77.Size = new System.Drawing.Size(215, 30);
-            this.label77.TabIndex = 27;
-            this.label77.Text = "Current Speed(%)";
-            // 
-            // button53
-            // 
-            this.button53.BackColor = System.Drawing.Color.DarkGray;
-            this.button53.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.button53.FlatAppearance.BorderSize = 2;
-            this.button53.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.button53.Font = new System.Drawing.Font("微軟正黑體", 14.25F);
-            this.button53.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.button53.Location = new System.Drawing.Point(526, 81);
-            this.button53.Name = "button53";
-            this.button53.Size = new System.Drawing.Size(126, 46);
-            this.button53.TabIndex = 26;
-            this.button53.Text = "Servo On";
-            this.button53.UseVisualStyleBackColor = false;
-            // 
-            // button54
-            // 
-            this.button54.BackColor = System.Drawing.Color.DarkGray;
-            this.button54.Enabled = false;
-            this.button54.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.button54.FlatAppearance.BorderSize = 2;
-            this.button54.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.button54.Font = new System.Drawing.Font("微軟正黑體", 14.25F);
-            this.button54.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.button54.Location = new System.Drawing.Point(385, 81);
-            this.button54.Name = "button54";
-            this.button54.Size = new System.Drawing.Size(126, 46);
-            this.button54.TabIndex = 25;
-            this.button54.Text = "Servo Off";
-            this.button54.UseVisualStyleBackColor = false;
-            // 
-            // label78
-            // 
-            this.label78.AutoSize = true;
-            this.label78.Font = new System.Drawing.Font("微軟正黑體", 18F);
-            this.label78.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.label78.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.label78.Location = new System.Drawing.Point(153, 87);
-            this.label78.Name = "label78";
-            this.label78.Size = new System.Drawing.Size(77, 30);
-            this.label78.TabIndex = 23;
-            this.label78.Text = "Servo";
-            // 
-            // button55
-            // 
-            this.button55.BackColor = System.Drawing.Color.DarkGray;
-            this.button55.Enabled = false;
-            this.button55.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.button55.FlatAppearance.BorderSize = 2;
-            this.button55.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.button55.Font = new System.Drawing.Font("微軟正黑體", 14.25F);
-            this.button55.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.button55.Location = new System.Drawing.Point(526, 24);
-            this.button55.Name = "button55";
-            this.button55.Size = new System.Drawing.Size(126, 46);
-            this.button55.TabIndex = 22;
-            this.button55.Text = "Disconnect";
-            this.button55.UseVisualStyleBackColor = false;
-            // 
-            // button56
-            // 
-            this.button56.BackColor = System.Drawing.Color.DarkGray;
-            this.button56.Enabled = false;
-            this.button56.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.button56.FlatAppearance.BorderSize = 2;
-            this.button56.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.button56.Font = new System.Drawing.Font("微軟正黑體", 14.25F);
-            this.button56.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.button56.Location = new System.Drawing.Point(385, 24);
-            this.button56.Name = "button56";
-            this.button56.Size = new System.Drawing.Size(126, 46);
-            this.button56.TabIndex = 21;
-            this.button56.Text = "Connect";
-            this.button56.UseVisualStyleBackColor = false;
-            // 
-            // textBox39
-            // 
-            this.textBox39.BackColor = System.Drawing.Color.Green;
-            this.textBox39.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBox39.Location = new System.Drawing.Point(242, 33);
-            this.textBox39.Name = "textBox39";
-            this.textBox39.ReadOnly = true;
-            this.textBox39.Size = new System.Drawing.Size(118, 32);
-            this.textBox39.TabIndex = 20;
-            this.textBox39.Text = "IDLE";
-            this.textBox39.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            // 
-            // button57
-            // 
-            this.button57.BackColor = System.Drawing.Color.DarkGray;
-            this.button57.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.button57.FlatAppearance.BorderSize = 2;
-            this.button57.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.button57.Font = new System.Drawing.Font("微軟正黑體", 14.25F);
-            this.button57.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.button57.Location = new System.Drawing.Point(526, 189);
-            this.button57.Name = "button57";
-            this.button57.Size = new System.Drawing.Size(126, 46);
-            this.button57.TabIndex = 19;
-            this.button57.Text = "Vacuum On";
-            this.button57.UseVisualStyleBackColor = false;
-            // 
-            // button58
-            // 
-            this.button58.BackColor = System.Drawing.Color.DarkGray;
-            this.button58.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.button58.FlatAppearance.BorderSize = 2;
-            this.button58.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.button58.Font = new System.Drawing.Font("微軟正黑體", 14.25F);
-            this.button58.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.button58.Location = new System.Drawing.Point(526, 303);
-            this.button58.Name = "button58";
-            this.button58.Size = new System.Drawing.Size(126, 46);
-            this.button58.TabIndex = 17;
-            this.button58.Text = "Reset";
-            this.button58.UseVisualStyleBackColor = false;
-            // 
-            // label79
-            // 
-            this.label79.AutoSize = true;
-            this.label79.Font = new System.Drawing.Font("微軟正黑體", 18F);
-            this.label79.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.label79.Location = new System.Drawing.Point(58, 33);
-            this.label79.Name = "label79";
-            this.label79.Size = new System.Drawing.Size(172, 30);
-            this.label79.TabIndex = 0;
-            this.label79.Text = "Aligner Status";
-            // 
-            // textBox40
-            // 
-            this.textBox40.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.textBox40.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBox40.Location = new System.Drawing.Point(242, 195);
-            this.textBox40.Name = "textBox40";
-            this.textBox40.ReadOnly = true;
-            this.textBox40.Size = new System.Drawing.Size(118, 32);
-            this.textBox40.TabIndex = 15;
-            this.textBox40.Text = "OFF";
-            this.textBox40.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            // 
-            // label80
-            // 
-            this.label80.AutoSize = true;
-            this.label80.Font = new System.Drawing.Font("微軟正黑體", 18F);
-            this.label80.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.label80.Location = new System.Drawing.Point(65, 139);
-            this.label80.Name = "label80";
-            this.label80.Size = new System.Drawing.Size(165, 30);
-            this.label80.TabIndex = 2;
-            this.label80.Text = "Wafer Sensor";
-            // 
-            // button59
-            // 
-            this.button59.BackColor = System.Drawing.Color.DarkGray;
-            this.button59.Enabled = false;
-            this.button59.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.button59.FlatAppearance.BorderSize = 2;
-            this.button59.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.button59.Font = new System.Drawing.Font("微軟正黑體", 14.25F);
-            this.button59.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.button59.Location = new System.Drawing.Point(385, 189);
-            this.button59.Name = "button59";
-            this.button59.Size = new System.Drawing.Size(126, 46);
-            this.button59.TabIndex = 2;
-            this.button59.Text = "Vacuum Off";
-            this.button59.UseVisualStyleBackColor = false;
-            // 
-            // label81
-            // 
-            this.label81.AutoSize = true;
-            this.label81.Font = new System.Drawing.Font("微軟正黑體", 18F);
-            this.label81.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.label81.Location = new System.Drawing.Point(21, 195);
-            this.label81.Name = "label81";
-            this.label81.Size = new System.Drawing.Size(212, 30);
-            this.label81.TabIndex = 3;
-            this.label81.Text = "Vacuum Solenoid";
-            // 
-            // groupBox22
-            // 
-            this.groupBox22.BackColor = System.Drawing.SystemColors.ControlLight;
-            this.groupBox22.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.groupBox22.Controls.Add(this.panel15);
-            this.groupBox22.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.groupBox22.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.groupBox22.Font = new System.Drawing.Font("微軟正黑體", 18F);
-            this.groupBox22.Location = new System.Drawing.Point(3, 3);
-            this.groupBox22.Name = "groupBox22";
-            this.groupBox22.Size = new System.Drawing.Size(734, 789);
-            this.groupBox22.TabIndex = 1;
-            this.groupBox22.TabStop = false;
-            this.groupBox22.Text = "Aligner1";
-            // 
-            // panel15
-            // 
-            this.panel15.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panel15.Controls.Add(this.panel16);
-            this.panel15.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel15.Location = new System.Drawing.Point(3, 35);
-            this.panel15.Name = "panel15";
-            this.panel15.Padding = new System.Windows.Forms.Padding(20);
-            this.panel15.Size = new System.Drawing.Size(728, 751);
-            this.panel15.TabIndex = 19;
-            // 
-            // panel16
-            // 
-            this.panel16.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.panel16.Controls.Add(this.textBox29);
-            this.panel16.Controls.Add(this.label70);
-            this.panel16.Controls.Add(this.button15);
-            this.panel16.Controls.Add(this.textBox30);
-            this.panel16.Controls.Add(this.button14);
-            this.panel16.Controls.Add(this.label71);
-            this.panel16.Controls.Add(this.button13);
-            this.panel16.Controls.Add(this.label72);
-            this.panel16.Controls.Add(this.textBox31);
-            this.panel16.Controls.Add(this.textBox32);
-            this.panel16.Controls.Add(this.button12);
-            this.panel16.Controls.Add(this.label73);
-            this.panel16.Controls.Add(this.comboBox1);
-            this.panel16.Controls.Add(this.textBox33);
-            this.panel16.Controls.Add(this.label74);
-            this.panel16.Controls.Add(this.label75);
-            this.panel16.Controls.Add(this.button11);
-            this.panel16.Controls.Add(this.textBox34);
-            this.panel16.Controls.Add(this.button10);
-            this.panel16.Controls.Add(this.button5);
-            this.panel16.Controls.Add(this.button9);
-            this.panel16.Controls.Add(this.button6);
-            this.panel16.Controls.Add(this.button8);
-            this.panel16.Controls.Add(this.button7);
-            this.panel16.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel16.Location = new System.Drawing.Point(20, 20);
-            this.panel16.Name = "panel16";
-            this.panel16.Size = new System.Drawing.Size(686, 709);
-            this.panel16.TabIndex = 18;
-            // 
-            // textBox29
-            // 
-            this.textBox29.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.textBox29.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBox29.Location = new System.Drawing.Point(228, 316);
-            this.textBox29.Name = "textBox29";
-            this.textBox29.ReadOnly = true;
-            this.textBox29.Size = new System.Drawing.Size(269, 32);
-            this.textBox29.TabIndex = 52;
-            this.textBox29.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            // 
-            // label70
-            // 
-            this.label70.AutoSize = true;
-            this.label70.Font = new System.Drawing.Font("微軟正黑體", 18F);
-            this.label70.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.label70.Location = new System.Drawing.Point(97, 316);
-            this.label70.Name = "label70";
-            this.label70.Size = new System.Drawing.Size(119, 30);
-            this.label70.TabIndex = 51;
-            this.label70.Text = "Last Error";
-            // 
-            // textBox30
-            // 
-            this.textBox30.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.textBox30.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBox30.Location = new System.Drawing.Point(228, 258);
-            this.textBox30.Name = "textBox30";
-            this.textBox30.ReadOnly = true;
-            this.textBox30.Size = new System.Drawing.Size(118, 32);
-            this.textBox30.TabIndex = 28;
-            this.textBox30.Text = "90";
-            this.textBox30.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            // 
-            // label71
-            // 
-            this.label71.AutoSize = true;
-            this.label71.Font = new System.Drawing.Font("微軟正黑體", 18F);
-            this.label71.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.label71.Location = new System.Drawing.Point(7, 258);
-            this.label71.Name = "label71";
-            this.label71.Size = new System.Drawing.Size(215, 30);
-            this.label71.TabIndex = 27;
-            this.label71.Text = "Current Speed(%)";
-            // 
-            // label72
-            // 
-            this.label72.AutoSize = true;
-            this.label72.Font = new System.Drawing.Font("微軟正黑體", 18F);
-            this.label72.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.label72.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.label72.Location = new System.Drawing.Point(139, 94);
-            this.label72.Name = "label72";
-            this.label72.Size = new System.Drawing.Size(77, 30);
-            this.label72.TabIndex = 23;
-            this.label72.Text = "Servo";
-            // 
-            // textBox31
-            // 
-            this.textBox31.BackColor = System.Drawing.Color.OrangeRed;
-            this.textBox31.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBox31.Location = new System.Drawing.Point(228, 94);
-            this.textBox31.Name = "textBox31";
-            this.textBox31.ReadOnly = true;
-            this.textBox31.Size = new System.Drawing.Size(118, 32);
-            this.textBox31.TabIndex = 24;
-            this.textBox31.Text = "ON";
-            this.textBox31.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            // 
-            // textBox32
-            // 
-            this.textBox32.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.textBox32.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBox32.Location = new System.Drawing.Point(228, 40);
-            this.textBox32.Name = "textBox32";
-            this.textBox32.ReadOnly = true;
-            this.textBox32.Size = new System.Drawing.Size(118, 32);
-            this.textBox32.TabIndex = 20;
-            this.textBox32.Text = "N/A";
-            this.textBox32.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            // 
-            // label73
-            // 
-            this.label73.AutoSize = true;
-            this.label73.Font = new System.Drawing.Font("微軟正黑體", 18F);
-            this.label73.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.label73.Location = new System.Drawing.Point(44, 40);
-            this.label73.Name = "label73";
-            this.label73.Size = new System.Drawing.Size(172, 30);
-            this.label73.TabIndex = 0;
-            this.label73.Text = "Aligner Status";
-            // 
-            // textBox33
-            // 
-            this.textBox33.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.textBox33.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBox33.Location = new System.Drawing.Point(228, 202);
-            this.textBox33.Name = "textBox33";
-            this.textBox33.ReadOnly = true;
-            this.textBox33.Size = new System.Drawing.Size(118, 32);
-            this.textBox33.TabIndex = 15;
-            this.textBox33.Text = "OFF";
-            this.textBox33.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            // 
-            // label74
-            // 
-            this.label74.AutoSize = true;
-            this.label74.Font = new System.Drawing.Font("微軟正黑體", 18F);
-            this.label74.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.label74.Location = new System.Drawing.Point(51, 146);
-            this.label74.Name = "label74";
-            this.label74.Size = new System.Drawing.Size(165, 30);
-            this.label74.TabIndex = 2;
-            this.label74.Text = "Wafer Sensor";
-            // 
-            // label75
-            // 
-            this.label75.AutoSize = true;
-            this.label75.Font = new System.Drawing.Font("微軟正黑體", 18F);
-            this.label75.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.label75.Location = new System.Drawing.Point(7, 202);
-            this.label75.Name = "label75";
-            this.label75.Size = new System.Drawing.Size(212, 30);
-            this.label75.TabIndex = 3;
-            this.label75.Text = "Vacuum Solenoid";
-            // 
-            // textBox34
-            // 
-            this.textBox34.BackColor = System.Drawing.Color.OrangeRed;
-            this.textBox34.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBox34.Location = new System.Drawing.Point(228, 146);
-            this.textBox34.Name = "textBox34";
-            this.textBox34.ReadOnly = true;
-            this.textBox34.Size = new System.Drawing.Size(118, 32);
-            this.textBox34.TabIndex = 8;
-            this.textBox34.Text = "ON";
-            this.textBox34.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            // 
-            // groupBox1
-            // 
-            this.groupBox1.Controls.Add(this.label1);
-            this.groupBox1.Controls.Add(this.radioButton2);
-            this.groupBox1.Controls.Add(this.radioButton1);
-            this.groupBox1.Font = new System.Drawing.Font("微軟正黑體", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-            this.groupBox1.Location = new System.Drawing.Point(18, 19);
-            this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(582, 64);
-            this.groupBox1.TabIndex = 20;
-            this.groupBox1.TabStop = false;
-            // 
-            // radioButton1
-            // 
-            this.radioButton1.AutoSize = true;
-            this.radioButton1.Font = new System.Drawing.Font("微軟正黑體", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-            this.radioButton1.Location = new System.Drawing.Point(221, 24);
-            this.radioButton1.Name = "radioButton1";
-            this.radioButton1.Size = new System.Drawing.Size(114, 34);
-            this.radioButton1.TabIndex = 0;
-            this.radioButton1.TabStop = true;
-            this.radioButton1.Text = "Robot1";
-            this.radioButton1.UseVisualStyleBackColor = true;
-            // 
-            // radioButton2
-            // 
-            this.radioButton2.AutoSize = true;
-            this.radioButton2.Font = new System.Drawing.Font("微軟正黑體", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-            this.radioButton2.Location = new System.Drawing.Point(400, 24);
-            this.radioButton2.Name = "radioButton2";
-            this.radioButton2.Size = new System.Drawing.Size(114, 34);
-            this.radioButton2.TabIndex = 1;
-            this.radioButton2.TabStop = true;
-            this.radioButton2.Text = "Robot2";
-            this.radioButton2.UseVisualStyleBackColor = true;
-            // 
-            // button5
-            // 
-            this.button5.BackColor = System.Drawing.Color.DarkGray;
-            this.button5.Enabled = false;
-            this.button5.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.button5.FlatAppearance.BorderSize = 2;
-            this.button5.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.button5.Font = new System.Drawing.Font("微軟正黑體", 14.25F);
-            this.button5.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.button5.Location = new System.Drawing.Point(371, 202);
-            this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(126, 46);
-            this.button5.TabIndex = 2;
-            this.button5.Text = "Vacuum Off";
-            this.button5.UseVisualStyleBackColor = false;
-            // 
-            // button6
-            // 
-            this.button6.BackColor = System.Drawing.Color.DarkGray;
-            this.button6.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.button6.FlatAppearance.BorderSize = 2;
-            this.button6.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.button6.Font = new System.Drawing.Font("微軟正黑體", 14.25F);
-            this.button6.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.button6.Location = new System.Drawing.Point(512, 316);
-            this.button6.Name = "button6";
-            this.button6.Size = new System.Drawing.Size(126, 46);
-            this.button6.TabIndex = 17;
-            this.button6.Text = "Reset";
-            this.button6.UseVisualStyleBackColor = false;
-            // 
-            // button7
-            // 
-            this.button7.BackColor = System.Drawing.Color.DarkGray;
-            this.button7.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.button7.FlatAppearance.BorderSize = 2;
-            this.button7.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.button7.Font = new System.Drawing.Font("微軟正黑體", 14.25F);
-            this.button7.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.button7.Location = new System.Drawing.Point(512, 202);
-            this.button7.Name = "button7";
-            this.button7.Size = new System.Drawing.Size(126, 46);
-            this.button7.TabIndex = 19;
-            this.button7.Text = "Vacuum On";
-            this.button7.UseVisualStyleBackColor = false;
-            // 
-            // button8
-            // 
-            this.button8.BackColor = System.Drawing.Color.DarkGray;
-            this.button8.Enabled = false;
-            this.button8.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.button8.FlatAppearance.BorderSize = 2;
-            this.button8.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.button8.Font = new System.Drawing.Font("微軟正黑體", 14.25F);
-            this.button8.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.button8.Location = new System.Drawing.Point(371, 37);
-            this.button8.Name = "button8";
-            this.button8.Size = new System.Drawing.Size(126, 46);
-            this.button8.TabIndex = 21;
-            this.button8.Text = "Connect";
-            this.button8.UseVisualStyleBackColor = false;
-            // 
-            // button9
-            // 
-            this.button9.BackColor = System.Drawing.Color.DarkGray;
-            this.button9.Enabled = false;
-            this.button9.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.button9.FlatAppearance.BorderSize = 2;
-            this.button9.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.button9.Font = new System.Drawing.Font("微軟正黑體", 14.25F);
-            this.button9.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.button9.Location = new System.Drawing.Point(512, 37);
-            this.button9.Name = "button9";
-            this.button9.Size = new System.Drawing.Size(126, 46);
-            this.button9.TabIndex = 22;
-            this.button9.Text = "Disconnect";
-            this.button9.UseVisualStyleBackColor = false;
-            // 
-            // button10
-            // 
-            this.button10.BackColor = System.Drawing.Color.DarkGray;
-            this.button10.Enabled = false;
-            this.button10.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.button10.FlatAppearance.BorderSize = 2;
-            this.button10.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.button10.Font = new System.Drawing.Font("微軟正黑體", 14.25F);
-            this.button10.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.button10.Location = new System.Drawing.Point(371, 94);
-            this.button10.Name = "button10";
-            this.button10.Size = new System.Drawing.Size(126, 46);
-            this.button10.TabIndex = 25;
-            this.button10.Text = "Servo Off";
-            this.button10.UseVisualStyleBackColor = false;
-            // 
-            // button11
-            // 
-            this.button11.BackColor = System.Drawing.Color.DarkGray;
-            this.button11.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.button11.FlatAppearance.BorderSize = 2;
-            this.button11.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.button11.Font = new System.Drawing.Font("微軟正黑體", 14.25F);
-            this.button11.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.button11.Location = new System.Drawing.Point(512, 94);
-            this.button11.Name = "button11";
-            this.button11.Size = new System.Drawing.Size(126, 46);
-            this.button11.TabIndex = 26;
-            this.button11.Text = "Servo On";
-            this.button11.UseVisualStyleBackColor = false;
-            // 
-            // comboBox1
-            // 
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Items.AddRange(new object[] {
-            "10",
-            "20",
-            "30",
-            "40",
-            "50",
-            "60",
-            "70",
-            "80",
-            "90",
-            "0(100)"});
-            this.comboBox1.Location = new System.Drawing.Point(371, 261);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(126, 38);
-            this.comboBox1.TabIndex = 49;
-            // 
-            // button12
-            // 
-            this.button12.BackColor = System.Drawing.Color.DarkGray;
-            this.button12.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.button12.FlatAppearance.BorderSize = 2;
-            this.button12.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.button12.Font = new System.Drawing.Font("微軟正黑體", 14.25F);
-            this.button12.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.button12.Location = new System.Drawing.Point(512, 257);
-            this.button12.Name = "button12";
-            this.button12.Size = new System.Drawing.Size(126, 46);
-            this.button12.TabIndex = 50;
-            this.button12.Text = "Change";
-            this.button12.UseVisualStyleBackColor = false;
-            // 
-            // button13
-            // 
-            this.button13.BackColor = System.Drawing.Color.DarkGray;
-            this.button13.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.button13.FlatAppearance.BorderSize = 2;
-            this.button13.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.button13.Font = new System.Drawing.Font("微軟正黑體", 14.25F);
-            this.button13.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.button13.Location = new System.Drawing.Point(228, 371);
-            this.button13.Name = "button13";
-            this.button13.Size = new System.Drawing.Size(126, 46);
-            this.button13.TabIndex = 53;
-            this.button13.Text = "Initialize";
-            this.button13.UseVisualStyleBackColor = false;
-            // 
-            // button14
-            // 
-            this.button14.BackColor = System.Drawing.Color.DarkGray;
-            this.button14.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.button14.FlatAppearance.BorderSize = 2;
-            this.button14.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.button14.Font = new System.Drawing.Font("微軟正黑體", 14.25F);
-            this.button14.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.button14.Location = new System.Drawing.Point(371, 371);
-            this.button14.Name = "button14";
-            this.button14.Size = new System.Drawing.Size(126, 46);
-            this.button14.TabIndex = 54;
-            this.button14.Text = "Home";
-            this.button14.UseVisualStyleBackColor = false;
-            // 
-            // button15
-            // 
-            this.button15.BackColor = System.Drawing.Color.DarkGray;
-            this.button15.Enabled = false;
-            this.button15.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.button15.FlatAppearance.BorderSize = 2;
-            this.button15.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.button15.Font = new System.Drawing.Font("微軟正黑體", 14.25F);
-            this.button15.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.button15.Location = new System.Drawing.Point(512, 371);
-            this.button15.Name = "button15";
-            this.button15.Size = new System.Drawing.Size(126, 46);
-            this.button15.TabIndex = 55;
-            this.button15.Text = "Align";
-            this.button15.UseVisualStyleBackColor = false;
-            // 
-            // button16
-            // 
-            this.button16.BackColor = System.Drawing.Color.DarkGray;
-            this.button16.Enabled = false;
-            this.button16.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.button16.FlatAppearance.BorderSize = 2;
-            this.button16.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.button16.Font = new System.Drawing.Font("微軟正黑體", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-            this.button16.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.button16.Location = new System.Drawing.Point(501, 95);
-            this.button16.Name = "button16";
-            this.button16.Size = new System.Drawing.Size(109, 32);
-            this.button16.TabIndex = 24;
-            this.button16.Text = "Disconnect";
-            this.button16.UseVisualStyleBackColor = false;
-            // 
-            // button17
-            // 
-            this.button17.BackColor = System.Drawing.Color.DarkGray;
-            this.button17.Enabled = false;
-            this.button17.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.button17.FlatAppearance.BorderSize = 2;
-            this.button17.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.button17.Font = new System.Drawing.Font("微軟正黑體", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-            this.button17.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.button17.Location = new System.Drawing.Point(386, 95);
-            this.button17.Name = "button17";
-            this.button17.Size = new System.Drawing.Size(109, 32);
-            this.button17.TabIndex = 23;
-            this.button17.Text = "Connect";
-            this.button17.UseVisualStyleBackColor = false;
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("微軟正黑體", 18F);
-            this.label1.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.label1.Location = new System.Drawing.Point(115, 24);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(82, 30);
-            this.label1.TabIndex = 25;
-            this.label1.Text = "Robot";
-            // 
             // FormManual
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 27F);
@@ -3881,19 +4200,6 @@
             this.Load += new System.EventHandler(this.FormManual_Load);
             this.tabControl1.ResumeLayout(false);
             this.tabPage1.ResumeLayout(false);
-            this.tabPage2.ResumeLayout(false);
-            this.tabPage3.ResumeLayout(false);
-            this.Command_Group_A.ResumeLayout(false);
-            this.Command_Group_A.PerformLayout();
-            this.groupBox10.ResumeLayout(false);
-            this.GroupBox36.ResumeLayout(false);
-            this.GroupBox36.PerformLayout();
-            this.GroupBox35.ResumeLayout(false);
-            this.groupBox9.ResumeLayout(false);
-            this.groupBox9.PerformLayout();
-            this.groupBox25.ResumeLayout(false);
-            this.TblPanel_A.ResumeLayout(false);
-            this.TblPanel_A.PerformLayout();
             this.groupBox20.ResumeLayout(false);
             this.panel9.ResumeLayout(false);
             this.tableLayoutPanel23.ResumeLayout(false);
@@ -3907,6 +4213,11 @@
             this.panel13.ResumeLayout(false);
             this.panel14.ResumeLayout(false);
             this.panel14.PerformLayout();
+            this.groupBox2.ResumeLayout(false);
+            this.groupBox2.PerformLayout();
+            this.groupBox1.ResumeLayout(false);
+            this.groupBox1.PerformLayout();
+            this.tabPage2.ResumeLayout(false);
             this.tableLayoutPanel25.ResumeLayout(false);
             this.groupBox23.ResumeLayout(false);
             this.panel17.ResumeLayout(false);
@@ -3916,8 +4227,18 @@
             this.panel15.ResumeLayout(false);
             this.panel16.ResumeLayout(false);
             this.panel16.PerformLayout();
-            this.groupBox1.ResumeLayout(false);
-            this.groupBox1.PerformLayout();
+            this.tabPage3.ResumeLayout(false);
+            this.Command_Group_A.ResumeLayout(false);
+            this.Command_Group_A.PerformLayout();
+            this.groupBox10.ResumeLayout(false);
+            this.GroupBox36.ResumeLayout(false);
+            this.GroupBox36.PerformLayout();
+            this.GroupBox35.ResumeLayout(false);
+            this.groupBox9.ResumeLayout(false);
+            this.groupBox9.PerformLayout();
+            this.groupBox25.ResumeLayout(false);
+            this.TblPanel_A.ResumeLayout(false);
+            this.TblPanel_A.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -4064,54 +4385,46 @@
         private System.Windows.Forms.Panel panel12;
         private System.Windows.Forms.Label label56;
         private System.Windows.Forms.Label label57;
-        private System.Windows.Forms.ComboBox comboBox9;
-        private System.Windows.Forms.Button button31;
+        private System.Windows.Forms.ComboBox cbRA1Point;
+        private System.Windows.Forms.Button btnRMoveUp;
         private System.Windows.Forms.Label label58;
-        private System.Windows.Forms.Button button32;
+        private System.Windows.Forms.Button btnRGetWait;
         private System.Windows.Forms.Label label59;
-        private System.Windows.Forms.Button button33;
+        private System.Windows.Forms.Button btnRGet;
         private System.Windows.Forms.Label label60;
         private System.Windows.Forms.Label label61;
-        private System.Windows.Forms.Label label62;
-        private System.Windows.Forms.ComboBox comboBox10;
-        private System.Windows.Forms.ComboBox comboBox11;
-        private System.Windows.Forms.ComboBox comboBox12;
+        private System.Windows.Forms.ComboBox cbRA1Slot;
+        private System.Windows.Forms.ComboBox cbRA1Arm;
         private System.Windows.Forms.Panel panel11;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label label14;
-        private System.Windows.Forms.ComboBox comboBox3;
-        private System.Windows.Forms.Button button26;
+        private System.Windows.Forms.ComboBox cbRA2Point;
+        private System.Windows.Forms.Button btnRMoveDown;
         private System.Windows.Forms.Label label51;
         private System.Windows.Forms.Label label52;
-        private System.Windows.Forms.Button button29;
+        private System.Windows.Forms.Button btnRPutWait;
         private System.Windows.Forms.Label label53;
         private System.Windows.Forms.Label label54;
-        private System.Windows.Forms.Button button30;
-        private System.Windows.Forms.Label label55;
-        private System.Windows.Forms.ComboBox comboBox7;
-        private System.Windows.Forms.ComboBox comboBox4;
-        private System.Windows.Forms.ComboBox comboBox5;
+        private System.Windows.Forms.Button btnRPut;
+        private System.Windows.Forms.ComboBox cbRA2Slot;
+        private System.Windows.Forms.ComboBox cbRA2Arm;
         private System.Windows.Forms.Panel panel10;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Button button4;
-        private System.Windows.Forms.Button button3;
+        private System.Windows.Forms.Button btnRPutPut;
+        private System.Windows.Forms.Button btnRPutGet;
+        private System.Windows.Forms.Button btnRGetGet;
+        private System.Windows.Forms.Button btnRGetPut;
         private System.Windows.Forms.GroupBox groupBox21;
         private System.Windows.Forms.Panel panel13;
         private System.Windows.Forms.Panel panel14;
-        private System.Windows.Forms.Button button34;
-        private System.Windows.Forms.Button button35;
-        private System.Windows.Forms.Button button36;
         private System.Windows.Forms.Label label63;
-        private System.Windows.Forms.TextBox textBox24;
-        private System.Windows.Forms.TextBox textBox25;
-        private System.Windows.Forms.TextBox textBox26;
+        private System.Windows.Forms.TextBox tbRRVacuSolenoid;
+        private System.Windows.Forms.TextBox tbRStatus;
+        private System.Windows.Forms.TextBox tbRLVacuSolenoid;
         private System.Windows.Forms.Label label64;
-        private System.Windows.Forms.Button button37;
         private System.Windows.Forms.Label label65;
-        private System.Windows.Forms.TextBox textBox27;
+        private System.Windows.Forms.TextBox tbRLwaferSensor;
         private System.Windows.Forms.Label label66;
-        private System.Windows.Forms.TextBox textBox28;
+        private System.Windows.Forms.TextBox tbRRwaferSensor;
         private System.Windows.Forms.Label label67;
         private System.Windows.Forms.Label label68;
         private System.Windows.Forms.Label label69;
@@ -4119,62 +4432,89 @@
         private System.Windows.Forms.GroupBox groupBox23;
         private System.Windows.Forms.Panel panel17;
         private System.Windows.Forms.Panel panel18;
-        private System.Windows.Forms.TextBox textBox35;
-        private System.Windows.Forms.TextBox textBox36;
-        private System.Windows.Forms.Button button49;
-        private System.Windows.Forms.Button button50;
-        private System.Windows.Forms.Button button51;
-        private System.Windows.Forms.TextBox textBox37;
-        private System.Windows.Forms.Label label76;
-        private System.Windows.Forms.Button button52;
-        private System.Windows.Forms.ComboBox comboBox2;
-        private System.Windows.Forms.TextBox textBox38;
-        private System.Windows.Forms.Label label77;
-        private System.Windows.Forms.Button button53;
-        private System.Windows.Forms.Button button54;
-        private System.Windows.Forms.Label label78;
-        private System.Windows.Forms.Button button55;
-        private System.Windows.Forms.Button button56;
-        private System.Windows.Forms.TextBox textBox39;
-        private System.Windows.Forms.Button button57;
-        private System.Windows.Forms.Button button58;
-        private System.Windows.Forms.Label label79;
-        private System.Windows.Forms.TextBox textBox40;
-        private System.Windows.Forms.Label label80;
-        private System.Windows.Forms.Button button59;
-        private System.Windows.Forms.Label label81;
+        private System.Windows.Forms.TextBox tbA2Servo;
+        private System.Windows.Forms.TextBox tbA2Status;
         private System.Windows.Forms.GroupBox groupBox22;
         private System.Windows.Forms.Panel panel15;
         private System.Windows.Forms.Panel panel16;
-        private System.Windows.Forms.TextBox textBox29;
+        private System.Windows.Forms.TextBox tbA1Error;
         private System.Windows.Forms.Label label70;
-        private System.Windows.Forms.TextBox textBox30;
+        private System.Windows.Forms.TextBox tbA1Speed;
         private System.Windows.Forms.Label label71;
         private System.Windows.Forms.Label label72;
-        private System.Windows.Forms.TextBox textBox31;
-        private System.Windows.Forms.TextBox textBox32;
+        private System.Windows.Forms.TextBox tbA1Servo;
+        private System.Windows.Forms.TextBox tbA1Status;
         private System.Windows.Forms.Label label73;
-        private System.Windows.Forms.TextBox textBox33;
+        private System.Windows.Forms.TextBox tbA1VacSolenoid;
         private System.Windows.Forms.Label label74;
         private System.Windows.Forms.Label label75;
-        private System.Windows.Forms.TextBox textBox34;
+        private System.Windows.Forms.TextBox tbA1WaferSensor;
         private System.Windows.Forms.GroupBox groupBox1;
-        private System.Windows.Forms.RadioButton radioButton2;
-        private System.Windows.Forms.RadioButton radioButton1;
-        private System.Windows.Forms.Button button16;
-        private System.Windows.Forms.Button button17;
-        private System.Windows.Forms.Button button15;
-        private System.Windows.Forms.Button button14;
-        private System.Windows.Forms.Button button13;
-        private System.Windows.Forms.Button button12;
-        private System.Windows.Forms.ComboBox comboBox1;
-        private System.Windows.Forms.Button button11;
-        private System.Windows.Forms.Button button10;
-        private System.Windows.Forms.Button button5;
-        private System.Windows.Forms.Button button9;
-        private System.Windows.Forms.Button button6;
-        private System.Windows.Forms.Button button8;
-        private System.Windows.Forms.Button button7;
+        private System.Windows.Forms.RadioButton rbR2;
+        private System.Windows.Forms.RadioButton rbR1;
+        private System.Windows.Forms.Button btnA1Align;
+        private System.Windows.Forms.Button btnA1Home;
+        private System.Windows.Forms.Button btnA1Init;
+        private System.Windows.Forms.Button btnA1ChgSpeed;
+        private System.Windows.Forms.ComboBox cbA1SpeedNew;
+        private System.Windows.Forms.Button btnA1ServoOn;
+        private System.Windows.Forms.Button btnA1ServoOff;
+        private System.Windows.Forms.Button btnA1VacuOff;
+        private System.Windows.Forms.Button btnA1DisConn;
+        private System.Windows.Forms.Button btnA1Reset;
+        private System.Windows.Forms.Button btnA1Conn;
+        private System.Windows.Forms.Button btnA1VacuOn;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.ComboBox cbRNewSpeed;
+        private System.Windows.Forms.TextBox tbRSpeed;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.GroupBox groupBox2;
+        private System.Windows.Forms.Button btnRRVacuOff;
+        private System.Windows.Forms.Button btnRRVacuOn;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Button btnRChgSpeed;
+        private System.Windows.Forms.Button btnRConn;
+        private System.Windows.Forms.Button btnROrg;
+        private System.Windows.Forms.Button btnRInit;
+        private System.Windows.Forms.Button btnRDisConn;
+        private System.Windows.Forms.Button btnRLVacuOff;
+        private System.Windows.Forms.Button btnRLVacuOn;
+        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.Label label48;
+        private System.Windows.Forms.ComboBox cbA1Angle;
+        private System.Windows.Forms.DomainUpDown dudA1AngleOffset;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.Button btnRHome;
+        private System.Windows.Forms.Button btnA1Org;
+        private System.Windows.Forms.Button btnA2Org;
+        private System.Windows.Forms.TextBox tbA2WaferSensor;
+        private System.Windows.Forms.Label label18;
+        private System.Windows.Forms.Label label17;
+        private System.Windows.Forms.Button btnA2Conn;
+        private System.Windows.Forms.TextBox tbA2Error;
+        private System.Windows.Forms.Button btnA2VacuOn;
+        private System.Windows.Forms.ComboBox cbA2Angle;
+        private System.Windows.Forms.Button btnA2Reset;
+        private System.Windows.Forms.Label label16;
+        private System.Windows.Forms.Button btnA2Init;
+        private System.Windows.Forms.TextBox tbA2Speed;
+        private System.Windows.Forms.Button btnA2DisConn;
+        private System.Windows.Forms.DomainUpDown dudA2AngleOffset;
+        private System.Windows.Forms.Button btnA2VacuOff;
+        private System.Windows.Forms.Label label15;
+        private System.Windows.Forms.Button btnA2ServoOff;
+        private System.Windows.Forms.Label label13;
+        private System.Windows.Forms.Button btnA2Home;
+        private System.Windows.Forms.Label label12;
+        private System.Windows.Forms.Button btnA2ServoOn;
+        private System.Windows.Forms.Label label8;
+        private System.Windows.Forms.Label label11;
+        private System.Windows.Forms.Label label9;
+        private System.Windows.Forms.Button btnA2ChgSpeed;
+        private System.Windows.Forms.Button btnA2Align;
+        private System.Windows.Forms.Label label10;
+        private System.Windows.Forms.TextBox tbA2VacSolenoid;
+        private System.Windows.Forms.ComboBox cbA2SpeedNew;
     }
 }

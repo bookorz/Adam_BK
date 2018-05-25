@@ -1,4 +1,5 @@
-﻿using Adam.UI_Update.Manual;
+﻿using Adam;
+using Adam.UI_Update.Manual;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -179,6 +180,233 @@ namespace GUI
 
         }
 
-        
+        private void AlignerFunction_Click(object sender, EventArgs e)
+        {
+            Button btn = (Button)sender;
+            String nodeName = "NA";
+            String ctrlName = "NA";
+            String angle = "0";
+            if (btn.Name.IndexOf("A1") > 0)
+            {
+                nodeName = "Aligner01";
+                ctrlName = "RobotController01";
+                if (cbA1Angle.Text.Equals(""))
+                {
+                    cbA1Angle.Text = "0";
+                }
+                if (dudA1AngleOffset.Text.Equals(""))
+                {
+                    dudA1AngleOffset.Text = "0";
+                }
+                angle = Convert.ToString(int.Parse(cbA1Angle.Text) + int.Parse(dudA1AngleOffset.Text));
+            }
+            if (btn.Name.IndexOf("A2") > 0)
+            {
+                nodeName = "Aligner02";
+                ctrlName = "AlignerController02";
+                if (cbA2Angle.Text.Equals(""))
+                {
+                    cbA2Angle.Text = "0";
+                }
+                if (dudA2AngleOffset.Text.Equals(""))
+                {
+                    dudA2AngleOffset.Text = "0";
+                }
+                angle = Convert.ToString(int.Parse(cbA2Angle.Text) + int.Parse(dudA2AngleOffset.Text));
+            }
+            //MessageBox.Show(nodeName);
+            //return;
+            Node aligner = NodeManagement.Get(nodeName);
+            Transaction[] txns = new Transaction[1];
+            txns[0] = new Transaction();
+            if (aligner == null)
+            {
+                MessageBox.Show(nodeName + " can't found!");
+                return;
+            }
+            String btnFuncName = btn.Name.Replace("A1", "").Replace("A2", ""); // A1 , A2 共用功能
+            switch (btnFuncName)
+            {
+                case "btnConn":
+                    ControllerManagement.Get(ctrlName).Connect();
+                    break;
+                case "btnDisConn":
+                    ControllerManagement.Get(ctrlName).Close();
+                    break;
+                case "btnInit":
+                    //txns = new Transaction[4];
+                    //txns[0].Method = Transaction.Command.AlignerType.Reset;
+                    //txns[1].Method = Transaction.Command.AlignerType.AlignerOrigin;
+                    //txns[2].Method = Transaction.Command.AlignerType.AlignerServo;
+                    //txns[3].Method = Transaction.Command.AlignerType.AlignerHome;
+                    break;
+                case "btnOrg":
+                    txns[0].Method = Transaction.Command.AlignerType.AlignerOrigin;
+                    break;
+                case "btnHome":
+                    txns[0].Method = Transaction.Command.AlignerType.AlignerHome;
+                    break;
+                case "btnServoOn":
+                    txns[0].Method = Transaction.Command.AlignerType.AlignerServo;
+                    txns[0].Arm = "1";
+                    break;
+                case "btnServoOff":
+                    txns[0].Method = Transaction.Command.AlignerType.AlignerServo;
+                    txns[0].Arm = "0";
+                    break;
+                case "btnVacuOn":
+                    txns[0].Method = Transaction.Command.AlignerType.WaferHold;
+                    txns[0].Arm = "1";
+                    break;
+                case "btnVacuOff":
+                    txns[0].Method = Transaction.Command.AlignerType.WaferRelease;
+                    txns[0].Arm = "0";
+                    break;
+                case "btnChgSpeed":
+                    txns[0].Method = Transaction.Command.AlignerType.AlignerSpeed;
+                    break;
+                case "btnReset":
+                    txns[0].Method = Transaction.Command.AlignerType.Reset;
+                    break;
+                case "btnAlign":
+                    txns[0].Method = Transaction.Command.AlignerType.Align;
+                    txns[0].Angle = angle;
+                    break;
+            }
+            if (!txns[0].Method.Equals(""))
+            {
+                aligner.SendCommand(txns[0]);
+            }
+            else
+            {
+                MessageBox.Show("Command is empty!");
+            }
+            setAlignerStatus();
+        }
+
+        private void RobotFunction_Click(object sender, EventArgs e)
+        {
+            Button btn = (Button)sender;
+            String nodeName = "NA";
+            String ctrlName = "NA";
+            if (rbR1.Checked)
+            {
+                nodeName = "Robert1";
+                ctrlName = "RobotController01";
+            }
+            if (rbR2.Checked)
+            {
+                nodeName = "Robert2";
+                ctrlName = "RobotController02";
+            }
+            Node robot = NodeManagement.Get(nodeName);
+            Transaction[] txns = new Transaction[1];
+            txns[0] = new Transaction();
+            switch (btn.Name)
+            {
+                case "btnRConn":
+                    ControllerManagement.Get(ctrlName).Connect();
+                    break;
+                case "btnRDisConn":
+                    ControllerManagement.Get(ctrlName).Close();
+                    break;
+                case "btnRInit":
+                    //txns[0].Method = Transaction.Command.LoadPortType.MappingDown;
+                    break;
+                case "btnROrg":
+                    txns[0].Method = Transaction.Command.RobotType.RobotHome;
+                    break;
+                case "btnRHome":
+                    txns[0].Method = Transaction.Command.RobotType.RobotHome;
+                    break;
+                case "btnRChgSpeed":
+                    txns[0].Method = Transaction.Command.RobotType.RobotSpeed;
+                    txns[0].Arm = cbRNewSpeed.Text;
+                    break;
+                //上臂
+                case "btnRRVacuOn":
+                    txns[0].Method = Transaction.Command.RobotType.WaferHold;
+                    txns[0].Arm = "0";
+                    break;
+                case "btnRRVacuOff":
+                    txns[0].Method = Transaction.Command.RobotType.WaferRelease;
+                    txns[0].Arm = "0";
+                    break;
+                //下臂
+                case "btnRLVacuOn":
+                    txns[0].Method = Transaction.Command.RobotType.WaferHold;
+                    txns[0].Arm = "1";
+                    break;
+                case "btnRLVacuOff":
+                    txns[0].Method = Transaction.Command.RobotType.WaferRelease;
+                    txns[0].Arm = "0";
+                    break;
+                case "btnRGet":
+                    txns[0].Method = Transaction.Command.RobotType.Get;
+                    txns[0].Point = ConfigUtil.GetStagePoint(cbRA1Point.Text);
+                    txns[0].Arm = ConfigUtil.GetArmID(cbRA1Arm.Text);
+                    txns[0].Slot = cbRA1Slot.Text;
+                    break;
+                case "btnRPut":
+                    txns[0].Method = Transaction.Command.RobotType.Put;
+                    txns[0].Point = ConfigUtil.GetStagePoint(cbRA2Point.Text);
+                    txns[0].Arm = ConfigUtil.GetArmID(cbRA2Arm.Text);
+                    txns[0].Slot = cbRA2Slot.Text;
+                    break;
+                case "btnRGetWait":
+                    txns[0].Method = Transaction.Command.RobotType.GetWait;
+                    txns[0].Point = ConfigUtil.GetStagePoint(cbRA1Point.Text);
+                    txns[0].Arm = ConfigUtil.GetArmID(cbRA1Arm.Text);
+                    txns[0].Slot = cbRA1Slot.Text;
+                    break;
+                case "btnRPutWait":
+                    txns[0].Method = Transaction.Command.RobotType.PutWait;
+                    txns[0].Point = ConfigUtil.GetStagePoint(cbRA2Point.Text);
+                    txns[0].Arm = ConfigUtil.GetArmID(cbRA2Arm.Text);
+                    txns[0].Slot = cbRA2Slot.Text;
+                    break;
+                case "btnRMoveDown":
+                    txns[0].Method = Transaction.Command.RobotType.WaitBeforeGet;//GET option 1
+                    txns[0].Point = ConfigUtil.GetStagePoint(cbRA1Point.Text);
+                    txns[0].Arm = ConfigUtil.GetArmID(cbRA1Arm.Text);
+                    txns[0].Slot = cbRA1Slot.Text;
+                    break;
+                case "btnRMoveUp":
+                    txns[0].Method = Transaction.Command.RobotType.WaitBeforePut;//Put option 1
+                    txns[0].Point = ConfigUtil.GetStagePoint(cbRA2Point.Text);
+                    txns[0].Arm = ConfigUtil.GetArmID(cbRA2Arm.Text);
+                    txns[0].Slot = cbRA2Slot.Text;
+                    break;
+                case "btnRPutPut":
+                    //txns[0].Method = Transaction.Command.RobotType.MappingDown;
+                    break;
+                case "btnRGetGet":
+                    //txns[0].Method = Transaction.Command.RobotType.MappingDown;
+                    break;
+                case "btnRGetPut":
+                    //txns[0].Method = Transaction.Command.RobotType.MappingDown;
+                    break;
+                case "btnRPutGet":
+                    //txns[0].Method = Transaction.Command.RobotType.MappingDown;
+                    break;
+            }
+            if (!txns[0].Method.Equals(""))
+            {
+                robot.SendCommand(txns[0]);
+            }
+            else
+            {
+                MessageBox.Show("Command is empty!");
+            }
+            setRobotStatus();
+        }
+        private void setRobotStatus()
+        {
+
+        }
+        private void setAlignerStatus()
+        {
+
+        }
     }
 }

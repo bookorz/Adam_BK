@@ -49,6 +49,7 @@ namespace Adam
             }
             return color;
         }
+        //Combobox 使用
         static public List<KeyValuePair<string, int>> GetPointList()
         {
             var list = new List<KeyValuePair<string, int>>() {
@@ -64,6 +65,41 @@ namespace Adam
                 new KeyValuePair<string, int>("Aligner2", 122),
             };
             return list;
+        }
+
+        static public string GetStagePoint(string stage)
+        {
+            Dictionary<string, string> pointMap = new Dictionary<string, string>();
+            pointMap["Port1"] = "1201";
+            pointMap["Port2"] = "1202";
+            pointMap["Port3"] = "1203";
+            pointMap["Port4"] = "1204";
+            pointMap["Port5"] = "1205";
+            pointMap["Port6"] = "1206";
+            pointMap["Port7"] = "1207";
+            pointMap["Port8"] = "1208";
+            pointMap["LoadPort1"] = "1201";
+            pointMap["LoadPort2"] = "1202";
+            pointMap["LoadPort3"] = "1203";
+            pointMap["LoadPort4"] = "1204";
+            pointMap["LoadPort5"] = "1205";
+            pointMap["LoadPort6"] = "1206";
+            pointMap["LoadPort7"] = "1207";
+            pointMap["LoadPort8"] = "1208";
+            pointMap["Aligner1"] = "121";
+            pointMap["Aligner2"] = "122";
+            pointMap["Aligner01"] = "121";
+            pointMap["Aligner02"] = "122";  
+            return pointMap[stage];
+        }
+        static public string GetArmID(string arm)
+        {
+            Dictionary<string, string> armMap = new Dictionary<string, string>();
+            armMap["Upper"] = "0";
+            armMap["Lower"] = "1";
+            armMap["R"] = "0";
+            armMap["K"] = "1";
+            return armMap[arm];
         }
         static public digitState[] GetRobotStatusItem(string vendor)
         {
