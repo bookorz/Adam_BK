@@ -1,0 +1,3 @@
+2018-05-24 20:38:10,892 [1] DEBUG TransferControl.Engine.RouteControl - RobotController01 Connection_Error
+2018-05-24 20:38:11,048 [1] DEBUG Adam.FormMain - On_Controller_State_Changed
+2018-05-24 20:38:11,048 [1] DEBUG TransferControl.Controller.DeviceController - RobotController01 Send:$3CMD:ALIGN:0 Wafer:
