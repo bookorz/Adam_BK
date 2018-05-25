@@ -114,104 +114,10 @@ namespace Adam
 
         private void Form1_Load(object sender, EventArgs e)
         {
-            DataTable dtConnectStatus = new DataTable();
-            DataTable dtLoadPort01 = new DataTable();
-            DataTable dtAligner01 = new DataTable();
-            DataTable dtRobot01 = new DataTable();
-            DataTable dtLoadport02 = new DataTable();
-
-            DataRow dr;
-
-            string[] str = new string[] { "Robot01", "Robot02", "Aligner01", "Aligner02", "LoadPort01", "LoadPort02", "LoadPort03", "LoadPort04", "LoadPort05", "LoadPort06", "LoadPort07", "LoadPort08", "IO_01", "IO_02", "IO_03" };
 
             try
             {
-                LoadPort01.AutoGenerateColumns = false;
-                dataGridView1.AutoGenerateColumns = false;
-                dataGridView3.AutoGenerateColumns = false;
-                dataGridView4.AutoGenerateColumns = false;
-                dataGridView5.AutoGenerateColumns = false;
-                dataGridView6.AutoGenerateColumns = false;
-                dataGridView7.AutoGenerateColumns = false;
 
-                dataGridView9.AutoGenerateColumns = false;
-
-                dataGridView11.AutoGenerateColumns = false;
-                dataGridView12.AutoGenerateColumns = false;
-
-                //dtConnectStatus.Columns.Add("Device_ID");
-                //dtConnectStatus.Columns.Add("Connection_Status");
-                //dtConnectStatus.Columns.Add("Device_Status");
-
-                //for (int i = 0; i < str.Length; i++)
-                //{
-                //    dr = dtConnectStatus.NewRow();
-                //    dr["Device_ID"] = str[i].ToString();
-                //    dr["Connection_Status"] = string.Empty;
-                //    dr["Device_Status"] = string.Empty;
-                //    dtConnectStatus.Rows.Add(dr);
-                //}
-
-                //dataGridView2.DataSource = dtConnectStatus;
-
-                dtLoadPort01.Columns.Add("Slot");
-                dtLoadPort01.Columns.Add("Wafer_ID");
-
-                for (int i = 25; i > 0; i--)
-                {
-                    dr = dtLoadPort01.NewRow();
-                    dr["Slot"] = (i).ToString();
-                    dr["Wafer_ID"] = string.Empty;
-                    dtLoadPort01.Rows.Add(dr);
-                }
-
-                LoadPort01.DataSource = dtLoadPort01;
-                dataGridView1.DataSource = dtLoadPort01;
-                dataGridView3.DataSource = dtLoadPort01;
-                dataGridView4.DataSource = dtAligner01;
-                dataGridView5.DataSource = dtAligner01;
-                dataGridView6.DataSource = dtAligner01;
-                dataGridView7.DataSource = dtAligner01;
-
-                dataGridView13.DataSource = dtLoadPort01;
-               
-
-                dtAligner01.Columns.Add("Wafer_ID");
-                dr = dtAligner01.NewRow();
-                dr["Wafer_ID"] = string.Empty;
-                dtAligner01.Rows.Add(dr);
-                dataGridView11.DataSource = dtAligner01;
-                dataGridView12.DataSource = dtAligner01;
-              
-
-                dtRobot01.Columns.Add("Arm");
-                dtRobot01.Columns.Add("Wafer_ID");
-                dr = dtRobot01.NewRow();
-                dr["Arm"] = "Upper";
-                dr["Wafer_ID"] = string.Empty;
-                dtRobot01.Rows.Add(dr);
-                dr = dtRobot01.NewRow();
-                dr["Arm"] = "Lower";
-                dr["Wafer_ID"] = string.Empty;
-                dtRobot01.Rows.Add(dr);
-                dataGridView9.DataSource = dtRobot01;
-
-
-
-                dtLoadport02.Columns.Add("Device_ID");
-                dtLoadport02.Columns.Add("Action");
-                dr = dtLoadport02.NewRow();
-                dr["Device_ID"] = "LoadPort01";
-                dr["Action"] = string.Empty;
-                dtLoadport02.Rows.Add(dr);
-                dr = dtLoadport02.NewRow();
-                dr["Device_ID"] = "LoadPort02";
-                dr["Action"] = string.Empty;
-                dtLoadport02.Rows.Add(dr);
-                dr = dtLoadport02.NewRow();
-                dr["Device_ID"] = "LoadPort03";
-                dr["Action"] = string.Empty;
-                dtLoadport02.Rows.Add(dr);
                 
             }
             catch (Exception ex)

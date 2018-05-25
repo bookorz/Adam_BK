@@ -1606,6 +1606,7 @@
             // btnA2Init
             // 
             this.btnA2Init.BackColor = System.Drawing.Color.DarkGray;
+            this.btnA2Init.Enabled = false;
             this.btnA2Init.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.btnA2Init.FlatAppearance.BorderSize = 2;
             this.btnA2Init.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
@@ -2297,6 +2298,7 @@
             // btnA1Init
             // 
             this.btnA1Init.BackColor = System.Drawing.Color.DarkGray;
+            this.btnA1Init.Enabled = false;
             this.btnA1Init.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.btnA1Init.FlatAppearance.BorderSize = 2;
             this.btnA1Init.FlatStyle = System.Windows.Forms.FlatStyle.Popup;

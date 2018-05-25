@@ -251,7 +251,7 @@ namespace Adam
             this.groupBox11 = new System.Windows.Forms.GroupBox();
             this.tableLayoutPanel12 = new System.Windows.Forms.TableLayoutPanel();
             this.tableLayoutPanel15 = new System.Windows.Forms.TableLayoutPanel();
-            this.dataGridView13 = new System.Windows.Forms.DataGridView();
+            this.LoadPort01Assign_Gv = new System.Windows.Forms.DataGridView();
             this.label29 = new System.Windows.Forms.Label();
             this.textBox16 = new System.Windows.Forms.TextBox();
             this.tabStatus = new System.Windows.Forms.TabPage();
@@ -665,6 +665,7 @@ namespace Adam
             this.transTestToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.terminalToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.panel3 = new System.Windows.Forms.Panel();
+            this.WaferAssignMenu = new System.Windows.Forms.ContextMenuStrip(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer5)).BeginInit();
             this.splitContainer5.Panel1.SuspendLayout();
             this.splitContainer5.Panel2.SuspendLayout();
@@ -747,7 +748,7 @@ namespace Adam
             this.groupBox11.SuspendLayout();
             this.tableLayoutPanel12.SuspendLayout();
             this.tableLayoutPanel15.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView13)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.LoadPort01Assign_Gv)).BeginInit();
             this.tabStatus.SuspendLayout();
             this.tableLayoutPanel26.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvRstatus)).BeginInit();
@@ -2287,28 +2288,29 @@ namespace Adam
             // tableLayoutPanel15
             // 
             resources.ApplyResources(this.tableLayoutPanel15, "tableLayoutPanel15");
-            this.tableLayoutPanel15.Controls.Add(this.dataGridView13, 0, 2);
+            this.tableLayoutPanel15.Controls.Add(this.LoadPort01Assign_Gv, 0, 2);
             this.tableLayoutPanel15.Controls.Add(this.label29, 0, 0);
             this.tableLayoutPanel15.Controls.Add(this.textBox16, 0, 1);
             this.tableLayoutPanel15.Controls.Add(this.splitContainer3, 0, 3);
             this.tableLayoutPanel15.Name = "tableLayoutPanel15";
             // 
-            // dataGridView13
+            // LoadPort01Assign_Gv
             // 
-            this.dataGridView13.AllowUserToAddRows = false;
-            this.dataGridView13.AllowUserToDeleteRows = false;
-            this.dataGridView13.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.ColumnHeader;
-            this.dataGridView13.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
-            this.dataGridView13.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            resources.ApplyResources(this.dataGridView13, "dataGridView13");
-            this.dataGridView13.MultiSelect = false;
-            this.dataGridView13.Name = "dataGridView13";
-            this.dataGridView13.ReadOnly = true;
-            this.dataGridView13.RowHeadersVisible = false;
-            this.dataGridView13.RowTemplate.Height = 10;
-            this.dataGridView13.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.CellSelect;
-            this.dataGridView13.StandardTab = true;
-            this.dataGridView13.DataBindingComplete += new System.Windows.Forms.DataGridViewBindingCompleteEventHandler(this.LoadPort01_DataBindingComplete);
+            this.LoadPort01Assign_Gv.AllowUserToAddRows = false;
+            this.LoadPort01Assign_Gv.AllowUserToDeleteRows = false;
+            this.LoadPort01Assign_Gv.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.ColumnHeader;
+            this.LoadPort01Assign_Gv.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
+            this.LoadPort01Assign_Gv.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.LoadPort01Assign_Gv.ContextMenuStrip = this.WaferAssignMenu;
+            resources.ApplyResources(this.LoadPort01Assign_Gv, "LoadPort01Assign_Gv");
+            this.LoadPort01Assign_Gv.MultiSelect = false;
+            this.LoadPort01Assign_Gv.Name = "LoadPort01Assign_Gv";
+            this.LoadPort01Assign_Gv.ReadOnly = true;
+            this.LoadPort01Assign_Gv.RowHeadersVisible = false;
+            this.LoadPort01Assign_Gv.RowTemplate.Height = 10;
+            this.LoadPort01Assign_Gv.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.CellSelect;
+            this.LoadPort01Assign_Gv.StandardTab = true;
+            this.LoadPort01Assign_Gv.DataBindingComplete += new System.Windows.Forms.DataGridViewBindingCompleteEventHandler(this.LoadPort01_DataBindingComplete);
             // 
             // label29
             // 
@@ -5756,6 +5758,11 @@ namespace Adam
             this.panel3.Name = "panel3";
             this.panel3.Paint += new System.Windows.Forms.PaintEventHandler(this.panel3_Paint);
             // 
+            // WaferAssignMenu
+            // 
+            this.WaferAssignMenu.Name = "WaferAssignMenu";
+            resources.ApplyResources(this.WaferAssignMenu, "WaferAssignMenu");
+            // 
             // FormMain
             // 
             resources.ApplyResources(this, "$this");
@@ -5859,7 +5866,7 @@ namespace Adam
             this.tableLayoutPanel12.ResumeLayout(false);
             this.tableLayoutPanel15.ResumeLayout(false);
             this.tableLayoutPanel15.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView13)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.LoadPort01Assign_Gv)).EndInit();
             this.tabStatus.ResumeLayout(false);
             this.tableLayoutPanel26.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dgvRstatus)).EndInit();
@@ -6149,7 +6156,7 @@ namespace Adam
         private System.Windows.Forms.GroupBox groupBox11;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel12;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel15;
-        private System.Windows.Forms.DataGridView dataGridView13;
+        private System.Windows.Forms.DataGridView LoadPort01Assign_Gv;
         private System.Windows.Forms.Label label29;
         private System.Windows.Forms.TextBox textBox16;
         private System.Windows.Forms.SplitContainer splitContainer3;
@@ -6583,6 +6590,7 @@ namespace Adam
         private System.Windows.Forms.TextBox OCR02Read_Tb;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.PictureBox OCR02_Pic;
+        private System.Windows.Forms.ContextMenuStrip WaferAssignMenu;
     }
 }
 
