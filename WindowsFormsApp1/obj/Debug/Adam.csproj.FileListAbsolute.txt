@@ -210,8 +210,6 @@ C:\軟體專案開發\team\Adam\WindowsFormsApp1\bin\Debug\SANWA.dll
 C:\軟體專案開發\team\Adam\WindowsFormsApp1\bin\Debug\TransferControl.dll
 C:\軟體專案開發\team\Adam\WindowsFormsApp1\bin\Debug\SANWA.pdb
 C:\軟體專案開發\team\Adam\WindowsFormsApp1\bin\Debug\TransferControl.pdb
-C:\軟體專案開發\team\Adam\WindowsFormsApp1\bin\Debug\log4net.pdb
-C:\軟體專案開發\team\Adam\WindowsFormsApp1\bin\Debug\log4net.xml
 C:\軟體專案開發\team\Adam\WindowsFormsApp1\bin\Debug\Newtonsoft.Json.xml
 C:\軟體專案開發\team\Adam\WindowsFormsApp1\obj\Debug\ja-JP\Adam.resources.dll
 C:\軟體專案開發\team\Adam\WindowsFormsApp1\obj\Debug\Adam.csproj.CopyComplete
