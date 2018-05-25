@@ -102,16 +102,6 @@ namespace Adam
             //}
         }
 
-        private void panel2_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
-
-        private void button7_Click(object sender, EventArgs e)
-        {
-
-        }
-
         private void Form1_Load(object sender, EventArgs e)
         {
 
@@ -129,65 +119,6 @@ namespace Adam
         private void LoadPort01_DataBindingComplete(object sender, DataGridViewBindingCompleteEventArgs e)
         {
             ((DataGridView)sender).ClearSelection();
-        }
-
-        private void groupBox6_Enter(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label17_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void numericUpDown1_ValueChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label28_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void numericUpDown8_ValueChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void groupBox5_Enter(object sender, EventArgs e)
-        {
-
-        }
-
-        private void tableLayoutPanel19_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
-
-        private void groupBox17_Enter(object sender, EventArgs e)
-        {
-
-        }
-
-        private void panel3_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
-
-        private void label50_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void textBox23_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void splitButton1_Click(object sender, EventArgs e)
-        {
         }
 
         private void tabControl2_DrawItem(Object sender, System.Windows.Forms.DrawItemEventArgs e)
@@ -226,20 +157,10 @@ namespace Adam
             g.DrawString(_tabPage.Text, _tabFont, _textBrush, _tabBounds, new StringFormat(_stringFlags));
         }
 
-        private void panel40_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
-
         private void button18_Click(object sender, EventArgs e)
         {
             GUI.FormLogin formLogin = new GUI.FormLogin();
             formLogin.ShowDialog();
-        }
-
-        private void contextMenuStrip2_Opening(object sender, CancelEventArgs e)
-        {
-
         }
 
         private void toolStripMenuItem2_Click(object sender, EventArgs e)
@@ -278,8 +199,6 @@ namespace Adam
                 GUI.FormManual formManual = new GUI.FormManual();
                 formManual.Show();
             }
-
-
         }
 
         private void toolStripMenuItem9_Click(object sender, EventArgs e)
@@ -312,11 +231,6 @@ namespace Adam
             setting.ShowDialog();
         }
 
-        private void terminalToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-
-        }
-
         private void terminalToolStripMenuItem_Click_1(object sender, EventArgs e)
         {
             GUI.FormTerminal formTerminal = new GUI.FormTerminal();
@@ -340,20 +254,6 @@ namespace Adam
             GUI.FormVersion formVersion = new GUI.FormVersion();
             formVersion.ShowDialog();
         }
-
-        private void myButtonCheck4_Load(object sender, EventArgs e)
-        {
-
-
-        }
-
-
-
-        private void tabControl1_TabIndexChanged(object sender, EventArgs e)
-        {
-
-        }
-
 
         private List<TabPage> hiddenPages = new List<TabPage>();
 
@@ -390,18 +290,6 @@ namespace Adam
         {
             SorterControl.AlarmFrom alarmFrom = new SorterControl.AlarmFrom();
             alarmFrom.ShowDialog();
-        }
-
-        private void Connection_Click(object sender, EventArgs e)
-        {
-            if (Connection.Checked)
-            {
-                RouteCtrl.ConnectAll();
-            }
-            else
-            {
-                RouteCtrl.DisconnectAll();
-            }
         }
 
         public void On_Command_Excuted(Node Node, Transaction Txn, ReturnMessage Msg)
@@ -533,72 +421,6 @@ namespace Adam
             logger.Debug("On_Port_Finished");
         }
 
-
-
-        private void button8_Click(object sender, EventArgs e)
-        {
-
-        }
-
-
-
-        private void Mode_sw_Click(object sender, EventArgs e)
-        {
-            if (Mode_sw.Checked)
-            {
-                splitButton5.Text = "Auto Mode";
-                splitButton5.BackColor = Color.Red;
-                splitButton5.Enabled = false;
-                button70.Enabled = false;
-                EnablePage(tabControl1.TabPages[5], false);
-
-
-
-                JobManagement.Initial();
-
-                Node Aligner1 = NodeManagement.Get("Aligner01");
-                if (Aligner1 != null)
-                {
-                    Aligner1.LockByNode = "LoadPort01";
-                }
-
-                Node P1 = NodeManagement.Get("LoadPort01");
-                P1.Available = true;
-                P1.Fetchable = true;
-                P1.JobList.Clear();
-
-                for (int i = 1; i <= 25; i++)
-                {
-                    Job w = new Job();
-                    w.Job_Id = "Wafer" + i.ToString("000");
-
-                    w.AlignerFlag = true;
-                    w.OCRFlag = false;
-                    w.Position = P1.Name;
-                    w.ProcessFlag = false;
-                    w.FromPort = P1.Name;
-                    w.Slot = i.ToString();
-                    w.Destination = "LoadPort02";
-                    w.DestinationSlot = i.ToString(); ;
-                    JobManagement.Add(w.Job_Id, w);
-                    P1.JobList.TryAdd(w.Slot, w);
-                }
-
-                RouteCtrl.Auto("Normal");
-            }
-            else
-            {
-                splitButton5.Text = "Maintenance Mode";
-                splitButton5.BackColor = Color.WhiteSmoke;
-                splitButton5.Enabled = true;
-                button70.Enabled = true;
-                EnablePage(hiddenPages[0], true);
-                RouteCtrl.Stop();//book
-                //test
-				//yyyy
-            }
-        }
-
         private void tabControl1_Selected(object sender, TabControlEventArgs e)
         {
             switch (e.TabPage.Text)
@@ -665,11 +487,6 @@ namespace Adam
             }
         }
 
-        private void label82_Click(object sender, EventArgs e)
-        {
-
-        }
-
         private void vSBRobotStatus_Scroll(object sender, ScrollEventArgs e)
         {
             pbRobotState.Top = -vSBRobotStatus.Value;
@@ -727,9 +544,73 @@ namespace Adam
 
         }
 
-        private void tableLayoutPanel13_Paint(object sender, PaintEventArgs e)
+        private void tgsConnection_CheckedChanged(object sender, EventArgs e)
         {
+            if (tgsConnection.Checked)
+            {
+                RouteCtrl.ConnectAll();
+            }
+            else
+            {
+                RouteCtrl.DisconnectAll();
+            }
+        }
 
+        private void tgsMode_SW_CheckedChanged(object sender, EventArgs e)
+        {
+            if (tgsMode_SW.Checked)
+            {
+                splitButton5.Text = "Auto Mode";
+                splitButton5.BackColor = Color.Red;
+                splitButton5.Enabled = false;
+                button70.Enabled = false;
+                EnablePage(tabControl1.TabPages[5], false);
+
+
+
+                JobManagement.Initial();
+
+                Node Aligner1 = NodeManagement.Get("Aligner01");
+                if (Aligner1 != null)
+                {
+                    Aligner1.LockByNode = "LoadPort01";
+                }
+
+                Node P1 = NodeManagement.Get("LoadPort01");
+                P1.Available = true;
+                P1.Fetchable = true;
+                P1.JobList.Clear();
+
+                for (int i = 1; i <= 25; i++)
+                {
+                    Job w = new Job();
+                    w.Job_Id = "Wafer" + i.ToString("000");
+
+                    w.AlignerFlag = true;
+                    w.OCRFlag = false;
+                    w.Position = P1.Name;
+                    w.ProcessFlag = false;
+                    w.FromPort = P1.Name;
+                    w.Slot = i.ToString();
+                    w.Destination = "LoadPort02";
+                    w.DestinationSlot = i.ToString(); ;
+                    JobManagement.Add(w.Job_Id, w);
+                    P1.JobList.TryAdd(w.Slot, w);
+                }
+
+                RouteCtrl.Auto("Normal");
+            }
+            else
+            {
+                splitButton5.Text = "Maintenance Mode";
+                splitButton5.BackColor = Color.WhiteSmoke;
+                splitButton5.Enabled = true;
+                button70.Enabled = true;
+                EnablePage(hiddenPages[0], true);
+                RouteCtrl.Stop();//book
+                                 //test
+                                 //yyyy
+            }
         }
     }
 }

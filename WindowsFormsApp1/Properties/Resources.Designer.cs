@@ -63,9 +63,9 @@ namespace Adam.Properties {
         /// <summary>
         ///   查詢類型 System.Drawing.Bitmap 的當地語系化資源。
         /// </summary>
-        internal static System.Drawing.Bitmap _1_Layer_Single_Color_LED_Tower_Light {
+        internal static System.Drawing.Bitmap arrowleft {
             get {
-                object obj = ResourceManager.GetObject("1-Layer-Single-Color-LED-Tower-Light", resourceCulture);
+                object obj = ResourceManager.GetObject("arrowleft", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -73,9 +73,9 @@ namespace Adam.Properties {
         /// <summary>
         ///   查詢類型 System.Drawing.Bitmap 的當地語系化資源。
         /// </summary>
-        internal static System.Drawing.Bitmap _2018_05_14_161525 {
+        internal static System.Drawing.Bitmap check {
             get {
-                object obj = ResourceManager.GetObject("2018-05-14_161525", resourceCulture);
+                object obj = ResourceManager.GetObject("check", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -83,9 +83,29 @@ namespace Adam.Properties {
         /// <summary>
         ///   查詢類型 System.Drawing.Bitmap 的當地語系化資源。
         /// </summary>
-        internal static System.Drawing.Bitmap like {
+        internal static System.Drawing.Bitmap cross {
             get {
-                object obj = ResourceManager.GetObject("like", resourceCulture);
+                object obj = ResourceManager.GetObject("cross", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   查詢類型 System.Drawing.Bitmap 的當地語系化資源。
+        /// </summary>
+        internal static System.Drawing.Bitmap handle {
+            get {
+                object obj = ResourceManager.GetObject("handle", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   查詢類型 System.Drawing.Bitmap 的當地語系化資源。
+        /// </summary>
+        internal static System.Drawing.Bitmap Image70 {
+            get {
+                object obj = ResourceManager.GetObject("Image70", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -116,16 +136,6 @@ namespace Adam.Properties {
         internal static System.Drawing.Bitmap tdk_loadport_status {
             get {
                 object obj = ResourceManager.GetObject("tdk_loadport_status", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   查詢類型 System.Drawing.Bitmap 的當地語系化資源。
-        /// </summary>
-        internal static System.Drawing.Bitmap WafID_VBNETEmbedded {
-            get {
-                object obj = ResourceManager.GetObject("WafID_VBNETEmbedded", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

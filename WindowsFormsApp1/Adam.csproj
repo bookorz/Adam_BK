@@ -39,15 +39,13 @@
       <SpecificVersion>False</SpecificVersion>
       <HintPath>..\..\SANWA-Function-For-Test\log4net.dll</HintPath>
     </Reference>
-    <Reference Include="myButtonCheckTest">
-      <HintPath>..\..\..\Downloads\myButtonCheckTest\myButtonCheckTest\bin\Debug\myButtonCheckTest.exe</HintPath>
-    </Reference>
     <Reference Include="Newtonsoft.Json, Version=11.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
       <HintPath>..\packages\Newtonsoft.Json.11.0.2\lib\net45\Newtonsoft.Json.dll</HintPath>
     </Reference>
-    <Reference Include="SplitButton">
-      <HintPath>..\..\..\Downloads\SplitButton\bin\Debug\SplitButton.dll</HintPath>
+    <Reference Include="SplitButton, Version=2.1.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\SplitButton\bin\Debug\SplitButton.dll</HintPath>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
@@ -60,6 +58,10 @@
     <Reference Include="System.Net.Http" />
     <Reference Include="System.Windows.Forms" />
     <Reference Include="System.Xml" />
+    <Reference Include="ToggleSwitch, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\ToggleSwitch\ToggleSwitch\bin\Debug\ToggleSwitch.dll</HintPath>
+    </Reference>
   </ItemGroup>
   <ItemGroup>
     <Compile Include="ConfigUtil.cs" />
@@ -233,15 +235,6 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\1-Layer-Single-Color-LED-Tower-Light.jpg" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\2018-05-14_161525.jpg" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\WafID_VBNETEmbedded.jpg" />
-  </ItemGroup>
-  <ItemGroup>
     <None Include="Resources\like.png" />
   </ItemGroup>
   <ItemGroup>
@@ -258,8 +251,12 @@
     <None Include="Resources\sanwa_robot_status.png" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="Resources\arrowleft.png" />
+    <None Include="Resources\check.png" />
+    <None Include="Resources\cross.png" />
+    <None Include="Resources\handle.png" />
+    <None Include="Resources\Image70.png" />
     <Content Include="Resources\sanwa_aligner_status.png" />
-    <Content Include="Resources\tdk_loadport_status.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
