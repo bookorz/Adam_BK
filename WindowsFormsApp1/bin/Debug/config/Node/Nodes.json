@@ -41,6 +41,16 @@ RouteTable:[
 ]
 },
 {
+Name:"OCR02",
+Controller:"OCRController02",
+AdrNo:"1",
+Type:"OCR",
+Brand:"HST",
+RouteTable:[
+{NodeName:"Aligner01",NodeType:"Aligner"}
+]
+},
+{
 Name:"LoadPort01",
 Controller:"LoadPortController01",
 AdrNo:"00",

@@ -7,16 +7,17 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using TransferControl.Engine;
 
 namespace Adam.UI_Update.OCR
 {
     class OCRUpdate
     {
         static ILog logger = LogManager.GetLogger(typeof(OCRUpdate));
-        delegate void UpdateOCR(string In);
+        delegate void UpdateOCR(string OCRName, string In);
 
 
-        public static void UpdateOCRRead(string WaferID)
+        public static void UpdateOCRRead(string OCRName,string WaferID)
         {
             try
             {
@@ -25,34 +26,49 @@ namespace Adam.UI_Update.OCR
                 if (form == null)
                     return;
 
-                Tb_OCRRead = form.Controls.Find("Tb_OCRRead", true).FirstOrDefault() as TextBox;
+                Tb_OCRRead = form.Controls.Find(OCRName + "Read_Tb", true).FirstOrDefault() as TextBox;
                 if (Tb_OCRRead == null)
                     return;
 
                 if (Tb_OCRRead.InvokeRequired)
                 {
                     UpdateOCR ph = new UpdateOCR(UpdateOCRRead);
-                    Tb_OCRRead.BeginInvoke(ph, WaferID);
+                    Tb_OCRRead.BeginInvoke(ph, OCRName, WaferID);
                 }
                 else
                 {
+                    string save= "";
+                    string src="";
                     if (WaferID.IndexOf("*")!=-1)
                     {
                         WaferID = "辨識失敗";
                     }
-                    string savePath = "C:/ProgramData/e-Reader/JPG/" + WaferID + "_" + DateTime.Now.ToString("yyyy_mm_dd_HH_MM_ss") + ".jpg";
+                    switch (OCRName)
+                    {
+                        case "OCR01":
+                            save = RouteControl.SysConfig.OCR1ImgToJpgPath;
+                            src = RouteControl.SysConfig.OCR1ImgSourcePath;
+                            break;
+                        case "OCR02":
+                            save = RouteControl.SysConfig.OCR2ImgToJpgPath;
+                            src = RouteControl.SysConfig.OCR2ImgSourcePath;
+                            break;
+                    }
+                     
+
+                    string savePath = save + "/" + WaferID + "_" + DateTime.Now.ToString("yyyy_mm_dd_HH_MM_ss") + ".jpg";
                     WaferID = WaferID.Replace("[", "").Replace("]", "").Split(',')[0];
                     Tb_OCRRead.Text = WaferID;
-                    string[] files = Directory.GetFiles("C:/ProgramData/e-Reader/AllImage");
+                    string[] files = Directory.GetFiles(src);
                     List<string> fileList = files.ToList();
                     if (fileList.Count != 0)
                     {
                         fileList.Sort((x, y) => { return -File.GetLastWriteTime(x).CompareTo(File.GetLastWriteTime(y)); });
 
-                        Image bmp = Image.FromFile(fileList[0]); 
+                        Image bmp = Image.FromFile(fileList[0]);
                         bmp.Save(savePath, System.Drawing.Imaging.ImageFormat.Jpeg);
                         bmp.Dispose();
-                        PictureBox Pic_OCR = form.Controls.Find("Pic_OCR", true).FirstOrDefault() as PictureBox;
+                        PictureBox Pic_OCR = form.Controls.Find(OCRName + "_Pic", true).FirstOrDefault() as PictureBox;
                         if (Pic_OCR == null)
                             return;
                         Pic_OCR.Image = Image.FromFile(savePath);
@@ -67,7 +83,7 @@ namespace Adam.UI_Update.OCR
             }
         }
 
-        public static void UpdateOCRStatus(string Status)
+        public static void UpdateOCRStatus(string OCRName, string Status)
         {
             try
             {
@@ -76,16 +92,16 @@ namespace Adam.UI_Update.OCR
                 if (form == null)
                     return;
 
-                Btn_OCROnline = form.Controls.Find("Btn_OCROnline", true).FirstOrDefault() as Button;
+                Btn_OCROnline = form.Controls.Find(OCRName+"Online_Btn", true).FirstOrDefault() as Button;
                 if (Btn_OCROnline == null)
                     return;
-                Button Btn_OCROffline = form.Controls.Find("Btn_OCROffline", true).FirstOrDefault() as Button;
+                Button Btn_OCROffline = form.Controls.Find(OCRName + "Offline_Btn", true).FirstOrDefault() as Button;
                 if (Btn_OCROffline == null)
                     return;
                 if (Btn_OCROnline.InvokeRequired)
                 {
                     UpdateOCR ph = new UpdateOCR(UpdateOCRStatus);
-                    Btn_OCROnline.BeginInvoke(ph, Status);
+                    Btn_OCROnline.BeginInvoke(ph, OCRName, Status);
                 }
                 else
                 {
@@ -106,7 +122,7 @@ namespace Adam.UI_Update.OCR
             }
             catch
             {
-                logger.Error("UpdateOCRRead: Update fail.");
+                logger.Error("UpdateOCRStatus: Update fail.");
             }
         }
     }

@@ -90,16 +90,16 @@ namespace Adam
         {
             PathManagement.LoadConfig();
             //檢查OCR程式有沒有開
-            Process[] pc = Process.GetProcessesByName("VB9BReaderForm");
-            if (pc.Count() == 0)
-            {
-                Process OCRProg = new Process();
-                // FileName 是要執行的檔案
-                OCRProg.StartInfo.FileName = "C:/Program Files (x86)/HST Vision/e-Reader8000/VB9BReaderForm.exe";
-                OCRProg.Start();
+            //Process[] pc = Process.GetProcessesByName("VB9BReaderForm");
+            //if (pc.Count() == 0)
+            //{
+            //    Process OCRProg = new Process();
+            //    // FileName 是要執行的檔案
+            //    OCRProg.StartInfo.FileName = "C:/Program Files (x86)/HST Vision/e-Reader8000/VB9BReaderForm.exe";
+            //    OCRProg.Start();
 
 
-            }
+            //}
         }
 
         private void panel2_Paint(object sender, PaintEventArgs e)
@@ -183,10 +183,7 @@ namespace Adam
                 dtAligner01.Rows.Add(dr);
                 dataGridView11.DataSource = dtAligner01;
                 dataGridView12.DataSource = dtAligner01;
-                dataGridView16.DataSource = dtAligner01;
-                dataGridView17.DataSource = dtAligner01;
-                dataGridView18.DataSource = dtAligner01;
-                dataGridView19.DataSource = dtAligner01;
+              
 
                 dtRobot01.Columns.Add("Arm");
                 dtRobot01.Columns.Add("Wafer_ID");
@@ -216,7 +213,7 @@ namespace Adam
                 dr["Device_ID"] = "LoadPort03";
                 dr["Action"] = string.Empty;
                 dtLoadport02.Rows.Add(dr);
-                dataGridView20.DataSource = dtLoadport02;
+                
             }
             catch (Exception ex)
             {
@@ -533,7 +530,7 @@ namespace Adam
                     switch (Txn.Method)
                     {
                         case Transaction.Command.OCRType.GetOnline:
-                            OCRUpdate.UpdateOCRStatus(Msg.Value);
+                            OCRUpdate.UpdateOCRStatus(Node.Name,Msg.Value);
                             break;
                     }
                     break;
@@ -573,7 +570,7 @@ namespace Adam
                     switch (Txn.Method)
                     {
                         case Transaction.Command.OCRType.Read:
-                            OCRUpdate.UpdateOCRRead(Msg.Value);
+                            OCRUpdate.UpdateOCRRead(Node.Name,Msg.Value);
                             break;                      
                     }
                     break;
@@ -789,23 +786,44 @@ namespace Adam
             Transaction txn = new Transaction();
             switch (TriggerBtn.Name)
             {
-                case "Btn_OCROnline":
-                    Btn_OCROnline.Enabled = false;
-                    Btn_OCROffline.Enabled = true;
+                case "OCR01Online_Btn":
+                    OCR01Online_Btn.Enabled = false;
+                    OCR01Offline_Btn.Enabled = true;
                     txn.Method = Transaction.Command.OCRType.Online;
                     NodeManagement.Get("OCR01").SendCommand(txn);
                     break;
-                case "Btn_OCROffline":
-                    Btn_OCROnline.Enabled = true;
-                    Btn_OCROffline.Enabled = false;
+                case "OCR01Offline_Btn":
+                    OCR01Online_Btn.Enabled = true;
+                    OCR01Offline_Btn.Enabled = false;
                     txn.Method = Transaction.Command.OCRType.Offline;
                     NodeManagement.Get("OCR01").SendCommand(txn);
                     break;
-                case "Btn_OCRRead":
+                case "OCR01Read_Bt":
                     txn.Method = Transaction.Command.OCRType.Read;
                     NodeManagement.Get("OCR01").SendCommand(txn);
                     break;
+                case "OCR02Online_Btn":
+                    OCR01Online_Btn.Enabled = false;
+                    OCR01Offline_Btn.Enabled = true;
+                    txn.Method = Transaction.Command.OCRType.Online;
+                    NodeManagement.Get("OCR02").SendCommand(txn);
+                    break;
+                case "OCR02Offline_Btn":
+                    OCR01Online_Btn.Enabled = true;
+                    OCR01Offline_Btn.Enabled = false;
+                    txn.Method = Transaction.Command.OCRType.Offline;
+                    NodeManagement.Get("OCR02").SendCommand(txn);
+                    break;
+                case "OCR02Read_Bt":
+                    txn.Method = Transaction.Command.OCRType.Read;
+                    NodeManagement.Get("OCR02").SendCommand(txn);
+                    break;
             }
+
+        }
+
+        private void tableLayoutPanel13_Paint(object sender, PaintEventArgs e)
+        {
 
         }
     }
