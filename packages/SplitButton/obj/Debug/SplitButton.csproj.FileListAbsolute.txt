@@ -1,0 +1,6 @@
+D:\Downloads\SplitButton\bin\Debug\SplitButton.dll
+D:\Downloads\SplitButton\bin\Debug\SplitButton.pdb
+D:\Downloads\SplitButton\obj\Debug\SplitButton.csprojAssemblyReference.cache
+D:\Downloads\SplitButton\obj\Debug\SplitButton.csproj.CoreCompileInputs.cache
+D:\Downloads\SplitButton\obj\Debug\SplitButton.dll
+D:\Downloads\SplitButton\obj\Debug\SplitButton.pdb
