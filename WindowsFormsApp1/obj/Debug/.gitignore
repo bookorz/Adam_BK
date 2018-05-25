@@ -9,4 +9,8 @@
 *.csprojResolveAssemblyReference.cache
 /Adam.Properties.Resources.resources
 /DesignTimeResolveAssemblyReferencesInput.cache
+*.exe
+*.cache
+*.FormMain.resources
+*.pdb
 /Adam.csproj.FileListAbsolute.txt

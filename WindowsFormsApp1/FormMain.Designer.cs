@@ -130,35 +130,17 @@ namespace Adam
             this.label25 = new System.Windows.Forms.Label();
             this.groupBox13 = new System.Windows.Forms.GroupBox();
             this.textBox15 = new System.Windows.Forms.TextBox();
-            this.splitContainer7 = new System.Windows.Forms.SplitContainer();
-            this.label36 = new System.Windows.Forms.Label();
-            this.label37 = new System.Windows.Forms.Label();
-            this.splitContainer6 = new System.Windows.Forms.SplitContainer();
-            this.label33 = new System.Windows.Forms.Label();
-            this.label34 = new System.Windows.Forms.Label();
             this.splitContainer3 = new System.Windows.Forms.SplitContainer();
             this.label31 = new System.Windows.Forms.Label();
             this.label30 = new System.Windows.Forms.Label();
-            this.splitContainer11 = new System.Windows.Forms.SplitContainer();
-            this.label48 = new System.Windows.Forms.Label();
-            this.label49 = new System.Windows.Forms.Label();
-            this.splitContainer9 = new System.Windows.Forms.SplitContainer();
-            this.label42 = new System.Windows.Forms.Label();
-            this.label43 = new System.Windows.Forms.Label();
-            this.splitContainer8 = new System.Windows.Forms.SplitContainer();
-            this.label39 = new System.Windows.Forms.Label();
-            this.label40 = new System.Windows.Forms.Label();
-            this.splitContainer10 = new System.Windows.Forms.SplitContainer();
-            this.label45 = new System.Windows.Forms.Label();
-            this.label46 = new System.Windows.Forms.Label();
             this.splitContainer12 = new System.Windows.Forms.SplitContainer();
             this.groupBox18 = new System.Windows.Forms.GroupBox();
-            this.Btn_OCROffline = new System.Windows.Forms.Button();
-            this.Btn_OCROnline = new System.Windows.Forms.Button();
-            this.Btn_OCRRead = new System.Windows.Forms.Button();
-            this.Tb_OCRRead = new System.Windows.Forms.TextBox();
+            this.OCR01Offline_Btn = new System.Windows.Forms.Button();
+            this.OCR01Online_Btn = new System.Windows.Forms.Button();
+            this.OCR01Read_Bt = new System.Windows.Forms.Button();
+            this.OCR01Read_Tb = new System.Windows.Forms.TextBox();
             this.label50 = new System.Windows.Forms.Label();
-            this.Pic_OCR = new System.Windows.Forms.PictureBox();
+            this.OCR01_Pic = new System.Windows.Forms.PictureBox();
             this.splitContainer13 = new System.Windows.Forms.SplitContainer();
             this.groupBox54 = new System.Windows.Forms.GroupBox();
             this.label197 = new System.Windows.Forms.Label();
@@ -266,51 +248,12 @@ namespace Adam
             this.listBox1 = new System.Windows.Forms.ListBox();
             this.tabMapping = new System.Windows.Forms.TabPage();
             this.tableLayoutPanel14 = new System.Windows.Forms.TableLayoutPanel();
-            this.groupBox14 = new System.Windows.Forms.GroupBox();
-            this.dataGridView20 = new System.Windows.Forms.DataGridView();
-            this.dataGridViewTextBoxColumn38 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn39 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.groupBox11 = new System.Windows.Forms.GroupBox();
             this.tableLayoutPanel12 = new System.Windows.Forms.TableLayoutPanel();
-            this.tableLayoutPanel17 = new System.Windows.Forms.TableLayoutPanel();
-            this.dataGridView15 = new System.Windows.Forms.DataGridView();
-            this.dataGridViewTextBoxColumn28 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn29 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.label35 = new System.Windows.Forms.Label();
-            this.textBox18 = new System.Windows.Forms.TextBox();
-            this.tableLayoutPanel16 = new System.Windows.Forms.TableLayoutPanel();
-            this.dataGridView14 = new System.Windows.Forms.DataGridView();
-            this.dataGridViewTextBoxColumn26 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn27 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.label32 = new System.Windows.Forms.Label();
-            this.textBox17 = new System.Windows.Forms.TextBox();
             this.tableLayoutPanel15 = new System.Windows.Forms.TableLayoutPanel();
             this.dataGridView13 = new System.Windows.Forms.DataGridView();
-            this.dataGridViewTextBoxColumn22 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn24 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.label29 = new System.Windows.Forms.Label();
             this.textBox16 = new System.Windows.Forms.TextBox();
-            this.tableLayoutPanel18 = new System.Windows.Forms.TableLayoutPanel();
-            this.tableLayoutPanel22 = new System.Windows.Forms.TableLayoutPanel();
-            this.dataGridView19 = new System.Windows.Forms.DataGridView();
-            this.dataGridViewTextBoxColumn37 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.label47 = new System.Windows.Forms.Label();
-            this.textBox22 = new System.Windows.Forms.TextBox();
-            this.tableLayoutPanel20 = new System.Windows.Forms.TableLayoutPanel();
-            this.dataGridView17 = new System.Windows.Forms.DataGridView();
-            this.dataGridViewTextBoxColumn33 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.label41 = new System.Windows.Forms.Label();
-            this.textBox20 = new System.Windows.Forms.TextBox();
-            this.tableLayoutPanel19 = new System.Windows.Forms.TableLayoutPanel();
-            this.dataGridView16 = new System.Windows.Forms.DataGridView();
-            this.dataGridViewTextBoxColumn31 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.label38 = new System.Windows.Forms.Label();
-            this.textBox19 = new System.Windows.Forms.TextBox();
-            this.tableLayoutPanel21 = new System.Windows.Forms.TableLayoutPanel();
-            this.dataGridView18 = new System.Windows.Forms.DataGridView();
-            this.dataGridViewTextBoxColumn35 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.label44 = new System.Windows.Forms.Label();
-            this.textBox21 = new System.Windows.Forms.TextBox();
             this.tabStatus = new System.Windows.Forms.TabPage();
             this.tableLayoutPanel26 = new System.Windows.Forms.TableLayoutPanel();
             this.dgvRstatus = new System.Windows.Forms.DataGridView();
@@ -414,6 +357,30 @@ namespace Adam
             this.dataGridViewTextBoxColumn81 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.tabOCR = new System.Windows.Forms.TabPage();
             this.tableLayoutPanel13 = new System.Windows.Forms.TableLayoutPanel();
+            this.splitContainer10 = new System.Windows.Forms.SplitContainer();
+            this.groupBox17 = new System.Windows.Forms.GroupBox();
+            this.button26 = new System.Windows.Forms.Button();
+            this.button28 = new System.Windows.Forms.Button();
+            this.button29 = new System.Windows.Forms.Button();
+            this.textBox7 = new System.Windows.Forms.TextBox();
+            this.label38 = new System.Windows.Forms.Label();
+            this.pictureBox4 = new System.Windows.Forms.PictureBox();
+            this.splitContainer9 = new System.Windows.Forms.SplitContainer();
+            this.groupBox14 = new System.Windows.Forms.GroupBox();
+            this.button4 = new System.Windows.Forms.Button();
+            this.button24 = new System.Windows.Forms.Button();
+            this.button25 = new System.Windows.Forms.Button();
+            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.label14 = new System.Windows.Forms.Label();
+            this.pictureBox3 = new System.Windows.Forms.PictureBox();
+            this.splitContainer8 = new System.Windows.Forms.SplitContainer();
+            this.groupBox4 = new System.Windows.Forms.GroupBox();
+            this.OCR02Offline_Btn = new System.Windows.Forms.Button();
+            this.OCR02Online_Btn = new System.Windows.Forms.Button();
+            this.OCR02Read_Bt = new System.Windows.Forms.Button();
+            this.OCR02Read_Tb = new System.Windows.Forms.TextBox();
+            this.label7 = new System.Windows.Forms.Label();
+            this.OCR02_Pic = new System.Windows.Forms.PictureBox();
             this.tabSetting = new System.Windows.Forms.TabPage();
             this.tabControl3 = new System.Windows.Forms.TabControl();
             this.tabPage11 = new System.Windows.Forms.TabPage();
@@ -729,40 +696,16 @@ namespace Adam
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).BeginInit();
             this.groupBox13.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.splitContainer7)).BeginInit();
-            this.splitContainer7.Panel1.SuspendLayout();
-            this.splitContainer7.Panel2.SuspendLayout();
-            this.splitContainer7.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.splitContainer6)).BeginInit();
-            this.splitContainer6.Panel1.SuspendLayout();
-            this.splitContainer6.Panel2.SuspendLayout();
-            this.splitContainer6.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer3)).BeginInit();
             this.splitContainer3.Panel1.SuspendLayout();
             this.splitContainer3.Panel2.SuspendLayout();
             this.splitContainer3.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.splitContainer11)).BeginInit();
-            this.splitContainer11.Panel1.SuspendLayout();
-            this.splitContainer11.Panel2.SuspendLayout();
-            this.splitContainer11.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.splitContainer9)).BeginInit();
-            this.splitContainer9.Panel1.SuspendLayout();
-            this.splitContainer9.Panel2.SuspendLayout();
-            this.splitContainer9.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.splitContainer8)).BeginInit();
-            this.splitContainer8.Panel1.SuspendLayout();
-            this.splitContainer8.Panel2.SuspendLayout();
-            this.splitContainer8.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.splitContainer10)).BeginInit();
-            this.splitContainer10.Panel1.SuspendLayout();
-            this.splitContainer10.Panel2.SuspendLayout();
-            this.splitContainer10.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer12)).BeginInit();
             this.splitContainer12.Panel1.SuspendLayout();
             this.splitContainer12.Panel2.SuspendLayout();
             this.splitContainer12.SuspendLayout();
             this.groupBox18.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.Pic_OCR)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.OCR01_Pic)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer13)).BeginInit();
             this.splitContainer13.Panel1.SuspendLayout();
             this.splitContainer13.Panel2.SuspendLayout();
@@ -801,25 +744,10 @@ namespace Adam
             this.groupBox7.SuspendLayout();
             this.tabMapping.SuspendLayout();
             this.tableLayoutPanel14.SuspendLayout();
-            this.groupBox14.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView20)).BeginInit();
             this.groupBox11.SuspendLayout();
             this.tableLayoutPanel12.SuspendLayout();
-            this.tableLayoutPanel17.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView15)).BeginInit();
-            this.tableLayoutPanel16.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView14)).BeginInit();
             this.tableLayoutPanel15.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView13)).BeginInit();
-            this.tableLayoutPanel18.SuspendLayout();
-            this.tableLayoutPanel22.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView19)).BeginInit();
-            this.tableLayoutPanel20.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView17)).BeginInit();
-            this.tableLayoutPanel19.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView16)).BeginInit();
-            this.tableLayoutPanel21.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView18)).BeginInit();
             this.tabStatus.SuspendLayout();
             this.tableLayoutPanel26.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvRstatus)).BeginInit();
@@ -833,6 +761,24 @@ namespace Adam
             ((System.ComponentModel.ISupportInitialize)(this.dgvAstatus)).BeginInit();
             this.tabOCR.SuspendLayout();
             this.tableLayoutPanel13.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.splitContainer10)).BeginInit();
+            this.splitContainer10.Panel1.SuspendLayout();
+            this.splitContainer10.Panel2.SuspendLayout();
+            this.splitContainer10.SuspendLayout();
+            this.groupBox17.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.splitContainer9)).BeginInit();
+            this.splitContainer9.Panel1.SuspendLayout();
+            this.splitContainer9.Panel2.SuspendLayout();
+            this.splitContainer9.SuspendLayout();
+            this.groupBox14.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.splitContainer8)).BeginInit();
+            this.splitContainer8.Panel1.SuspendLayout();
+            this.splitContainer8.Panel2.SuspendLayout();
+            this.splitContainer8.SuspendLayout();
+            this.groupBox4.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.OCR02_Pic)).BeginInit();
             this.tabSetting.SuspendLayout();
             this.tabControl3.SuspendLayout();
             this.tabPage11.SuspendLayout();
@@ -1214,68 +1160,6 @@ namespace Adam
             resources.ApplyResources(this.textBox15, "textBox15");
             this.textBox15.Name = "textBox15";
             // 
-            // splitContainer7
-            // 
-            resources.ApplyResources(this.splitContainer7, "splitContainer7");
-            this.splitContainer7.Name = "splitContainer7";
-            // 
-            // splitContainer7.Panel1
-            // 
-            this.splitContainer7.Panel1.Controls.Add(this.label36);
-            // 
-            // splitContainer7.Panel2
-            // 
-            this.splitContainer7.Panel2.Controls.Add(this.label37);
-            // 
-            // label36
-            // 
-            this.label36.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
-            this.label36.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            resources.ApplyResources(this.label36, "label36");
-            this.label36.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.label36.ForeColor = System.Drawing.Color.Black;
-            this.label36.Name = "label36";
-            // 
-            // label37
-            // 
-            this.label37.BackColor = System.Drawing.Color.Transparent;
-            this.label37.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            resources.ApplyResources(this.label37, "label37");
-            this.label37.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.label37.ForeColor = System.Drawing.Color.Black;
-            this.label37.Name = "label37";
-            // 
-            // splitContainer6
-            // 
-            resources.ApplyResources(this.splitContainer6, "splitContainer6");
-            this.splitContainer6.Name = "splitContainer6";
-            // 
-            // splitContainer6.Panel1
-            // 
-            this.splitContainer6.Panel1.Controls.Add(this.label33);
-            // 
-            // splitContainer6.Panel2
-            // 
-            this.splitContainer6.Panel2.Controls.Add(this.label34);
-            // 
-            // label33
-            // 
-            this.label33.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
-            this.label33.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            resources.ApplyResources(this.label33, "label33");
-            this.label33.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.label33.ForeColor = System.Drawing.Color.Black;
-            this.label33.Name = "label33";
-            // 
-            // label34
-            // 
-            this.label34.BackColor = System.Drawing.Color.Transparent;
-            this.label34.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            resources.ApplyResources(this.label34, "label34");
-            this.label34.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.label34.ForeColor = System.Drawing.Color.Black;
-            this.label34.Name = "label34";
-            // 
             // splitContainer3
             // 
             resources.ApplyResources(this.splitContainer3, "splitContainer3");
@@ -1307,130 +1191,6 @@ namespace Adam
             this.label30.ForeColor = System.Drawing.Color.Black;
             this.label30.Name = "label30";
             // 
-            // splitContainer11
-            // 
-            resources.ApplyResources(this.splitContainer11, "splitContainer11");
-            this.splitContainer11.Name = "splitContainer11";
-            // 
-            // splitContainer11.Panel1
-            // 
-            this.splitContainer11.Panel1.Controls.Add(this.label48);
-            // 
-            // splitContainer11.Panel2
-            // 
-            this.splitContainer11.Panel2.Controls.Add(this.label49);
-            // 
-            // label48
-            // 
-            this.label48.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
-            this.label48.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            resources.ApplyResources(this.label48, "label48");
-            this.label48.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.label48.ForeColor = System.Drawing.Color.Black;
-            this.label48.Name = "label48";
-            // 
-            // label49
-            // 
-            this.label49.BackColor = System.Drawing.Color.Transparent;
-            this.label49.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            resources.ApplyResources(this.label49, "label49");
-            this.label49.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.label49.ForeColor = System.Drawing.Color.Black;
-            this.label49.Name = "label49";
-            // 
-            // splitContainer9
-            // 
-            resources.ApplyResources(this.splitContainer9, "splitContainer9");
-            this.splitContainer9.Name = "splitContainer9";
-            // 
-            // splitContainer9.Panel1
-            // 
-            this.splitContainer9.Panel1.Controls.Add(this.label42);
-            // 
-            // splitContainer9.Panel2
-            // 
-            this.splitContainer9.Panel2.Controls.Add(this.label43);
-            // 
-            // label42
-            // 
-            this.label42.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
-            this.label42.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            resources.ApplyResources(this.label42, "label42");
-            this.label42.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.label42.ForeColor = System.Drawing.Color.Black;
-            this.label42.Name = "label42";
-            // 
-            // label43
-            // 
-            this.label43.BackColor = System.Drawing.Color.Transparent;
-            this.label43.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            resources.ApplyResources(this.label43, "label43");
-            this.label43.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.label43.ForeColor = System.Drawing.Color.Black;
-            this.label43.Name = "label43";
-            // 
-            // splitContainer8
-            // 
-            resources.ApplyResources(this.splitContainer8, "splitContainer8");
-            this.splitContainer8.Name = "splitContainer8";
-            // 
-            // splitContainer8.Panel1
-            // 
-            this.splitContainer8.Panel1.Controls.Add(this.label39);
-            // 
-            // splitContainer8.Panel2
-            // 
-            this.splitContainer8.Panel2.Controls.Add(this.label40);
-            // 
-            // label39
-            // 
-            this.label39.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
-            this.label39.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            resources.ApplyResources(this.label39, "label39");
-            this.label39.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.label39.ForeColor = System.Drawing.Color.Black;
-            this.label39.Name = "label39";
-            // 
-            // label40
-            // 
-            this.label40.BackColor = System.Drawing.Color.Transparent;
-            this.label40.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            resources.ApplyResources(this.label40, "label40");
-            this.label40.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.label40.ForeColor = System.Drawing.Color.Black;
-            this.label40.Name = "label40";
-            // 
-            // splitContainer10
-            // 
-            resources.ApplyResources(this.splitContainer10, "splitContainer10");
-            this.splitContainer10.Name = "splitContainer10";
-            // 
-            // splitContainer10.Panel1
-            // 
-            this.splitContainer10.Panel1.Controls.Add(this.label45);
-            // 
-            // splitContainer10.Panel2
-            // 
-            this.splitContainer10.Panel2.Controls.Add(this.label46);
-            // 
-            // label45
-            // 
-            this.label45.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
-            this.label45.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            resources.ApplyResources(this.label45, "label45");
-            this.label45.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.label45.ForeColor = System.Drawing.Color.Black;
-            this.label45.Name = "label45";
-            // 
-            // label46
-            // 
-            this.label46.BackColor = System.Drawing.Color.Transparent;
-            this.label46.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            resources.ApplyResources(this.label46, "label46");
-            this.label46.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.label46.ForeColor = System.Drawing.Color.Black;
-            this.label46.Name = "label46";
-            // 
             // splitContainer12
             // 
             resources.ApplyResources(this.splitContainer12, "splitContainer12");
@@ -1442,57 +1202,57 @@ namespace Adam
             // 
             // splitContainer12.Panel2
             // 
-            this.splitContainer12.Panel2.Controls.Add(this.Btn_OCRRead);
-            this.splitContainer12.Panel2.Controls.Add(this.Tb_OCRRead);
+            this.splitContainer12.Panel2.Controls.Add(this.OCR01Read_Bt);
+            this.splitContainer12.Panel2.Controls.Add(this.OCR01Read_Tb);
             this.splitContainer12.Panel2.Controls.Add(this.label50);
-            this.splitContainer12.Panel2.Controls.Add(this.Pic_OCR);
+            this.splitContainer12.Panel2.Controls.Add(this.OCR01_Pic);
             // 
             // groupBox18
             // 
-            this.groupBox18.Controls.Add(this.Btn_OCROffline);
-            this.groupBox18.Controls.Add(this.Btn_OCROnline);
+            this.groupBox18.Controls.Add(this.OCR01Offline_Btn);
+            this.groupBox18.Controls.Add(this.OCR01Online_Btn);
             resources.ApplyResources(this.groupBox18, "groupBox18");
             this.groupBox18.Name = "groupBox18";
             this.groupBox18.TabStop = false;
             // 
-            // Btn_OCROffline
+            // OCR01Offline_Btn
             // 
-            this.Btn_OCROffline.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
-            this.Btn_OCROffline.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
-            this.Btn_OCROffline.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
-            resources.ApplyResources(this.Btn_OCROffline, "Btn_OCROffline");
-            this.Btn_OCROffline.Name = "Btn_OCROffline";
-            this.Btn_OCROffline.UseVisualStyleBackColor = false;
-            this.Btn_OCROffline.Click += new System.EventHandler(this.OCRButton);
+            this.OCR01Offline_Btn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
+            this.OCR01Offline_Btn.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
+            this.OCR01Offline_Btn.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
+            resources.ApplyResources(this.OCR01Offline_Btn, "OCR01Offline_Btn");
+            this.OCR01Offline_Btn.Name = "OCR01Offline_Btn";
+            this.OCR01Offline_Btn.UseVisualStyleBackColor = false;
+            this.OCR01Offline_Btn.Click += new System.EventHandler(this.OCRButton);
             // 
-            // Btn_OCROnline
+            // OCR01Online_Btn
             // 
-            this.Btn_OCROnline.BackColor = System.Drawing.Color.White;
-            this.Btn_OCROnline.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
-            this.Btn_OCROnline.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
-            resources.ApplyResources(this.Btn_OCROnline, "Btn_OCROnline");
-            this.Btn_OCROnline.Name = "Btn_OCROnline";
-            this.Btn_OCROnline.UseVisualStyleBackColor = false;
-            this.Btn_OCROnline.Click += new System.EventHandler(this.OCRButton);
+            this.OCR01Online_Btn.BackColor = System.Drawing.Color.White;
+            this.OCR01Online_Btn.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
+            this.OCR01Online_Btn.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
+            resources.ApplyResources(this.OCR01Online_Btn, "OCR01Online_Btn");
+            this.OCR01Online_Btn.Name = "OCR01Online_Btn";
+            this.OCR01Online_Btn.UseVisualStyleBackColor = false;
+            this.OCR01Online_Btn.Click += new System.EventHandler(this.OCRButton);
             // 
-            // Btn_OCRRead
+            // OCR01Read_Bt
             // 
-            resources.ApplyResources(this.Btn_OCRRead, "Btn_OCRRead");
-            this.Btn_OCRRead.BackColor = System.Drawing.SystemColors.Control;
-            this.Btn_OCRRead.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
-            this.Btn_OCRRead.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
-            this.Btn_OCRRead.Name = "Btn_OCRRead";
-            this.Btn_OCRRead.UseVisualStyleBackColor = false;
-            this.Btn_OCRRead.Click += new System.EventHandler(this.OCRButton);
+            resources.ApplyResources(this.OCR01Read_Bt, "OCR01Read_Bt");
+            this.OCR01Read_Bt.BackColor = System.Drawing.SystemColors.Control;
+            this.OCR01Read_Bt.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
+            this.OCR01Read_Bt.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
+            this.OCR01Read_Bt.Name = "OCR01Read_Bt";
+            this.OCR01Read_Bt.UseVisualStyleBackColor = false;
+            this.OCR01Read_Bt.Click += new System.EventHandler(this.OCRButton);
             // 
-            // Tb_OCRRead
+            // OCR01Read_Tb
             // 
-            resources.ApplyResources(this.Tb_OCRRead, "Tb_OCRRead");
-            this.Tb_OCRRead.BackColor = System.Drawing.Color.White;
-            this.Tb_OCRRead.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.Tb_OCRRead.ForeColor = System.Drawing.Color.Black;
-            this.Tb_OCRRead.Name = "Tb_OCRRead";
-            this.Tb_OCRRead.TextChanged += new System.EventHandler(this.textBox23_TextChanged);
+            resources.ApplyResources(this.OCR01Read_Tb, "OCR01Read_Tb");
+            this.OCR01Read_Tb.BackColor = System.Drawing.Color.White;
+            this.OCR01Read_Tb.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.OCR01Read_Tb.ForeColor = System.Drawing.Color.Black;
+            this.OCR01Read_Tb.Name = "OCR01Read_Tb";
+            this.OCR01Read_Tb.TextChanged += new System.EventHandler(this.textBox23_TextChanged);
             // 
             // label50
             // 
@@ -1503,11 +1263,11 @@ namespace Adam
             this.label50.Name = "label50";
             this.label50.Click += new System.EventHandler(this.label50_Click);
             // 
-            // Pic_OCR
+            // OCR01_Pic
             // 
-            resources.ApplyResources(this.Pic_OCR, "Pic_OCR");
-            this.Pic_OCR.Name = "Pic_OCR";
-            this.Pic_OCR.TabStop = false;
+            resources.ApplyResources(this.OCR01_Pic, "OCR01_Pic");
+            this.OCR01_Pic.Name = "OCR01_Pic";
+            this.OCR01_Pic.TabStop = false;
             // 
             // splitContainer13
             // 
@@ -2508,53 +2268,8 @@ namespace Adam
             // tableLayoutPanel14
             // 
             resources.ApplyResources(this.tableLayoutPanel14, "tableLayoutPanel14");
-            this.tableLayoutPanel14.Controls.Add(this.groupBox14, 0, 0);
             this.tableLayoutPanel14.Controls.Add(this.groupBox11, 0, 0);
             this.tableLayoutPanel14.Name = "tableLayoutPanel14";
-            // 
-            // groupBox14
-            // 
-            this.groupBox14.Controls.Add(this.dataGridView20);
-            resources.ApplyResources(this.groupBox14, "groupBox14");
-            this.groupBox14.Name = "groupBox14";
-            this.groupBox14.TabStop = false;
-            // 
-            // dataGridView20
-            // 
-            this.dataGridView20.AllowUserToAddRows = false;
-            this.dataGridView20.AllowUserToDeleteRows = false;
-            this.dataGridView20.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            this.dataGridView20.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
-            this.dataGridView20.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView20.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.dataGridViewTextBoxColumn38,
-            this.dataGridViewTextBoxColumn39});
-            resources.ApplyResources(this.dataGridView20, "dataGridView20");
-            this.dataGridView20.MultiSelect = false;
-            this.dataGridView20.Name = "dataGridView20";
-            this.dataGridView20.ReadOnly = true;
-            this.dataGridView20.RowHeadersVisible = false;
-            this.dataGridView20.RowTemplate.Height = 10;
-            this.dataGridView20.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.CellSelect;
-            this.dataGridView20.StandardTab = true;
-            // 
-            // dataGridViewTextBoxColumn38
-            // 
-            this.dataGridViewTextBoxColumn38.DataPropertyName = "Device_ID";
-            this.dataGridViewTextBoxColumn38.FillWeight = 150F;
-            resources.ApplyResources(this.dataGridViewTextBoxColumn38, "dataGridViewTextBoxColumn38");
-            this.dataGridViewTextBoxColumn38.Name = "dataGridViewTextBoxColumn38";
-            this.dataGridViewTextBoxColumn38.ReadOnly = true;
-            this.dataGridViewTextBoxColumn38.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
-            // 
-            // dataGridViewTextBoxColumn39
-            // 
-            this.dataGridViewTextBoxColumn39.DataPropertyName = "Action";
-            this.dataGridViewTextBoxColumn39.FillWeight = 150F;
-            resources.ApplyResources(this.dataGridViewTextBoxColumn39, "dataGridViewTextBoxColumn39");
-            this.dataGridViewTextBoxColumn39.Name = "dataGridViewTextBoxColumn39";
-            this.dataGridViewTextBoxColumn39.ReadOnly = true;
-            this.dataGridViewTextBoxColumn39.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
             // 
             // groupBox11
             // 
@@ -2566,135 +2281,8 @@ namespace Adam
             // tableLayoutPanel12
             // 
             resources.ApplyResources(this.tableLayoutPanel12, "tableLayoutPanel12");
-            this.tableLayoutPanel12.Controls.Add(this.tableLayoutPanel17, 2, 0);
-            this.tableLayoutPanel12.Controls.Add(this.tableLayoutPanel16, 1, 0);
             this.tableLayoutPanel12.Controls.Add(this.tableLayoutPanel15, 0, 0);
-            this.tableLayoutPanel12.Controls.Add(this.tableLayoutPanel18, 3, 0);
             this.tableLayoutPanel12.Name = "tableLayoutPanel12";
-            // 
-            // tableLayoutPanel17
-            // 
-            resources.ApplyResources(this.tableLayoutPanel17, "tableLayoutPanel17");
-            this.tableLayoutPanel17.Controls.Add(this.dataGridView15, 0, 2);
-            this.tableLayoutPanel17.Controls.Add(this.label35, 0, 0);
-            this.tableLayoutPanel17.Controls.Add(this.textBox18, 0, 1);
-            this.tableLayoutPanel17.Controls.Add(this.splitContainer7, 0, 3);
-            this.tableLayoutPanel17.Name = "tableLayoutPanel17";
-            // 
-            // dataGridView15
-            // 
-            this.dataGridView15.AllowUserToAddRows = false;
-            this.dataGridView15.AllowUserToDeleteRows = false;
-            this.dataGridView15.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.ColumnHeader;
-            this.dataGridView15.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
-            this.dataGridView15.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView15.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.dataGridViewTextBoxColumn28,
-            this.dataGridViewTextBoxColumn29});
-            resources.ApplyResources(this.dataGridView15, "dataGridView15");
-            this.dataGridView15.MultiSelect = false;
-            this.dataGridView15.Name = "dataGridView15";
-            this.dataGridView15.ReadOnly = true;
-            this.dataGridView15.RowHeadersVisible = false;
-            this.dataGridView15.RowTemplate.Height = 10;
-            this.dataGridView15.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.CellSelect;
-            this.dataGridView15.StandardTab = true;
-            this.dataGridView15.DataBindingComplete += new System.Windows.Forms.DataGridViewBindingCompleteEventHandler(this.LoadPort01_DataBindingComplete);
-            // 
-            // dataGridViewTextBoxColumn28
-            // 
-            this.dataGridViewTextBoxColumn28.DataPropertyName = "Slot";
-            resources.ApplyResources(this.dataGridViewTextBoxColumn28, "dataGridViewTextBoxColumn28");
-            this.dataGridViewTextBoxColumn28.Name = "dataGridViewTextBoxColumn28";
-            this.dataGridViewTextBoxColumn28.ReadOnly = true;
-            this.dataGridViewTextBoxColumn28.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
-            // 
-            // dataGridViewTextBoxColumn29
-            // 
-            this.dataGridViewTextBoxColumn29.DataPropertyName = "Wafer_ID";
-            resources.ApplyResources(this.dataGridViewTextBoxColumn29, "dataGridViewTextBoxColumn29");
-            this.dataGridViewTextBoxColumn29.Name = "dataGridViewTextBoxColumn29";
-            this.dataGridViewTextBoxColumn29.ReadOnly = true;
-            this.dataGridViewTextBoxColumn29.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
-            // 
-            // label35
-            // 
-            this.label35.BackColor = System.Drawing.Color.Transparent;
-            this.label35.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            resources.ApplyResources(this.label35, "label35");
-            this.label35.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.label35.ForeColor = System.Drawing.Color.Black;
-            this.label35.Name = "label35";
-            // 
-            // textBox18
-            // 
-            this.textBox18.BackColor = System.Drawing.Color.Blue;
-            this.textBox18.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            resources.ApplyResources(this.textBox18, "textBox18");
-            this.textBox18.ForeColor = System.Drawing.Color.Transparent;
-            this.textBox18.Name = "textBox18";
-            // 
-            // tableLayoutPanel16
-            // 
-            resources.ApplyResources(this.tableLayoutPanel16, "tableLayoutPanel16");
-            this.tableLayoutPanel16.Controls.Add(this.dataGridView14, 0, 2);
-            this.tableLayoutPanel16.Controls.Add(this.label32, 0, 0);
-            this.tableLayoutPanel16.Controls.Add(this.textBox17, 0, 1);
-            this.tableLayoutPanel16.Controls.Add(this.splitContainer6, 0, 3);
-            this.tableLayoutPanel16.Name = "tableLayoutPanel16";
-            // 
-            // dataGridView14
-            // 
-            this.dataGridView14.AllowUserToAddRows = false;
-            this.dataGridView14.AllowUserToDeleteRows = false;
-            this.dataGridView14.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.ColumnHeader;
-            this.dataGridView14.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
-            this.dataGridView14.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView14.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.dataGridViewTextBoxColumn26,
-            this.dataGridViewTextBoxColumn27});
-            resources.ApplyResources(this.dataGridView14, "dataGridView14");
-            this.dataGridView14.MultiSelect = false;
-            this.dataGridView14.Name = "dataGridView14";
-            this.dataGridView14.ReadOnly = true;
-            this.dataGridView14.RowHeadersVisible = false;
-            this.dataGridView14.RowTemplate.Height = 10;
-            this.dataGridView14.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.CellSelect;
-            this.dataGridView14.StandardTab = true;
-            this.dataGridView14.DataBindingComplete += new System.Windows.Forms.DataGridViewBindingCompleteEventHandler(this.LoadPort01_DataBindingComplete);
-            // 
-            // dataGridViewTextBoxColumn26
-            // 
-            this.dataGridViewTextBoxColumn26.DataPropertyName = "Slot";
-            resources.ApplyResources(this.dataGridViewTextBoxColumn26, "dataGridViewTextBoxColumn26");
-            this.dataGridViewTextBoxColumn26.Name = "dataGridViewTextBoxColumn26";
-            this.dataGridViewTextBoxColumn26.ReadOnly = true;
-            this.dataGridViewTextBoxColumn26.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
-            // 
-            // dataGridViewTextBoxColumn27
-            // 
-            this.dataGridViewTextBoxColumn27.DataPropertyName = "Wafer_ID";
-            resources.ApplyResources(this.dataGridViewTextBoxColumn27, "dataGridViewTextBoxColumn27");
-            this.dataGridViewTextBoxColumn27.Name = "dataGridViewTextBoxColumn27";
-            this.dataGridViewTextBoxColumn27.ReadOnly = true;
-            this.dataGridViewTextBoxColumn27.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
-            // 
-            // label32
-            // 
-            this.label32.BackColor = System.Drawing.Color.Transparent;
-            this.label32.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            resources.ApplyResources(this.label32, "label32");
-            this.label32.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.label32.ForeColor = System.Drawing.Color.Black;
-            this.label32.Name = "label32";
-            // 
-            // textBox17
-            // 
-            this.textBox17.BackColor = System.Drawing.Color.DarkOrange;
-            this.textBox17.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            resources.ApplyResources(this.textBox17, "textBox17");
-            this.textBox17.ForeColor = System.Drawing.Color.Transparent;
-            this.textBox17.Name = "textBox17";
             // 
             // tableLayoutPanel15
             // 
@@ -2712,9 +2300,6 @@ namespace Adam
             this.dataGridView13.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.ColumnHeader;
             this.dataGridView13.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
             this.dataGridView13.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView13.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.dataGridViewTextBoxColumn22,
-            this.dataGridViewTextBoxColumn24});
             resources.ApplyResources(this.dataGridView13, "dataGridView13");
             this.dataGridView13.MultiSelect = false;
             this.dataGridView13.Name = "dataGridView13";
@@ -2724,22 +2309,6 @@ namespace Adam
             this.dataGridView13.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.CellSelect;
             this.dataGridView13.StandardTab = true;
             this.dataGridView13.DataBindingComplete += new System.Windows.Forms.DataGridViewBindingCompleteEventHandler(this.LoadPort01_DataBindingComplete);
-            // 
-            // dataGridViewTextBoxColumn22
-            // 
-            this.dataGridViewTextBoxColumn22.DataPropertyName = "Slot";
-            resources.ApplyResources(this.dataGridViewTextBoxColumn22, "dataGridViewTextBoxColumn22");
-            this.dataGridViewTextBoxColumn22.Name = "dataGridViewTextBoxColumn22";
-            this.dataGridViewTextBoxColumn22.ReadOnly = true;
-            this.dataGridViewTextBoxColumn22.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
-            // 
-            // dataGridViewTextBoxColumn24
-            // 
-            this.dataGridViewTextBoxColumn24.DataPropertyName = "Wafer_ID";
-            resources.ApplyResources(this.dataGridViewTextBoxColumn24, "dataGridViewTextBoxColumn24");
-            this.dataGridViewTextBoxColumn24.Name = "dataGridViewTextBoxColumn24";
-            this.dataGridViewTextBoxColumn24.ReadOnly = true;
-            this.dataGridViewTextBoxColumn24.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
             // 
             // label29
             // 
@@ -2757,228 +2326,6 @@ namespace Adam
             resources.ApplyResources(this.textBox16, "textBox16");
             this.textBox16.ForeColor = System.Drawing.Color.Transparent;
             this.textBox16.Name = "textBox16";
-            // 
-            // tableLayoutPanel18
-            // 
-            resources.ApplyResources(this.tableLayoutPanel18, "tableLayoutPanel18");
-            this.tableLayoutPanel18.Controls.Add(this.tableLayoutPanel22, 0, 3);
-            this.tableLayoutPanel18.Controls.Add(this.tableLayoutPanel20, 0, 1);
-            this.tableLayoutPanel18.Controls.Add(this.tableLayoutPanel19, 0, 0);
-            this.tableLayoutPanel18.Controls.Add(this.tableLayoutPanel21, 0, 2);
-            this.tableLayoutPanel18.Name = "tableLayoutPanel18";
-            // 
-            // tableLayoutPanel22
-            // 
-            resources.ApplyResources(this.tableLayoutPanel22, "tableLayoutPanel22");
-            this.tableLayoutPanel22.Controls.Add(this.dataGridView19, 0, 2);
-            this.tableLayoutPanel22.Controls.Add(this.label47, 0, 0);
-            this.tableLayoutPanel22.Controls.Add(this.textBox22, 0, 1);
-            this.tableLayoutPanel22.Controls.Add(this.splitContainer11, 0, 3);
-            this.tableLayoutPanel22.Name = "tableLayoutPanel22";
-            // 
-            // dataGridView19
-            // 
-            this.dataGridView19.AllowUserToAddRows = false;
-            this.dataGridView19.AllowUserToDeleteRows = false;
-            this.dataGridView19.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            this.dataGridView19.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
-            this.dataGridView19.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView19.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.dataGridViewTextBoxColumn37});
-            resources.ApplyResources(this.dataGridView19, "dataGridView19");
-            this.dataGridView19.MultiSelect = false;
-            this.dataGridView19.Name = "dataGridView19";
-            this.dataGridView19.ReadOnly = true;
-            this.dataGridView19.RowHeadersVisible = false;
-            this.dataGridView19.RowTemplate.Height = 10;
-            this.dataGridView19.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.CellSelect;
-            this.dataGridView19.StandardTab = true;
-            this.dataGridView19.DataBindingComplete += new System.Windows.Forms.DataGridViewBindingCompleteEventHandler(this.LoadPort01_DataBindingComplete);
-            // 
-            // dataGridViewTextBoxColumn37
-            // 
-            this.dataGridViewTextBoxColumn37.DataPropertyName = "Wafer_ID";
-            resources.ApplyResources(this.dataGridViewTextBoxColumn37, "dataGridViewTextBoxColumn37");
-            this.dataGridViewTextBoxColumn37.Name = "dataGridViewTextBoxColumn37";
-            this.dataGridViewTextBoxColumn37.ReadOnly = true;
-            this.dataGridViewTextBoxColumn37.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
-            // 
-            // label47
-            // 
-            this.label47.BackColor = System.Drawing.Color.Transparent;
-            this.label47.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            resources.ApplyResources(this.label47, "label47");
-            this.label47.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.label47.ForeColor = System.Drawing.Color.Black;
-            this.label47.Name = "label47";
-            // 
-            // textBox22
-            // 
-            this.textBox22.BackColor = System.Drawing.Color.DarkGray;
-            this.textBox22.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            resources.ApplyResources(this.textBox22, "textBox22");
-            this.textBox22.ForeColor = System.Drawing.Color.Transparent;
-            this.textBox22.Name = "textBox22";
-            // 
-            // tableLayoutPanel20
-            // 
-            resources.ApplyResources(this.tableLayoutPanel20, "tableLayoutPanel20");
-            this.tableLayoutPanel20.Controls.Add(this.dataGridView17, 0, 2);
-            this.tableLayoutPanel20.Controls.Add(this.label41, 0, 0);
-            this.tableLayoutPanel20.Controls.Add(this.textBox20, 0, 1);
-            this.tableLayoutPanel20.Controls.Add(this.splitContainer9, 0, 3);
-            this.tableLayoutPanel20.Name = "tableLayoutPanel20";
-            // 
-            // dataGridView17
-            // 
-            this.dataGridView17.AllowUserToAddRows = false;
-            this.dataGridView17.AllowUserToDeleteRows = false;
-            this.dataGridView17.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            this.dataGridView17.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
-            this.dataGridView17.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView17.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.dataGridViewTextBoxColumn33});
-            resources.ApplyResources(this.dataGridView17, "dataGridView17");
-            this.dataGridView17.MultiSelect = false;
-            this.dataGridView17.Name = "dataGridView17";
-            this.dataGridView17.ReadOnly = true;
-            this.dataGridView17.RowHeadersVisible = false;
-            this.dataGridView17.RowTemplate.Height = 10;
-            this.dataGridView17.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.CellSelect;
-            this.dataGridView17.StandardTab = true;
-            this.dataGridView17.DataBindingComplete += new System.Windows.Forms.DataGridViewBindingCompleteEventHandler(this.LoadPort01_DataBindingComplete);
-            // 
-            // dataGridViewTextBoxColumn33
-            // 
-            this.dataGridViewTextBoxColumn33.DataPropertyName = "Wafer_ID";
-            resources.ApplyResources(this.dataGridViewTextBoxColumn33, "dataGridViewTextBoxColumn33");
-            this.dataGridViewTextBoxColumn33.Name = "dataGridViewTextBoxColumn33";
-            this.dataGridViewTextBoxColumn33.ReadOnly = true;
-            this.dataGridViewTextBoxColumn33.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
-            // 
-            // label41
-            // 
-            this.label41.BackColor = System.Drawing.Color.Transparent;
-            this.label41.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            resources.ApplyResources(this.label41, "label41");
-            this.label41.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.label41.ForeColor = System.Drawing.Color.Black;
-            this.label41.Name = "label41";
-            // 
-            // textBox20
-            // 
-            this.textBox20.BackColor = System.Drawing.Color.DarkGray;
-            this.textBox20.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            resources.ApplyResources(this.textBox20, "textBox20");
-            this.textBox20.ForeColor = System.Drawing.Color.Transparent;
-            this.textBox20.Name = "textBox20";
-            // 
-            // tableLayoutPanel19
-            // 
-            resources.ApplyResources(this.tableLayoutPanel19, "tableLayoutPanel19");
-            this.tableLayoutPanel19.Controls.Add(this.dataGridView16, 0, 2);
-            this.tableLayoutPanel19.Controls.Add(this.label38, 0, 0);
-            this.tableLayoutPanel19.Controls.Add(this.textBox19, 0, 1);
-            this.tableLayoutPanel19.Controls.Add(this.splitContainer8, 0, 3);
-            this.tableLayoutPanel19.Name = "tableLayoutPanel19";
-            // 
-            // dataGridView16
-            // 
-            this.dataGridView16.AllowUserToAddRows = false;
-            this.dataGridView16.AllowUserToDeleteRows = false;
-            this.dataGridView16.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            this.dataGridView16.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
-            this.dataGridView16.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView16.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.dataGridViewTextBoxColumn31});
-            resources.ApplyResources(this.dataGridView16, "dataGridView16");
-            this.dataGridView16.MultiSelect = false;
-            this.dataGridView16.Name = "dataGridView16";
-            this.dataGridView16.ReadOnly = true;
-            this.dataGridView16.RowHeadersVisible = false;
-            this.dataGridView16.RowTemplate.Height = 10;
-            this.dataGridView16.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.CellSelect;
-            this.dataGridView16.StandardTab = true;
-            this.dataGridView16.DataBindingComplete += new System.Windows.Forms.DataGridViewBindingCompleteEventHandler(this.LoadPort01_DataBindingComplete);
-            // 
-            // dataGridViewTextBoxColumn31
-            // 
-            this.dataGridViewTextBoxColumn31.DataPropertyName = "Wafer_ID";
-            this.dataGridViewTextBoxColumn31.FillWeight = 200F;
-            resources.ApplyResources(this.dataGridViewTextBoxColumn31, "dataGridViewTextBoxColumn31");
-            this.dataGridViewTextBoxColumn31.Name = "dataGridViewTextBoxColumn31";
-            this.dataGridViewTextBoxColumn31.ReadOnly = true;
-            this.dataGridViewTextBoxColumn31.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
-            // 
-            // label38
-            // 
-            this.label38.BackColor = System.Drawing.Color.Transparent;
-            this.label38.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            resources.ApplyResources(this.label38, "label38");
-            this.label38.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.label38.ForeColor = System.Drawing.Color.Black;
-            this.label38.Name = "label38";
-            // 
-            // textBox19
-            // 
-            this.textBox19.BackColor = System.Drawing.Color.DarkGray;
-            this.textBox19.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            resources.ApplyResources(this.textBox19, "textBox19");
-            this.textBox19.ForeColor = System.Drawing.Color.Transparent;
-            this.textBox19.Name = "textBox19";
-            // 
-            // tableLayoutPanel21
-            // 
-            resources.ApplyResources(this.tableLayoutPanel21, "tableLayoutPanel21");
-            this.tableLayoutPanel21.Controls.Add(this.dataGridView18, 0, 2);
-            this.tableLayoutPanel21.Controls.Add(this.label44, 0, 0);
-            this.tableLayoutPanel21.Controls.Add(this.textBox21, 0, 1);
-            this.tableLayoutPanel21.Controls.Add(this.splitContainer10, 0, 3);
-            this.tableLayoutPanel21.Name = "tableLayoutPanel21";
-            // 
-            // dataGridView18
-            // 
-            this.dataGridView18.AllowUserToAddRows = false;
-            this.dataGridView18.AllowUserToDeleteRows = false;
-            this.dataGridView18.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            this.dataGridView18.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
-            this.dataGridView18.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView18.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.dataGridViewTextBoxColumn35});
-            resources.ApplyResources(this.dataGridView18, "dataGridView18");
-            this.dataGridView18.MultiSelect = false;
-            this.dataGridView18.Name = "dataGridView18";
-            this.dataGridView18.ReadOnly = true;
-            this.dataGridView18.RowHeadersVisible = false;
-            this.dataGridView18.RowTemplate.Height = 10;
-            this.dataGridView18.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.CellSelect;
-            this.dataGridView18.StandardTab = true;
-            this.dataGridView18.DataBindingComplete += new System.Windows.Forms.DataGridViewBindingCompleteEventHandler(this.LoadPort01_DataBindingComplete);
-            // 
-            // dataGridViewTextBoxColumn35
-            // 
-            this.dataGridViewTextBoxColumn35.DataPropertyName = "Wafer_ID";
-            resources.ApplyResources(this.dataGridViewTextBoxColumn35, "dataGridViewTextBoxColumn35");
-            this.dataGridViewTextBoxColumn35.Name = "dataGridViewTextBoxColumn35";
-            this.dataGridViewTextBoxColumn35.ReadOnly = true;
-            this.dataGridViewTextBoxColumn35.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
-            // 
-            // label44
-            // 
-            this.label44.BackColor = System.Drawing.Color.Transparent;
-            this.label44.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            resources.ApplyResources(this.label44, "label44");
-            this.label44.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.label44.ForeColor = System.Drawing.Color.Black;
-            this.label44.Name = "label44";
-            // 
-            // textBox21
-            // 
-            this.textBox21.BackColor = System.Drawing.Color.DarkGray;
-            this.textBox21.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            resources.ApplyResources(this.textBox21, "textBox21");
-            this.textBox21.ForeColor = System.Drawing.Color.Transparent;
-            this.textBox21.Name = "textBox21";
             // 
             // tabStatus
             // 
@@ -3850,8 +3197,234 @@ namespace Adam
             // tableLayoutPanel13
             // 
             resources.ApplyResources(this.tableLayoutPanel13, "tableLayoutPanel13");
+            this.tableLayoutPanel13.Controls.Add(this.splitContainer10, 1, 1);
+            this.tableLayoutPanel13.Controls.Add(this.splitContainer9, 0, 1);
+            this.tableLayoutPanel13.Controls.Add(this.splitContainer8, 1, 0);
             this.tableLayoutPanel13.Controls.Add(this.splitContainer12, 0, 0);
             this.tableLayoutPanel13.Name = "tableLayoutPanel13";
+            this.tableLayoutPanel13.Paint += new System.Windows.Forms.PaintEventHandler(this.tableLayoutPanel13_Paint);
+            // 
+            // splitContainer10
+            // 
+            resources.ApplyResources(this.splitContainer10, "splitContainer10");
+            this.splitContainer10.Name = "splitContainer10";
+            // 
+            // splitContainer10.Panel1
+            // 
+            this.splitContainer10.Panel1.Controls.Add(this.groupBox17);
+            // 
+            // splitContainer10.Panel2
+            // 
+            this.splitContainer10.Panel2.Controls.Add(this.button29);
+            this.splitContainer10.Panel2.Controls.Add(this.textBox7);
+            this.splitContainer10.Panel2.Controls.Add(this.label38);
+            this.splitContainer10.Panel2.Controls.Add(this.pictureBox4);
+            // 
+            // groupBox17
+            // 
+            this.groupBox17.Controls.Add(this.button26);
+            this.groupBox17.Controls.Add(this.button28);
+            resources.ApplyResources(this.groupBox17, "groupBox17");
+            this.groupBox17.Name = "groupBox17";
+            this.groupBox17.TabStop = false;
+            // 
+            // button26
+            // 
+            this.button26.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
+            this.button26.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
+            this.button26.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
+            resources.ApplyResources(this.button26, "button26");
+            this.button26.Name = "button26";
+            this.button26.UseVisualStyleBackColor = false;
+            // 
+            // button28
+            // 
+            this.button28.BackColor = System.Drawing.Color.White;
+            this.button28.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
+            this.button28.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
+            resources.ApplyResources(this.button28, "button28");
+            this.button28.Name = "button28";
+            this.button28.UseVisualStyleBackColor = false;
+            // 
+            // button29
+            // 
+            resources.ApplyResources(this.button29, "button29");
+            this.button29.BackColor = System.Drawing.SystemColors.Control;
+            this.button29.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
+            this.button29.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
+            this.button29.Name = "button29";
+            this.button29.UseVisualStyleBackColor = false;
+            // 
+            // textBox7
+            // 
+            resources.ApplyResources(this.textBox7, "textBox7");
+            this.textBox7.BackColor = System.Drawing.Color.White;
+            this.textBox7.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.textBox7.ForeColor = System.Drawing.Color.Black;
+            this.textBox7.Name = "textBox7";
+            // 
+            // label38
+            // 
+            resources.ApplyResources(this.label38, "label38");
+            this.label38.BackColor = System.Drawing.Color.Transparent;
+            this.label38.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.label38.ForeColor = System.Drawing.Color.Black;
+            this.label38.Name = "label38";
+            // 
+            // pictureBox4
+            // 
+            resources.ApplyResources(this.pictureBox4, "pictureBox4");
+            this.pictureBox4.Name = "pictureBox4";
+            this.pictureBox4.TabStop = false;
+            // 
+            // splitContainer9
+            // 
+            resources.ApplyResources(this.splitContainer9, "splitContainer9");
+            this.splitContainer9.Name = "splitContainer9";
+            // 
+            // splitContainer9.Panel1
+            // 
+            this.splitContainer9.Panel1.Controls.Add(this.groupBox14);
+            // 
+            // splitContainer9.Panel2
+            // 
+            this.splitContainer9.Panel2.Controls.Add(this.button25);
+            this.splitContainer9.Panel2.Controls.Add(this.textBox2);
+            this.splitContainer9.Panel2.Controls.Add(this.label14);
+            this.splitContainer9.Panel2.Controls.Add(this.pictureBox3);
+            // 
+            // groupBox14
+            // 
+            this.groupBox14.Controls.Add(this.button4);
+            this.groupBox14.Controls.Add(this.button24);
+            resources.ApplyResources(this.groupBox14, "groupBox14");
+            this.groupBox14.Name = "groupBox14";
+            this.groupBox14.TabStop = false;
+            // 
+            // button4
+            // 
+            this.button4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
+            this.button4.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
+            this.button4.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
+            resources.ApplyResources(this.button4, "button4");
+            this.button4.Name = "button4";
+            this.button4.UseVisualStyleBackColor = false;
+            // 
+            // button24
+            // 
+            this.button24.BackColor = System.Drawing.Color.White;
+            this.button24.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
+            this.button24.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
+            resources.ApplyResources(this.button24, "button24");
+            this.button24.Name = "button24";
+            this.button24.UseVisualStyleBackColor = false;
+            // 
+            // button25
+            // 
+            resources.ApplyResources(this.button25, "button25");
+            this.button25.BackColor = System.Drawing.SystemColors.Control;
+            this.button25.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
+            this.button25.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
+            this.button25.Name = "button25";
+            this.button25.UseVisualStyleBackColor = false;
+            // 
+            // textBox2
+            // 
+            resources.ApplyResources(this.textBox2, "textBox2");
+            this.textBox2.BackColor = System.Drawing.Color.White;
+            this.textBox2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.textBox2.ForeColor = System.Drawing.Color.Black;
+            this.textBox2.Name = "textBox2";
+            // 
+            // label14
+            // 
+            resources.ApplyResources(this.label14, "label14");
+            this.label14.BackColor = System.Drawing.Color.Transparent;
+            this.label14.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.label14.ForeColor = System.Drawing.Color.Black;
+            this.label14.Name = "label14";
+            // 
+            // pictureBox3
+            // 
+            resources.ApplyResources(this.pictureBox3, "pictureBox3");
+            this.pictureBox3.Name = "pictureBox3";
+            this.pictureBox3.TabStop = false;
+            // 
+            // splitContainer8
+            // 
+            resources.ApplyResources(this.splitContainer8, "splitContainer8");
+            this.splitContainer8.Name = "splitContainer8";
+            // 
+            // splitContainer8.Panel1
+            // 
+            this.splitContainer8.Panel1.Controls.Add(this.groupBox4);
+            // 
+            // splitContainer8.Panel2
+            // 
+            this.splitContainer8.Panel2.Controls.Add(this.OCR02Read_Bt);
+            this.splitContainer8.Panel2.Controls.Add(this.OCR02Read_Tb);
+            this.splitContainer8.Panel2.Controls.Add(this.label7);
+            this.splitContainer8.Panel2.Controls.Add(this.OCR02_Pic);
+            // 
+            // groupBox4
+            // 
+            this.groupBox4.Controls.Add(this.OCR02Offline_Btn);
+            this.groupBox4.Controls.Add(this.OCR02Online_Btn);
+            resources.ApplyResources(this.groupBox4, "groupBox4");
+            this.groupBox4.Name = "groupBox4";
+            this.groupBox4.TabStop = false;
+            // 
+            // OCR02Offline_Btn
+            // 
+            this.OCR02Offline_Btn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
+            this.OCR02Offline_Btn.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
+            this.OCR02Offline_Btn.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
+            resources.ApplyResources(this.OCR02Offline_Btn, "OCR02Offline_Btn");
+            this.OCR02Offline_Btn.Name = "OCR02Offline_Btn";
+            this.OCR02Offline_Btn.UseVisualStyleBackColor = false;
+            this.OCR02Offline_Btn.Click += new System.EventHandler(this.OCRButton);
+            // 
+            // OCR02Online_Btn
+            // 
+            this.OCR02Online_Btn.BackColor = System.Drawing.Color.White;
+            this.OCR02Online_Btn.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
+            this.OCR02Online_Btn.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
+            resources.ApplyResources(this.OCR02Online_Btn, "OCR02Online_Btn");
+            this.OCR02Online_Btn.Name = "OCR02Online_Btn";
+            this.OCR02Online_Btn.UseVisualStyleBackColor = false;
+            this.OCR02Online_Btn.Click += new System.EventHandler(this.OCRButton);
+            // 
+            // OCR02Read_Bt
+            // 
+            resources.ApplyResources(this.OCR02Read_Bt, "OCR02Read_Bt");
+            this.OCR02Read_Bt.BackColor = System.Drawing.SystemColors.Control;
+            this.OCR02Read_Bt.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
+            this.OCR02Read_Bt.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
+            this.OCR02Read_Bt.Name = "OCR02Read_Bt";
+            this.OCR02Read_Bt.UseVisualStyleBackColor = false;
+            this.OCR02Read_Bt.Click += new System.EventHandler(this.OCRButton);
+            // 
+            // OCR02Read_Tb
+            // 
+            resources.ApplyResources(this.OCR02Read_Tb, "OCR02Read_Tb");
+            this.OCR02Read_Tb.BackColor = System.Drawing.Color.White;
+            this.OCR02Read_Tb.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.OCR02Read_Tb.ForeColor = System.Drawing.Color.Black;
+            this.OCR02Read_Tb.Name = "OCR02Read_Tb";
+            // 
+            // label7
+            // 
+            resources.ApplyResources(this.label7, "label7");
+            this.label7.BackColor = System.Drawing.Color.Transparent;
+            this.label7.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.label7.ForeColor = System.Drawing.Color.Black;
+            this.label7.Name = "label7";
+            // 
+            // OCR02_Pic
+            // 
+            resources.ApplyResources(this.OCR02_Pic, "OCR02_Pic");
+            this.OCR02_Pic.Name = "OCR02_Pic";
+            this.OCR02_Pic.TabStop = false;
             // 
             // tabSetting
             // 
@@ -6228,41 +5801,17 @@ namespace Adam
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).EndInit();
             this.groupBox13.ResumeLayout(false);
             this.groupBox13.PerformLayout();
-            this.splitContainer7.Panel1.ResumeLayout(false);
-            this.splitContainer7.Panel2.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.splitContainer7)).EndInit();
-            this.splitContainer7.ResumeLayout(false);
-            this.splitContainer6.Panel1.ResumeLayout(false);
-            this.splitContainer6.Panel2.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.splitContainer6)).EndInit();
-            this.splitContainer6.ResumeLayout(false);
             this.splitContainer3.Panel1.ResumeLayout(false);
             this.splitContainer3.Panel2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer3)).EndInit();
             this.splitContainer3.ResumeLayout(false);
-            this.splitContainer11.Panel1.ResumeLayout(false);
-            this.splitContainer11.Panel2.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.splitContainer11)).EndInit();
-            this.splitContainer11.ResumeLayout(false);
-            this.splitContainer9.Panel1.ResumeLayout(false);
-            this.splitContainer9.Panel2.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.splitContainer9)).EndInit();
-            this.splitContainer9.ResumeLayout(false);
-            this.splitContainer8.Panel1.ResumeLayout(false);
-            this.splitContainer8.Panel2.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.splitContainer8)).EndInit();
-            this.splitContainer8.ResumeLayout(false);
-            this.splitContainer10.Panel1.ResumeLayout(false);
-            this.splitContainer10.Panel2.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.splitContainer10)).EndInit();
-            this.splitContainer10.ResumeLayout(false);
             this.splitContainer12.Panel1.ResumeLayout(false);
             this.splitContainer12.Panel2.ResumeLayout(false);
             this.splitContainer12.Panel2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer12)).EndInit();
             this.splitContainer12.ResumeLayout(false);
             this.groupBox18.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.Pic_OCR)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.OCR01_Pic)).EndInit();
             this.splitContainer13.Panel1.ResumeLayout(false);
             this.splitContainer13.Panel2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer13)).EndInit();
@@ -6306,32 +5855,11 @@ namespace Adam
             this.groupBox7.ResumeLayout(false);
             this.tabMapping.ResumeLayout(false);
             this.tableLayoutPanel14.ResumeLayout(false);
-            this.groupBox14.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView20)).EndInit();
             this.groupBox11.ResumeLayout(false);
             this.tableLayoutPanel12.ResumeLayout(false);
-            this.tableLayoutPanel17.ResumeLayout(false);
-            this.tableLayoutPanel17.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView15)).EndInit();
-            this.tableLayoutPanel16.ResumeLayout(false);
-            this.tableLayoutPanel16.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView14)).EndInit();
             this.tableLayoutPanel15.ResumeLayout(false);
             this.tableLayoutPanel15.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView13)).EndInit();
-            this.tableLayoutPanel18.ResumeLayout(false);
-            this.tableLayoutPanel22.ResumeLayout(false);
-            this.tableLayoutPanel22.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView19)).EndInit();
-            this.tableLayoutPanel20.ResumeLayout(false);
-            this.tableLayoutPanel20.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView17)).EndInit();
-            this.tableLayoutPanel19.ResumeLayout(false);
-            this.tableLayoutPanel19.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView16)).EndInit();
-            this.tableLayoutPanel21.ResumeLayout(false);
-            this.tableLayoutPanel21.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView18)).EndInit();
             this.tabStatus.ResumeLayout(false);
             this.tableLayoutPanel26.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dgvRstatus)).EndInit();
@@ -6348,6 +5876,27 @@ namespace Adam
             ((System.ComponentModel.ISupportInitialize)(this.dgvAstatus)).EndInit();
             this.tabOCR.ResumeLayout(false);
             this.tableLayoutPanel13.ResumeLayout(false);
+            this.splitContainer10.Panel1.ResumeLayout(false);
+            this.splitContainer10.Panel2.ResumeLayout(false);
+            this.splitContainer10.Panel2.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.splitContainer10)).EndInit();
+            this.splitContainer10.ResumeLayout(false);
+            this.groupBox17.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
+            this.splitContainer9.Panel1.ResumeLayout(false);
+            this.splitContainer9.Panel2.ResumeLayout(false);
+            this.splitContainer9.Panel2.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.splitContainer9)).EndInit();
+            this.splitContainer9.ResumeLayout(false);
+            this.groupBox14.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
+            this.splitContainer8.Panel1.ResumeLayout(false);
+            this.splitContainer8.Panel2.ResumeLayout(false);
+            this.splitContainer8.Panel2.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.splitContainer8)).EndInit();
+            this.splitContainer8.ResumeLayout(false);
+            this.groupBox4.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.OCR02_Pic)).EndInit();
             this.tabSetting.ResumeLayout(false);
             this.tabControl3.ResumeLayout(false);
             this.tabPage11.ResumeLayout(false);
@@ -6599,82 +6148,25 @@ namespace Adam
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel14;
         private System.Windows.Forms.GroupBox groupBox11;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel12;
-        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel17;
-        private System.Windows.Forms.DataGridView dataGridView15;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn28;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn29;
-        private System.Windows.Forms.Label label35;
-        private System.Windows.Forms.TextBox textBox18;
-        private System.Windows.Forms.SplitContainer splitContainer7;
-        private System.Windows.Forms.Label label36;
-        private System.Windows.Forms.Label label37;
-        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel16;
-        private System.Windows.Forms.DataGridView dataGridView14;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn26;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn27;
-        private System.Windows.Forms.Label label32;
-        private System.Windows.Forms.TextBox textBox17;
-        private System.Windows.Forms.SplitContainer splitContainer6;
-        private System.Windows.Forms.Label label33;
-        private System.Windows.Forms.Label label34;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel15;
         private System.Windows.Forms.DataGridView dataGridView13;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn22;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn24;
         private System.Windows.Forms.Label label29;
         private System.Windows.Forms.TextBox textBox16;
         private System.Windows.Forms.SplitContainer splitContainer3;
         private System.Windows.Forms.Label label31;
         private System.Windows.Forms.Label label30;
-        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel18;
-        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel22;
-        private System.Windows.Forms.DataGridView dataGridView19;
-        private System.Windows.Forms.Label label47;
-        private System.Windows.Forms.TextBox textBox22;
-        private System.Windows.Forms.SplitContainer splitContainer11;
-        private System.Windows.Forms.Label label48;
-        private System.Windows.Forms.Label label49;
-        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel20;
-        private System.Windows.Forms.DataGridView dataGridView17;
-        private System.Windows.Forms.Label label41;
-        private System.Windows.Forms.TextBox textBox20;
-        private System.Windows.Forms.SplitContainer splitContainer9;
-        private System.Windows.Forms.Label label42;
-        private System.Windows.Forms.Label label43;
-        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel19;
-        private System.Windows.Forms.DataGridView dataGridView16;
-        private System.Windows.Forms.Label label38;
-        private System.Windows.Forms.TextBox textBox19;
-        private System.Windows.Forms.SplitContainer splitContainer8;
-        private System.Windows.Forms.Label label39;
-        private System.Windows.Forms.Label label40;
-        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel21;
-        private System.Windows.Forms.DataGridView dataGridView18;
-        private System.Windows.Forms.Label label44;
-        private System.Windows.Forms.TextBox textBox21;
-        private System.Windows.Forms.SplitContainer splitContainer10;
-        private System.Windows.Forms.Label label45;
-        private System.Windows.Forms.Label label46;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn37;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn33;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn31;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn35;
         private System.Windows.Forms.SplitContainer splitContainer13;
-        private System.Windows.Forms.GroupBox groupBox14;
-        private System.Windows.Forms.DataGridView dataGridView20;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn38;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn39;
         private System.Windows.Forms.GroupBox groupBox19;
         private System.Windows.Forms.Button button27;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel13;
         private System.Windows.Forms.GroupBox groupBox18;
-        private System.Windows.Forms.Button Btn_OCROffline;
-        private System.Windows.Forms.Button Btn_OCROnline;
+        private System.Windows.Forms.Button OCR01Offline_Btn;
+        private System.Windows.Forms.Button OCR01Online_Btn;
         private System.Windows.Forms.SplitContainer splitContainer12;
-        private System.Windows.Forms.Button Btn_OCRRead;
-        private System.Windows.Forms.TextBox Tb_OCRRead;
+        private System.Windows.Forms.Button OCR01Read_Bt;
+        private System.Windows.Forms.TextBox OCR01Read_Tb;
         private System.Windows.Forms.Label label50;
-        private System.Windows.Forms.PictureBox Pic_OCR;
+        private System.Windows.Forms.PictureBox OCR01_Pic;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn15;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn13;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn11;
@@ -7067,6 +6559,30 @@ namespace Adam
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn79;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn80;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn81;
+        private System.Windows.Forms.SplitContainer splitContainer10;
+        private System.Windows.Forms.GroupBox groupBox17;
+        private System.Windows.Forms.Button button26;
+        private System.Windows.Forms.Button button28;
+        private System.Windows.Forms.Button button29;
+        private System.Windows.Forms.TextBox textBox7;
+        private System.Windows.Forms.Label label38;
+        private System.Windows.Forms.PictureBox pictureBox4;
+        private System.Windows.Forms.SplitContainer splitContainer9;
+        private System.Windows.Forms.GroupBox groupBox14;
+        private System.Windows.Forms.Button button4;
+        private System.Windows.Forms.Button button24;
+        private System.Windows.Forms.Button button25;
+        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.Label label14;
+        private System.Windows.Forms.PictureBox pictureBox3;
+        private System.Windows.Forms.SplitContainer splitContainer8;
+        private System.Windows.Forms.GroupBox groupBox4;
+        private System.Windows.Forms.Button OCR02Offline_Btn;
+        private System.Windows.Forms.Button OCR02Online_Btn;
+        private System.Windows.Forms.Button OCR02Read_Bt;
+        private System.Windows.Forms.TextBox OCR02Read_Tb;
+        private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.PictureBox OCR02_Pic;
     }
 }
 

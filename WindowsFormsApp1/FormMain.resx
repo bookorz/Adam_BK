@@ -1248,240 +1248,6 @@
   <data name="&gt;&gt;splitContainer2.ZOrder" xml:space="preserve">
     <value>0</value>
   </data>
-  <data name="splitContainer7.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
-    <value>Fill</value>
-  </data>
-  <data name="splitContainer7.Location" type="System.Drawing.Point, System.Drawing">
-    <value>3, 693</value>
-  </data>
-  <data name="label36.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
-    <value>Fill</value>
-  </data>
-  <data name="label36.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
-  </data>
-  <data name="label36.Location" type="System.Drawing.Point, System.Drawing">
-    <value>0, 0</value>
-  </data>
-  <data name="label36.Size" type="System.Drawing.Size, System.Drawing">
-    <value>73, 26</value>
-  </data>
-  <data name="label36.TabIndex" type="System.Int32, mscorlib">
-    <value>63</value>
-  </data>
-  <data name="label36.Text" xml:space="preserve">
-    <value>Not Use</value>
-  </data>
-  <data name="label36.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
-    <value>MiddleCenter</value>
-  </data>
-  <data name="&gt;&gt;label36.Name" xml:space="preserve">
-    <value>label36</value>
-  </data>
-  <data name="&gt;&gt;label36.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;label36.Parent" xml:space="preserve">
-    <value>splitContainer7.Panel1</value>
-  </data>
-  <data name="&gt;&gt;label36.ZOrder" xml:space="preserve">
-    <value>0</value>
-  </data>
-  <data name="&gt;&gt;splitContainer7.Panel1.Name" xml:space="preserve">
-    <value>splitContainer7.Panel1</value>
-  </data>
-  <data name="&gt;&gt;splitContainer7.Panel1.Type" xml:space="preserve">
-    <value>System.Windows.Forms.SplitterPanel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;splitContainer7.Panel1.Parent" xml:space="preserve">
-    <value>splitContainer7</value>
-  </data>
-  <data name="&gt;&gt;splitContainer7.Panel1.ZOrder" xml:space="preserve">
-    <value>0</value>
-  </data>
-  <data name="label37.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
-    <value>Fill</value>
-  </data>
-  <data name="label37.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
-  </data>
-  <data name="label37.Location" type="System.Drawing.Point, System.Drawing">
-    <value>0, 0</value>
-  </data>
-  <data name="label37.Size" type="System.Drawing.Size, System.Drawing">
-    <value>142, 26</value>
-  </data>
-  <data name="label37.TabIndex" type="System.Int32, mscorlib">
-    <value>62</value>
-  </data>
-  <data name="label37.Text" xml:space="preserve">
-    <value>Barcode ID</value>
-  </data>
-  <data name="label37.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
-    <value>MiddleCenter</value>
-  </data>
-  <data name="&gt;&gt;label37.Name" xml:space="preserve">
-    <value>label37</value>
-  </data>
-  <data name="&gt;&gt;label37.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;label37.Parent" xml:space="preserve">
-    <value>splitContainer7.Panel2</value>
-  </data>
-  <data name="&gt;&gt;label37.ZOrder" xml:space="preserve">
-    <value>0</value>
-  </data>
-  <data name="&gt;&gt;splitContainer7.Panel2.Name" xml:space="preserve">
-    <value>splitContainer7.Panel2</value>
-  </data>
-  <data name="&gt;&gt;splitContainer7.Panel2.Type" xml:space="preserve">
-    <value>System.Windows.Forms.SplitterPanel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;splitContainer7.Panel2.Parent" xml:space="preserve">
-    <value>splitContainer7</value>
-  </data>
-  <data name="&gt;&gt;splitContainer7.Panel2.ZOrder" xml:space="preserve">
-    <value>1</value>
-  </data>
-  <data name="splitContainer7.Size" type="System.Drawing.Size, System.Drawing">
-    <value>219, 26</value>
-  </data>
-  <data name="splitContainer7.SplitterDistance" type="System.Int32, mscorlib">
-    <value>73</value>
-  </data>
-  <data name="splitContainer7.TabIndex" type="System.Int32, mscorlib">
-    <value>62</value>
-  </data>
-  <data name="&gt;&gt;splitContainer7.Name" xml:space="preserve">
-    <value>splitContainer7</value>
-  </data>
-  <data name="&gt;&gt;splitContainer7.Type" xml:space="preserve">
-    <value>System.Windows.Forms.SplitContainer, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;splitContainer7.Parent" xml:space="preserve">
-    <value>tableLayoutPanel17</value>
-  </data>
-  <data name="&gt;&gt;splitContainer7.ZOrder" xml:space="preserve">
-    <value>3</value>
-  </data>
-  <data name="splitContainer6.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
-    <value>Fill</value>
-  </data>
-  <data name="splitContainer6.Location" type="System.Drawing.Point, System.Drawing">
-    <value>3, 693</value>
-  </data>
-  <data name="label33.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
-    <value>Fill</value>
-  </data>
-  <data name="label33.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
-  </data>
-  <data name="label33.Location" type="System.Drawing.Point, System.Drawing">
-    <value>0, 0</value>
-  </data>
-  <data name="label33.Size" type="System.Drawing.Size, System.Drawing">
-    <value>73, 26</value>
-  </data>
-  <data name="label33.TabIndex" type="System.Int32, mscorlib">
-    <value>63</value>
-  </data>
-  <data name="label33.Text" xml:space="preserve">
-    <value>Not Use</value>
-  </data>
-  <data name="label33.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
-    <value>MiddleCenter</value>
-  </data>
-  <data name="&gt;&gt;label33.Name" xml:space="preserve">
-    <value>label33</value>
-  </data>
-  <data name="&gt;&gt;label33.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;label33.Parent" xml:space="preserve">
-    <value>splitContainer6.Panel1</value>
-  </data>
-  <data name="&gt;&gt;label33.ZOrder" xml:space="preserve">
-    <value>0</value>
-  </data>
-  <data name="&gt;&gt;splitContainer6.Panel1.Name" xml:space="preserve">
-    <value>splitContainer6.Panel1</value>
-  </data>
-  <data name="&gt;&gt;splitContainer6.Panel1.Type" xml:space="preserve">
-    <value>System.Windows.Forms.SplitterPanel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;splitContainer6.Panel1.Parent" xml:space="preserve">
-    <value>splitContainer6</value>
-  </data>
-  <data name="&gt;&gt;splitContainer6.Panel1.ZOrder" xml:space="preserve">
-    <value>0</value>
-  </data>
-  <data name="label34.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
-    <value>Fill</value>
-  </data>
-  <data name="label34.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
-  </data>
-  <data name="label34.Location" type="System.Drawing.Point, System.Drawing">
-    <value>0, 0</value>
-  </data>
-  <data name="label34.Size" type="System.Drawing.Size, System.Drawing">
-    <value>142, 26</value>
-  </data>
-  <data name="label34.TabIndex" type="System.Int32, mscorlib">
-    <value>62</value>
-  </data>
-  <data name="label34.Text" xml:space="preserve">
-    <value>Barcode ID</value>
-  </data>
-  <data name="label34.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
-    <value>MiddleCenter</value>
-  </data>
-  <data name="&gt;&gt;label34.Name" xml:space="preserve">
-    <value>label34</value>
-  </data>
-  <data name="&gt;&gt;label34.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;label34.Parent" xml:space="preserve">
-    <value>splitContainer6.Panel2</value>
-  </data>
-  <data name="&gt;&gt;label34.ZOrder" xml:space="preserve">
-    <value>0</value>
-  </data>
-  <data name="&gt;&gt;splitContainer6.Panel2.Name" xml:space="preserve">
-    <value>splitContainer6.Panel2</value>
-  </data>
-  <data name="&gt;&gt;splitContainer6.Panel2.Type" xml:space="preserve">
-    <value>System.Windows.Forms.SplitterPanel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;splitContainer6.Panel2.Parent" xml:space="preserve">
-    <value>splitContainer6</value>
-  </data>
-  <data name="&gt;&gt;splitContainer6.Panel2.ZOrder" xml:space="preserve">
-    <value>1</value>
-  </data>
-  <data name="splitContainer6.Size" type="System.Drawing.Size, System.Drawing">
-    <value>219, 26</value>
-  </data>
-  <data name="splitContainer6.SplitterDistance" type="System.Int32, mscorlib">
-    <value>73</value>
-  </data>
-  <data name="splitContainer6.TabIndex" type="System.Int32, mscorlib">
-    <value>62</value>
-  </data>
-  <data name="&gt;&gt;splitContainer6.Name" xml:space="preserve">
-    <value>splitContainer6</value>
-  </data>
-  <data name="&gt;&gt;splitContainer6.Type" xml:space="preserve">
-    <value>System.Windows.Forms.SplitContainer, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;splitContainer6.Parent" xml:space="preserve">
-    <value>tableLayoutPanel16</value>
-  </data>
-  <data name="&gt;&gt;splitContainer6.ZOrder" xml:space="preserve">
-    <value>3</value>
-  </data>
   <data name="splitContainer3.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
     <value>Fill</value>
   </data>
@@ -1498,7 +1264,7 @@
     <value>0, 0</value>
   </data>
   <data name="label31.Size" type="System.Drawing.Size, System.Drawing">
-    <value>73, 26</value>
+    <value>62, 26</value>
   </data>
   <data name="label31.TabIndex" type="System.Int32, mscorlib">
     <value>63</value>
@@ -1543,7 +1309,7 @@
     <value>0, 0</value>
   </data>
   <data name="label30.Size" type="System.Drawing.Size, System.Drawing">
-    <value>142, 26</value>
+    <value>122, 26</value>
   </data>
   <data name="label30.TabIndex" type="System.Int32, mscorlib">
     <value>62</value>
@@ -1579,10 +1345,10 @@
     <value>1</value>
   </data>
   <data name="splitContainer3.Size" type="System.Drawing.Size, System.Drawing">
-    <value>219, 26</value>
+    <value>188, 26</value>
   </data>
   <data name="splitContainer3.SplitterDistance" type="System.Int32, mscorlib">
-    <value>73</value>
+    <value>62</value>
   </data>
   <data name="splitContainer3.TabIndex" type="System.Int32, mscorlib">
     <value>62</value>
@@ -1599,462 +1365,6 @@
   <data name="&gt;&gt;splitContainer3.ZOrder" xml:space="preserve">
     <value>3</value>
   </data>
-  <data name="splitContainer11.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
-    <value>Fill</value>
-  </data>
-  <data name="splitContainer11.Location" type="System.Drawing.Point, System.Drawing">
-    <value>3, 144</value>
-  </data>
-  <data name="label48.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
-    <value>Fill</value>
-  </data>
-  <data name="label48.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
-  </data>
-  <data name="label48.Location" type="System.Drawing.Point, System.Drawing">
-    <value>0, 0</value>
-  </data>
-  <data name="label48.Size" type="System.Drawing.Size, System.Drawing">
-    <value>73, 29</value>
-  </data>
-  <data name="label48.TabIndex" type="System.Int32, mscorlib">
-    <value>63</value>
-  </data>
-  <data name="label48.Text" xml:space="preserve">
-    <value>Not Use</value>
-  </data>
-  <data name="label48.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
-    <value>MiddleCenter</value>
-  </data>
-  <data name="&gt;&gt;label48.Name" xml:space="preserve">
-    <value>label48</value>
-  </data>
-  <data name="&gt;&gt;label48.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;label48.Parent" xml:space="preserve">
-    <value>splitContainer11.Panel1</value>
-  </data>
-  <data name="&gt;&gt;label48.ZOrder" xml:space="preserve">
-    <value>0</value>
-  </data>
-  <data name="&gt;&gt;splitContainer11.Panel1.Name" xml:space="preserve">
-    <value>splitContainer11.Panel1</value>
-  </data>
-  <data name="&gt;&gt;splitContainer11.Panel1.Type" xml:space="preserve">
-    <value>System.Windows.Forms.SplitterPanel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;splitContainer11.Panel1.Parent" xml:space="preserve">
-    <value>splitContainer11</value>
-  </data>
-  <data name="&gt;&gt;splitContainer11.Panel1.ZOrder" xml:space="preserve">
-    <value>0</value>
-  </data>
-  <data name="label49.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
-    <value>Fill</value>
-  </data>
-  <data name="label49.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
-  </data>
-  <data name="label49.Location" type="System.Drawing.Point, System.Drawing">
-    <value>0, 0</value>
-  </data>
-  <data name="label49.Size" type="System.Drawing.Size, System.Drawing">
-    <value>142, 29</value>
-  </data>
-  <data name="label49.TabIndex" type="System.Int32, mscorlib">
-    <value>62</value>
-  </data>
-  <data name="label49.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
-    <value>MiddleCenter</value>
-  </data>
-  <data name="&gt;&gt;label49.Name" xml:space="preserve">
-    <value>label49</value>
-  </data>
-  <data name="&gt;&gt;label49.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;label49.Parent" xml:space="preserve">
-    <value>splitContainer11.Panel2</value>
-  </data>
-  <data name="&gt;&gt;label49.ZOrder" xml:space="preserve">
-    <value>0</value>
-  </data>
-  <data name="&gt;&gt;splitContainer11.Panel2.Name" xml:space="preserve">
-    <value>splitContainer11.Panel2</value>
-  </data>
-  <data name="&gt;&gt;splitContainer11.Panel2.Type" xml:space="preserve">
-    <value>System.Windows.Forms.SplitterPanel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;splitContainer11.Panel2.Parent" xml:space="preserve">
-    <value>splitContainer11</value>
-  </data>
-  <data name="&gt;&gt;splitContainer11.Panel2.ZOrder" xml:space="preserve">
-    <value>1</value>
-  </data>
-  <data name="splitContainer11.Size" type="System.Drawing.Size, System.Drawing">
-    <value>219, 29</value>
-  </data>
-  <data name="splitContainer11.SplitterDistance" type="System.Int32, mscorlib">
-    <value>73</value>
-  </data>
-  <data name="splitContainer11.TabIndex" type="System.Int32, mscorlib">
-    <value>62</value>
-  </data>
-  <data name="&gt;&gt;splitContainer11.Name" xml:space="preserve">
-    <value>splitContainer11</value>
-  </data>
-  <data name="&gt;&gt;splitContainer11.Type" xml:space="preserve">
-    <value>System.Windows.Forms.SplitContainer, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;splitContainer11.Parent" xml:space="preserve">
-    <value>tableLayoutPanel22</value>
-  </data>
-  <data name="&gt;&gt;splitContainer11.ZOrder" xml:space="preserve">
-    <value>3</value>
-  </data>
-  <data name="splitContainer9.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
-    <value>Fill</value>
-  </data>
-  <data name="splitContainer9.Location" type="System.Drawing.Point, System.Drawing">
-    <value>3, 144</value>
-  </data>
-  <data name="label42.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
-    <value>Fill</value>
-  </data>
-  <data name="label42.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
-  </data>
-  <data name="label42.Location" type="System.Drawing.Point, System.Drawing">
-    <value>0, 0</value>
-  </data>
-  <data name="label42.Size" type="System.Drawing.Size, System.Drawing">
-    <value>73, 29</value>
-  </data>
-  <data name="label42.TabIndex" type="System.Int32, mscorlib">
-    <value>63</value>
-  </data>
-  <data name="label42.Text" xml:space="preserve">
-    <value>Not Use</value>
-  </data>
-  <data name="label42.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
-    <value>MiddleCenter</value>
-  </data>
-  <data name="&gt;&gt;label42.Name" xml:space="preserve">
-    <value>label42</value>
-  </data>
-  <data name="&gt;&gt;label42.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;label42.Parent" xml:space="preserve">
-    <value>splitContainer9.Panel1</value>
-  </data>
-  <data name="&gt;&gt;label42.ZOrder" xml:space="preserve">
-    <value>0</value>
-  </data>
-  <data name="&gt;&gt;splitContainer9.Panel1.Name" xml:space="preserve">
-    <value>splitContainer9.Panel1</value>
-  </data>
-  <data name="&gt;&gt;splitContainer9.Panel1.Type" xml:space="preserve">
-    <value>System.Windows.Forms.SplitterPanel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;splitContainer9.Panel1.Parent" xml:space="preserve">
-    <value>splitContainer9</value>
-  </data>
-  <data name="&gt;&gt;splitContainer9.Panel1.ZOrder" xml:space="preserve">
-    <value>0</value>
-  </data>
-  <data name="label43.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
-    <value>Fill</value>
-  </data>
-  <data name="label43.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
-  </data>
-  <data name="label43.Location" type="System.Drawing.Point, System.Drawing">
-    <value>0, 0</value>
-  </data>
-  <data name="label43.Size" type="System.Drawing.Size, System.Drawing">
-    <value>142, 29</value>
-  </data>
-  <data name="label43.TabIndex" type="System.Int32, mscorlib">
-    <value>62</value>
-  </data>
-  <data name="label43.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
-    <value>MiddleCenter</value>
-  </data>
-  <data name="&gt;&gt;label43.Name" xml:space="preserve">
-    <value>label43</value>
-  </data>
-  <data name="&gt;&gt;label43.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;label43.Parent" xml:space="preserve">
-    <value>splitContainer9.Panel2</value>
-  </data>
-  <data name="&gt;&gt;label43.ZOrder" xml:space="preserve">
-    <value>0</value>
-  </data>
-  <data name="&gt;&gt;splitContainer9.Panel2.Name" xml:space="preserve">
-    <value>splitContainer9.Panel2</value>
-  </data>
-  <data name="&gt;&gt;splitContainer9.Panel2.Type" xml:space="preserve">
-    <value>System.Windows.Forms.SplitterPanel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;splitContainer9.Panel2.Parent" xml:space="preserve">
-    <value>splitContainer9</value>
-  </data>
-  <data name="&gt;&gt;splitContainer9.Panel2.ZOrder" xml:space="preserve">
-    <value>1</value>
-  </data>
-  <data name="splitContainer9.Size" type="System.Drawing.Size, System.Drawing">
-    <value>219, 29</value>
-  </data>
-  <data name="splitContainer9.SplitterDistance" type="System.Int32, mscorlib">
-    <value>73</value>
-  </data>
-  <data name="splitContainer9.TabIndex" type="System.Int32, mscorlib">
-    <value>62</value>
-  </data>
-  <data name="&gt;&gt;splitContainer9.Name" xml:space="preserve">
-    <value>splitContainer9</value>
-  </data>
-  <data name="&gt;&gt;splitContainer9.Type" xml:space="preserve">
-    <value>System.Windows.Forms.SplitContainer, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;splitContainer9.Parent" xml:space="preserve">
-    <value>tableLayoutPanel20</value>
-  </data>
-  <data name="&gt;&gt;splitContainer9.ZOrder" xml:space="preserve">
-    <value>3</value>
-  </data>
-  <data name="splitContainer8.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
-    <value>Fill</value>
-  </data>
-  <data name="splitContainer8.Location" type="System.Drawing.Point, System.Drawing">
-    <value>3, 144</value>
-  </data>
-  <data name="label39.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
-    <value>Fill</value>
-  </data>
-  <data name="label39.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
-  </data>
-  <data name="label39.Location" type="System.Drawing.Point, System.Drawing">
-    <value>0, 0</value>
-  </data>
-  <data name="label39.Size" type="System.Drawing.Size, System.Drawing">
-    <value>73, 29</value>
-  </data>
-  <data name="label39.TabIndex" type="System.Int32, mscorlib">
-    <value>63</value>
-  </data>
-  <data name="label39.Text" xml:space="preserve">
-    <value>Not Use</value>
-  </data>
-  <data name="label39.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
-    <value>MiddleCenter</value>
-  </data>
-  <data name="&gt;&gt;label39.Name" xml:space="preserve">
-    <value>label39</value>
-  </data>
-  <data name="&gt;&gt;label39.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;label39.Parent" xml:space="preserve">
-    <value>splitContainer8.Panel1</value>
-  </data>
-  <data name="&gt;&gt;label39.ZOrder" xml:space="preserve">
-    <value>0</value>
-  </data>
-  <data name="&gt;&gt;splitContainer8.Panel1.Name" xml:space="preserve">
-    <value>splitContainer8.Panel1</value>
-  </data>
-  <data name="&gt;&gt;splitContainer8.Panel1.Type" xml:space="preserve">
-    <value>System.Windows.Forms.SplitterPanel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;splitContainer8.Panel1.Parent" xml:space="preserve">
-    <value>splitContainer8</value>
-  </data>
-  <data name="&gt;&gt;splitContainer8.Panel1.ZOrder" xml:space="preserve">
-    <value>0</value>
-  </data>
-  <data name="label40.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
-    <value>Fill</value>
-  </data>
-  <data name="label40.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
-  </data>
-  <data name="label40.Location" type="System.Drawing.Point, System.Drawing">
-    <value>0, 0</value>
-  </data>
-  <data name="label40.Size" type="System.Drawing.Size, System.Drawing">
-    <value>142, 29</value>
-  </data>
-  <data name="label40.TabIndex" type="System.Int32, mscorlib">
-    <value>62</value>
-  </data>
-  <data name="label40.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
-    <value>MiddleCenter</value>
-  </data>
-  <data name="&gt;&gt;label40.Name" xml:space="preserve">
-    <value>label40</value>
-  </data>
-  <data name="&gt;&gt;label40.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;label40.Parent" xml:space="preserve">
-    <value>splitContainer8.Panel2</value>
-  </data>
-  <data name="&gt;&gt;label40.ZOrder" xml:space="preserve">
-    <value>0</value>
-  </data>
-  <data name="&gt;&gt;splitContainer8.Panel2.Name" xml:space="preserve">
-    <value>splitContainer8.Panel2</value>
-  </data>
-  <data name="&gt;&gt;splitContainer8.Panel2.Type" xml:space="preserve">
-    <value>System.Windows.Forms.SplitterPanel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;splitContainer8.Panel2.Parent" xml:space="preserve">
-    <value>splitContainer8</value>
-  </data>
-  <data name="&gt;&gt;splitContainer8.Panel2.ZOrder" xml:space="preserve">
-    <value>1</value>
-  </data>
-  <data name="splitContainer8.Size" type="System.Drawing.Size, System.Drawing">
-    <value>219, 29</value>
-  </data>
-  <data name="splitContainer8.SplitterDistance" type="System.Int32, mscorlib">
-    <value>73</value>
-  </data>
-  <data name="splitContainer8.TabIndex" type="System.Int32, mscorlib">
-    <value>62</value>
-  </data>
-  <data name="&gt;&gt;splitContainer8.Name" xml:space="preserve">
-    <value>splitContainer8</value>
-  </data>
-  <data name="&gt;&gt;splitContainer8.Type" xml:space="preserve">
-    <value>System.Windows.Forms.SplitContainer, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;splitContainer8.Parent" xml:space="preserve">
-    <value>tableLayoutPanel19</value>
-  </data>
-  <data name="&gt;&gt;splitContainer8.ZOrder" xml:space="preserve">
-    <value>3</value>
-  </data>
-  <data name="splitContainer10.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
-    <value>Fill</value>
-  </data>
-  <data name="splitContainer10.Location" type="System.Drawing.Point, System.Drawing">
-    <value>3, 144</value>
-  </data>
-  <data name="label45.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
-    <value>Fill</value>
-  </data>
-  <data name="label45.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
-  </data>
-  <data name="label45.Location" type="System.Drawing.Point, System.Drawing">
-    <value>0, 0</value>
-  </data>
-  <data name="label45.Size" type="System.Drawing.Size, System.Drawing">
-    <value>73, 29</value>
-  </data>
-  <data name="label45.TabIndex" type="System.Int32, mscorlib">
-    <value>63</value>
-  </data>
-  <data name="label45.Text" xml:space="preserve">
-    <value>Not Use</value>
-  </data>
-  <data name="label45.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
-    <value>MiddleCenter</value>
-  </data>
-  <data name="&gt;&gt;label45.Name" xml:space="preserve">
-    <value>label45</value>
-  </data>
-  <data name="&gt;&gt;label45.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;label45.Parent" xml:space="preserve">
-    <value>splitContainer10.Panel1</value>
-  </data>
-  <data name="&gt;&gt;label45.ZOrder" xml:space="preserve">
-    <value>0</value>
-  </data>
-  <data name="&gt;&gt;splitContainer10.Panel1.Name" xml:space="preserve">
-    <value>splitContainer10.Panel1</value>
-  </data>
-  <data name="&gt;&gt;splitContainer10.Panel1.Type" xml:space="preserve">
-    <value>System.Windows.Forms.SplitterPanel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;splitContainer10.Panel1.Parent" xml:space="preserve">
-    <value>splitContainer10</value>
-  </data>
-  <data name="&gt;&gt;splitContainer10.Panel1.ZOrder" xml:space="preserve">
-    <value>0</value>
-  </data>
-  <data name="label46.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
-    <value>Fill</value>
-  </data>
-  <data name="label46.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
-  </data>
-  <data name="label46.Location" type="System.Drawing.Point, System.Drawing">
-    <value>0, 0</value>
-  </data>
-  <data name="label46.Size" type="System.Drawing.Size, System.Drawing">
-    <value>142, 29</value>
-  </data>
-  <data name="label46.TabIndex" type="System.Int32, mscorlib">
-    <value>62</value>
-  </data>
-  <data name="label46.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
-    <value>MiddleCenter</value>
-  </data>
-  <data name="&gt;&gt;label46.Name" xml:space="preserve">
-    <value>label46</value>
-  </data>
-  <data name="&gt;&gt;label46.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;label46.Parent" xml:space="preserve">
-    <value>splitContainer10.Panel2</value>
-  </data>
-  <data name="&gt;&gt;label46.ZOrder" xml:space="preserve">
-    <value>0</value>
-  </data>
-  <data name="&gt;&gt;splitContainer10.Panel2.Name" xml:space="preserve">
-    <value>splitContainer10.Panel2</value>
-  </data>
-  <data name="&gt;&gt;splitContainer10.Panel2.Type" xml:space="preserve">
-    <value>System.Windows.Forms.SplitterPanel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;splitContainer10.Panel2.Parent" xml:space="preserve">
-    <value>splitContainer10</value>
-  </data>
-  <data name="&gt;&gt;splitContainer10.Panel2.ZOrder" xml:space="preserve">
-    <value>1</value>
-  </data>
-  <data name="splitContainer10.Size" type="System.Drawing.Size, System.Drawing">
-    <value>219, 29</value>
-  </data>
-  <data name="splitContainer10.SplitterDistance" type="System.Int32, mscorlib">
-    <value>73</value>
-  </data>
-  <data name="splitContainer10.TabIndex" type="System.Int32, mscorlib">
-    <value>62</value>
-  </data>
-  <data name="&gt;&gt;splitContainer10.Name" xml:space="preserve">
-    <value>splitContainer10</value>
-  </data>
-  <data name="&gt;&gt;splitContainer10.Type" xml:space="preserve">
-    <value>System.Windows.Forms.SplitContainer, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;splitContainer10.Parent" xml:space="preserve">
-    <value>tableLayoutPanel21</value>
-  </data>
-  <data name="&gt;&gt;splitContainer10.ZOrder" xml:space="preserve">
-    <value>3</value>
-  </data>
   <data name="splitContainer12.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
     <value>Fill</value>
   </data>
@@ -2064,70 +1374,70 @@
   <data name="splitContainer12.Orientation" type="System.Windows.Forms.Orientation, System.Windows.Forms">
     <value>Horizontal</value>
   </data>
-  <data name="Btn_OCROffline.FlatStyle" type="System.Windows.Forms.FlatStyle, System.Windows.Forms">
+  <data name="OCR01Offline_Btn.FlatStyle" type="System.Windows.Forms.FlatStyle, System.Windows.Forms">
     <value>Flat</value>
   </data>
-  <data name="Btn_OCROffline.Font" type="System.Drawing.Font, System.Drawing">
+  <data name="OCR01Offline_Btn.Font" type="System.Drawing.Font, System.Drawing">
     <value>微軟正黑體, 15.75pt</value>
   </data>
-  <data name="Btn_OCROffline.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+  <data name="OCR01Offline_Btn.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
   </data>
-  <data name="Btn_OCROffline.Location" type="System.Drawing.Point, System.Drawing">
-    <value>390, 49</value>
+  <data name="OCR01Offline_Btn.Location" type="System.Drawing.Point, System.Drawing">
+    <value>615, 16</value>
   </data>
-  <data name="Btn_OCROffline.Size" type="System.Drawing.Size, System.Drawing">
-    <value>295, 46</value>
+  <data name="OCR01Offline_Btn.Size" type="System.Drawing.Size, System.Drawing">
+    <value>185, 40</value>
   </data>
-  <data name="Btn_OCROffline.TabIndex" type="System.Int32, mscorlib">
+  <data name="OCR01Offline_Btn.TabIndex" type="System.Int32, mscorlib">
     <value>3</value>
   </data>
-  <data name="Btn_OCROffline.Text" xml:space="preserve">
+  <data name="OCR01Offline_Btn.Text" xml:space="preserve">
     <value>OCR Offline Mode</value>
   </data>
-  <data name="&gt;&gt;Btn_OCROffline.Name" xml:space="preserve">
-    <value>Btn_OCROffline</value>
+  <data name="&gt;&gt;OCR01Offline_Btn.Name" xml:space="preserve">
+    <value>OCR01Offline_Btn</value>
   </data>
-  <data name="&gt;&gt;Btn_OCROffline.Type" xml:space="preserve">
+  <data name="&gt;&gt;OCR01Offline_Btn.Type" xml:space="preserve">
     <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;Btn_OCROffline.Parent" xml:space="preserve">
+  <data name="&gt;&gt;OCR01Offline_Btn.Parent" xml:space="preserve">
     <value>groupBox18</value>
   </data>
-  <data name="&gt;&gt;Btn_OCROffline.ZOrder" xml:space="preserve">
+  <data name="&gt;&gt;OCR01Offline_Btn.ZOrder" xml:space="preserve">
     <value>0</value>
   </data>
-  <data name="Btn_OCROnline.FlatStyle" type="System.Windows.Forms.FlatStyle, System.Windows.Forms">
+  <data name="OCR01Online_Btn.FlatStyle" type="System.Windows.Forms.FlatStyle, System.Windows.Forms">
     <value>Flat</value>
   </data>
-  <data name="Btn_OCROnline.Font" type="System.Drawing.Font, System.Drawing">
+  <data name="OCR01Online_Btn.Font" type="System.Drawing.Font, System.Drawing">
     <value>微軟正黑體, 15.75pt</value>
   </data>
-  <data name="Btn_OCROnline.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+  <data name="OCR01Online_Btn.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
   </data>
-  <data name="Btn_OCROnline.Location" type="System.Drawing.Point, System.Drawing">
-    <value>47, 49</value>
+  <data name="OCR01Online_Btn.Location" type="System.Drawing.Point, System.Drawing">
+    <value>434, 16</value>
   </data>
-  <data name="Btn_OCROnline.Size" type="System.Drawing.Size, System.Drawing">
-    <value>295, 46</value>
+  <data name="OCR01Online_Btn.Size" type="System.Drawing.Size, System.Drawing">
+    <value>175, 40</value>
   </data>
-  <data name="Btn_OCROnline.TabIndex" type="System.Int32, mscorlib">
+  <data name="OCR01Online_Btn.TabIndex" type="System.Int32, mscorlib">
     <value>2</value>
   </data>
-  <data name="Btn_OCROnline.Text" xml:space="preserve">
+  <data name="OCR01Online_Btn.Text" xml:space="preserve">
     <value>OCR Online Mode</value>
   </data>
-  <data name="&gt;&gt;Btn_OCROnline.Name" xml:space="preserve">
-    <value>Btn_OCROnline</value>
+  <data name="&gt;&gt;OCR01Online_Btn.Name" xml:space="preserve">
+    <value>OCR01Online_Btn</value>
   </data>
-  <data name="&gt;&gt;Btn_OCROnline.Type" xml:space="preserve">
+  <data name="&gt;&gt;OCR01Online_Btn.Type" xml:space="preserve">
     <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;Btn_OCROnline.Parent" xml:space="preserve">
+  <data name="&gt;&gt;OCR01Online_Btn.Parent" xml:space="preserve">
     <value>groupBox18</value>
   </data>
-  <data name="&gt;&gt;Btn_OCROnline.ZOrder" xml:space="preserve">
+  <data name="&gt;&gt;OCR01Online_Btn.ZOrder" xml:space="preserve">
     <value>1</value>
   </data>
   <data name="groupBox18.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
@@ -2137,13 +1447,13 @@
     <value>0, 0</value>
   </data>
   <data name="groupBox18.Size" type="System.Drawing.Size, System.Drawing">
-    <value>1607, 127</value>
+    <value>806, 61</value>
   </data>
   <data name="groupBox18.TabIndex" type="System.Int32, mscorlib">
     <value>1</value>
   </data>
   <data name="groupBox18.Text" xml:space="preserve">
-    <value>Process Mode</value>
+    <value>OCR 1</value>
   </data>
   <data name="&gt;&gt;groupBox18.Name" xml:space="preserve">
     <value>groupBox18</value>
@@ -2169,70 +1479,70 @@
   <data name="&gt;&gt;splitContainer12.Panel1.ZOrder" xml:space="preserve">
     <value>0</value>
   </data>
-  <data name="Btn_OCRRead.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+  <data name="OCR01Read_Bt.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>Bottom, Right</value>
   </data>
-  <data name="Btn_OCRRead.FlatStyle" type="System.Windows.Forms.FlatStyle, System.Windows.Forms">
+  <data name="OCR01Read_Bt.FlatStyle" type="System.Windows.Forms.FlatStyle, System.Windows.Forms">
     <value>Flat</value>
   </data>
-  <data name="Btn_OCRRead.Font" type="System.Drawing.Font, System.Drawing">
+  <data name="OCR01Read_Bt.Font" type="System.Drawing.Font, System.Drawing">
     <value>微軟正黑體, 15.75pt</value>
   </data>
-  <data name="Btn_OCRRead.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+  <data name="OCR01Read_Bt.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
   </data>
-  <data name="Btn_OCRRead.Location" type="System.Drawing.Point, System.Drawing">
-    <value>1406, 572</value>
+  <data name="OCR01Read_Bt.Location" type="System.Drawing.Point, System.Drawing">
+    <value>605, 257</value>
   </data>
-  <data name="Btn_OCRRead.Size" type="System.Drawing.Size, System.Drawing">
+  <data name="OCR01Read_Bt.Size" type="System.Drawing.Size, System.Drawing">
     <value>191, 40</value>
   </data>
-  <data name="Btn_OCRRead.TabIndex" type="System.Int32, mscorlib">
+  <data name="OCR01Read_Bt.TabIndex" type="System.Int32, mscorlib">
     <value>63</value>
   </data>
-  <data name="Btn_OCRRead.Text" xml:space="preserve">
+  <data name="OCR01Read_Bt.Text" xml:space="preserve">
     <value>Read</value>
   </data>
-  <data name="&gt;&gt;Btn_OCRRead.Name" xml:space="preserve">
-    <value>Btn_OCRRead</value>
+  <data name="&gt;&gt;OCR01Read_Bt.Name" xml:space="preserve">
+    <value>OCR01Read_Bt</value>
   </data>
-  <data name="&gt;&gt;Btn_OCRRead.Type" xml:space="preserve">
+  <data name="&gt;&gt;OCR01Read_Bt.Type" xml:space="preserve">
     <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;Btn_OCRRead.Parent" xml:space="preserve">
+  <data name="&gt;&gt;OCR01Read_Bt.Parent" xml:space="preserve">
     <value>splitContainer12.Panel2</value>
   </data>
-  <data name="&gt;&gt;Btn_OCRRead.ZOrder" xml:space="preserve">
+  <data name="&gt;&gt;OCR01Read_Bt.ZOrder" xml:space="preserve">
     <value>0</value>
   </data>
-  <data name="Tb_OCRRead.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+  <data name="OCR01Read_Tb.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>Bottom, Right</value>
   </data>
-  <data name="Tb_OCRRead.Font" type="System.Drawing.Font, System.Drawing">
+  <data name="OCR01Read_Tb.Font" type="System.Drawing.Font, System.Drawing">
     <value>微軟正黑體, 20.25pt, style=Bold</value>
   </data>
-  <data name="Tb_OCRRead.Location" type="System.Drawing.Point, System.Drawing">
-    <value>1042, 523</value>
+  <data name="OCR01Read_Tb.Location" type="System.Drawing.Point, System.Drawing">
+    <value>111, 254</value>
   </data>
-  <data name="Tb_OCRRead.Size" type="System.Drawing.Size, System.Drawing">
-    <value>555, 43</value>
+  <data name="OCR01Read_Tb.Size" type="System.Drawing.Size, System.Drawing">
+    <value>488, 43</value>
   </data>
-  <data name="Tb_OCRRead.TabIndex" type="System.Int32, mscorlib">
+  <data name="OCR01Read_Tb.TabIndex" type="System.Int32, mscorlib">
     <value>62</value>
   </data>
-  <data name="Tb_OCRRead.TextAlign" type="System.Windows.Forms.HorizontalAlignment, System.Windows.Forms">
+  <data name="OCR01Read_Tb.TextAlign" type="System.Windows.Forms.HorizontalAlignment, System.Windows.Forms">
     <value>Center</value>
   </data>
-  <data name="&gt;&gt;Tb_OCRRead.Name" xml:space="preserve">
-    <value>Tb_OCRRead</value>
+  <data name="&gt;&gt;OCR01Read_Tb.Name" xml:space="preserve">
+    <value>OCR01Read_Tb</value>
   </data>
-  <data name="&gt;&gt;Tb_OCRRead.Type" xml:space="preserve">
+  <data name="&gt;&gt;OCR01Read_Tb.Type" xml:space="preserve">
     <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;Tb_OCRRead.Parent" xml:space="preserve">
+  <data name="&gt;&gt;OCR01Read_Tb.Parent" xml:space="preserve">
     <value>splitContainer12.Panel2</value>
   </data>
-  <data name="&gt;&gt;Tb_OCRRead.ZOrder" xml:space="preserve">
+  <data name="&gt;&gt;OCR01Read_Tb.ZOrder" xml:space="preserve">
     <value>1</value>
   </data>
   <data name="label50.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
@@ -2242,7 +1552,7 @@
     <value>NoControl</value>
   </data>
   <data name="label50.Location" type="System.Drawing.Point, System.Drawing">
-    <value>895, 525</value>
+    <value>-12, 263</value>
   </data>
   <data name="label50.Size" type="System.Drawing.Size, System.Drawing">
     <value>141, 28</value>
@@ -2268,34 +1578,34 @@
   <data name="&gt;&gt;label50.ZOrder" xml:space="preserve">
     <value>2</value>
   </data>
-  <data name="Pic_OCR.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+  <data name="OCR01_Pic.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
     <value>Top</value>
   </data>
-  <data name="Pic_OCR.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+  <data name="OCR01_Pic.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
   </data>
-  <data name="Pic_OCR.Location" type="System.Drawing.Point, System.Drawing">
+  <data name="OCR01_Pic.Location" type="System.Drawing.Point, System.Drawing">
     <value>0, 0</value>
   </data>
-  <data name="Pic_OCR.Size" type="System.Drawing.Size, System.Drawing">
-    <value>1607, 517</value>
+  <data name="OCR01_Pic.Size" type="System.Drawing.Size, System.Drawing">
+    <value>806, 247</value>
   </data>
-  <data name="Pic_OCR.SizeMode" type="System.Windows.Forms.PictureBoxSizeMode, System.Windows.Forms">
+  <data name="OCR01_Pic.SizeMode" type="System.Windows.Forms.PictureBoxSizeMode, System.Windows.Forms">
     <value>CenterImage</value>
   </data>
-  <data name="Pic_OCR.TabIndex" type="System.Int32, mscorlib">
+  <data name="OCR01_Pic.TabIndex" type="System.Int32, mscorlib">
     <value>0</value>
   </data>
-  <data name="&gt;&gt;Pic_OCR.Name" xml:space="preserve">
-    <value>Pic_OCR</value>
+  <data name="&gt;&gt;OCR01_Pic.Name" xml:space="preserve">
+    <value>OCR01_Pic</value>
   </data>
-  <data name="&gt;&gt;Pic_OCR.Type" xml:space="preserve">
+  <data name="&gt;&gt;OCR01_Pic.Type" xml:space="preserve">
     <value>System.Windows.Forms.PictureBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;Pic_OCR.Parent" xml:space="preserve">
+  <data name="&gt;&gt;OCR01_Pic.Parent" xml:space="preserve">
     <value>splitContainer12.Panel2</value>
   </data>
-  <data name="&gt;&gt;Pic_OCR.ZOrder" xml:space="preserve">
+  <data name="&gt;&gt;OCR01_Pic.ZOrder" xml:space="preserve">
     <value>3</value>
   </data>
   <data name="&gt;&gt;splitContainer12.Panel2.Name" xml:space="preserve">
@@ -2311,10 +1621,10 @@
     <value>1</value>
   </data>
   <data name="splitContainer12.Size" type="System.Drawing.Size, System.Drawing">
-    <value>1607, 756</value>
+    <value>806, 375</value>
   </data>
   <data name="splitContainer12.SplitterDistance" type="System.Int32, mscorlib">
-    <value>127</value>
+    <value>61</value>
   </data>
   <data name="splitContainer12.TabIndex" type="System.Int32, mscorlib">
     <value>1</value>
@@ -2329,7 +1639,7 @@
     <value>tableLayoutPanel13</value>
   </data>
   <data name="&gt;&gt;splitContainer12.ZOrder" xml:space="preserve">
-    <value>0</value>
+    <value>3</value>
   </data>
   <data name="splitContainer13.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
     <value>Fill</value>
@@ -5311,374 +4621,11 @@
   <data name="tableLayoutPanel14.ColumnCount" type="System.Int32, mscorlib">
     <value>2</value>
   </data>
-  <metadata name="dataGridViewTextBoxColumn38.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
-  <data name="dataGridViewTextBoxColumn38.HeaderText" xml:space="preserve">
-    <value>Device ID</value>
-  </data>
-  <metadata name="dataGridViewTextBoxColumn39.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
-  <data name="dataGridViewTextBoxColumn39.HeaderText" xml:space="preserve">
-    <value>Action</value>
-  </data>
-  <data name="dataGridView20.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
-    <value>Fill</value>
-  </data>
-  <data name="dataGridView20.Location" type="System.Drawing.Point, System.Drawing">
-    <value>3, 25</value>
-  </data>
-  <data name="dataGridView20.Size" type="System.Drawing.Size, System.Drawing">
-    <value>212, 728</value>
-  </data>
-  <data name="dataGridView20.TabIndex" type="System.Int32, mscorlib">
-    <value>54</value>
-  </data>
-  <data name="&gt;&gt;dataGridView20.Name" xml:space="preserve">
-    <value>dataGridView20</value>
-  </data>
-  <data name="&gt;&gt;dataGridView20.Type" xml:space="preserve">
-    <value>System.Windows.Forms.DataGridView, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;dataGridView20.Parent" xml:space="preserve">
-    <value>groupBox14</value>
-  </data>
-  <data name="&gt;&gt;dataGridView20.ZOrder" xml:space="preserve">
-    <value>0</value>
-  </data>
-  <data name="groupBox14.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
-    <value>Fill</value>
-  </data>
-  <data name="groupBox14.Location" type="System.Drawing.Point, System.Drawing">
-    <value>1403, 3</value>
-  </data>
-  <data name="groupBox14.Size" type="System.Drawing.Size, System.Drawing">
-    <value>218, 756</value>
-  </data>
-  <data name="groupBox14.TabIndex" type="System.Int32, mscorlib">
-    <value>2</value>
-  </data>
-  <data name="groupBox14.Text" xml:space="preserve">
-    <value>Command Action</value>
-  </data>
-  <data name="&gt;&gt;groupBox14.Name" xml:space="preserve">
-    <value>groupBox14</value>
-  </data>
-  <data name="&gt;&gt;groupBox14.Type" xml:space="preserve">
-    <value>System.Windows.Forms.GroupBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;groupBox14.Parent" xml:space="preserve">
-    <value>tableLayoutPanel14</value>
-  </data>
-  <data name="&gt;&gt;groupBox14.ZOrder" xml:space="preserve">
-    <value>0</value>
-  </data>
   <data name="tableLayoutPanel12.ColumnCount" type="System.Int32, mscorlib">
-    <value>6</value>
-  </data>
-  <data name="tableLayoutPanel17.ColumnCount" type="System.Int32, mscorlib">
-    <value>1</value>
-  </data>
-  <metadata name="dataGridViewTextBoxColumn28.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
-  <data name="dataGridViewTextBoxColumn28.HeaderText" xml:space="preserve">
-    <value>Slot</value>
-  </data>
-  <data name="dataGridViewTextBoxColumn28.Width" type="System.Int32, mscorlib">
-    <value>44</value>
-  </data>
-  <metadata name="dataGridViewTextBoxColumn29.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
-  <data name="dataGridViewTextBoxColumn29.HeaderText" xml:space="preserve">
-    <value>Wafer ID</value>
-  </data>
-  <data name="dataGridViewTextBoxColumn29.Width" type="System.Int32, mscorlib">
-    <value>81</value>
-  </data>
-  <data name="dataGridView15.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
-    <value>Fill</value>
-  </data>
-  <data name="dataGridView15.Location" type="System.Drawing.Point, System.Drawing">
-    <value>3, 63</value>
-  </data>
-  <data name="dataGridView15.Size" type="System.Drawing.Size, System.Drawing">
-    <value>219, 624</value>
-  </data>
-  <data name="dataGridView15.TabIndex" type="System.Int32, mscorlib">
-    <value>53</value>
-  </data>
-  <data name="&gt;&gt;dataGridView15.Name" xml:space="preserve">
-    <value>dataGridView15</value>
-  </data>
-  <data name="&gt;&gt;dataGridView15.Type" xml:space="preserve">
-    <value>System.Windows.Forms.DataGridView, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;dataGridView15.Parent" xml:space="preserve">
-    <value>tableLayoutPanel17</value>
-  </data>
-  <data name="&gt;&gt;dataGridView15.ZOrder" xml:space="preserve">
-    <value>0</value>
-  </data>
-  <data name="label35.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
-    <value>Fill</value>
-  </data>
-  <data name="label35.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
-  </data>
-  <data name="label35.Location" type="System.Drawing.Point, System.Drawing">
-    <value>3, 0</value>
-  </data>
-  <data name="label35.Size" type="System.Drawing.Size, System.Drawing">
-    <value>219, 28</value>
-  </data>
-  <data name="label35.TabIndex" type="System.Int32, mscorlib">
-    <value>54</value>
-  </data>
-  <data name="label35.Text" xml:space="preserve">
-    <value>LoadPort03</value>
-  </data>
-  <data name="label35.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
-    <value>MiddleCenter</value>
-  </data>
-  <data name="&gt;&gt;label35.Name" xml:space="preserve">
-    <value>label35</value>
-  </data>
-  <data name="&gt;&gt;label35.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;label35.Parent" xml:space="preserve">
-    <value>tableLayoutPanel17</value>
-  </data>
-  <data name="&gt;&gt;label35.ZOrder" xml:space="preserve">
-    <value>1</value>
-  </data>
-  <data name="textBox18.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
-    <value>Fill</value>
-  </data>
-  <data name="textBox18.Font" type="System.Drawing.Font, System.Drawing">
-    <value>微軟正黑體, 12pt, style=Bold</value>
-  </data>
-  <data name="textBox18.Location" type="System.Drawing.Point, System.Drawing">
-    <value>3, 31</value>
-  </data>
-  <data name="textBox18.Size" type="System.Drawing.Size, System.Drawing">
-    <value>219, 29</value>
-  </data>
-  <data name="textBox18.TabIndex" type="System.Int32, mscorlib">
-    <value>61</value>
-  </data>
-  <data name="textBox18.Text" xml:space="preserve">
-    <value>Foup ID</value>
-  </data>
-  <data name="textBox18.TextAlign" type="System.Windows.Forms.HorizontalAlignment, System.Windows.Forms">
-    <value>Center</value>
-  </data>
-  <data name="&gt;&gt;textBox18.Name" xml:space="preserve">
-    <value>textBox18</value>
-  </data>
-  <data name="&gt;&gt;textBox18.Type" xml:space="preserve">
-    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;textBox18.Parent" xml:space="preserve">
-    <value>tableLayoutPanel17</value>
-  </data>
-  <data name="&gt;&gt;textBox18.ZOrder" xml:space="preserve">
-    <value>2</value>
-  </data>
-  <data name="tableLayoutPanel17.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
-    <value>Fill</value>
-  </data>
-  <data name="tableLayoutPanel17.Location" type="System.Drawing.Point, System.Drawing">
-    <value>465, 3</value>
-  </data>
-  <data name="tableLayoutPanel17.RowCount" type="System.Int32, mscorlib">
-    <value>4</value>
-  </data>
-  <data name="tableLayoutPanel17.Size" type="System.Drawing.Size, System.Drawing">
-    <value>225, 722</value>
-  </data>
-  <data name="tableLayoutPanel17.TabIndex" type="System.Int32, mscorlib">
-    <value>2</value>
-  </data>
-  <data name="&gt;&gt;tableLayoutPanel17.Name" xml:space="preserve">
-    <value>tableLayoutPanel17</value>
-  </data>
-  <data name="&gt;&gt;tableLayoutPanel17.Type" xml:space="preserve">
-    <value>System.Windows.Forms.TableLayoutPanel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;tableLayoutPanel17.Parent" xml:space="preserve">
-    <value>tableLayoutPanel12</value>
-  </data>
-  <data name="&gt;&gt;tableLayoutPanel17.ZOrder" xml:space="preserve">
-    <value>0</value>
-  </data>
-  <data name="tableLayoutPanel17.LayoutSettings" type="System.Windows.Forms.TableLayoutSettings, System.Windows.Forms">
-    <value>&lt;?xml version="1.0" encoding="utf-16"?&gt;&lt;TableLayoutSettings&gt;&lt;Controls&gt;&lt;Control Name="dataGridView15" Row="2" RowSpan="1" Column="0" ColumnSpan="1" /&gt;&lt;Control Name="label35" Row="0" RowSpan="1" Column="0" ColumnSpan="1" /&gt;&lt;Control Name="textBox18" Row="1" RowSpan="1" Column="0" ColumnSpan="1" /&gt;&lt;Control Name="splitContainer7" Row="3" RowSpan="1" Column="0" ColumnSpan="1" /&gt;&lt;/Controls&gt;&lt;Columns Styles="Percent,100" /&gt;&lt;Rows Styles="Percent,3.974563,Percent,4.45151,Percent,87.2814,Percent,4.292528,Absolute,20" /&gt;&lt;/TableLayoutSettings&gt;</value>
-  </data>
-  <data name="tableLayoutPanel16.ColumnCount" type="System.Int32, mscorlib">
-    <value>1</value>
-  </data>
-  <metadata name="dataGridViewTextBoxColumn26.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
-  <data name="dataGridViewTextBoxColumn26.HeaderText" xml:space="preserve">
-    <value>Slot</value>
-  </data>
-  <data name="dataGridViewTextBoxColumn26.Width" type="System.Int32, mscorlib">
-    <value>44</value>
-  </data>
-  <metadata name="dataGridViewTextBoxColumn27.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
-  <data name="dataGridViewTextBoxColumn27.HeaderText" xml:space="preserve">
-    <value>Wafer ID</value>
-  </data>
-  <data name="dataGridViewTextBoxColumn27.Width" type="System.Int32, mscorlib">
-    <value>81</value>
-  </data>
-  <data name="dataGridView14.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
-    <value>Fill</value>
-  </data>
-  <data name="dataGridView14.Location" type="System.Drawing.Point, System.Drawing">
-    <value>3, 63</value>
-  </data>
-  <data name="dataGridView14.Size" type="System.Drawing.Size, System.Drawing">
-    <value>219, 624</value>
-  </data>
-  <data name="dataGridView14.TabIndex" type="System.Int32, mscorlib">
-    <value>53</value>
-  </data>
-  <data name="&gt;&gt;dataGridView14.Name" xml:space="preserve">
-    <value>dataGridView14</value>
-  </data>
-  <data name="&gt;&gt;dataGridView14.Type" xml:space="preserve">
-    <value>System.Windows.Forms.DataGridView, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;dataGridView14.Parent" xml:space="preserve">
-    <value>tableLayoutPanel16</value>
-  </data>
-  <data name="&gt;&gt;dataGridView14.ZOrder" xml:space="preserve">
-    <value>0</value>
-  </data>
-  <data name="label32.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
-    <value>Fill</value>
-  </data>
-  <data name="label32.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
-  </data>
-  <data name="label32.Location" type="System.Drawing.Point, System.Drawing">
-    <value>3, 0</value>
-  </data>
-  <data name="label32.Size" type="System.Drawing.Size, System.Drawing">
-    <value>219, 28</value>
-  </data>
-  <data name="label32.TabIndex" type="System.Int32, mscorlib">
-    <value>54</value>
-  </data>
-  <data name="label32.Text" xml:space="preserve">
-    <value>LoadPort02</value>
-  </data>
-  <data name="label32.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
-    <value>MiddleCenter</value>
-  </data>
-  <data name="&gt;&gt;label32.Name" xml:space="preserve">
-    <value>label32</value>
-  </data>
-  <data name="&gt;&gt;label32.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;label32.Parent" xml:space="preserve">
-    <value>tableLayoutPanel16</value>
-  </data>
-  <data name="&gt;&gt;label32.ZOrder" xml:space="preserve">
-    <value>1</value>
-  </data>
-  <data name="textBox17.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
-    <value>Fill</value>
-  </data>
-  <data name="textBox17.Font" type="System.Drawing.Font, System.Drawing">
-    <value>微軟正黑體, 12pt, style=Bold</value>
-  </data>
-  <data name="textBox17.Location" type="System.Drawing.Point, System.Drawing">
-    <value>3, 31</value>
-  </data>
-  <data name="textBox17.Size" type="System.Drawing.Size, System.Drawing">
-    <value>219, 29</value>
-  </data>
-  <data name="textBox17.TabIndex" type="System.Int32, mscorlib">
-    <value>61</value>
-  </data>
-  <data name="textBox17.Text" xml:space="preserve">
-    <value>Foup ID</value>
-  </data>
-  <data name="textBox17.TextAlign" type="System.Windows.Forms.HorizontalAlignment, System.Windows.Forms">
-    <value>Center</value>
-  </data>
-  <data name="&gt;&gt;textBox17.Name" xml:space="preserve">
-    <value>textBox17</value>
-  </data>
-  <data name="&gt;&gt;textBox17.Type" xml:space="preserve">
-    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;textBox17.Parent" xml:space="preserve">
-    <value>tableLayoutPanel16</value>
-  </data>
-  <data name="&gt;&gt;textBox17.ZOrder" xml:space="preserve">
-    <value>2</value>
-  </data>
-  <data name="tableLayoutPanel16.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
-    <value>Fill</value>
-  </data>
-  <data name="tableLayoutPanel16.Location" type="System.Drawing.Point, System.Drawing">
-    <value>234, 3</value>
-  </data>
-  <data name="tableLayoutPanel16.RowCount" type="System.Int32, mscorlib">
-    <value>4</value>
-  </data>
-  <data name="tableLayoutPanel16.Size" type="System.Drawing.Size, System.Drawing">
-    <value>225, 722</value>
-  </data>
-  <data name="tableLayoutPanel16.TabIndex" type="System.Int32, mscorlib">
-    <value>1</value>
-  </data>
-  <data name="&gt;&gt;tableLayoutPanel16.Name" xml:space="preserve">
-    <value>tableLayoutPanel16</value>
-  </data>
-  <data name="&gt;&gt;tableLayoutPanel16.Type" xml:space="preserve">
-    <value>System.Windows.Forms.TableLayoutPanel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;tableLayoutPanel16.Parent" xml:space="preserve">
-    <value>tableLayoutPanel12</value>
-  </data>
-  <data name="&gt;&gt;tableLayoutPanel16.ZOrder" xml:space="preserve">
-    <value>1</value>
-  </data>
-  <data name="tableLayoutPanel16.LayoutSettings" type="System.Windows.Forms.TableLayoutSettings, System.Windows.Forms">
-    <value>&lt;?xml version="1.0" encoding="utf-16"?&gt;&lt;TableLayoutSettings&gt;&lt;Controls&gt;&lt;Control Name="dataGridView14" Row="2" RowSpan="1" Column="0" ColumnSpan="1" /&gt;&lt;Control Name="label32" Row="0" RowSpan="1" Column="0" ColumnSpan="1" /&gt;&lt;Control Name="textBox17" Row="1" RowSpan="1" Column="0" ColumnSpan="1" /&gt;&lt;Control Name="splitContainer6" Row="3" RowSpan="1" Column="0" ColumnSpan="1" /&gt;&lt;/Controls&gt;&lt;Columns Styles="Percent,100" /&gt;&lt;Rows Styles="Percent,3.974563,Percent,4.45151,Percent,87.2814,Percent,4.292528,Absolute,20" /&gt;&lt;/TableLayoutSettings&gt;</value>
+    <value>8</value>
   </data>
   <data name="tableLayoutPanel15.ColumnCount" type="System.Int32, mscorlib">
     <value>1</value>
-  </data>
-  <metadata name="dataGridViewTextBoxColumn22.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
-  <data name="dataGridViewTextBoxColumn22.HeaderText" xml:space="preserve">
-    <value>Slot</value>
-  </data>
-  <data name="dataGridViewTextBoxColumn22.Width" type="System.Int32, mscorlib">
-    <value>44</value>
-  </data>
-  <metadata name="dataGridViewTextBoxColumn24.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
-  <data name="dataGridViewTextBoxColumn24.HeaderText" xml:space="preserve">
-    <value>Wafer ID</value>
-  </data>
-  <data name="dataGridViewTextBoxColumn24.Width" type="System.Int32, mscorlib">
-    <value>81</value>
   </data>
   <data name="dataGridView13.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
     <value>Fill</value>
@@ -5687,7 +4634,7 @@
     <value>3, 63</value>
   </data>
   <data name="dataGridView13.Size" type="System.Drawing.Size, System.Drawing">
-    <value>219, 624</value>
+    <value>188, 624</value>
   </data>
   <data name="dataGridView13.TabIndex" type="System.Int32, mscorlib">
     <value>53</value>
@@ -5714,7 +4661,7 @@
     <value>3, 0</value>
   </data>
   <data name="label29.Size" type="System.Drawing.Size, System.Drawing">
-    <value>219, 28</value>
+    <value>188, 28</value>
   </data>
   <data name="label29.TabIndex" type="System.Int32, mscorlib">
     <value>54</value>
@@ -5747,7 +4694,7 @@
     <value>3, 31</value>
   </data>
   <data name="textBox16.Size" type="System.Drawing.Size, System.Drawing">
-    <value>219, 29</value>
+    <value>188, 29</value>
   </data>
   <data name="textBox16.TabIndex" type="System.Int32, mscorlib">
     <value>61</value>
@@ -5780,7 +4727,7 @@
     <value>4</value>
   </data>
   <data name="tableLayoutPanel15.Size" type="System.Drawing.Size, System.Drawing">
-    <value>225, 722</value>
+    <value>194, 722</value>
   </data>
   <data name="tableLayoutPanel15.TabIndex" type="System.Int32, mscorlib">
     <value>0</value>
@@ -5795,562 +4742,10 @@
     <value>tableLayoutPanel12</value>
   </data>
   <data name="&gt;&gt;tableLayoutPanel15.ZOrder" xml:space="preserve">
-    <value>2</value>
+    <value>0</value>
   </data>
   <data name="tableLayoutPanel15.LayoutSettings" type="System.Windows.Forms.TableLayoutSettings, System.Windows.Forms">
     <value>&lt;?xml version="1.0" encoding="utf-16"?&gt;&lt;TableLayoutSettings&gt;&lt;Controls&gt;&lt;Control Name="dataGridView13" Row="2" RowSpan="1" Column="0" ColumnSpan="1" /&gt;&lt;Control Name="label29" Row="0" RowSpan="1" Column="0" ColumnSpan="1" /&gt;&lt;Control Name="textBox16" Row="1" RowSpan="1" Column="0" ColumnSpan="1" /&gt;&lt;Control Name="splitContainer3" Row="3" RowSpan="1" Column="0" ColumnSpan="1" /&gt;&lt;/Controls&gt;&lt;Columns Styles="Percent,100" /&gt;&lt;Rows Styles="Percent,3.974563,Percent,4.45151,Percent,87.2814,Percent,4.292528,Absolute,20" /&gt;&lt;/TableLayoutSettings&gt;</value>
-  </data>
-  <data name="tableLayoutPanel18.ColumnCount" type="System.Int32, mscorlib">
-    <value>1</value>
-  </data>
-  <data name="tableLayoutPanel22.ColumnCount" type="System.Int32, mscorlib">
-    <value>1</value>
-  </data>
-  <metadata name="dataGridViewTextBoxColumn37.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
-  <data name="dataGridViewTextBoxColumn37.HeaderText" xml:space="preserve">
-    <value>Wafer ID</value>
-  </data>
-  <data name="dataGridView19.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
-    <value>Fill</value>
-  </data>
-  <data name="dataGridView19.Location" type="System.Drawing.Point, System.Drawing">
-    <value>3, 62</value>
-  </data>
-  <data name="dataGridView19.Size" type="System.Drawing.Size, System.Drawing">
-    <value>219, 76</value>
-  </data>
-  <data name="dataGridView19.TabIndex" type="System.Int32, mscorlib">
-    <value>53</value>
-  </data>
-  <data name="&gt;&gt;dataGridView19.Name" xml:space="preserve">
-    <value>dataGridView19</value>
-  </data>
-  <data name="&gt;&gt;dataGridView19.Type" xml:space="preserve">
-    <value>System.Windows.Forms.DataGridView, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;dataGridView19.Parent" xml:space="preserve">
-    <value>tableLayoutPanel22</value>
-  </data>
-  <data name="&gt;&gt;dataGridView19.ZOrder" xml:space="preserve">
-    <value>0</value>
-  </data>
-  <data name="label47.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
-    <value>Fill</value>
-  </data>
-  <data name="label47.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
-  </data>
-  <data name="label47.Location" type="System.Drawing.Point, System.Drawing">
-    <value>3, 0</value>
-  </data>
-  <data name="label47.Size" type="System.Drawing.Size, System.Drawing">
-    <value>219, 28</value>
-  </data>
-  <data name="label47.TabIndex" type="System.Int32, mscorlib">
-    <value>54</value>
-  </data>
-  <data name="label47.Text" xml:space="preserve">
-    <value>PM5</value>
-  </data>
-  <data name="label47.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
-    <value>MiddleCenter</value>
-  </data>
-  <data name="&gt;&gt;label47.Name" xml:space="preserve">
-    <value>label47</value>
-  </data>
-  <data name="&gt;&gt;label47.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;label47.Parent" xml:space="preserve">
-    <value>tableLayoutPanel22</value>
-  </data>
-  <data name="&gt;&gt;label47.ZOrder" xml:space="preserve">
-    <value>1</value>
-  </data>
-  <data name="textBox22.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
-    <value>Fill</value>
-  </data>
-  <data name="textBox22.Font" type="System.Drawing.Font, System.Drawing">
-    <value>微軟正黑體, 12pt, style=Bold</value>
-  </data>
-  <data name="textBox22.Location" type="System.Drawing.Point, System.Drawing">
-    <value>3, 31</value>
-  </data>
-  <data name="textBox22.Size" type="System.Drawing.Size, System.Drawing">
-    <value>219, 29</value>
-  </data>
-  <data name="textBox22.TabIndex" type="System.Int32, mscorlib">
-    <value>61</value>
-  </data>
-  <data name="textBox22.Text" xml:space="preserve">
-    <value>Position ID</value>
-  </data>
-  <data name="textBox22.TextAlign" type="System.Windows.Forms.HorizontalAlignment, System.Windows.Forms">
-    <value>Center</value>
-  </data>
-  <data name="&gt;&gt;textBox22.Name" xml:space="preserve">
-    <value>textBox22</value>
-  </data>
-  <data name="&gt;&gt;textBox22.Type" xml:space="preserve">
-    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;textBox22.Parent" xml:space="preserve">
-    <value>tableLayoutPanel22</value>
-  </data>
-  <data name="&gt;&gt;textBox22.ZOrder" xml:space="preserve">
-    <value>2</value>
-  </data>
-  <data name="tableLayoutPanel22.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
-    <value>Fill</value>
-  </data>
-  <data name="tableLayoutPanel22.Location" type="System.Drawing.Point, System.Drawing">
-    <value>3, 549</value>
-  </data>
-  <data name="tableLayoutPanel22.RowCount" type="System.Int32, mscorlib">
-    <value>4</value>
-  </data>
-  <data name="tableLayoutPanel22.Size" type="System.Drawing.Size, System.Drawing">
-    <value>225, 176</value>
-  </data>
-  <data name="tableLayoutPanel22.TabIndex" type="System.Int32, mscorlib">
-    <value>8</value>
-  </data>
-  <data name="&gt;&gt;tableLayoutPanel22.Name" xml:space="preserve">
-    <value>tableLayoutPanel22</value>
-  </data>
-  <data name="&gt;&gt;tableLayoutPanel22.Type" xml:space="preserve">
-    <value>System.Windows.Forms.TableLayoutPanel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;tableLayoutPanel22.Parent" xml:space="preserve">
-    <value>tableLayoutPanel18</value>
-  </data>
-  <data name="&gt;&gt;tableLayoutPanel22.ZOrder" xml:space="preserve">
-    <value>0</value>
-  </data>
-  <data name="tableLayoutPanel22.LayoutSettings" type="System.Windows.Forms.TableLayoutSettings, System.Windows.Forms">
-    <value>&lt;?xml version="1.0" encoding="utf-16"?&gt;&lt;TableLayoutSettings&gt;&lt;Controls&gt;&lt;Control Name="dataGridView19" Row="2" RowSpan="1" Column="0" ColumnSpan="1" /&gt;&lt;Control Name="label47" Row="0" RowSpan="1" Column="0" ColumnSpan="1" /&gt;&lt;Control Name="textBox22" Row="1" RowSpan="1" Column="0" ColumnSpan="1" /&gt;&lt;Control Name="splitContainer11" Row="3" RowSpan="1" Column="0" ColumnSpan="1" /&gt;&lt;/Controls&gt;&lt;Columns Styles="Percent,100" /&gt;&lt;Rows Styles="Percent,16.33987,Percent,18.30065,Percent,47.71242,Percent,18.95425,Absolute,20" /&gt;&lt;/TableLayoutSettings&gt;</value>
-  </data>
-  <data name="tableLayoutPanel20.ColumnCount" type="System.Int32, mscorlib">
-    <value>1</value>
-  </data>
-  <metadata name="dataGridViewTextBoxColumn33.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
-  <data name="dataGridViewTextBoxColumn33.HeaderText" xml:space="preserve">
-    <value>Wafer ID</value>
-  </data>
-  <data name="dataGridView17.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
-    <value>Fill</value>
-  </data>
-  <data name="dataGridView17.Location" type="System.Drawing.Point, System.Drawing">
-    <value>3, 62</value>
-  </data>
-  <data name="dataGridView17.Size" type="System.Drawing.Size, System.Drawing">
-    <value>219, 76</value>
-  </data>
-  <data name="dataGridView17.TabIndex" type="System.Int32, mscorlib">
-    <value>53</value>
-  </data>
-  <data name="&gt;&gt;dataGridView17.Name" xml:space="preserve">
-    <value>dataGridView17</value>
-  </data>
-  <data name="&gt;&gt;dataGridView17.Type" xml:space="preserve">
-    <value>System.Windows.Forms.DataGridView, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;dataGridView17.Parent" xml:space="preserve">
-    <value>tableLayoutPanel20</value>
-  </data>
-  <data name="&gt;&gt;dataGridView17.ZOrder" xml:space="preserve">
-    <value>0</value>
-  </data>
-  <data name="label41.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
-    <value>Fill</value>
-  </data>
-  <data name="label41.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
-  </data>
-  <data name="label41.Location" type="System.Drawing.Point, System.Drawing">
-    <value>3, 0</value>
-  </data>
-  <data name="label41.Size" type="System.Drawing.Size, System.Drawing">
-    <value>219, 28</value>
-  </data>
-  <data name="label41.TabIndex" type="System.Int32, mscorlib">
-    <value>54</value>
-  </data>
-  <data name="label41.Text" xml:space="preserve">
-    <value>PM3</value>
-  </data>
-  <data name="label41.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
-    <value>MiddleCenter</value>
-  </data>
-  <data name="&gt;&gt;label41.Name" xml:space="preserve">
-    <value>label41</value>
-  </data>
-  <data name="&gt;&gt;label41.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;label41.Parent" xml:space="preserve">
-    <value>tableLayoutPanel20</value>
-  </data>
-  <data name="&gt;&gt;label41.ZOrder" xml:space="preserve">
-    <value>1</value>
-  </data>
-  <data name="textBox20.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
-    <value>Fill</value>
-  </data>
-  <data name="textBox20.Font" type="System.Drawing.Font, System.Drawing">
-    <value>微軟正黑體, 12pt, style=Bold</value>
-  </data>
-  <data name="textBox20.Location" type="System.Drawing.Point, System.Drawing">
-    <value>3, 31</value>
-  </data>
-  <data name="textBox20.Size" type="System.Drawing.Size, System.Drawing">
-    <value>219, 29</value>
-  </data>
-  <data name="textBox20.TabIndex" type="System.Int32, mscorlib">
-    <value>61</value>
-  </data>
-  <data name="textBox20.Text" xml:space="preserve">
-    <value>Position ID</value>
-  </data>
-  <data name="textBox20.TextAlign" type="System.Windows.Forms.HorizontalAlignment, System.Windows.Forms">
-    <value>Center</value>
-  </data>
-  <data name="&gt;&gt;textBox20.Name" xml:space="preserve">
-    <value>textBox20</value>
-  </data>
-  <data name="&gt;&gt;textBox20.Type" xml:space="preserve">
-    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;textBox20.Parent" xml:space="preserve">
-    <value>tableLayoutPanel20</value>
-  </data>
-  <data name="&gt;&gt;textBox20.ZOrder" xml:space="preserve">
-    <value>2</value>
-  </data>
-  <data name="tableLayoutPanel20.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
-    <value>Fill</value>
-  </data>
-  <data name="tableLayoutPanel20.Location" type="System.Drawing.Point, System.Drawing">
-    <value>3, 185</value>
-  </data>
-  <data name="tableLayoutPanel20.RowCount" type="System.Int32, mscorlib">
-    <value>4</value>
-  </data>
-  <data name="tableLayoutPanel20.Size" type="System.Drawing.Size, System.Drawing">
-    <value>225, 176</value>
-  </data>
-  <data name="tableLayoutPanel20.TabIndex" type="System.Int32, mscorlib">
-    <value>6</value>
-  </data>
-  <data name="&gt;&gt;tableLayoutPanel20.Name" xml:space="preserve">
-    <value>tableLayoutPanel20</value>
-  </data>
-  <data name="&gt;&gt;tableLayoutPanel20.Type" xml:space="preserve">
-    <value>System.Windows.Forms.TableLayoutPanel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;tableLayoutPanel20.Parent" xml:space="preserve">
-    <value>tableLayoutPanel18</value>
-  </data>
-  <data name="&gt;&gt;tableLayoutPanel20.ZOrder" xml:space="preserve">
-    <value>1</value>
-  </data>
-  <data name="tableLayoutPanel20.LayoutSettings" type="System.Windows.Forms.TableLayoutSettings, System.Windows.Forms">
-    <value>&lt;?xml version="1.0" encoding="utf-16"?&gt;&lt;TableLayoutSettings&gt;&lt;Controls&gt;&lt;Control Name="dataGridView17" Row="2" RowSpan="1" Column="0" ColumnSpan="1" /&gt;&lt;Control Name="label41" Row="0" RowSpan="1" Column="0" ColumnSpan="1" /&gt;&lt;Control Name="textBox20" Row="1" RowSpan="1" Column="0" ColumnSpan="1" /&gt;&lt;Control Name="splitContainer9" Row="3" RowSpan="1" Column="0" ColumnSpan="1" /&gt;&lt;/Controls&gt;&lt;Columns Styles="Percent,100" /&gt;&lt;Rows Styles="Percent,16.33987,Percent,18.30065,Percent,47.71242,Percent,18.95425,Absolute,20" /&gt;&lt;/TableLayoutSettings&gt;</value>
-  </data>
-  <data name="tableLayoutPanel19.ColumnCount" type="System.Int32, mscorlib">
-    <value>1</value>
-  </data>
-  <metadata name="dataGridViewTextBoxColumn31.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
-  <data name="dataGridViewTextBoxColumn31.HeaderText" xml:space="preserve">
-    <value>Wafer ID</value>
-  </data>
-  <data name="dataGridView16.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
-    <value>Fill</value>
-  </data>
-  <data name="dataGridView16.Location" type="System.Drawing.Point, System.Drawing">
-    <value>3, 62</value>
-  </data>
-  <data name="dataGridView16.Size" type="System.Drawing.Size, System.Drawing">
-    <value>219, 76</value>
-  </data>
-  <data name="dataGridView16.TabIndex" type="System.Int32, mscorlib">
-    <value>53</value>
-  </data>
-  <data name="&gt;&gt;dataGridView16.Name" xml:space="preserve">
-    <value>dataGridView16</value>
-  </data>
-  <data name="&gt;&gt;dataGridView16.Type" xml:space="preserve">
-    <value>System.Windows.Forms.DataGridView, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;dataGridView16.Parent" xml:space="preserve">
-    <value>tableLayoutPanel19</value>
-  </data>
-  <data name="&gt;&gt;dataGridView16.ZOrder" xml:space="preserve">
-    <value>0</value>
-  </data>
-  <data name="label38.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
-    <value>Fill</value>
-  </data>
-  <data name="label38.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
-  </data>
-  <data name="label38.Location" type="System.Drawing.Point, System.Drawing">
-    <value>3, 0</value>
-  </data>
-  <data name="label38.Size" type="System.Drawing.Size, System.Drawing">
-    <value>219, 28</value>
-  </data>
-  <data name="label38.TabIndex" type="System.Int32, mscorlib">
-    <value>54</value>
-  </data>
-  <data name="label38.Text" xml:space="preserve">
-    <value>PM2</value>
-  </data>
-  <data name="label38.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
-    <value>MiddleCenter</value>
-  </data>
-  <data name="&gt;&gt;label38.Name" xml:space="preserve">
-    <value>label38</value>
-  </data>
-  <data name="&gt;&gt;label38.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;label38.Parent" xml:space="preserve">
-    <value>tableLayoutPanel19</value>
-  </data>
-  <data name="&gt;&gt;label38.ZOrder" xml:space="preserve">
-    <value>1</value>
-  </data>
-  <data name="textBox19.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
-    <value>Fill</value>
-  </data>
-  <data name="textBox19.Font" type="System.Drawing.Font, System.Drawing">
-    <value>微軟正黑體, 12pt, style=Bold</value>
-  </data>
-  <data name="textBox19.Location" type="System.Drawing.Point, System.Drawing">
-    <value>3, 31</value>
-  </data>
-  <data name="textBox19.Size" type="System.Drawing.Size, System.Drawing">
-    <value>219, 29</value>
-  </data>
-  <data name="textBox19.TabIndex" type="System.Int32, mscorlib">
-    <value>61</value>
-  </data>
-  <data name="textBox19.Text" xml:space="preserve">
-    <value>Position ID</value>
-  </data>
-  <data name="textBox19.TextAlign" type="System.Windows.Forms.HorizontalAlignment, System.Windows.Forms">
-    <value>Center</value>
-  </data>
-  <data name="&gt;&gt;textBox19.Name" xml:space="preserve">
-    <value>textBox19</value>
-  </data>
-  <data name="&gt;&gt;textBox19.Type" xml:space="preserve">
-    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;textBox19.Parent" xml:space="preserve">
-    <value>tableLayoutPanel19</value>
-  </data>
-  <data name="&gt;&gt;textBox19.ZOrder" xml:space="preserve">
-    <value>2</value>
-  </data>
-  <data name="tableLayoutPanel19.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
-    <value>Fill</value>
-  </data>
-  <data name="tableLayoutPanel19.Location" type="System.Drawing.Point, System.Drawing">
-    <value>3, 3</value>
-  </data>
-  <data name="tableLayoutPanel19.RowCount" type="System.Int32, mscorlib">
-    <value>4</value>
-  </data>
-  <data name="tableLayoutPanel19.Size" type="System.Drawing.Size, System.Drawing">
-    <value>225, 176</value>
-  </data>
-  <data name="tableLayoutPanel19.TabIndex" type="System.Int32, mscorlib">
-    <value>5</value>
-  </data>
-  <data name="&gt;&gt;tableLayoutPanel19.Name" xml:space="preserve">
-    <value>tableLayoutPanel19</value>
-  </data>
-  <data name="&gt;&gt;tableLayoutPanel19.Type" xml:space="preserve">
-    <value>System.Windows.Forms.TableLayoutPanel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;tableLayoutPanel19.Parent" xml:space="preserve">
-    <value>tableLayoutPanel18</value>
-  </data>
-  <data name="&gt;&gt;tableLayoutPanel19.ZOrder" xml:space="preserve">
-    <value>2</value>
-  </data>
-  <data name="tableLayoutPanel19.LayoutSettings" type="System.Windows.Forms.TableLayoutSettings, System.Windows.Forms">
-    <value>&lt;?xml version="1.0" encoding="utf-16"?&gt;&lt;TableLayoutSettings&gt;&lt;Controls&gt;&lt;Control Name="dataGridView16" Row="2" RowSpan="1" Column="0" ColumnSpan="1" /&gt;&lt;Control Name="label38" Row="0" RowSpan="1" Column="0" ColumnSpan="1" /&gt;&lt;Control Name="textBox19" Row="1" RowSpan="1" Column="0" ColumnSpan="1" /&gt;&lt;Control Name="splitContainer8" Row="3" RowSpan="1" Column="0" ColumnSpan="1" /&gt;&lt;/Controls&gt;&lt;Columns Styles="Percent,100" /&gt;&lt;Rows Styles="Percent,16.33987,Percent,18.30065,Percent,47.71242,Percent,18.95425,Absolute,20" /&gt;&lt;/TableLayoutSettings&gt;</value>
-  </data>
-  <data name="tableLayoutPanel21.ColumnCount" type="System.Int32, mscorlib">
-    <value>1</value>
-  </data>
-  <metadata name="dataGridViewTextBoxColumn35.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
-  <data name="dataGridViewTextBoxColumn35.HeaderText" xml:space="preserve">
-    <value>Wafer ID</value>
-  </data>
-  <data name="dataGridView18.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
-    <value>Fill</value>
-  </data>
-  <data name="dataGridView18.Location" type="System.Drawing.Point, System.Drawing">
-    <value>3, 62</value>
-  </data>
-  <data name="dataGridView18.Size" type="System.Drawing.Size, System.Drawing">
-    <value>219, 76</value>
-  </data>
-  <data name="dataGridView18.TabIndex" type="System.Int32, mscorlib">
-    <value>53</value>
-  </data>
-  <data name="&gt;&gt;dataGridView18.Name" xml:space="preserve">
-    <value>dataGridView18</value>
-  </data>
-  <data name="&gt;&gt;dataGridView18.Type" xml:space="preserve">
-    <value>System.Windows.Forms.DataGridView, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;dataGridView18.Parent" xml:space="preserve">
-    <value>tableLayoutPanel21</value>
-  </data>
-  <data name="&gt;&gt;dataGridView18.ZOrder" xml:space="preserve">
-    <value>0</value>
-  </data>
-  <data name="label44.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
-    <value>Fill</value>
-  </data>
-  <data name="label44.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
-  </data>
-  <data name="label44.Location" type="System.Drawing.Point, System.Drawing">
-    <value>3, 0</value>
-  </data>
-  <data name="label44.Size" type="System.Drawing.Size, System.Drawing">
-    <value>219, 28</value>
-  </data>
-  <data name="label44.TabIndex" type="System.Int32, mscorlib">
-    <value>54</value>
-  </data>
-  <data name="label44.Text" xml:space="preserve">
-    <value>PM4</value>
-  </data>
-  <data name="label44.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
-    <value>MiddleCenter</value>
-  </data>
-  <data name="&gt;&gt;label44.Name" xml:space="preserve">
-    <value>label44</value>
-  </data>
-  <data name="&gt;&gt;label44.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;label44.Parent" xml:space="preserve">
-    <value>tableLayoutPanel21</value>
-  </data>
-  <data name="&gt;&gt;label44.ZOrder" xml:space="preserve">
-    <value>1</value>
-  </data>
-  <data name="textBox21.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
-    <value>Fill</value>
-  </data>
-  <data name="textBox21.Font" type="System.Drawing.Font, System.Drawing">
-    <value>微軟正黑體, 12pt, style=Bold</value>
-  </data>
-  <data name="textBox21.Location" type="System.Drawing.Point, System.Drawing">
-    <value>3, 31</value>
-  </data>
-  <data name="textBox21.Size" type="System.Drawing.Size, System.Drawing">
-    <value>219, 29</value>
-  </data>
-  <data name="textBox21.TabIndex" type="System.Int32, mscorlib">
-    <value>61</value>
-  </data>
-  <data name="textBox21.Text" xml:space="preserve">
-    <value>Position ID</value>
-  </data>
-  <data name="textBox21.TextAlign" type="System.Windows.Forms.HorizontalAlignment, System.Windows.Forms">
-    <value>Center</value>
-  </data>
-  <data name="&gt;&gt;textBox21.Name" xml:space="preserve">
-    <value>textBox21</value>
-  </data>
-  <data name="&gt;&gt;textBox21.Type" xml:space="preserve">
-    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;textBox21.Parent" xml:space="preserve">
-    <value>tableLayoutPanel21</value>
-  </data>
-  <data name="&gt;&gt;textBox21.ZOrder" xml:space="preserve">
-    <value>2</value>
-  </data>
-  <data name="tableLayoutPanel21.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
-    <value>Fill</value>
-  </data>
-  <data name="tableLayoutPanel21.Location" type="System.Drawing.Point, System.Drawing">
-    <value>3, 367</value>
-  </data>
-  <data name="tableLayoutPanel21.RowCount" type="System.Int32, mscorlib">
-    <value>4</value>
-  </data>
-  <data name="tableLayoutPanel21.Size" type="System.Drawing.Size, System.Drawing">
-    <value>225, 176</value>
-  </data>
-  <data name="tableLayoutPanel21.TabIndex" type="System.Int32, mscorlib">
-    <value>7</value>
-  </data>
-  <data name="&gt;&gt;tableLayoutPanel21.Name" xml:space="preserve">
-    <value>tableLayoutPanel21</value>
-  </data>
-  <data name="&gt;&gt;tableLayoutPanel21.Type" xml:space="preserve">
-    <value>System.Windows.Forms.TableLayoutPanel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;tableLayoutPanel21.Parent" xml:space="preserve">
-    <value>tableLayoutPanel18</value>
-  </data>
-  <data name="&gt;&gt;tableLayoutPanel21.ZOrder" xml:space="preserve">
-    <value>3</value>
-  </data>
-  <data name="tableLayoutPanel21.LayoutSettings" type="System.Windows.Forms.TableLayoutSettings, System.Windows.Forms">
-    <value>&lt;?xml version="1.0" encoding="utf-16"?&gt;&lt;TableLayoutSettings&gt;&lt;Controls&gt;&lt;Control Name="dataGridView18" Row="2" RowSpan="1" Column="0" ColumnSpan="1" /&gt;&lt;Control Name="label44" Row="0" RowSpan="1" Column="0" ColumnSpan="1" /&gt;&lt;Control Name="textBox21" Row="1" RowSpan="1" Column="0" ColumnSpan="1" /&gt;&lt;Control Name="splitContainer10" Row="3" RowSpan="1" Column="0" ColumnSpan="1" /&gt;&lt;/Controls&gt;&lt;Columns Styles="Percent,100" /&gt;&lt;Rows Styles="Percent,16.33987,Percent,18.30065,Percent,47.71242,Percent,18.95425,Absolute,20" /&gt;&lt;/TableLayoutSettings&gt;</value>
-  </data>
-  <data name="tableLayoutPanel18.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
-    <value>Fill</value>
-  </data>
-  <data name="tableLayoutPanel18.Location" type="System.Drawing.Point, System.Drawing">
-    <value>693, 0</value>
-  </data>
-  <data name="tableLayoutPanel18.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>0, 0, 0, 0</value>
-  </data>
-  <data name="tableLayoutPanel18.RowCount" type="System.Int32, mscorlib">
-    <value>4</value>
-  </data>
-  <data name="tableLayoutPanel18.Size" type="System.Drawing.Size, System.Drawing">
-    <value>231, 728</value>
-  </data>
-  <data name="tableLayoutPanel18.TabIndex" type="System.Int32, mscorlib">
-    <value>3</value>
-  </data>
-  <data name="&gt;&gt;tableLayoutPanel18.Name" xml:space="preserve">
-    <value>tableLayoutPanel18</value>
-  </data>
-  <data name="&gt;&gt;tableLayoutPanel18.Type" xml:space="preserve">
-    <value>System.Windows.Forms.TableLayoutPanel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;tableLayoutPanel18.Parent" xml:space="preserve">
-    <value>tableLayoutPanel12</value>
-  </data>
-  <data name="&gt;&gt;tableLayoutPanel18.ZOrder" xml:space="preserve">
-    <value>3</value>
-  </data>
-  <data name="tableLayoutPanel18.LayoutSettings" type="System.Windows.Forms.TableLayoutSettings, System.Windows.Forms">
-    <value>&lt;?xml version="1.0" encoding="utf-16"?&gt;&lt;TableLayoutSettings&gt;&lt;Controls&gt;&lt;Control Name="tableLayoutPanel22" Row="3" RowSpan="1" Column="0" ColumnSpan="1" /&gt;&lt;Control Name="tableLayoutPanel20" Row="1" RowSpan="1" Column="0" ColumnSpan="1" /&gt;&lt;Control Name="tableLayoutPanel19" Row="0" RowSpan="1" Column="0" ColumnSpan="1" /&gt;&lt;Control Name="tableLayoutPanel21" Row="2" RowSpan="1" Column="0" ColumnSpan="1" /&gt;&lt;/Controls&gt;&lt;Columns Styles="Percent,100" /&gt;&lt;Rows Styles="Percent,25,Percent,25,Percent,25,Percent,25,Absolute,20" /&gt;&lt;/TableLayoutSettings&gt;</value>
   </data>
   <data name="tableLayoutPanel12.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
     <value>Fill</value>
@@ -6362,7 +4757,7 @@
     <value>1</value>
   </data>
   <data name="tableLayoutPanel12.Size" type="System.Drawing.Size, System.Drawing">
-    <value>1388, 728</value>
+    <value>1604, 728</value>
   </data>
   <data name="tableLayoutPanel12.TabIndex" type="System.Int32, mscorlib">
     <value>0</value>
@@ -6380,7 +4775,7 @@
     <value>0</value>
   </data>
   <data name="tableLayoutPanel12.LayoutSettings" type="System.Windows.Forms.TableLayoutSettings, System.Windows.Forms">
-    <value>&lt;?xml version="1.0" encoding="utf-16"?&gt;&lt;TableLayoutSettings&gt;&lt;Controls&gt;&lt;Control Name="tableLayoutPanel17" Row="0" RowSpan="1" Column="2" ColumnSpan="1" /&gt;&lt;Control Name="tableLayoutPanel16" Row="0" RowSpan="1" Column="1" ColumnSpan="1" /&gt;&lt;Control Name="tableLayoutPanel15" Row="0" RowSpan="1" Column="0" ColumnSpan="1" /&gt;&lt;Control Name="tableLayoutPanel18" Row="0" RowSpan="1" Column="3" ColumnSpan="1" /&gt;&lt;/Controls&gt;&lt;Columns Styles="Percent,16.66667,Percent,16.66667,Percent,16.66667,Percent,16.66667,Percent,16.66667,Percent,16.66667" /&gt;&lt;Rows Styles="Percent,100" /&gt;&lt;/TableLayoutSettings&gt;</value>
+    <value>&lt;?xml version="1.0" encoding="utf-16"?&gt;&lt;TableLayoutSettings&gt;&lt;Controls&gt;&lt;Control Name="tableLayoutPanel15" Row="0" RowSpan="1" Column="0" ColumnSpan="1" /&gt;&lt;/Controls&gt;&lt;Columns Styles="Percent,12.49875,Percent,12.49875,Percent,12.50125,Percent,12.50125,Percent,12.49875,Percent,12.49875,Percent,12.50125,Percent,12.50125" /&gt;&lt;Rows Styles="Percent,100" /&gt;&lt;/TableLayoutSettings&gt;</value>
   </data>
   <data name="groupBox11.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
     <value>Fill</value>
@@ -6389,7 +4784,7 @@
     <value>3, 3</value>
   </data>
   <data name="groupBox11.Size" type="System.Drawing.Size, System.Drawing">
-    <value>1394, 756</value>
+    <value>1610, 756</value>
   </data>
   <data name="groupBox11.TabIndex" type="System.Int32, mscorlib">
     <value>0</value>
@@ -6407,7 +4802,7 @@
     <value>tableLayoutPanel14</value>
   </data>
   <data name="&gt;&gt;groupBox11.ZOrder" xml:space="preserve">
-    <value>1</value>
+    <value>0</value>
   </data>
   <data name="tableLayoutPanel14.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
     <value>Fill</value>
@@ -6437,7 +4832,7 @@
     <value>0</value>
   </data>
   <data name="tableLayoutPanel14.LayoutSettings" type="System.Windows.Forms.TableLayoutSettings, System.Windows.Forms">
-    <value>&lt;?xml version="1.0" encoding="utf-16"?&gt;&lt;TableLayoutSettings&gt;&lt;Controls&gt;&lt;Control Name="groupBox14" Row="0" RowSpan="1" Column="0" ColumnSpan="1" /&gt;&lt;Control Name="groupBox11" Row="0" RowSpan="1" Column="0" ColumnSpan="1" /&gt;&lt;/Controls&gt;&lt;Columns Styles="Percent,86.23266,Percent,13.76734" /&gt;&lt;Rows Styles="Percent,100,Absolute,762" /&gt;&lt;/TableLayoutSettings&gt;</value>
+    <value>&lt;?xml version="1.0" encoding="utf-16"?&gt;&lt;TableLayoutSettings&gt;&lt;Controls&gt;&lt;Control Name="groupBox11" Row="0" RowSpan="1" Column="0" ColumnSpan="1" /&gt;&lt;/Controls&gt;&lt;Columns Styles="Percent,99.50739,Percent,0.4926108" /&gt;&lt;Rows Styles="Percent,100,Absolute,762" /&gt;&lt;/TableLayoutSettings&gt;</value>
   </data>
   <data name="tabMapping.Location" type="System.Drawing.Point, System.Drawing">
     <value>4, 44</value>
@@ -7612,6 +6007,834 @@
   <data name="tableLayoutPanel13.ColumnCount" type="System.Int32, mscorlib">
     <value>2</value>
   </data>
+  <data name="splitContainer10.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Fill</value>
+  </data>
+  <data name="splitContainer10.Location" type="System.Drawing.Point, System.Drawing">
+    <value>815, 384</value>
+  </data>
+  <data name="splitContainer10.Orientation" type="System.Windows.Forms.Orientation, System.Windows.Forms">
+    <value>Horizontal</value>
+  </data>
+  <data name="button26.FlatStyle" type="System.Windows.Forms.FlatStyle, System.Windows.Forms">
+    <value>Flat</value>
+  </data>
+  <data name="button26.Font" type="System.Drawing.Font, System.Drawing">
+    <value>微軟正黑體, 15.75pt</value>
+  </data>
+  <data name="button26.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="button26.Location" type="System.Drawing.Point, System.Drawing">
+    <value>615, 16</value>
+  </data>
+  <data name="button26.Size" type="System.Drawing.Size, System.Drawing">
+    <value>185, 40</value>
+  </data>
+  <data name="button26.TabIndex" type="System.Int32, mscorlib">
+    <value>3</value>
+  </data>
+  <data name="button26.Text" xml:space="preserve">
+    <value>OCR Offline Mode</value>
+  </data>
+  <data name="&gt;&gt;button26.Name" xml:space="preserve">
+    <value>button26</value>
+  </data>
+  <data name="&gt;&gt;button26.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;button26.Parent" xml:space="preserve">
+    <value>groupBox17</value>
+  </data>
+  <data name="&gt;&gt;button26.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="button28.FlatStyle" type="System.Windows.Forms.FlatStyle, System.Windows.Forms">
+    <value>Flat</value>
+  </data>
+  <data name="button28.Font" type="System.Drawing.Font, System.Drawing">
+    <value>微軟正黑體, 15.75pt</value>
+  </data>
+  <data name="button28.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="button28.Location" type="System.Drawing.Point, System.Drawing">
+    <value>434, 16</value>
+  </data>
+  <data name="button28.Size" type="System.Drawing.Size, System.Drawing">
+    <value>175, 40</value>
+  </data>
+  <data name="button28.TabIndex" type="System.Int32, mscorlib">
+    <value>2</value>
+  </data>
+  <data name="button28.Text" xml:space="preserve">
+    <value>OCR Online Mode</value>
+  </data>
+  <data name="&gt;&gt;button28.Name" xml:space="preserve">
+    <value>button28</value>
+  </data>
+  <data name="&gt;&gt;button28.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;button28.Parent" xml:space="preserve">
+    <value>groupBox17</value>
+  </data>
+  <data name="&gt;&gt;button28.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="groupBox17.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Fill</value>
+  </data>
+  <data name="groupBox17.Location" type="System.Drawing.Point, System.Drawing">
+    <value>0, 0</value>
+  </data>
+  <data name="groupBox17.Size" type="System.Drawing.Size, System.Drawing">
+    <value>806, 61</value>
+  </data>
+  <data name="groupBox17.TabIndex" type="System.Int32, mscorlib">
+    <value>1</value>
+  </data>
+  <data name="groupBox17.Text" xml:space="preserve">
+    <value>OCR 4</value>
+  </data>
+  <data name="&gt;&gt;groupBox17.Name" xml:space="preserve">
+    <value>groupBox17</value>
+  </data>
+  <data name="&gt;&gt;groupBox17.Type" xml:space="preserve">
+    <value>System.Windows.Forms.GroupBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;groupBox17.Parent" xml:space="preserve">
+    <value>splitContainer10.Panel1</value>
+  </data>
+  <data name="&gt;&gt;groupBox17.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="&gt;&gt;splitContainer10.Panel1.Name" xml:space="preserve">
+    <value>splitContainer10.Panel1</value>
+  </data>
+  <data name="&gt;&gt;splitContainer10.Panel1.Type" xml:space="preserve">
+    <value>System.Windows.Forms.SplitterPanel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;splitContainer10.Panel1.Parent" xml:space="preserve">
+    <value>splitContainer10</value>
+  </data>
+  <data name="&gt;&gt;splitContainer10.Panel1.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="button29.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Bottom, Right</value>
+  </data>
+  <data name="button29.FlatStyle" type="System.Windows.Forms.FlatStyle, System.Windows.Forms">
+    <value>Flat</value>
+  </data>
+  <data name="button29.Font" type="System.Drawing.Font, System.Drawing">
+    <value>微軟正黑體, 15.75pt</value>
+  </data>
+  <data name="button29.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="button29.Location" type="System.Drawing.Point, System.Drawing">
+    <value>605, 257</value>
+  </data>
+  <data name="button29.Size" type="System.Drawing.Size, System.Drawing">
+    <value>191, 40</value>
+  </data>
+  <data name="button29.TabIndex" type="System.Int32, mscorlib">
+    <value>63</value>
+  </data>
+  <data name="button29.Text" xml:space="preserve">
+    <value>Read</value>
+  </data>
+  <data name="&gt;&gt;button29.Name" xml:space="preserve">
+    <value>button29</value>
+  </data>
+  <data name="&gt;&gt;button29.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;button29.Parent" xml:space="preserve">
+    <value>splitContainer10.Panel2</value>
+  </data>
+  <data name="&gt;&gt;button29.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="textBox7.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Bottom, Right</value>
+  </data>
+  <data name="textBox7.Font" type="System.Drawing.Font, System.Drawing">
+    <value>微軟正黑體, 20.25pt, style=Bold</value>
+  </data>
+  <data name="textBox7.Location" type="System.Drawing.Point, System.Drawing">
+    <value>111, 254</value>
+  </data>
+  <data name="textBox7.Size" type="System.Drawing.Size, System.Drawing">
+    <value>488, 43</value>
+  </data>
+  <data name="textBox7.TabIndex" type="System.Int32, mscorlib">
+    <value>62</value>
+  </data>
+  <data name="textBox7.TextAlign" type="System.Windows.Forms.HorizontalAlignment, System.Windows.Forms">
+    <value>Center</value>
+  </data>
+  <data name="&gt;&gt;textBox7.Name" xml:space="preserve">
+    <value>textBox7</value>
+  </data>
+  <data name="&gt;&gt;textBox7.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;textBox7.Parent" xml:space="preserve">
+    <value>splitContainer10.Panel2</value>
+  </data>
+  <data name="&gt;&gt;textBox7.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="label38.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Bottom, Right</value>
+  </data>
+  <data name="label38.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="label38.Location" type="System.Drawing.Point, System.Drawing">
+    <value>-12, 263</value>
+  </data>
+  <data name="label38.Size" type="System.Drawing.Size, System.Drawing">
+    <value>141, 28</value>
+  </data>
+  <data name="label38.TabIndex" type="System.Int32, mscorlib">
+    <value>55</value>
+  </data>
+  <data name="label38.Text" xml:space="preserve">
+    <value>Wafer ID</value>
+  </data>
+  <data name="label38.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
+    <value>MiddleCenter</value>
+  </data>
+  <data name="&gt;&gt;label38.Name" xml:space="preserve">
+    <value>label38</value>
+  </data>
+  <data name="&gt;&gt;label38.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;label38.Parent" xml:space="preserve">
+    <value>splitContainer10.Panel2</value>
+  </data>
+  <data name="&gt;&gt;label38.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="pictureBox4.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Top</value>
+  </data>
+  <data name="pictureBox4.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="pictureBox4.Location" type="System.Drawing.Point, System.Drawing">
+    <value>0, 0</value>
+  </data>
+  <data name="pictureBox4.Size" type="System.Drawing.Size, System.Drawing">
+    <value>806, 247</value>
+  </data>
+  <data name="pictureBox4.SizeMode" type="System.Windows.Forms.PictureBoxSizeMode, System.Windows.Forms">
+    <value>CenterImage</value>
+  </data>
+  <data name="pictureBox4.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="&gt;&gt;pictureBox4.Name" xml:space="preserve">
+    <value>pictureBox4</value>
+  </data>
+  <data name="&gt;&gt;pictureBox4.Type" xml:space="preserve">
+    <value>System.Windows.Forms.PictureBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;pictureBox4.Parent" xml:space="preserve">
+    <value>splitContainer10.Panel2</value>
+  </data>
+  <data name="&gt;&gt;pictureBox4.ZOrder" xml:space="preserve">
+    <value>3</value>
+  </data>
+  <data name="&gt;&gt;splitContainer10.Panel2.Name" xml:space="preserve">
+    <value>splitContainer10.Panel2</value>
+  </data>
+  <data name="&gt;&gt;splitContainer10.Panel2.Type" xml:space="preserve">
+    <value>System.Windows.Forms.SplitterPanel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;splitContainer10.Panel2.Parent" xml:space="preserve">
+    <value>splitContainer10</value>
+  </data>
+  <data name="&gt;&gt;splitContainer10.Panel2.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="splitContainer10.Size" type="System.Drawing.Size, System.Drawing">
+    <value>806, 375</value>
+  </data>
+  <data name="splitContainer10.SplitterDistance" type="System.Int32, mscorlib">
+    <value>61</value>
+  </data>
+  <data name="splitContainer10.TabIndex" type="System.Int32, mscorlib">
+    <value>4</value>
+  </data>
+  <data name="&gt;&gt;splitContainer10.Name" xml:space="preserve">
+    <value>splitContainer10</value>
+  </data>
+  <data name="&gt;&gt;splitContainer10.Type" xml:space="preserve">
+    <value>System.Windows.Forms.SplitContainer, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;splitContainer10.Parent" xml:space="preserve">
+    <value>tableLayoutPanel13</value>
+  </data>
+  <data name="&gt;&gt;splitContainer10.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="splitContainer9.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Fill</value>
+  </data>
+  <data name="splitContainer9.Location" type="System.Drawing.Point, System.Drawing">
+    <value>3, 384</value>
+  </data>
+  <data name="splitContainer9.Orientation" type="System.Windows.Forms.Orientation, System.Windows.Forms">
+    <value>Horizontal</value>
+  </data>
+  <data name="button4.FlatStyle" type="System.Windows.Forms.FlatStyle, System.Windows.Forms">
+    <value>Flat</value>
+  </data>
+  <data name="button4.Font" type="System.Drawing.Font, System.Drawing">
+    <value>微軟正黑體, 15.75pt</value>
+  </data>
+  <data name="button4.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="button4.Location" type="System.Drawing.Point, System.Drawing">
+    <value>615, 16</value>
+  </data>
+  <data name="button4.Size" type="System.Drawing.Size, System.Drawing">
+    <value>185, 40</value>
+  </data>
+  <data name="button4.TabIndex" type="System.Int32, mscorlib">
+    <value>3</value>
+  </data>
+  <data name="button4.Text" xml:space="preserve">
+    <value>OCR Offline Mode</value>
+  </data>
+  <data name="&gt;&gt;button4.Name" xml:space="preserve">
+    <value>button4</value>
+  </data>
+  <data name="&gt;&gt;button4.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;button4.Parent" xml:space="preserve">
+    <value>groupBox14</value>
+  </data>
+  <data name="&gt;&gt;button4.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="button24.FlatStyle" type="System.Windows.Forms.FlatStyle, System.Windows.Forms">
+    <value>Flat</value>
+  </data>
+  <data name="button24.Font" type="System.Drawing.Font, System.Drawing">
+    <value>微軟正黑體, 15.75pt</value>
+  </data>
+  <data name="button24.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="button24.Location" type="System.Drawing.Point, System.Drawing">
+    <value>434, 16</value>
+  </data>
+  <data name="button24.Size" type="System.Drawing.Size, System.Drawing">
+    <value>175, 40</value>
+  </data>
+  <data name="button24.TabIndex" type="System.Int32, mscorlib">
+    <value>2</value>
+  </data>
+  <data name="button24.Text" xml:space="preserve">
+    <value>OCR Online Mode</value>
+  </data>
+  <data name="&gt;&gt;button24.Name" xml:space="preserve">
+    <value>button24</value>
+  </data>
+  <data name="&gt;&gt;button24.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;button24.Parent" xml:space="preserve">
+    <value>groupBox14</value>
+  </data>
+  <data name="&gt;&gt;button24.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="groupBox14.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Fill</value>
+  </data>
+  <data name="groupBox14.Location" type="System.Drawing.Point, System.Drawing">
+    <value>0, 0</value>
+  </data>
+  <data name="groupBox14.Size" type="System.Drawing.Size, System.Drawing">
+    <value>806, 61</value>
+  </data>
+  <data name="groupBox14.TabIndex" type="System.Int32, mscorlib">
+    <value>1</value>
+  </data>
+  <data name="groupBox14.Text" xml:space="preserve">
+    <value>OCR 3</value>
+  </data>
+  <data name="&gt;&gt;groupBox14.Name" xml:space="preserve">
+    <value>groupBox14</value>
+  </data>
+  <data name="&gt;&gt;groupBox14.Type" xml:space="preserve">
+    <value>System.Windows.Forms.GroupBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;groupBox14.Parent" xml:space="preserve">
+    <value>splitContainer9.Panel1</value>
+  </data>
+  <data name="&gt;&gt;groupBox14.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="&gt;&gt;splitContainer9.Panel1.Name" xml:space="preserve">
+    <value>splitContainer9.Panel1</value>
+  </data>
+  <data name="&gt;&gt;splitContainer9.Panel1.Type" xml:space="preserve">
+    <value>System.Windows.Forms.SplitterPanel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;splitContainer9.Panel1.Parent" xml:space="preserve">
+    <value>splitContainer9</value>
+  </data>
+  <data name="&gt;&gt;splitContainer9.Panel1.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="button25.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Bottom, Right</value>
+  </data>
+  <data name="button25.FlatStyle" type="System.Windows.Forms.FlatStyle, System.Windows.Forms">
+    <value>Flat</value>
+  </data>
+  <data name="button25.Font" type="System.Drawing.Font, System.Drawing">
+    <value>微軟正黑體, 15.75pt</value>
+  </data>
+  <data name="button25.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="button25.Location" type="System.Drawing.Point, System.Drawing">
+    <value>605, 257</value>
+  </data>
+  <data name="button25.Size" type="System.Drawing.Size, System.Drawing">
+    <value>191, 40</value>
+  </data>
+  <data name="button25.TabIndex" type="System.Int32, mscorlib">
+    <value>63</value>
+  </data>
+  <data name="button25.Text" xml:space="preserve">
+    <value>Read</value>
+  </data>
+  <data name="&gt;&gt;button25.Name" xml:space="preserve">
+    <value>button25</value>
+  </data>
+  <data name="&gt;&gt;button25.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;button25.Parent" xml:space="preserve">
+    <value>splitContainer9.Panel2</value>
+  </data>
+  <data name="&gt;&gt;button25.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="textBox2.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Bottom, Right</value>
+  </data>
+  <data name="textBox2.Font" type="System.Drawing.Font, System.Drawing">
+    <value>微軟正黑體, 20.25pt, style=Bold</value>
+  </data>
+  <data name="textBox2.Location" type="System.Drawing.Point, System.Drawing">
+    <value>111, 254</value>
+  </data>
+  <data name="textBox2.Size" type="System.Drawing.Size, System.Drawing">
+    <value>488, 43</value>
+  </data>
+  <data name="textBox2.TabIndex" type="System.Int32, mscorlib">
+    <value>62</value>
+  </data>
+  <data name="textBox2.TextAlign" type="System.Windows.Forms.HorizontalAlignment, System.Windows.Forms">
+    <value>Center</value>
+  </data>
+  <data name="&gt;&gt;textBox2.Name" xml:space="preserve">
+    <value>textBox2</value>
+  </data>
+  <data name="&gt;&gt;textBox2.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;textBox2.Parent" xml:space="preserve">
+    <value>splitContainer9.Panel2</value>
+  </data>
+  <data name="&gt;&gt;textBox2.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="label14.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Bottom, Right</value>
+  </data>
+  <data name="label14.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="label14.Location" type="System.Drawing.Point, System.Drawing">
+    <value>-12, 263</value>
+  </data>
+  <data name="label14.Size" type="System.Drawing.Size, System.Drawing">
+    <value>141, 28</value>
+  </data>
+  <data name="label14.TabIndex" type="System.Int32, mscorlib">
+    <value>55</value>
+  </data>
+  <data name="label14.Text" xml:space="preserve">
+    <value>Wafer ID</value>
+  </data>
+  <data name="label14.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
+    <value>MiddleCenter</value>
+  </data>
+  <data name="&gt;&gt;label14.Name" xml:space="preserve">
+    <value>label14</value>
+  </data>
+  <data name="&gt;&gt;label14.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;label14.Parent" xml:space="preserve">
+    <value>splitContainer9.Panel2</value>
+  </data>
+  <data name="&gt;&gt;label14.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="pictureBox3.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Top</value>
+  </data>
+  <data name="pictureBox3.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="pictureBox3.Location" type="System.Drawing.Point, System.Drawing">
+    <value>0, 0</value>
+  </data>
+  <data name="pictureBox3.Size" type="System.Drawing.Size, System.Drawing">
+    <value>806, 247</value>
+  </data>
+  <data name="pictureBox3.SizeMode" type="System.Windows.Forms.PictureBoxSizeMode, System.Windows.Forms">
+    <value>CenterImage</value>
+  </data>
+  <data name="pictureBox3.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="&gt;&gt;pictureBox3.Name" xml:space="preserve">
+    <value>pictureBox3</value>
+  </data>
+  <data name="&gt;&gt;pictureBox3.Type" xml:space="preserve">
+    <value>System.Windows.Forms.PictureBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;pictureBox3.Parent" xml:space="preserve">
+    <value>splitContainer9.Panel2</value>
+  </data>
+  <data name="&gt;&gt;pictureBox3.ZOrder" xml:space="preserve">
+    <value>3</value>
+  </data>
+  <data name="&gt;&gt;splitContainer9.Panel2.Name" xml:space="preserve">
+    <value>splitContainer9.Panel2</value>
+  </data>
+  <data name="&gt;&gt;splitContainer9.Panel2.Type" xml:space="preserve">
+    <value>System.Windows.Forms.SplitterPanel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;splitContainer9.Panel2.Parent" xml:space="preserve">
+    <value>splitContainer9</value>
+  </data>
+  <data name="&gt;&gt;splitContainer9.Panel2.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="splitContainer9.Size" type="System.Drawing.Size, System.Drawing">
+    <value>806, 375</value>
+  </data>
+  <data name="splitContainer9.SplitterDistance" type="System.Int32, mscorlib">
+    <value>61</value>
+  </data>
+  <data name="splitContainer9.TabIndex" type="System.Int32, mscorlib">
+    <value>3</value>
+  </data>
+  <data name="&gt;&gt;splitContainer9.Name" xml:space="preserve">
+    <value>splitContainer9</value>
+  </data>
+  <data name="&gt;&gt;splitContainer9.Type" xml:space="preserve">
+    <value>System.Windows.Forms.SplitContainer, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;splitContainer9.Parent" xml:space="preserve">
+    <value>tableLayoutPanel13</value>
+  </data>
+  <data name="&gt;&gt;splitContainer9.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="splitContainer8.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Fill</value>
+  </data>
+  <data name="splitContainer8.Location" type="System.Drawing.Point, System.Drawing">
+    <value>815, 3</value>
+  </data>
+  <data name="splitContainer8.Orientation" type="System.Windows.Forms.Orientation, System.Windows.Forms">
+    <value>Horizontal</value>
+  </data>
+  <data name="OCR02Offline_Btn.FlatStyle" type="System.Windows.Forms.FlatStyle, System.Windows.Forms">
+    <value>Flat</value>
+  </data>
+  <data name="OCR02Offline_Btn.Font" type="System.Drawing.Font, System.Drawing">
+    <value>微軟正黑體, 15.75pt</value>
+  </data>
+  <data name="OCR02Offline_Btn.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="OCR02Offline_Btn.Location" type="System.Drawing.Point, System.Drawing">
+    <value>615, 16</value>
+  </data>
+  <data name="OCR02Offline_Btn.Size" type="System.Drawing.Size, System.Drawing">
+    <value>185, 40</value>
+  </data>
+  <data name="OCR02Offline_Btn.TabIndex" type="System.Int32, mscorlib">
+    <value>3</value>
+  </data>
+  <data name="OCR02Offline_Btn.Text" xml:space="preserve">
+    <value>OCR Offline Mode</value>
+  </data>
+  <data name="&gt;&gt;OCR02Offline_Btn.Name" xml:space="preserve">
+    <value>OCR02Offline_Btn</value>
+  </data>
+  <data name="&gt;&gt;OCR02Offline_Btn.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;OCR02Offline_Btn.Parent" xml:space="preserve">
+    <value>groupBox4</value>
+  </data>
+  <data name="&gt;&gt;OCR02Offline_Btn.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="OCR02Online_Btn.FlatStyle" type="System.Windows.Forms.FlatStyle, System.Windows.Forms">
+    <value>Flat</value>
+  </data>
+  <data name="OCR02Online_Btn.Font" type="System.Drawing.Font, System.Drawing">
+    <value>微軟正黑體, 15.75pt</value>
+  </data>
+  <data name="OCR02Online_Btn.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="OCR02Online_Btn.Location" type="System.Drawing.Point, System.Drawing">
+    <value>434, 16</value>
+  </data>
+  <data name="OCR02Online_Btn.Size" type="System.Drawing.Size, System.Drawing">
+    <value>175, 40</value>
+  </data>
+  <data name="OCR02Online_Btn.TabIndex" type="System.Int32, mscorlib">
+    <value>2</value>
+  </data>
+  <data name="OCR02Online_Btn.Text" xml:space="preserve">
+    <value>OCR Online Mode</value>
+  </data>
+  <data name="&gt;&gt;OCR02Online_Btn.Name" xml:space="preserve">
+    <value>OCR02Online_Btn</value>
+  </data>
+  <data name="&gt;&gt;OCR02Online_Btn.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;OCR02Online_Btn.Parent" xml:space="preserve">
+    <value>groupBox4</value>
+  </data>
+  <data name="&gt;&gt;OCR02Online_Btn.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="groupBox4.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Fill</value>
+  </data>
+  <data name="groupBox4.Location" type="System.Drawing.Point, System.Drawing">
+    <value>0, 0</value>
+  </data>
+  <data name="groupBox4.Size" type="System.Drawing.Size, System.Drawing">
+    <value>806, 61</value>
+  </data>
+  <data name="groupBox4.TabIndex" type="System.Int32, mscorlib">
+    <value>1</value>
+  </data>
+  <data name="groupBox4.Text" xml:space="preserve">
+    <value>OCR 2</value>
+  </data>
+  <data name="&gt;&gt;groupBox4.Name" xml:space="preserve">
+    <value>groupBox4</value>
+  </data>
+  <data name="&gt;&gt;groupBox4.Type" xml:space="preserve">
+    <value>System.Windows.Forms.GroupBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;groupBox4.Parent" xml:space="preserve">
+    <value>splitContainer8.Panel1</value>
+  </data>
+  <data name="&gt;&gt;groupBox4.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="&gt;&gt;splitContainer8.Panel1.Name" xml:space="preserve">
+    <value>splitContainer8.Panel1</value>
+  </data>
+  <data name="&gt;&gt;splitContainer8.Panel1.Type" xml:space="preserve">
+    <value>System.Windows.Forms.SplitterPanel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;splitContainer8.Panel1.Parent" xml:space="preserve">
+    <value>splitContainer8</value>
+  </data>
+  <data name="&gt;&gt;splitContainer8.Panel1.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="OCR02Read_Bt.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Bottom, Right</value>
+  </data>
+  <data name="OCR02Read_Bt.FlatStyle" type="System.Windows.Forms.FlatStyle, System.Windows.Forms">
+    <value>Flat</value>
+  </data>
+  <data name="OCR02Read_Bt.Font" type="System.Drawing.Font, System.Drawing">
+    <value>微軟正黑體, 15.75pt</value>
+  </data>
+  <data name="OCR02Read_Bt.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="OCR02Read_Bt.Location" type="System.Drawing.Point, System.Drawing">
+    <value>605, 257</value>
+  </data>
+  <data name="OCR02Read_Bt.Size" type="System.Drawing.Size, System.Drawing">
+    <value>191, 40</value>
+  </data>
+  <data name="OCR02Read_Bt.TabIndex" type="System.Int32, mscorlib">
+    <value>63</value>
+  </data>
+  <data name="OCR02Read_Bt.Text" xml:space="preserve">
+    <value>Read</value>
+  </data>
+  <data name="&gt;&gt;OCR02Read_Bt.Name" xml:space="preserve">
+    <value>OCR02Read_Bt</value>
+  </data>
+  <data name="&gt;&gt;OCR02Read_Bt.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;OCR02Read_Bt.Parent" xml:space="preserve">
+    <value>splitContainer8.Panel2</value>
+  </data>
+  <data name="&gt;&gt;OCR02Read_Bt.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="OCR02Read_Tb.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Bottom, Right</value>
+  </data>
+  <data name="OCR02Read_Tb.Font" type="System.Drawing.Font, System.Drawing">
+    <value>微軟正黑體, 20.25pt, style=Bold</value>
+  </data>
+  <data name="OCR02Read_Tb.Location" type="System.Drawing.Point, System.Drawing">
+    <value>111, 254</value>
+  </data>
+  <data name="OCR02Read_Tb.Size" type="System.Drawing.Size, System.Drawing">
+    <value>488, 43</value>
+  </data>
+  <data name="OCR02Read_Tb.TabIndex" type="System.Int32, mscorlib">
+    <value>62</value>
+  </data>
+  <data name="OCR02Read_Tb.TextAlign" type="System.Windows.Forms.HorizontalAlignment, System.Windows.Forms">
+    <value>Center</value>
+  </data>
+  <data name="&gt;&gt;OCR02Read_Tb.Name" xml:space="preserve">
+    <value>OCR02Read_Tb</value>
+  </data>
+  <data name="&gt;&gt;OCR02Read_Tb.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;OCR02Read_Tb.Parent" xml:space="preserve">
+    <value>splitContainer8.Panel2</value>
+  </data>
+  <data name="&gt;&gt;OCR02Read_Tb.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="label7.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Bottom, Right</value>
+  </data>
+  <data name="label7.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="label7.Location" type="System.Drawing.Point, System.Drawing">
+    <value>-12, 263</value>
+  </data>
+  <data name="label7.Size" type="System.Drawing.Size, System.Drawing">
+    <value>141, 28</value>
+  </data>
+  <data name="label7.TabIndex" type="System.Int32, mscorlib">
+    <value>55</value>
+  </data>
+  <data name="label7.Text" xml:space="preserve">
+    <value>Wafer ID</value>
+  </data>
+  <data name="label7.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
+    <value>MiddleCenter</value>
+  </data>
+  <data name="&gt;&gt;label7.Name" xml:space="preserve">
+    <value>label7</value>
+  </data>
+  <data name="&gt;&gt;label7.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;label7.Parent" xml:space="preserve">
+    <value>splitContainer8.Panel2</value>
+  </data>
+  <data name="&gt;&gt;label7.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="OCR02_Pic.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Top</value>
+  </data>
+  <data name="OCR02_Pic.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="OCR02_Pic.Location" type="System.Drawing.Point, System.Drawing">
+    <value>0, 0</value>
+  </data>
+  <data name="OCR02_Pic.Size" type="System.Drawing.Size, System.Drawing">
+    <value>806, 247</value>
+  </data>
+  <data name="OCR02_Pic.SizeMode" type="System.Windows.Forms.PictureBoxSizeMode, System.Windows.Forms">
+    <value>CenterImage</value>
+  </data>
+  <data name="OCR02_Pic.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="&gt;&gt;OCR02_Pic.Name" xml:space="preserve">
+    <value>OCR02_Pic</value>
+  </data>
+  <data name="&gt;&gt;OCR02_Pic.Type" xml:space="preserve">
+    <value>System.Windows.Forms.PictureBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;OCR02_Pic.Parent" xml:space="preserve">
+    <value>splitContainer8.Panel2</value>
+  </data>
+  <data name="&gt;&gt;OCR02_Pic.ZOrder" xml:space="preserve">
+    <value>3</value>
+  </data>
+  <data name="&gt;&gt;splitContainer8.Panel2.Name" xml:space="preserve">
+    <value>splitContainer8.Panel2</value>
+  </data>
+  <data name="&gt;&gt;splitContainer8.Panel2.Type" xml:space="preserve">
+    <value>System.Windows.Forms.SplitterPanel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;splitContainer8.Panel2.Parent" xml:space="preserve">
+    <value>splitContainer8</value>
+  </data>
+  <data name="&gt;&gt;splitContainer8.Panel2.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="splitContainer8.Size" type="System.Drawing.Size, System.Drawing">
+    <value>806, 375</value>
+  </data>
+  <data name="splitContainer8.SplitterDistance" type="System.Int32, mscorlib">
+    <value>61</value>
+  </data>
+  <data name="splitContainer8.TabIndex" type="System.Int32, mscorlib">
+    <value>2</value>
+  </data>
+  <data name="&gt;&gt;splitContainer8.Name" xml:space="preserve">
+    <value>splitContainer8</value>
+  </data>
+  <data name="&gt;&gt;splitContainer8.Type" xml:space="preserve">
+    <value>System.Windows.Forms.SplitContainer, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;splitContainer8.Parent" xml:space="preserve">
+    <value>tableLayoutPanel13</value>
+  </data>
+  <data name="&gt;&gt;splitContainer8.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
   <data name="tableLayoutPanel13.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
     <value>Fill</value>
   </data>
@@ -7619,7 +6842,7 @@
     <value>0, 0</value>
   </data>
   <data name="tableLayoutPanel13.RowCount" type="System.Int32, mscorlib">
-    <value>1</value>
+    <value>2</value>
   </data>
   <data name="tableLayoutPanel13.Size" type="System.Drawing.Size, System.Drawing">
     <value>1624, 762</value>
@@ -7640,7 +6863,7 @@
     <value>0</value>
   </data>
   <data name="tableLayoutPanel13.LayoutSettings" type="System.Windows.Forms.TableLayoutSettings, System.Windows.Forms">
-    <value>&lt;?xml version="1.0" encoding="utf-16"?&gt;&lt;TableLayoutSettings&gt;&lt;Controls&gt;&lt;Control Name="splitContainer12" Row="0" RowSpan="1" Column="0" ColumnSpan="1" /&gt;&lt;/Controls&gt;&lt;Columns Styles="Percent,99.32266,Percent,0.6773399" /&gt;&lt;Rows Styles="Percent,100,Absolute,762" /&gt;&lt;/TableLayoutSettings&gt;</value>
+    <value>&lt;?xml version="1.0" encoding="utf-16"?&gt;&lt;TableLayoutSettings&gt;&lt;Controls&gt;&lt;Control Name="splitContainer10" Row="1" RowSpan="1" Column="1" ColumnSpan="1" /&gt;&lt;Control Name="splitContainer9" Row="1" RowSpan="1" Column="0" ColumnSpan="1" /&gt;&lt;Control Name="splitContainer8" Row="0" RowSpan="1" Column="1" ColumnSpan="1" /&gt;&lt;Control Name="splitContainer12" Row="0" RowSpan="1" Column="0" ColumnSpan="1" /&gt;&lt;/Controls&gt;&lt;Columns Styles="Percent,50,Percent,50" /&gt;&lt;Rows Styles="Percent,50,Percent,50" /&gt;&lt;/TableLayoutSettings&gt;</value>
   </data>
   <data name="tabOCR.Location" type="System.Drawing.Point, System.Drawing">
     <value>4, 44</value>
@@ -7874,7 +7097,7 @@
     <value>NoControl</value>
   </data>
   <data name="button61.Location" type="System.Drawing.Point, System.Drawing">
-    <value>1063, 616</value>
+    <value>979, 541</value>
   </data>
   <data name="button61.Size" type="System.Drawing.Size, System.Drawing">
     <value>148, 46</value>
@@ -11213,7 +10436,7 @@
     <value>NoControl</value>
   </data>
   <data name="button62.Location" type="System.Drawing.Point, System.Drawing">
-    <value>1217, 616</value>
+    <value>1133, 541</value>
   </data>
   <data name="button62.Size" type="System.Drawing.Size, System.Drawing">
     <value>148, 46</value>
@@ -11249,7 +10472,7 @@
     <value>NoControl</value>
   </data>
   <data name="button63.Location" type="System.Drawing.Point, System.Drawing">
-    <value>909, 616</value>
+    <value>825, 541</value>
   </data>
   <data name="button63.Size" type="System.Drawing.Size, System.Drawing">
     <value>148, 46</value>
@@ -16391,78 +15614,6 @@
     <value>WaferID</value>
   </data>
   <data name="&gt;&gt;WaferID.Type" xml:space="preserve">
-    <value>System.Windows.Forms.DataGridViewTextBoxColumn, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;dataGridViewTextBoxColumn38.Name" xml:space="preserve">
-    <value>dataGridViewTextBoxColumn38</value>
-  </data>
-  <data name="&gt;&gt;dataGridViewTextBoxColumn38.Type" xml:space="preserve">
-    <value>System.Windows.Forms.DataGridViewTextBoxColumn, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;dataGridViewTextBoxColumn39.Name" xml:space="preserve">
-    <value>dataGridViewTextBoxColumn39</value>
-  </data>
-  <data name="&gt;&gt;dataGridViewTextBoxColumn39.Type" xml:space="preserve">
-    <value>System.Windows.Forms.DataGridViewTextBoxColumn, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;dataGridViewTextBoxColumn28.Name" xml:space="preserve">
-    <value>dataGridViewTextBoxColumn28</value>
-  </data>
-  <data name="&gt;&gt;dataGridViewTextBoxColumn28.Type" xml:space="preserve">
-    <value>System.Windows.Forms.DataGridViewTextBoxColumn, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;dataGridViewTextBoxColumn29.Name" xml:space="preserve">
-    <value>dataGridViewTextBoxColumn29</value>
-  </data>
-  <data name="&gt;&gt;dataGridViewTextBoxColumn29.Type" xml:space="preserve">
-    <value>System.Windows.Forms.DataGridViewTextBoxColumn, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;dataGridViewTextBoxColumn26.Name" xml:space="preserve">
-    <value>dataGridViewTextBoxColumn26</value>
-  </data>
-  <data name="&gt;&gt;dataGridViewTextBoxColumn26.Type" xml:space="preserve">
-    <value>System.Windows.Forms.DataGridViewTextBoxColumn, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;dataGridViewTextBoxColumn27.Name" xml:space="preserve">
-    <value>dataGridViewTextBoxColumn27</value>
-  </data>
-  <data name="&gt;&gt;dataGridViewTextBoxColumn27.Type" xml:space="preserve">
-    <value>System.Windows.Forms.DataGridViewTextBoxColumn, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;dataGridViewTextBoxColumn22.Name" xml:space="preserve">
-    <value>dataGridViewTextBoxColumn22</value>
-  </data>
-  <data name="&gt;&gt;dataGridViewTextBoxColumn22.Type" xml:space="preserve">
-    <value>System.Windows.Forms.DataGridViewTextBoxColumn, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;dataGridViewTextBoxColumn24.Name" xml:space="preserve">
-    <value>dataGridViewTextBoxColumn24</value>
-  </data>
-  <data name="&gt;&gt;dataGridViewTextBoxColumn24.Type" xml:space="preserve">
-    <value>System.Windows.Forms.DataGridViewTextBoxColumn, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;dataGridViewTextBoxColumn37.Name" xml:space="preserve">
-    <value>dataGridViewTextBoxColumn37</value>
-  </data>
-  <data name="&gt;&gt;dataGridViewTextBoxColumn37.Type" xml:space="preserve">
-    <value>System.Windows.Forms.DataGridViewTextBoxColumn, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;dataGridViewTextBoxColumn33.Name" xml:space="preserve">
-    <value>dataGridViewTextBoxColumn33</value>
-  </data>
-  <data name="&gt;&gt;dataGridViewTextBoxColumn33.Type" xml:space="preserve">
-    <value>System.Windows.Forms.DataGridViewTextBoxColumn, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;dataGridViewTextBoxColumn31.Name" xml:space="preserve">
-    <value>dataGridViewTextBoxColumn31</value>
-  </data>
-  <data name="&gt;&gt;dataGridViewTextBoxColumn31.Type" xml:space="preserve">
-    <value>System.Windows.Forms.DataGridViewTextBoxColumn, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;dataGridViewTextBoxColumn35.Name" xml:space="preserve">
-    <value>dataGridViewTextBoxColumn35</value>
-  </data>
-  <data name="&gt;&gt;dataGridViewTextBoxColumn35.Type" xml:space="preserve">
     <value>System.Windows.Forms.DataGridViewTextBoxColumn, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;Column0.Name" xml:space="preserve">
