@@ -2886,7 +2886,7 @@ arm  :Arm 選擇  ( 1~2 )1  :R 軸2  :L 軸
     <Equipment_Type>Aligner</Equipment_Type>
     <Equipment_Supplier>SANWA</Equipment_Supplier>
     <Command_Type>CMD</Command_Type>
-    <Command_ID>Align</Command_ID>
+    <Command_ID>ALIGN</Command_ID>
     <Command_Format>${0}{1}CMD:ALIGN</Command_Format>
     <Command_Name>執行尋找晶圓(Wafer)缺口後移動至所需的角度位置</Command_Name>
     <Command_Order>9</Command_Order>
@@ -2900,7 +2900,7 @@ arm  :Arm 選擇  ( 1~2 )1  :R 軸2  :L 軸
     <Default_Value>3</Default_Value>
     <Values_length>1</Values_length>
     <Is_Fill>Y</Is_Fill>
-    <Action_Function>Align</Action_Function>
+    <Action_Function>Angle</Action_Function>
   </Table>
   <Table>
     <Equipment_Type>OCR</Equipment_Type>
@@ -5821,5 +5821,2105 @@ arm  :Arm 選擇  ( 1~2 )1  :R 軸2  :L 軸
     <Values_length />
     <Is_Fill />
     <Action_Function>Resum</Action_Function>
+  </Table>
+  <Table>
+    <Equipment_Type>LoadPort</Equipment_Type>
+    <Equipment_Supplier>TDK</Equipment_Supplier>
+    <Command_Type>GET</Command_Type>
+    <Command_ID>ALHCT</Command_ID>
+    <Command_Format>GET:ALHCT;</Command_Format>
+    <Command_Name>ALHCT</Command_Name>
+    <Command_Order>10</Command_Order>
+    <Parameters_Amount>01</Parameters_Amount>
+    <Parameter_Order>01</Parameter_Order>
+    <Parameter_ID>Null</Parameter_ID>
+    <Parameter_Description />
+    <Data_Value />
+    <Min_Value />
+    <Max_Value />
+    <Default_Value />
+    <Values_length />
+    <Is_Fill />
+    <Action_Function>AlarmQuantity</Action_Function>
+  </Table>
+  <Table>
+    <Equipment_Type>LoadPort</Equipment_Type>
+    <Equipment_Supplier>TDK</Equipment_Supplier>
+    <Command_Type>GET</Command_Type>
+    <Command_ID>ALHIS</Command_ID>
+    <Command_Format>GET:ALHIS;</Command_Format>
+    <Command_Name>ALHIS</Command_Name>
+    <Command_Order>10</Command_Order>
+    <Parameters_Amount>01</Parameters_Amount>
+    <Parameter_Order>01</Parameter_Order>
+    <Parameter_ID>Null</Parameter_ID>
+    <Parameter_Description />
+    <Data_Value />
+    <Min_Value />
+    <Max_Value />
+    <Default_Value />
+    <Values_length />
+    <Is_Fill />
+    <Action_Function>AlarmHistory</Action_Function>
+  </Table>
+  <Table>
+    <Equipment_Type>Robot</Equipment_Type>
+    <Equipment_Supplier>KAWASAKI</Equipment_Supplier>
+    <Command_Type>CMD</Command_Type>
+    <Command_ID>CSTA,</Command_ID>
+    <Command_Format>&lt;CSTA,{0}&gt;{1}</Command_Format>
+    <Command_Name>Reports combined status.</Command_Name>
+    <Command_Order>01</Command_Order>
+    <Parameters_Amount>01</Parameters_Amount>
+    <Parameter_Order>01</Parameter_Order>
+    <Parameter_ID>DeviceCode</Parameter_ID>
+    <Parameter_Description>DeviceCode</Parameter_Description>
+    <Data_Value>R1,R2</Data_Value>
+    <Min_Value />
+    <Max_Value />
+    <Default_Value />
+    <Values_length />
+    <Is_Fill />
+    <Action_Function>CombinedDeviceStatus</Action_Function>
+  </Table>
+  <Table>
+    <Equipment_Type>Robot</Equipment_Type>
+    <Equipment_Supplier>KAWASAKI</Equipment_Supplier>
+    <Command_Type>CMD</Command_Type>
+    <Command_ID>GETS,</Command_ID>
+    <Command_Format>&lt;GETS,{0}&gt;{1}</Command_Format>
+    <Command_Name>Gets wafer.</Command_Name>
+    <Command_Order>02</Command_Order>
+    <Parameters_Amount>01</Parameters_Amount>
+    <Parameter_Order>01</Parameter_Order>
+    <Parameter_ID>RobotCode</Parameter_ID>
+    <Parameter_Description>RobotCode</Parameter_Description>
+    <Data_Value>R1.R2</Data_Value>
+    <Min_Value />
+    <Max_Value />
+    <Default_Value />
+    <Values_length />
+    <Is_Fill />
+    <Action_Function>GetWafer</Action_Function>
+  </Table>
+  <Table>
+    <Equipment_Type>Robot</Equipment_Type>
+    <Equipment_Supplier>KAWASAKI</Equipment_Supplier>
+    <Command_Type>CMD</Command_Type>
+    <Command_ID>GETS,</Command_ID>
+    <Command_Format>&lt;GETS,{0}&gt;{1}</Command_Format>
+    <Command_Name>Gets wafer.</Command_Name>
+    <Command_Order>02</Command_Order>
+    <Parameters_Amount>02</Parameters_Amount>
+    <Parameter_Order>02</Parameter_Order>
+    <Parameter_ID>HandCode</Parameter_ID>
+    <Parameter_Description>HandCode</Parameter_Description>
+    <Data_Value>H1,H2,HA</Data_Value>
+    <Min_Value />
+    <Max_Value />
+    <Default_Value />
+    <Values_length />
+    <Is_Fill />
+    <Action_Function>GetWafer</Action_Function>
+  </Table>
+  <Table>
+    <Equipment_Type>Robot</Equipment_Type>
+    <Equipment_Supplier>KAWASAKI</Equipment_Supplier>
+    <Command_Type>CMD</Command_Type>
+    <Command_ID>GETS,</Command_ID>
+    <Command_Format>&lt;GETS,{0}&gt;{1}</Command_Format>
+    <Command_Name>Gets wafer.</Command_Name>
+    <Command_Order>02</Command_Order>
+    <Parameters_Amount>03</Parameters_Amount>
+    <Parameter_Order>03</Parameter_Order>
+    <Parameter_ID>StationCode</Parameter_ID>
+    <Parameter_Description>StationCode</Parameter_Description>
+    <Data_Value>P1,P2,P3,P4,P5,P6,P7,P8,P9,P10,P11,P12,P13,P14,P15,A1</Data_Value>
+    <Min_Value />
+    <Max_Value />
+    <Default_Value />
+    <Values_length />
+    <Is_Fill />
+    <Action_Function>GetWafer</Action_Function>
+  </Table>
+  <Table>
+    <Equipment_Type>Robot</Equipment_Type>
+    <Equipment_Supplier>KAWASAKI</Equipment_Supplier>
+    <Command_Type>CMD</Command_Type>
+    <Command_ID>GETS,</Command_ID>
+    <Command_Format>&lt;GETS,{0}&gt;{1}</Command_Format>
+    <Command_Name>Gets wafer.</Command_Name>
+    <Command_Order>02</Command_Order>
+    <Parameters_Amount>04</Parameters_Amount>
+    <Parameter_Order>04</Parameter_Order>
+    <Parameter_ID>Slot#</Parameter_ID>
+    <Parameter_Description>Slot#</Parameter_Description>
+    <Data_Value />
+    <Min_Value>1</Min_Value>
+    <Max_Value>50</Max_Value>
+    <Default_Value>1</Default_Value>
+    <Values_length>1</Values_length>
+    <Is_Fill>N</Is_Fill>
+    <Action_Function>GetWafer</Action_Function>
+  </Table>
+  <Table>
+    <Equipment_Type>Robot</Equipment_Type>
+    <Equipment_Supplier>KAWASAKI</Equipment_Supplier>
+    <Command_Type>CMD</Command_Type>
+    <Command_ID>PUTS,</Command_ID>
+    <Command_Format>&lt;PUTS,{0}&gt;{1}</Command_Format>
+    <Command_Name>Puts wafer.</Command_Name>
+    <Command_Order>03</Command_Order>
+    <Parameters_Amount>01</Parameters_Amount>
+    <Parameter_Order>01</Parameter_Order>
+    <Parameter_ID>RobotCode</Parameter_ID>
+    <Parameter_Description>RobotCode</Parameter_Description>
+    <Data_Value>R1,R2</Data_Value>
+    <Min_Value />
+    <Max_Value />
+    <Default_Value />
+    <Values_length />
+    <Is_Fill />
+    <Action_Function>PutWafer</Action_Function>
+  </Table>
+  <Table>
+    <Equipment_Type>Robot</Equipment_Type>
+    <Equipment_Supplier>KAWASAKI</Equipment_Supplier>
+    <Command_Type>CMD</Command_Type>
+    <Command_ID>PUTS,</Command_ID>
+    <Command_Format>&lt;PUTS,{0}&gt;{1}</Command_Format>
+    <Command_Name>Puts wafer.</Command_Name>
+    <Command_Order>03</Command_Order>
+    <Parameters_Amount>02</Parameters_Amount>
+    <Parameter_Order>02</Parameter_Order>
+    <Parameter_ID>HandCode</Parameter_ID>
+    <Parameter_Description>HandCode</Parameter_Description>
+    <Data_Value>H1,H2,HA</Data_Value>
+    <Min_Value />
+    <Max_Value />
+    <Default_Value />
+    <Values_length />
+    <Is_Fill />
+    <Action_Function>PutWafer</Action_Function>
+  </Table>
+  <Table>
+    <Equipment_Type>Robot</Equipment_Type>
+    <Equipment_Supplier>KAWASAKI</Equipment_Supplier>
+    <Command_Type>CMD</Command_Type>
+    <Command_ID>PUTS,</Command_ID>
+    <Command_Format>&lt;PUTS,{0}&gt;{1}</Command_Format>
+    <Command_Name>Puts wafer.</Command_Name>
+    <Command_Order>03</Command_Order>
+    <Parameters_Amount>03</Parameters_Amount>
+    <Parameter_Order>03</Parameter_Order>
+    <Parameter_ID>StationCode</Parameter_ID>
+    <Parameter_Description>StationCode</Parameter_Description>
+    <Data_Value>P1,P2,P3,P4,P5,P6,P7,P8,P9,P10,P11,P12,P13,P14,P15,A1</Data_Value>
+    <Min_Value />
+    <Max_Value />
+    <Default_Value />
+    <Values_length />
+    <Is_Fill />
+    <Action_Function>PutWafer</Action_Function>
+  </Table>
+  <Table>
+    <Equipment_Type>Robot</Equipment_Type>
+    <Equipment_Supplier>KAWASAKI</Equipment_Supplier>
+    <Command_Type>CMD</Command_Type>
+    <Command_ID>PUTS,</Command_ID>
+    <Command_Format>&lt;PUTS,{0}&gt;{1}</Command_Format>
+    <Command_Name>Puts wafer.</Command_Name>
+    <Command_Order>03</Command_Order>
+    <Parameters_Amount>04</Parameters_Amount>
+    <Parameter_Order>04</Parameter_Order>
+    <Parameter_ID>Slot#</Parameter_ID>
+    <Parameter_Description />
+    <Data_Value />
+    <Min_Value>1</Min_Value>
+    <Max_Value>50</Max_Value>
+    <Default_Value>1</Default_Value>
+    <Values_length>2</Values_length>
+    <Is_Fill>N</Is_Fill>
+    <Action_Function>PutWafer</Action_Function>
+  </Table>
+  <Table>
+    <Equipment_Type>Robot</Equipment_Type>
+    <Equipment_Supplier>KAWASAKI</Equipment_Supplier>
+    <Command_Type>CMD</Command_Type>
+    <Command_ID>HOMH,</Command_ID>
+    <Command_Format>&lt;HOMH,{0}&gt;{1}</Command_Format>
+    <Command_Name>Moves hand to wait position.</Command_Name>
+    <Command_Order>04</Command_Order>
+    <Parameters_Amount>01</Parameters_Amount>
+    <Parameter_Order>01</Parameter_Order>
+    <Parameter_ID>RobotCode</Parameter_ID>
+    <Parameter_Description>RobotCode</Parameter_Description>
+    <Data_Value>R1,R2</Data_Value>
+    <Min_Value />
+    <Max_Value />
+    <Default_Value />
+    <Values_length />
+    <Is_Fill />
+    <Action_Function>Home</Action_Function>
+  </Table>
+  <Table>
+    <Equipment_Type>Robot</Equipment_Type>
+    <Equipment_Supplier>KAWASAKI</Equipment_Supplier>
+    <Command_Type>CMD</Command_Type>
+    <Command_ID>HOMA,</Command_ID>
+    <Command_Format>&lt;HOMA,{0}&gt;{1}</Command_Format>
+    <Command_Name>Moves all axes to home position.</Command_Name>
+    <Command_Order>05</Command_Order>
+    <Parameters_Amount>01</Parameters_Amount>
+    <Parameter_Order>01</Parameter_Order>
+    <Parameter_ID>DeviceCode</Parameter_ID>
+    <Parameter_Description>DeviceCode</Parameter_Description>
+    <Data_Value>R1,R2</Data_Value>
+    <Min_Value />
+    <Max_Value />
+    <Default_Value />
+    <Values_length />
+    <Is_Fill />
+    <Action_Function>HOMEToOrgin</Action_Function>
+  </Table>
+  <Table>
+    <Equipment_Type>Robot</Equipment_Type>
+    <Equipment_Supplier>KAWASAKI</Equipment_Supplier>
+    <Command_Type>CMD</Command_Type>
+    <Command_ID>MAPS,</Command_ID>
+    <Command_Format>&lt;MAPS,{0}&gt;{1}</Command_Format>
+    <Command_Name>Performs mapping.</Command_Name>
+    <Command_Order>06</Command_Order>
+    <Parameters_Amount>01</Parameters_Amount>
+    <Parameter_Order>01</Parameter_Order>
+    <Parameter_ID>RobotCode</Parameter_ID>
+    <Parameter_Description>RobotCode</Parameter_Description>
+    <Data_Value>R1,R2</Data_Value>
+    <Min_Value />
+    <Max_Value />
+    <Default_Value />
+    <Values_length />
+    <Is_Fill />
+    <Action_Function>Mapping</Action_Function>
+  </Table>
+  <Table>
+    <Equipment_Type>Robot</Equipment_Type>
+    <Equipment_Supplier>KAWASAKI</Equipment_Supplier>
+    <Command_Type>CMD</Command_Type>
+    <Command_ID>MAPS,</Command_ID>
+    <Command_Format>&lt;MAPS,{0}&gt;{1}</Command_Format>
+    <Command_Name>Performs mapping.</Command_Name>
+    <Command_Order>06</Command_Order>
+    <Parameters_Amount>02</Parameters_Amount>
+    <Parameter_Order>02</Parameter_Order>
+    <Parameter_ID>StationCode</Parameter_ID>
+    <Parameter_Description>StationCode</Parameter_Description>
+    <Data_Value>P1,P2,P3,P4,P5,P6,P7,P8,P9,P10,P11,P12,P13,P14,P15,A1</Data_Value>
+    <Min_Value />
+    <Max_Value />
+    <Default_Value />
+    <Values_length />
+    <Is_Fill />
+    <Action_Function>Mapping</Action_Function>
+  </Table>
+  <Table>
+    <Equipment_Type>Robot</Equipment_Type>
+    <Equipment_Supplier>KAWASAKI</Equipment_Supplier>
+    <Command_Type>CMD</Command_Type>
+    <Command_ID>SENS,</Command_ID>
+    <Command_Format>&lt;SENS,{0}&gt;{1}</Command_Format>
+    <Command_Name>Reports wafer presence.</Command_Name>
+    <Command_Order>07</Command_Order>
+    <Parameters_Amount>01</Parameters_Amount>
+    <Parameter_Order>01</Parameter_Order>
+    <Parameter_ID>RobotCode</Parameter_ID>
+    <Parameter_Description>RobotCode</Parameter_Description>
+    <Data_Value>R1,R2</Data_Value>
+    <Min_Value />
+    <Max_Value />
+    <Default_Value />
+    <Values_length />
+    <Is_Fill />
+    <Action_Function>WaferStatus</Action_Function>
+  </Table>
+  <Table>
+    <Equipment_Type>Robot</Equipment_Type>
+    <Equipment_Supplier>KAWASAKI</Equipment_Supplier>
+    <Command_Type>CMD</Command_Type>
+    <Command_ID>SENS,</Command_ID>
+    <Command_Format>&lt;SENS,{0}&gt;{1}</Command_Format>
+    <Command_Name>Reports wafer presence.</Command_Name>
+    <Command_Order>07</Command_Order>
+    <Parameters_Amount>02</Parameters_Amount>
+    <Parameter_Order>02</Parameter_Order>
+    <Parameter_ID>HandCode</Parameter_ID>
+    <Parameter_Description>HandCode</Parameter_Description>
+    <Data_Value>H1,H2,HA</Data_Value>
+    <Min_Value />
+    <Max_Value />
+    <Default_Value />
+    <Values_length />
+    <Is_Fill />
+    <Action_Function>WaferStatus</Action_Function>
+  </Table>
+  <Table>
+    <Equipment_Type>Robot</Equipment_Type>
+    <Equipment_Supplier>KAWASAKI</Equipment_Supplier>
+    <Command_Type>CMD</Command_Type>
+    <Command_ID>STAT,</Command_ID>
+    <Command_Format>&lt;STAT,{0}&gt;{1}</Command_Format>
+    <Command_Name>Reports robot condition.</Command_Name>
+    <Command_Order>08</Command_Order>
+    <Parameters_Amount>01</Parameters_Amount>
+    <Parameter_Order>01</Parameter_Order>
+    <Parameter_ID>DeviceCode</Parameter_ID>
+    <Parameter_Description>DeviceCode</Parameter_Description>
+    <Data_Value>R1,R2</Data_Value>
+    <Min_Value />
+    <Max_Value />
+    <Default_Value />
+    <Values_length />
+    <Is_Fill />
+    <Action_Function>DeviceStatus</Action_Function>
+  </Table>
+  <Table>
+    <Equipment_Type>Robot</Equipment_Type>
+    <Equipment_Supplier>KAWASAKI</Equipment_Supplier>
+    <Command_Type>CMD</Command_Type>
+    <Command_ID>SERV,</Command_ID>
+    <Command_Format>&lt;SERV,{0}&gt;{1}</Command_Format>
+    <Command_Name>Turns servo ON.</Command_Name>
+    <Command_Order>09</Command_Order>
+    <Parameters_Amount>01</Parameters_Amount>
+    <Parameter_Order>01</Parameter_Order>
+    <Parameter_ID>DeviceCode</Parameter_ID>
+    <Parameter_Description>DeviceCode</Parameter_Description>
+    <Data_Value>R1,R2</Data_Value>
+    <Min_Value />
+    <Max_Value />
+    <Default_Value />
+    <Values_length />
+    <Is_Fill />
+    <Action_Function>ExcitationOn</Action_Function>
+  </Table>
+  <Table>
+    <Equipment_Type>Robot</Equipment_Type>
+    <Equipment_Supplier>KAWASAKI</Equipment_Supplier>
+    <Command_Type>CMD</Command_Type>
+    <Command_ID>STOP,</Command_ID>
+    <Command_Format>&lt;STOP,{0}&gt;{1}</Command_Format>
+    <Command_Name>Turns servo OFF.</Command_Name>
+    <Command_Order>10</Command_Order>
+    <Parameters_Amount>01</Parameters_Amount>
+    <Parameter_Order>01</Parameter_Order>
+    <Parameter_ID>DeviceCode</Parameter_ID>
+    <Parameter_Description>DeviceCode</Parameter_Description>
+    <Data_Value>R1,R2</Data_Value>
+    <Min_Value />
+    <Max_Value />
+    <Default_Value />
+    <Values_length />
+    <Is_Fill />
+    <Action_Function>ExcitationOff</Action_Function>
+  </Table>
+  <Table>
+    <Equipment_Type>Robot</Equipment_Type>
+    <Equipment_Supplier>KAWASAKI</Equipment_Supplier>
+    <Command_Type>CMD</Command_Type>
+    <Command_ID>SSPD,</Command_ID>
+    <Command_Format>&lt;SSPD,{0}&gt;{1}</Command_Format>
+    <Command_Name>Sets robot motion speed.</Command_Name>
+    <Command_Order>11</Command_Order>
+    <Parameters_Amount>01</Parameters_Amount>
+    <Parameter_Order>01</Parameter_Order>
+    <Parameter_ID>DeviceCode</Parameter_ID>
+    <Parameter_Description>DeviceCode</Parameter_Description>
+    <Data_Value>R1,R2</Data_Value>
+    <Min_Value />
+    <Max_Value />
+    <Default_Value />
+    <Values_length />
+    <Is_Fill />
+    <Action_Function>DeviceStatusSpeed</Action_Function>
+  </Table>
+  <Table>
+    <Equipment_Type>Robot</Equipment_Type>
+    <Equipment_Supplier>KAWASAKI</Equipment_Supplier>
+    <Command_Type>CMD</Command_Type>
+    <Command_ID>SSPD,</Command_ID>
+    <Command_Format>&lt;SSPD,{0}&gt;{1}</Command_Format>
+    <Command_Name>Sets robot motion speed.</Command_Name>
+    <Command_Order>11</Command_Order>
+    <Parameters_Amount>02</Parameters_Amount>
+    <Parameter_Order>02</Parameter_Order>
+    <Parameter_ID>SpeedData</Parameter_ID>
+    <Parameter_Description>SpeedData</Parameter_Description>
+    <Data_Value />
+    <Min_Value>1</Min_Value>
+    <Max_Value>100</Max_Value>
+    <Default_Value>1</Default_Value>
+    <Values_length>3</Values_length>
+    <Is_Fill>N</Is_Fill>
+    <Action_Function>DeviceStatusSpeed</Action_Function>
+  </Table>
+  <Table>
+    <Equipment_Type>Robot</Equipment_Type>
+    <Equipment_Supplier>KAWASAKI</Equipment_Supplier>
+    <Command_Type>CMD</Command_Type>
+    <Command_ID>RSPD,</Command_ID>
+    <Command_Format>&lt;RSPD,{0}&gt;{1}</Command_Format>
+    <Command_Name>Reports set robot speed.</Command_Name>
+    <Command_Order>12</Command_Order>
+    <Parameters_Amount>01</Parameters_Amount>
+    <Parameter_Order>01</Parameter_Order>
+    <Parameter_ID>DeviceCode</Parameter_ID>
+    <Parameter_Description>DeviceCode</Parameter_Description>
+    <Data_Value>R1,R2</Data_Value>
+    <Min_Value />
+    <Max_Value />
+    <Default_Value />
+    <Values_length />
+    <Is_Fill />
+    <Action_Function>DeviceStatusSpeedGet</Action_Function>
+  </Table>
+  <Table>
+    <Equipment_Type>Robot</Equipment_Type>
+    <Equipment_Supplier>KAWASAKI</Equipment_Supplier>
+    <Command_Type>CMD</Command_Type>
+    <Command_ID>TCHP,</Command_ID>
+    <Command_Format>&lt;TCHP,{0}&gt;{1}</Command_Format>
+    <Command_Name>Teaches program.</Command_Name>
+    <Command_Order>13</Command_Order>
+    <Parameters_Amount>01</Parameters_Amount>
+    <Parameter_Order>01</Parameter_Order>
+    <Parameter_ID>RobotCode</Parameter_ID>
+    <Parameter_Description>RobotCode</Parameter_Description>
+    <Data_Value>R1,R2</Data_Value>
+    <Min_Value />
+    <Max_Value />
+    <Default_Value />
+    <Values_length />
+    <Is_Fill />
+    <Action_Function>Teach</Action_Function>
+  </Table>
+  <Table>
+    <Equipment_Type>Robot</Equipment_Type>
+    <Equipment_Supplier>KAWASAKI</Equipment_Supplier>
+    <Command_Type>CMD</Command_Type>
+    <Command_ID>TCHP,</Command_ID>
+    <Command_Format>&lt;TCHP,{0}&gt;{1}</Command_Format>
+    <Command_Name>Teaches program.</Command_Name>
+    <Command_Order>13</Command_Order>
+    <Parameters_Amount>02</Parameters_Amount>
+    <Parameter_Order>02</Parameter_Order>
+    <Parameter_ID>HandCode</Parameter_ID>
+    <Parameter_Description>HandCode</Parameter_Description>
+    <Data_Value>H1,H2,HA</Data_Value>
+    <Min_Value />
+    <Max_Value />
+    <Default_Value />
+    <Values_length />
+    <Is_Fill />
+    <Action_Function>Teach</Action_Function>
+  </Table>
+  <Table>
+    <Equipment_Type>Robot</Equipment_Type>
+    <Equipment_Supplier>KAWASAKI</Equipment_Supplier>
+    <Command_Type>CMD</Command_Type>
+    <Command_ID>TCHP,</Command_ID>
+    <Command_Format>&lt;TCHP,{0}&gt;{1}</Command_Format>
+    <Command_Name>Teaches program.</Command_Name>
+    <Command_Order>13</Command_Order>
+    <Parameters_Amount>03</Parameters_Amount>
+    <Parameter_Order>03</Parameter_Order>
+    <Parameter_ID>StationCode</Parameter_ID>
+    <Parameter_Description>StationCode</Parameter_Description>
+    <Data_Value>P1,P2,P3,P4,P5,P6,P7,P8,P9,P10,P11,P12,P13,P14,P15,A1</Data_Value>
+    <Min_Value />
+    <Max_Value />
+    <Default_Value />
+    <Values_length />
+    <Is_Fill />
+    <Action_Function>Teach</Action_Function>
+  </Table>
+  <Table>
+    <Equipment_Type>Robot</Equipment_Type>
+    <Equipment_Supplier>KAWASAKI</Equipment_Supplier>
+    <Command_Type>CMD</Command_Type>
+    <Command_ID>TCHP,</Command_ID>
+    <Command_Format>&lt;TCHP,{0}&gt;{1}</Command_Format>
+    <Command_Name>Teaches program.</Command_Name>
+    <Command_Order>13</Command_Order>
+    <Parameters_Amount>04</Parameters_Amount>
+    <Parameter_Order>04</Parameter_Order>
+    <Parameter_ID>Slot#</Parameter_ID>
+    <Parameter_Description>Slot#</Parameter_Description>
+    <Data_Value />
+    <Min_Value>1</Min_Value>
+    <Max_Value>50</Max_Value>
+    <Default_Value>1</Default_Value>
+    <Values_length>2</Values_length>
+    <Is_Fill>N</Is_Fill>
+    <Action_Function>Teach</Action_Function>
+  </Table>
+  <Table>
+    <Equipment_Type>Robot</Equipment_Type>
+    <Equipment_Supplier>KAWASAKI</Equipment_Supplier>
+    <Command_Type>CMD</Command_Type>
+    <Command_ID>SMOD,</Command_ID>
+    <Command_Format>&lt;SMOD,{0}&gt;{1}</Command_Format>
+    <Command_Name>Sets robot mode.</Command_Name>
+    <Command_Order>14</Command_Order>
+    <Parameters_Amount>01</Parameters_Amount>
+    <Parameter_Order>01</Parameter_Order>
+    <Parameter_ID>ModeCode</Parameter_ID>
+    <Parameter_Description>ModeCode</Parameter_Description>
+    <Data_Value>Real,Simu</Data_Value>
+    <Min_Value />
+    <Max_Value />
+    <Default_Value />
+    <Values_length />
+    <Is_Fill />
+    <Action_Function>Mode</Action_Function>
+  </Table>
+  <Table>
+    <Equipment_Type>Robot</Equipment_Type>
+    <Equipment_Supplier>KAWASAKI</Equipment_Supplier>
+    <Command_Type>CMD</Command_Type>
+    <Command_ID>RMOD,</Command_ID>
+    <Command_Format>&lt;RMOD,{0}&gt;{1}</Command_Format>
+    <Command_Name>Reports current robot mode settings.</Command_Name>
+    <Command_Order>15</Command_Order>
+    <Parameters_Amount>01</Parameters_Amount>
+    <Parameter_Order>01</Parameter_Order>
+    <Parameter_ID>Null</Parameter_ID>
+    <Parameter_Description />
+    <Data_Value />
+    <Min_Value />
+    <Max_Value />
+    <Default_Value />
+    <Values_length />
+    <Is_Fill />
+    <Action_Function>ModeGet</Action_Function>
+  </Table>
+  <Table>
+    <Equipment_Type>Robot</Equipment_Type>
+    <Equipment_Supplier>KAWASAKI</Equipment_Supplier>
+    <Command_Type>CMD</Command_Type>
+    <Command_ID>MOVP,</Command_ID>
+    <Command_Format>&lt;MOVP,{0}&gt;{1}</Command_Format>
+    <Command_Name>Moves to specified point.</Command_Name>
+    <Command_Order>16</Command_Order>
+    <Parameters_Amount>01</Parameters_Amount>
+    <Parameter_Order>01</Parameter_Order>
+    <Parameter_ID>RobotCode</Parameter_ID>
+    <Parameter_Description>RobotCode</Parameter_Description>
+    <Data_Value>R1,R2</Data_Value>
+    <Min_Value />
+    <Max_Value />
+    <Default_Value />
+    <Values_length />
+    <Is_Fill />
+    <Action_Function>MovePosition</Action_Function>
+  </Table>
+  <Table>
+    <Equipment_Type>Robot</Equipment_Type>
+    <Equipment_Supplier>KAWASAKI</Equipment_Supplier>
+    <Command_Type>CMD</Command_Type>
+    <Command_ID>MOVP,</Command_ID>
+    <Command_Format>&lt;MOVP,{0}&gt;{1}</Command_Format>
+    <Command_Name>Moves to specified point.</Command_Name>
+    <Command_Order>16</Command_Order>
+    <Parameters_Amount>02</Parameters_Amount>
+    <Parameter_Order>02</Parameter_Order>
+    <Parameter_ID>HandCode</Parameter_ID>
+    <Parameter_Description>HandCode</Parameter_Description>
+    <Data_Value>H1,H2,HA</Data_Value>
+    <Min_Value />
+    <Max_Value />
+    <Default_Value />
+    <Values_length />
+    <Is_Fill />
+    <Action_Function>MovePosition</Action_Function>
+  </Table>
+  <Table>
+    <Equipment_Type>Robot</Equipment_Type>
+    <Equipment_Supplier>KAWASAKI</Equipment_Supplier>
+    <Command_Type>CMD</Command_Type>
+    <Command_ID>MOVP,</Command_ID>
+    <Command_Format>&lt;MOVP,{0}&gt;{1}</Command_Format>
+    <Command_Name>Moves to specified point.</Command_Name>
+    <Command_Order>16</Command_Order>
+    <Parameters_Amount>03</Parameters_Amount>
+    <Parameter_Order>03</Parameter_Order>
+    <Parameter_ID>StationCode</Parameter_ID>
+    <Parameter_Description>StationCode</Parameter_Description>
+    <Data_Value>P1,P2,P3,P4,P5,P6,P7,P8,P9,P10,P11,P12,P13,P14,P15,A1</Data_Value>
+    <Min_Value />
+    <Max_Value />
+    <Default_Value />
+    <Values_length />
+    <Is_Fill />
+    <Action_Function>MovePosition</Action_Function>
+  </Table>
+  <Table>
+    <Equipment_Type>Robot</Equipment_Type>
+    <Equipment_Supplier>KAWASAKI</Equipment_Supplier>
+    <Command_Type>CMD</Command_Type>
+    <Command_ID>MOVP,</Command_ID>
+    <Command_Format>&lt;MOVP,{0}&gt;{1}</Command_Format>
+    <Command_Name>Moves to specified point.</Command_Name>
+    <Command_Order>16</Command_Order>
+    <Parameters_Amount>04</Parameters_Amount>
+    <Parameter_Order>04</Parameter_Order>
+    <Parameter_ID>Slot#</Parameter_ID>
+    <Parameter_Description>Slot#</Parameter_Description>
+    <Data_Value />
+    <Min_Value>1</Min_Value>
+    <Max_Value>50</Max_Value>
+    <Default_Value>1</Default_Value>
+    <Values_length>2</Values_length>
+    <Is_Fill>N</Is_Fill>
+    <Action_Function>MovePosition</Action_Function>
+  </Table>
+  <Table>
+    <Equipment_Type>Robot</Equipment_Type>
+    <Equipment_Supplier>KAWASAKI</Equipment_Supplier>
+    <Command_Type>CMD</Command_Type>
+    <Command_ID>MOVP,</Command_ID>
+    <Command_Format>&lt;MOVP,{0}&gt;{1}</Command_Format>
+    <Command_Name>Moves to specified point.</Command_Name>
+    <Command_Order>16</Command_Order>
+    <Parameters_Amount>05</Parameters_Amount>
+    <Parameter_Order>05</Parameter_Order>
+    <Parameter_ID>LocationCode</Parameter_ID>
+    <Parameter_Description>LocationCode</Parameter_Description>
+    <Data_Value>GBH,GBX,GWXGAX,GAC,GAH,TCH,PUTS,PBX,PWX,PAX,PAC,PAH</Data_Value>
+    <Min_Value />
+    <Max_Value />
+    <Default_Value />
+    <Values_length />
+    <Is_Fill />
+    <Action_Function>MovePosition</Action_Function>
+  </Table>
+  <Table>
+    <Equipment_Type>Robot</Equipment_Type>
+    <Equipment_Supplier>KAWASAKI</Equipment_Supplier>
+    <Command_Type>CMD</Command_Type>
+    <Command_ID>HOLD,</Command_ID>
+    <Command_Format>&lt;HOLD,{0}&gt;{1}</Command_Format>
+    <Command_Name>Grips wafer.</Command_Name>
+    <Command_Order>17</Command_Order>
+    <Parameters_Amount>01</Parameters_Amount>
+    <Parameter_Order>01</Parameter_Order>
+    <Parameter_ID>RobotCode</Parameter_ID>
+    <Parameter_Description>RobotCode</Parameter_Description>
+    <Data_Value>R1,R2</Data_Value>
+    <Min_Value />
+    <Max_Value />
+    <Default_Value />
+    <Values_length />
+    <Is_Fill />
+    <Action_Function>WaferHold</Action_Function>
+  </Table>
+  <Table>
+    <Equipment_Type>Robot</Equipment_Type>
+    <Equipment_Supplier>KAWASAKI</Equipment_Supplier>
+    <Command_Type>CMD</Command_Type>
+    <Command_ID>HOLD,</Command_ID>
+    <Command_Format>&lt;HOLD,{0}&gt;{1}</Command_Format>
+    <Command_Name>Grips wafer.</Command_Name>
+    <Command_Order>17</Command_Order>
+    <Parameters_Amount>02</Parameters_Amount>
+    <Parameter_Order>02</Parameter_Order>
+    <Parameter_ID>HandCode</Parameter_ID>
+    <Parameter_Description>HandCode</Parameter_Description>
+    <Data_Value>H1,H2,HA</Data_Value>
+    <Min_Value />
+    <Max_Value />
+    <Default_Value />
+    <Values_length />
+    <Is_Fill />
+    <Action_Function>WaferHold</Action_Function>
+  </Table>
+  <Table>
+    <Equipment_Type>Robot</Equipment_Type>
+    <Equipment_Supplier>KAWASAKI</Equipment_Supplier>
+    <Command_Type>CMD</Command_Type>
+    <Command_ID>RELS,</Command_ID>
+    <Command_Format>&lt;RELS,{0}&gt;{1}</Command_Format>
+    <Command_Name>Releases wafer.</Command_Name>
+    <Command_Order>18</Command_Order>
+    <Parameters_Amount>01</Parameters_Amount>
+    <Parameter_Order>01</Parameter_Order>
+    <Parameter_ID>RobotCode</Parameter_ID>
+    <Parameter_Description>RobotCode</Parameter_Description>
+    <Data_Value>R1,R2</Data_Value>
+    <Min_Value />
+    <Max_Value />
+    <Default_Value />
+    <Values_length />
+    <Is_Fill />
+    <Action_Function>WaferRelease</Action_Function>
+  </Table>
+  <Table>
+    <Equipment_Type>Robot</Equipment_Type>
+    <Equipment_Supplier>KAWASAKI</Equipment_Supplier>
+    <Command_Type>CMD</Command_Type>
+    <Command_ID>RELS,</Command_ID>
+    <Command_Format>&lt;RELS,{0}&gt;{1}</Command_Format>
+    <Command_Name>Releases wafer.</Command_Name>
+    <Command_Order>18</Command_Order>
+    <Parameters_Amount>02</Parameters_Amount>
+    <Parameter_Order>02</Parameter_Order>
+    <Parameter_ID>HandCode</Parameter_ID>
+    <Parameter_Description>HandCode</Parameter_Description>
+    <Data_Value>H1,H2,HA</Data_Value>
+    <Min_Value />
+    <Max_Value />
+    <Default_Value />
+    <Values_length />
+    <Is_Fill />
+    <Action_Function>WaferRelease</Action_Function>
+  </Table>
+  <Table>
+    <Equipment_Type>Robot</Equipment_Type>
+    <Equipment_Supplier>KAWASAKI</Equipment_Supplier>
+    <Command_Type>CMD</Command_Type>
+    <Command_ID>RPOS,</Command_ID>
+    <Command_Format>&lt;RPOS,{0}&gt;{1}</Command_Format>
+    <Command_Name>Reports current position.</Command_Name>
+    <Command_Order>19</Command_Order>
+    <Parameters_Amount>01</Parameters_Amount>
+    <Parameter_Order>01</Parameter_Order>
+    <Parameter_ID>RobotCode</Parameter_ID>
+    <Parameter_Description>RobotCode</Parameter_Description>
+    <Data_Value>R1,R2</Data_Value>
+    <Min_Value />
+    <Max_Value />
+    <Default_Value />
+    <Values_length />
+    <Is_Fill />
+    <Action_Function>CurrentPosition</Action_Function>
+  </Table>
+  <Table>
+    <Equipment_Type>Robot</Equipment_Type>
+    <Equipment_Supplier>KAWASAKI</Equipment_Supplier>
+    <Command_Type>CMD</Command_Type>
+    <Command_ID>RXYZ,</Command_ID>
+    <Command_Format>&lt;RXYZ,{0}&gt;{1}</Command_Format>
+    <Command_Name>Reports current coordinate position.</Command_Name>
+    <Command_Order>20</Command_Order>
+    <Parameters_Amount>01</Parameters_Amount>
+    <Parameter_Order>01</Parameter_Order>
+    <Parameter_ID>RobotCode</Parameter_ID>
+    <Parameter_Description>RobotCode</Parameter_Description>
+    <Data_Value>R1,R2</Data_Value>
+    <Min_Value />
+    <Max_Value />
+    <Default_Value />
+    <Values_length />
+    <Is_Fill />
+    <Action_Function>CurrentCoordinatePosition</Action_Function>
+  </Table>
+  <Table>
+    <Equipment_Type>Robot</Equipment_Type>
+    <Equipment_Supplier>KAWASAKI</Equipment_Supplier>
+    <Command_Type>CMD</Command_Type>
+    <Command_ID>RXYZ,</Command_ID>
+    <Command_Format>&lt;RXYZ,{0}&gt;{1}</Command_Format>
+    <Command_Name>Reports current coordinate position.</Command_Name>
+    <Command_Order>20</Command_Order>
+    <Parameters_Amount>02</Parameters_Amount>
+    <Parameter_Order>02</Parameter_Order>
+    <Parameter_ID>HandCode</Parameter_ID>
+    <Parameter_Description>HandCode</Parameter_Description>
+    <Data_Value>H1,H2,HA</Data_Value>
+    <Min_Value />
+    <Max_Value />
+    <Default_Value />
+    <Values_length />
+    <Is_Fill />
+    <Action_Function>CurrentCoordinatePosition</Action_Function>
+  </Table>
+  <Table>
+    <Equipment_Type>Robot</Equipment_Type>
+    <Equipment_Supplier>KAWASAKI</Equipment_Supplier>
+    <Command_Type>CMD</Command_Type>
+    <Command_ID>RNST,</Command_ID>
+    <Command_Format>&lt;RNST,{0}&gt;{1}</Command_Format>
+    <Command_Name>Reports the nearest station.</Command_Name>
+    <Command_Order>21</Command_Order>
+    <Parameters_Amount>01</Parameters_Amount>
+    <Parameter_Order>01</Parameter_Order>
+    <Parameter_ID>RobotCode</Parameter_ID>
+    <Parameter_Description>RobotCode</Parameter_Description>
+    <Data_Value>R1,R2</Data_Value>
+    <Min_Value />
+    <Max_Value />
+    <Default_Value />
+    <Values_length />
+    <Is_Fill />
+    <Action_Function>NearestStation</Action_Function>
+  </Table>
+  <Table>
+    <Equipment_Type>Robot</Equipment_Type>
+    <Equipment_Supplier>KAWASAKI</Equipment_Supplier>
+    <Command_Type>CMD</Command_Type>
+    <Command_ID>RNST,</Command_ID>
+    <Command_Format>&lt;RNST,{0}&gt;{1}</Command_Format>
+    <Command_Name>Reports the nearest station.</Command_Name>
+    <Command_Order>21</Command_Order>
+    <Parameters_Amount>02</Parameters_Amount>
+    <Parameter_Order>02</Parameter_Order>
+    <Parameter_ID>HandCode</Parameter_ID>
+    <Parameter_Description>HandCode</Parameter_Description>
+    <Data_Value>H1,H2,HA</Data_Value>
+    <Min_Value />
+    <Max_Value />
+    <Default_Value />
+    <Values_length />
+    <Is_Fill />
+    <Action_Function>NearestStation</Action_Function>
+  </Table>
+  <Table>
+    <Equipment_Type>Robot</Equipment_Type>
+    <Equipment_Supplier>KAWASAKI</Equipment_Supplier>
+    <Command_Type>CMD</Command_Type>
+    <Command_ID>MOVA,</Command_ID>
+    <Command_Format>&lt;MOVA,{0}&gt;{1}</Command_Format>
+    <Command_Name>Moves to absolute position.</Command_Name>
+    <Command_Order>22</Command_Order>
+    <Parameters_Amount>01</Parameters_Amount>
+    <Parameter_Order>01</Parameter_Order>
+    <Parameter_ID>DeviceCode</Parameter_ID>
+    <Parameter_Description>DeviceCode</Parameter_Description>
+    <Data_Value>R1,R2</Data_Value>
+    <Min_Value />
+    <Max_Value />
+    <Default_Value />
+    <Values_length />
+    <Is_Fill />
+    <Action_Function>MoveDirect</Action_Function>
+  </Table>
+  <Table>
+    <Equipment_Type>Robot</Equipment_Type>
+    <Equipment_Supplier>KAWASAKI</Equipment_Supplier>
+    <Command_Type>CMD</Command_Type>
+    <Command_ID>MOVA,</Command_ID>
+    <Command_Format>&lt;MOVA,{0}&gt;{1}</Command_Format>
+    <Command_Name>Moves to absolute position.</Command_Name>
+    <Command_Order>22</Command_Order>
+    <Parameters_Amount>02</Parameters_Amount>
+    <Parameter_Order>02</Parameter_Order>
+    <Parameter_ID>JointCode</Parameter_ID>
+    <Parameter_Description>JointCode</Parameter_Description>
+    <Data_Value>J1,J2,J3,J4,J6,J7,LX0,LY0,LX1,LX2,LY1,LY2,LR1,LR2</Data_Value>
+    <Min_Value />
+    <Max_Value />
+    <Default_Value />
+    <Values_length />
+    <Is_Fill />
+    <Action_Function>MoveDirect</Action_Function>
+  </Table>
+  <Table>
+    <Equipment_Type>Robot</Equipment_Type>
+    <Equipment_Supplier>KAWASAKI</Equipment_Supplier>
+    <Command_Type>CMD</Command_Type>
+    <Command_ID>MOVA,</Command_ID>
+    <Command_Format>&lt;MOVA,{0}&gt;{1}</Command_Format>
+    <Command_Name>Moves to absolute position.</Command_Name>
+    <Command_Order>22</Command_Order>
+    <Parameters_Amount>03</Parameters_Amount>
+    <Parameter_Order>03</Parameter_Order>
+    <Parameter_ID>MoveData</Parameter_ID>
+    <Parameter_Description>MoveData</Parameter_Description>
+    <Data_Value />
+    <Min_Value>-9999</Min_Value>
+    <Max_Value>9999</Max_Value>
+    <Default_Value>0</Default_Value>
+    <Values_length>4</Values_length>
+    <Is_Fill>N</Is_Fill>
+    <Action_Function>MoveDirect</Action_Function>
+  </Table>
+  <Table>
+    <Equipment_Type>Robot</Equipment_Type>
+    <Equipment_Supplier>KAWASAKI</Equipment_Supplier>
+    <Command_Type>CMD</Command_Type>
+    <Command_ID>MOVR,</Command_ID>
+    <Command_Format>&lt;MOVR,{0}&gt;{1}</Command_Format>
+    <Command_Name>Moves to relative position.</Command_Name>
+    <Command_Order>23</Command_Order>
+    <Parameters_Amount>01</Parameters_Amount>
+    <Parameter_Order>01</Parameter_Order>
+    <Parameter_ID>DeviceCode</Parameter_ID>
+    <Parameter_Description>DeviceCode</Parameter_Description>
+    <Data_Value>R1,R2</Data_Value>
+    <Min_Value />
+    <Max_Value />
+    <Default_Value />
+    <Values_length />
+    <Is_Fill />
+    <Action_Function>MoveRelativePosition</Action_Function>
+  </Table>
+  <Table>
+    <Equipment_Type>Robot</Equipment_Type>
+    <Equipment_Supplier>KAWASAKI</Equipment_Supplier>
+    <Command_Type>CMD</Command_Type>
+    <Command_ID>MOVR,</Command_ID>
+    <Command_Format>&lt;MOVR,{0}&gt;{1}</Command_Format>
+    <Command_Name>Moves to relative position.</Command_Name>
+    <Command_Order>23</Command_Order>
+    <Parameters_Amount>02</Parameters_Amount>
+    <Parameter_Order>02</Parameter_Order>
+    <Parameter_ID>JointCode</Parameter_ID>
+    <Parameter_Description>JointCode</Parameter_Description>
+    <Data_Value>J1,J2,J3,J4,J6,J7,LX0,LY0,LX1,LX2,LY1,LY2,LR1,LR2</Data_Value>
+    <Min_Value />
+    <Max_Value />
+    <Default_Value />
+    <Values_length />
+    <Is_Fill />
+    <Action_Function>MoveRelativePosition</Action_Function>
+  </Table>
+  <Table>
+    <Equipment_Type>Robot</Equipment_Type>
+    <Equipment_Supplier>KAWASAKI</Equipment_Supplier>
+    <Command_Type>CMD</Command_Type>
+    <Command_ID>MOVR,</Command_ID>
+    <Command_Format>&lt;MOVR,{0}&gt;{1}</Command_Format>
+    <Command_Name>Moves to relative position.</Command_Name>
+    <Command_Order>23</Command_Order>
+    <Parameters_Amount>03</Parameters_Amount>
+    <Parameter_Order>03</Parameter_Order>
+    <Parameter_ID>MoveData</Parameter_ID>
+    <Parameter_Description>MoveData</Parameter_Description>
+    <Data_Value />
+    <Min_Value>-9999</Min_Value>
+    <Max_Value>9999</Max_Value>
+    <Default_Value>0</Default_Value>
+    <Values_length>4</Values_length>
+    <Is_Fill>N</Is_Fill>
+    <Action_Function>MoveRelativePosition</Action_Function>
+  </Table>
+  <Table>
+    <Equipment_Type>Robot</Equipment_Type>
+    <Equipment_Supplier>KAWASAKI</Equipment_Supplier>
+    <Command_Type>CMD</Command_Type>
+    <Command_ID>RTCH,</Command_ID>
+    <Command_Format>&lt;RTCH,{0}&gt;{1}</Command_Format>
+    <Command_Name>Reports taught position.</Command_Name>
+    <Command_Order>24</Command_Order>
+    <Parameters_Amount>01</Parameters_Amount>
+    <Parameter_Order>01</Parameter_Order>
+    <Parameter_ID>RobotCode</Parameter_ID>
+    <Parameter_Description>RobotCode</Parameter_Description>
+    <Data_Value>R1,R2</Data_Value>
+    <Min_Value />
+    <Max_Value />
+    <Default_Value />
+    <Values_length />
+    <Is_Fill />
+    <Action_Function>TeachGet</Action_Function>
+  </Table>
+  <Table>
+    <Equipment_Type>Robot</Equipment_Type>
+    <Equipment_Supplier>KAWASAKI</Equipment_Supplier>
+    <Command_Type>CMD</Command_Type>
+    <Command_ID>RTCH,</Command_ID>
+    <Command_Format>&lt;RTCH,{0}&gt;{1}</Command_Format>
+    <Command_Name>Reports taught position.</Command_Name>
+    <Command_Order>24</Command_Order>
+    <Parameters_Amount>02</Parameters_Amount>
+    <Parameter_Order>02</Parameter_Order>
+    <Parameter_ID>StationCode</Parameter_ID>
+    <Parameter_Description>StationCode</Parameter_Description>
+    <Data_Value>P1,P2,P3,P4,P5,P6,P7,P8,P9,P10,P11,P12,P13,P14,P15,A1</Data_Value>
+    <Min_Value />
+    <Max_Value />
+    <Default_Value />
+    <Values_length />
+    <Is_Fill />
+    <Action_Function>TeachGet</Action_Function>
+  </Table>
+  <Table>
+    <Equipment_Type>Robot</Equipment_Type>
+    <Equipment_Supplier>KAWASAKI</Equipment_Supplier>
+    <Command_Type>CMD</Command_Type>
+    <Command_ID>STCH,</Command_ID>
+    <Command_Format>&lt;STCH,{0}&gt;{1}</Command_Format>
+    <Command_Name>Sets taught position.</Command_Name>
+    <Command_Order>25</Command_Order>
+    <Parameters_Amount>01</Parameters_Amount>
+    <Parameter_Order>01</Parameter_Order>
+    <Parameter_ID>RobotCode</Parameter_ID>
+    <Parameter_Description>RobotCode</Parameter_Description>
+    <Data_Value>R1,R2</Data_Value>
+    <Min_Value />
+    <Max_Value />
+    <Default_Value />
+    <Values_length />
+    <Is_Fill />
+    <Action_Function>TeachS</Action_Function>
+  </Table>
+  <Table>
+    <Equipment_Type>Robot</Equipment_Type>
+    <Equipment_Supplier>KAWASAKI</Equipment_Supplier>
+    <Command_Type>CMD</Command_Type>
+    <Command_ID>CTCH,</Command_ID>
+    <Command_Format>&lt;CTCH,{0}&gt;{1}</Command_Format>
+    <Command_Name>Cancels taught position.</Command_Name>
+    <Command_Order>26</Command_Order>
+    <Parameters_Amount>01</Parameters_Amount>
+    <Parameter_Order>01</Parameter_Order>
+    <Parameter_ID>RobotCode</Parameter_ID>
+    <Parameter_Description>RobotCode</Parameter_Description>
+    <Data_Value>R1,R2</Data_Value>
+    <Min_Value />
+    <Max_Value />
+    <Default_Value />
+    <Values_length />
+    <Is_Fill />
+    <Action_Function>TeachCancel</Action_Function>
+  </Table>
+  <Table>
+    <Equipment_Type>Robot</Equipment_Type>
+    <Equipment_Supplier>KAWASAKI</Equipment_Supplier>
+    <Command_Type>CMD</Command_Type>
+    <Command_ID>CTCH,</Command_ID>
+    <Command_Format>&lt;CTCH,{0}&gt;{1}</Command_Format>
+    <Command_Name>Cancels taught position.</Command_Name>
+    <Command_Order>26</Command_Order>
+    <Parameters_Amount>02</Parameters_Amount>
+    <Parameter_Order>02</Parameter_Order>
+    <Parameter_ID>StationCode</Parameter_ID>
+    <Parameter_Description>StationCode</Parameter_Description>
+    <Data_Value>P1,P2,P3,P4,P5,P6,P7,P8,P9,P10,P11,P12,P13,P14,P15,A1</Data_Value>
+    <Min_Value />
+    <Max_Value />
+    <Default_Value />
+    <Values_length />
+    <Is_Fill />
+    <Action_Function>TeachCancel</Action_Function>
+  </Table>
+  <Table>
+    <Equipment_Type>Robot</Equipment_Type>
+    <Equipment_Supplier>KAWASAKI</Equipment_Supplier>
+    <Command_Type>CMD</Command_Type>
+    <Command_ID>RTXY,</Command_ID>
+    <Command_Format>&lt;RTXY,{0}&gt;{1}</Command_Format>
+    <Command_Name>Reports taught position in XYZ coordinate values. </Command_Name>
+    <Command_Order>27</Command_Order>
+    <Parameters_Amount>01</Parameters_Amount>
+    <Parameter_Order>01</Parameter_Order>
+    <Parameter_ID>RobotCode</Parameter_ID>
+    <Parameter_Description>RobotCode</Parameter_Description>
+    <Data_Value>R1,R2</Data_Value>
+    <Min_Value />
+    <Max_Value />
+    <Default_Value />
+    <Values_length />
+    <Is_Fill />
+    <Action_Function>TeachXYZGet</Action_Function>
+  </Table>
+  <Table>
+    <Equipment_Type>Robot</Equipment_Type>
+    <Equipment_Supplier>KAWASAKI</Equipment_Supplier>
+    <Command_Type>CMD</Command_Type>
+    <Command_ID>RTXY,</Command_ID>
+    <Command_Format>&lt;RTXY,{0}&gt;{1}</Command_Format>
+    <Command_Name>Reports taught position in XYZ coordinate values. </Command_Name>
+    <Command_Order>27</Command_Order>
+    <Parameters_Amount>02</Parameters_Amount>
+    <Parameter_Order>02</Parameter_Order>
+    <Parameter_ID>StationCode</Parameter_ID>
+    <Parameter_Description>StationCode</Parameter_Description>
+    <Data_Value>P1,P2,P3,P4,P5,P6,P7,P8,P9,P10,P11,P12,P13,P14,P15,A1</Data_Value>
+    <Min_Value />
+    <Max_Value />
+    <Default_Value />
+    <Values_length />
+    <Is_Fill />
+    <Action_Function>TeachXYZGet</Action_Function>
+  </Table>
+  <Table>
+    <Equipment_Type>Robot</Equipment_Type>
+    <Equipment_Supplier>KAWASAKI</Equipment_Supplier>
+    <Command_Type>CMD</Command_Type>
+    <Command_ID>STXY,</Command_ID>
+    <Command_Format>&lt;STXY,{0}&gt;{1}</Command_Format>
+    <Command_Name>Sets taught position in XYZ coordinate values. </Command_Name>
+    <Command_Order>28</Command_Order>
+    <Parameters_Amount>01</Parameters_Amount>
+    <Parameter_Order>01</Parameter_Order>
+    <Parameter_ID>RobotCode</Parameter_ID>
+    <Parameter_Description>RobotCode</Parameter_Description>
+    <Data_Value>R1,R2</Data_Value>
+    <Min_Value />
+    <Max_Value />
+    <Default_Value />
+    <Values_length />
+    <Is_Fill />
+    <Action_Function>TeachXYZ</Action_Function>
+  </Table>
+  <Table>
+    <Equipment_Type>Robot</Equipment_Type>
+    <Equipment_Supplier>KAWASAKI</Equipment_Supplier>
+    <Command_Type>CMD</Command_Type>
+    <Command_ID>STXY,</Command_ID>
+    <Command_Format>&lt;STXY,{0}&gt;{1}</Command_Format>
+    <Command_Name>Sets taught position in XYZ coordinate values. </Command_Name>
+    <Command_Order>28</Command_Order>
+    <Parameters_Amount>02</Parameters_Amount>
+    <Parameter_Order>02</Parameter_Order>
+    <Parameter_ID>StationCode</Parameter_ID>
+    <Parameter_Description>StationCode</Parameter_Description>
+    <Data_Value>P1,P2,P3,P4,P5,P6,P7,P8,P9,P10,P11,P12,P13,P14,P15,A1</Data_Value>
+    <Min_Value />
+    <Max_Value />
+    <Default_Value />
+    <Values_length />
+    <Is_Fill />
+    <Action_Function>TeachXYZ</Action_Function>
+  </Table>
+  <Table>
+    <Equipment_Type>Robot</Equipment_Type>
+    <Equipment_Supplier>KAWASAKI</Equipment_Supplier>
+    <Command_Type>CMD</Command_Type>
+    <Command_ID>STXY,</Command_ID>
+    <Command_Format>&lt;STXY,{0}&gt;{1}</Command_Format>
+    <Command_Name>Sets taught position in XYZ coordinate values. </Command_Name>
+    <Command_Order>28</Command_Order>
+    <Parameters_Amount>03</Parameters_Amount>
+    <Parameter_Order>03</Parameter_Order>
+    <Parameter_ID>TrackData</Parameter_ID>
+    <Parameter_Description>TrackData</Parameter_Description>
+    <Data_Value>NULL</Data_Value>
+    <Min_Value />
+    <Max_Value />
+    <Default_Value />
+    <Values_length />
+    <Is_Fill />
+    <Action_Function>TeachXYZ</Action_Function>
+  </Table>
+  <Table>
+    <Equipment_Type>Robot</Equipment_Type>
+    <Equipment_Supplier>KAWASAKI</Equipment_Supplier>
+    <Command_Type>CMD</Command_Type>
+    <Command_ID>STXY,</Command_ID>
+    <Command_Format>&lt;STXY,{0}&gt;{1}</Command_Format>
+    <Command_Name>Sets taught position in XYZ coordinate values. </Command_Name>
+    <Command_Order>28</Command_Order>
+    <Parameters_Amount>04</Parameters_Amount>
+    <Parameter_Order>04</Parameter_Order>
+    <Parameter_ID>XData</Parameter_ID>
+    <Parameter_Description>XData</Parameter_Description>
+    <Data_Value />
+    <Min_Value>-9999</Min_Value>
+    <Max_Value>9999</Max_Value>
+    <Default_Value>0</Default_Value>
+    <Values_length>4</Values_length>
+    <Is_Fill>N</Is_Fill>
+    <Action_Function>TeachXYZ</Action_Function>
+  </Table>
+  <Table>
+    <Equipment_Type>Robot</Equipment_Type>
+    <Equipment_Supplier>KAWASAKI</Equipment_Supplier>
+    <Command_Type>CMD</Command_Type>
+    <Command_ID>STXY,</Command_ID>
+    <Command_Format>&lt;STXY,{0}&gt;{1}</Command_Format>
+    <Command_Name>Sets taught position in XYZ coordinate values. </Command_Name>
+    <Command_Order>28</Command_Order>
+    <Parameters_Amount>05</Parameters_Amount>
+    <Parameter_Order>05</Parameter_Order>
+    <Parameter_ID>YData</Parameter_ID>
+    <Parameter_Description>YData</Parameter_Description>
+    <Data_Value />
+    <Min_Value>-9999</Min_Value>
+    <Max_Value>9999</Max_Value>
+    <Default_Value>0</Default_Value>
+    <Values_length>4</Values_length>
+    <Is_Fill>N</Is_Fill>
+    <Action_Function>TeachXYZ</Action_Function>
+  </Table>
+  <Table>
+    <Equipment_Type>Robot</Equipment_Type>
+    <Equipment_Supplier>KAWASAKI</Equipment_Supplier>
+    <Command_Type>CMD</Command_Type>
+    <Command_ID>STXY,</Command_ID>
+    <Command_Format>&lt;STXY,{0}&gt;{1}</Command_Format>
+    <Command_Name>Sets taught position in XYZ coordinate values. </Command_Name>
+    <Command_Order>28</Command_Order>
+    <Parameters_Amount>06</Parameters_Amount>
+    <Parameter_Order>06</Parameter_Order>
+    <Parameter_ID>ZData</Parameter_ID>
+    <Parameter_Description>ZData</Parameter_Description>
+    <Data_Value />
+    <Min_Value>-9999</Min_Value>
+    <Max_Value>9999</Max_Value>
+    <Default_Value>0</Default_Value>
+    <Values_length>4</Values_length>
+    <Is_Fill>N</Is_Fill>
+    <Action_Function>TeachXYZ</Action_Function>
+  </Table>
+  <Table>
+    <Equipment_Type>Robot</Equipment_Type>
+    <Equipment_Supplier>KAWASAKI</Equipment_Supplier>
+    <Command_Type>CMD</Command_Type>
+    <Command_ID>STXY,</Command_ID>
+    <Command_Format>&lt;STXY,{0}&gt;{1}</Command_Format>
+    <Command_Name>Sets taught position in XYZ coordinate values. </Command_Name>
+    <Command_Order>28</Command_Order>
+    <Parameters_Amount>07</Parameters_Amount>
+    <Parameter_Order>07</Parameter_Order>
+    <Parameter_ID>OData</Parameter_ID>
+    <Parameter_Description>OData</Parameter_Description>
+    <Data_Value />
+    <Min_Value>-9999</Min_Value>
+    <Max_Value>9999</Max_Value>
+    <Default_Value>0</Default_Value>
+    <Values_length>4</Values_length>
+    <Is_Fill>N</Is_Fill>
+    <Action_Function>TeachXYZ</Action_Function>
+  </Table>
+  <Table>
+    <Equipment_Type>Robot</Equipment_Type>
+    <Equipment_Supplier>KAWASAKI</Equipment_Supplier>
+    <Command_Type>CMD</Command_Type>
+    <Command_ID>SPRM,</Command_ID>
+    <Command_Format>&lt;SPRM,{0}&gt;{1}</Command_Format>
+    <Command_Name>Sets parameters.</Command_Name>
+    <Command_Order>29</Command_Order>
+    <Parameters_Amount>01</Parameters_Amount>
+    <Parameter_Order>01</Parameter_Order>
+    <Parameter_ID>ParameterName</Parameter_ID>
+    <Parameter_Description>ParameterName</Parameter_Description>
+    <Data_Value>T1,FANR1,FANR2,HOMZR1,HOMZR2,SPDGERR,SPDPERR,SPDUPDN,GERRRET,PERRRET,A1POS,HALFRESPONSE,CSTARESPONSE</Data_Value>
+    <Min_Value />
+    <Max_Value />
+    <Default_Value />
+    <Values_length />
+    <Is_Fill />
+    <Action_Function>Parameter</Action_Function>
+  </Table>
+  <Table>
+    <Equipment_Type>Robot</Equipment_Type>
+    <Equipment_Supplier>KAWASAKI</Equipment_Supplier>
+    <Command_Type>CMD</Command_Type>
+    <Command_ID>SPRM,</Command_ID>
+    <Command_Format>&lt;SPRM,{0}&gt;{1}</Command_Format>
+    <Command_Name>Sets parameters.</Command_Name>
+    <Command_Order>29</Command_Order>
+    <Parameters_Amount>02</Parameters_Amount>
+    <Parameter_Order>02</Parameter_Order>
+    <Parameter_ID>Data</Parameter_ID>
+    <Parameter_Description>Data</Parameter_Description>
+    <Data_Value />
+    <Min_Value />
+    <Max_Value />
+    <Default_Value />
+    <Values_length />
+    <Is_Fill />
+    <Action_Function>Parameter</Action_Function>
+  </Table>
+  <Table>
+    <Equipment_Type>Robot</Equipment_Type>
+    <Equipment_Supplier>KAWASAKI</Equipment_Supplier>
+    <Command_Type>CMD</Command_Type>
+    <Command_ID>RPRM,</Command_ID>
+    <Command_Format>&lt;RPRM,{0}&gt;{1}</Command_Format>
+    <Command_Name>Reports parameters.</Command_Name>
+    <Command_Order>30</Command_Order>
+    <Parameters_Amount>01</Parameters_Amount>
+    <Parameter_Order>01</Parameter_Order>
+    <Parameter_ID>ParameterName</Parameter_ID>
+    <Parameter_Description>ParameterName</Parameter_Description>
+    <Data_Value>T1,FANR1,FANR2,HOMZR1,HOMZR2,SPDGERR,SPDPERR,SPDUPDN,GERRRET,PERRRET,A1POS,HALFRESPONSE,CSTARESPONSE</Data_Value>
+    <Min_Value />
+    <Max_Value />
+    <Default_Value />
+    <Values_length />
+    <Is_Fill />
+    <Action_Function>ParameterGet</Action_Function>
+  </Table>
+  <Table>
+    <Equipment_Type>Robot</Equipment_Type>
+    <Equipment_Supplier>KAWASAKI</Equipment_Supplier>
+    <Command_Type>CMD</Command_Type>
+    <Command_ID>SPRS,</Command_ID>
+    <Command_Format>&lt;SPRS,{0}&gt;{1}</Command_Format>
+    <Command_Name>Sets station parameters.</Command_Name>
+    <Command_Order>31</Command_Order>
+    <Parameters_Amount>01</Parameters_Amount>
+    <Parameter_Order>01</Parameter_Order>
+    <Parameter_ID>RobotCode</Parameter_ID>
+    <Parameter_Description>RobotCode</Parameter_Description>
+    <Data_Value>R1,R2</Data_Value>
+    <Min_Value />
+    <Max_Value />
+    <Default_Value />
+    <Values_length />
+    <Is_Fill />
+    <Action_Function>ParameterStation</Action_Function>
+  </Table>
+  <Table>
+    <Equipment_Type>Robot</Equipment_Type>
+    <Equipment_Supplier>KAWASAKI</Equipment_Supplier>
+    <Command_Type>CMD</Command_Type>
+    <Command_ID>SPRS,</Command_ID>
+    <Command_Format>&lt;SPRS,{0}&gt;{1}</Command_Format>
+    <Command_Name>Sets station parameters.</Command_Name>
+    <Command_Order>31</Command_Order>
+    <Parameters_Amount>02</Parameters_Amount>
+    <Parameter_Order>02</Parameter_Order>
+    <Parameter_ID>StationCode</Parameter_ID>
+    <Parameter_Description>StationCode</Parameter_Description>
+    <Data_Value>P1,P2,P3,P4,P5,P6,P7,P8,P9,P10,P11,P12,P13,P14,P15,A1</Data_Value>
+    <Min_Value />
+    <Max_Value />
+    <Default_Value />
+    <Values_length />
+    <Is_Fill />
+    <Action_Function>ParameterStation</Action_Function>
+  </Table>
+  <Table>
+    <Equipment_Type>Robot</Equipment_Type>
+    <Equipment_Supplier>KAWASAKI</Equipment_Supplier>
+    <Command_Type>CMD</Command_Type>
+    <Command_ID>SPRS,</Command_ID>
+    <Command_Format>&lt;SPRS,{0}&gt;{1}</Command_Format>
+    <Command_Name>Sets station parameters.</Command_Name>
+    <Command_Order>31</Command_Order>
+    <Parameters_Amount>03</Parameters_Amount>
+    <Parameter_Order>03</Parameter_Order>
+    <Parameter_ID>ParameterName</Parameter_ID>
+    <Parameter_Description>ParameterName</Parameter_Description>
+    <Data_Value>SPDZU1,SPDZU2,SPDZD1,SPDZD2,SLOT,SDIS</Data_Value>
+    <Min_Value />
+    <Max_Value />
+    <Default_Value />
+    <Values_length />
+    <Is_Fill />
+    <Action_Function>ParameterStation</Action_Function>
+  </Table>
+  <Table>
+    <Equipment_Type>Robot</Equipment_Type>
+    <Equipment_Supplier>KAWASAKI</Equipment_Supplier>
+    <Command_Type>CMD</Command_Type>
+    <Command_ID>SPRS,</Command_ID>
+    <Command_Format>&lt;SPRS,{0}&gt;{1}</Command_Format>
+    <Command_Name>Sets station parameters.</Command_Name>
+    <Command_Order>31</Command_Order>
+    <Parameters_Amount>04</Parameters_Amount>
+    <Parameter_Order>04</Parameter_Order>
+    <Parameter_ID>Data</Parameter_ID>
+    <Parameter_Description>Data</Parameter_Description>
+    <Data_Value />
+    <Min_Value />
+    <Max_Value />
+    <Default_Value />
+    <Values_length />
+    <Is_Fill />
+    <Action_Function>ParameterStation</Action_Function>
+  </Table>
+  <Table>
+    <Equipment_Type>Robot</Equipment_Type>
+    <Equipment_Supplier>KAWASAKI</Equipment_Supplier>
+    <Command_Type>CMD</Command_Type>
+    <Command_ID>RPRS,</Command_ID>
+    <Command_Format>&lt;RPRS,{0}&gt;{1}</Command_Format>
+    <Command_Name>Reports station parameters.</Command_Name>
+    <Command_Order>32</Command_Order>
+    <Parameters_Amount>01</Parameters_Amount>
+    <Parameter_Order>01</Parameter_Order>
+    <Parameter_ID>RobotCode</Parameter_ID>
+    <Parameter_Description>RobotCode</Parameter_Description>
+    <Data_Value>R1,R2</Data_Value>
+    <Min_Value />
+    <Max_Value />
+    <Default_Value />
+    <Values_length />
+    <Is_Fill />
+    <Action_Function>ParameterStationGet</Action_Function>
+  </Table>
+  <Table>
+    <Equipment_Type>Robot</Equipment_Type>
+    <Equipment_Supplier>KAWASAKI</Equipment_Supplier>
+    <Command_Type>CMD</Command_Type>
+    <Command_ID>RPRS,</Command_ID>
+    <Command_Format>&lt;RPRS,{0}&gt;{1}</Command_Format>
+    <Command_Name>Reports station parameters.</Command_Name>
+    <Command_Order>32</Command_Order>
+    <Parameters_Amount>02</Parameters_Amount>
+    <Parameter_Order>02</Parameter_Order>
+    <Parameter_ID>StationCode</Parameter_ID>
+    <Parameter_Description>StationCode</Parameter_Description>
+    <Data_Value>P1,P2,P3,P4,P5,P6,P7,P8,P9,P10,P11,P12,P13,P14,P15,A1</Data_Value>
+    <Min_Value />
+    <Max_Value />
+    <Default_Value />
+    <Values_length />
+    <Is_Fill />
+    <Action_Function>ParameterStationGet</Action_Function>
+  </Table>
+  <Table>
+    <Equipment_Type>Robot</Equipment_Type>
+    <Equipment_Supplier>KAWASAKI</Equipment_Supplier>
+    <Command_Type>CMD</Command_Type>
+    <Command_ID>RPRS,</Command_ID>
+    <Command_Format>&lt;RPRS,{0}&gt;{1}</Command_Format>
+    <Command_Name>Reports station parameters.</Command_Name>
+    <Command_Order>32</Command_Order>
+    <Parameters_Amount>03</Parameters_Amount>
+    <Parameter_Order>03</Parameter_Order>
+    <Parameter_ID>ParameterName</Parameter_ID>
+    <Parameter_Description>ParameterName</Parameter_Description>
+    <Data_Value>SPDZU1,SPDZU2,SPDZD1,SPDZD2,SLOT,SDIS</Data_Value>
+    <Min_Value />
+    <Max_Value />
+    <Default_Value />
+    <Values_length />
+    <Is_Fill />
+    <Action_Function>ParameterStationGet</Action_Function>
+  </Table>
+  <Table>
+    <Equipment_Type>Robot</Equipment_Type>
+    <Equipment_Supplier>KAWASAKI</Equipment_Supplier>
+    <Command_Type>CMD</Command_Type>
+    <Command_ID>QERR,</Command_ID>
+    <Command_Format>&lt;QERR,{0}&gt;{1}</Command_Format>
+    <Command_Name>Reports error history.</Command_Name>
+    <Command_Order>33</Command_Order>
+    <Parameters_Amount>01</Parameters_Amount>
+    <Parameter_Order>01</Parameter_Order>
+    <Parameter_ID>RobotCode</Parameter_ID>
+    <Parameter_Description>RobotCode</Parameter_Description>
+    <Data_Value>R1,R2</Data_Value>
+    <Min_Value />
+    <Max_Value />
+    <Default_Value />
+    <Values_length />
+    <Is_Fill />
+    <Action_Function>ErrorList</Action_Function>
+  </Table>
+  <Table>
+    <Equipment_Type>Robot</Equipment_Type>
+    <Equipment_Supplier>KAWASAKI</Equipment_Supplier>
+    <Command_Type>CMD</Command_Type>
+    <Command_ID>QERR,</Command_ID>
+    <Command_Format>&lt;QERR,{0}&gt;{1}</Command_Format>
+    <Command_Name>Reports error history.</Command_Name>
+    <Command_Order>33</Command_Order>
+    <Parameters_Amount>02</Parameters_Amount>
+    <Parameter_Order>02</Parameter_Order>
+    <Parameter_ID>ErrorCount</Parameter_ID>
+    <Parameter_Description>ErrorCount</Parameter_Description>
+    <Data_Value />
+    <Min_Value>1</Min_Value>
+    <Max_Value>10</Max_Value>
+    <Default_Value>1</Default_Value>
+    <Values_length>2</Values_length>
+    <Is_Fill>N</Is_Fill>
+    <Action_Function>ErrorList</Action_Function>
+  </Table>
+  <Table>
+    <Equipment_Type>Robot</Equipment_Type>
+    <Equipment_Supplier>KAWASAKI</Equipment_Supplier>
+    <Command_Type>CMD</Command_Type>
+    <Command_ID>QMAP,</Command_ID>
+    <Command_Format>&lt;QMAP,{0}&gt;{1}</Command_Format>
+    <Command_Name>Reports the latest mapping result.</Command_Name>
+    <Command_Order>34</Command_Order>
+    <Parameters_Amount>01</Parameters_Amount>
+    <Parameter_Order>01</Parameter_Order>
+    <Parameter_ID>RobotCode</Parameter_ID>
+    <Parameter_Description>RobotCode</Parameter_Description>
+    <Data_Value>R1,R2</Data_Value>
+    <Min_Value />
+    <Max_Value />
+    <Default_Value />
+    <Values_length />
+    <Is_Fill />
+    <Action_Function>MappingGet</Action_Function>
+  </Table>
+  <Table>
+    <Equipment_Type>Robot</Equipment_Type>
+    <Equipment_Supplier>KAWASAKI</Equipment_Supplier>
+    <Command_Type>CMD</Command_Type>
+    <Command_ID>QMAP,</Command_ID>
+    <Command_Format>&lt;QMAP,{0}&gt;{1}</Command_Format>
+    <Command_Name>Reports the latest mapping result.</Command_Name>
+    <Command_Order>34</Command_Order>
+    <Parameters_Amount>02</Parameters_Amount>
+    <Parameter_Order>02</Parameter_Order>
+    <Parameter_ID>StationCode</Parameter_ID>
+    <Parameter_Description>StationCode</Parameter_Description>
+    <Data_Value>P1,P2,P3,P4,P5,P6,P7,P8,P9,P10,P11,P12,P13,P14,P15,A1</Data_Value>
+    <Min_Value />
+    <Max_Value />
+    <Default_Value />
+    <Values_length />
+    <Is_Fill />
+    <Action_Function>MappingGet</Action_Function>
+  </Table>
+  <Table>
+    <Equipment_Type>Robot</Equipment_Type>
+    <Equipment_Supplier>KAWASAKI</Equipment_Supplier>
+    <Command_Type>CMD</Command_Type>
+    <Command_ID>STIM,</Command_ID>
+    <Command_Format>&lt;STIM,{0}&gt;{1}</Command_Format>
+    <Command_Name>Sets time and date.</Command_Name>
+    <Command_Order>35</Command_Order>
+    <Parameters_Amount>01</Parameters_Amount>
+    <Parameter_Order>01</Parameter_Order>
+    <Parameter_ID>DateTime</Parameter_ID>
+    <Parameter_Description>DateTime</Parameter_Description>
+    <Data_Value />
+    <Min_Value />
+    <Max_Value />
+    <Default_Value />
+    <Values_length />
+    <Is_Fill />
+    <Action_Function>DateTime</Action_Function>
+  </Table>
+  <Table>
+    <Equipment_Type>Robot</Equipment_Type>
+    <Equipment_Supplier>KAWASAKI</Equipment_Supplier>
+    <Command_Type>CMD</Command_Type>
+    <Command_ID>RTIM,</Command_ID>
+    <Command_Format>&lt;RTIM,{0}&gt;{1}</Command_Format>
+    <Command_Name>Reports time and date.</Command_Name>
+    <Command_Order>36</Command_Order>
+    <Parameters_Amount>01</Parameters_Amount>
+    <Parameter_Order>01</Parameter_Order>
+    <Parameter_ID>Null</Parameter_ID>
+    <Parameter_Description />
+    <Data_Value />
+    <Min_Value />
+    <Max_Value />
+    <Default_Value />
+    <Values_length />
+    <Is_Fill />
+    <Action_Function>DateTimeGet</Action_Function>
+  </Table>
+  <Table>
+    <Equipment_Type>Robot</Equipment_Type>
+    <Equipment_Supplier>KAWASAKI</Equipment_Supplier>
+    <Command_Type>CMD</Command_Type>
+    <Command_ID>VERM,</Command_ID>
+    <Command_Format>&lt;VERM,{0}&gt;{1}</Command_Format>
+    <Command_Name>Reports robot ID.</Command_Name>
+    <Command_Order>37</Command_Order>
+    <Parameters_Amount>01</Parameters_Amount>
+    <Parameter_Order>01</Parameter_Order>
+    <Parameter_ID>Null</Parameter_ID>
+    <Parameter_Description />
+    <Data_Value />
+    <Min_Value />
+    <Max_Value />
+    <Default_Value />
+    <Values_length />
+    <Is_Fill />
+    <Action_Function>RobotVersionGet</Action_Function>
+  </Table>
+  <Table>
+    <Equipment_Type>Robot</Equipment_Type>
+    <Equipment_Supplier>KAWASAKI</Equipment_Supplier>
+    <Command_Type>CMD</Command_Type>
+    <Command_ID>VERH,</Command_ID>
+    <Command_Format>&lt;VERH,{0}&gt;{1}</Command_Format>
+    <Command_Name>Reports controller ID.</Command_Name>
+    <Command_Order>38</Command_Order>
+    <Parameters_Amount>01</Parameters_Amount>
+    <Parameter_Order>01</Parameter_Order>
+    <Parameter_ID>Null</Parameter_ID>
+    <Parameter_Description />
+    <Data_Value />
+    <Min_Value />
+    <Max_Value />
+    <Default_Value />
+    <Values_length />
+    <Is_Fill />
+    <Action_Function>RobotHardwareVersion</Action_Function>
+  </Table>
+  <Table>
+    <Equipment_Type>Robot</Equipment_Type>
+    <Equipment_Supplier>KAWASAKI</Equipment_Supplier>
+    <Command_Type>CMD</Command_Type>
+    <Command_ID>VERS,</Command_ID>
+    <Command_Format>&lt;VERS,{0}&gt;{1}</Command_Format>
+    <Command_Name>Reports version of software.</Command_Name>
+    <Command_Order>39</Command_Order>
+    <Parameters_Amount>01</Parameters_Amount>
+    <Parameter_Order>01</Parameter_Order>
+    <Parameter_ID>Null</Parameter_ID>
+    <Parameter_Description />
+    <Data_Value />
+    <Min_Value />
+    <Max_Value />
+    <Default_Value />
+    <Values_length />
+    <Is_Fill />
+    <Action_Function>RobotSoftwareVersion</Action_Function>
+  </Table>
+  <Table>
+    <Equipment_Type>Aligner</Equipment_Type>
+    <Equipment_Supplier>KAWASAKI</Equipment_Supplier>
+    <Command_Type>CMD</Command_Type>
+    <Command_ID>CSTA,</Command_ID>
+    <Command_Format>&lt;CSTA,{0}&gt;{1}</Command_Format>
+    <Command_Name>Reports combined status.</Command_Name>
+    <Command_Order>01</Command_Order>
+    <Parameters_Amount>01</Parameters_Amount>
+    <Parameter_Order>01</Parameter_Order>
+    <Parameter_ID>DeviceCode</Parameter_ID>
+    <Parameter_Description>DeviceCode</Parameter_Description>
+    <Data_Value>R1,R2</Data_Value>
+    <Min_Value />
+    <Max_Value />
+    <Default_Value />
+    <Values_length />
+    <Is_Fill />
+    <Action_Function>CombinedDeviceStatus</Action_Function>
+  </Table>
+  <Table>
+    <Equipment_Type>Aligner</Equipment_Type>
+    <Equipment_Supplier>KAWASAKI</Equipment_Supplier>
+    <Command_Type>CMD</Command_Type>
+    <Command_ID>SERV,</Command_ID>
+    <Command_Format>&lt;SERV,{0}&gt;{1}</Command_Format>
+    <Command_Name>Turns servo ON.</Command_Name>
+    <Command_Order>09</Command_Order>
+    <Parameters_Amount>01</Parameters_Amount>
+    <Parameter_Order>01</Parameter_Order>
+    <Parameter_ID>DeviceCode</Parameter_ID>
+    <Parameter_Description>DeviceCode</Parameter_Description>
+    <Data_Value>R1,R2</Data_Value>
+    <Min_Value />
+    <Max_Value />
+    <Default_Value />
+    <Values_length />
+    <Is_Fill />
+    <Action_Function>ExcitationOn</Action_Function>
+  </Table>
+  <Table>
+    <Equipment_Type>Aligner</Equipment_Type>
+    <Equipment_Supplier>KAWASAKI</Equipment_Supplier>
+    <Command_Type>CMD</Command_Type>
+    <Command_ID>STOP,</Command_ID>
+    <Command_Format>&lt;STOP,{0}&gt;{1}</Command_Format>
+    <Command_Name>Turns servo OFF.</Command_Name>
+    <Command_Order>10</Command_Order>
+    <Parameters_Amount>01</Parameters_Amount>
+    <Parameter_Order>01</Parameter_Order>
+    <Parameter_ID>DeviceCode</Parameter_ID>
+    <Parameter_Description>DeviceCode</Parameter_Description>
+    <Data_Value>R1,R2</Data_Value>
+    <Min_Value />
+    <Max_Value />
+    <Default_Value />
+    <Values_length />
+    <Is_Fill />
+    <Action_Function>ExcitationOff</Action_Function>
+  </Table>
+  <Table>
+    <Equipment_Type>Aligner</Equipment_Type>
+    <Equipment_Supplier>KAWASAKI</Equipment_Supplier>
+    <Command_Type>CMD</Command_Type>
+    <Command_ID>RSPD,</Command_ID>
+    <Command_Format>&lt;RSPD,{0}&gt;{1}</Command_Format>
+    <Command_Name>Reports set robot speed.</Command_Name>
+    <Command_Order>12</Command_Order>
+    <Parameters_Amount>01</Parameters_Amount>
+    <Parameter_Order>01</Parameter_Order>
+    <Parameter_ID>DeviceCode</Parameter_ID>
+    <Parameter_Description>DeviceCode</Parameter_Description>
+    <Data_Value>R1,R2</Data_Value>
+    <Min_Value />
+    <Max_Value />
+    <Default_Value />
+    <Values_length />
+    <Is_Fill />
+    <Action_Function>DeviceStatusSpeedGet</Action_Function>
+  </Table>
+  <Table>
+    <Equipment_Type>Aligner</Equipment_Type>
+    <Equipment_Supplier>KAWASAKI</Equipment_Supplier>
+    <Command_Type>CMD</Command_Type>
+    <Command_ID>HOLD,</Command_ID>
+    <Command_Format>&lt;HOLD,{0}&gt;{1}</Command_Format>
+    <Command_Name>Grips wafer.</Command_Name>
+    <Command_Order>17</Command_Order>
+    <Parameters_Amount>01</Parameters_Amount>
+    <Parameter_Order>01</Parameter_Order>
+    <Parameter_ID>RobotCode</Parameter_ID>
+    <Parameter_Description>RobotCode</Parameter_Description>
+    <Data_Value>R1,R2</Data_Value>
+    <Min_Value />
+    <Max_Value />
+    <Default_Value />
+    <Values_length />
+    <Is_Fill />
+    <Action_Function>WaferHold</Action_Function>
+  </Table>
+  <Table>
+    <Equipment_Type>Aligner</Equipment_Type>
+    <Equipment_Supplier>KAWASAKI</Equipment_Supplier>
+    <Command_Type>CMD</Command_Type>
+    <Command_ID>HOLD,</Command_ID>
+    <Command_Format>&lt;HOLD,{0}&gt;{1}</Command_Format>
+    <Command_Name>Grips wafer.</Command_Name>
+    <Command_Order>17</Command_Order>
+    <Parameters_Amount>02</Parameters_Amount>
+    <Parameter_Order>02</Parameter_Order>
+    <Parameter_ID>HandCode</Parameter_ID>
+    <Parameter_Description>HandCode</Parameter_Description>
+    <Data_Value>H1,H2,HA</Data_Value>
+    <Min_Value />
+    <Max_Value />
+    <Default_Value />
+    <Values_length />
+    <Is_Fill />
+    <Action_Function>WaferHold</Action_Function>
+  </Table>
+  <Table>
+    <Equipment_Type>Aligner</Equipment_Type>
+    <Equipment_Supplier>KAWASAKI</Equipment_Supplier>
+    <Command_Type>CMD</Command_Type>
+    <Command_ID>RELS,</Command_ID>
+    <Command_Format>&lt;RELS,{0}&gt;{1}</Command_Format>
+    <Command_Name>Releases wafer.</Command_Name>
+    <Command_Order>18</Command_Order>
+    <Parameters_Amount>01</Parameters_Amount>
+    <Parameter_Order>01</Parameter_Order>
+    <Parameter_ID>RobotCode</Parameter_ID>
+    <Parameter_Description>RobotCode</Parameter_Description>
+    <Data_Value>R1,R2</Data_Value>
+    <Min_Value />
+    <Max_Value />
+    <Default_Value />
+    <Values_length />
+    <Is_Fill />
+    <Action_Function>WaferRelease</Action_Function>
+  </Table>
+  <Table>
+    <Equipment_Type>Aligner</Equipment_Type>
+    <Equipment_Supplier>KAWASAKI</Equipment_Supplier>
+    <Command_Type>CMD</Command_Type>
+    <Command_ID>RELS,</Command_ID>
+    <Command_Format>&lt;RELS,{0}&gt;{1}</Command_Format>
+    <Command_Name>Releases wafer.</Command_Name>
+    <Command_Order>18</Command_Order>
+    <Parameters_Amount>02</Parameters_Amount>
+    <Parameter_Order>02</Parameter_Order>
+    <Parameter_ID>HandCode</Parameter_ID>
+    <Parameter_Description>HandCode</Parameter_Description>
+    <Data_Value>H1,H2,HA</Data_Value>
+    <Min_Value />
+    <Max_Value />
+    <Default_Value />
+    <Values_length />
+    <Is_Fill />
+    <Action_Function>WaferRelease</Action_Function>
+  </Table>
+  <Table>
+    <Equipment_Type>Aligner</Equipment_Type>
+    <Equipment_Supplier>KAWASAKI</Equipment_Supplier>
+    <Command_Type>CMD</Command_Type>
+    <Command_ID>MOVA,</Command_ID>
+    <Command_Format>&lt;MOVA,{0}&gt;{1}</Command_Format>
+    <Command_Name>Moves to absolute position.</Command_Name>
+    <Command_Order>22</Command_Order>
+    <Parameters_Amount>01</Parameters_Amount>
+    <Parameter_Order>01</Parameter_Order>
+    <Parameter_ID>DeviceCode</Parameter_ID>
+    <Parameter_Description>DeviceCode</Parameter_Description>
+    <Data_Value>R1,R2</Data_Value>
+    <Min_Value />
+    <Max_Value />
+    <Default_Value />
+    <Values_length />
+    <Is_Fill />
+    <Action_Function>MoveDirect</Action_Function>
+  </Table>
+  <Table>
+    <Equipment_Type>Aligner</Equipment_Type>
+    <Equipment_Supplier>KAWASAKI</Equipment_Supplier>
+    <Command_Type>CMD</Command_Type>
+    <Command_ID>MOVA,</Command_ID>
+    <Command_Format>&lt;MOVA,{0}&gt;{1}</Command_Format>
+    <Command_Name>Moves to absolute position.</Command_Name>
+    <Command_Order>22</Command_Order>
+    <Parameters_Amount>02</Parameters_Amount>
+    <Parameter_Order>02</Parameter_Order>
+    <Parameter_ID>JointCode</Parameter_ID>
+    <Parameter_Description>JointCode</Parameter_Description>
+    <Data_Value>J1,J2,J3,J4,J6,J7,LX0,LY0,LX1,LX2,LY1,LY2,LR1,LR2</Data_Value>
+    <Min_Value />
+    <Max_Value />
+    <Default_Value />
+    <Values_length />
+    <Is_Fill />
+    <Action_Function>MoveDirect</Action_Function>
+  </Table>
+  <Table>
+    <Equipment_Type>Aligner</Equipment_Type>
+    <Equipment_Supplier>KAWASAKI</Equipment_Supplier>
+    <Command_Type>CMD</Command_Type>
+    <Command_ID>MOVA,</Command_ID>
+    <Command_Format>&lt;MOVA,{0}&gt;{1}</Command_Format>
+    <Command_Name>Moves to absolute position.</Command_Name>
+    <Command_Order>22</Command_Order>
+    <Parameters_Amount>03</Parameters_Amount>
+    <Parameter_Order>03</Parameter_Order>
+    <Parameter_ID>MoveData</Parameter_ID>
+    <Parameter_Description>MoveData</Parameter_Description>
+    <Data_Value />
+    <Min_Value>-9999</Min_Value>
+    <Max_Value>9999</Max_Value>
+    <Default_Value>0</Default_Value>
+    <Values_length>4</Values_length>
+    <Is_Fill>N</Is_Fill>
+    <Action_Function>MoveDirect</Action_Function>
+  </Table>
+  <Table>
+    <Equipment_Type>Aligner</Equipment_Type>
+    <Equipment_Supplier>KAWASAKI</Equipment_Supplier>
+    <Command_Type>CMD</Command_Type>
+    <Command_ID>MOVR,</Command_ID>
+    <Command_Format>&lt;MOVR,{0}&gt;{1}</Command_Format>
+    <Command_Name>Moves to relative position.</Command_Name>
+    <Command_Order>23</Command_Order>
+    <Parameters_Amount>01</Parameters_Amount>
+    <Parameter_Order>01</Parameter_Order>
+    <Parameter_ID>DeviceCode</Parameter_ID>
+    <Parameter_Description>DeviceCode</Parameter_Description>
+    <Data_Value>R1,R2</Data_Value>
+    <Min_Value />
+    <Max_Value />
+    <Default_Value />
+    <Values_length />
+    <Is_Fill />
+    <Action_Function>MoveRelativePosition</Action_Function>
+  </Table>
+  <Table>
+    <Equipment_Type>Aligner</Equipment_Type>
+    <Equipment_Supplier>KAWASAKI</Equipment_Supplier>
+    <Command_Type>CMD</Command_Type>
+    <Command_ID>MOVR,</Command_ID>
+    <Command_Format>&lt;MOVR,{0}&gt;{1}</Command_Format>
+    <Command_Name>Moves to relative position.</Command_Name>
+    <Command_Order>23</Command_Order>
+    <Parameters_Amount>02</Parameters_Amount>
+    <Parameter_Order>02</Parameter_Order>
+    <Parameter_ID>JointCode</Parameter_ID>
+    <Parameter_Description>JointCode</Parameter_Description>
+    <Data_Value>J1,J2,J3,J4,J6,J7,LX0,LY0,LX1,LX2,LY1,LY2,LR1,LR2</Data_Value>
+    <Min_Value />
+    <Max_Value />
+    <Default_Value />
+    <Values_length />
+    <Is_Fill />
+    <Action_Function>MoveRelativePosition</Action_Function>
+  </Table>
+  <Table>
+    <Equipment_Type>Aligner</Equipment_Type>
+    <Equipment_Supplier>KAWASAKI</Equipment_Supplier>
+    <Command_Type>CMD</Command_Type>
+    <Command_ID>MOVR,</Command_ID>
+    <Command_Format>&lt;MOVR,{0}&gt;{1}</Command_Format>
+    <Command_Name>Moves to relative position.</Command_Name>
+    <Command_Order>23</Command_Order>
+    <Parameters_Amount>03</Parameters_Amount>
+    <Parameter_Order>03</Parameter_Order>
+    <Parameter_ID>MoveData</Parameter_ID>
+    <Parameter_Description>MoveData</Parameter_Description>
+    <Data_Value />
+    <Min_Value>-9999</Min_Value>
+    <Max_Value>9999</Max_Value>
+    <Default_Value>0</Default_Value>
+    <Values_length>4</Values_length>
+    <Is_Fill>N</Is_Fill>
+    <Action_Function>MoveRelativePosition</Action_Function>
+  </Table>
+  <Table>
+    <Equipment_Type>Aligner</Equipment_Type>
+    <Equipment_Supplier>KAWASAKI</Equipment_Supplier>
+    <Command_Type>CMD</Command_Type>
+    <Command_ID>ALGN,</Command_ID>
+    <Command_Format>&lt;ALGN,{0}&gt;{1}</Command_Format>
+    <Command_Name>Aligns wafer.</Command_Name>
+    <Command_Order>24</Command_Order>
+    <Parameters_Amount>01</Parameters_Amount>
+    <Parameter_Order>01</Parameter_Order>
+    <Parameter_ID>AlignerCode</Parameter_ID>
+    <Parameter_Description>AlignerCode</Parameter_Description>
+    <Data_Value>A1</Data_Value>
+    <Min_Value />
+    <Max_Value />
+    <Default_Value />
+    <Values_length />
+    <Is_Fill />
+    <Action_Function />
+  </Table>
+  <Table>
+    <Equipment_Type>Aligner</Equipment_Type>
+    <Equipment_Supplier>KAWASAKI</Equipment_Supplier>
+    <Command_Type>CMD</Command_Type>
+    <Command_ID>ALGN,</Command_ID>
+    <Command_Format>&lt;ALGN,{0}&gt;{1}</Command_Format>
+    <Command_Name>Aligns wafer.</Command_Name>
+    <Command_Order>24</Command_Order>
+    <Parameters_Amount>02</Parameters_Amount>
+    <Parameter_Order>02</Parameter_Order>
+    <Parameter_ID>AlignmentAngle</Parameter_ID>
+    <Parameter_Description>AlignmentAngle</Parameter_Description>
+    <Data_Value />
+    <Min_Value>-180</Min_Value>
+    <Max_Value>180</Max_Value>
+    <Default_Value>0</Default_Value>
+    <Values_length>3</Values_length>
+    <Is_Fill>N</Is_Fill>
+    <Action_Function />
+  </Table>
+  <Table>
+    <Equipment_Type>Aligner</Equipment_Type>
+    <Equipment_Supplier>KAWASAKI</Equipment_Supplier>
+    <Command_Type>CMD</Command_Type>
+    <Command_ID>RAOF,</Command_ID>
+    <Command_Format>&lt;RAOF,{0}&gt;{1}</Command_Format>
+    <Command_Name>Reports offset value of aligner.</Command_Name>
+    <Command_Order>25</Command_Order>
+    <Parameters_Amount>01</Parameters_Amount>
+    <Parameter_Order>01</Parameter_Order>
+    <Parameter_ID>AlignerCode</Parameter_ID>
+    <Parameter_Description>AlignerCode</Parameter_Description>
+    <Data_Value>A1</Data_Value>
+    <Min_Value />
+    <Max_Value />
+    <Default_Value />
+    <Values_length />
+    <Is_Fill />
+    <Action_Function />
+  </Table>
+  <Table>
+    <Equipment_Type>Robot</Equipment_Type>
+    <Equipment_Supplier>KAWASAKI</Equipment_Supplier>
+    <Command_Type>CMD</Command_Type>
+    <Command_ID>STCH,</Command_ID>
+    <Command_Format>&lt;STCH,{0}&gt;{1}</Command_Format>
+    <Command_Name>Sets taught position.</Command_Name>
+    <Command_Order>39</Command_Order>
+    <Parameters_Amount>02</Parameters_Amount>
+    <Parameter_Order>02</Parameter_Order>
+    <Parameter_ID>StationCode</Parameter_ID>
+    <Parameter_Description>StationCode</Parameter_Description>
+    <Data_Value>P1,P2,P3,P4,P5,P6,P7,P8,P9,P10,P11,P12,P13,P14,P15,A1</Data_Value>
+    <Min_Value />
+    <Max_Value />
+    <Default_Value />
+    <Values_length />
+    <Is_Fill />
+    <Action_Function />
+  </Table>
+  <Table>
+    <Equipment_Type>Robot</Equipment_Type>
+    <Equipment_Supplier>KAWASAKI</Equipment_Supplier>
+    <Command_Type>CMD</Command_Type>
+    <Command_ID>STCH,</Command_ID>
+    <Command_Format>&lt;STCH,{0}&gt;{1}</Command_Format>
+    <Command_Name>Sets taught position.</Command_Name>
+    <Command_Order>39</Command_Order>
+    <Parameters_Amount>03</Parameters_Amount>
+    <Parameter_Order>03</Parameter_Order>
+    <Parameter_ID>J2Data</Parameter_ID>
+    <Parameter_Description>J2Data</Parameter_Description>
+    <Data_Value />
+    <Min_Value>-9999</Min_Value>
+    <Max_Value>9999</Max_Value>
+    <Default_Value>0</Default_Value>
+    <Values_length>4</Values_length>
+    <Is_Fill>N</Is_Fill>
+    <Action_Function />
+  </Table>
+  <Table>
+    <Equipment_Type>Robot</Equipment_Type>
+    <Equipment_Supplier>KAWASAKI</Equipment_Supplier>
+    <Command_Type>CMD</Command_Type>
+    <Command_ID>STCH,</Command_ID>
+    <Command_Format>&lt;STCH,{0}&gt;{1}</Command_Format>
+    <Command_Name>Sets taught position.</Command_Name>
+    <Command_Order>39</Command_Order>
+    <Parameters_Amount>04</Parameters_Amount>
+    <Parameter_Order>04</Parameter_Order>
+    <Parameter_ID>J3Data</Parameter_ID>
+    <Parameter_Description>J3Data</Parameter_Description>
+    <Data_Value />
+    <Min_Value>-9999</Min_Value>
+    <Max_Value>9999</Max_Value>
+    <Default_Value>0</Default_Value>
+    <Values_length>4</Values_length>
+    <Is_Fill>N</Is_Fill>
+    <Action_Function />
+  </Table>
+  <Table>
+    <Equipment_Type>Robot</Equipment_Type>
+    <Equipment_Supplier>KAWASAKI</Equipment_Supplier>
+    <Command_Type>CMD</Command_Type>
+    <Command_ID>STCH,</Command_ID>
+    <Command_Format>&lt;STCH,{0}&gt;{1}</Command_Format>
+    <Command_Name>Sets taught position.</Command_Name>
+    <Command_Order>39</Command_Order>
+    <Parameters_Amount>05</Parameters_Amount>
+    <Parameter_Order>05</Parameter_Order>
+    <Parameter_ID>J4Data</Parameter_ID>
+    <Parameter_Description>J4Data</Parameter_Description>
+    <Data_Value />
+    <Min_Value>-9999</Min_Value>
+    <Max_Value>9999</Max_Value>
+    <Default_Value>0</Default_Value>
+    <Values_length>4</Values_length>
+    <Is_Fill>N</Is_Fill>
+    <Action_Function />
+  </Table>
+  <Table>
+    <Equipment_Type>Robot</Equipment_Type>
+    <Equipment_Supplier>KAWASAKI</Equipment_Supplier>
+    <Command_Type>CMD</Command_Type>
+    <Command_ID>STCH,</Command_ID>
+    <Command_Format>&lt;STCH,{0}&gt;{1}</Command_Format>
+    <Command_Name>Sets taught position.</Command_Name>
+    <Command_Order>39</Command_Order>
+    <Parameters_Amount>06</Parameters_Amount>
+    <Parameter_Order>06</Parameter_Order>
+    <Parameter_ID>J6Data</Parameter_ID>
+    <Parameter_Description>J6Data</Parameter_Description>
+    <Data_Value />
+    <Min_Value>-9999</Min_Value>
+    <Max_Value>9999</Max_Value>
+    <Default_Value>0</Default_Value>
+    <Values_length>4</Values_length>
+    <Is_Fill>N</Is_Fill>
+    <Action_Function />
+  </Table>
+  <Table>
+    <Equipment_Type>Robot</Equipment_Type>
+    <Equipment_Supplier>KAWASAKI</Equipment_Supplier>
+    <Command_Type>CMD</Command_Type>
+    <Command_ID>STCH,</Command_ID>
+    <Command_Format>&lt;STCH,{0}&gt;{1}</Command_Format>
+    <Command_Name>Sets taught position.</Command_Name>
+    <Command_Order>39</Command_Order>
+    <Parameters_Amount>07</Parameters_Amount>
+    <Parameter_Order>07</Parameter_Order>
+    <Parameter_ID>J7Data</Parameter_ID>
+    <Parameter_Description>J7Data</Parameter_Description>
+    <Data_Value />
+    <Min_Value>-9999</Min_Value>
+    <Max_Value>9999</Max_Value>
+    <Default_Value>0</Default_Value>
+    <Values_length>4</Values_length>
+    <Is_Fill>N</Is_Fill>
+    <Action_Function />
   </Table>
 </DocumentElement>

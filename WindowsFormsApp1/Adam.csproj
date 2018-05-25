@@ -37,7 +37,7 @@
   <ItemGroup>
     <Reference Include="log4net, Version=2.0.8.0, Culture=neutral, PublicKeyToken=669e0ddf0bb1aa2a, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\..\..\..\Downloads\log4net-2.0.8-bin-newkey\log4net-2.0.8\bin\net\4.5\release\log4net.dll</HintPath>
+      <HintPath>..\..\SANWA-Function-For-Test\log4net.dll</HintPath>
     </Reference>
     <Reference Include="myButtonCheckTest">
       <HintPath>..\..\..\Downloads\myButtonCheckTest\myButtonCheckTest\bin\Debug\myButtonCheckTest.exe</HintPath>
@@ -155,9 +155,11 @@
     <Compile Include="FormTeaching.designer.cs">
       <DependentUpon>FormTeaching.cs</DependentUpon>
     </Compile>
+    <Compile Include="UI_Update\Layout\DIOUpdate.cs" />
     <Compile Include="UI_Update\Manual\PortStatusUpdate.cs" />
     <Compile Include="UI_Update\Monitoring\ConnectionStatusUpdate.cs" />
     <Compile Include="UI_Update\Monitoring\NodeStatusUpdate.cs" />
+    <Compile Include="UI_Update\OCR\OCRUpdate.cs" />
     <EmbeddedResource Include="FormAlarm.resx">
       <DependentUpon>FormAlarm.cs</DependentUpon>
     </EmbeddedResource>

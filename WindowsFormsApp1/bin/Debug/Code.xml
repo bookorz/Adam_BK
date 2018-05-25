@@ -804,11 +804,11 @@
   <Table>
     <Category_ID>System</Category_ID>
     <Category_Description>系統訊息</Category_Description>
-    <Code_Name>Kawasaki</Code_Name>
+    <Code_Name>KAWASAKI</Code_Name>
     <Code_Type>EquipmentSupplier</Code_Type>
-    <Code_ID>Kawasaki</Code_ID>
-    <Code_Cause>Kawasaki</Code_Cause>
-    <Code_Cause_English>Kawasaki</Code_Cause_English>
+    <Code_ID>KAWASAKI</Code_ID>
+    <Code_Cause>KAWASAKI</Code_Cause>
+    <Code_Cause_English>KAWASAKI</Code_Cause_English>
   </Table>
   <Table>
     <Category_ID>System</Category_ID>
@@ -889,16 +889,25 @@
     <Code_Type>SANWA.ROBOT</Code_Type>
     <Code_ID>00</Code_ID>
     <Code_Cause>三和 Robot 警示群組代碼</Code_Cause>
-    <Code_Cause_English />
+    <Code_Cause_English>SANWA Robot Alarm ID</Code_Cause_English>
   </Table>
   <Table>
     <Category_ID>EquipmentAlarmCode</Category_ID>
     <Category_Description>設備警示代碼</Category_Description>
     <Code_Name>SANWA Aligner Alarm ID</Code_Name>
-    <Code_Type>SANEA.ALIGNER</Code_Type>
+    <Code_Type>SANWA.ALIGNER</Code_Type>
     <Code_ID>A0</Code_ID>
     <Code_Cause>三和 Aligent 警示群組代碼</Code_Cause>
-    <Code_Cause_English />
+    <Code_Cause_English>SANWA Aligner Alarm ID</Code_Cause_English>
+  </Table>
+  <Table>
+    <Category_ID>EquipmentAlarmCode</Category_ID>
+    <Category_Description>設備警示代碼</Category_Description>
+    <Code_Name>TDK Load Port Alarm ID</Code_Name>
+    <Code_Type>TDK.LOADPORT</Code_Type>
+    <Code_ID>11</Code_ID>
+    <Code_Cause>TDK Load Port 警示群組代碼</Code_Cause>
+    <Code_Cause_English>TDK Load Port Alarm ID</Code_Cause_English>
   </Table>
   <Table>
     <Category_ID>00</Category_ID>
@@ -3500,5 +3509,2399 @@
     <Code_ID>F</Code_ID>
     <Code_Cause>R3 軸</Code_Cause>
     <Code_Cause_English>R3 Axis</Code_Cause_English>
+  </Table>
+  <Table>
+    <Category_ID>TDK.LoadPort</Category_ID>
+    <Category_Description>LoadPort 命令</Category_Description>
+    <Code_Name>錯誤重置</Code_Name>
+    <Code_Type>SET</Code_Type>
+    <Code_ID>RESET</Code_ID>
+    <Code_Cause>錯誤重置</Code_Cause>
+    <Code_Cause_English>Error reset</Code_Cause_English>
+  </Table>
+  <Table>
+    <Category_ID>TDK.LoadPort</Category_ID>
+    <Category_Description>LoadPort 命令</Category_Description>
+    <Code_Name>程式初始化（內部狀態初始化）*它不運作。</Code_Name>
+    <Code_Type>SET</Code_Type>
+    <Code_ID>INITL</Code_ID>
+    <Code_Cause>程式初始化（內部狀態初始化）*它不運作。</Code_Cause>
+    <Code_Cause_English>Program initialization (internal status initialization) * It doesn't operate. </Code_Cause_English>
+  </Table>
+  <Table>
+    <Category_ID>TDK.LoadPort</Category_ID>
+    <Category_Description>LoadPort 命令</Category_Description>
+    <Code_Name>STATUS 1 指示燈 開</Code_Name>
+    <Code_Type>SET</Code_Type>
+    <Code_ID>LON07</Code_ID>
+    <Code_Cause>STATUS 1 指示燈 開</Code_Cause>
+    <Code_Cause_English>STATUS 1 indicator: ON </Code_Cause_English>
+  </Table>
+  <Table>
+    <Category_ID>TDK.LoadPort</Category_ID>
+    <Category_Description>LoadPort 命令</Category_Description>
+    <Code_Name>STATUS 1 指示燈 閃爍</Code_Name>
+    <Code_Type>SET</Code_Type>
+    <Code_ID>LBL07</Code_ID>
+    <Code_Cause>STATUS 1 指示燈 閃爍</Code_Cause>
+    <Code_Cause_English>STATUS 1 indicator: Flashes </Code_Cause_English>
+  </Table>
+  <Table>
+    <Category_ID>TDK.LoadPort</Category_ID>
+    <Category_Description>LoadPort 命令</Category_Description>
+    <Code_Name>STATUS 1 指示燈 關</Code_Name>
+    <Code_Type>SET</Code_Type>
+    <Code_ID>LOF07</Code_ID>
+    <Code_Cause>STATUS 1 指示燈 關</Code_Cause>
+    <Code_Cause_English>STATUS 1 indicator: OFF </Code_Cause_English>
+  </Table>
+  <Table>
+    <Category_ID>TDK.LoadPort</Category_ID>
+    <Category_Description>LoadPort 命令</Category_Description>
+    <Code_Name>STATUS 2 指示燈 開</Code_Name>
+    <Code_Type>SET</Code_Type>
+    <Code_ID>LON08</Code_ID>
+    <Code_Cause>STATUS 2 指示燈 開</Code_Cause>
+    <Code_Cause_English>STATUS 2 indicator: ON </Code_Cause_English>
+  </Table>
+  <Table>
+    <Category_ID>TDK.LoadPort</Category_ID>
+    <Category_Description>LoadPort 命令</Category_Description>
+    <Code_Name>STATUS 2 指示燈 閃爍</Code_Name>
+    <Code_Type>SET</Code_Type>
+    <Code_ID>LBL08</Code_ID>
+    <Code_Cause>STATUS 2 指示燈 閃爍</Code_Cause>
+    <Code_Cause_English>STATUS 2 indicator: Flashes </Code_Cause_English>
+  </Table>
+  <Table>
+    <Category_ID>TDK.LoadPort</Category_ID>
+    <Category_Description>LoadPort 命令</Category_Description>
+    <Code_Name>STATUS 2 指示燈 關</Code_Name>
+    <Code_Type>SET</Code_Type>
+    <Code_ID>LOF08</Code_ID>
+    <Code_Cause>STATUS 2 指示燈 關</Code_Cause>
+    <Code_Cause_English>STATUS 2 indicator: OFF</Code_Cause_English>
+  </Table>
+  <Table>
+    <Category_ID>TDK.LoadPort</Category_ID>
+    <Category_Description>LoadPort 命令</Category_Description>
+    <Code_Name>LOAD 指示燈 開</Code_Name>
+    <Code_Type>SET</Code_Type>
+    <Code_ID>LON01</Code_ID>
+    <Code_Cause>LOAD 指示燈 開</Code_Cause>
+    <Code_Cause_English>LOAD indicator: ON </Code_Cause_English>
+  </Table>
+  <Table>
+    <Category_ID>TDK.LoadPort</Category_ID>
+    <Category_Description>LoadPort 命令</Category_Description>
+    <Code_Name>LOAD 指示燈 閃爍</Code_Name>
+    <Code_Type>SET</Code_Type>
+    <Code_ID>LBL01</Code_ID>
+    <Code_Cause>LOAD 指示燈 閃爍</Code_Cause>
+    <Code_Cause_English>LOAD indicator: Flashes </Code_Cause_English>
+  </Table>
+  <Table>
+    <Category_ID>TDK.LoadPort</Category_ID>
+    <Category_Description>LoadPort 命令</Category_Description>
+    <Code_Name>LOAD 指示燈 關</Code_Name>
+    <Code_Type>SET</Code_Type>
+    <Code_ID>LOF01</Code_ID>
+    <Code_Cause>LOAD 指示燈 關</Code_Cause>
+    <Code_Cause_English>LOAD indicator: OFF </Code_Cause_English>
+  </Table>
+  <Table>
+    <Category_ID>TDK.LoadPort</Category_ID>
+    <Category_Description>LoadPort 命令</Category_Description>
+    <Code_Name>UNLOAD 指示燈 開</Code_Name>
+    <Code_Type>SET</Code_Type>
+    <Code_ID>LON02</Code_ID>
+    <Code_Cause>UNLOAD 指示燈 開</Code_Cause>
+    <Code_Cause_English>UNLOAD indicator: ON </Code_Cause_English>
+  </Table>
+  <Table>
+    <Category_ID>TDK.LoadPort</Category_ID>
+    <Category_Description>LoadPort 命令</Category_Description>
+    <Code_Name>UNLOAD 指示燈 閃爍</Code_Name>
+    <Code_Type>SET</Code_Type>
+    <Code_ID>LBL02</Code_ID>
+    <Code_Cause>UNLOAD 指示燈 閃爍</Code_Cause>
+    <Code_Cause_English>UNLOAD indicator: Flashes </Code_Cause_English>
+  </Table>
+  <Table>
+    <Category_ID>TDK.LoadPort</Category_ID>
+    <Category_Description>LoadPort 命令</Category_Description>
+    <Code_Name>UNLOAD 指示燈 關</Code_Name>
+    <Code_Type>SET</Code_Type>
+    <Code_ID>LOF02</Code_ID>
+    <Code_Cause>UNLOAD 指示燈 關</Code_Cause>
+    <Code_Cause_English>UNLOAD indicator: OFF </Code_Cause_English>
+  </Table>
+  <Table>
+    <Category_ID>TDK.LoadPort</Category_ID>
+    <Category_Description>LoadPort 命令</Category_Description>
+    <Code_Name>OP. ACCESS 指示燈 開</Code_Name>
+    <Code_Type>SET</Code_Type>
+    <Code_ID>LON03</Code_ID>
+    <Code_Cause>OP. ACCESS 指示燈 開</Code_Cause>
+    <Code_Cause_English>OP. ACCESS indicator: ON </Code_Cause_English>
+  </Table>
+  <Table>
+    <Category_ID>TDK.LoadPort</Category_ID>
+    <Category_Description>LoadPort 命令</Category_Description>
+    <Code_Name>OP. ACCESS 指示燈 閃爍</Code_Name>
+    <Code_Type>SET</Code_Type>
+    <Code_ID>LBL03</Code_ID>
+    <Code_Cause>OP. ACCESS 指示燈 閃爍</Code_Cause>
+    <Code_Cause_English>OP. ACCESS indicator: Flashes </Code_Cause_English>
+  </Table>
+  <Table>
+    <Category_ID>TDK.LoadPort</Category_ID>
+    <Category_Description>LoadPort 命令</Category_Description>
+    <Code_Name>OP. ACCESS 指示燈 關</Code_Name>
+    <Code_Type>SET</Code_Type>
+    <Code_ID>LOF03</Code_ID>
+    <Code_Cause>OP. ACCESS 指示燈 關</Code_Cause>
+    <Code_Cause_English>OP. ACCESS indicator: OFF </Code_Cause_English>
+  </Table>
+  <Table>
+    <Category_ID>TDK.LoadPort</Category_ID>
+    <Category_Description>LoadPort 命令</Category_Description>
+    <Code_Name>PRESENCE 指示燈 開</Code_Name>
+    <Code_Type>SET</Code_Type>
+    <Code_ID>LON04</Code_ID>
+    <Code_Cause>PRESENCE 指示燈 開</Code_Cause>
+    <Code_Cause_English>PRESENCE indicator: ON </Code_Cause_English>
+  </Table>
+  <Table>
+    <Category_ID>TDK.LoadPort</Category_ID>
+    <Category_Description>LoadPort 命令</Category_Description>
+    <Code_Name>PRESENCE 指示燈 閃爍</Code_Name>
+    <Code_Type>SET</Code_Type>
+    <Code_ID>LBL04</Code_ID>
+    <Code_Cause>PRESENCE 指示燈 閃爍</Code_Cause>
+    <Code_Cause_English>PRESENCE indicator: Flashes </Code_Cause_English>
+  </Table>
+  <Table>
+    <Category_ID>TDK.LoadPort</Category_ID>
+    <Category_Description>LoadPort 命令</Category_Description>
+    <Code_Name>PRESENCE 指示燈 關</Code_Name>
+    <Code_Type>SET</Code_Type>
+    <Code_ID>LOF04</Code_ID>
+    <Code_Cause>PRESENCE 指示燈 關</Code_Cause>
+    <Code_Cause_English>PRESENCE indicator: OFF </Code_Cause_English>
+  </Table>
+  <Table>
+    <Category_ID>TDK.LoadPort</Category_ID>
+    <Category_Description>LoadPort 命令</Category_Description>
+    <Code_Name>PLACEMENT 指示燈 開</Code_Name>
+    <Code_Type>SET</Code_Type>
+    <Code_ID>LON05</Code_ID>
+    <Code_Cause>PLACEMENT 指示燈 開</Code_Cause>
+    <Code_Cause_English>PLACEMENT indicator: ON </Code_Cause_English>
+  </Table>
+  <Table>
+    <Category_ID>TDK.LoadPort</Category_ID>
+    <Category_Description>LoadPort 命令</Category_Description>
+    <Code_Name>PLACEMENT 指示燈 閃爍</Code_Name>
+    <Code_Type>SET</Code_Type>
+    <Code_ID>LBL05</Code_ID>
+    <Code_Cause>PLACEMENT 指示燈 閃爍</Code_Cause>
+    <Code_Cause_English>PLACEMENT indicator: Flashes </Code_Cause_English>
+  </Table>
+  <Table>
+    <Category_ID>TDK.LoadPort</Category_ID>
+    <Category_Description>LoadPort 命令</Category_Description>
+    <Code_Name>PLACEMENT 指示燈 關</Code_Name>
+    <Code_Type>SET</Code_Type>
+    <Code_ID>LOF05</Code_ID>
+    <Code_Cause>PLACEMENT 指示燈 關</Code_Cause>
+    <Code_Cause_English>PLACEMENT indicator: OFF </Code_Cause_English>
+  </Table>
+  <Table>
+    <Category_ID>TDK.LoadPort</Category_ID>
+    <Category_Description>LoadPort 命令</Category_Description>
+    <Code_Name>變更為 Online 模式</Code_Name>
+    <Code_Type>MOD</Code_Type>
+    <Code_ID>ONMGV</Code_ID>
+    <Code_Cause>變更為 Online 模式</Code_Cause>
+    <Code_Cause_English>Changes to the online mode</Code_Cause_English>
+  </Table>
+  <Table>
+    <Category_ID>TDK.LoadPort</Category_ID>
+    <Category_Description>LoadPort 命令</Category_Description>
+    <Code_Name>變更為 維護模式</Code_Name>
+    <Code_Type>MOD</Code_Type>
+    <Code_ID>MENTE</Code_ID>
+    <Code_Cause>變更為 維護模式</Code_Cause>
+    <Code_Cause_English>Changes to the maintenance mode</Code_Cause_English>
+  </Table>
+  <Table>
+    <Category_ID>TDK.LoadPort</Category_ID>
+    <Category_Description>LoadPort 命令</Category_Description>
+    <Code_Name>取回目前狀態</Code_Name>
+    <Code_Type>GET</Code_Type>
+    <Code_ID>STATE</Code_ID>
+    <Code_Cause>取回目前狀態</Code_Cause>
+    <Code_Cause_English>Checks the status.</Code_Cause_English>
+  </Table>
+  <Table>
+    <Category_ID>TDK.LoadPort</Category_ID>
+    <Category_Description>LoadPort 命令</Category_Description>
+    <Code_Name>取回目前版本</Code_Name>
+    <Code_Type>GET</Code_Type>
+    <Code_ID>VERSN</Code_ID>
+    <Code_Cause>取回目前版本</Code_Cause>
+    <Code_Cause_English>Checks the version.</Code_Cause_English>
+  </Table>
+  <Table>
+    <Category_ID>TDK.LoadPort</Category_ID>
+    <Category_Description>LoadPort 命令</Category_Description>
+    <Code_Name>取回LED燈號狀態</Code_Name>
+    <Code_Type>GET</Code_Type>
+    <Code_ID>LEDST</Code_ID>
+    <Code_Cause>取回LED燈號狀態</Code_Cause>
+    <Code_Cause_English>Reports the indicator status.</Code_Cause_English>
+  </Table>
+  <Table>
+    <Category_ID>TDK.LoadPort</Category_ID>
+    <Category_Description>LoadPort 命令</Category_Description>
+    <Code_Name>取回 Wafer 掃描狀態 遞減排序</Code_Name>
+    <Code_Type>GET</Code_Type>
+    <Code_ID>MAPDT</Code_ID>
+    <Code_Cause>取回 Wafer 掃描狀態 遞減排序</Code_Cause>
+    <Code_Cause_English>Wafer search data (descending order)</Code_Cause_English>
+  </Table>
+  <Table>
+    <Category_ID>TDK.LoadPort</Category_ID>
+    <Category_Description>LoadPort 命令</Category_Description>
+    <Code_Name>取回 Wafer 掃描狀態 遞增排序</Code_Name>
+    <Code_Type>GET</Code_Type>
+    <Code_ID>MAPRD</Code_ID>
+    <Code_Cause>取回 Wafer 掃描狀態 遞增排序</Code_Cause>
+    <Code_Cause_English>Wafer search data (ascending order)</Code_Cause_English>
+  </Table>
+  <Table>
+    <Category_ID>TDK.LoadPort</Category_ID>
+    <Category_Description>LoadPort 命令</Category_Description>
+    <Code_Name>取回 Wafer 數量</Code_Name>
+    <Code_Type>GET</Code_Type>
+    <Code_ID>WFCNT</Code_ID>
+    <Code_Cause>取回 Wafer 數量</Code_Cause>
+    <Code_Cause_English>Wafer quantity check</Code_Cause_English>
+  </Table>
+  <Table>
+    <Category_ID>TDK.LoadPort</Category_ID>
+    <Category_Description>LoadPort 命令</Category_Description>
+    <Code_Name>移動到初始位置</Code_Name>
+    <Code_Type>MOV</Code_Type>
+    <Code_ID>ORGSH</Code_ID>
+    <Code_Cause>移動到初始位置</Code_Cause>
+    <Code_Cause_English>Moves the FOUP to the initial position.</Code_Cause_English>
+  </Table>
+  <Table>
+    <Category_ID>TDK.LoadPort</Category_ID>
+    <Category_Description>LoadPort 命令</Category_Description>
+    <Code_Name>強行移動到初始位置</Code_Name>
+    <Code_Type>MOV</Code_Type>
+    <Code_ID>ABORG</Code_ID>
+    <Code_Cause>強行移動到初始位置</Code_Cause>
+    <Code_Cause_English>Aborts the operation and moves the FOUP to the initial position.</Code_Cause_English>
+  </Table>
+  <Table>
+    <Category_ID>TDK.LoadPort</Category_ID>
+    <Category_Description>LoadPort 命令</Category_Description>
+    <Code_Name>Loads the FOUP (transfers the FOUP to the process unit).</Code_Name>
+    <Code_Type>MOV</Code_Type>
+    <Code_ID>CLOAD</Code_ID>
+    <Code_Cause>Loads the FOUP (transfers the FOUP to the process unit).</Code_Cause>
+    <Code_Cause_English>Loads the FOUP (transfers the FOUP to the process unit).</Code_Cause_English>
+  </Table>
+  <Table>
+    <Category_ID>TDK.LoadPort</Category_ID>
+    <Category_Description>LoadPort 命令</Category_Description>
+    <Code_Name>Loads the FOUP (same as CLOAD) to the point where the system is ready to open the door.</Code_Name>
+    <Code_Type>MOV</Code_Type>
+    <Code_ID>CLDDK</Code_ID>
+    <Code_Cause>Loads the FOUP (same as CLOAD) to the point where the system is ready to open the door.</Code_Cause>
+    <Code_Cause_English>Loads the FOUP (same as CLOAD) to the point where the system is ready to open the door.</Code_Cause_English>
+  </Table>
+  <Table>
+    <Category_ID>TDK.LoadPort</Category_ID>
+    <Category_Description>LoadPort 命令</Category_Description>
+    <Code_Name>Clamps  the  FOUP  and  moves  the  FOUP  to  the  Y-axis docking position.</Code_Name>
+    <Code_Type>MOV</Code_Type>
+    <Code_ID>CLDYD</Code_ID>
+    <Code_Cause>Clamps  the  FOUP  and  moves  the  FOUP  to  the  Y-axis docking position.</Code_Cause>
+    <Code_Cause_English>Clamps  the  FOUP  and  moves  the  FOUP  to  the  Y-axis docking position.</Code_Cause_English>
+  </Table>
+  <Table>
+    <Category_ID>TDK.LoadPort</Category_ID>
+    <Category_Description>LoadPort 命令</Category_Description>
+    <Code_Name>Continues loading the FOUP after CLDDK.</Code_Name>
+    <Code_Type>MOV</Code_Type>
+    <Code_ID>CLDOP</Code_ID>
+    <Code_Cause>Continues loading the FOUP after CLDDK.</Code_Cause>
+    <Code_Cause_English>Continues loading the FOUP after CLDDK.</Code_Cause_English>
+  </Table>
+  <Table>
+    <Category_ID>TDK.LoadPort</Category_ID>
+    <Category_Description>LoadPort 命令</Category_Description>
+    <Code_Name>Maps and loads the FOUP.</Code_Name>
+    <Code_Type>MOV</Code_Type>
+    <Code_ID>CLDMP</Code_ID>
+    <Code_Cause>Maps and loads the FOUP.</Code_Cause>
+    <Code_Cause_English>Maps and loads the FOUP.</Code_Cause_English>
+  </Table>
+  <Table>
+    <Category_ID>TDK.LoadPort</Category_ID>
+    <Category_Description>LoadPort 命令</Category_Description>
+    <Code_Name>Continues mapping and loading the FOUP after CLDDK.</Code_Name>
+    <Code_Type>MOV</Code_Type>
+    <Code_ID>CLMPO</Code_ID>
+    <Code_Cause>Continues mapping and loading the FOUP after CLDDK.</Code_Cause>
+    <Code_Cause_English>Continues mapping and loading the FOUP after CLDDK.</Code_Cause_English>
+  </Table>
+  <Table>
+    <Category_ID>TDK.LoadPort</Category_ID>
+    <Category_Description>LoadPort 命令</Category_Description>
+    <Code_Name>Unloads the FOUP (at the ejection position).</Code_Name>
+    <Code_Type>MOV</Code_Type>
+    <Code_ID>CULOD</Code_ID>
+    <Code_Cause>Unloads the FOUP (at the ejection position).</Code_Cause>
+    <Code_Cause_English>Unloads the FOUP (at the ejection position).</Code_Cause_English>
+  </Table>
+  <Table>
+    <Category_ID>TDK.LoadPort</Category_ID>
+    <Category_Description>LoadPort 命令</Category_Description>
+    <Code_Name>Closes the door (same as CULOD).</Code_Name>
+    <Code_Type>MOV</Code_Type>
+    <Code_ID>CULDK</Code_ID>
+    <Code_Cause>Closes the door (same as CULOD).</Code_Cause>
+    <Code_Cause_English>Closes the door (same as CULOD).</Code_Cause_English>
+  </Table>
+  <Table>
+    <Category_ID>TDK.LoadPort</Category_ID>
+    <Category_Description>LoadPort 命令</Category_Description>
+    <Code_Name>Undocks the FOUP (while being clamped) after CULDK.</Code_Name>
+    <Code_Type>MOV</Code_Type>
+    <Code_ID>CUDCL</Code_ID>
+    <Code_Cause>Undocks the FOUP (while being clamped) after CULDK.</Code_Cause>
+    <Code_Cause_English>Undocks the FOUP (while being clamped) after CULDK.</Code_Cause_English>
+  </Table>
+  <Table>
+    <Category_ID>TDK.LoadPort</Category_ID>
+    <Category_Description>LoadPort 命令</Category_Description>
+    <Code_Name>Unloads the FOUP after CULDK.</Code_Name>
+    <Code_Type>MOV</Code_Type>
+    <Code_ID>CUDNC</Code_ID>
+    <Code_Cause>Unloads the FOUP after CULDK.</Code_Cause>
+    <Code_Cause_English>Unloads the FOUP after CULDK.</Code_Cause_English>
+  </Table>
+  <Table>
+    <Category_ID>TDK.LoadPort</Category_ID>
+    <Category_Description>LoadPort 命令</Category_Description>
+    <Code_Name>Unloads the FOUP to the docking status.</Code_Name>
+    <Code_Type>MOV</Code_Type>
+    <Code_ID>CULYD</Code_ID>
+    <Code_Cause>Unloads the FOUP to the docking status.</Code_Cause>
+    <Code_Cause_English>Unloads the FOUP to the docking status.</Code_Cause_English>
+  </Table>
+  <Table>
+    <Category_ID>TDK.LoadPort</Category_ID>
+    <Category_Description>LoadPort 命令</Category_Description>
+    <Code_Name>Unloads  the  FOUP  to  the  point  where  the  system  can release (unclamp) the FOUP.</Code_Name>
+    <Code_Type>MOV</Code_Type>
+    <Code_ID>CULFC</Code_ID>
+    <Code_Cause>Unloads  the  FOUP  to  the  point  where  the  system  can release (unclamp) the FOUP.</Code_Cause>
+    <Code_Cause_English>Unloads  the  FOUP  to  the  point  where  the  system  can release (unclamp) the FOUP.</Code_Cause_English>
+  </Table>
+  <Table>
+    <Category_ID>TDK.LoadPort</Category_ID>
+    <Category_Description>LoadPort 命令</Category_Description>
+    <Code_Name>Maps and unloads the FOUP from the loaded status.</Code_Name>
+    <Code_Type>MOV</Code_Type>
+    <Code_ID>CUDMP</Code_ID>
+    <Code_Cause>Maps and unloads the FOUP from the loaded status.</Code_Cause>
+    <Code_Cause_English>Maps and unloads the FOUP from the loaded status.</Code_Cause_English>
+  </Table>
+  <Table>
+    <Category_ID>TDK.LoadPort</Category_ID>
+    <Category_Description>LoadPort 命令</Category_Description>
+    <Code_Name>Maps the FOUP and closes the door from the loaded status.</Code_Name>
+    <Code_Type>MOV</Code_Type>
+    <Code_ID>CUMDK</Code_ID>
+    <Code_Cause>Maps the FOUP and closes the door from the loaded status.</Code_Cause>
+    <Code_Cause_English>Maps the FOUP and closes the door from the loaded status.</Code_Cause_English>
+  </Table>
+  <Table>
+    <Category_ID>TDK.LoadPort</Category_ID>
+    <Category_Description>LoadPort 命令</Category_Description>
+    <Code_Name>Maps the FOUP to the before-unclamp status from the loaded status.</Code_Name>
+    <Code_Type>MOV</Code_Type>
+    <Code_ID>CUMFC</Code_ID>
+    <Code_Cause>Maps the FOUP to the before-unclamp status from the loaded status.</Code_Cause>
+    <Code_Cause_English>Maps the FOUP to the before-unclamp status from the loaded status.</Code_Cause_English>
+  </Table>
+  <Table>
+    <Category_ID>TDK.LoadPort</Category_ID>
+    <Category_Description>LoadPort 命令</Category_Description>
+    <Code_Name>Maps the FOUP while being loaded.</Code_Name>
+    <Code_Type>MOV</Code_Type>
+    <Code_ID>MAPDO</Code_ID>
+    <Code_Cause>Maps the FOUP while being loaded.</Code_Cause>
+    <Code_Cause_English>Maps the FOUP while being loaded.</Code_Cause_English>
+  </Table>
+  <Table>
+    <Category_ID>TDK.LoadPort</Category_ID>
+    <Category_Description>LoadPort 命令</Category_Description>
+    <Code_Name>Resumes the interrupted mapping.</Code_Name>
+    <Code_Type>MOV</Code_Type>
+    <Code_ID>REMAP</Code_ID>
+    <Code_Cause>Resumes the interrupted mapping.</Code_Cause>
+    <Code_Cause_English>Resumes the interrupted mapping.</Code_Cause_English>
+  </Table>
+  <Table>
+    <Category_ID>TDK.LoadPort</Category_ID>
+    <Category_Description>LoadPort 命令</Category_Description>
+    <Code_Name>FOUP clamp: Open</Code_Name>
+    <Code_Type>MOV</Code_Type>
+    <Code_ID>PODOP</Code_ID>
+    <Code_Cause>FOUP clamp: Open</Code_Cause>
+    <Code_Cause_English>FOUP clamp: Open</Code_Cause_English>
+  </Table>
+  <Table>
+    <Category_ID>TDK.LoadPort</Category_ID>
+    <Category_Description>LoadPort 命令</Category_Description>
+    <Code_Name>FOUP clamp: Close</Code_Name>
+    <Code_Type>MOV</Code_Type>
+    <Code_ID>PODCL</Code_ID>
+    <Code_Cause>FOUP clamp: Close</Code_Cause>
+    <Code_Cause_English>FOUP clamp: Close</Code_Cause_English>
+  </Table>
+  <Table>
+    <Category_ID>TDK.LoadPort</Category_ID>
+    <Category_Description>LoadPort 命令</Category_Description>
+    <Code_Name>Vacuum on</Code_Name>
+    <Code_Type>MOV</Code_Type>
+    <Code_ID>VACON</Code_ID>
+    <Code_Cause>Vacuum on</Code_Cause>
+    <Code_Cause_English>Vacuum on</Code_Cause_English>
+  </Table>
+  <Table>
+    <Category_ID>TDK.LoadPort</Category_ID>
+    <Category_Description>LoadPort 命令</Category_Description>
+    <Code_Name>Vacuum off</Code_Name>
+    <Code_Type>MOV</Code_Type>
+    <Code_ID>VACOF</Code_ID>
+    <Code_Cause>Vacuum off</Code_Cause>
+    <Code_Cause_English>Vacuum off</Code_Cause_English>
+  </Table>
+  <Table>
+    <Category_ID>TDK.LoadPort</Category_ID>
+    <Category_Description>LoadPort 命令</Category_Description>
+    <Code_Name>Latch key: Open (Unlatches the FOUP door.)</Code_Name>
+    <Code_Type>MOV</Code_Type>
+    <Code_ID>DOROP</Code_ID>
+    <Code_Cause>Latch key: Open (Unlatches the FOUP door.)</Code_Cause>
+    <Code_Cause_English>Latch key: Open (Unlatches the FOUP door.)</Code_Cause_English>
+  </Table>
+  <Table>
+    <Category_ID>TDK.LoadPort</Category_ID>
+    <Category_Description>LoadPort 命令</Category_Description>
+    <Code_Name>Latch key: Close (Latches the FOUP door.)</Code_Name>
+    <Code_Type>MOV</Code_Type>
+    <Code_ID>DORCL</Code_ID>
+    <Code_Cause>Latch key: Close (Latches the FOUP door.)</Code_Cause>
+    <Code_Cause_English>Latch key: Close (Latches the FOUP door.)</Code_Cause_English>
+  </Table>
+  <Table>
+    <Category_ID>TDK.LoadPort</Category_ID>
+    <Category_Description>LoadPort 命令</Category_Description>
+    <Code_Name>Mapper arm: Open</Code_Name>
+    <Code_Type>MOV</Code_Type>
+    <Code_ID>MAPOP</Code_ID>
+    <Code_Cause>Mapper arm: Open</Code_Cause>
+    <Code_Cause_English>Mapper arm: Open</Code_Cause_English>
+  </Table>
+  <Table>
+    <Category_ID>TDK.LoadPort</Category_ID>
+    <Category_Description>LoadPort 命令</Category_Description>
+    <Code_Name>Mapper arm: Close</Code_Name>
+    <Code_Type>MOV</Code_Type>
+    <Code_ID>MAPCL</Code_ID>
+    <Code_Cause>Mapper arm: Close</Code_Cause>
+    <Code_Cause_English>Mapper arm: Close</Code_Cause_English>
+  </Table>
+  <Table>
+    <Category_ID>TDK.LoadPort</Category_ID>
+    <Category_Description>LoadPort 命令</Category_Description>
+    <Code_Name>移動到Z軸上升位置（開門位置）</Code_Name>
+    <Code_Type>MOV</Code_Type>
+    <Code_ID>ZDRUP</Code_ID>
+    <Code_Cause>移動到Z軸上升位置（開門位置）</Code_Cause>
+    <Code_Cause_English>Move to Z-axis up position (door open position)</Code_Cause_English>
+  </Table>
+  <Table>
+    <Category_ID>TDK.LoadPort</Category_ID>
+    <Category_Description>LoadPort 命令</Category_Description>
+    <Code_Name>移動到Z軸下降位置（傳送裝置傳送可能位置）</Code_Name>
+    <Code_Type>MOV</Code_Type>
+    <Code_ID>ZDRDW</Code_ID>
+    <Code_Cause>移動到Z軸下降位置（傳送裝置傳送可能位置）</Code_Cause>
+    <Code_Cause_English>Move to Z-axis down position (transport unit handover possible position)</Code_Cause_English>
+  </Table>
+  <Table>
+    <Category_ID>TDK.LoadPort</Category_ID>
+    <Category_Description>LoadPort 命令</Category_Description>
+    <Code_Name>Lower to Z-axis mapping end position and conduct mapping</Code_Name>
+    <Code_Type>MOV</Code_Type>
+    <Code_ID>ZDRMP</Code_ID>
+    <Code_Cause>Lower to Z-axis mapping end position and conduct mapping</Code_Cause>
+    <Code_Cause_English>Lower to Z-axis mapping end position and conduct mapping</Code_Cause_English>
+  </Table>
+  <Table>
+    <Category_ID>TDK.LoadPort</Category_ID>
+    <Category_Description>LoadPort 命令</Category_Description>
+    <Code_Name>Move the mapper to the start position</Code_Name>
+    <Code_Type>MOV</Code_Type>
+    <Code_ID>ZMPST</Code_ID>
+    <Code_Cause>Move the mapper to the start position</Code_Cause>
+    <Code_Cause_English>Move the mapper to the start position</Code_Cause_English>
+  </Table>
+  <Table>
+    <Category_ID>TDK.LoadPort</Category_ID>
+    <Category_Description>LoadPort 命令</Category_Description>
+    <Code_Name>Move the mapper to the wait position (for compatible)</Code_Name>
+    <Code_Type>MOV</Code_Type>
+    <Code_ID>(ZMPED)</Code_ID>
+    <Code_Cause>Move the mapper to the wait position (for compatible)</Code_Cause>
+    <Code_Cause_English>Move the mapper to the wait position (for compatible)</Code_Cause_English>
+  </Table>
+  <Table>
+    <Category_ID>TDK.LoadPort</Category_ID>
+    <Category_Description>LoadPort 命令</Category_Description>
+    <Code_Name>無動作（Mapper stopper on）</Code_Name>
+    <Code_Type>MOV</Code_Type>
+    <Code_ID>(MSTON)</Code_ID>
+    <Code_Cause>無動作（Mapper stopper on）</Code_Cause>
+    <Code_Cause_English>Not operate. (Mapper stopper on)</Code_Cause_English>
+  </Table>
+  <Table>
+    <Category_ID>TDK.LoadPort</Category_ID>
+    <Category_Description>LoadPort 命令</Category_Description>
+    <Code_Name>無動作（Mapper stopper off）</Code_Name>
+    <Code_Type>MOV</Code_Type>
+    <Code_ID>(MSTOF)</Code_ID>
+    <Code_Cause>無動作（Mapper stopper off）</Code_Cause>
+    <Code_Cause_English>Not operate. (Mapper stopper off)</Code_Cause_English>
+  </Table>
+  <Table>
+    <Category_ID>TDK.LoadPort</Category_ID>
+    <Category_Description>LoadPort 命令</Category_Description>
+    <Code_Name>移至Y軸取消鎖定位置</Code_Name>
+    <Code_Type>MOV</Code_Type>
+    <Code_ID>YWAIT</Code_ID>
+    <Code_Cause>移至Y軸取消鎖定位置</Code_Cause>
+    <Code_Cause_English>Move to Y-axis undock position</Code_Cause_English>
+  </Table>
+  <Table>
+    <Category_ID>TDK.LoadPort</Category_ID>
+    <Category_Description>LoadPort 命令</Category_Description>
+    <Code_Name>移至Y軸停靠位置</Code_Name>
+    <Code_Type>MOV</Code_Type>
+    <Code_ID>YDOOR</Code_ID>
+    <Code_Cause>移至Y軸停靠位置</Code_Cause>
+    <Code_Cause_English>Move to Y-axis dock position</Code_Cause_English>
+  </Table>
+  <Table>
+    <Category_ID>TDK.LoadPort</Category_ID>
+    <Category_Description>LoadPort 命令</Category_Description>
+    <Code_Name>移至門開啟位置</Code_Name>
+    <Code_Type>MOV</Code_Type>
+    <Code_ID>DORBK</Code_ID>
+    <Code_Cause>移至門開啟位置</Code_Cause>
+    <Code_Cause_English>Move to door open position</Code_Cause_English>
+  </Table>
+  <Table>
+    <Category_ID>TDK.LoadPort</Category_ID>
+    <Category_Description>LoadPort 命令</Category_Description>
+    <Code_Name>移至門關閉位置</Code_Name>
+    <Code_Type>MOV</Code_Type>
+    <Code_ID>DORFW</Code_ID>
+    <Code_Cause>移至門關閉位置</Code_Cause>
+    <Code_Cause_English>Move to door close position</Code_Cause_English>
+  </Table>
+  <Table>
+    <Category_ID>TDK.LoadPort</Category_ID>
+    <Category_Description>LoadPort 命令</Category_Description>
+    <Code_Name>重試可恢復的錯誤</Code_Name>
+    <Code_Type>MOV</Code_Type>
+    <Code_ID>RETRY</Code_ID>
+    <Code_Cause>重試可恢復的錯誤</Code_Cause>
+    <Code_Cause_English>Retry during recoverable error</Code_Cause_English>
+  </Table>
+  <Table>
+    <Category_ID>TDK.LoadPort</Category_ID>
+    <Category_Description>LoadPort 命令</Category_Description>
+    <Code_Name>立即停止並命令中止</Code_Name>
+    <Code_Type>MOV</Code_Type>
+    <Code_ID>STOP_</Code_ID>
+    <Code_Cause>立即停止並命令中止</Code_Cause>
+    <Code_Cause_English>Immediate stop and command abort</Code_Cause_English>
+  </Table>
+  <Table>
+    <Category_ID>TDK.LoadPort</Category_ID>
+    <Category_Description>LoadPort 命令</Category_Description>
+    <Code_Name>立即停止</Code_Name>
+    <Code_Type>MOV</Code_Type>
+    <Code_ID>PAUSE</Code_ID>
+    <Code_Cause>立即停止</Code_Cause>
+    <Code_Cause_English>Immediate stop</Code_Cause_English>
+  </Table>
+  <Table>
+    <Category_ID>TDK.LoadPort</Category_ID>
+    <Category_Description>LoadPort 命令</Category_Description>
+    <Code_Name>命令中止</Code_Name>
+    <Code_Type>MOV</Code_Type>
+    <Code_ID>ABORT</Code_ID>
+    <Code_Cause>命令中止</Code_Cause>
+    <Code_Cause_English>Command abort</Code_Cause_English>
+  </Table>
+  <Table>
+    <Category_ID>TDK.LoadPort</Category_ID>
+    <Category_Description>LoadPort 命令</Category_Description>
+    <Code_Name>操作繼續</Code_Name>
+    <Code_Type>MOV</Code_Type>
+    <Code_ID>RESUM</Code_ID>
+    <Code_Cause>操作繼續</Code_Cause>
+    <Code_Cause_English>Resume operation</Code_Cause_English>
+  </Table>
+  <Table>
+    <Category_ID>TDK.LoadPort</Category_ID>
+    <Category_Description>LoadPort 命令</Category_Description>
+    <Code_Name>所有事件報告開始（不包括FOUP事件）</Code_Name>
+    <Code_Type>EVT</Code_Type>
+    <Code_ID>EVTON</Code_ID>
+    <Code_Cause>所有事件報告開始（不包括FOUP事件）</Code_Cause>
+    <Code_Cause_English>Starts reporting all events.(FOUP events is excluded)</Code_Cause_English>
+  </Table>
+  <Table>
+    <Category_ID>TDK.LoadPort</Category_ID>
+    <Category_Description>LoadPort 命令</Category_Description>
+    <Code_Name>停止所有事件報告（不包括FOUP事件）</Code_Name>
+    <Code_Type>EVT</Code_Type>
+    <Code_ID>EVTOF</Code_ID>
+    <Code_Cause>停止所有事件報告（不包括FOUP事件）</Code_Cause>
+    <Code_Cause_English>Stops reporting all events. (FOUP events is excluded)</Code_Cause_English>
+  </Table>
+  <Table>
+    <Category_ID>TDK.LoadPort</Category_ID>
+    <Category_Description>LoadPort 命令</Category_Description>
+    <Code_Name>FOUP事件報告開始</Code_Name>
+    <Code_Type>EVT</Code_Type>
+    <Code_ID>FPEON</Code_ID>
+    <Code_Cause>FOUP事件報告開始</Code_Cause>
+    <Code_Cause_English>Starts reporting FOUP events.</Code_Cause_English>
+  </Table>
+  <Table>
+    <Category_ID>TDK.LoadPort</Category_ID>
+    <Category_Description>LoadPort 命令</Category_Description>
+    <Code_Name>停止FOUP事件報告</Code_Name>
+    <Code_Type>EVT</Code_Type>
+    <Code_ID>FPEOF</Code_ID>
+    <Code_Cause>停止FOUP事件報告</Code_Cause>
+    <Code_Cause_English>Stops reporting FOUP events.</Code_Cause_English>
+  </Table>
+  <Table>
+    <Category_ID>11</Category_ID>
+    <Category_Description>TDK LoadPort Error 機台錯誤訊息</Category_Description>
+    <Code_Name>NAK</Code_Name>
+    <Code_Type>Standard report </Code_Type>
+    <Code_ID>/CKSUM</Code_ID>
+    <Code_Cause>校驗和錯誤</Code_Cause>
+    <Code_Cause_English>Checksum error</Code_Cause_English>
+  </Table>
+  <Table>
+    <Category_ID>11</Category_ID>
+    <Category_Description>TDK LoadPort Error 機台錯誤訊息</Category_Description>
+    <Code_Name>NAK</Code_Name>
+    <Code_Type>Standard report </Code_Type>
+    <Code_ID>/CMDER</Code_ID>
+    <Code_Cause>命令錯誤</Code_Cause>
+    <Code_Cause_English>Command error</Code_Cause_English>
+  </Table>
+  <Table>
+    <Category_ID>11</Category_ID>
+    <Category_Description>TDK LoadPort Error 機台錯誤訊息</Category_Description>
+    <Code_Name>NAK</Code_Name>
+    <Code_Type>Standard report </Code_Type>
+    <Code_ID>/SFSER</Code_ID>
+    <Code_Cause>預訂（目前未使用）</Code_Cause>
+    <Code_Cause_English>Reserved (Not used.)</Code_Cause_English>
+  </Table>
+  <Table>
+    <Category_ID>11</Category_ID>
+    <Category_Description>TDK LoadPort Error 機台錯誤訊息</Category_Description>
+    <Code_Name>NAK</Code_Name>
+    <Code_Type>Standard report </Code_Type>
+    <Code_ID>/INTER</Code_ID>
+    <Code_Cause>聯鎖錯誤</Code_Cause>
+    <Code_Cause_English>Interlock error</Code_Cause_English>
+  </Table>
+  <Table>
+    <Category_ID>11</Category_ID>
+    <Category_Description>TDK LoadPort Error 機台錯誤訊息</Category_Description>
+    <Code_Name>NAK</Code_Name>
+    <Code_Type>Expanded warning</Code_Type>
+    <Code_ID>/INTER/CKSUM</Code_ID>
+    <Code_Cause>校驗和錯誤</Code_Cause>
+    <Code_Cause_English>Checksum error</Code_Cause_English>
+  </Table>
+  <Table>
+    <Category_ID>11</Category_ID>
+    <Category_Description>TDK LoadPort Error 機台錯誤訊息</Category_Description>
+    <Code_Name>NAK</Code_Name>
+    <Code_Type>Expanded warning</Code_Type>
+    <Code_ID>/INTER/CMDER</Code_ID>
+    <Code_Cause>命令錯誤</Code_Cause>
+    <Code_Cause_English>Command error</Code_Cause_English>
+  </Table>
+  <Table>
+    <Category_ID>11</Category_ID>
+    <Category_Description>TDK LoadPort Error 機台錯誤訊息</Category_Description>
+    <Code_Name>NAK</Code_Name>
+    <Code_Type>Expanded warning</Code_Type>
+    <Code_ID>/INTER/SFSER</Code_ID>
+    <Code_Cause>預訂（目前未使用）</Code_Cause>
+    <Code_Cause_English>Reserved (Not used.)</Code_Cause_English>
+  </Table>
+  <Table>
+    <Category_ID>11</Category_ID>
+    <Category_Description>TDK LoadPort Error 機台錯誤訊息</Category_Description>
+    <Code_Name>NAK</Code_Name>
+    <Code_Type>Expanded warning</Code_Type>
+    <Code_ID>/INTER/CBUSY</Code_ID>
+    <Code_Cause>通訊正在等待時命令不被接受</Code_Cause>
+    <Code_Cause_English>Communication busy (wait). The command is not accepted.</Code_Cause_English>
+  </Table>
+  <Table>
+    <Category_ID>11</Category_ID>
+    <Category_Description>TDK LoadPort Error 機台錯誤訊息</Category_Description>
+    <Code_Name>NAK</Code_Name>
+    <Code_Type>Expanded warning</Code_Type>
+    <Code_ID>/INTER/FPILG</Code_ID>
+    <Code_Cause>FOUP 讀取異常或不存在</Code_Cause>
+    <Code_Cause_English>FOUP loading error or no FOUP</Code_Cause_English>
+  </Table>
+  <Table>
+    <Category_ID>11</Category_ID>
+    <Category_Description>TDK LoadPort Error 機台錯誤訊息</Category_Description>
+    <Code_Name>NAK</Code_Name>
+    <Code_Type>Expanded warning</Code_Type>
+    <Code_ID>/INTER/LATCH</Code_ID>
+    <Code_Cause>Latch key error</Code_Cause>
+    <Code_Cause_English>Latch key error</Code_Cause_English>
+  </Table>
+  <Table>
+    <Category_ID>11</Category_ID>
+    <Category_Description>TDK LoadPort Error 機台錯誤訊息</Category_Description>
+    <Code_Name>NAK</Code_Name>
+    <Code_Type>Expanded warning</Code_Type>
+    <Code_ID>/INTER/FPCLP</Code_ID>
+    <Code_Cause>FOUP夾子傳感器異常</Code_Cause>
+    <Code_Cause_English>Reserved (Not used.)</Code_Cause_English>
+  </Table>
+  <Table>
+    <Category_ID>11</Category_ID>
+    <Category_Description>TDK LoadPort Error 機台錯誤訊息</Category_Description>
+    <Code_Name>NAK</Code_Name>
+    <Code_Type>Expanded warning</Code_Type>
+    <Code_ID>/INTER/YPOSI</Code_ID>
+    <Code_Cause>在Y軸上定位缺陷（docking table）</Code_Cause>
+    <Code_Cause_English>Y-axis (docking table) position error</Code_Cause_English>
+  </Table>
+  <Table>
+    <Category_ID>11</Category_ID>
+    <Category_Description>TDK LoadPort Error 機台錯誤訊息</Category_Description>
+    <Code_Name>NAK</Code_Name>
+    <Code_Type>Expanded warning</Code_Type>
+    <Code_ID>/INTER/DOCPO</Code_ID>
+    <Code_Cause>門開/關位置錯誤（poor position of the mapper frame）</Code_Cause>
+    <Code_Cause_English>Door open/close position error (poor position of the mapper frame)</Code_Cause_English>
+  </Table>
+  <Table>
+    <Category_ID>11</Category_ID>
+    <Category_Description>TDK LoadPort Error 機台錯誤訊息</Category_Description>
+    <Code_Name>NAK</Code_Name>
+    <Code_Type>Expanded warning</Code_Type>
+    <Code_ID>/INTER/DPOSI</Code_ID>
+    <Code_Cause>門打開/關閉的位置失敗</Code_Cause>
+    <Code_Cause_English>Door open/close position error</Code_Cause_English>
+  </Table>
+  <Table>
+    <Category_ID>11</Category_ID>
+    <Category_Description>TDK LoadPort Error 機台錯誤訊息</Category_Description>
+    <Code_Name>NAK</Code_Name>
+    <Code_Type>Expanded warning</Code_Type>
+    <Code_ID>/INTER/PROTS</Code_ID>
+    <Code_Cause>預訂（目前未使用）</Code_Cause>
+    <Code_Cause_English>Reserved (Not used.)</Code_Cause_English>
+  </Table>
+  <Table>
+    <Category_ID>11</Category_ID>
+    <Category_Description>TDK LoadPort Error 機台錯誤訊息</Category_Description>
+    <Code_Name>NAK</Code_Name>
+    <Code_Type>Expanded warning</Code_Type>
+    <Code_ID>/INTER/MPARM</Code_ID>
+    <Code_Cause>Mapper arm storage error. Mapping starting position error</Code_Cause>
+    <Code_Cause_English>Mapper arm storage error. Mapping starting position error</Code_Cause_English>
+  </Table>
+  <Table>
+    <Category_ID>11</Category_ID>
+    <Category_Description>TDK LoadPort Error 機台錯誤訊息</Category_Description>
+    <Code_Name>NAK</Code_Name>
+    <Code_Type>Expanded warning</Code_Type>
+    <Code_ID>/INTER/ZPOSI</Code_ID>
+    <Code_Cause>Z軸（上下門）位置問題</Code_Cause>
+    <Code_Cause_English>Z-axis (door top/bottom) position error</Code_Cause_English>
+  </Table>
+  <Table>
+    <Category_ID>11</Category_ID>
+    <Category_Description>TDK LoadPort Error 機台錯誤訊息</Category_Description>
+    <Code_Name>NAK</Code_Name>
+    <Code_Type>Expanded warning</Code_Type>
+    <Code_ID>/INTER/MPSTP</Code_ID>
+    <Code_Cause>Mapper stopper position error</Code_Cause>
+    <Code_Cause_English>Mapper stopper position error</Code_Cause_English>
+  </Table>
+  <Table>
+    <Category_ID>11</Category_ID>
+    <Category_Description>TDK LoadPort Error 機台錯誤訊息</Category_Description>
+    <Code_Name>NAK</Code_Name>
+    <Code_Type>Expanded warning</Code_Type>
+    <Code_ID>/INTER/DVACM</Code_ID>
+    <Code_Cause>吸真空正在執行中</Code_Cause>
+    <Code_Cause_English>Door – Being vacuumed.</Code_Cause_English>
+  </Table>
+  <Table>
+    <Category_ID>11</Category_ID>
+    <Category_Description>TDK LoadPort Error 機台錯誤訊息</Category_Description>
+    <Code_Name>NAK</Code_Name>
+    <Code_Type>Expanded warning</Code_Type>
+    <Code_ID>/INTER/ERROR</Code_ID>
+    <Code_Cause>發生錯誤</Code_Cause>
+    <Code_Cause_English>Error</Code_Cause_English>
+  </Table>
+  <Table>
+    <Category_ID>11</Category_ID>
+    <Category_Description>TDK LoadPort Error 機台錯誤訊息</Category_Description>
+    <Code_Name>NAK</Code_Name>
+    <Code_Type>Expanded warning</Code_Type>
+    <Code_ID>/INTER/ORGYT</Code_ID>
+    <Code_Cause>尚未執行初始位置移動</Code_Cause>
+    <Code_Cause_English>Initialization incomplete</Code_Cause_English>
+  </Table>
+  <Table>
+    <Category_ID>11</Category_ID>
+    <Category_Description>TDK LoadPort Error 機台錯誤訊息</Category_Description>
+    <Code_Name>NAK</Code_Name>
+    <Code_Type>Expanded warning</Code_Type>
+    <Code_ID>/INTER/CLDDK</Code_ID>
+    <Code_Cause>CLDDK 命令不完整</Code_Cause>
+    <Code_Cause_English>CLDDK command is incomplete</Code_Cause_English>
+  </Table>
+  <Table>
+    <Category_ID>11</Category_ID>
+    <Category_Description>TDK LoadPort Error 機台錯誤訊息</Category_Description>
+    <Code_Name>NAK</Code_Name>
+    <Code_Type>Expanded warning</Code_Type>
+    <Code_ID>/INTER/CULDK</Code_ID>
+    <Code_Cause>CULDK 命令不完整</Code_Cause>
+    <Code_Cause_English>CULDK command is incomplete</Code_Cause_English>
+  </Table>
+  <Table>
+    <Category_ID>11</Category_ID>
+    <Category_Description>TDK LoadPort Error 機台錯誤訊息</Category_Description>
+    <Code_Name>NAK</Code_Name>
+    <Code_Type>Expanded warning</Code_Type>
+    <Code_ID>/INTER/CLOAD</Code_ID>
+    <Code_Cause>CLOAD 命令不完整</Code_Cause>
+    <Code_Cause_English>CLOAD command is incomplete</Code_Cause_English>
+  </Table>
+  <Table>
+    <Category_ID>11</Category_ID>
+    <Category_Description>TDK LoadPort Error 機台錯誤訊息</Category_Description>
+    <Code_Name>NAK</Code_Name>
+    <Code_Type>Expanded warning</Code_Type>
+    <Code_ID>/INTER/RMPOS</Code_ID>
+    <Code_Cause>REMAP尚未準備完成</Code_Cause>
+    <Code_Cause_English>REMAP not ready</Code_Cause_English>
+  </Table>
+  <Table>
+    <Category_ID>11</Category_ID>
+    <Category_Description>TDK LoadPort Error 機台錯誤訊息</Category_Description>
+    <Code_Name>ABS</Code_Name>
+    <Code_Type>Error Messages </Code_Type>
+    <Code_ID>07</Code_ID>
+    <Code_Cause>/PROTS 晶圓跳出</Code_Cause>
+    <Code_Cause_English>/PROTS Wafer protrusion</Code_Cause_English>
+  </Table>
+  <Table>
+    <Category_ID>11</Category_ID>
+    <Category_Description>TDK LoadPort Error 機台錯誤訊息</Category_Description>
+    <Code_Name>ABS</Code_Name>
+    <Code_Type>Error Messages </Code_Type>
+    <Code_ID>47</Code_ID>
+    <Code_Cause>/PROTS 玻璃晶圓跳出 (Option)</Code_Cause>
+    <Code_Cause_English>/PROTS Grass wafer protrusion (Option)</Code_Cause_English>
+  </Table>
+  <Table>
+    <Category_ID>11</Category_ID>
+    <Category_Description>TDK LoadPort Error 機台錯誤訊息</Category_Description>
+    <Code_Name>ABS</Code_Name>
+    <Code_Type>Error Messages </Code_Type>
+    <Code_ID>27</Code_ID>
+    <Code_Cause>/AIRSN 空氣源壓力錯誤</Code_Cause>
+    <Code_Cause_English>/AIRSN Main air error</Code_Cause_English>
+  </Table>
+  <Table>
+    <Category_ID>11</Category_ID>
+    <Category_Description>TDK LoadPort Error 機台錯誤訊息</Category_Description>
+    <Code_Name>ABS</Code_Name>
+    <Code_Type>Error Messages </Code_Type>
+    <Code_ID>02</Code_ID>
+    <Code_Cause>/ZLMIT Z軸 位置 : NG (下降)</Code_Cause>
+    <Code_Cause_English>/ZLMIT Z-axis position: NG (Down)</Code_Cause_English>
+  </Table>
+  <Table>
+    <Category_ID>11</Category_ID>
+    <Category_Description>TDK LoadPort Error 機台錯誤訊息</Category_Description>
+    <Code_Name>ABS</Code_Name>
+    <Code_Type>Error Messages </Code_Type>
+    <Code_ID>42</Code_ID>
+    <Code_Cause>/ZLMIT Z軸 位置 : NG (上升)</Code_Cause>
+    <Code_Cause_English>/ZLMIT Z-axis position: NG (Up)</Code_Cause_English>
+  </Table>
+  <Table>
+    <Category_ID>11</Category_ID>
+    <Category_Description>TDK LoadPort Error 機台錯誤訊息</Category_Description>
+    <Code_Name>ABS</Code_Name>
+    <Code_Type>Error Messages </Code_Type>
+    <Code_ID>04</Code_ID>
+    <Code_Cause>/YLMIT Y軸 位置 : NG (下降)</Code_Cause>
+    <Code_Cause_English>/YLMIT Y-axis position: NG (Dock)</Code_Cause_English>
+  </Table>
+  <Table>
+    <Category_ID>11</Category_ID>
+    <Category_Description>TDK LoadPort Error 機台錯誤訊息</Category_Description>
+    <Code_Name>ABS</Code_Name>
+    <Code_Type>Error Messages </Code_Type>
+    <Code_ID>44</Code_ID>
+    <Code_Cause>/YLMIT Y軸 位置 : NG (上升)</Code_Cause>
+    <Code_Cause_English>/YLMIT Y-axis position: NG (Undock)</Code_Cause_English>
+  </Table>
+  <Table>
+    <Category_ID>11</Category_ID>
+    <Category_Description>TDK LoadPort Error 機台錯誤訊息</Category_Description>
+    <Code_Name>ABS</Code_Name>
+    <Code_Type>Error Messages </Code_Type>
+    <Code_ID>08</Code_ID>
+    <Code_Cause>/DLMIT 門 向前/向後 : NG (Open)</Code_Cause>
+    <Code_Cause_English>/DLMIT Door forward/backward: NG (Open)</Code_Cause_English>
+  </Table>
+  <Table>
+    <Category_ID>11</Category_ID>
+    <Category_Description>TDK LoadPort Error 機台錯誤訊息</Category_Description>
+    <Code_Name>ABS</Code_Name>
+    <Code_Type>Error Messages </Code_Type>
+    <Code_ID>48</Code_ID>
+    <Code_Cause>/DLMIT 門 向前/向後 : NG (Close)</Code_Cause>
+    <Code_Cause_English>/DLMIT Door forward/backward: NG (Close)</Code_Cause_English>
+  </Table>
+  <Table>
+    <Category_ID>11</Category_ID>
+    <Category_Description>TDK LoadPort Error 機台錯誤訊息</Category_Description>
+    <Code_Name>ABS</Code_Name>
+    <Code_Type>Error Messages </Code_Type>
+    <Code_ID>F2</Code_ID>
+    <Code_Cause>/DLMIT FOUP 門關閉錯誤</Code_Cause>
+    <Code_Cause_English>/DLMIT FOUP door close error.</Code_Cause_English>
+  </Table>
+  <Table>
+    <Category_ID>11</Category_ID>
+    <Category_Description>TDK LoadPort Error 機台錯誤訊息</Category_Description>
+    <Code_Name>ABS</Code_Name>
+    <Code_Type>Error Messages </Code_Type>
+    <Code_ID>09</Code_ID>
+    <Code_Cause>/MPBAR Mapping 手臂位置 : NG (Open)</Code_Cause>
+    <Code_Cause_English>/MPBAR Mapper arm position: NG (Open)</Code_Cause_English>
+  </Table>
+  <Table>
+    <Category_ID>11</Category_ID>
+    <Category_Description>TDK LoadPort Error 機台錯誤訊息</Category_Description>
+    <Code_Name>ABS</Code_Name>
+    <Code_Type>Error Messages </Code_Type>
+    <Code_ID>49</Code_ID>
+    <Code_Cause>/MPBAR Mapping 手臂位置 : NG (Close)</Code_Cause>
+    <Code_Cause_English>/MPBAR Mapper arm position: NG (Close) </Code_Cause_English>
+  </Table>
+  <Table>
+    <Category_ID>11</Category_ID>
+    <Category_Description>TDK LoadPort Error 機台錯誤訊息</Category_Description>
+    <Code_Name>ABS</Code_Name>
+    <Code_Type>Error Messages </Code_Type>
+    <Code_ID>11</Code_ID>
+    <Code_Cause>/MPSTP Mapping 結束位置 : NG (On)</Code_Cause>
+    <Code_Cause_English>/MPSTP Mapper stopper position: NG (On)</Code_Cause_English>
+  </Table>
+  <Table>
+    <Category_ID>11</Category_ID>
+    <Category_Description>TDK LoadPort Error 機台錯誤訊息</Category_Description>
+    <Code_Name>ABS</Code_Name>
+    <Code_Type>Error Messages </Code_Type>
+    <Code_ID>51</Code_ID>
+    <Code_Cause>/MPSTP Mapping 結束位置 : NG (Off)</Code_Cause>
+    <Code_Cause_English>/MPSTP Mapper stopper position: NG (Off) </Code_Cause_English>
+  </Table>
+  <Table>
+    <Category_ID>11</Category_ID>
+    <Category_Description>TDK LoadPort Error 機台錯誤訊息</Category_Description>
+    <Code_Name>ABS</Code_Name>
+    <Code_Type>Error Messages </Code_Type>
+    <Code_ID>12</Code_ID>
+    <Code_Cause>/MPEDL Mapping 結束位置 : NG</Code_Cause>
+    <Code_Cause_English>/MPEDL Mapping end position: NG</Code_Cause_English>
+  </Table>
+  <Table>
+    <Category_ID>11</Category_ID>
+    <Category_Description>TDK LoadPort Error 機台錯誤訊息</Category_Description>
+    <Code_Name>ABS</Code_Name>
+    <Code_Type>Error Messages </Code_Type>
+    <Code_ID>21</Code_ID>
+    <Code_Cause>/CLOPS FOUP 夾具開啟錯誤</Code_Cause>
+    <Code_Cause_English>/CLOPS FOUP clamp open error</Code_Cause_English>
+  </Table>
+  <Table>
+    <Category_ID>11</Category_ID>
+    <Category_Description>TDK LoadPort Error 機台錯誤訊息</Category_Description>
+    <Code_Name>ABS</Code_Name>
+    <Code_Type>Error Messages </Code_Type>
+    <Code_ID>61</Code_ID>
+    <Code_Cause>/CLOPS FOUP 夾具開啟錯誤 (UP)</Code_Cause>
+    <Code_Cause_English>/CLOPS FOUP clamp open error (Up)</Code_Cause_English>
+  </Table>
+  <Table>
+    <Category_ID>11</Category_ID>
+    <Category_Description>TDK LoadPort Error 機台錯誤訊息</Category_Description>
+    <Code_Name>ABS</Code_Name>
+    <Code_Type>Error Messages </Code_Type>
+    <Code_ID>21</Code_ID>
+    <Code_Cause>/CLOPS FOUP 夾具開啟錯誤 (Back)</Code_Cause>
+    <Code_Cause_English>/CLOPS FOUP clamp open error (Back)</Code_Cause_English>
+  </Table>
+  <Table>
+    <Category_ID>11</Category_ID>
+    <Category_Description>TDK LoadPort Error 機台錯誤訊息</Category_Description>
+    <Code_Name>ABS</Code_Name>
+    <Code_Type>Error Messages </Code_Type>
+    <Code_ID>62</Code_ID>
+    <Code_Cause>/CLOPS FOUP 夾具開啟錯誤 (Down)</Code_Cause>
+    <Code_Cause_English>/CLOPS FOUP clamp open error (Down)</Code_Cause_English>
+  </Table>
+  <Table>
+    <Category_ID>11</Category_ID>
+    <Category_Description>TDK LoadPort Error 機台錯誤訊息</Category_Description>
+    <Code_Name>ABS</Code_Name>
+    <Code_Type>Error Messages </Code_Type>
+    <Code_ID>22</Code_ID>
+    <Code_Cause>/CLOPS FOUP 夾具關閉錯誤</Code_Cause>
+    <Code_Cause_English>/CLCLS FOUP clamp close error</Code_Cause_English>
+  </Table>
+  <Table>
+    <Category_ID>11</Category_ID>
+    <Category_Description>TDK LoadPort Error 機台錯誤訊息</Category_Description>
+    <Code_Name>ABS</Code_Name>
+    <Code_Type>Error Messages </Code_Type>
+    <Code_ID>61</Code_ID>
+    <Code_Cause>/CLOPS FOUP 夾具關閉錯誤 (UP)</Code_Cause>
+    <Code_Cause_English>/CLCLS FOUP clamp close error (Up)</Code_Cause_English>
+  </Table>
+  <Table>
+    <Category_ID>11</Category_ID>
+    <Category_Description>TDK LoadPort Error 機台錯誤訊息</Category_Description>
+    <Code_Name>ABS</Code_Name>
+    <Code_Type>Error Messages </Code_Type>
+    <Code_ID>22</Code_ID>
+    <Code_Cause>/CLOPS FOUP 夾具關閉錯誤 (Front)</Code_Cause>
+    <Code_Cause_English>/CLCLS FOUP clamp close error (Front) </Code_Cause_English>
+  </Table>
+  <Table>
+    <Category_ID>11</Category_ID>
+    <Category_Description>TDK LoadPort Error 機台錯誤訊息</Category_Description>
+    <Code_Name>ABS</Code_Name>
+    <Code_Type>Error Messages </Code_Type>
+    <Code_ID>63</Code_ID>
+    <Code_Cause>/CLOPS FOUP 夾具關閉錯誤 (Middle)</Code_Cause>
+    <Code_Cause_English>/CLCLS FOUP clamp close error (Middle)</Code_Cause_English>
+  </Table>
+  <Table>
+    <Category_ID>11</Category_ID>
+    <Category_Description>TDK LoadPort Error 機台錯誤訊息</Category_Description>
+    <Code_Name>ABS</Code_Name>
+    <Code_Type>Error Messages </Code_Type>
+    <Code_ID>23</Code_ID>
+    <Code_Cause>/DROPS 彈簧鎖鑰匙開啟錯誤</Code_Cause>
+    <Code_Cause_English>/DROPS Latch key open error</Code_Cause_English>
+  </Table>
+  <Table>
+    <Category_ID>11</Category_ID>
+    <Category_Description>TDK LoadPort Error 機台錯誤訊息</Category_Description>
+    <Code_Name>ABS</Code_Name>
+    <Code_Type>Error Messages </Code_Type>
+    <Code_ID>24</Code_ID>
+    <Code_Cause>/DROPS 彈簧鎖鑰匙關閉錯誤</Code_Cause>
+    <Code_Cause_English>/DRCLS Latch key close error</Code_Cause_English>
+  </Table>
+  <Table>
+    <Category_ID>11</Category_ID>
+    <Category_Description>TDK LoadPort Error 機台錯誤訊息</Category_Description>
+    <Code_Name>ABS</Code_Name>
+    <Code_Type>Error Messages </Code_Type>
+    <Code_ID>25</Code_ID>
+    <Code_Cause>/VACCS 真空開啟錯誤</Code_Cause>
+    <Code_Cause_English>/VACCS Vacuum on error</Code_Cause_English>
+  </Table>
+  <Table>
+    <Category_ID>11</Category_ID>
+    <Category_Description>TDK LoadPort Error 機台錯誤訊息</Category_Description>
+    <Code_Name>ABS</Code_Name>
+    <Code_Type>Error Messages </Code_Type>
+    <Code_ID>26</Code_ID>
+    <Code_Cause>/VACCS 真空關閉錯誤</Code_Cause>
+    <Code_Cause_English>/VACOS Vacuum off error</Code_Cause_English>
+  </Table>
+  <Table>
+    <Category_ID>11</Category_ID>
+    <Category_Description>TDK LoadPort Error 機台錯誤訊息</Category_Description>
+    <Code_Name>ABS</Code_Name>
+    <Code_Type>Error Messages </Code_Type>
+    <Code_ID>A1</Code_ID>
+    <Code_Cause>/INTOP FOUP 開啟超時錯誤</Code_Cause>
+    <Code_Cause_English>/INTOP Timeout error when FOUP is opened.</Code_Cause_English>
+  </Table>
+  <Table>
+    <Category_ID>11</Category_ID>
+    <Category_Description>TDK LoadPort Error 機台錯誤訊息</Category_Description>
+    <Code_Name>ABS</Code_Name>
+    <Code_Type>Error Messages </Code_Type>
+    <Code_ID>A2</Code_ID>
+    <Code_Cause>/INTOP FOUP 關閉超時錯誤</Code_Cause>
+    <Code_Cause_English>/INTCL Timeout error when FOUP is closed.</Code_Cause_English>
+  </Table>
+  <Table>
+    <Category_ID>11</Category_ID>
+    <Category_Description>TDK LoadPort Error 機台錯誤訊息</Category_Description>
+    <Code_Name>ABS</Code_Name>
+    <Code_Type>Error Messages </Code_Type>
+    <Code_ID>A3</Code_ID>
+    <Code_Cause>/INTMP 預留 (未使用)</Code_Cause>
+    <Code_Cause_English>/INTMP Reserved (Not used.)</Code_Cause_English>
+  </Table>
+  <Table>
+    <Category_ID>11</Category_ID>
+    <Category_Description>TDK LoadPort Error 機台錯誤訊息</Category_Description>
+    <Code_Name>ABS</Code_Name>
+    <Code_Type>Error Messages </Code_Type>
+    <Code_ID>A4</Code_ID>
+    <Code_Cause>/INTPI 來自主機設備的並行信號</Code_Cause>
+    <Code_Cause_English>/INTPI Parallel signal error from the upper machine</Code_Cause_English>
+  </Table>
+  <Table>
+    <Category_ID>11</Category_ID>
+    <Category_Description>TDK LoadPort Error 機台錯誤訊息</Category_Description>
+    <Code_Name>ABS</Code_Name>
+    <Code_Type>Error Messages </Code_Type>
+    <Code_ID>FC</Code_ID>
+    <Code_Cause>/FANST 風扇動作異常</Code_Cause>
+    <Code_Cause_English>/FANST Fan operation error</Code_Cause_English>
+  </Table>
+  <Table>
+    <Category_ID>11</Category_ID>
+    <Category_Description>TDK LoadPort Error 機台錯誤訊息</Category_Description>
+    <Code_Name>ABS</Code_Name>
+    <Code_Type>Error Messages </Code_Type>
+    <Code_ID>FD</Code_ID>
+    <Code_Cause>/SAFTY 鎖定電路異常</Code_Cause>
+    <Code_Cause_English>/SAFTY Interlock circuit failure</Code_Cause_English>
+  </Table>
+  <Table>
+    <Category_ID>11</Category_ID>
+    <Category_Description>TDK LoadPort Error 機台錯誤訊息</Category_Description>
+    <Code_Name>ABS</Code_Name>
+    <Code_Type>Error Messages </Code_Type>
+    <Code_ID>FE</Code_ID>
+    <Code_Cause>通信錯誤</Code_Cause>
+    <Code_Cause_English>None Communication error</Code_Cause_English>
+  </Table>
+  <Table>
+    <Category_ID>11</Category_ID>
+    <Category_Description>TDK LoadPort Error 機台錯誤訊息</Category_Description>
+    <Code_Name>ABS</Code_Name>
+    <Code_Type>Error Messages </Code_Type>
+    <Code_ID>FF</Code_ID>
+    <Code_Cause>/SAFTY 障礙物檢測傳感器，正常放置錯誤</Code_Cause>
+    <Code_Cause_English>/SAFTY Obstacle detection sensor, normal position error</Code_Cause_English>
+  </Table>
+  <Table>
+    <Category_ID>11</Category_ID>
+    <Category_Description>TDK LoadPort Error 機台錯誤訊息</Category_Description>
+    <Code_Name>ABS</Code_Name>
+    <Code_Type>Error Messages </Code_Type>
+    <Code_ID>EF</Code_ID>
+    <Code_Cause>/MPDOG Mapping 機器異常 (Sensor)</Code_Cause>
+    <Code_Cause_English>/MPDOG Mapping mechanical error (Sensor)</Code_Cause_English>
+  </Table>
+  <Table>
+    <Category_ID>11</Category_ID>
+    <Category_Description>TDK LoadPort Error 機台錯誤訊息</Category_Description>
+    <Code_Name>ABS</Code_Name>
+    <Code_Type>Error Messages </Code_Type>
+    <Code_ID>EE</Code_ID>
+    <Code_Cause>/MPDOG Mapping 機器異常 (Adjustment)</Code_Cause>
+    <Code_Cause_English>/MPDOG Mapping mechanical error (Adjustment)</Code_Cause_English>
+  </Table>
+  <Table>
+    <Category_ID>11</Category_ID>
+    <Category_Description>TDK LoadPort Error 機台錯誤訊息</Category_Description>
+    <Code_Name>ABS</Code_Name>
+    <Code_Type>Error Messages </Code_Type>
+    <Code_ID>31</Code_ID>
+    <Code_Cause>/DRDKE 門的檢測器錯誤在 dock 期間</Code_Cause>
+    <Code_Cause_English>/DRDKE Door detection error during dock</Code_Cause_English>
+  </Table>
+  <Table>
+    <Category_ID>11</Category_ID>
+    <Category_Description>TDK LoadPort Error 機台錯誤訊息</Category_Description>
+    <Code_Name>ABS</Code_Name>
+    <Code_Type>Error Messages </Code_Type>
+    <Code_ID>F1</Code_ID>
+    <Code_Cause>/DRSWE 門的檢測器錯誤在 dock 之外</Code_Cause>
+    <Code_Cause_English>/DRSWE Door detection error except dock.</Code_Cause_English>
+  </Table>
+  <Table>
+    <Category_ID>TDK.LoadPort</Category_ID>
+    <Category_Description>LoadPort 命令</Category_Description>
+    <Code_Name>錯誤重置</Code_Name>
+    <Code_Type>FIN</Code_Type>
+    <Code_ID>RESET</Code_ID>
+    <Code_Cause>錯誤重置</Code_Cause>
+    <Code_Cause_English>Error reset</Code_Cause_English>
+  </Table>
+  <Table>
+    <Category_ID>TDK.LoadPort</Category_ID>
+    <Category_Description>LoadPort 命令</Category_Description>
+    <Code_Name>程式初始化（內部狀態初始化）*它不運作。</Code_Name>
+    <Code_Type>FIN</Code_Type>
+    <Code_ID>INITL</Code_ID>
+    <Code_Cause>程式初始化（內部狀態初始化）*它不運作。</Code_Cause>
+    <Code_Cause_English>Program initialization (internal status initialization) * It doesn't operate. </Code_Cause_English>
+  </Table>
+  <Table>
+    <Category_ID>TDK.LoadPort</Category_ID>
+    <Category_Description>LoadPort 命令</Category_Description>
+    <Code_Name>STATUS 1 指示燈 開</Code_Name>
+    <Code_Type>FIN</Code_Type>
+    <Code_ID>LON07</Code_ID>
+    <Code_Cause>STATUS 1 指示燈 開</Code_Cause>
+    <Code_Cause_English>STATUS 1 indicator: ON </Code_Cause_English>
+  </Table>
+  <Table>
+    <Category_ID>TDK.LoadPort</Category_ID>
+    <Category_Description>LoadPort 命令</Category_Description>
+    <Code_Name>STATUS 1 指示燈 閃爍</Code_Name>
+    <Code_Type>FIN</Code_Type>
+    <Code_ID>LBL07</Code_ID>
+    <Code_Cause>STATUS 1 指示燈 閃爍</Code_Cause>
+    <Code_Cause_English>STATUS 1 indicator: Flashes </Code_Cause_English>
+  </Table>
+  <Table>
+    <Category_ID>TDK.LoadPort</Category_ID>
+    <Category_Description>LoadPort 命令</Category_Description>
+    <Code_Name>STATUS 1 指示燈 關</Code_Name>
+    <Code_Type>FIN</Code_Type>
+    <Code_ID>LOF07</Code_ID>
+    <Code_Cause>STATUS 1 指示燈 關</Code_Cause>
+    <Code_Cause_English>STATUS 1 indicator: OFF </Code_Cause_English>
+  </Table>
+  <Table>
+    <Category_ID>TDK.LoadPort</Category_ID>
+    <Category_Description>LoadPort 命令</Category_Description>
+    <Code_Name>STATUS 2 指示燈 開</Code_Name>
+    <Code_Type>FIN</Code_Type>
+    <Code_ID>LON08</Code_ID>
+    <Code_Cause>STATUS 2 指示燈 開</Code_Cause>
+    <Code_Cause_English>STATUS 2 indicator: ON </Code_Cause_English>
+  </Table>
+  <Table>
+    <Category_ID>TDK.LoadPort</Category_ID>
+    <Category_Description>LoadPort 命令</Category_Description>
+    <Code_Name>STATUS 2 指示燈 閃爍</Code_Name>
+    <Code_Type>FIN</Code_Type>
+    <Code_ID>LBL08</Code_ID>
+    <Code_Cause>STATUS 2 指示燈 閃爍</Code_Cause>
+    <Code_Cause_English>STATUS 2 indicator: Flashes </Code_Cause_English>
+  </Table>
+  <Table>
+    <Category_ID>TDK.LoadPort</Category_ID>
+    <Category_Description>LoadPort 命令</Category_Description>
+    <Code_Name>STATUS 2 指示燈 關</Code_Name>
+    <Code_Type>FIN</Code_Type>
+    <Code_ID>LOF08</Code_ID>
+    <Code_Cause>STATUS 2 指示燈 關</Code_Cause>
+    <Code_Cause_English>STATUS 2 indicator: OFF</Code_Cause_English>
+  </Table>
+  <Table>
+    <Category_ID>TDK.LoadPort</Category_ID>
+    <Category_Description>LoadPort 命令</Category_Description>
+    <Code_Name>LOAD 指示燈 開</Code_Name>
+    <Code_Type>FIN</Code_Type>
+    <Code_ID>LON01</Code_ID>
+    <Code_Cause>LOAD 指示燈 開</Code_Cause>
+    <Code_Cause_English>LOAD indicator: ON </Code_Cause_English>
+  </Table>
+  <Table>
+    <Category_ID>TDK.LoadPort</Category_ID>
+    <Category_Description>LoadPort 命令</Category_Description>
+    <Code_Name>LOAD 指示燈 閃爍</Code_Name>
+    <Code_Type>FIN</Code_Type>
+    <Code_ID>LBL01</Code_ID>
+    <Code_Cause>LOAD 指示燈 閃爍</Code_Cause>
+    <Code_Cause_English>LOAD indicator: Flashes </Code_Cause_English>
+  </Table>
+  <Table>
+    <Category_ID>TDK.LoadPort</Category_ID>
+    <Category_Description>LoadPort 命令</Category_Description>
+    <Code_Name>LOAD 指示燈 關</Code_Name>
+    <Code_Type>FIN</Code_Type>
+    <Code_ID>LOF01</Code_ID>
+    <Code_Cause>LOAD 指示燈 關</Code_Cause>
+    <Code_Cause_English>LOAD indicator: OFF </Code_Cause_English>
+  </Table>
+  <Table>
+    <Category_ID>TDK.LoadPort</Category_ID>
+    <Category_Description>LoadPort 命令</Category_Description>
+    <Code_Name>UNLOAD 指示燈 開</Code_Name>
+    <Code_Type>FIN</Code_Type>
+    <Code_ID>LON02</Code_ID>
+    <Code_Cause>UNLOAD 指示燈 開</Code_Cause>
+    <Code_Cause_English>UNLOAD indicator: ON </Code_Cause_English>
+  </Table>
+  <Table>
+    <Category_ID>TDK.LoadPort</Category_ID>
+    <Category_Description>LoadPort 命令</Category_Description>
+    <Code_Name>UNLOAD 指示燈 閃爍</Code_Name>
+    <Code_Type>FIN</Code_Type>
+    <Code_ID>LBL02</Code_ID>
+    <Code_Cause>UNLOAD 指示燈 閃爍</Code_Cause>
+    <Code_Cause_English>UNLOAD indicator: Flashes </Code_Cause_English>
+  </Table>
+  <Table>
+    <Category_ID>TDK.LoadPort</Category_ID>
+    <Category_Description>LoadPort 命令</Category_Description>
+    <Code_Name>UNLOAD 指示燈 關</Code_Name>
+    <Code_Type>FIN</Code_Type>
+    <Code_ID>LOF02</Code_ID>
+    <Code_Cause>UNLOAD 指示燈 關</Code_Cause>
+    <Code_Cause_English>UNLOAD indicator: OFF </Code_Cause_English>
+  </Table>
+  <Table>
+    <Category_ID>TDK.LoadPort</Category_ID>
+    <Category_Description>LoadPort 命令</Category_Description>
+    <Code_Name>OP. ACCESS 指示燈 開</Code_Name>
+    <Code_Type>FIN</Code_Type>
+    <Code_ID>LON03</Code_ID>
+    <Code_Cause>OP. ACCESS 指示燈 開</Code_Cause>
+    <Code_Cause_English>OP. ACCESS indicator: ON </Code_Cause_English>
+  </Table>
+  <Table>
+    <Category_ID>TDK.LoadPort</Category_ID>
+    <Category_Description>LoadPort 命令</Category_Description>
+    <Code_Name>OP. ACCESS 指示燈 閃爍</Code_Name>
+    <Code_Type>FIN</Code_Type>
+    <Code_ID>LBL03</Code_ID>
+    <Code_Cause>OP. ACCESS 指示燈 閃爍</Code_Cause>
+    <Code_Cause_English>OP. ACCESS indicator: Flashes </Code_Cause_English>
+  </Table>
+  <Table>
+    <Category_ID>TDK.LoadPort</Category_ID>
+    <Category_Description>LoadPort 命令</Category_Description>
+    <Code_Name>OP. ACCESS 指示燈 關</Code_Name>
+    <Code_Type>FIN</Code_Type>
+    <Code_ID>LOF03</Code_ID>
+    <Code_Cause>OP. ACCESS 指示燈 關</Code_Cause>
+    <Code_Cause_English>OP. ACCESS indicator: OFF </Code_Cause_English>
+  </Table>
+  <Table>
+    <Category_ID>TDK.LoadPort</Category_ID>
+    <Category_Description>LoadPort 命令</Category_Description>
+    <Code_Name>PRESENCE 指示燈 開</Code_Name>
+    <Code_Type>FIN</Code_Type>
+    <Code_ID>LON04</Code_ID>
+    <Code_Cause>PRESENCE 指示燈 開</Code_Cause>
+    <Code_Cause_English>PRESENCE indicator: ON </Code_Cause_English>
+  </Table>
+  <Table>
+    <Category_ID>TDK.LoadPort</Category_ID>
+    <Category_Description>LoadPort 命令</Category_Description>
+    <Code_Name>PRESENCE 指示燈 閃爍</Code_Name>
+    <Code_Type>FIN</Code_Type>
+    <Code_ID>LBL04</Code_ID>
+    <Code_Cause>PRESENCE 指示燈 閃爍</Code_Cause>
+    <Code_Cause_English>PRESENCE indicator: Flashes </Code_Cause_English>
+  </Table>
+  <Table>
+    <Category_ID>TDK.LoadPort</Category_ID>
+    <Category_Description>LoadPort 命令</Category_Description>
+    <Code_Name>PRESENCE 指示燈 關</Code_Name>
+    <Code_Type>FIN</Code_Type>
+    <Code_ID>LOF04</Code_ID>
+    <Code_Cause>PRESENCE 指示燈 關</Code_Cause>
+    <Code_Cause_English>PRESENCE indicator: OFF </Code_Cause_English>
+  </Table>
+  <Table>
+    <Category_ID>TDK.LoadPort</Category_ID>
+    <Category_Description>LoadPort 命令</Category_Description>
+    <Code_Name>PLACEMENT 指示燈 開</Code_Name>
+    <Code_Type>FIN</Code_Type>
+    <Code_ID>LON05</Code_ID>
+    <Code_Cause>PLACEMENT 指示燈 開</Code_Cause>
+    <Code_Cause_English>PLACEMENT indicator: ON </Code_Cause_English>
+  </Table>
+  <Table>
+    <Category_ID>TDK.LoadPort</Category_ID>
+    <Category_Description>LoadPort 命令</Category_Description>
+    <Code_Name>PLACEMENT 指示燈 閃爍</Code_Name>
+    <Code_Type>FIN</Code_Type>
+    <Code_ID>LBL05</Code_ID>
+    <Code_Cause>PLACEMENT 指示燈 閃爍</Code_Cause>
+    <Code_Cause_English>PLACEMENT indicator: Flashes </Code_Cause_English>
+  </Table>
+  <Table>
+    <Category_ID>TDK.LoadPort</Category_ID>
+    <Category_Description>LoadPort 命令</Category_Description>
+    <Code_Name>PLACEMENT 指示燈 關</Code_Name>
+    <Code_Type>FIN</Code_Type>
+    <Code_ID>LOF05</Code_ID>
+    <Code_Cause>PLACEMENT 指示燈 關</Code_Cause>
+    <Code_Cause_English>PLACEMENT indicator: OFF </Code_Cause_English>
+  </Table>
+  <Table>
+    <Category_ID>TDK.LoadPort</Category_ID>
+    <Category_Description>LoadPort 命令</Category_Description>
+    <Code_Name>移動到初始位置</Code_Name>
+    <Code_Type>FIN</Code_Type>
+    <Code_ID>ORGSH</Code_ID>
+    <Code_Cause>移動到初始位置</Code_Cause>
+    <Code_Cause_English>Moves the FOUP to the initial position.</Code_Cause_English>
+  </Table>
+  <Table>
+    <Category_ID>TDK.LoadPort</Category_ID>
+    <Category_Description>LoadPort 命令</Category_Description>
+    <Code_Name>強行移動到初始位置</Code_Name>
+    <Code_Type>FIN</Code_Type>
+    <Code_ID>ABORG</Code_ID>
+    <Code_Cause>強行移動到初始位置</Code_Cause>
+    <Code_Cause_English>Aborts the operation and moves the FOUP to the initial position.</Code_Cause_English>
+  </Table>
+  <Table>
+    <Category_ID>TDK.LoadPort</Category_ID>
+    <Category_Description>LoadPort 命令</Category_Description>
+    <Code_Name>Loads the FOUP (transfers the FOUP to the process unit).</Code_Name>
+    <Code_Type>FIN</Code_Type>
+    <Code_ID>CLOAD</Code_ID>
+    <Code_Cause>Loads the FOUP (transfers the FOUP to the process unit).</Code_Cause>
+    <Code_Cause_English>Loads the FOUP (transfers the FOUP to the process unit).</Code_Cause_English>
+  </Table>
+  <Table>
+    <Category_ID>TDK.LoadPort</Category_ID>
+    <Category_Description>LoadPort 命令</Category_Description>
+    <Code_Name>Loads the FOUP (same as CLOAD) to the point where the system is ready to open the door.</Code_Name>
+    <Code_Type>FIN</Code_Type>
+    <Code_ID>CLDDK</Code_ID>
+    <Code_Cause>Loads the FOUP (same as CLOAD) to the point where the system is ready to open the door.</Code_Cause>
+    <Code_Cause_English>Loads the FOUP (same as CLOAD) to the point where the system is ready to open the door.</Code_Cause_English>
+  </Table>
+  <Table>
+    <Category_ID>TDK.LoadPort</Category_ID>
+    <Category_Description>LoadPort 命令</Category_Description>
+    <Code_Name>Clamps  the  FOUP  and  moves  the  FOUP  to  the  Y-axis docking position.</Code_Name>
+    <Code_Type>FIN</Code_Type>
+    <Code_ID>CLDYD</Code_ID>
+    <Code_Cause>Clamps  the  FOUP  and  moves  the  FOUP  to  the  Y-axis docking position.</Code_Cause>
+    <Code_Cause_English>Clamps  the  FOUP  and  moves  the  FOUP  to  the  Y-axis docking position.</Code_Cause_English>
+  </Table>
+  <Table>
+    <Category_ID>TDK.LoadPort</Category_ID>
+    <Category_Description>LoadPort 命令</Category_Description>
+    <Code_Name>Continues loading the FOUP after CLDDK.</Code_Name>
+    <Code_Type>FIN</Code_Type>
+    <Code_ID>CLDOP</Code_ID>
+    <Code_Cause>Continues loading the FOUP after CLDDK.</Code_Cause>
+    <Code_Cause_English>Continues loading the FOUP after CLDDK.</Code_Cause_English>
+  </Table>
+  <Table>
+    <Category_ID>TDK.LoadPort</Category_ID>
+    <Category_Description>LoadPort 命令</Category_Description>
+    <Code_Name>Maps and loads the FOUP.</Code_Name>
+    <Code_Type>FIN</Code_Type>
+    <Code_ID>CLDMP</Code_ID>
+    <Code_Cause>Maps and loads the FOUP.</Code_Cause>
+    <Code_Cause_English>Maps and loads the FOUP.</Code_Cause_English>
+  </Table>
+  <Table>
+    <Category_ID>TDK.LoadPort</Category_ID>
+    <Category_Description>LoadPort 命令</Category_Description>
+    <Code_Name>Continues mapping and loading the FOUP after CLDDK.</Code_Name>
+    <Code_Type>FIN</Code_Type>
+    <Code_ID>CLMPO</Code_ID>
+    <Code_Cause>Continues mapping and loading the FOUP after CLDDK.</Code_Cause>
+    <Code_Cause_English>Continues mapping and loading the FOUP after CLDDK.</Code_Cause_English>
+  </Table>
+  <Table>
+    <Category_ID>TDK.LoadPort</Category_ID>
+    <Category_Description>LoadPort 命令</Category_Description>
+    <Code_Name>Unloads the FOUP (at the ejection position).</Code_Name>
+    <Code_Type>FIN</Code_Type>
+    <Code_ID>CULOD</Code_ID>
+    <Code_Cause>Unloads the FOUP (at the ejection position).</Code_Cause>
+    <Code_Cause_English>Unloads the FOUP (at the ejection position).</Code_Cause_English>
+  </Table>
+  <Table>
+    <Category_ID>TDK.LoadPort</Category_ID>
+    <Category_Description>LoadPort 命令</Category_Description>
+    <Code_Name>Closes the door (same as CULOD).</Code_Name>
+    <Code_Type>FIN</Code_Type>
+    <Code_ID>CULDK</Code_ID>
+    <Code_Cause>Closes the door (same as CULOD).</Code_Cause>
+    <Code_Cause_English>Closes the door (same as CULOD).</Code_Cause_English>
+  </Table>
+  <Table>
+    <Category_ID>TDK.LoadPort</Category_ID>
+    <Category_Description>LoadPort 命令</Category_Description>
+    <Code_Name>Undocks the FOUP (while being clamped) after CULDK.</Code_Name>
+    <Code_Type>FIN</Code_Type>
+    <Code_ID>CUDCL</Code_ID>
+    <Code_Cause>Undocks the FOUP (while being clamped) after CULDK.</Code_Cause>
+    <Code_Cause_English>Undocks the FOUP (while being clamped) after CULDK.</Code_Cause_English>
+  </Table>
+  <Table>
+    <Category_ID>TDK.LoadPort</Category_ID>
+    <Category_Description>LoadPort 命令</Category_Description>
+    <Code_Name>Unloads the FOUP after CULDK.</Code_Name>
+    <Code_Type>FIN</Code_Type>
+    <Code_ID>CUDNC</Code_ID>
+    <Code_Cause>Unloads the FOUP after CULDK.</Code_Cause>
+    <Code_Cause_English>Unloads the FOUP after CULDK.</Code_Cause_English>
+  </Table>
+  <Table>
+    <Category_ID>TDK.LoadPort</Category_ID>
+    <Category_Description>LoadPort 命令</Category_Description>
+    <Code_Name>Unloads the FOUP to the docking status.</Code_Name>
+    <Code_Type>FIN</Code_Type>
+    <Code_ID>CULYD</Code_ID>
+    <Code_Cause>Unloads the FOUP to the docking status.</Code_Cause>
+    <Code_Cause_English>Unloads the FOUP to the docking status.</Code_Cause_English>
+  </Table>
+  <Table>
+    <Category_ID>TDK.LoadPort</Category_ID>
+    <Category_Description>LoadPort 命令</Category_Description>
+    <Code_Name>Unloads  the  FOUP  to  the  point  where  the  system  can release (unclamp) the FOUP.</Code_Name>
+    <Code_Type>FIN</Code_Type>
+    <Code_ID>CULFC</Code_ID>
+    <Code_Cause>Unloads  the  FOUP  to  the  point  where  the  system  can release (unclamp) the FOUP.</Code_Cause>
+    <Code_Cause_English>Unloads  the  FOUP  to  the  point  where  the  system  can release (unclamp) the FOUP.</Code_Cause_English>
+  </Table>
+  <Table>
+    <Category_ID>TDK.LoadPort</Category_ID>
+    <Category_Description>LoadPort 命令</Category_Description>
+    <Code_Name>Maps and unloads the FOUP from the loaded status.</Code_Name>
+    <Code_Type>FIN</Code_Type>
+    <Code_ID>CUDMP</Code_ID>
+    <Code_Cause>Maps and unloads the FOUP from the loaded status.</Code_Cause>
+    <Code_Cause_English>Maps and unloads the FOUP from the loaded status.</Code_Cause_English>
+  </Table>
+  <Table>
+    <Category_ID>TDK.LoadPort</Category_ID>
+    <Category_Description>LoadPort 命令</Category_Description>
+    <Code_Name>Maps the FOUP and closes the door from the loaded status.</Code_Name>
+    <Code_Type>FIN</Code_Type>
+    <Code_ID>CUMDK</Code_ID>
+    <Code_Cause>Maps the FOUP and closes the door from the loaded status.</Code_Cause>
+    <Code_Cause_English>Maps the FOUP and closes the door from the loaded status.</Code_Cause_English>
+  </Table>
+  <Table>
+    <Category_ID>TDK.LoadPort</Category_ID>
+    <Category_Description>LoadPort 命令</Category_Description>
+    <Code_Name>Maps the FOUP to the before-unclamp status from the loaded status.</Code_Name>
+    <Code_Type>FIN</Code_Type>
+    <Code_ID>CUMFC</Code_ID>
+    <Code_Cause>Maps the FOUP to the before-unclamp status from the loaded status.</Code_Cause>
+    <Code_Cause_English>Maps the FOUP to the before-unclamp status from the loaded status.</Code_Cause_English>
+  </Table>
+  <Table>
+    <Category_ID>TDK.LoadPort</Category_ID>
+    <Category_Description>LoadPort 命令</Category_Description>
+    <Code_Name>Maps the FOUP while being loaded.</Code_Name>
+    <Code_Type>FIN</Code_Type>
+    <Code_ID>MAPDO</Code_ID>
+    <Code_Cause>Maps the FOUP while being loaded.</Code_Cause>
+    <Code_Cause_English>Maps the FOUP while being loaded.</Code_Cause_English>
+  </Table>
+  <Table>
+    <Category_ID>TDK.LoadPort</Category_ID>
+    <Category_Description>LoadPort 命令</Category_Description>
+    <Code_Name>Resumes the interrupted mapping.</Code_Name>
+    <Code_Type>FIN</Code_Type>
+    <Code_ID>REMAP</Code_ID>
+    <Code_Cause>Resumes the interrupted mapping.</Code_Cause>
+    <Code_Cause_English>Resumes the interrupted mapping.</Code_Cause_English>
+  </Table>
+  <Table>
+    <Category_ID>TDK.LoadPort</Category_ID>
+    <Category_Description>LoadPort 命令</Category_Description>
+    <Code_Name>FOUP clamp: Open</Code_Name>
+    <Code_Type>FIN</Code_Type>
+    <Code_ID>PODOP</Code_ID>
+    <Code_Cause>FOUP clamp: Open</Code_Cause>
+    <Code_Cause_English>FOUP clamp: Open</Code_Cause_English>
+  </Table>
+  <Table>
+    <Category_ID>TDK.LoadPort</Category_ID>
+    <Category_Description>LoadPort 命令</Category_Description>
+    <Code_Name>FOUP clamp: Close</Code_Name>
+    <Code_Type>FIN</Code_Type>
+    <Code_ID>PODCL</Code_ID>
+    <Code_Cause>FOUP clamp: Close</Code_Cause>
+    <Code_Cause_English>FOUP clamp: Close</Code_Cause_English>
+  </Table>
+  <Table>
+    <Category_ID>TDK.LoadPort</Category_ID>
+    <Category_Description>LoadPort 命令</Category_Description>
+    <Code_Name>Vacuum on</Code_Name>
+    <Code_Type>FIN</Code_Type>
+    <Code_ID>VACON</Code_ID>
+    <Code_Cause>Vacuum on</Code_Cause>
+    <Code_Cause_English>Vacuum on</Code_Cause_English>
+  </Table>
+  <Table>
+    <Category_ID>TDK.LoadPort</Category_ID>
+    <Category_Description>LoadPort 命令</Category_Description>
+    <Code_Name>Vacuum off</Code_Name>
+    <Code_Type>FIN</Code_Type>
+    <Code_ID>VACOF</Code_ID>
+    <Code_Cause>Vacuum off</Code_Cause>
+    <Code_Cause_English>Vacuum off</Code_Cause_English>
+  </Table>
+  <Table>
+    <Category_ID>TDK.LoadPort</Category_ID>
+    <Category_Description>LoadPort 命令</Category_Description>
+    <Code_Name>Latch key: Open (Unlatches the FOUP door.)</Code_Name>
+    <Code_Type>FIN</Code_Type>
+    <Code_ID>DOROP</Code_ID>
+    <Code_Cause>Latch key: Open (Unlatches the FOUP door.)</Code_Cause>
+    <Code_Cause_English>Latch key: Open (Unlatches the FOUP door.)</Code_Cause_English>
+  </Table>
+  <Table>
+    <Category_ID>TDK.LoadPort</Category_ID>
+    <Category_Description>LoadPort 命令</Category_Description>
+    <Code_Name>Latch key: Close (Latches the FOUP door.)</Code_Name>
+    <Code_Type>FIN</Code_Type>
+    <Code_ID>DORCL</Code_ID>
+    <Code_Cause>Latch key: Close (Latches the FOUP door.)</Code_Cause>
+    <Code_Cause_English>Latch key: Close (Latches the FOUP door.)</Code_Cause_English>
+  </Table>
+  <Table>
+    <Category_ID>TDK.LoadPort</Category_ID>
+    <Category_Description>LoadPort 命令</Category_Description>
+    <Code_Name>Mapper arm: Open</Code_Name>
+    <Code_Type>FIN</Code_Type>
+    <Code_ID>MAPOP</Code_ID>
+    <Code_Cause>Mapper arm: Open</Code_Cause>
+    <Code_Cause_English>Mapper arm: Open</Code_Cause_English>
+  </Table>
+  <Table>
+    <Category_ID>TDK.LoadPort</Category_ID>
+    <Category_Description>LoadPort 命令</Category_Description>
+    <Code_Name>Mapper arm: Close</Code_Name>
+    <Code_Type>FIN</Code_Type>
+    <Code_ID>MAPCL</Code_ID>
+    <Code_Cause>Mapper arm: Close</Code_Cause>
+    <Code_Cause_English>Mapper arm: Close</Code_Cause_English>
+  </Table>
+  <Table>
+    <Category_ID>TDK.LoadPort</Category_ID>
+    <Category_Description>LoadPort 命令</Category_Description>
+    <Code_Name>移動到Z軸上升位置（開門位置）</Code_Name>
+    <Code_Type>FIN</Code_Type>
+    <Code_ID>ZDRUP</Code_ID>
+    <Code_Cause>移動到Z軸上升位置（開門位置）</Code_Cause>
+    <Code_Cause_English>Move to Z-axis up position (door open position)</Code_Cause_English>
+  </Table>
+  <Table>
+    <Category_ID>TDK.LoadPort</Category_ID>
+    <Category_Description>LoadPort 命令</Category_Description>
+    <Code_Name>移動到Z軸下降位置（傳送裝置傳送可能位置）</Code_Name>
+    <Code_Type>FIN</Code_Type>
+    <Code_ID>ZDRDW</Code_ID>
+    <Code_Cause>移動到Z軸下降位置（傳送裝置傳送可能位置）</Code_Cause>
+    <Code_Cause_English>Move to Z-axis down position (transport unit handover possible position)</Code_Cause_English>
+  </Table>
+  <Table>
+    <Category_ID>TDK.LoadPort</Category_ID>
+    <Category_Description>LoadPort 命令</Category_Description>
+    <Code_Name>Lower to Z-axis mapping end position and conduct mapping</Code_Name>
+    <Code_Type>FIN</Code_Type>
+    <Code_ID>ZDRMP</Code_ID>
+    <Code_Cause>Lower to Z-axis mapping end position and conduct mapping</Code_Cause>
+    <Code_Cause_English>Lower to Z-axis mapping end position and conduct mapping</Code_Cause_English>
+  </Table>
+  <Table>
+    <Category_ID>TDK.LoadPort</Category_ID>
+    <Category_Description>LoadPort 命令</Category_Description>
+    <Code_Name>Move the mapper to the start position</Code_Name>
+    <Code_Type>FIN</Code_Type>
+    <Code_ID>ZMPST</Code_ID>
+    <Code_Cause>Move the mapper to the start position</Code_Cause>
+    <Code_Cause_English>Move the mapper to the start position</Code_Cause_English>
+  </Table>
+  <Table>
+    <Category_ID>TDK.LoadPort</Category_ID>
+    <Category_Description>LoadPort 命令</Category_Description>
+    <Code_Name>Move the mapper to the wait position (for compatible)</Code_Name>
+    <Code_Type>FIN</Code_Type>
+    <Code_ID>(ZMPED)</Code_ID>
+    <Code_Cause>Move the mapper to the wait position (for compatible)</Code_Cause>
+    <Code_Cause_English>Move the mapper to the wait position (for compatible)</Code_Cause_English>
+  </Table>
+  <Table>
+    <Category_ID>TDK.LoadPort</Category_ID>
+    <Category_Description>LoadPort 命令</Category_Description>
+    <Code_Name>無動作（Mapper stopper on）</Code_Name>
+    <Code_Type>FIN</Code_Type>
+    <Code_ID>(MSTON)</Code_ID>
+    <Code_Cause>無動作（Mapper stopper on）</Code_Cause>
+    <Code_Cause_English>Not operate. (Mapper stopper on)</Code_Cause_English>
+  </Table>
+  <Table>
+    <Category_ID>TDK.LoadPort</Category_ID>
+    <Category_Description>LoadPort 命令</Category_Description>
+    <Code_Name>無動作（Mapper stopper off）</Code_Name>
+    <Code_Type>FIN</Code_Type>
+    <Code_ID>(MSTOF)</Code_ID>
+    <Code_Cause>無動作（Mapper stopper off）</Code_Cause>
+    <Code_Cause_English>Not operate. (Mapper stopper off)</Code_Cause_English>
+  </Table>
+  <Table>
+    <Category_ID>TDK.LoadPort</Category_ID>
+    <Category_Description>LoadPort 命令</Category_Description>
+    <Code_Name>移至Y軸取消鎖定位置</Code_Name>
+    <Code_Type>FIN</Code_Type>
+    <Code_ID>YWAIT</Code_ID>
+    <Code_Cause>移至Y軸取消鎖定位置</Code_Cause>
+    <Code_Cause_English>Move to Y-axis undock position</Code_Cause_English>
+  </Table>
+  <Table>
+    <Category_ID>TDK.LoadPort</Category_ID>
+    <Category_Description>LoadPort 命令</Category_Description>
+    <Code_Name>移至Y軸停靠位置</Code_Name>
+    <Code_Type>FIN</Code_Type>
+    <Code_ID>YDOOR</Code_ID>
+    <Code_Cause>移至Y軸停靠位置</Code_Cause>
+    <Code_Cause_English>Move to Y-axis dock position</Code_Cause_English>
+  </Table>
+  <Table>
+    <Category_ID>TDK.LoadPort</Category_ID>
+    <Category_Description>LoadPort 命令</Category_Description>
+    <Code_Name>移至門開啟位置</Code_Name>
+    <Code_Type>FIN</Code_Type>
+    <Code_ID>DORBK</Code_ID>
+    <Code_Cause>移至門開啟位置</Code_Cause>
+    <Code_Cause_English>Move to door open position</Code_Cause_English>
+  </Table>
+  <Table>
+    <Category_ID>TDK.LoadPort</Category_ID>
+    <Category_Description>LoadPort 命令</Category_Description>
+    <Code_Name>移至門關閉位置</Code_Name>
+    <Code_Type>FIN</Code_Type>
+    <Code_ID>DORFW</Code_ID>
+    <Code_Cause>移至門關閉位置</Code_Cause>
+    <Code_Cause_English>Move to door close position</Code_Cause_English>
+  </Table>
+  <Table>
+    <Category_ID>TDK.LoadPort</Category_ID>
+    <Category_Description>LoadPort 命令</Category_Description>
+    <Code_Name>重試可恢復的錯誤</Code_Name>
+    <Code_Type>FIN</Code_Type>
+    <Code_ID>RETRY</Code_ID>
+    <Code_Cause>重試可恢復的錯誤</Code_Cause>
+    <Code_Cause_English>Retry during recoverable error</Code_Cause_English>
+  </Table>
+  <Table>
+    <Category_ID>TDK.LoadPort</Category_ID>
+    <Category_Description>LoadPort 命令</Category_Description>
+    <Code_Name>立即停止並命令中止</Code_Name>
+    <Code_Type>FIN</Code_Type>
+    <Code_ID>STOP_</Code_ID>
+    <Code_Cause>立即停止並命令中止</Code_Cause>
+    <Code_Cause_English>Immediate stop and command abort</Code_Cause_English>
+  </Table>
+  <Table>
+    <Category_ID>TDK.LoadPort</Category_ID>
+    <Category_Description>LoadPort 命令</Category_Description>
+    <Code_Name>立即停止</Code_Name>
+    <Code_Type>FIN</Code_Type>
+    <Code_ID>PAUSE</Code_ID>
+    <Code_Cause>立即停止</Code_Cause>
+    <Code_Cause_English>Immediate stop</Code_Cause_English>
+  </Table>
+  <Table>
+    <Category_ID>TDK.LoadPort</Category_ID>
+    <Category_Description>LoadPort 命令</Category_Description>
+    <Code_Name>命令中止</Code_Name>
+    <Code_Type>FIN</Code_Type>
+    <Code_ID>ABORT</Code_ID>
+    <Code_Cause>命令中止</Code_Cause>
+    <Code_Cause_English>Command abort</Code_Cause_English>
+  </Table>
+  <Table>
+    <Category_ID>TDK.LoadPort</Category_ID>
+    <Category_Description>LoadPort 命令</Category_Description>
+    <Code_Name>操作繼續</Code_Name>
+    <Code_Type>FIN</Code_Type>
+    <Code_ID>RESUM</Code_ID>
+    <Code_Cause>操作繼續</Code_Cause>
+    <Code_Cause_English>Resume operation</Code_Cause_English>
+  </Table>
+  <Table>
+    <Category_ID>System</Category_ID>
+    <Category_Description>系統訊息</Category_Description>
+    <Code_Name>TDK</Code_Name>
+    <Code_Type>EquipmentSupplier</Code_Type>
+    <Code_ID>TDK</Code_ID>
+    <Code_Cause>TDK</Code_Cause>
+    <Code_Cause_English>TDK</Code_Cause_English>
+  </Table>
+  <Table>
+    <Category_ID>TDK.LoadPort</Category_ID>
+    <Category_Description>LoadPort 命令</Category_Description>
+    <Code_Name>ALHCT</Code_Name>
+    <Code_Type>GET</Code_Type>
+    <Code_ID>ALHCT</Code_ID>
+    <Code_Cause>取得Alarm筆數</Code_Cause>
+    <Code_Cause_English />
+  </Table>
+  <Table>
+    <Category_ID>TDK.LoadPort</Category_ID>
+    <Category_Description>LoadPort 命令</Category_Description>
+    <Code_Name>ALHIS</Code_Name>
+    <Code_Type>GET</Code_Type>
+    <Code_ID>ALHIS</Code_ID>
+    <Code_Cause>取回Alarm資料</Code_Cause>
+    <Code_Cause_English />
+  </Table>
+  <Table>
+    <Category_ID>System</Category_ID>
+    <Category_Description>系統訊息</Category_Description>
+    <Code_Name>TDK 命令格式</Code_Name>
+    <Code_Type>TDK.Command.Format</Code_Type>
+    <Code_ID>{0}:{1};</Code_ID>
+    <Code_Cause>TDK 命令格式</Code_Cause>
+    <Code_Cause_English />
+  </Table>
+  <Table>
+    <Category_ID>KAWASAKI.Robot</Category_ID>
+    <Category_Description>Robot 命令</Category_Description>
+    <Code_Name>Reports combined status.</Code_Name>
+    <Code_Type>CMD</Code_Type>
+    <Code_ID>CSTA,</Code_ID>
+    <Code_Cause>Reports combined status.</Code_Cause>
+    <Code_Cause_English>Reports combined status.</Code_Cause_English>
+  </Table>
+  <Table>
+    <Category_ID>KAWASAKI.Robot</Category_ID>
+    <Category_Description>Robot 命令</Category_Description>
+    <Code_Name>Gets wafer.</Code_Name>
+    <Code_Type>CMD</Code_Type>
+    <Code_ID>GETS,</Code_ID>
+    <Code_Cause>Gets wafer.</Code_Cause>
+    <Code_Cause_English>Gets wafer.</Code_Cause_English>
+  </Table>
+  <Table>
+    <Category_ID>KAWASAKI.Robot</Category_ID>
+    <Category_Description>Robot 命令</Category_Description>
+    <Code_Name>Puts wafer.</Code_Name>
+    <Code_Type>CMD</Code_Type>
+    <Code_ID>PUTS,</Code_ID>
+    <Code_Cause>Puts wafer.</Code_Cause>
+    <Code_Cause_English>Puts wafer.</Code_Cause_English>
+  </Table>
+  <Table>
+    <Category_ID>KAWASAKI.Robot</Category_ID>
+    <Category_Description>Robot 命令</Category_Description>
+    <Code_Name>Executes compound action.</Code_Name>
+    <Code_Type>CMD</Code_Type>
+    <Code_ID>GETS,PUTS,</Code_ID>
+    <Code_Cause>Executes compound action.</Code_Cause>
+    <Code_Cause_English>Executes compound action.</Code_Cause_English>
+  </Table>
+  <Table>
+    <Category_ID>KAWASAKI.Robot</Category_ID>
+    <Category_Description>Robot 命令</Category_Description>
+    <Code_Name>Aligns wafer.</Code_Name>
+    <Code_Type>CMD</Code_Type>
+    <Code_ID>ALGN,</Code_ID>
+    <Code_Cause>Aligns wafer.</Code_Cause>
+    <Code_Cause_English>Aligns wafer.</Code_Cause_English>
+  </Table>
+  <Table>
+    <Category_ID>KAWASAKI.Robot</Category_ID>
+    <Category_Description>Robot 命令</Category_Description>
+    <Code_Name>Re-aligns wafer.</Code_Name>
+    <Code_Type>CMD</Code_Type>
+    <Code_ID>RALN,</Code_ID>
+    <Code_Cause>Re-aligns wafer.</Code_Cause>
+    <Code_Cause_English>Re-aligns wafer.</Code_Cause_English>
+  </Table>
+  <Table>
+    <Category_ID>KAWASAKI.Robot</Category_ID>
+    <Category_Description>Robot 命令</Category_Description>
+    <Code_Name>Reports offset value of aligner.</Code_Name>
+    <Code_Type>CMD</Code_Type>
+    <Code_ID>RAOF,</Code_ID>
+    <Code_Cause>Reports offset value of aligner.</Code_Cause>
+    <Code_Cause_English>Reports offset value of aligner.</Code_Cause_English>
+  </Table>
+  <Table>
+    <Category_ID>KAWASAKI.Robot</Category_ID>
+    <Category_Description>Robot 命令</Category_Description>
+    <Code_Name>Moves hand to wait position.</Code_Name>
+    <Code_Type>CMD</Code_Type>
+    <Code_ID>HOMH,</Code_ID>
+    <Code_Cause>Moves hand to wait position.</Code_Cause>
+    <Code_Cause_English>Moves hand to wait position.</Code_Cause_English>
+  </Table>
+  <Table>
+    <Category_ID>KAWASAKI.Robot</Category_ID>
+    <Category_Description>Robot 命令</Category_Description>
+    <Code_Name>Moves all axes to home position.</Code_Name>
+    <Code_Type>CMD</Code_Type>
+    <Code_ID>HOMA,</Code_ID>
+    <Code_Cause>Moves all axes to home position.</Code_Cause>
+    <Code_Cause_English>Moves all axes to home position.</Code_Cause_English>
+  </Table>
+  <Table>
+    <Category_ID>KAWASAKI.Robot</Category_ID>
+    <Category_Description>Robot 命令</Category_Description>
+    <Code_Name>Performs mapping.</Code_Name>
+    <Code_Type>CMD</Code_Type>
+    <Code_ID>MAPS,</Code_ID>
+    <Code_Cause>Performs mapping.</Code_Cause>
+    <Code_Cause_English>Performs mapping.</Code_Cause_English>
+  </Table>
+  <Table>
+    <Category_ID>KAWASAKI.Robot</Category_ID>
+    <Category_Description>Robot 命令</Category_Description>
+    <Code_Name>Reports wafer presence.</Code_Name>
+    <Code_Type>CMD</Code_Type>
+    <Code_ID>SENS,</Code_ID>
+    <Code_Cause>Reports wafer presence.</Code_Cause>
+    <Code_Cause_English>Reports wafer presence.</Code_Cause_English>
+  </Table>
+  <Table>
+    <Category_ID>KAWASAKI.Robot</Category_ID>
+    <Category_Description>Robot 命令</Category_Description>
+    <Code_Name>Reports robot condition.</Code_Name>
+    <Code_Type>CMD</Code_Type>
+    <Code_ID>STAT,</Code_ID>
+    <Code_Cause>Reports robot condition.</Code_Cause>
+    <Code_Cause_English>Reports robot condition.</Code_Cause_English>
+  </Table>
+  <Table>
+    <Category_ID>KAWASAKI.Robot</Category_ID>
+    <Category_Description>Robot 命令</Category_Description>
+    <Code_Name>Turns servo ON.</Code_Name>
+    <Code_Type>CMD</Code_Type>
+    <Code_ID>SERV,</Code_ID>
+    <Code_Cause>Turns servo ON.</Code_Cause>
+    <Code_Cause_English>Turns servo ON.</Code_Cause_English>
+  </Table>
+  <Table>
+    <Category_ID>KAWASAKI.Robot</Category_ID>
+    <Category_Description>Robot 命令</Category_Description>
+    <Code_Name>Turns servo OFF.</Code_Name>
+    <Code_Type>CMD</Code_Type>
+    <Code_ID>STOP,</Code_ID>
+    <Code_Cause>Turns servo OFF.</Code_Cause>
+    <Code_Cause_English>Turns servo OFF.</Code_Cause_English>
+  </Table>
+  <Table>
+    <Category_ID>KAWASAKI.Robot</Category_ID>
+    <Category_Description>Robot 命令</Category_Description>
+    <Code_Name>Sets robot motion speed.</Code_Name>
+    <Code_Type>CMD</Code_Type>
+    <Code_ID>SSPD,</Code_ID>
+    <Code_Cause>Sets robot motion speed.</Code_Cause>
+    <Code_Cause_English>Sets robot motion speed.</Code_Cause_English>
+  </Table>
+  <Table>
+    <Category_ID>KAWASAKI.Robot</Category_ID>
+    <Category_Description>Robot 命令</Category_Description>
+    <Code_Name>Reports set robot speed.</Code_Name>
+    <Code_Type>CMD</Code_Type>
+    <Code_ID>RSPD,</Code_ID>
+    <Code_Cause>Reports set robot speed.</Code_Cause>
+    <Code_Cause_English>Reports set robot speed.</Code_Cause_English>
+  </Table>
+  <Table>
+    <Category_ID>KAWASAKI.Robot</Category_ID>
+    <Category_Description>Robot 命令</Category_Description>
+    <Code_Name>Teaches program.</Code_Name>
+    <Code_Type>CMD</Code_Type>
+    <Code_ID>TCHP,</Code_ID>
+    <Code_Cause>Teaches program.</Code_Cause>
+    <Code_Cause_English>Teaches program.</Code_Cause_English>
+  </Table>
+  <Table>
+    <Category_ID>KAWASAKI.Robot</Category_ID>
+    <Category_Description>Robot 命令</Category_Description>
+    <Code_Name>Sets robot mode.</Code_Name>
+    <Code_Type>CMD</Code_Type>
+    <Code_ID>SMOD,</Code_ID>
+    <Code_Cause>Sets robot mode.</Code_Cause>
+    <Code_Cause_English>Sets robot mode.</Code_Cause_English>
+  </Table>
+  <Table>
+    <Category_ID>KAWASAKI.Robot</Category_ID>
+    <Category_Description>Robot 命令</Category_Description>
+    <Code_Name>Reports current robot mode settings.</Code_Name>
+    <Code_Type>CMD</Code_Type>
+    <Code_ID>RMOD,</Code_ID>
+    <Code_Cause>Reports current robot mode settings.</Code_Cause>
+    <Code_Cause_English>Reports current robot mode settings.</Code_Cause_English>
+  </Table>
+  <Table>
+    <Category_ID>KAWASAKI.Robot</Category_ID>
+    <Category_Description>Robot 命令</Category_Description>
+    <Code_Name>Moves to specified point.</Code_Name>
+    <Code_Type>CMD</Code_Type>
+    <Code_ID>MOVP,</Code_ID>
+    <Code_Cause>Moves to specified point.</Code_Cause>
+    <Code_Cause_English>Moves to specified point.</Code_Cause_English>
+  </Table>
+  <Table>
+    <Category_ID>KAWASAKI.Robot</Category_ID>
+    <Category_Description>Robot 命令</Category_Description>
+    <Code_Name>Grips wafer.</Code_Name>
+    <Code_Type>CMD</Code_Type>
+    <Code_ID>HOLD,</Code_ID>
+    <Code_Cause>Grips wafer.</Code_Cause>
+    <Code_Cause_English>Grips wafer.</Code_Cause_English>
+  </Table>
+  <Table>
+    <Category_ID>KAWASAKI.Robot</Category_ID>
+    <Category_Description>Robot 命令</Category_Description>
+    <Code_Name>Releases wafer.</Code_Name>
+    <Code_Type>CMD</Code_Type>
+    <Code_ID>RELS,</Code_ID>
+    <Code_Cause>Releases wafer.</Code_Cause>
+    <Code_Cause_English>Releases wafer.</Code_Cause_English>
+  </Table>
+  <Table>
+    <Category_ID>KAWASAKI.Robot</Category_ID>
+    <Category_Description>Robot 命令</Category_Description>
+    <Code_Name>Reports current position.</Code_Name>
+    <Code_Type>CMD</Code_Type>
+    <Code_ID>RPOS,</Code_ID>
+    <Code_Cause>Reports current position.</Code_Cause>
+    <Code_Cause_English>Reports current position.</Code_Cause_English>
+  </Table>
+  <Table>
+    <Category_ID>KAWASAKI.Robot</Category_ID>
+    <Category_Description>Robot 命令</Category_Description>
+    <Code_Name>Reports current coordinate position.</Code_Name>
+    <Code_Type>CMD</Code_Type>
+    <Code_ID>RXYZ,</Code_ID>
+    <Code_Cause>Reports current coordinate position.</Code_Cause>
+    <Code_Cause_English>Reports current coordinate position.</Code_Cause_English>
+  </Table>
+  <Table>
+    <Category_ID>KAWASAKI.Robot</Category_ID>
+    <Category_Description>Robot 命令</Category_Description>
+    <Code_Name>Reports the nearest station.</Code_Name>
+    <Code_Type>CMD</Code_Type>
+    <Code_ID>RNST,</Code_ID>
+    <Code_Cause>Reports the nearest station.</Code_Cause>
+    <Code_Cause_English>Reports the nearest station.</Code_Cause_English>
+  </Table>
+  <Table>
+    <Category_ID>KAWASAKI.Robot</Category_ID>
+    <Category_Description>Robot 命令</Category_Description>
+    <Code_Name>Moves to absolute position.</Code_Name>
+    <Code_Type>CMD</Code_Type>
+    <Code_ID>MOVA,</Code_ID>
+    <Code_Cause>Moves to absolute position.</Code_Cause>
+    <Code_Cause_English>Moves to absolute position.</Code_Cause_English>
+  </Table>
+  <Table>
+    <Category_ID>KAWASAKI.Robot</Category_ID>
+    <Category_Description>Robot 命令</Category_Description>
+    <Code_Name>Moves to relative position.</Code_Name>
+    <Code_Type>CMD</Code_Type>
+    <Code_ID>MOVR,</Code_ID>
+    <Code_Cause>Moves to relative position.</Code_Cause>
+    <Code_Cause_English>Moves to relative position.</Code_Cause_English>
+  </Table>
+  <Table>
+    <Category_ID>KAWASAKI.Robot</Category_ID>
+    <Category_Description>Robot 命令</Category_Description>
+    <Code_Name>Reports taught position.</Code_Name>
+    <Code_Type>CMD</Code_Type>
+    <Code_ID>RTCH,</Code_ID>
+    <Code_Cause>Reports taught position.</Code_Cause>
+    <Code_Cause_English>Reports taught position.</Code_Cause_English>
+  </Table>
+  <Table>
+    <Category_ID>KAWASAKI.Robot</Category_ID>
+    <Category_Description>Robot 命令</Category_Description>
+    <Code_Name>Sets taught position.</Code_Name>
+    <Code_Type>CMD</Code_Type>
+    <Code_ID>STCH,</Code_ID>
+    <Code_Cause>Sets taught position.</Code_Cause>
+    <Code_Cause_English>Sets taught position.</Code_Cause_English>
+  </Table>
+  <Table>
+    <Category_ID>KAWASAKI.Robot</Category_ID>
+    <Category_Description>Robot 命令</Category_Description>
+    <Code_Name>Cancels taught position.</Code_Name>
+    <Code_Type>CMD</Code_Type>
+    <Code_ID>CTCH,</Code_ID>
+    <Code_Cause>Cancels taught position.</Code_Cause>
+    <Code_Cause_English>Cancels taught position.</Code_Cause_English>
+  </Table>
+  <Table>
+    <Category_ID>KAWASAKI.Robot</Category_ID>
+    <Category_Description>Robot 命令</Category_Description>
+    <Code_Name>Reports taught position in XYZ coordinate values. </Code_Name>
+    <Code_Type>CMD</Code_Type>
+    <Code_ID>RTXY,</Code_ID>
+    <Code_Cause>Reports taught position in XYZ coordinate values. </Code_Cause>
+    <Code_Cause_English>Reports taught position in XYZ coordinate values. </Code_Cause_English>
+  </Table>
+  <Table>
+    <Category_ID>KAWASAKI.Robot</Category_ID>
+    <Category_Description>Robot 命令</Category_Description>
+    <Code_Name>Sets taught position in XYZ coordinate values. </Code_Name>
+    <Code_Type>CMD</Code_Type>
+    <Code_ID>STXY,</Code_ID>
+    <Code_Cause>Sets taught position in XYZ coordinate values. </Code_Cause>
+    <Code_Cause_English>Sets taught position in XYZ coordinate values. </Code_Cause_English>
+  </Table>
+  <Table>
+    <Category_ID>KAWASAKI.Robot</Category_ID>
+    <Category_Description>Robot 命令</Category_Description>
+    <Code_Name>Sets parameters.</Code_Name>
+    <Code_Type>CMD</Code_Type>
+    <Code_ID>SPRM,</Code_ID>
+    <Code_Cause>Sets parameters.</Code_Cause>
+    <Code_Cause_English>Sets parameters.</Code_Cause_English>
+  </Table>
+  <Table>
+    <Category_ID>KAWASAKI.Robot</Category_ID>
+    <Category_Description>Robot 命令</Category_Description>
+    <Code_Name>Reports parameters.</Code_Name>
+    <Code_Type>CMD</Code_Type>
+    <Code_ID>RPRM,</Code_ID>
+    <Code_Cause>Reports parameters.</Code_Cause>
+    <Code_Cause_English>Reports parameters.</Code_Cause_English>
+  </Table>
+  <Table>
+    <Category_ID>KAWASAKI.Robot</Category_ID>
+    <Category_Description>Robot 命令</Category_Description>
+    <Code_Name>Sets station parameters.</Code_Name>
+    <Code_Type>CMD</Code_Type>
+    <Code_ID>SPRS,</Code_ID>
+    <Code_Cause>Sets station parameters.</Code_Cause>
+    <Code_Cause_English>Sets station parameters.</Code_Cause_English>
+  </Table>
+  <Table>
+    <Category_ID>KAWASAKI.Robot</Category_ID>
+    <Category_Description>Robot 命令</Category_Description>
+    <Code_Name>Reports station parameters.</Code_Name>
+    <Code_Type>CMD</Code_Type>
+    <Code_ID>RPRS,</Code_ID>
+    <Code_Cause>Reports station parameters.</Code_Cause>
+    <Code_Cause_English>Reports station parameters.</Code_Cause_English>
+  </Table>
+  <Table>
+    <Category_ID>KAWASAKI.Robot</Category_ID>
+    <Category_Description>Robot 命令</Category_Description>
+    <Code_Name>Reports error history.</Code_Name>
+    <Code_Type>CMD</Code_Type>
+    <Code_ID>QERR,</Code_ID>
+    <Code_Cause>Reports error history.</Code_Cause>
+    <Code_Cause_English>Reports error history.</Code_Cause_English>
+  </Table>
+  <Table>
+    <Category_ID>KAWASAKI.Robot</Category_ID>
+    <Category_Description>Robot 命令</Category_Description>
+    <Code_Name>Reports the latest mapping result.</Code_Name>
+    <Code_Type>CMD</Code_Type>
+    <Code_ID>QMAP,</Code_ID>
+    <Code_Cause>Reports the latest mapping result.</Code_Cause>
+    <Code_Cause_English>Reports the latest mapping result.</Code_Cause_English>
+  </Table>
+  <Table>
+    <Category_ID>KAWASAKI.Robot</Category_ID>
+    <Category_Description>Robot 命令</Category_Description>
+    <Code_Name>Sets time and date.</Code_Name>
+    <Code_Type>CMD</Code_Type>
+    <Code_ID>STIM,</Code_ID>
+    <Code_Cause>Sets time and date.</Code_Cause>
+    <Code_Cause_English>Sets time and date.</Code_Cause_English>
+  </Table>
+  <Table>
+    <Category_ID>KAWASAKI.Robot</Category_ID>
+    <Category_Description>Robot 命令</Category_Description>
+    <Code_Name>Reports time and date.</Code_Name>
+    <Code_Type>CMD</Code_Type>
+    <Code_ID>RTIM,</Code_ID>
+    <Code_Cause>Reports time and date.</Code_Cause>
+    <Code_Cause_English>Reports time and date.</Code_Cause_English>
+  </Table>
+  <Table>
+    <Category_ID>KAWASAKI.Robot</Category_ID>
+    <Category_Description>Robot 命令</Category_Description>
+    <Code_Name>Reports robot ID.</Code_Name>
+    <Code_Type>CMD</Code_Type>
+    <Code_ID>VERM,</Code_ID>
+    <Code_Cause>Reports robot ID.</Code_Cause>
+    <Code_Cause_English>Reports robot ID.</Code_Cause_English>
+  </Table>
+  <Table>
+    <Category_ID>KAWASAKI.Robot</Category_ID>
+    <Category_Description>Robot 命令</Category_Description>
+    <Code_Name>Reports controller ID.</Code_Name>
+    <Code_Type>CMD</Code_Type>
+    <Code_ID>VERH,</Code_ID>
+    <Code_Cause>Reports controller ID.</Code_Cause>
+    <Code_Cause_English>Reports controller ID.</Code_Cause_English>
+  </Table>
+  <Table>
+    <Category_ID>KAWASAKI.Robot</Category_ID>
+    <Category_Description>Robot 命令</Category_Description>
+    <Code_Name>Reports version of software.</Code_Name>
+    <Code_Type>CMD</Code_Type>
+    <Code_ID>VERS,</Code_ID>
+    <Code_Cause>Reports version of software.</Code_Cause>
+    <Code_Cause_English>Reports version of software.</Code_Cause_English>
+  </Table>
+  <Table>
+    <Category_ID>System</Category_ID>
+    <Category_Description>系統訊息</Category_Description>
+    <Code_Name>KAWASAKI</Code_Name>
+    <Code_Type>KAWASAKI.Command.Format</Code_Type>
+    <Code_ID>&lt;{0}&gt;{1}</Code_ID>
+    <Code_Cause>KAWASAKI</Code_Cause>
+    <Code_Cause_English />
+  </Table>
+  <Table>
+    <Category_ID>KAWASAKI.Aligner</Category_ID>
+    <Category_Description>Aligner 命令</Category_Description>
+    <Code_Name>Reports combined status.</Code_Name>
+    <Code_Type>CMD</Code_Type>
+    <Code_ID>CSTA,</Code_ID>
+    <Code_Cause>Reports combined status.</Code_Cause>
+    <Code_Cause_English>Reports combined status.</Code_Cause_English>
+  </Table>
+  <Table>
+    <Category_ID>KAWASAKI.Aligner</Category_ID>
+    <Category_Description>Aligner 命令</Category_Description>
+    <Code_Name>Aligns wafer.</Code_Name>
+    <Code_Type>CMD</Code_Type>
+    <Code_ID>ALGN,</Code_ID>
+    <Code_Cause>Aligns wafer.</Code_Cause>
+    <Code_Cause_English>Aligns wafer.</Code_Cause_English>
+  </Table>
+  <Table>
+    <Category_ID>KAWASAKI.Aligner</Category_ID>
+    <Category_Description>Aligner 命令</Category_Description>
+    <Code_Name>Reports offset value of aligner.</Code_Name>
+    <Code_Type>CMD</Code_Type>
+    <Code_ID>RAOF,</Code_ID>
+    <Code_Cause>Reports offset value of aligner.</Code_Cause>
+    <Code_Cause_English>Reports offset value of aligner.</Code_Cause_English>
+  </Table>
+  <Table>
+    <Category_ID>KAWASAKI.Aligner</Category_ID>
+    <Category_Description>Aligner 命令</Category_Description>
+    <Code_Name>Turns servo ON.</Code_Name>
+    <Code_Type>CMD</Code_Type>
+    <Code_ID>SERV,</Code_ID>
+    <Code_Cause>Turns servo ON.</Code_Cause>
+    <Code_Cause_English>Turns servo ON.</Code_Cause_English>
+  </Table>
+  <Table>
+    <Category_ID>KAWASAKI.Aligner</Category_ID>
+    <Category_Description>Aligner 命令</Category_Description>
+    <Code_Name>Turns servo OFF.</Code_Name>
+    <Code_Type>CMD</Code_Type>
+    <Code_ID>STOP,</Code_ID>
+    <Code_Cause>Turns servo OFF.</Code_Cause>
+    <Code_Cause_English>Turns servo OFF.</Code_Cause_English>
+  </Table>
+  <Table>
+    <Category_ID>KAWASAKI.Aligner</Category_ID>
+    <Category_Description>Aligner 命令</Category_Description>
+    <Code_Name>Reports set robot speed.</Code_Name>
+    <Code_Type>CMD</Code_Type>
+    <Code_ID>RSPD,</Code_ID>
+    <Code_Cause>Reports set robot speed.</Code_Cause>
+    <Code_Cause_English>Reports set robot speed.</Code_Cause_English>
+  </Table>
+  <Table>
+    <Category_ID>KAWASAKI.Aligner</Category_ID>
+    <Category_Description>Aligner 命令</Category_Description>
+    <Code_Name>Grips wafer.</Code_Name>
+    <Code_Type>CMD</Code_Type>
+    <Code_ID>HOLD,</Code_ID>
+    <Code_Cause>Grips wafer.</Code_Cause>
+    <Code_Cause_English>Grips wafer.</Code_Cause_English>
+  </Table>
+  <Table>
+    <Category_ID>KAWASAKI.Aligner</Category_ID>
+    <Category_Description>Aligner 命令</Category_Description>
+    <Code_Name>Releases wafer.</Code_Name>
+    <Code_Type>CMD</Code_Type>
+    <Code_ID>RELS,</Code_ID>
+    <Code_Cause>Releases wafer.</Code_Cause>
+    <Code_Cause_English>Releases wafer.</Code_Cause_English>
+  </Table>
+  <Table>
+    <Category_ID>KAWASAKI.Aligner</Category_ID>
+    <Category_Description>Aligner 命令</Category_Description>
+    <Code_Name>Moves to absolute position.</Code_Name>
+    <Code_Type>CMD</Code_Type>
+    <Code_ID>MOVA,</Code_ID>
+    <Code_Cause>Moves to absolute position.</Code_Cause>
+    <Code_Cause_English>Moves to absolute position.</Code_Cause_English>
+  </Table>
+  <Table>
+    <Category_ID>KAWASAKI.Aligner</Category_ID>
+    <Category_Description>Aligner 命令</Category_Description>
+    <Code_Name>Moves to relative position.</Code_Name>
+    <Code_Type>CMD</Code_Type>
+    <Code_ID>MOVR,</Code_ID>
+    <Code_Cause>Moves to relative position.</Code_Cause>
+    <Code_Cause_English>Moves to relative position.</Code_Cause_English>
   </Table>
 </DocumentElement>

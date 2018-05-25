@@ -25,9 +25,9 @@ ConnectionType:"Socket"
 },
 {
 DeviceName:"OCRController01",
-DeviceType:"CognexController",
+DeviceType:"HSTController",
 IPAdress:"127.0.0.1",
-Port:23,
+Port:33,
 ConnectionType:"Socket"
 },
 {

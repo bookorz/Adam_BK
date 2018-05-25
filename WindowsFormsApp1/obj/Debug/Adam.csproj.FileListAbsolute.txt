@@ -66,8 +66,6 @@ C:\Users\ethan_huang\source\repos\Adam\WindowsFormsApp1\bin\Debug\log4net.dll
 C:\Users\ethan_huang\source\repos\Adam\WindowsFormsApp1\bin\Debug\Newtonsoft.Json.dll
 C:\Users\ethan_huang\source\repos\Adam\WindowsFormsApp1\bin\Debug\SANWA.pdb
 C:\Users\ethan_huang\source\repos\Adam\WindowsFormsApp1\bin\Debug\TransferControl.pdb
-C:\Users\ethan_huang\source\repos\Adam\WindowsFormsApp1\bin\Debug\log4net.pdb
-C:\Users\ethan_huang\source\repos\Adam\WindowsFormsApp1\bin\Debug\log4net.xml
 C:\Users\ethan_huang\source\repos\Adam\WindowsFormsApp1\bin\Debug\Newtonsoft.Json.xml
 C:\Users\ethan_huang\source\repos\Adam\WindowsFormsApp1\obj\Debug\Adam.csproj.CopyComplete
 C:\Users\ethan_huang\source\repos\Adam\WindowsFormsApp1\bin\Debug\ja-JP\Adam.resources.dll
@@ -217,3 +215,4 @@ C:\軟體專案開發\team\Adam\WindowsFormsApp1\bin\Debug\log4net.xml
 C:\軟體專案開發\team\Adam\WindowsFormsApp1\bin\Debug\Newtonsoft.Json.xml
 C:\軟體專案開發\team\Adam\WindowsFormsApp1\obj\Debug\ja-JP\Adam.resources.dll
 C:\軟體專案開發\team\Adam\WindowsFormsApp1\obj\Debug\Adam.csproj.CopyComplete
+C:\Users\ethan_huang\source\repos\Adam\WindowsFormsApp1\bin\Debug\nModbusPC.dll

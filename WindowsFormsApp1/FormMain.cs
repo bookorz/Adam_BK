@@ -1,4 +1,4 @@
-﻿using SANWA.Utility;
+using SANWA.Utility;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -17,6 +17,8 @@ using log4net;
 using Newtonsoft.Json;
 using Adam.UI_Update.Manual;
 using System.Collections;
+using System.Diagnostics;
+using Adam.UI_Update.OCR;
 
 namespace Adam
 {
@@ -87,6 +89,17 @@ namespace Adam
         private void Initialize()
         {
             PathManagement.LoadConfig();
+            //檢查OCR程式有沒有開
+            Process[] pc = Process.GetProcessesByName("VB9BReaderForm");
+            if (pc.Count() == 0)
+            {
+                Process OCRProg = new Process();
+                // FileName 是要執行的檔案
+                OCRProg.StartInfo.FileName = "C:/Program Files (x86)/HST Vision/e-Reader8000/VB9BReaderForm.exe";
+                OCRProg.Start();
+
+
+            }
         }
 
         private void panel2_Paint(object sender, PaintEventArgs e)
@@ -261,27 +274,12 @@ namespace Adam
 
         }
 
-        private void button24_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void button25_Click(object sender, EventArgs e)
-        {
-
-        }
-
         private void label50_Click(object sender, EventArgs e)
         {
 
         }
 
         private void textBox23_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void button28_Click(object sender, EventArgs e)
         {
 
         }
@@ -530,7 +528,14 @@ namespace Adam
                             ManualPortStatusUpdate.UpdateMapping(Node.Name, Msg.Value);
                             break;
                     }
-
+                    break;
+                case "OCR":
+                    switch (Txn.Method)
+                    {
+                        case Transaction.Command.OCRType.GetOnline:
+                            OCRUpdate.UpdateOCRStatus(Msg.Value);
+                            break;
+                    }
                     break;
             }
         }
@@ -542,7 +547,7 @@ namespace Adam
             {
                 case "LoadPort":
                     ManualPortStatusUpdate.UpdateLog(Node.Name, Msg.Command);
-                    break;
+                    break;               
             }
             
         }
@@ -562,6 +567,14 @@ namespace Adam
                             txn.Method = Transaction.Command.LoadPortType.GetMapping;
                             Node.SendCommand(txn);
                             break;
+                    }
+                    break;
+                case "OCR":
+                    switch (Txn.Method)
+                    {
+                        case Transaction.Command.OCRType.Read:
+                            OCRUpdate.UpdateOCRRead(Msg.Value);
+                            break;                      
                     }
                     break;
             }
@@ -740,6 +753,11 @@ namespace Adam
                         dgvLstatus.Rows.Add(row);
                     }
                     break;
+                case "OCR":
+                    Transaction txn = new Transaction();
+                    txn.Method = Transaction.Command.OCRType.GetOnline;
+                    NodeManagement.Get("OCR01").SendCommand(txn);
+                    break;
                 default:
                     break;
             }
@@ -763,6 +781,32 @@ namespace Adam
         private void vSBPortStatus_Scroll(object sender, ScrollEventArgs e)
         {
             pbPortState.Top = -vSBPortStatus.Value;
+        }
+
+        private void OCRButton(object sender, EventArgs e)
+        {
+            Button TriggerBtn = sender as Button;
+            Transaction txn = new Transaction();
+            switch (TriggerBtn.Name)
+            {
+                case "Btn_OCROnline":
+                    Btn_OCROnline.Enabled = false;
+                    Btn_OCROffline.Enabled = true;
+                    txn.Method = Transaction.Command.OCRType.Online;
+                    NodeManagement.Get("OCR01").SendCommand(txn);
+                    break;
+                case "Btn_OCROffline":
+                    Btn_OCROnline.Enabled = true;
+                    Btn_OCROffline.Enabled = false;
+                    txn.Method = Transaction.Command.OCRType.Offline;
+                    NodeManagement.Get("OCR01").SendCommand(txn);
+                    break;
+                case "Btn_OCRRead":
+                    txn.Method = Transaction.Command.OCRType.Read;
+                    NodeManagement.Get("OCR01").SendCommand(txn);
+                    break;
+            }
+
         }
     }
 }

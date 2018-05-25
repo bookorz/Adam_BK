@@ -4,3 +4,5 @@
 /SANWA.pdb
 /TransferControl.dll
 /TransferControl.pdb
+*.dll
+*.pdb
