@@ -130,12 +130,6 @@ namespace Adam
             this.label25 = new System.Windows.Forms.Label();
             this.groupBox13 = new System.Windows.Forms.GroupBox();
             this.textBox15 = new System.Windows.Forms.TextBox();
-            this.splitContainer7 = new System.Windows.Forms.SplitContainer();
-            this.label36 = new System.Windows.Forms.Label();
-            this.label37 = new System.Windows.Forms.Label();
-            this.splitContainer6 = new System.Windows.Forms.SplitContainer();
-            this.label33 = new System.Windows.Forms.Label();
-            this.label34 = new System.Windows.Forms.Label();
             this.splitContainer3 = new System.Windows.Forms.SplitContainer();
             this.label31 = new System.Windows.Forms.Label();
             this.label30 = new System.Windows.Forms.Label();
@@ -256,22 +250,8 @@ namespace Adam
             this.tableLayoutPanel14 = new System.Windows.Forms.TableLayoutPanel();
             this.groupBox11 = new System.Windows.Forms.GroupBox();
             this.tableLayoutPanel12 = new System.Windows.Forms.TableLayoutPanel();
-            this.tableLayoutPanel17 = new System.Windows.Forms.TableLayoutPanel();
-            this.dataGridView15 = new System.Windows.Forms.DataGridView();
-            this.dataGridViewTextBoxColumn28 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn29 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.label35 = new System.Windows.Forms.Label();
-            this.textBox18 = new System.Windows.Forms.TextBox();
-            this.tableLayoutPanel16 = new System.Windows.Forms.TableLayoutPanel();
-            this.dataGridView14 = new System.Windows.Forms.DataGridView();
-            this.dataGridViewTextBoxColumn26 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn27 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.label32 = new System.Windows.Forms.Label();
-            this.textBox17 = new System.Windows.Forms.TextBox();
             this.tableLayoutPanel15 = new System.Windows.Forms.TableLayoutPanel();
             this.dataGridView13 = new System.Windows.Forms.DataGridView();
-            this.dataGridViewTextBoxColumn22 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn24 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.label29 = new System.Windows.Forms.Label();
             this.textBox16 = new System.Windows.Forms.TextBox();
             this.tabStatus = new System.Windows.Forms.TabPage();
@@ -377,6 +357,30 @@ namespace Adam
             this.dataGridViewTextBoxColumn81 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.tabOCR = new System.Windows.Forms.TabPage();
             this.tableLayoutPanel13 = new System.Windows.Forms.TableLayoutPanel();
+            this.splitContainer10 = new System.Windows.Forms.SplitContainer();
+            this.groupBox17 = new System.Windows.Forms.GroupBox();
+            this.button26 = new System.Windows.Forms.Button();
+            this.button28 = new System.Windows.Forms.Button();
+            this.button29 = new System.Windows.Forms.Button();
+            this.textBox7 = new System.Windows.Forms.TextBox();
+            this.label38 = new System.Windows.Forms.Label();
+            this.pictureBox4 = new System.Windows.Forms.PictureBox();
+            this.splitContainer9 = new System.Windows.Forms.SplitContainer();
+            this.groupBox14 = new System.Windows.Forms.GroupBox();
+            this.button4 = new System.Windows.Forms.Button();
+            this.button24 = new System.Windows.Forms.Button();
+            this.button25 = new System.Windows.Forms.Button();
+            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.label14 = new System.Windows.Forms.Label();
+            this.pictureBox3 = new System.Windows.Forms.PictureBox();
+            this.splitContainer8 = new System.Windows.Forms.SplitContainer();
+            this.groupBox4 = new System.Windows.Forms.GroupBox();
+            this.OCR02Offline_Btn = new System.Windows.Forms.Button();
+            this.OCR02Online_Btn = new System.Windows.Forms.Button();
+            this.OCR02Read_Bt = new System.Windows.Forms.Button();
+            this.OCR02Read_Tb = new System.Windows.Forms.TextBox();
+            this.label7 = new System.Windows.Forms.Label();
+            this.OCR02_Pic = new System.Windows.Forms.PictureBox();
             this.tabSetting = new System.Windows.Forms.TabPage();
             this.tabControl3 = new System.Windows.Forms.TabControl();
             this.tabPage11 = new System.Windows.Forms.TabPage();
@@ -661,30 +665,6 @@ namespace Adam
             this.transTestToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.terminalToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.panel3 = new System.Windows.Forms.Panel();
-            this.splitContainer8 = new System.Windows.Forms.SplitContainer();
-            this.groupBox4 = new System.Windows.Forms.GroupBox();
-            this.OCR02Offline_Btn = new System.Windows.Forms.Button();
-            this.OCR02Online_Btn = new System.Windows.Forms.Button();
-            this.OCR02Read_Bt = new System.Windows.Forms.Button();
-            this.OCR02Read_Tb = new System.Windows.Forms.TextBox();
-            this.label7 = new System.Windows.Forms.Label();
-            this.OCR02_Pic = new System.Windows.Forms.PictureBox();
-            this.splitContainer9 = new System.Windows.Forms.SplitContainer();
-            this.groupBox14 = new System.Windows.Forms.GroupBox();
-            this.button4 = new System.Windows.Forms.Button();
-            this.button24 = new System.Windows.Forms.Button();
-            this.button25 = new System.Windows.Forms.Button();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.label14 = new System.Windows.Forms.Label();
-            this.pictureBox3 = new System.Windows.Forms.PictureBox();
-            this.splitContainer10 = new System.Windows.Forms.SplitContainer();
-            this.groupBox17 = new System.Windows.Forms.GroupBox();
-            this.button26 = new System.Windows.Forms.Button();
-            this.button28 = new System.Windows.Forms.Button();
-            this.button29 = new System.Windows.Forms.Button();
-            this.textBox7 = new System.Windows.Forms.TextBox();
-            this.label38 = new System.Windows.Forms.Label();
-            this.pictureBox4 = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer5)).BeginInit();
             this.splitContainer5.Panel1.SuspendLayout();
             this.splitContainer5.Panel2.SuspendLayout();
@@ -716,14 +696,6 @@ namespace Adam
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).BeginInit();
             this.groupBox13.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.splitContainer7)).BeginInit();
-            this.splitContainer7.Panel1.SuspendLayout();
-            this.splitContainer7.Panel2.SuspendLayout();
-            this.splitContainer7.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.splitContainer6)).BeginInit();
-            this.splitContainer6.Panel1.SuspendLayout();
-            this.splitContainer6.Panel2.SuspendLayout();
-            this.splitContainer6.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer3)).BeginInit();
             this.splitContainer3.Panel1.SuspendLayout();
             this.splitContainer3.Panel2.SuspendLayout();
@@ -774,10 +746,6 @@ namespace Adam
             this.tableLayoutPanel14.SuspendLayout();
             this.groupBox11.SuspendLayout();
             this.tableLayoutPanel12.SuspendLayout();
-            this.tableLayoutPanel17.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView15)).BeginInit();
-            this.tableLayoutPanel16.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView14)).BeginInit();
             this.tableLayoutPanel15.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView13)).BeginInit();
             this.tabStatus.SuspendLayout();
@@ -793,6 +761,24 @@ namespace Adam
             ((System.ComponentModel.ISupportInitialize)(this.dgvAstatus)).BeginInit();
             this.tabOCR.SuspendLayout();
             this.tableLayoutPanel13.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.splitContainer10)).BeginInit();
+            this.splitContainer10.Panel1.SuspendLayout();
+            this.splitContainer10.Panel2.SuspendLayout();
+            this.splitContainer10.SuspendLayout();
+            this.groupBox17.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.splitContainer9)).BeginInit();
+            this.splitContainer9.Panel1.SuspendLayout();
+            this.splitContainer9.Panel2.SuspendLayout();
+            this.splitContainer9.SuspendLayout();
+            this.groupBox14.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.splitContainer8)).BeginInit();
+            this.splitContainer8.Panel1.SuspendLayout();
+            this.splitContainer8.Panel2.SuspendLayout();
+            this.splitContainer8.SuspendLayout();
+            this.groupBox4.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.OCR02_Pic)).BeginInit();
             this.tabSetting.SuspendLayout();
             this.tabControl3.SuspendLayout();
             this.tabPage11.SuspendLayout();
@@ -876,24 +862,6 @@ namespace Adam
             this.contextMenuStrip1.SuspendLayout();
             this.contextMenuStrip4.SuspendLayout();
             this.panel3.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.splitContainer8)).BeginInit();
-            this.splitContainer8.Panel1.SuspendLayout();
-            this.splitContainer8.Panel2.SuspendLayout();
-            this.splitContainer8.SuspendLayout();
-            this.groupBox4.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.OCR02_Pic)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.splitContainer9)).BeginInit();
-            this.splitContainer9.Panel1.SuspendLayout();
-            this.splitContainer9.Panel2.SuspendLayout();
-            this.splitContainer9.SuspendLayout();
-            this.groupBox14.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.splitContainer10)).BeginInit();
-            this.splitContainer10.Panel1.SuspendLayout();
-            this.splitContainer10.Panel2.SuspendLayout();
-            this.splitContainer10.SuspendLayout();
-            this.groupBox17.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
             this.SuspendLayout();
             // 
             // splitContainer5
@@ -1191,68 +1159,6 @@ namespace Adam
             // 
             resources.ApplyResources(this.textBox15, "textBox15");
             this.textBox15.Name = "textBox15";
-            // 
-            // splitContainer7
-            // 
-            resources.ApplyResources(this.splitContainer7, "splitContainer7");
-            this.splitContainer7.Name = "splitContainer7";
-            // 
-            // splitContainer7.Panel1
-            // 
-            this.splitContainer7.Panel1.Controls.Add(this.label36);
-            // 
-            // splitContainer7.Panel2
-            // 
-            this.splitContainer7.Panel2.Controls.Add(this.label37);
-            // 
-            // label36
-            // 
-            this.label36.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
-            this.label36.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            resources.ApplyResources(this.label36, "label36");
-            this.label36.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.label36.ForeColor = System.Drawing.Color.Black;
-            this.label36.Name = "label36";
-            // 
-            // label37
-            // 
-            this.label37.BackColor = System.Drawing.Color.Transparent;
-            this.label37.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            resources.ApplyResources(this.label37, "label37");
-            this.label37.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.label37.ForeColor = System.Drawing.Color.Black;
-            this.label37.Name = "label37";
-            // 
-            // splitContainer6
-            // 
-            resources.ApplyResources(this.splitContainer6, "splitContainer6");
-            this.splitContainer6.Name = "splitContainer6";
-            // 
-            // splitContainer6.Panel1
-            // 
-            this.splitContainer6.Panel1.Controls.Add(this.label33);
-            // 
-            // splitContainer6.Panel2
-            // 
-            this.splitContainer6.Panel2.Controls.Add(this.label34);
-            // 
-            // label33
-            // 
-            this.label33.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
-            this.label33.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            resources.ApplyResources(this.label33, "label33");
-            this.label33.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.label33.ForeColor = System.Drawing.Color.Black;
-            this.label33.Name = "label33";
-            // 
-            // label34
-            // 
-            this.label34.BackColor = System.Drawing.Color.Transparent;
-            this.label34.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            resources.ApplyResources(this.label34, "label34");
-            this.label34.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.label34.ForeColor = System.Drawing.Color.Black;
-            this.label34.Name = "label34";
             // 
             // splitContainer3
             // 
@@ -2375,134 +2281,8 @@ namespace Adam
             // tableLayoutPanel12
             // 
             resources.ApplyResources(this.tableLayoutPanel12, "tableLayoutPanel12");
-            this.tableLayoutPanel12.Controls.Add(this.tableLayoutPanel17, 2, 0);
-            this.tableLayoutPanel12.Controls.Add(this.tableLayoutPanel16, 1, 0);
             this.tableLayoutPanel12.Controls.Add(this.tableLayoutPanel15, 0, 0);
             this.tableLayoutPanel12.Name = "tableLayoutPanel12";
-            // 
-            // tableLayoutPanel17
-            // 
-            resources.ApplyResources(this.tableLayoutPanel17, "tableLayoutPanel17");
-            this.tableLayoutPanel17.Controls.Add(this.dataGridView15, 0, 2);
-            this.tableLayoutPanel17.Controls.Add(this.label35, 0, 0);
-            this.tableLayoutPanel17.Controls.Add(this.textBox18, 0, 1);
-            this.tableLayoutPanel17.Controls.Add(this.splitContainer7, 0, 3);
-            this.tableLayoutPanel17.Name = "tableLayoutPanel17";
-            // 
-            // dataGridView15
-            // 
-            this.dataGridView15.AllowUserToAddRows = false;
-            this.dataGridView15.AllowUserToDeleteRows = false;
-            this.dataGridView15.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.ColumnHeader;
-            this.dataGridView15.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
-            this.dataGridView15.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView15.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.dataGridViewTextBoxColumn28,
-            this.dataGridViewTextBoxColumn29});
-            resources.ApplyResources(this.dataGridView15, "dataGridView15");
-            this.dataGridView15.MultiSelect = false;
-            this.dataGridView15.Name = "dataGridView15";
-            this.dataGridView15.ReadOnly = true;
-            this.dataGridView15.RowHeadersVisible = false;
-            this.dataGridView15.RowTemplate.Height = 10;
-            this.dataGridView15.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.CellSelect;
-            this.dataGridView15.StandardTab = true;
-            this.dataGridView15.DataBindingComplete += new System.Windows.Forms.DataGridViewBindingCompleteEventHandler(this.LoadPort01_DataBindingComplete);
-            // 
-            // dataGridViewTextBoxColumn28
-            // 
-            this.dataGridViewTextBoxColumn28.DataPropertyName = "Slot";
-            resources.ApplyResources(this.dataGridViewTextBoxColumn28, "dataGridViewTextBoxColumn28");
-            this.dataGridViewTextBoxColumn28.Name = "dataGridViewTextBoxColumn28";
-            this.dataGridViewTextBoxColumn28.ReadOnly = true;
-            this.dataGridViewTextBoxColumn28.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
-            // 
-            // dataGridViewTextBoxColumn29
-            // 
-            this.dataGridViewTextBoxColumn29.DataPropertyName = "Wafer_ID";
-            resources.ApplyResources(this.dataGridViewTextBoxColumn29, "dataGridViewTextBoxColumn29");
-            this.dataGridViewTextBoxColumn29.Name = "dataGridViewTextBoxColumn29";
-            this.dataGridViewTextBoxColumn29.ReadOnly = true;
-            this.dataGridViewTextBoxColumn29.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
-            // 
-            // label35
-            // 
-            this.label35.BackColor = System.Drawing.Color.Transparent;
-            this.label35.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            resources.ApplyResources(this.label35, "label35");
-            this.label35.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.label35.ForeColor = System.Drawing.Color.Black;
-            this.label35.Name = "label35";
-            // 
-            // textBox18
-            // 
-            this.textBox18.BackColor = System.Drawing.Color.Blue;
-            this.textBox18.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            resources.ApplyResources(this.textBox18, "textBox18");
-            this.textBox18.ForeColor = System.Drawing.Color.Transparent;
-            this.textBox18.Name = "textBox18";
-            // 
-            // tableLayoutPanel16
-            // 
-            resources.ApplyResources(this.tableLayoutPanel16, "tableLayoutPanel16");
-            this.tableLayoutPanel16.Controls.Add(this.dataGridView14, 0, 2);
-            this.tableLayoutPanel16.Controls.Add(this.label32, 0, 0);
-            this.tableLayoutPanel16.Controls.Add(this.textBox17, 0, 1);
-            this.tableLayoutPanel16.Controls.Add(this.splitContainer6, 0, 3);
-            this.tableLayoutPanel16.Name = "tableLayoutPanel16";
-            // 
-            // dataGridView14
-            // 
-            this.dataGridView14.AllowUserToAddRows = false;
-            this.dataGridView14.AllowUserToDeleteRows = false;
-            this.dataGridView14.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.ColumnHeader;
-            this.dataGridView14.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
-            this.dataGridView14.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView14.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.dataGridViewTextBoxColumn26,
-            this.dataGridViewTextBoxColumn27});
-            resources.ApplyResources(this.dataGridView14, "dataGridView14");
-            this.dataGridView14.MultiSelect = false;
-            this.dataGridView14.Name = "dataGridView14";
-            this.dataGridView14.ReadOnly = true;
-            this.dataGridView14.RowHeadersVisible = false;
-            this.dataGridView14.RowTemplate.Height = 10;
-            this.dataGridView14.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.CellSelect;
-            this.dataGridView14.StandardTab = true;
-            this.dataGridView14.DataBindingComplete += new System.Windows.Forms.DataGridViewBindingCompleteEventHandler(this.LoadPort01_DataBindingComplete);
-            // 
-            // dataGridViewTextBoxColumn26
-            // 
-            this.dataGridViewTextBoxColumn26.DataPropertyName = "Slot";
-            resources.ApplyResources(this.dataGridViewTextBoxColumn26, "dataGridViewTextBoxColumn26");
-            this.dataGridViewTextBoxColumn26.Name = "dataGridViewTextBoxColumn26";
-            this.dataGridViewTextBoxColumn26.ReadOnly = true;
-            this.dataGridViewTextBoxColumn26.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
-            // 
-            // dataGridViewTextBoxColumn27
-            // 
-            this.dataGridViewTextBoxColumn27.DataPropertyName = "Wafer_ID";
-            resources.ApplyResources(this.dataGridViewTextBoxColumn27, "dataGridViewTextBoxColumn27");
-            this.dataGridViewTextBoxColumn27.Name = "dataGridViewTextBoxColumn27";
-            this.dataGridViewTextBoxColumn27.ReadOnly = true;
-            this.dataGridViewTextBoxColumn27.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
-            // 
-            // label32
-            // 
-            this.label32.BackColor = System.Drawing.Color.Transparent;
-            this.label32.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            resources.ApplyResources(this.label32, "label32");
-            this.label32.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.label32.ForeColor = System.Drawing.Color.Black;
-            this.label32.Name = "label32";
-            // 
-            // textBox17
-            // 
-            this.textBox17.BackColor = System.Drawing.Color.DarkOrange;
-            this.textBox17.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            resources.ApplyResources(this.textBox17, "textBox17");
-            this.textBox17.ForeColor = System.Drawing.Color.Transparent;
-            this.textBox17.Name = "textBox17";
             // 
             // tableLayoutPanel15
             // 
@@ -2520,9 +2300,6 @@ namespace Adam
             this.dataGridView13.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.ColumnHeader;
             this.dataGridView13.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
             this.dataGridView13.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView13.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.dataGridViewTextBoxColumn22,
-            this.dataGridViewTextBoxColumn24});
             resources.ApplyResources(this.dataGridView13, "dataGridView13");
             this.dataGridView13.MultiSelect = false;
             this.dataGridView13.Name = "dataGridView13";
@@ -2532,22 +2309,6 @@ namespace Adam
             this.dataGridView13.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.CellSelect;
             this.dataGridView13.StandardTab = true;
             this.dataGridView13.DataBindingComplete += new System.Windows.Forms.DataGridViewBindingCompleteEventHandler(this.LoadPort01_DataBindingComplete);
-            // 
-            // dataGridViewTextBoxColumn22
-            // 
-            this.dataGridViewTextBoxColumn22.DataPropertyName = "Slot";
-            resources.ApplyResources(this.dataGridViewTextBoxColumn22, "dataGridViewTextBoxColumn22");
-            this.dataGridViewTextBoxColumn22.Name = "dataGridViewTextBoxColumn22";
-            this.dataGridViewTextBoxColumn22.ReadOnly = true;
-            this.dataGridViewTextBoxColumn22.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
-            // 
-            // dataGridViewTextBoxColumn24
-            // 
-            this.dataGridViewTextBoxColumn24.DataPropertyName = "Wafer_ID";
-            resources.ApplyResources(this.dataGridViewTextBoxColumn24, "dataGridViewTextBoxColumn24");
-            this.dataGridViewTextBoxColumn24.Name = "dataGridViewTextBoxColumn24";
-            this.dataGridViewTextBoxColumn24.ReadOnly = true;
-            this.dataGridViewTextBoxColumn24.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
             // 
             // label29
             // 
@@ -3442,6 +3203,228 @@ namespace Adam
             this.tableLayoutPanel13.Controls.Add(this.splitContainer12, 0, 0);
             this.tableLayoutPanel13.Name = "tableLayoutPanel13";
             this.tableLayoutPanel13.Paint += new System.Windows.Forms.PaintEventHandler(this.tableLayoutPanel13_Paint);
+            // 
+            // splitContainer10
+            // 
+            resources.ApplyResources(this.splitContainer10, "splitContainer10");
+            this.splitContainer10.Name = "splitContainer10";
+            // 
+            // splitContainer10.Panel1
+            // 
+            this.splitContainer10.Panel1.Controls.Add(this.groupBox17);
+            // 
+            // splitContainer10.Panel2
+            // 
+            this.splitContainer10.Panel2.Controls.Add(this.button29);
+            this.splitContainer10.Panel2.Controls.Add(this.textBox7);
+            this.splitContainer10.Panel2.Controls.Add(this.label38);
+            this.splitContainer10.Panel2.Controls.Add(this.pictureBox4);
+            // 
+            // groupBox17
+            // 
+            this.groupBox17.Controls.Add(this.button26);
+            this.groupBox17.Controls.Add(this.button28);
+            resources.ApplyResources(this.groupBox17, "groupBox17");
+            this.groupBox17.Name = "groupBox17";
+            this.groupBox17.TabStop = false;
+            // 
+            // button26
+            // 
+            this.button26.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
+            this.button26.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
+            this.button26.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
+            resources.ApplyResources(this.button26, "button26");
+            this.button26.Name = "button26";
+            this.button26.UseVisualStyleBackColor = false;
+            // 
+            // button28
+            // 
+            this.button28.BackColor = System.Drawing.Color.White;
+            this.button28.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
+            this.button28.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
+            resources.ApplyResources(this.button28, "button28");
+            this.button28.Name = "button28";
+            this.button28.UseVisualStyleBackColor = false;
+            // 
+            // button29
+            // 
+            resources.ApplyResources(this.button29, "button29");
+            this.button29.BackColor = System.Drawing.SystemColors.Control;
+            this.button29.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
+            this.button29.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
+            this.button29.Name = "button29";
+            this.button29.UseVisualStyleBackColor = false;
+            // 
+            // textBox7
+            // 
+            resources.ApplyResources(this.textBox7, "textBox7");
+            this.textBox7.BackColor = System.Drawing.Color.White;
+            this.textBox7.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.textBox7.ForeColor = System.Drawing.Color.Black;
+            this.textBox7.Name = "textBox7";
+            // 
+            // label38
+            // 
+            resources.ApplyResources(this.label38, "label38");
+            this.label38.BackColor = System.Drawing.Color.Transparent;
+            this.label38.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.label38.ForeColor = System.Drawing.Color.Black;
+            this.label38.Name = "label38";
+            // 
+            // pictureBox4
+            // 
+            resources.ApplyResources(this.pictureBox4, "pictureBox4");
+            this.pictureBox4.Name = "pictureBox4";
+            this.pictureBox4.TabStop = false;
+            // 
+            // splitContainer9
+            // 
+            resources.ApplyResources(this.splitContainer9, "splitContainer9");
+            this.splitContainer9.Name = "splitContainer9";
+            // 
+            // splitContainer9.Panel1
+            // 
+            this.splitContainer9.Panel1.Controls.Add(this.groupBox14);
+            // 
+            // splitContainer9.Panel2
+            // 
+            this.splitContainer9.Panel2.Controls.Add(this.button25);
+            this.splitContainer9.Panel2.Controls.Add(this.textBox2);
+            this.splitContainer9.Panel2.Controls.Add(this.label14);
+            this.splitContainer9.Panel2.Controls.Add(this.pictureBox3);
+            // 
+            // groupBox14
+            // 
+            this.groupBox14.Controls.Add(this.button4);
+            this.groupBox14.Controls.Add(this.button24);
+            resources.ApplyResources(this.groupBox14, "groupBox14");
+            this.groupBox14.Name = "groupBox14";
+            this.groupBox14.TabStop = false;
+            // 
+            // button4
+            // 
+            this.button4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
+            this.button4.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
+            this.button4.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
+            resources.ApplyResources(this.button4, "button4");
+            this.button4.Name = "button4";
+            this.button4.UseVisualStyleBackColor = false;
+            // 
+            // button24
+            // 
+            this.button24.BackColor = System.Drawing.Color.White;
+            this.button24.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
+            this.button24.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
+            resources.ApplyResources(this.button24, "button24");
+            this.button24.Name = "button24";
+            this.button24.UseVisualStyleBackColor = false;
+            // 
+            // button25
+            // 
+            resources.ApplyResources(this.button25, "button25");
+            this.button25.BackColor = System.Drawing.SystemColors.Control;
+            this.button25.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
+            this.button25.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
+            this.button25.Name = "button25";
+            this.button25.UseVisualStyleBackColor = false;
+            // 
+            // textBox2
+            // 
+            resources.ApplyResources(this.textBox2, "textBox2");
+            this.textBox2.BackColor = System.Drawing.Color.White;
+            this.textBox2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.textBox2.ForeColor = System.Drawing.Color.Black;
+            this.textBox2.Name = "textBox2";
+            // 
+            // label14
+            // 
+            resources.ApplyResources(this.label14, "label14");
+            this.label14.BackColor = System.Drawing.Color.Transparent;
+            this.label14.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.label14.ForeColor = System.Drawing.Color.Black;
+            this.label14.Name = "label14";
+            // 
+            // pictureBox3
+            // 
+            resources.ApplyResources(this.pictureBox3, "pictureBox3");
+            this.pictureBox3.Name = "pictureBox3";
+            this.pictureBox3.TabStop = false;
+            // 
+            // splitContainer8
+            // 
+            resources.ApplyResources(this.splitContainer8, "splitContainer8");
+            this.splitContainer8.Name = "splitContainer8";
+            // 
+            // splitContainer8.Panel1
+            // 
+            this.splitContainer8.Panel1.Controls.Add(this.groupBox4);
+            // 
+            // splitContainer8.Panel2
+            // 
+            this.splitContainer8.Panel2.Controls.Add(this.OCR02Read_Bt);
+            this.splitContainer8.Panel2.Controls.Add(this.OCR02Read_Tb);
+            this.splitContainer8.Panel2.Controls.Add(this.label7);
+            this.splitContainer8.Panel2.Controls.Add(this.OCR02_Pic);
+            // 
+            // groupBox4
+            // 
+            this.groupBox4.Controls.Add(this.OCR02Offline_Btn);
+            this.groupBox4.Controls.Add(this.OCR02Online_Btn);
+            resources.ApplyResources(this.groupBox4, "groupBox4");
+            this.groupBox4.Name = "groupBox4";
+            this.groupBox4.TabStop = false;
+            // 
+            // OCR02Offline_Btn
+            // 
+            this.OCR02Offline_Btn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
+            this.OCR02Offline_Btn.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
+            this.OCR02Offline_Btn.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
+            resources.ApplyResources(this.OCR02Offline_Btn, "OCR02Offline_Btn");
+            this.OCR02Offline_Btn.Name = "OCR02Offline_Btn";
+            this.OCR02Offline_Btn.UseVisualStyleBackColor = false;
+            this.OCR02Offline_Btn.Click += new System.EventHandler(this.OCRButton);
+            // 
+            // OCR02Online_Btn
+            // 
+            this.OCR02Online_Btn.BackColor = System.Drawing.Color.White;
+            this.OCR02Online_Btn.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
+            this.OCR02Online_Btn.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
+            resources.ApplyResources(this.OCR02Online_Btn, "OCR02Online_Btn");
+            this.OCR02Online_Btn.Name = "OCR02Online_Btn";
+            this.OCR02Online_Btn.UseVisualStyleBackColor = false;
+            this.OCR02Online_Btn.Click += new System.EventHandler(this.OCRButton);
+            // 
+            // OCR02Read_Bt
+            // 
+            resources.ApplyResources(this.OCR02Read_Bt, "OCR02Read_Bt");
+            this.OCR02Read_Bt.BackColor = System.Drawing.SystemColors.Control;
+            this.OCR02Read_Bt.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
+            this.OCR02Read_Bt.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
+            this.OCR02Read_Bt.Name = "OCR02Read_Bt";
+            this.OCR02Read_Bt.UseVisualStyleBackColor = false;
+            this.OCR02Read_Bt.Click += new System.EventHandler(this.OCRButton);
+            // 
+            // OCR02Read_Tb
+            // 
+            resources.ApplyResources(this.OCR02Read_Tb, "OCR02Read_Tb");
+            this.OCR02Read_Tb.BackColor = System.Drawing.Color.White;
+            this.OCR02Read_Tb.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.OCR02Read_Tb.ForeColor = System.Drawing.Color.Black;
+            this.OCR02Read_Tb.Name = "OCR02Read_Tb";
+            // 
+            // label7
+            // 
+            resources.ApplyResources(this.label7, "label7");
+            this.label7.BackColor = System.Drawing.Color.Transparent;
+            this.label7.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.label7.ForeColor = System.Drawing.Color.Black;
+            this.label7.Name = "label7";
+            // 
+            // OCR02_Pic
+            // 
+            resources.ApplyResources(this.OCR02_Pic, "OCR02_Pic");
+            this.OCR02_Pic.Name = "OCR02_Pic";
+            this.OCR02_Pic.TabStop = false;
             // 
             // tabSetting
             // 
@@ -5773,225 +5756,6 @@ namespace Adam
             this.panel3.Name = "panel3";
             this.panel3.Paint += new System.Windows.Forms.PaintEventHandler(this.panel3_Paint);
             // 
-            // splitContainer8
-            // 
-            resources.ApplyResources(this.splitContainer8, "splitContainer8");
-            this.splitContainer8.Name = "splitContainer8";
-            // 
-            // splitContainer8.Panel1
-            // 
-            this.splitContainer8.Panel1.Controls.Add(this.groupBox4);
-            // 
-            // splitContainer8.Panel2
-            // 
-            this.splitContainer8.Panel2.Controls.Add(this.OCR02Read_Bt);
-            this.splitContainer8.Panel2.Controls.Add(this.OCR02Read_Tb);
-            this.splitContainer8.Panel2.Controls.Add(this.label7);
-            this.splitContainer8.Panel2.Controls.Add(this.OCR02_Pic);
-            // 
-            // groupBox4
-            // 
-            this.groupBox4.Controls.Add(this.OCR02Offline_Btn);
-            this.groupBox4.Controls.Add(this.OCR02Online_Btn);
-            resources.ApplyResources(this.groupBox4, "groupBox4");
-            this.groupBox4.Name = "groupBox4";
-            this.groupBox4.TabStop = false;
-            // 
-            // OCR02Offline_Btn
-            // 
-            this.OCR02Offline_Btn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
-            this.OCR02Offline_Btn.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
-            this.OCR02Offline_Btn.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
-            resources.ApplyResources(this.OCR02Offline_Btn, "OCR02Offline_Btn");
-            this.OCR02Offline_Btn.Name = "OCR02Offline_Btn";
-            this.OCR02Offline_Btn.UseVisualStyleBackColor = false;
-            // 
-            // OCR02Online_Btn
-            // 
-            this.OCR02Online_Btn.BackColor = System.Drawing.Color.White;
-            this.OCR02Online_Btn.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
-            this.OCR02Online_Btn.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
-            resources.ApplyResources(this.OCR02Online_Btn, "OCR02Online_Btn");
-            this.OCR02Online_Btn.Name = "OCR02Online_Btn";
-            this.OCR02Online_Btn.UseVisualStyleBackColor = false;
-            // 
-            // OCR02Read_Bt
-            // 
-            resources.ApplyResources(this.OCR02Read_Bt, "OCR02Read_Bt");
-            this.OCR02Read_Bt.BackColor = System.Drawing.SystemColors.Control;
-            this.OCR02Read_Bt.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
-            this.OCR02Read_Bt.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
-            this.OCR02Read_Bt.Name = "OCR02Read_Bt";
-            this.OCR02Read_Bt.UseVisualStyleBackColor = false;
-            // 
-            // OCR02Read_Tb
-            // 
-            resources.ApplyResources(this.OCR02Read_Tb, "OCR02Read_Tb");
-            this.OCR02Read_Tb.BackColor = System.Drawing.Color.White;
-            this.OCR02Read_Tb.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.OCR02Read_Tb.ForeColor = System.Drawing.Color.Black;
-            this.OCR02Read_Tb.Name = "OCR02Read_Tb";
-            // 
-            // label7
-            // 
-            resources.ApplyResources(this.label7, "label7");
-            this.label7.BackColor = System.Drawing.Color.Transparent;
-            this.label7.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.label7.ForeColor = System.Drawing.Color.Black;
-            this.label7.Name = "label7";
-            // 
-            // OCR02_Pic
-            // 
-            resources.ApplyResources(this.OCR02_Pic, "OCR02_Pic");
-            this.OCR02_Pic.Name = "OCR02_Pic";
-            this.OCR02_Pic.TabStop = false;
-            // 
-            // splitContainer9
-            // 
-            resources.ApplyResources(this.splitContainer9, "splitContainer9");
-            this.splitContainer9.Name = "splitContainer9";
-            // 
-            // splitContainer9.Panel1
-            // 
-            this.splitContainer9.Panel1.Controls.Add(this.groupBox14);
-            // 
-            // splitContainer9.Panel2
-            // 
-            this.splitContainer9.Panel2.Controls.Add(this.button25);
-            this.splitContainer9.Panel2.Controls.Add(this.textBox2);
-            this.splitContainer9.Panel2.Controls.Add(this.label14);
-            this.splitContainer9.Panel2.Controls.Add(this.pictureBox3);
-            // 
-            // groupBox14
-            // 
-            this.groupBox14.Controls.Add(this.button4);
-            this.groupBox14.Controls.Add(this.button24);
-            resources.ApplyResources(this.groupBox14, "groupBox14");
-            this.groupBox14.Name = "groupBox14";
-            this.groupBox14.TabStop = false;
-            // 
-            // button4
-            // 
-            this.button4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
-            this.button4.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
-            this.button4.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
-            resources.ApplyResources(this.button4, "button4");
-            this.button4.Name = "button4";
-            this.button4.UseVisualStyleBackColor = false;
-            // 
-            // button24
-            // 
-            this.button24.BackColor = System.Drawing.Color.White;
-            this.button24.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
-            this.button24.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
-            resources.ApplyResources(this.button24, "button24");
-            this.button24.Name = "button24";
-            this.button24.UseVisualStyleBackColor = false;
-            // 
-            // button25
-            // 
-            resources.ApplyResources(this.button25, "button25");
-            this.button25.BackColor = System.Drawing.SystemColors.Control;
-            this.button25.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
-            this.button25.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
-            this.button25.Name = "button25";
-            this.button25.UseVisualStyleBackColor = false;
-            // 
-            // textBox2
-            // 
-            resources.ApplyResources(this.textBox2, "textBox2");
-            this.textBox2.BackColor = System.Drawing.Color.White;
-            this.textBox2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.textBox2.ForeColor = System.Drawing.Color.Black;
-            this.textBox2.Name = "textBox2";
-            // 
-            // label14
-            // 
-            resources.ApplyResources(this.label14, "label14");
-            this.label14.BackColor = System.Drawing.Color.Transparent;
-            this.label14.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.label14.ForeColor = System.Drawing.Color.Black;
-            this.label14.Name = "label14";
-            // 
-            // pictureBox3
-            // 
-            resources.ApplyResources(this.pictureBox3, "pictureBox3");
-            this.pictureBox3.Name = "pictureBox3";
-            this.pictureBox3.TabStop = false;
-            // 
-            // splitContainer10
-            // 
-            resources.ApplyResources(this.splitContainer10, "splitContainer10");
-            this.splitContainer10.Name = "splitContainer10";
-            // 
-            // splitContainer10.Panel1
-            // 
-            this.splitContainer10.Panel1.Controls.Add(this.groupBox17);
-            // 
-            // splitContainer10.Panel2
-            // 
-            this.splitContainer10.Panel2.Controls.Add(this.button29);
-            this.splitContainer10.Panel2.Controls.Add(this.textBox7);
-            this.splitContainer10.Panel2.Controls.Add(this.label38);
-            this.splitContainer10.Panel2.Controls.Add(this.pictureBox4);
-            // 
-            // groupBox17
-            // 
-            this.groupBox17.Controls.Add(this.button26);
-            this.groupBox17.Controls.Add(this.button28);
-            resources.ApplyResources(this.groupBox17, "groupBox17");
-            this.groupBox17.Name = "groupBox17";
-            this.groupBox17.TabStop = false;
-            // 
-            // button26
-            // 
-            this.button26.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
-            this.button26.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
-            this.button26.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
-            resources.ApplyResources(this.button26, "button26");
-            this.button26.Name = "button26";
-            this.button26.UseVisualStyleBackColor = false;
-            // 
-            // button28
-            // 
-            this.button28.BackColor = System.Drawing.Color.White;
-            this.button28.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
-            this.button28.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
-            resources.ApplyResources(this.button28, "button28");
-            this.button28.Name = "button28";
-            this.button28.UseVisualStyleBackColor = false;
-            // 
-            // button29
-            // 
-            resources.ApplyResources(this.button29, "button29");
-            this.button29.BackColor = System.Drawing.SystemColors.Control;
-            this.button29.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
-            this.button29.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
-            this.button29.Name = "button29";
-            this.button29.UseVisualStyleBackColor = false;
-            // 
-            // textBox7
-            // 
-            resources.ApplyResources(this.textBox7, "textBox7");
-            this.textBox7.BackColor = System.Drawing.Color.White;
-            this.textBox7.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.textBox7.ForeColor = System.Drawing.Color.Black;
-            this.textBox7.Name = "textBox7";
-            // 
-            // label38
-            // 
-            resources.ApplyResources(this.label38, "label38");
-            this.label38.BackColor = System.Drawing.Color.Transparent;
-            this.label38.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.label38.ForeColor = System.Drawing.Color.Black;
-            this.label38.Name = "label38";
-            // 
-            // pictureBox4
-            // 
-            resources.ApplyResources(this.pictureBox4, "pictureBox4");
-            this.pictureBox4.Name = "pictureBox4";
-            this.pictureBox4.TabStop = false;
-            // 
             // FormMain
             // 
             resources.ApplyResources(this, "$this");
@@ -6037,14 +5801,6 @@ namespace Adam
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).EndInit();
             this.groupBox13.ResumeLayout(false);
             this.groupBox13.PerformLayout();
-            this.splitContainer7.Panel1.ResumeLayout(false);
-            this.splitContainer7.Panel2.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.splitContainer7)).EndInit();
-            this.splitContainer7.ResumeLayout(false);
-            this.splitContainer6.Panel1.ResumeLayout(false);
-            this.splitContainer6.Panel2.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.splitContainer6)).EndInit();
-            this.splitContainer6.ResumeLayout(false);
             this.splitContainer3.Panel1.ResumeLayout(false);
             this.splitContainer3.Panel2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer3)).EndInit();
@@ -6101,12 +5857,6 @@ namespace Adam
             this.tableLayoutPanel14.ResumeLayout(false);
             this.groupBox11.ResumeLayout(false);
             this.tableLayoutPanel12.ResumeLayout(false);
-            this.tableLayoutPanel17.ResumeLayout(false);
-            this.tableLayoutPanel17.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView15)).EndInit();
-            this.tableLayoutPanel16.ResumeLayout(false);
-            this.tableLayoutPanel16.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView14)).EndInit();
             this.tableLayoutPanel15.ResumeLayout(false);
             this.tableLayoutPanel15.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView13)).EndInit();
@@ -6126,6 +5876,27 @@ namespace Adam
             ((System.ComponentModel.ISupportInitialize)(this.dgvAstatus)).EndInit();
             this.tabOCR.ResumeLayout(false);
             this.tableLayoutPanel13.ResumeLayout(false);
+            this.splitContainer10.Panel1.ResumeLayout(false);
+            this.splitContainer10.Panel2.ResumeLayout(false);
+            this.splitContainer10.Panel2.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.splitContainer10)).EndInit();
+            this.splitContainer10.ResumeLayout(false);
+            this.groupBox17.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
+            this.splitContainer9.Panel1.ResumeLayout(false);
+            this.splitContainer9.Panel2.ResumeLayout(false);
+            this.splitContainer9.Panel2.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.splitContainer9)).EndInit();
+            this.splitContainer9.ResumeLayout(false);
+            this.groupBox14.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
+            this.splitContainer8.Panel1.ResumeLayout(false);
+            this.splitContainer8.Panel2.ResumeLayout(false);
+            this.splitContainer8.Panel2.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.splitContainer8)).EndInit();
+            this.splitContainer8.ResumeLayout(false);
+            this.groupBox4.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.OCR02_Pic)).EndInit();
             this.tabSetting.ResumeLayout(false);
             this.tabControl3.ResumeLayout(false);
             this.tabPage11.ResumeLayout(false);
@@ -6238,27 +6009,6 @@ namespace Adam
             this.contextMenuStrip1.ResumeLayout(false);
             this.contextMenuStrip4.ResumeLayout(false);
             this.panel3.ResumeLayout(false);
-            this.splitContainer8.Panel1.ResumeLayout(false);
-            this.splitContainer8.Panel2.ResumeLayout(false);
-            this.splitContainer8.Panel2.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.splitContainer8)).EndInit();
-            this.splitContainer8.ResumeLayout(false);
-            this.groupBox4.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.OCR02_Pic)).EndInit();
-            this.splitContainer9.Panel1.ResumeLayout(false);
-            this.splitContainer9.Panel2.ResumeLayout(false);
-            this.splitContainer9.Panel2.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.splitContainer9)).EndInit();
-            this.splitContainer9.ResumeLayout(false);
-            this.groupBox14.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
-            this.splitContainer10.Panel1.ResumeLayout(false);
-            this.splitContainer10.Panel2.ResumeLayout(false);
-            this.splitContainer10.Panel2.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.splitContainer10)).EndInit();
-            this.splitContainer10.ResumeLayout(false);
-            this.groupBox17.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -6398,28 +6148,8 @@ namespace Adam
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel14;
         private System.Windows.Forms.GroupBox groupBox11;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel12;
-        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel17;
-        private System.Windows.Forms.DataGridView dataGridView15;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn28;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn29;
-        private System.Windows.Forms.Label label35;
-        private System.Windows.Forms.TextBox textBox18;
-        private System.Windows.Forms.SplitContainer splitContainer7;
-        private System.Windows.Forms.Label label36;
-        private System.Windows.Forms.Label label37;
-        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel16;
-        private System.Windows.Forms.DataGridView dataGridView14;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn26;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn27;
-        private System.Windows.Forms.Label label32;
-        private System.Windows.Forms.TextBox textBox17;
-        private System.Windows.Forms.SplitContainer splitContainer6;
-        private System.Windows.Forms.Label label33;
-        private System.Windows.Forms.Label label34;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel15;
         private System.Windows.Forms.DataGridView dataGridView13;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn22;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn24;
         private System.Windows.Forms.Label label29;
         private System.Windows.Forms.TextBox textBox16;
         private System.Windows.Forms.SplitContainer splitContainer3;

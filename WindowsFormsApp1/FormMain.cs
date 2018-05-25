@@ -174,8 +174,7 @@ namespace Adam
                 dataGridView7.DataSource = dtAligner01;
 
                 dataGridView13.DataSource = dtLoadPort01;
-                dataGridView14.DataSource = dtLoadPort01;
-                dataGridView15.DataSource = dtLoadPort01;
+               
 
                 dtAligner01.Columns.Add("Wafer_ID");
                 dr = dtAligner01.NewRow();
