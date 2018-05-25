@@ -1,0 +1,10 @@
+C:\Users\Johnny\Documents\_Visual Studio Projects\ToggleSwitch\ToggleSwitchDemo\bin\Release\ToggleSwitchDemo.exe
+C:\Users\Johnny\Documents\_Visual Studio Projects\ToggleSwitch\ToggleSwitchDemo\bin\Release\ToggleSwitchDemo.pdb
+C:\Users\Johnny\Documents\_Visual Studio Projects\ToggleSwitch\ToggleSwitchDemo\bin\Release\ToggleSwitch.dll
+C:\Users\Johnny\Documents\_Visual Studio Projects\ToggleSwitch\ToggleSwitchDemo\bin\Release\ToggleSwitch.pdb
+C:\Users\Johnny\Documents\_Visual Studio Projects\ToggleSwitch\ToggleSwitchDemo\obj\Release\ToggleSwitchDemo.csprojResolveAssemblyReference.cache
+C:\Users\Johnny\Documents\_Visual Studio Projects\ToggleSwitch\ToggleSwitchDemo\obj\Release\ToggleSwitchDemo.DemoForm.resources
+C:\Users\Johnny\Documents\_Visual Studio Projects\ToggleSwitch\ToggleSwitchDemo\obj\Release\ToggleSwitchDemo.Properties.Resources.resources
+C:\Users\Johnny\Documents\_Visual Studio Projects\ToggleSwitch\ToggleSwitchDemo\obj\Release\ToggleSwitchDemo.csproj.GenerateResource.Cache
+C:\Users\Johnny\Documents\_Visual Studio Projects\ToggleSwitch\ToggleSwitchDemo\obj\Release\ToggleSwitchDemo.exe
+C:\Users\Johnny\Documents\_Visual Studio Projects\ToggleSwitch\ToggleSwitchDemo\obj\Release\ToggleSwitchDemo.pdb

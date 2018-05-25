@@ -1,0 +1,4 @@
+C:\Users\Johnny\Documents\_Visual Studio Projects\ToggleSwitch\ToggleSwitch\bin\Release\ToggleSwitch.dll
+C:\Users\Johnny\Documents\_Visual Studio Projects\ToggleSwitch\ToggleSwitch\bin\Release\ToggleSwitch.pdb
+C:\Users\Johnny\Documents\_Visual Studio Projects\ToggleSwitch\ToggleSwitch\obj\Release\ToggleSwitch.dll
+C:\Users\Johnny\Documents\_Visual Studio Projects\ToggleSwitch\ToggleSwitch\obj\Release\ToggleSwitch.pdb

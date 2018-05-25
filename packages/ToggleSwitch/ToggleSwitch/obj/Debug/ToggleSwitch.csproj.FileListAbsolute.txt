@@ -1,0 +1,5 @@
+D:\Downloads\ToggleSwitch\ToggleSwitch\bin\Debug\ToggleSwitch.dll
+D:\Downloads\ToggleSwitch\ToggleSwitch\bin\Debug\ToggleSwitch.pdb
+D:\Downloads\ToggleSwitch\ToggleSwitch\obj\Debug\ToggleSwitch.csproj.CoreCompileInputs.cache
+D:\Downloads\ToggleSwitch\ToggleSwitch\obj\Debug\ToggleSwitch.dll
+D:\Downloads\ToggleSwitch\ToggleSwitch\obj\Debug\ToggleSwitch.pdb

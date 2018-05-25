@@ -1,0 +1,12 @@
+D:\Downloads\ToggleSwitch\ToggleSwitchDemo\bin\Debug\ToggleSwitchDemo.exe
+D:\Downloads\ToggleSwitch\ToggleSwitchDemo\bin\Debug\ToggleSwitchDemo.pdb
+D:\Downloads\ToggleSwitch\ToggleSwitchDemo\bin\Debug\ToggleSwitch.dll
+D:\Downloads\ToggleSwitch\ToggleSwitchDemo\bin\Debug\ToggleSwitch.pdb
+D:\Downloads\ToggleSwitch\ToggleSwitchDemo\obj\Debug\ToggleSwitchDemo.csprojAssemblyReference.cache
+D:\Downloads\ToggleSwitch\ToggleSwitchDemo\obj\Debug\ToggleSwitchDemo.DemoForm.resources
+D:\Downloads\ToggleSwitch\ToggleSwitchDemo\obj\Debug\ToggleSwitchDemo.Properties.Resources.resources
+D:\Downloads\ToggleSwitch\ToggleSwitchDemo\obj\Debug\ToggleSwitchDemo.csproj.GenerateResource.cache
+D:\Downloads\ToggleSwitch\ToggleSwitchDemo\obj\Debug\ToggleSwitchDemo.csproj.CoreCompileInputs.cache
+D:\Downloads\ToggleSwitch\ToggleSwitchDemo\obj\Debug\ToggleSwitchDemo.csproj.CopyComplete
+D:\Downloads\ToggleSwitch\ToggleSwitchDemo\obj\Debug\ToggleSwitchDemo.exe
+D:\Downloads\ToggleSwitch\ToggleSwitchDemo\obj\Debug\ToggleSwitchDemo.pdb
