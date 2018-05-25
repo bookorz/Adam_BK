@@ -2978,7 +2978,7 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;panel1.ZOrder" xml:space="preserve">
-    <value>5</value>
+    <value>6</value>
   </data>
   <data name="tabMonitor.BackgroundImageLayout" type="System.Windows.Forms.ImageLayout, System.Windows.Forms">
     <value>None</value>
@@ -4627,28 +4627,43 @@
   <data name="tableLayoutPanel15.ColumnCount" type="System.Int32, mscorlib">
     <value>1</value>
   </data>
-  <data name="dataGridView13.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+  <metadata name="WaferAssignMenu.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>669, 17</value>
+  </metadata>
+  <data name="WaferAssignMenu.Size" type="System.Drawing.Size, System.Drawing">
+    <value>61, 4</value>
+  </data>
+  <data name="WaferAssignMenu.Text" xml:space="preserve">
+    <value>指定UnloadPort&amp;Slot</value>
+  </data>
+  <data name="&gt;&gt;WaferAssignMenu.Name" xml:space="preserve">
+    <value>WaferAssignMenu</value>
+  </data>
+  <data name="&gt;&gt;WaferAssignMenu.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ContextMenuStrip, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="LoadPort01Assign_Gv.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
     <value>Fill</value>
   </data>
-  <data name="dataGridView13.Location" type="System.Drawing.Point, System.Drawing">
+  <data name="LoadPort01Assign_Gv.Location" type="System.Drawing.Point, System.Drawing">
     <value>3, 63</value>
   </data>
-  <data name="dataGridView13.Size" type="System.Drawing.Size, System.Drawing">
+  <data name="LoadPort01Assign_Gv.Size" type="System.Drawing.Size, System.Drawing">
     <value>188, 624</value>
   </data>
-  <data name="dataGridView13.TabIndex" type="System.Int32, mscorlib">
+  <data name="LoadPort01Assign_Gv.TabIndex" type="System.Int32, mscorlib">
     <value>53</value>
   </data>
-  <data name="&gt;&gt;dataGridView13.Name" xml:space="preserve">
-    <value>dataGridView13</value>
+  <data name="&gt;&gt;LoadPort01Assign_Gv.Name" xml:space="preserve">
+    <value>LoadPort01Assign_Gv</value>
   </data>
-  <data name="&gt;&gt;dataGridView13.Type" xml:space="preserve">
+  <data name="&gt;&gt;LoadPort01Assign_Gv.Type" xml:space="preserve">
     <value>System.Windows.Forms.DataGridView, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;dataGridView13.Parent" xml:space="preserve">
+  <data name="&gt;&gt;LoadPort01Assign_Gv.Parent" xml:space="preserve">
     <value>tableLayoutPanel15</value>
   </data>
-  <data name="&gt;&gt;dataGridView13.ZOrder" xml:space="preserve">
+  <data name="&gt;&gt;LoadPort01Assign_Gv.ZOrder" xml:space="preserve">
     <value>0</value>
   </data>
   <data name="label29.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
@@ -4745,7 +4760,7 @@
     <value>0</value>
   </data>
   <data name="tableLayoutPanel15.LayoutSettings" type="System.Windows.Forms.TableLayoutSettings, System.Windows.Forms">
-    <value>&lt;?xml version="1.0" encoding="utf-16"?&gt;&lt;TableLayoutSettings&gt;&lt;Controls&gt;&lt;Control Name="dataGridView13" Row="2" RowSpan="1" Column="0" ColumnSpan="1" /&gt;&lt;Control Name="label29" Row="0" RowSpan="1" Column="0" ColumnSpan="1" /&gt;&lt;Control Name="textBox16" Row="1" RowSpan="1" Column="0" ColumnSpan="1" /&gt;&lt;Control Name="splitContainer3" Row="3" RowSpan="1" Column="0" ColumnSpan="1" /&gt;&lt;/Controls&gt;&lt;Columns Styles="Percent,100" /&gt;&lt;Rows Styles="Percent,3.974563,Percent,4.45151,Percent,87.2814,Percent,4.292528,Absolute,20" /&gt;&lt;/TableLayoutSettings&gt;</value>
+    <value>&lt;?xml version="1.0" encoding="utf-16"?&gt;&lt;TableLayoutSettings&gt;&lt;Controls&gt;&lt;Control Name="LoadPort01Assign_Gv" Row="2" RowSpan="1" Column="0" ColumnSpan="1" /&gt;&lt;Control Name="label29" Row="0" RowSpan="1" Column="0" ColumnSpan="1" /&gt;&lt;Control Name="textBox16" Row="1" RowSpan="1" Column="0" ColumnSpan="1" /&gt;&lt;Control Name="splitContainer3" Row="3" RowSpan="1" Column="0" ColumnSpan="1" /&gt;&lt;/Controls&gt;&lt;Columns Styles="Percent,100" /&gt;&lt;Rows Styles="Percent,3.974563,Percent,4.45151,Percent,87.2814,Percent,4.292528,Absolute,20" /&gt;&lt;/TableLayoutSettings&gt;</value>
   </data>
   <data name="tableLayoutPanel12.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
     <value>Fill</value>
@@ -15509,7 +15524,7 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;panel2.ZOrder" xml:space="preserve">
-    <value>4</value>
+    <value>5</value>
   </data>
   <metadata name="$this.Localizable" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
