@@ -95,8 +95,15 @@ namespace Adam
             {
                 Process OCRProg = new Process();
                 // FileName 是要執行的檔案
-                OCRProg.StartInfo.FileName = "C:/Program Files (x86)/HST Vision/e-Reader8000/VB9BReaderForm.exe";
-                OCRProg.Start();
+                try
+                {
+                    OCRProg.StartInfo.FileName = "C:/Program Files (x86)/HST Vision/e-Reader8000/VB9BReaderForm.exe";
+                    OCRProg.Start();
+                }
+                catch (Exception e)
+                {
+                    MessageBox.Show("OCR 程式啟動失敗", "Warning");
+                }
 
 
             }
