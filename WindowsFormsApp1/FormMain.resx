@@ -1774,10 +1774,10 @@
     <value>NoControl</value>
   </data>
   <data name="label50.Location" type="System.Drawing.Point, System.Drawing">
-    <value>-12, 263</value>
+    <value>4, 263</value>
   </data>
   <data name="label50.Size" type="System.Drawing.Size, System.Drawing">
-    <value>141, 28</value>
+    <value>101, 28</value>
   </data>
   <data name="label50.TabIndex" type="System.Int32, mscorlib">
     <value>55</value>
@@ -1863,6 +1863,9 @@
   <data name="&gt;&gt;splitContainer12.ZOrder" xml:space="preserve">
     <value>3</value>
   </data>
+  <data name="OCR01Offline_Btn.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Bottom, Right</value>
+  </data>
   <data name="OCR01Offline_Btn.FlatStyle" type="System.Windows.Forms.FlatStyle, System.Windows.Forms">
     <value>Flat</value>
   </data>
@@ -1895,6 +1898,9 @@
   </data>
   <data name="&gt;&gt;OCR01Offline_Btn.ZOrder" xml:space="preserve">
     <value>0</value>
+  </data>
+  <data name="OCR01Online_Btn.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Bottom, Right</value>
   </data>
   <data name="OCR01Online_Btn.FlatStyle" type="System.Windows.Forms.FlatStyle, System.Windows.Forms">
     <value>Flat</value>
@@ -1938,15 +1944,6 @@
   <data name="splitContainer13.Orientation" type="System.Windows.Forms.Orientation, System.Windows.Forms">
     <value>Horizontal</value>
   </data>
-  <data name="tgsMode_SW.Location" type="System.Drawing.Point, System.Drawing">
-    <value>84, 48</value>
-  </data>
-  <data name="tgsMode_SW.Size" type="System.Drawing.Size, System.Drawing">
-    <value>100, 25</value>
-  </data>
-  <data name="tgsMode_SW.TabIndex" type="System.Int32, mscorlib">
-    <value>10</value>
-  </data>
   <data name="&gt;&gt;tgsMode_SW.Name" xml:space="preserve">
     <value>tgsMode_SW</value>
   </data>
@@ -1958,24 +1955,6 @@
   </data>
   <data name="&gt;&gt;tgsMode_SW.ZOrder" xml:space="preserve">
     <value>0</value>
-  </data>
-  <data name="label197.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="label197.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
-  </data>
-  <data name="label197.Location" type="System.Drawing.Point, System.Drawing">
-    <value>6, 53</value>
-  </data>
-  <data name="label197.Size" type="System.Drawing.Size, System.Drawing">
-    <value>76, 20</value>
-  </data>
-  <data name="label197.TabIndex" type="System.Int32, mscorlib">
-    <value>9</value>
-  </data>
-  <data name="label197.Text" xml:space="preserve">
-    <value>Maintain</value>
   </data>
   <data name="&gt;&gt;label197.Name" xml:space="preserve">
     <value>label197</value>
@@ -1989,24 +1968,6 @@
   <data name="&gt;&gt;label197.ZOrder" xml:space="preserve">
     <value>1</value>
   </data>
-  <data name="label198.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="label198.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
-  </data>
-  <data name="label198.Location" type="System.Drawing.Point, System.Drawing">
-    <value>190, 53</value>
-  </data>
-  <data name="label198.Size" type="System.Drawing.Size, System.Drawing">
-    <value>46, 20</value>
-  </data>
-  <data name="label198.TabIndex" type="System.Int32, mscorlib">
-    <value>8</value>
-  </data>
-  <data name="label198.Text" xml:space="preserve">
-    <value>Auto</value>
-  </data>
   <data name="&gt;&gt;label198.Name" xml:space="preserve">
     <value>label198</value>
   </data>
@@ -2018,30 +1979,6 @@
   </data>
   <data name="&gt;&gt;label198.ZOrder" xml:space="preserve">
     <value>2</value>
-  </data>
-  <data name="button71.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
-    <value>Top, Left, Right</value>
-  </data>
-  <data name="button71.Font" type="System.Drawing.Font, System.Drawing">
-    <value>微軟正黑體, 18pt</value>
-  </data>
-  <data name="button71.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
-  </data>
-  <data name="button71.Location" type="System.Drawing.Point, System.Drawing">
-    <value>204, 159</value>
-  </data>
-  <data name="button71.Size" type="System.Drawing.Size, System.Drawing">
-    <value>230, 76</value>
-  </data>
-  <data name="button71.TabIndex" type="System.Int32, mscorlib">
-    <value>3</value>
-  </data>
-  <data name="button71.Text" xml:space="preserve">
-    <value>Off - Line</value>
-  </data>
-  <data name="button71.Visible" type="System.Boolean, mscorlib">
-    <value>False</value>
   </data>
   <data name="&gt;&gt;button71.Name" xml:space="preserve">
     <value>button71</value>
@@ -2082,15 +2019,6 @@
   <data name="&gt;&gt;groupBox54.ZOrder" xml:space="preserve">
     <value>0</value>
   </data>
-  <data name="tgsConnection.Location" type="System.Drawing.Point, System.Drawing">
-    <value>84, 45</value>
-  </data>
-  <data name="tgsConnection.Size" type="System.Drawing.Size, System.Drawing">
-    <value>100, 25</value>
-  </data>
-  <data name="tgsConnection.TabIndex" type="System.Int32, mscorlib">
-    <value>8</value>
-  </data>
   <data name="&gt;&gt;tgsConnection.Name" xml:space="preserve">
     <value>tgsConnection</value>
   </data>
@@ -2102,30 +2030,6 @@
   </data>
   <data name="&gt;&gt;tgsConnection.ZOrder" xml:space="preserve">
     <value>0</value>
-  </data>
-  <data name="button27.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
-    <value>Top, Left, Right</value>
-  </data>
-  <data name="button27.Font" type="System.Drawing.Font, System.Drawing">
-    <value>微軟正黑體, 18pt</value>
-  </data>
-  <data name="button27.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
-  </data>
-  <data name="button27.Location" type="System.Drawing.Point, System.Drawing">
-    <value>204, 159</value>
-  </data>
-  <data name="button27.Size" type="System.Drawing.Size, System.Drawing">
-    <value>230, 76</value>
-  </data>
-  <data name="button27.TabIndex" type="System.Int32, mscorlib">
-    <value>3</value>
-  </data>
-  <data name="button27.Text" xml:space="preserve">
-    <value>Off - Line</value>
-  </data>
-  <data name="button27.Visible" type="System.Boolean, mscorlib">
-    <value>False</value>
   </data>
   <data name="&gt;&gt;button27.Name" xml:space="preserve">
     <value>button27</value>
@@ -2139,24 +2043,6 @@
   <data name="&gt;&gt;button27.ZOrder" xml:space="preserve">
     <value>1</value>
   </data>
-  <data name="label194.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="label194.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
-  </data>
-  <data name="label194.Location" type="System.Drawing.Point, System.Drawing">
-    <value>34, 50</value>
-  </data>
-  <data name="label194.Size" type="System.Drawing.Size, System.Drawing">
-    <value>38, 20</value>
-  </data>
-  <data name="label194.TabIndex" type="System.Int32, mscorlib">
-    <value>7</value>
-  </data>
-  <data name="label194.Text" xml:space="preserve">
-    <value>OFF</value>
-  </data>
   <data name="&gt;&gt;label194.Name" xml:space="preserve">
     <value>label194</value>
   </data>
@@ -2168,24 +2054,6 @@
   </data>
   <data name="&gt;&gt;label194.ZOrder" xml:space="preserve">
     <value>2</value>
-  </data>
-  <data name="label193.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="label193.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
-  </data>
-  <data name="label193.Location" type="System.Drawing.Point, System.Drawing">
-    <value>195, 50</value>
-  </data>
-  <data name="label193.Size" type="System.Drawing.Size, System.Drawing">
-    <value>35, 20</value>
-  </data>
-  <data name="label193.TabIndex" type="System.Int32, mscorlib">
-    <value>6</value>
-  </data>
-  <data name="label193.Text" xml:space="preserve">
-    <value>ON</value>
   </data>
   <data name="&gt;&gt;label193.Name" xml:space="preserve">
     <value>label193</value>
@@ -2238,229 +2106,37 @@
   <data name="&gt;&gt;splitContainer13.Panel1.ZOrder" xml:space="preserve">
     <value>0</value>
   </data>
-  <data name="&gt;&gt;button17.Name" xml:space="preserve">
-    <value>button17</value>
-  </data>
-  <data name="&gt;&gt;button17.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;button17.Parent" xml:space="preserve">
-    <value>groupBox5</value>
-  </data>
-  <data name="&gt;&gt;button17.ZOrder" xml:space="preserve">
-    <value>0</value>
-  </data>
-  <data name="&gt;&gt;button16.Name" xml:space="preserve">
-    <value>button16</value>
-  </data>
-  <data name="&gt;&gt;button16.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;button16.Parent" xml:space="preserve">
-    <value>groupBox5</value>
-  </data>
-  <data name="&gt;&gt;button16.ZOrder" xml:space="preserve">
-    <value>1</value>
-  </data>
-  <data name="&gt;&gt;button15.Name" xml:space="preserve">
-    <value>button15</value>
-  </data>
-  <data name="&gt;&gt;button15.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;button15.Parent" xml:space="preserve">
-    <value>groupBox5</value>
-  </data>
-  <data name="&gt;&gt;button15.ZOrder" xml:space="preserve">
-    <value>2</value>
-  </data>
-  <data name="&gt;&gt;button14.Name" xml:space="preserve">
-    <value>button14</value>
-  </data>
-  <data name="&gt;&gt;button14.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;button14.Parent" xml:space="preserve">
-    <value>groupBox5</value>
-  </data>
-  <data name="&gt;&gt;button14.ZOrder" xml:space="preserve">
-    <value>3</value>
-  </data>
-  <data name="&gt;&gt;button13.Name" xml:space="preserve">
-    <value>button13</value>
-  </data>
-  <data name="&gt;&gt;button13.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;button13.Parent" xml:space="preserve">
-    <value>groupBox5</value>
-  </data>
-  <data name="&gt;&gt;button13.ZOrder" xml:space="preserve">
-    <value>4</value>
-  </data>
-  <data name="&gt;&gt;button12.Name" xml:space="preserve">
-    <value>button12</value>
-  </data>
-  <data name="&gt;&gt;button12.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;button12.Parent" xml:space="preserve">
-    <value>groupBox5</value>
-  </data>
-  <data name="&gt;&gt;button12.ZOrder" xml:space="preserve">
-    <value>5</value>
-  </data>
-  <data name="&gt;&gt;button11.Name" xml:space="preserve">
-    <value>button11</value>
-  </data>
-  <data name="&gt;&gt;button11.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;button11.Parent" xml:space="preserve">
-    <value>groupBox5</value>
-  </data>
-  <data name="&gt;&gt;button11.ZOrder" xml:space="preserve">
-    <value>6</value>
-  </data>
-  <data name="&gt;&gt;button10.Name" xml:space="preserve">
-    <value>button10</value>
-  </data>
-  <data name="&gt;&gt;button10.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;button10.Parent" xml:space="preserve">
-    <value>groupBox5</value>
-  </data>
-  <data name="&gt;&gt;button10.ZOrder" xml:space="preserve">
-    <value>7</value>
-  </data>
-  <data name="&gt;&gt;button9.Name" xml:space="preserve">
-    <value>button9</value>
-  </data>
-  <data name="&gt;&gt;button9.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;button9.Parent" xml:space="preserve">
-    <value>groupBox5</value>
-  </data>
-  <data name="&gt;&gt;button9.ZOrder" xml:space="preserve">
-    <value>8</value>
-  </data>
-  <data name="&gt;&gt;button7.Name" xml:space="preserve">
-    <value>button7</value>
-  </data>
-  <data name="&gt;&gt;button7.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;button7.Parent" xml:space="preserve">
-    <value>groupBox5</value>
-  </data>
-  <data name="&gt;&gt;button7.ZOrder" xml:space="preserve">
-    <value>9</value>
-  </data>
-  <data name="&gt;&gt;button6.Name" xml:space="preserve">
-    <value>button6</value>
-  </data>
-  <data name="&gt;&gt;button6.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;button6.Parent" xml:space="preserve">
-    <value>groupBox5</value>
-  </data>
-  <data name="&gt;&gt;button6.ZOrder" xml:space="preserve">
-    <value>10</value>
-  </data>
-  <data name="groupBox5.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
-    <value>Fill</value>
-  </data>
-  <data name="groupBox5.Location" type="System.Drawing.Point, System.Drawing">
-    <value>0, 0</value>
-  </data>
-  <data name="groupBox5.Size" type="System.Drawing.Size, System.Drawing">
-    <value>250, 596</value>
-  </data>
-  <data name="groupBox5.TabIndex" type="System.Int32, mscorlib">
-    <value>1</value>
-  </data>
-  <data name="groupBox5.Text" xml:space="preserve">
-    <value>System Status</value>
-  </data>
-  <data name="&gt;&gt;groupBox5.Name" xml:space="preserve">
-    <value>groupBox5</value>
-  </data>
-  <data name="&gt;&gt;groupBox5.Type" xml:space="preserve">
-    <value>System.Windows.Forms.GroupBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;groupBox5.Parent" xml:space="preserve">
-    <value>splitContainer13.Panel2</value>
-  </data>
-  <data name="&gt;&gt;groupBox5.ZOrder" xml:space="preserve">
-    <value>0</value>
-  </data>
-  <data name="&gt;&gt;splitContainer13.Panel2.Name" xml:space="preserve">
-    <value>splitContainer13.Panel2</value>
-  </data>
-  <data name="&gt;&gt;splitContainer13.Panel2.Type" xml:space="preserve">
-    <value>System.Windows.Forms.SplitterPanel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;splitContainer13.Panel2.Parent" xml:space="preserve">
-    <value>splitContainer13</value>
-  </data>
-  <data name="&gt;&gt;splitContainer13.Panel2.ZOrder" xml:space="preserve">
-    <value>1</value>
-  </data>
-  <data name="splitContainer13.Size" type="System.Drawing.Size, System.Drawing">
-    <value>250, 812</value>
-  </data>
-  <data name="splitContainer13.SplitterDistance" type="System.Int32, mscorlib">
-    <value>212</value>
-  </data>
-  <data name="splitContainer13.TabIndex" type="System.Int32, mscorlib">
-    <value>2</value>
-  </data>
-  <data name="&gt;&gt;splitContainer13.Name" xml:space="preserve">
-    <value>splitContainer13</value>
-  </data>
-  <data name="&gt;&gt;splitContainer13.Type" xml:space="preserve">
-    <value>System.Windows.Forms.SplitContainer, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;splitContainer13.Parent" xml:space="preserve">
-    <value>panel3</value>
-  </data>
-  <data name="&gt;&gt;splitContainer13.ZOrder" xml:space="preserve">
-    <value>0</value>
-  </data>
-  <data name="button17.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+  <data name="btnSECSSetting_Save.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>Top, Left, Right</value>
   </data>
-  <data name="button17.FlatStyle" type="System.Windows.Forms.FlatStyle, System.Windows.Forms">
+  <data name="btnSECSSetting_Save.FlatStyle" type="System.Windows.Forms.FlatStyle, System.Windows.Forms">
     <value>Flat</value>
   </data>
-  <data name="button17.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+  <data name="btnSECSSetting_Save.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
   </data>
-  <data name="button17.Location" type="System.Drawing.Point, System.Drawing">
+  <data name="btnSECSSetting_Save.Location" type="System.Drawing.Point, System.Drawing">
     <value>6, 455</value>
   </data>
-  <data name="button17.Size" type="System.Drawing.Size, System.Drawing">
+  <data name="btnSECSSetting_Save.Size" type="System.Drawing.Size, System.Drawing">
     <value>230, 35</value>
   </data>
-  <data name="button17.TabIndex" type="System.Int32, mscorlib">
+  <data name="btnSECSSetting_Save.TabIndex" type="System.Int32, mscorlib">
     <value>10</value>
   </data>
-  <data name="button17.Text" xml:space="preserve">
+  <data name="btnSECSSetting_Save.Text" xml:space="preserve">
     <value>Differential Manometer</value>
   </data>
-  <data name="&gt;&gt;button17.Name" xml:space="preserve">
-    <value>button17</value>
+  <data name="&gt;&gt;btnSECSSetting_Save.Name" xml:space="preserve">
+    <value>btnSECSSetting_Save</value>
   </data>
-  <data name="&gt;&gt;button17.Type" xml:space="preserve">
+  <data name="&gt;&gt;btnSECSSetting_Save.Type" xml:space="preserve">
     <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;button17.Parent" xml:space="preserve">
+  <data name="&gt;&gt;btnSECSSetting_Save.Parent" xml:space="preserve">
     <value>groupBox5</value>
   </data>
-  <data name="&gt;&gt;button17.ZOrder" xml:space="preserve">
+  <data name="&gt;&gt;btnSECSSetting_Save.ZOrder" xml:space="preserve">
     <value>0</value>
   </data>
   <data name="button16.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
@@ -2795,6 +2471,300 @@
   </data>
   <data name="&gt;&gt;button6.ZOrder" xml:space="preserve">
     <value>10</value>
+  </data>
+  <data name="groupBox5.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Fill</value>
+  </data>
+  <data name="groupBox5.Location" type="System.Drawing.Point, System.Drawing">
+    <value>0, 0</value>
+  </data>
+  <data name="groupBox5.Size" type="System.Drawing.Size, System.Drawing">
+    <value>250, 596</value>
+  </data>
+  <data name="groupBox5.TabIndex" type="System.Int32, mscorlib">
+    <value>1</value>
+  </data>
+  <data name="groupBox5.Text" xml:space="preserve">
+    <value>System Status</value>
+  </data>
+  <data name="&gt;&gt;groupBox5.Name" xml:space="preserve">
+    <value>groupBox5</value>
+  </data>
+  <data name="&gt;&gt;groupBox5.Type" xml:space="preserve">
+    <value>System.Windows.Forms.GroupBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;groupBox5.Parent" xml:space="preserve">
+    <value>splitContainer13.Panel2</value>
+  </data>
+  <data name="&gt;&gt;groupBox5.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="&gt;&gt;splitContainer13.Panel2.Name" xml:space="preserve">
+    <value>splitContainer13.Panel2</value>
+  </data>
+  <data name="&gt;&gt;splitContainer13.Panel2.Type" xml:space="preserve">
+    <value>System.Windows.Forms.SplitterPanel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;splitContainer13.Panel2.Parent" xml:space="preserve">
+    <value>splitContainer13</value>
+  </data>
+  <data name="&gt;&gt;splitContainer13.Panel2.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="splitContainer13.Size" type="System.Drawing.Size, System.Drawing">
+    <value>250, 812</value>
+  </data>
+  <data name="splitContainer13.SplitterDistance" type="System.Int32, mscorlib">
+    <value>212</value>
+  </data>
+  <data name="splitContainer13.TabIndex" type="System.Int32, mscorlib">
+    <value>2</value>
+  </data>
+  <data name="&gt;&gt;splitContainer13.Name" xml:space="preserve">
+    <value>splitContainer13</value>
+  </data>
+  <data name="&gt;&gt;splitContainer13.Type" xml:space="preserve">
+    <value>System.Windows.Forms.SplitContainer, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;splitContainer13.Parent" xml:space="preserve">
+    <value>panel3</value>
+  </data>
+  <data name="&gt;&gt;splitContainer13.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="tgsMode_SW.Location" type="System.Drawing.Point, System.Drawing">
+    <value>84, 48</value>
+  </data>
+  <data name="tgsMode_SW.Size" type="System.Drawing.Size, System.Drawing">
+    <value>100, 25</value>
+  </data>
+  <data name="tgsMode_SW.TabIndex" type="System.Int32, mscorlib">
+    <value>10</value>
+  </data>
+  <data name="&gt;&gt;tgsMode_SW.Name" xml:space="preserve">
+    <value>tgsMode_SW</value>
+  </data>
+  <data name="&gt;&gt;tgsMode_SW.Type" xml:space="preserve">
+    <value>JCS.ToggleSwitch, ToggleSwitch, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;tgsMode_SW.Parent" xml:space="preserve">
+    <value>groupBox54</value>
+  </data>
+  <data name="&gt;&gt;tgsMode_SW.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="label197.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="label197.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="label197.Location" type="System.Drawing.Point, System.Drawing">
+    <value>6, 53</value>
+  </data>
+  <data name="label197.Size" type="System.Drawing.Size, System.Drawing">
+    <value>76, 20</value>
+  </data>
+  <data name="label197.TabIndex" type="System.Int32, mscorlib">
+    <value>9</value>
+  </data>
+  <data name="label197.Text" xml:space="preserve">
+    <value>Maintain</value>
+  </data>
+  <data name="&gt;&gt;label197.Name" xml:space="preserve">
+    <value>label197</value>
+  </data>
+  <data name="&gt;&gt;label197.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;label197.Parent" xml:space="preserve">
+    <value>groupBox54</value>
+  </data>
+  <data name="&gt;&gt;label197.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="label198.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="label198.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="label198.Location" type="System.Drawing.Point, System.Drawing">
+    <value>190, 53</value>
+  </data>
+  <data name="label198.Size" type="System.Drawing.Size, System.Drawing">
+    <value>46, 20</value>
+  </data>
+  <data name="label198.TabIndex" type="System.Int32, mscorlib">
+    <value>8</value>
+  </data>
+  <data name="label198.Text" xml:space="preserve">
+    <value>Auto</value>
+  </data>
+  <data name="&gt;&gt;label198.Name" xml:space="preserve">
+    <value>label198</value>
+  </data>
+  <data name="&gt;&gt;label198.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;label198.Parent" xml:space="preserve">
+    <value>groupBox54</value>
+  </data>
+  <data name="&gt;&gt;label198.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="button71.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Top, Left, Right</value>
+  </data>
+  <data name="button71.Font" type="System.Drawing.Font, System.Drawing">
+    <value>微軟正黑體, 18pt</value>
+  </data>
+  <data name="button71.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="button71.Location" type="System.Drawing.Point, System.Drawing">
+    <value>204, 159</value>
+  </data>
+  <data name="button71.Size" type="System.Drawing.Size, System.Drawing">
+    <value>230, 76</value>
+  </data>
+  <data name="button71.TabIndex" type="System.Int32, mscorlib">
+    <value>3</value>
+  </data>
+  <data name="button71.Text" xml:space="preserve">
+    <value>Off - Line</value>
+  </data>
+  <data name="button71.Visible" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="&gt;&gt;button71.Name" xml:space="preserve">
+    <value>button71</value>
+  </data>
+  <data name="&gt;&gt;button71.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;button71.Parent" xml:space="preserve">
+    <value>groupBox54</value>
+  </data>
+  <data name="&gt;&gt;button71.ZOrder" xml:space="preserve">
+    <value>3</value>
+  </data>
+  <data name="tgsConnection.Location" type="System.Drawing.Point, System.Drawing">
+    <value>84, 45</value>
+  </data>
+  <data name="tgsConnection.Size" type="System.Drawing.Size, System.Drawing">
+    <value>100, 25</value>
+  </data>
+  <data name="tgsConnection.TabIndex" type="System.Int32, mscorlib">
+    <value>8</value>
+  </data>
+  <data name="&gt;&gt;tgsConnection.Name" xml:space="preserve">
+    <value>tgsConnection</value>
+  </data>
+  <data name="&gt;&gt;tgsConnection.Type" xml:space="preserve">
+    <value>JCS.ToggleSwitch, ToggleSwitch, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;tgsConnection.Parent" xml:space="preserve">
+    <value>groupBox19</value>
+  </data>
+  <data name="&gt;&gt;tgsConnection.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="button27.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Top, Left, Right</value>
+  </data>
+  <data name="button27.Font" type="System.Drawing.Font, System.Drawing">
+    <value>微軟正黑體, 18pt</value>
+  </data>
+  <data name="button27.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="button27.Location" type="System.Drawing.Point, System.Drawing">
+    <value>204, 159</value>
+  </data>
+  <data name="button27.Size" type="System.Drawing.Size, System.Drawing">
+    <value>230, 76</value>
+  </data>
+  <data name="button27.TabIndex" type="System.Int32, mscorlib">
+    <value>3</value>
+  </data>
+  <data name="button27.Text" xml:space="preserve">
+    <value>Off - Line</value>
+  </data>
+  <data name="button27.Visible" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="&gt;&gt;button27.Name" xml:space="preserve">
+    <value>button27</value>
+  </data>
+  <data name="&gt;&gt;button27.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;button27.Parent" xml:space="preserve">
+    <value>groupBox19</value>
+  </data>
+  <data name="&gt;&gt;button27.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="label194.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="label194.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="label194.Location" type="System.Drawing.Point, System.Drawing">
+    <value>34, 50</value>
+  </data>
+  <data name="label194.Size" type="System.Drawing.Size, System.Drawing">
+    <value>38, 20</value>
+  </data>
+  <data name="label194.TabIndex" type="System.Int32, mscorlib">
+    <value>7</value>
+  </data>
+  <data name="label194.Text" xml:space="preserve">
+    <value>OFF</value>
+  </data>
+  <data name="&gt;&gt;label194.Name" xml:space="preserve">
+    <value>label194</value>
+  </data>
+  <data name="&gt;&gt;label194.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;label194.Parent" xml:space="preserve">
+    <value>groupBox19</value>
+  </data>
+  <data name="&gt;&gt;label194.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="label193.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="label193.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="label193.Location" type="System.Drawing.Point, System.Drawing">
+    <value>195, 50</value>
+  </data>
+  <data name="label193.Size" type="System.Drawing.Size, System.Drawing">
+    <value>35, 20</value>
+  </data>
+  <data name="label193.TabIndex" type="System.Int32, mscorlib">
+    <value>6</value>
+  </data>
+  <data name="label193.Text" xml:space="preserve">
+    <value>ON</value>
+  </data>
+  <data name="&gt;&gt;label193.Name" xml:space="preserve">
+    <value>label193</value>
+  </data>
+  <data name="&gt;&gt;label193.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;label193.Parent" xml:space="preserve">
+    <value>groupBox19</value>
+  </data>
+  <data name="&gt;&gt;label193.ZOrder" xml:space="preserve">
+    <value>3</value>
   </data>
   <data name="&gt;&gt;groupBox1.Name" xml:space="preserve">
     <value>groupBox1</value>
@@ -8126,10 +8096,10 @@
     <value>NoControl</value>
   </data>
   <data name="label38.Location" type="System.Drawing.Point, System.Drawing">
-    <value>-12, 263</value>
+    <value>7, 263</value>
   </data>
   <data name="label38.Size" type="System.Drawing.Size, System.Drawing">
-    <value>141, 28</value>
+    <value>98, 28</value>
   </data>
   <data name="label38.TabIndex" type="System.Int32, mscorlib">
     <value>55</value>
@@ -8215,6 +8185,9 @@
   <data name="&gt;&gt;splitContainer10.ZOrder" xml:space="preserve">
     <value>0</value>
   </data>
+  <data name="button26.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Bottom, Right</value>
+  </data>
   <data name="button26.FlatStyle" type="System.Windows.Forms.FlatStyle, System.Windows.Forms">
     <value>Flat</value>
   </data>
@@ -8247,6 +8220,9 @@
   </data>
   <data name="&gt;&gt;button26.ZOrder" xml:space="preserve">
     <value>0</value>
+  </data>
+  <data name="button28.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Bottom, Right</value>
   </data>
   <data name="button28.FlatStyle" type="System.Windows.Forms.FlatStyle, System.Windows.Forms">
     <value>Flat</value>
@@ -8426,10 +8402,10 @@
     <value>NoControl</value>
   </data>
   <data name="label14.Location" type="System.Drawing.Point, System.Drawing">
-    <value>-12, 263</value>
+    <value>6, 263</value>
   </data>
   <data name="label14.Size" type="System.Drawing.Size, System.Drawing">
-    <value>141, 28</value>
+    <value>101, 28</value>
   </data>
   <data name="label14.TabIndex" type="System.Int32, mscorlib">
     <value>55</value>
@@ -8515,6 +8491,9 @@
   <data name="&gt;&gt;splitContainer9.ZOrder" xml:space="preserve">
     <value>1</value>
   </data>
+  <data name="button4.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Bottom, Right</value>
+  </data>
   <data name="button4.FlatStyle" type="System.Windows.Forms.FlatStyle, System.Windows.Forms">
     <value>Flat</value>
   </data>
@@ -8547,6 +8526,9 @@
   </data>
   <data name="&gt;&gt;button4.ZOrder" xml:space="preserve">
     <value>0</value>
+  </data>
+  <data name="button24.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Bottom, Right</value>
   </data>
   <data name="button24.FlatStyle" type="System.Windows.Forms.FlatStyle, System.Windows.Forms">
     <value>Flat</value>
@@ -8726,10 +8708,10 @@
     <value>NoControl</value>
   </data>
   <data name="label7.Location" type="System.Drawing.Point, System.Drawing">
-    <value>-12, 263</value>
+    <value>3, 263</value>
   </data>
   <data name="label7.Size" type="System.Drawing.Size, System.Drawing">
-    <value>141, 28</value>
+    <value>102, 28</value>
   </data>
   <data name="label7.TabIndex" type="System.Int32, mscorlib">
     <value>55</value>
@@ -8815,6 +8797,9 @@
   <data name="&gt;&gt;splitContainer8.ZOrder" xml:space="preserve">
     <value>2</value>
   </data>
+  <data name="OCR02Offline_Btn.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Bottom, Right</value>
+  </data>
   <data name="OCR02Offline_Btn.FlatStyle" type="System.Windows.Forms.FlatStyle, System.Windows.Forms">
     <value>Flat</value>
   </data>
@@ -8847,6 +8832,9 @@
   </data>
   <data name="&gt;&gt;OCR02Offline_Btn.ZOrder" xml:space="preserve">
     <value>0</value>
+  </data>
+  <data name="OCR02Online_Btn.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Bottom, Right</value>
   </data>
   <data name="OCR02Online_Btn.FlatStyle" type="System.Windows.Forms.FlatStyle, System.Windows.Forms">
     <value>Flat</value>
@@ -8982,6 +8970,18 @@
   </data>
   <data name="&gt;&gt;tp_bk.ZOrder" xml:space="preserve">
     <value>4</value>
+  </data>
+  <data name="&gt;&gt;tbpSECSSetting.Name" xml:space="preserve">
+    <value>tbpSECSSetting</value>
+  </data>
+  <data name="&gt;&gt;tbpSECSSetting.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TabPage, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;tbpSECSSetting.Parent" xml:space="preserve">
+    <value>tabControl3</value>
+  </data>
+  <data name="&gt;&gt;tbpSECSSetting.ZOrder" xml:space="preserve">
+    <value>5</value>
   </data>
   <data name="tabControl3.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
     <value>Fill</value>
@@ -9497,7 +9497,7 @@
     <value>NoControl</value>
   </data>
   <data name="button61.Location" type="System.Drawing.Point, System.Drawing">
-    <value>971, 533</value>
+    <value>947, 509</value>
   </data>
   <data name="button61.Size" type="System.Drawing.Size, System.Drawing">
     <value>148, 46</value>
@@ -13988,7 +13988,7 @@
     <value>NoControl</value>
   </data>
   <data name="button62.Location" type="System.Drawing.Point, System.Drawing">
-    <value>1125, 533</value>
+    <value>1101, 509</value>
   </data>
   <data name="button62.Size" type="System.Drawing.Size, System.Drawing">
     <value>148, 46</value>
@@ -14024,7 +14024,7 @@
     <value>NoControl</value>
   </data>
   <data name="button63.Location" type="System.Drawing.Point, System.Drawing">
-    <value>817, 533</value>
+    <value>793, 509</value>
   </data>
   <data name="button63.Size" type="System.Drawing.Size, System.Drawing">
     <value>148, 46</value>
@@ -19930,6 +19930,346 @@
   <data name="&gt;&gt;label192.ZOrder" xml:space="preserve">
     <value>6</value>
   </data>
+  <data name="&gt;&gt;gbSettingSECS.Name" xml:space="preserve">
+    <value>gbSettingSECS</value>
+  </data>
+  <data name="&gt;&gt;gbSettingSECS.Type" xml:space="preserve">
+    <value>System.Windows.Forms.GroupBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;gbSettingSECS.Parent" xml:space="preserve">
+    <value>tbpSECSSetting</value>
+  </data>
+  <data name="&gt;&gt;gbSettingSECS.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="tbpSECSSetting.Location" type="System.Drawing.Point, System.Drawing">
+    <value>4, 4</value>
+  </data>
+  <data name="tbpSECSSetting.Padding" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>3, 3, 3, 3</value>
+  </data>
+  <data name="tbpSECSSetting.Size" type="System.Drawing.Size, System.Drawing">
+    <value>1426, 744</value>
+  </data>
+  <data name="tbpSECSSetting.TabIndex" type="System.Int32, mscorlib">
+    <value>5</value>
+  </data>
+  <data name="tbpSECSSetting.Text" xml:space="preserve">
+    <value>SECS Setting</value>
+  </data>
+  <data name="&gt;&gt;tbpSECSSetting.Name" xml:space="preserve">
+    <value>tbpSECSSetting</value>
+  </data>
+  <data name="&gt;&gt;tbpSECSSetting.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TabPage, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;tbpSECSSetting.Parent" xml:space="preserve">
+    <value>tabControl3</value>
+  </data>
+  <data name="&gt;&gt;tbpSECSSetting.ZOrder" xml:space="preserve">
+    <value>5</value>
+  </data>
+  <data name="&gt;&gt;spcSECSSetting.Name" xml:space="preserve">
+    <value>spcSECSSetting</value>
+  </data>
+  <data name="&gt;&gt;spcSECSSetting.Type" xml:space="preserve">
+    <value>System.Windows.Forms.SplitContainer, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;spcSECSSetting.Parent" xml:space="preserve">
+    <value>gbSettingSECS</value>
+  </data>
+  <data name="&gt;&gt;spcSECSSetting.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="gbSettingSECS.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Fill</value>
+  </data>
+  <data name="gbSettingSECS.Location" type="System.Drawing.Point, System.Drawing">
+    <value>3, 3</value>
+  </data>
+  <data name="gbSettingSECS.Size" type="System.Drawing.Size, System.Drawing">
+    <value>1420, 738</value>
+  </data>
+  <data name="gbSettingSECS.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="gbSettingSECS.Text" xml:space="preserve">
+    <value>SECS Setting</value>
+  </data>
+  <data name="&gt;&gt;gbSettingSECS.Name" xml:space="preserve">
+    <value>gbSettingSECS</value>
+  </data>
+  <data name="&gt;&gt;gbSettingSECS.Type" xml:space="preserve">
+    <value>System.Windows.Forms.GroupBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;gbSettingSECS.Parent" xml:space="preserve">
+    <value>tbpSECSSetting</value>
+  </data>
+  <data name="&gt;&gt;gbSettingSECS.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="spcSECSSetting.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Fill</value>
+  </data>
+  <data name="spcSECSSetting.Location" type="System.Drawing.Point, System.Drawing">
+    <value>3, 25</value>
+  </data>
+  <data name="&gt;&gt;tevSECSList.Name" xml:space="preserve">
+    <value>tevSECSList</value>
+  </data>
+  <data name="&gt;&gt;tevSECSList.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TreeView, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;tevSECSList.Parent" xml:space="preserve">
+    <value>gbSettingSECS_L</value>
+  </data>
+  <data name="&gt;&gt;tevSECSList.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="gbSettingSECS_L.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Fill</value>
+  </data>
+  <data name="gbSettingSECS_L.Location" type="System.Drawing.Point, System.Drawing">
+    <value>0, 0</value>
+  </data>
+  <data name="gbSettingSECS_L.Size" type="System.Drawing.Size, System.Drawing">
+    <value>335, 710</value>
+  </data>
+  <data name="gbSettingSECS_L.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="gbSettingSECS_L.Text" xml:space="preserve">
+    <value>List</value>
+  </data>
+  <data name="&gt;&gt;gbSettingSECS_L.Name" xml:space="preserve">
+    <value>gbSettingSECS_L</value>
+  </data>
+  <data name="&gt;&gt;gbSettingSECS_L.Type" xml:space="preserve">
+    <value>System.Windows.Forms.GroupBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;gbSettingSECS_L.Parent" xml:space="preserve">
+    <value>spcSECSSetting.Panel1</value>
+  </data>
+  <data name="&gt;&gt;gbSettingSECS_L.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="&gt;&gt;spcSECSSetting.Panel1.Name" xml:space="preserve">
+    <value>spcSECSSetting.Panel1</value>
+  </data>
+  <data name="&gt;&gt;spcSECSSetting.Panel1.Type" xml:space="preserve">
+    <value>System.Windows.Forms.SplitterPanel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;spcSECSSetting.Panel1.Parent" xml:space="preserve">
+    <value>spcSECSSetting</value>
+  </data>
+  <data name="&gt;&gt;spcSECSSetting.Panel1.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="&gt;&gt;button2.Name" xml:space="preserve">
+    <value>button2</value>
+  </data>
+  <data name="&gt;&gt;button2.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;button2.Parent" xml:space="preserve">
+    <value>gbSettingSECS_R</value>
+  </data>
+  <data name="&gt;&gt;button2.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="&gt;&gt;dgvSECSData.Name" xml:space="preserve">
+    <value>dgvSECSData</value>
+  </data>
+  <data name="&gt;&gt;dgvSECSData.Type" xml:space="preserve">
+    <value>System.Windows.Forms.DataGridView, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;dgvSECSData.Parent" xml:space="preserve">
+    <value>gbSettingSECS_R</value>
+  </data>
+  <data name="&gt;&gt;dgvSECSData.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="gbSettingSECS_R.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Fill</value>
+  </data>
+  <data name="gbSettingSECS_R.Location" type="System.Drawing.Point, System.Drawing">
+    <value>0, 0</value>
+  </data>
+  <data name="gbSettingSECS_R.Size" type="System.Drawing.Size, System.Drawing">
+    <value>1075, 710</value>
+  </data>
+  <data name="gbSettingSECS_R.TabIndex" type="System.Int32, mscorlib">
+    <value>1</value>
+  </data>
+  <data name="gbSettingSECS_R.Text" xml:space="preserve">
+    <value>Settings</value>
+  </data>
+  <data name="&gt;&gt;gbSettingSECS_R.Name" xml:space="preserve">
+    <value>gbSettingSECS_R</value>
+  </data>
+  <data name="&gt;&gt;gbSettingSECS_R.Type" xml:space="preserve">
+    <value>System.Windows.Forms.GroupBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;gbSettingSECS_R.Parent" xml:space="preserve">
+    <value>spcSECSSetting.Panel2</value>
+  </data>
+  <data name="&gt;&gt;gbSettingSECS_R.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="&gt;&gt;spcSECSSetting.Panel2.Name" xml:space="preserve">
+    <value>spcSECSSetting.Panel2</value>
+  </data>
+  <data name="&gt;&gt;spcSECSSetting.Panel2.Type" xml:space="preserve">
+    <value>System.Windows.Forms.SplitterPanel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;spcSECSSetting.Panel2.Parent" xml:space="preserve">
+    <value>spcSECSSetting</value>
+  </data>
+  <data name="&gt;&gt;spcSECSSetting.Panel2.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="spcSECSSetting.Size" type="System.Drawing.Size, System.Drawing">
+    <value>1414, 710</value>
+  </data>
+  <data name="spcSECSSetting.SplitterDistance" type="System.Int32, mscorlib">
+    <value>335</value>
+  </data>
+  <data name="spcSECSSetting.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="&gt;&gt;spcSECSSetting.Name" xml:space="preserve">
+    <value>spcSECSSetting</value>
+  </data>
+  <data name="&gt;&gt;spcSECSSetting.Type" xml:space="preserve">
+    <value>System.Windows.Forms.SplitContainer, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;spcSECSSetting.Parent" xml:space="preserve">
+    <value>gbSettingSECS</value>
+  </data>
+  <data name="&gt;&gt;spcSECSSetting.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="tevSECSList.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Fill</value>
+  </data>
+  <data name="tevSECSList.Font" type="System.Drawing.Font, System.Drawing">
+    <value>微軟正黑體, 14.25pt</value>
+  </data>
+  <data name="tevSECSList.Location" type="System.Drawing.Point, System.Drawing">
+    <value>3, 25</value>
+  </data>
+  <data name="tevSECSList.Nodes" mimetype="application/x-microsoft.net.object.binary.base64">
+    <value>
+        AAEAAAD/////AQAAAAAAAAAMAgAAAFdTeXN0ZW0uV2luZG93cy5Gb3JtcywgVmVyc2lvbj00LjAuMC4w
+        LCBDdWx0dXJlPW5ldXRyYWwsIFB1YmxpY0tleVRva2VuPWI3N2E1YzU2MTkzNGUwODkFAQAAAB1TeXN0
+        ZW0uV2luZG93cy5Gb3Jtcy5UcmVlTm9kZQ0AAAAEVGV4dAtUb29sVGlwVGV4dAROYW1lCUlzQ2hlY2tl
+        ZApJbWFnZUluZGV4CEltYWdlS2V5ElNlbGVjdGVkSW1hZ2VJbmRleBBTZWxlY3RlZEltYWdlS2V5CkNo
+        aWxkQ291bnQJY2hpbGRyZW4wCWNoaWxkcmVuMQljaGlsZHJlbjIJY2hpbGRyZW4zAQEBAAABAAEABAQE
+        BAEICAgdU3lzdGVtLldpbmRvd3MuRm9ybXMuVHJlZU5vZGUCAAAAHVN5c3RlbS5XaW5kb3dzLkZvcm1z
+        LlRyZWVOb2RlAgAAAB1TeXN0ZW0uV2luZG93cy5Gb3Jtcy5UcmVlTm9kZQIAAAAdU3lzdGVtLldpbmRv
+        d3MuRm9ybXMuVHJlZU5vZGUCAAAAAgAAAAYDAAAABFNFQ1MGBAAAAAAGBQAAAAhTRUNTTGlzdAD/////
+        CQQAAAD/////CQQAAAAEAAAACQcAAAAJCAAAAAkJAAAACQoAAAAFBwAAAB1TeXN0ZW0uV2luZG93cy5G
+        b3Jtcy5UcmVlTm9kZQkAAAAEVGV4dAtUb29sVGlwVGV4dAROYW1lCUlzQ2hlY2tlZApJbWFnZUluZGV4
+        CEltYWdlS2V5ElNlbGVjdGVkSW1hZ2VJbmRleBBTZWxlY3RlZEltYWdlS2V5CkNoaWxkQ291bnQBAQEA
+        AAEAAQABCAgIAgAAAAYLAAAAG1NFQ1MtSSAoRGVmYXVsdCBwYXJhbWV0ZXJzKQkEAAAABg0AAAAIU0VD
+        U19JX1AA/////wkEAAAA/////wkEAAAAAAAAAAUIAAAAHVN5c3RlbS5XaW5kb3dzLkZvcm1zLlRyZWVO
+        b2RlCQAAAARUZXh0C1Rvb2xUaXBUZXh0BE5hbWUJSXNDaGVja2VkCkltYWdlSW5kZXgISW1hZ2VLZXkS
+        U2VsZWN0ZWRJbWFnZUluZGV4EFNlbGVjdGVkSW1hZ2VLZXkKQ2hpbGRDb3VudAEBAQAAAQABAAEICAgC
+        AAAABg8AAAAXU0VDUy1JIChEZXZpY2UgZGVmYXVsdCkJBAAAAAYRAAAACFNFQ1NfSV9EAP////8JBAAA
+        AP////8JBAAAAAAAAAAFCQAAAB1TeXN0ZW0uV2luZG93cy5Gb3Jtcy5UcmVlTm9kZQkAAAAEVGV4dAtU
+        b29sVGlwVGV4dAROYW1lCUlzQ2hlY2tlZApJbWFnZUluZGV4CEltYWdlS2V5ElNlbGVjdGVkSW1hZ2VJ
+        bmRleBBTZWxlY3RlZEltYWdlS2V5CkNoaWxkQ291bnQBAQEAAAEAAQABCAgIAgAAAAYTAAAABEhTTVMJ
+        BAAAAAYVAAAABEhTTVMA/////wkEAAAA/////wkEAAAAAAAAAAUKAAAAHVN5c3RlbS5XaW5kb3dzLkZv
+        cm1zLlRyZWVOb2RlCQAAAARUZXh0C1Rvb2xUaXBUZXh0BE5hbWUJSXNDaGVja2VkCkltYWdlSW5kZXgI
+        SW1hZ2VLZXkSU2VsZWN0ZWRJbWFnZUluZGV4EFNlbGVjdGVkSW1hZ2VLZXkKQ2hpbGRDb3VudAEBAQAA
+        AQABAAEICAgCAAAABhcAAAAIU0VNSSBFODQJBAAAAAYZAAAACFNFTUlfRTg0AP////8JBAAAAP////8J
+        BAAAAAAAAAAL
+</value>
+  </data>
+  <data name="tevSECSList.Size" type="System.Drawing.Size, System.Drawing">
+    <value>329, 682</value>
+  </data>
+  <data name="tevSECSList.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="&gt;&gt;tevSECSList.Name" xml:space="preserve">
+    <value>tevSECSList</value>
+  </data>
+  <data name="&gt;&gt;tevSECSList.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TreeView, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;tevSECSList.Parent" xml:space="preserve">
+    <value>gbSettingSECS_L</value>
+  </data>
+  <data name="&gt;&gt;tevSECSList.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="button2.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Bottom, Right</value>
+  </data>
+  <data name="button2.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="button2.Location" type="System.Drawing.Point, System.Drawing">
+    <value>843, 656</value>
+  </data>
+  <data name="button2.Size" type="System.Drawing.Size, System.Drawing">
+    <value>229, 48</value>
+  </data>
+  <data name="button2.TabIndex" type="System.Int32, mscorlib">
+    <value>2</value>
+  </data>
+  <data name="button2.Text" xml:space="preserve">
+    <value>Save</value>
+  </data>
+  <data name="&gt;&gt;button2.Name" xml:space="preserve">
+    <value>button2</value>
+  </data>
+  <data name="&gt;&gt;button2.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;button2.Parent" xml:space="preserve">
+    <value>gbSettingSECS_R</value>
+  </data>
+  <data name="&gt;&gt;button2.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <metadata name="SECSSettingGrid_Item.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <metadata name="SECSSettingGrid_Value.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <metadata name="SECSSettingGrid_Range.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <metadata name="SECSSettingGrid_Description.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <data name="dgvSECSData.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Top</value>
+  </data>
+  <data name="dgvSECSData.Location" type="System.Drawing.Point, System.Drawing">
+    <value>3, 25</value>
+  </data>
+  <data name="dgvSECSData.Size" type="System.Drawing.Size, System.Drawing">
+    <value>1069, 625</value>
+  </data>
+  <data name="dgvSECSData.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="&gt;&gt;dgvSECSData.Name" xml:space="preserve">
+    <value>dgvSECSData</value>
+  </data>
+  <data name="&gt;&gt;dgvSECSData.Type" xml:space="preserve">
+    <value>System.Windows.Forms.DataGridView, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;dgvSECSData.Parent" xml:space="preserve">
+    <value>gbSettingSECS_R</value>
+  </data>
+  <data name="&gt;&gt;dgvSECSData.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
   <data name="&gt;&gt;tableLayoutPanel1.Name" xml:space="preserve">
     <value>tableLayoutPanel1</value>
   </data>
@@ -20556,6 +20896,33 @@
   </data>
   <data name="terminalToolStripMenuItem.Text" xml:space="preserve">
     <value>Terminal</value>
+  </data>
+  <metadata name="SECSSettingGrid_Item.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <data name="SECSSettingGrid_Item.HeaderText" xml:space="preserve">
+    <value>Item</value>
+  </data>
+  <data name="SECSSettingGrid_Item.Width" type="System.Int32, mscorlib">
+    <value>120</value>
+  </data>
+  <metadata name="SECSSettingGrid_Value.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <data name="SECSSettingGrid_Value.HeaderText" xml:space="preserve">
+    <value>Value</value>
+  </data>
+  <metadata name="SECSSettingGrid_Range.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <data name="SECSSettingGrid_Range.HeaderText" xml:space="preserve">
+    <value>Range</value>
+  </data>
+  <metadata name="SECSSettingGrid_Description.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <data name="SECSSettingGrid_Description.HeaderText" xml:space="preserve">
+    <value>Description</value>
   </data>
   <metadata name="$this.Localizable" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
@@ -21309,6 +21676,30 @@
   </data>
   <data name="&gt;&gt;terminalToolStripMenuItem.Type" xml:space="preserve">
     <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;SECSSettingGrid_Item.Name" xml:space="preserve">
+    <value>SECSSettingGrid_Item</value>
+  </data>
+  <data name="&gt;&gt;SECSSettingGrid_Item.Type" xml:space="preserve">
+    <value>System.Windows.Forms.DataGridViewTextBoxColumn, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;SECSSettingGrid_Value.Name" xml:space="preserve">
+    <value>SECSSettingGrid_Value</value>
+  </data>
+  <data name="&gt;&gt;SECSSettingGrid_Value.Type" xml:space="preserve">
+    <value>System.Windows.Forms.DataGridViewTextBoxColumn, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;SECSSettingGrid_Range.Name" xml:space="preserve">
+    <value>SECSSettingGrid_Range</value>
+  </data>
+  <data name="&gt;&gt;SECSSettingGrid_Range.Type" xml:space="preserve">
+    <value>System.Windows.Forms.DataGridViewTextBoxColumn, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;SECSSettingGrid_Description.Name" xml:space="preserve">
+    <value>SECSSettingGrid_Description</value>
+  </data>
+  <data name="&gt;&gt;SECSSettingGrid_Description.Type" xml:space="preserve">
+    <value>System.Windows.Forms.DataGridViewTextBoxColumn, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;$this.Name" xml:space="preserve">
     <value>FormMain</value>

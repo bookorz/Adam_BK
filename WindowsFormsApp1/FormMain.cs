@@ -26,6 +26,8 @@ namespace Adam
     {
         public static RouteControl RouteCtrl;
         private static readonly ILog logger = LogManager.GetLogger(typeof(FormMain));
+        private DataTable dtSECS = new DataTable();
+        private ContainerSet containerSet = new ContainerSet();
 
         public FormMain()
         {
@@ -84,6 +86,10 @@ namespace Adam
             vSBRobotStatus.Maximum = pbRobotState.Height - pnlRobotState.Height + 40 ;//+ vSBRobotStatus.Height
             vSBAlignerStatus.Maximum = pbAlignerState.Height - pnlAlignerState.Height + 40;// + vSBAlignerStatus.Height
             vSBPortStatus.Maximum = pbPortState.Height - pnlPortState.Height  + 40;//+ vSBPortStatus.Height
+
+
+            // SECS Setting
+            containerSet.TableFormatting(ref dtSECS, System.AppDomain.CurrentDomain.BaseDirectory + "SECSSetting.xml");
         }
 
         private void Initialize()
@@ -610,6 +616,36 @@ namespace Adam
                 RouteCtrl.Stop();//book
                                  //test
                                  //yyyy
+            }
+        }
+
+        private void tabControl3_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (tabControl3.SelectedTab.Name.Equals("tbpSECSSetting"))
+            {
+                dgvSECSData.DataSource = null;
+            }
+        }
+
+        private void tevSECSList_AfterSelect(object sender, TreeViewEventArgs e)
+        {
+            DataTable dtTemp = new DataTable();
+
+            var query = (from a in dtSECS.AsEnumerable()
+                         where a.Field<string>("List") == tevSECSList.SelectedNode.Name
+                         select a).ToList();
+
+            if (query.Count > 0)
+            {
+                dtTemp = query.CopyToDataTable();
+                dtTemp.TableName = "Table";
+                dgvSECSData.AutoGenerateColumns = false;
+                dgvSECSData.DataSource = dtTemp;
+                
+            }
+            else
+            {
+                dgvSECSData.DataSource = null;
             }
         }
     }
