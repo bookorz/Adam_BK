@@ -31,7 +31,14 @@ namespace Adam
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormMain));
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle9 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle10 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle11 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle12 = new System.Windows.Forms.DataGridViewCellStyle();
@@ -98,13 +105,10 @@ namespace Adam
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle73 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle74 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle75 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle9 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle76 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle77 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle78 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle79 = new System.Windows.Forms.DataGridViewCellStyle();
             this.splitContainer5 = new System.Windows.Forms.SplitContainer();
             this.label23 = new System.Windows.Forms.Label();
             this.textBox14 = new System.Windows.Forms.TextBox();
@@ -255,13 +259,70 @@ namespace Adam
             this.tableLayoutPanel14 = new System.Windows.Forms.TableLayoutPanel();
             this.groupBox11 = new System.Windows.Forms.GroupBox();
             this.tableLayoutPanel12 = new System.Windows.Forms.TableLayoutPanel();
+            this.tableLayoutPanel22 = new System.Windows.Forms.TableLayoutPanel();
+            this.LoadPort06_Start_Btn = new System.Windows.Forms.Button();
+            this.LoadPort06Assign_Gv = new System.Windows.Forms.DataGridView();
+            this.LoadPort06State_lb = new System.Windows.Forms.Label();
+            this.textBox20 = new System.Windows.Forms.TextBox();
+            this.splitContainer17 = new System.Windows.Forms.SplitContainer();
+            this.label53 = new System.Windows.Forms.Label();
+            this.label54 = new System.Windows.Forms.Label();
+            this.tableLayoutPanel21 = new System.Windows.Forms.TableLayoutPanel();
+            this.LoadPort05_Start_Btn = new System.Windows.Forms.Button();
+            this.LoadPort05Assign_Gv = new System.Windows.Forms.DataGridView();
+            this.LoadPort05State_lb = new System.Windows.Forms.Label();
+            this.textBox19 = new System.Windows.Forms.TextBox();
+            this.splitContainer16 = new System.Windows.Forms.SplitContainer();
+            this.label49 = new System.Windows.Forms.Label();
+            this.label51 = new System.Windows.Forms.Label();
             this.tableLayoutPanel20 = new System.Windows.Forms.TableLayoutPanel();
+            this.LoadPort08_Start_Btn = new System.Windows.Forms.Button();
             this.LoadPort08Assign_Gv = new System.Windows.Forms.DataGridView();
             this.LoadPort08State_lb = new System.Windows.Forms.Label();
             this.textBox18 = new System.Windows.Forms.TextBox();
             this.splitContainer15 = new System.Windows.Forms.SplitContainer();
             this.label46 = new System.Windows.Forms.Label();
             this.label47 = new System.Windows.Forms.Label();
+            this.tableLayoutPanel19 = new System.Windows.Forms.TableLayoutPanel();
+            this.LoadPort07_Start_Btn = new System.Windows.Forms.Button();
+            this.LoadPort07Assign_Gv = new System.Windows.Forms.DataGridView();
+            this.LoadPort07State_lb = new System.Windows.Forms.Label();
+            this.textBox17 = new System.Windows.Forms.TextBox();
+            this.splitContainer14 = new System.Windows.Forms.SplitContainer();
+            this.label43 = new System.Windows.Forms.Label();
+            this.label44 = new System.Windows.Forms.Label();
+            this.tableLayoutPanel18 = new System.Windows.Forms.TableLayoutPanel();
+            this.LoadPort02Assign_Gv = new System.Windows.Forms.DataGridView();
+            this.LoadPort02State_lb = new System.Windows.Forms.Label();
+            this.textBox11 = new System.Windows.Forms.TextBox();
+            this.splitContainer11 = new System.Windows.Forms.SplitContainer();
+            this.label40 = new System.Windows.Forms.Label();
+            this.label41 = new System.Windows.Forms.Label();
+            this.LoadPort02_Start_Btn = new System.Windows.Forms.Button();
+            this.tableLayoutPanel17 = new System.Windows.Forms.TableLayoutPanel();
+            this.LoadPort01Assign_Gv = new System.Windows.Forms.DataGridView();
+            this.LoadPort01State_lb = new System.Windows.Forms.Label();
+            this.textBox10 = new System.Windows.Forms.TextBox();
+            this.splitContainer7 = new System.Windows.Forms.SplitContainer();
+            this.label36 = new System.Windows.Forms.Label();
+            this.label37 = new System.Windows.Forms.Label();
+            this.LoadPort01_Start_Btn = new System.Windows.Forms.Button();
+            this.tableLayoutPanel16 = new System.Windows.Forms.TableLayoutPanel();
+            this.LoadPort04_Start_Btn = new System.Windows.Forms.Button();
+            this.LoadPort04Assign_Gv = new System.Windows.Forms.DataGridView();
+            this.LoadPort04State_lb = new System.Windows.Forms.Label();
+            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.splitContainer6 = new System.Windows.Forms.SplitContainer();
+            this.label33 = new System.Windows.Forms.Label();
+            this.label34 = new System.Windows.Forms.Label();
+            this.tableLayoutPanel15 = new System.Windows.Forms.TableLayoutPanel();
+            this.LoadPort03_Start_Btn = new System.Windows.Forms.Button();
+            this.LoadPort03Assign_Gv = new System.Windows.Forms.DataGridView();
+            this.LoadPort03State_lb = new System.Windows.Forms.Label();
+            this.textBox16 = new System.Windows.Forms.TextBox();
+            this.splitContainer3 = new System.Windows.Forms.SplitContainer();
+            this.label31 = new System.Windows.Forms.Label();
+            this.label30 = new System.Windows.Forms.Label();
             this.tabStatus = new System.Windows.Forms.TabPage();
             this.tableLayoutPanel26 = new System.Windows.Forms.TableLayoutPanel();
             this.dgvRstatus = new System.Windows.Forms.DataGridView();
@@ -673,64 +734,19 @@ namespace Adam
             this.transTestToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.terminalToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.panel3 = new System.Windows.Forms.Panel();
-            this.splitContainer17 = new System.Windows.Forms.SplitContainer();
-            this.label54 = new System.Windows.Forms.Label();
-            this.label53 = new System.Windows.Forms.Label();
-            this.textBox20 = new System.Windows.Forms.TextBox();
-            this.LoadPort06State_lb = new System.Windows.Forms.Label();
-            this.LoadPort06Assign_Gv = new System.Windows.Forms.DataGridView();
-            this.tableLayoutPanel22 = new System.Windows.Forms.TableLayoutPanel();
-            this.splitContainer16 = new System.Windows.Forms.SplitContainer();
-            this.label51 = new System.Windows.Forms.Label();
-            this.label49 = new System.Windows.Forms.Label();
-            this.textBox19 = new System.Windows.Forms.TextBox();
-            this.LoadPort05State_lb = new System.Windows.Forms.Label();
-            this.LoadPort05Assign_Gv = new System.Windows.Forms.DataGridView();
-            this.tableLayoutPanel21 = new System.Windows.Forms.TableLayoutPanel();
-            this.splitContainer14 = new System.Windows.Forms.SplitContainer();
-            this.label44 = new System.Windows.Forms.Label();
-            this.label43 = new System.Windows.Forms.Label();
-            this.textBox17 = new System.Windows.Forms.TextBox();
-            this.LoadPort07State_lb = new System.Windows.Forms.Label();
-            this.LoadPort07Assign_Gv = new System.Windows.Forms.DataGridView();
-            this.tableLayoutPanel19 = new System.Windows.Forms.TableLayoutPanel();
-            this.splitContainer3 = new System.Windows.Forms.SplitContainer();
-            this.label30 = new System.Windows.Forms.Label();
-            this.label31 = new System.Windows.Forms.Label();
-            this.textBox16 = new System.Windows.Forms.TextBox();
-            this.LoadPort03State_lb = new System.Windows.Forms.Label();
-            this.LoadPort03Assign_Gv = new System.Windows.Forms.DataGridView();
-            this.tableLayoutPanel15 = new System.Windows.Forms.TableLayoutPanel();
-            this.LoadPort01_Start_Btn = new System.Windows.Forms.Button();
-            this.splitContainer7 = new System.Windows.Forms.SplitContainer();
-            this.label37 = new System.Windows.Forms.Label();
-            this.label36 = new System.Windows.Forms.Label();
-            this.textBox10 = new System.Windows.Forms.TextBox();
-            this.LoadPort01State_lb = new System.Windows.Forms.Label();
-            this.LoadPort01Assign_Gv = new System.Windows.Forms.DataGridView();
-            this.tableLayoutPanel17 = new System.Windows.Forms.TableLayoutPanel();
-            this.splitContainer6 = new System.Windows.Forms.SplitContainer();
-            this.label34 = new System.Windows.Forms.Label();
-            this.label33 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.LoadPort04State_lb = new System.Windows.Forms.Label();
-            this.LoadPort04Assign_Gv = new System.Windows.Forms.DataGridView();
-            this.tableLayoutPanel16 = new System.Windows.Forms.TableLayoutPanel();
-            this.splitContainer11 = new System.Windows.Forms.SplitContainer();
-            this.label41 = new System.Windows.Forms.Label();
-            this.label40 = new System.Windows.Forms.Label();
-            this.textBox11 = new System.Windows.Forms.TextBox();
-            this.LoadPort02State_lb = new System.Windows.Forms.Label();
-            this.LoadPort02Assign_Gv = new System.Windows.Forms.DataGridView();
-            this.tableLayoutPanel18 = new System.Windows.Forms.TableLayoutPanel();
-            this.LoadPort02_Start_Btn = new System.Windows.Forms.Button();
-            this.LoadPort03_Start_Btn = new System.Windows.Forms.Button();
-            this.LoadPort04_Start_Btn = new System.Windows.Forms.Button();
-            this.LoadPort05_Start_Btn = new System.Windows.Forms.Button();
-            this.LoadPort06_Start_Btn = new System.Windows.Forms.Button();
-            this.LoadPort07_Start_Btn = new System.Windows.Forms.Button();
-            this.LoadPort08_Start_Btn = new System.Windows.Forms.Button();
             this.directorySearcher1 = new System.DirectoryServices.DirectorySearcher();
+            this.tabPage1 = new System.Windows.Forms.TabPage();
+            this.gbSettingSECS = new System.Windows.Forms.GroupBox();
+            this.spcSECSSetting = new System.Windows.Forms.SplitContainer();
+            this.gbSettingSECS_L = new System.Windows.Forms.GroupBox();
+            this.tevSECSList = new System.Windows.Forms.TreeView();
+            this.gbSettingSECS_R = new System.Windows.Forms.GroupBox();
+            this.button2 = new System.Windows.Forms.Button();
+            this.dgvSECSData = new System.Windows.Forms.DataGridView();
+            this.SECSSettingGrid_Item = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.SECSSettingGrid_Value = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.SECSSettingGrid_Range = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.SECSSettingGrid_Description = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer5)).BeginInit();
             this.splitContainer5.Panel1.SuspendLayout();
             this.splitContainer5.Panel2.SuspendLayout();
@@ -808,12 +824,54 @@ namespace Adam
             this.tableLayoutPanel14.SuspendLayout();
             this.groupBox11.SuspendLayout();
             this.tableLayoutPanel12.SuspendLayout();
+            this.tableLayoutPanel22.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.LoadPort06Assign_Gv)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.splitContainer17)).BeginInit();
+            this.splitContainer17.Panel1.SuspendLayout();
+            this.splitContainer17.Panel2.SuspendLayout();
+            this.splitContainer17.SuspendLayout();
+            this.tableLayoutPanel21.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.LoadPort05Assign_Gv)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.splitContainer16)).BeginInit();
+            this.splitContainer16.Panel1.SuspendLayout();
+            this.splitContainer16.Panel2.SuspendLayout();
+            this.splitContainer16.SuspendLayout();
             this.tableLayoutPanel20.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.LoadPort08Assign_Gv)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer15)).BeginInit();
             this.splitContainer15.Panel1.SuspendLayout();
             this.splitContainer15.Panel2.SuspendLayout();
             this.splitContainer15.SuspendLayout();
+            this.tableLayoutPanel19.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.LoadPort07Assign_Gv)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.splitContainer14)).BeginInit();
+            this.splitContainer14.Panel1.SuspendLayout();
+            this.splitContainer14.Panel2.SuspendLayout();
+            this.splitContainer14.SuspendLayout();
+            this.tableLayoutPanel18.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.LoadPort02Assign_Gv)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.splitContainer11)).BeginInit();
+            this.splitContainer11.Panel1.SuspendLayout();
+            this.splitContainer11.Panel2.SuspendLayout();
+            this.splitContainer11.SuspendLayout();
+            this.tableLayoutPanel17.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.LoadPort01Assign_Gv)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.splitContainer7)).BeginInit();
+            this.splitContainer7.Panel1.SuspendLayout();
+            this.splitContainer7.Panel2.SuspendLayout();
+            this.splitContainer7.SuspendLayout();
+            this.tableLayoutPanel16.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.LoadPort04Assign_Gv)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.splitContainer6)).BeginInit();
+            this.splitContainer6.Panel1.SuspendLayout();
+            this.splitContainer6.Panel2.SuspendLayout();
+            this.splitContainer6.SuspendLayout();
+            this.tableLayoutPanel15.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.LoadPort03Assign_Gv)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.splitContainer3)).BeginInit();
+            this.splitContainer3.Panel1.SuspendLayout();
+            this.splitContainer3.Panel2.SuspendLayout();
+            this.splitContainer3.SuspendLayout();
             this.tabStatus.SuspendLayout();
             this.tableLayoutPanel26.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvRstatus)).BeginInit();
@@ -928,48 +986,15 @@ namespace Adam
             this.contextMenuStrip1.SuspendLayout();
             this.contextMenuStrip4.SuspendLayout();
             this.panel3.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.splitContainer17)).BeginInit();
-            this.splitContainer17.Panel1.SuspendLayout();
-            this.splitContainer17.Panel2.SuspendLayout();
-            this.splitContainer17.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.LoadPort06Assign_Gv)).BeginInit();
-            this.tableLayoutPanel22.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.splitContainer16)).BeginInit();
-            this.splitContainer16.Panel1.SuspendLayout();
-            this.splitContainer16.Panel2.SuspendLayout();
-            this.splitContainer16.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.LoadPort05Assign_Gv)).BeginInit();
-            this.tableLayoutPanel21.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.splitContainer14)).BeginInit();
-            this.splitContainer14.Panel1.SuspendLayout();
-            this.splitContainer14.Panel2.SuspendLayout();
-            this.splitContainer14.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.LoadPort07Assign_Gv)).BeginInit();
-            this.tableLayoutPanel19.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.splitContainer3)).BeginInit();
-            this.splitContainer3.Panel1.SuspendLayout();
-            this.splitContainer3.Panel2.SuspendLayout();
-            this.splitContainer3.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.LoadPort03Assign_Gv)).BeginInit();
-            this.tableLayoutPanel15.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.splitContainer7)).BeginInit();
-            this.splitContainer7.Panel1.SuspendLayout();
-            this.splitContainer7.Panel2.SuspendLayout();
-            this.splitContainer7.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.LoadPort01Assign_Gv)).BeginInit();
-            this.tableLayoutPanel17.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.splitContainer6)).BeginInit();
-            this.splitContainer6.Panel1.SuspendLayout();
-            this.splitContainer6.Panel2.SuspendLayout();
-            this.splitContainer6.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.LoadPort04Assign_Gv)).BeginInit();
-            this.tableLayoutPanel16.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.splitContainer11)).BeginInit();
-            this.splitContainer11.Panel1.SuspendLayout();
-            this.splitContainer11.Panel2.SuspendLayout();
-            this.splitContainer11.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.LoadPort02Assign_Gv)).BeginInit();
-            this.tableLayoutPanel18.SuspendLayout();
+            this.tabPage1.SuspendLayout();
+            this.gbSettingSECS.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.spcSECSSetting)).BeginInit();
+            this.spcSECSSetting.Panel1.SuspendLayout();
+            this.spcSECSSetting.Panel2.SuspendLayout();
+            this.spcSECSSetting.SuspendLayout();
+            this.gbSettingSECS_L.SuspendLayout();
+            this.gbSettingSECS_R.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvSECSData)).BeginInit();
             this.SuspendLayout();
             // 
             // splitContainer5
@@ -2366,6 +2391,173 @@ namespace Adam
             this.tableLayoutPanel12.Controls.Add(this.tableLayoutPanel15, 0, 0);
             this.tableLayoutPanel12.Name = "tableLayoutPanel12";
             // 
+            // tableLayoutPanel22
+            // 
+            resources.ApplyResources(this.tableLayoutPanel22, "tableLayoutPanel22");
+            this.tableLayoutPanel22.Controls.Add(this.LoadPort06_Start_Btn, 0, 4);
+            this.tableLayoutPanel22.Controls.Add(this.LoadPort06Assign_Gv, 0, 2);
+            this.tableLayoutPanel22.Controls.Add(this.LoadPort06State_lb, 0, 0);
+            this.tableLayoutPanel22.Controls.Add(this.textBox20, 0, 1);
+            this.tableLayoutPanel22.Controls.Add(this.splitContainer17, 0, 3);
+            this.tableLayoutPanel22.Name = "tableLayoutPanel22";
+            // 
+            // LoadPort06_Start_Btn
+            // 
+            resources.ApplyResources(this.LoadPort06_Start_Btn, "LoadPort06_Start_Btn");
+            this.LoadPort06_Start_Btn.Name = "LoadPort06_Start_Btn";
+            this.LoadPort06_Start_Btn.UseVisualStyleBackColor = true;
+            this.LoadPort06_Start_Btn.Click += new System.EventHandler(this.PortStart_Btn_Click);
+            // 
+            // LoadPort06Assign_Gv
+            // 
+            this.LoadPort06Assign_Gv.AllowUserToAddRows = false;
+            this.LoadPort06Assign_Gv.AllowUserToDeleteRows = false;
+            this.LoadPort06Assign_Gv.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.DisplayedCells;
+            this.LoadPort06Assign_Gv.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            resources.ApplyResources(this.LoadPort06Assign_Gv, "LoadPort06Assign_Gv");
+            this.LoadPort06Assign_Gv.Name = "LoadPort06Assign_Gv";
+            this.LoadPort06Assign_Gv.ReadOnly = true;
+            this.LoadPort06Assign_Gv.RowHeadersVisible = false;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("微軟正黑體", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
+            this.LoadPort06Assign_Gv.RowsDefaultCellStyle = dataGridViewCellStyle2;
+            this.LoadPort06Assign_Gv.RowTemplate.Height = 21;
+            this.LoadPort06Assign_Gv.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.LoadPort06Assign_Gv.StandardTab = true;
+            this.LoadPort06Assign_Gv.CellFormatting += new System.Windows.Forms.DataGridViewCellFormattingEventHandler(this.Assign_Gv_CellFormatting);
+            // 
+            // LoadPort06State_lb
+            // 
+            this.LoadPort06State_lb.BackColor = System.Drawing.Color.Transparent;
+            this.LoadPort06State_lb.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            resources.ApplyResources(this.LoadPort06State_lb, "LoadPort06State_lb");
+            this.LoadPort06State_lb.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.LoadPort06State_lb.ForeColor = System.Drawing.Color.Black;
+            this.LoadPort06State_lb.Name = "LoadPort06State_lb";
+            this.LoadPort06State_lb.MouseClick += new System.Windows.Forms.MouseEventHandler(this.State_lb_Click);
+            // 
+            // textBox20
+            // 
+            this.textBox20.BackColor = System.Drawing.Color.Green;
+            this.textBox20.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            resources.ApplyResources(this.textBox20, "textBox20");
+            this.textBox20.ForeColor = System.Drawing.Color.Transparent;
+            this.textBox20.Name = "textBox20";
+            // 
+            // splitContainer17
+            // 
+            resources.ApplyResources(this.splitContainer17, "splitContainer17");
+            this.splitContainer17.Name = "splitContainer17";
+            // 
+            // splitContainer17.Panel1
+            // 
+            this.splitContainer17.Panel1.Controls.Add(this.label53);
+            // 
+            // splitContainer17.Panel2
+            // 
+            this.splitContainer17.Panel2.Controls.Add(this.label54);
+            // 
+            // label53
+            // 
+            this.label53.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.label53.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            resources.ApplyResources(this.label53, "label53");
+            this.label53.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.label53.ForeColor = System.Drawing.Color.Black;
+            this.label53.Name = "label53";
+            // 
+            // label54
+            // 
+            this.label54.BackColor = System.Drawing.Color.Transparent;
+            this.label54.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            resources.ApplyResources(this.label54, "label54");
+            this.label54.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.label54.ForeColor = System.Drawing.Color.Black;
+            this.label54.Name = "label54";
+            // 
+            // tableLayoutPanel21
+            // 
+            resources.ApplyResources(this.tableLayoutPanel21, "tableLayoutPanel21");
+            this.tableLayoutPanel21.Controls.Add(this.LoadPort05_Start_Btn, 0, 4);
+            this.tableLayoutPanel21.Controls.Add(this.LoadPort05Assign_Gv, 0, 2);
+            this.tableLayoutPanel21.Controls.Add(this.LoadPort05State_lb, 0, 0);
+            this.tableLayoutPanel21.Controls.Add(this.textBox19, 0, 1);
+            this.tableLayoutPanel21.Controls.Add(this.splitContainer16, 0, 3);
+            this.tableLayoutPanel21.Name = "tableLayoutPanel21";
+            // 
+            // LoadPort05_Start_Btn
+            // 
+            resources.ApplyResources(this.LoadPort05_Start_Btn, "LoadPort05_Start_Btn");
+            this.LoadPort05_Start_Btn.Name = "LoadPort05_Start_Btn";
+            this.LoadPort05_Start_Btn.UseVisualStyleBackColor = true;
+            this.LoadPort05_Start_Btn.Click += new System.EventHandler(this.PortStart_Btn_Click);
+            // 
+            // LoadPort05Assign_Gv
+            // 
+            this.LoadPort05Assign_Gv.AllowUserToAddRows = false;
+            this.LoadPort05Assign_Gv.AllowUserToDeleteRows = false;
+            this.LoadPort05Assign_Gv.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.DisplayedCells;
+            this.LoadPort05Assign_Gv.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            resources.ApplyResources(this.LoadPort05Assign_Gv, "LoadPort05Assign_Gv");
+            this.LoadPort05Assign_Gv.Name = "LoadPort05Assign_Gv";
+            this.LoadPort05Assign_Gv.ReadOnly = true;
+            this.LoadPort05Assign_Gv.RowHeadersVisible = false;
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("微軟正黑體", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
+            this.LoadPort05Assign_Gv.RowsDefaultCellStyle = dataGridViewCellStyle3;
+            this.LoadPort05Assign_Gv.RowTemplate.Height = 21;
+            this.LoadPort05Assign_Gv.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.LoadPort05Assign_Gv.StandardTab = true;
+            this.LoadPort05Assign_Gv.CellFormatting += new System.Windows.Forms.DataGridViewCellFormattingEventHandler(this.Assign_Gv_CellFormatting);
+            this.LoadPort05Assign_Gv.MouseClick += new System.Windows.Forms.MouseEventHandler(this.Assign_Gv_MouseClick);
+            // 
+            // LoadPort05State_lb
+            // 
+            this.LoadPort05State_lb.BackColor = System.Drawing.Color.Transparent;
+            this.LoadPort05State_lb.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            resources.ApplyResources(this.LoadPort05State_lb, "LoadPort05State_lb");
+            this.LoadPort05State_lb.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.LoadPort05State_lb.ForeColor = System.Drawing.Color.Black;
+            this.LoadPort05State_lb.Name = "LoadPort05State_lb";
+            this.LoadPort05State_lb.MouseClick += new System.Windows.Forms.MouseEventHandler(this.State_lb_Click);
+            // 
+            // textBox19
+            // 
+            this.textBox19.BackColor = System.Drawing.Color.Green;
+            this.textBox19.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            resources.ApplyResources(this.textBox19, "textBox19");
+            this.textBox19.ForeColor = System.Drawing.Color.Transparent;
+            this.textBox19.Name = "textBox19";
+            // 
+            // splitContainer16
+            // 
+            resources.ApplyResources(this.splitContainer16, "splitContainer16");
+            this.splitContainer16.Name = "splitContainer16";
+            // 
+            // splitContainer16.Panel1
+            // 
+            this.splitContainer16.Panel1.Controls.Add(this.label49);
+            // 
+            // splitContainer16.Panel2
+            // 
+            this.splitContainer16.Panel2.Controls.Add(this.label51);
+            // 
+            // label49
+            // 
+            this.label49.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.label49.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            resources.ApplyResources(this.label49, "label49");
+            this.label49.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.label49.ForeColor = System.Drawing.Color.Black;
+            this.label49.Name = "label49";
+            // 
+            // label51
+            // 
+            this.label51.BackColor = System.Drawing.Color.Transparent;
+            this.label51.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            resources.ApplyResources(this.label51, "label51");
+            this.label51.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.label51.ForeColor = System.Drawing.Color.Black;
+            this.label51.Name = "label51";
+            // 
             // tableLayoutPanel20
             // 
             resources.ApplyResources(this.tableLayoutPanel20, "tableLayoutPanel20");
@@ -2375,6 +2567,13 @@ namespace Adam
             this.tableLayoutPanel20.Controls.Add(this.textBox18, 0, 1);
             this.tableLayoutPanel20.Controls.Add(this.splitContainer15, 0, 3);
             this.tableLayoutPanel20.Name = "tableLayoutPanel20";
+            // 
+            // LoadPort08_Start_Btn
+            // 
+            resources.ApplyResources(this.LoadPort08_Start_Btn, "LoadPort08_Start_Btn");
+            this.LoadPort08_Start_Btn.Name = "LoadPort08_Start_Btn";
+            this.LoadPort08_Start_Btn.UseVisualStyleBackColor = true;
+            this.LoadPort08_Start_Btn.Click += new System.EventHandler(this.PortStart_Btn_Click);
             // 
             // LoadPort08Assign_Gv
             // 
@@ -2441,6 +2640,426 @@ namespace Adam
             this.label47.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.label47.ForeColor = System.Drawing.Color.Black;
             this.label47.Name = "label47";
+            // 
+            // tableLayoutPanel19
+            // 
+            resources.ApplyResources(this.tableLayoutPanel19, "tableLayoutPanel19");
+            this.tableLayoutPanel19.Controls.Add(this.LoadPort07_Start_Btn, 0, 4);
+            this.tableLayoutPanel19.Controls.Add(this.LoadPort07Assign_Gv, 0, 2);
+            this.tableLayoutPanel19.Controls.Add(this.LoadPort07State_lb, 0, 0);
+            this.tableLayoutPanel19.Controls.Add(this.textBox17, 0, 1);
+            this.tableLayoutPanel19.Controls.Add(this.splitContainer14, 0, 3);
+            this.tableLayoutPanel19.Name = "tableLayoutPanel19";
+            // 
+            // LoadPort07_Start_Btn
+            // 
+            resources.ApplyResources(this.LoadPort07_Start_Btn, "LoadPort07_Start_Btn");
+            this.LoadPort07_Start_Btn.Name = "LoadPort07_Start_Btn";
+            this.LoadPort07_Start_Btn.UseVisualStyleBackColor = true;
+            this.LoadPort07_Start_Btn.Click += new System.EventHandler(this.PortStart_Btn_Click);
+            // 
+            // LoadPort07Assign_Gv
+            // 
+            this.LoadPort07Assign_Gv.AllowUserToAddRows = false;
+            this.LoadPort07Assign_Gv.AllowUserToDeleteRows = false;
+            this.LoadPort07Assign_Gv.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.DisplayedCells;
+            this.LoadPort07Assign_Gv.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            resources.ApplyResources(this.LoadPort07Assign_Gv, "LoadPort07Assign_Gv");
+            this.LoadPort07Assign_Gv.Name = "LoadPort07Assign_Gv";
+            this.LoadPort07Assign_Gv.ReadOnly = true;
+            this.LoadPort07Assign_Gv.RowHeadersVisible = false;
+            dataGridViewCellStyle5.Font = new System.Drawing.Font("微軟正黑體", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
+            this.LoadPort07Assign_Gv.RowsDefaultCellStyle = dataGridViewCellStyle5;
+            this.LoadPort07Assign_Gv.RowTemplate.Height = 21;
+            this.LoadPort07Assign_Gv.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.LoadPort07Assign_Gv.StandardTab = true;
+            this.LoadPort07Assign_Gv.CellFormatting += new System.Windows.Forms.DataGridViewCellFormattingEventHandler(this.Assign_Gv_CellFormatting);
+            // 
+            // LoadPort07State_lb
+            // 
+            this.LoadPort07State_lb.BackColor = System.Drawing.Color.Transparent;
+            this.LoadPort07State_lb.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            resources.ApplyResources(this.LoadPort07State_lb, "LoadPort07State_lb");
+            this.LoadPort07State_lb.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.LoadPort07State_lb.ForeColor = System.Drawing.Color.Black;
+            this.LoadPort07State_lb.Name = "LoadPort07State_lb";
+            this.LoadPort07State_lb.MouseClick += new System.Windows.Forms.MouseEventHandler(this.State_lb_Click);
+            // 
+            // textBox17
+            // 
+            this.textBox17.BackColor = System.Drawing.Color.Green;
+            this.textBox17.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            resources.ApplyResources(this.textBox17, "textBox17");
+            this.textBox17.ForeColor = System.Drawing.Color.Transparent;
+            this.textBox17.Name = "textBox17";
+            // 
+            // splitContainer14
+            // 
+            resources.ApplyResources(this.splitContainer14, "splitContainer14");
+            this.splitContainer14.Name = "splitContainer14";
+            // 
+            // splitContainer14.Panel1
+            // 
+            this.splitContainer14.Panel1.Controls.Add(this.label43);
+            // 
+            // splitContainer14.Panel2
+            // 
+            this.splitContainer14.Panel2.Controls.Add(this.label44);
+            // 
+            // label43
+            // 
+            this.label43.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.label43.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            resources.ApplyResources(this.label43, "label43");
+            this.label43.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.label43.ForeColor = System.Drawing.Color.Black;
+            this.label43.Name = "label43";
+            // 
+            // label44
+            // 
+            this.label44.BackColor = System.Drawing.Color.Transparent;
+            this.label44.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            resources.ApplyResources(this.label44, "label44");
+            this.label44.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.label44.ForeColor = System.Drawing.Color.Black;
+            this.label44.Name = "label44";
+            // 
+            // tableLayoutPanel18
+            // 
+            resources.ApplyResources(this.tableLayoutPanel18, "tableLayoutPanel18");
+            this.tableLayoutPanel18.Controls.Add(this.LoadPort02Assign_Gv, 0, 2);
+            this.tableLayoutPanel18.Controls.Add(this.LoadPort02State_lb, 0, 0);
+            this.tableLayoutPanel18.Controls.Add(this.textBox11, 0, 1);
+            this.tableLayoutPanel18.Controls.Add(this.splitContainer11, 0, 3);
+            this.tableLayoutPanel18.Controls.Add(this.LoadPort02_Start_Btn, 0, 4);
+            this.tableLayoutPanel18.Name = "tableLayoutPanel18";
+            // 
+            // LoadPort02Assign_Gv
+            // 
+            this.LoadPort02Assign_Gv.AllowUserToAddRows = false;
+            this.LoadPort02Assign_Gv.AllowUserToDeleteRows = false;
+            this.LoadPort02Assign_Gv.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.DisplayedCells;
+            this.LoadPort02Assign_Gv.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            resources.ApplyResources(this.LoadPort02Assign_Gv, "LoadPort02Assign_Gv");
+            this.LoadPort02Assign_Gv.Name = "LoadPort02Assign_Gv";
+            this.LoadPort02Assign_Gv.ReadOnly = true;
+            this.LoadPort02Assign_Gv.RowHeadersVisible = false;
+            dataGridViewCellStyle6.Font = new System.Drawing.Font("微軟正黑體", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
+            this.LoadPort02Assign_Gv.RowsDefaultCellStyle = dataGridViewCellStyle6;
+            this.LoadPort02Assign_Gv.RowTemplate.Height = 21;
+            this.LoadPort02Assign_Gv.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.LoadPort02Assign_Gv.StandardTab = true;
+            this.LoadPort02Assign_Gv.CellFormatting += new System.Windows.Forms.DataGridViewCellFormattingEventHandler(this.Assign_Gv_CellFormatting);
+            this.LoadPort02Assign_Gv.MouseClick += new System.Windows.Forms.MouseEventHandler(this.Assign_Gv_MouseClick);
+            // 
+            // LoadPort02State_lb
+            // 
+            this.LoadPort02State_lb.BackColor = System.Drawing.Color.Transparent;
+            this.LoadPort02State_lb.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            resources.ApplyResources(this.LoadPort02State_lb, "LoadPort02State_lb");
+            this.LoadPort02State_lb.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.LoadPort02State_lb.ForeColor = System.Drawing.Color.Black;
+            this.LoadPort02State_lb.Name = "LoadPort02State_lb";
+            this.LoadPort02State_lb.MouseClick += new System.Windows.Forms.MouseEventHandler(this.State_lb_Click);
+            // 
+            // textBox11
+            // 
+            this.textBox11.BackColor = System.Drawing.Color.Green;
+            this.textBox11.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            resources.ApplyResources(this.textBox11, "textBox11");
+            this.textBox11.ForeColor = System.Drawing.Color.Transparent;
+            this.textBox11.Name = "textBox11";
+            // 
+            // splitContainer11
+            // 
+            resources.ApplyResources(this.splitContainer11, "splitContainer11");
+            this.splitContainer11.Name = "splitContainer11";
+            // 
+            // splitContainer11.Panel1
+            // 
+            this.splitContainer11.Panel1.Controls.Add(this.label40);
+            // 
+            // splitContainer11.Panel2
+            // 
+            this.splitContainer11.Panel2.Controls.Add(this.label41);
+            // 
+            // label40
+            // 
+            this.label40.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.label40.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            resources.ApplyResources(this.label40, "label40");
+            this.label40.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.label40.ForeColor = System.Drawing.Color.Black;
+            this.label40.Name = "label40";
+            // 
+            // label41
+            // 
+            this.label41.BackColor = System.Drawing.Color.Transparent;
+            this.label41.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            resources.ApplyResources(this.label41, "label41");
+            this.label41.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.label41.ForeColor = System.Drawing.Color.Black;
+            this.label41.Name = "label41";
+            // 
+            // LoadPort02_Start_Btn
+            // 
+            resources.ApplyResources(this.LoadPort02_Start_Btn, "LoadPort02_Start_Btn");
+            this.LoadPort02_Start_Btn.Name = "LoadPort02_Start_Btn";
+            this.LoadPort02_Start_Btn.UseVisualStyleBackColor = true;
+            this.LoadPort02_Start_Btn.Click += new System.EventHandler(this.PortStart_Btn_Click);
+            // 
+            // tableLayoutPanel17
+            // 
+            resources.ApplyResources(this.tableLayoutPanel17, "tableLayoutPanel17");
+            this.tableLayoutPanel17.Controls.Add(this.LoadPort01Assign_Gv, 0, 2);
+            this.tableLayoutPanel17.Controls.Add(this.LoadPort01State_lb, 0, 0);
+            this.tableLayoutPanel17.Controls.Add(this.textBox10, 0, 1);
+            this.tableLayoutPanel17.Controls.Add(this.splitContainer7, 0, 3);
+            this.tableLayoutPanel17.Controls.Add(this.LoadPort01_Start_Btn, 0, 4);
+            this.tableLayoutPanel17.Name = "tableLayoutPanel17";
+            // 
+            // LoadPort01Assign_Gv
+            // 
+            this.LoadPort01Assign_Gv.AllowUserToAddRows = false;
+            this.LoadPort01Assign_Gv.AllowUserToDeleteRows = false;
+            this.LoadPort01Assign_Gv.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.DisplayedCells;
+            this.LoadPort01Assign_Gv.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            resources.ApplyResources(this.LoadPort01Assign_Gv, "LoadPort01Assign_Gv");
+            this.LoadPort01Assign_Gv.Name = "LoadPort01Assign_Gv";
+            this.LoadPort01Assign_Gv.ReadOnly = true;
+            this.LoadPort01Assign_Gv.RowHeadersVisible = false;
+            dataGridViewCellStyle7.Font = new System.Drawing.Font("微軟正黑體", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
+            this.LoadPort01Assign_Gv.RowsDefaultCellStyle = dataGridViewCellStyle7;
+            this.LoadPort01Assign_Gv.RowTemplate.Height = 21;
+            this.LoadPort01Assign_Gv.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.LoadPort01Assign_Gv.StandardTab = true;
+            this.LoadPort01Assign_Gv.CellFormatting += new System.Windows.Forms.DataGridViewCellFormattingEventHandler(this.Assign_Gv_CellFormatting);
+            this.LoadPort01Assign_Gv.MouseClick += new System.Windows.Forms.MouseEventHandler(this.Assign_Gv_MouseClick);
+            // 
+            // LoadPort01State_lb
+            // 
+            this.LoadPort01State_lb.BackColor = System.Drawing.Color.Transparent;
+            this.LoadPort01State_lb.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            resources.ApplyResources(this.LoadPort01State_lb, "LoadPort01State_lb");
+            this.LoadPort01State_lb.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.LoadPort01State_lb.ForeColor = System.Drawing.Color.Black;
+            this.LoadPort01State_lb.Name = "LoadPort01State_lb";
+            this.LoadPort01State_lb.MouseClick += new System.Windows.Forms.MouseEventHandler(this.State_lb_Click);
+            // 
+            // textBox10
+            // 
+            this.textBox10.BackColor = System.Drawing.Color.Green;
+            this.textBox10.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            resources.ApplyResources(this.textBox10, "textBox10");
+            this.textBox10.ForeColor = System.Drawing.Color.Transparent;
+            this.textBox10.Name = "textBox10";
+            // 
+            // splitContainer7
+            // 
+            resources.ApplyResources(this.splitContainer7, "splitContainer7");
+            this.splitContainer7.Name = "splitContainer7";
+            // 
+            // splitContainer7.Panel1
+            // 
+            this.splitContainer7.Panel1.Controls.Add(this.label36);
+            // 
+            // splitContainer7.Panel2
+            // 
+            this.splitContainer7.Panel2.Controls.Add(this.label37);
+            // 
+            // label36
+            // 
+            this.label36.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.label36.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            resources.ApplyResources(this.label36, "label36");
+            this.label36.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.label36.ForeColor = System.Drawing.Color.Black;
+            this.label36.Name = "label36";
+            // 
+            // label37
+            // 
+            this.label37.BackColor = System.Drawing.Color.Transparent;
+            this.label37.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            resources.ApplyResources(this.label37, "label37");
+            this.label37.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.label37.ForeColor = System.Drawing.Color.Black;
+            this.label37.Name = "label37";
+            // 
+            // LoadPort01_Start_Btn
+            // 
+            resources.ApplyResources(this.LoadPort01_Start_Btn, "LoadPort01_Start_Btn");
+            this.LoadPort01_Start_Btn.Name = "LoadPort01_Start_Btn";
+            this.LoadPort01_Start_Btn.UseVisualStyleBackColor = true;
+            this.LoadPort01_Start_Btn.Click += new System.EventHandler(this.PortStart_Btn_Click);
+            // 
+            // tableLayoutPanel16
+            // 
+            resources.ApplyResources(this.tableLayoutPanel16, "tableLayoutPanel16");
+            this.tableLayoutPanel16.Controls.Add(this.LoadPort04_Start_Btn, 0, 4);
+            this.tableLayoutPanel16.Controls.Add(this.LoadPort04Assign_Gv, 0, 2);
+            this.tableLayoutPanel16.Controls.Add(this.LoadPort04State_lb, 0, 0);
+            this.tableLayoutPanel16.Controls.Add(this.textBox1, 0, 1);
+            this.tableLayoutPanel16.Controls.Add(this.splitContainer6, 0, 3);
+            this.tableLayoutPanel16.Name = "tableLayoutPanel16";
+            // 
+            // LoadPort04_Start_Btn
+            // 
+            resources.ApplyResources(this.LoadPort04_Start_Btn, "LoadPort04_Start_Btn");
+            this.LoadPort04_Start_Btn.Name = "LoadPort04_Start_Btn";
+            this.LoadPort04_Start_Btn.UseVisualStyleBackColor = true;
+            this.LoadPort04_Start_Btn.Click += new System.EventHandler(this.PortStart_Btn_Click);
+            // 
+            // LoadPort04Assign_Gv
+            // 
+            this.LoadPort04Assign_Gv.AllowUserToAddRows = false;
+            this.LoadPort04Assign_Gv.AllowUserToDeleteRows = false;
+            this.LoadPort04Assign_Gv.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.DisplayedCells;
+            this.LoadPort04Assign_Gv.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            resources.ApplyResources(this.LoadPort04Assign_Gv, "LoadPort04Assign_Gv");
+            this.LoadPort04Assign_Gv.Name = "LoadPort04Assign_Gv";
+            this.LoadPort04Assign_Gv.ReadOnly = true;
+            this.LoadPort04Assign_Gv.RowHeadersVisible = false;
+            dataGridViewCellStyle8.Font = new System.Drawing.Font("微軟正黑體", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
+            this.LoadPort04Assign_Gv.RowsDefaultCellStyle = dataGridViewCellStyle8;
+            this.LoadPort04Assign_Gv.RowTemplate.Height = 21;
+            this.LoadPort04Assign_Gv.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.LoadPort04Assign_Gv.StandardTab = true;
+            this.LoadPort04Assign_Gv.CellFormatting += new System.Windows.Forms.DataGridViewCellFormattingEventHandler(this.Assign_Gv_CellFormatting);
+            this.LoadPort04Assign_Gv.MouseClick += new System.Windows.Forms.MouseEventHandler(this.Assign_Gv_MouseClick);
+            // 
+            // LoadPort04State_lb
+            // 
+            this.LoadPort04State_lb.BackColor = System.Drawing.Color.Transparent;
+            this.LoadPort04State_lb.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            resources.ApplyResources(this.LoadPort04State_lb, "LoadPort04State_lb");
+            this.LoadPort04State_lb.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.LoadPort04State_lb.ForeColor = System.Drawing.Color.Black;
+            this.LoadPort04State_lb.Name = "LoadPort04State_lb";
+            this.LoadPort04State_lb.MouseClick += new System.Windows.Forms.MouseEventHandler(this.State_lb_Click);
+            // 
+            // textBox1
+            // 
+            this.textBox1.BackColor = System.Drawing.Color.Green;
+            this.textBox1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            resources.ApplyResources(this.textBox1, "textBox1");
+            this.textBox1.ForeColor = System.Drawing.Color.Transparent;
+            this.textBox1.Name = "textBox1";
+            // 
+            // splitContainer6
+            // 
+            resources.ApplyResources(this.splitContainer6, "splitContainer6");
+            this.splitContainer6.Name = "splitContainer6";
+            // 
+            // splitContainer6.Panel1
+            // 
+            this.splitContainer6.Panel1.Controls.Add(this.label33);
+            // 
+            // splitContainer6.Panel2
+            // 
+            this.splitContainer6.Panel2.Controls.Add(this.label34);
+            // 
+            // label33
+            // 
+            this.label33.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.label33.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            resources.ApplyResources(this.label33, "label33");
+            this.label33.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.label33.ForeColor = System.Drawing.Color.Black;
+            this.label33.Name = "label33";
+            // 
+            // label34
+            // 
+            this.label34.BackColor = System.Drawing.Color.Transparent;
+            this.label34.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            resources.ApplyResources(this.label34, "label34");
+            this.label34.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.label34.ForeColor = System.Drawing.Color.Black;
+            this.label34.Name = "label34";
+            // 
+            // tableLayoutPanel15
+            // 
+            resources.ApplyResources(this.tableLayoutPanel15, "tableLayoutPanel15");
+            this.tableLayoutPanel15.Controls.Add(this.LoadPort03_Start_Btn, 0, 4);
+            this.tableLayoutPanel15.Controls.Add(this.LoadPort03Assign_Gv, 0, 2);
+            this.tableLayoutPanel15.Controls.Add(this.LoadPort03State_lb, 0, 0);
+            this.tableLayoutPanel15.Controls.Add(this.textBox16, 0, 1);
+            this.tableLayoutPanel15.Controls.Add(this.splitContainer3, 0, 3);
+            this.tableLayoutPanel15.Name = "tableLayoutPanel15";
+            // 
+            // LoadPort03_Start_Btn
+            // 
+            resources.ApplyResources(this.LoadPort03_Start_Btn, "LoadPort03_Start_Btn");
+            this.LoadPort03_Start_Btn.Name = "LoadPort03_Start_Btn";
+            this.LoadPort03_Start_Btn.UseVisualStyleBackColor = true;
+            this.LoadPort03_Start_Btn.Click += new System.EventHandler(this.PortStart_Btn_Click);
+            // 
+            // LoadPort03Assign_Gv
+            // 
+            this.LoadPort03Assign_Gv.AllowUserToAddRows = false;
+            this.LoadPort03Assign_Gv.AllowUserToDeleteRows = false;
+            this.LoadPort03Assign_Gv.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.DisplayedCells;
+            this.LoadPort03Assign_Gv.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            resources.ApplyResources(this.LoadPort03Assign_Gv, "LoadPort03Assign_Gv");
+            this.LoadPort03Assign_Gv.Name = "LoadPort03Assign_Gv";
+            this.LoadPort03Assign_Gv.ReadOnly = true;
+            this.LoadPort03Assign_Gv.RowHeadersVisible = false;
+            dataGridViewCellStyle9.Font = new System.Drawing.Font("微軟正黑體", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
+            this.LoadPort03Assign_Gv.RowsDefaultCellStyle = dataGridViewCellStyle9;
+            this.LoadPort03Assign_Gv.RowTemplate.Height = 21;
+            this.LoadPort03Assign_Gv.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.LoadPort03Assign_Gv.StandardTab = true;
+            this.LoadPort03Assign_Gv.CellFormatting += new System.Windows.Forms.DataGridViewCellFormattingEventHandler(this.Assign_Gv_CellFormatting);
+            this.LoadPort03Assign_Gv.DataBindingComplete += new System.Windows.Forms.DataGridViewBindingCompleteEventHandler(this.LoadPort01_DataBindingComplete);
+            this.LoadPort03Assign_Gv.MouseClick += new System.Windows.Forms.MouseEventHandler(this.Assign_Gv_MouseClick);
+            // 
+            // LoadPort03State_lb
+            // 
+            this.LoadPort03State_lb.BackColor = System.Drawing.Color.Transparent;
+            this.LoadPort03State_lb.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            resources.ApplyResources(this.LoadPort03State_lb, "LoadPort03State_lb");
+            this.LoadPort03State_lb.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.LoadPort03State_lb.ForeColor = System.Drawing.Color.Black;
+            this.LoadPort03State_lb.Name = "LoadPort03State_lb";
+            this.LoadPort03State_lb.MouseClick += new System.Windows.Forms.MouseEventHandler(this.State_lb_Click);
+            // 
+            // textBox16
+            // 
+            this.textBox16.BackColor = System.Drawing.Color.Green;
+            this.textBox16.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            resources.ApplyResources(this.textBox16, "textBox16");
+            this.textBox16.ForeColor = System.Drawing.Color.Transparent;
+            this.textBox16.Name = "textBox16";
+            // 
+            // splitContainer3
+            // 
+            resources.ApplyResources(this.splitContainer3, "splitContainer3");
+            this.splitContainer3.Name = "splitContainer3";
+            // 
+            // splitContainer3.Panel1
+            // 
+            this.splitContainer3.Panel1.Controls.Add(this.label31);
+            // 
+            // splitContainer3.Panel2
+            // 
+            this.splitContainer3.Panel2.Controls.Add(this.label30);
+            // 
+            // label31
+            // 
+            this.label31.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.label31.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            resources.ApplyResources(this.label31, "label31");
+            this.label31.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.label31.ForeColor = System.Drawing.Color.Black;
+            this.label31.Name = "label31";
+            // 
+            // label30
+            // 
+            this.label30.BackColor = System.Drawing.Color.Transparent;
+            this.label30.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            resources.ApplyResources(this.label30, "label30");
+            this.label30.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.label30.ForeColor = System.Drawing.Color.Black;
+            this.label30.Name = "label30";
             // 
             // tabStatus
             // 
@@ -3556,6 +4175,7 @@ namespace Adam
             this.tabControl3.Controls.Add(this.tabPage13);
             this.tabControl3.Controls.Add(this.tabPage14);
             this.tabControl3.Controls.Add(this.tp_bk);
+            this.tabControl3.Controls.Add(this.tabPage1);
             this.tabControl3.DrawMode = System.Windows.Forms.TabDrawMode.OwnerDrawFixed;
             this.tabControl3.Multiline = true;
             this.tabControl3.Name = "tabControl3";
@@ -5865,605 +6485,125 @@ namespace Adam
             resources.ApplyResources(this.panel3, "panel3");
             this.panel3.Name = "panel3";
             // 
-            // splitContainer17
-            // 
-            resources.ApplyResources(this.splitContainer17, "splitContainer17");
-            this.splitContainer17.Name = "splitContainer17";
-            // 
-            // splitContainer17.Panel1
-            // 
-            this.splitContainer17.Panel1.Controls.Add(this.label53);
-            // 
-            // splitContainer17.Panel2
-            // 
-            this.splitContainer17.Panel2.Controls.Add(this.label54);
-            // 
-            // label54
-            // 
-            this.label54.BackColor = System.Drawing.Color.Transparent;
-            this.label54.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            resources.ApplyResources(this.label54, "label54");
-            this.label54.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.label54.ForeColor = System.Drawing.Color.Black;
-            this.label54.Name = "label54";
-            // 
-            // label53
-            // 
-            this.label53.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
-            this.label53.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            resources.ApplyResources(this.label53, "label53");
-            this.label53.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.label53.ForeColor = System.Drawing.Color.Black;
-            this.label53.Name = "label53";
-            // 
-            // textBox20
-            // 
-            this.textBox20.BackColor = System.Drawing.Color.Green;
-            this.textBox20.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            resources.ApplyResources(this.textBox20, "textBox20");
-            this.textBox20.ForeColor = System.Drawing.Color.Transparent;
-            this.textBox20.Name = "textBox20";
-            // 
-            // LoadPort06State_lb
-            // 
-            this.LoadPort06State_lb.BackColor = System.Drawing.Color.Transparent;
-            this.LoadPort06State_lb.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            resources.ApplyResources(this.LoadPort06State_lb, "LoadPort06State_lb");
-            this.LoadPort06State_lb.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.LoadPort06State_lb.ForeColor = System.Drawing.Color.Black;
-            this.LoadPort06State_lb.Name = "LoadPort06State_lb";
-            this.LoadPort06State_lb.MouseClick += new System.Windows.Forms.MouseEventHandler(this.State_lb_Click);
-            // 
-            // LoadPort06Assign_Gv
-            // 
-            this.LoadPort06Assign_Gv.AllowUserToAddRows = false;
-            this.LoadPort06Assign_Gv.AllowUserToDeleteRows = false;
-            this.LoadPort06Assign_Gv.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.DisplayedCells;
-            this.LoadPort06Assign_Gv.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            resources.ApplyResources(this.LoadPort06Assign_Gv, "LoadPort06Assign_Gv");
-            this.LoadPort06Assign_Gv.Name = "LoadPort06Assign_Gv";
-            this.LoadPort06Assign_Gv.ReadOnly = true;
-            this.LoadPort06Assign_Gv.RowHeadersVisible = false;
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("微軟正黑體", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-            this.LoadPort06Assign_Gv.RowsDefaultCellStyle = dataGridViewCellStyle2;
-            this.LoadPort06Assign_Gv.RowTemplate.Height = 21;
-            this.LoadPort06Assign_Gv.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.LoadPort06Assign_Gv.StandardTab = true;
-            this.LoadPort06Assign_Gv.CellFormatting += new System.Windows.Forms.DataGridViewCellFormattingEventHandler(this.Assign_Gv_CellFormatting);
-            // 
-            // tableLayoutPanel22
-            // 
-            resources.ApplyResources(this.tableLayoutPanel22, "tableLayoutPanel22");
-            this.tableLayoutPanel22.Controls.Add(this.LoadPort06_Start_Btn, 0, 4);
-            this.tableLayoutPanel22.Controls.Add(this.LoadPort06Assign_Gv, 0, 2);
-            this.tableLayoutPanel22.Controls.Add(this.LoadPort06State_lb, 0, 0);
-            this.tableLayoutPanel22.Controls.Add(this.textBox20, 0, 1);
-            this.tableLayoutPanel22.Controls.Add(this.splitContainer17, 0, 3);
-            this.tableLayoutPanel22.Name = "tableLayoutPanel22";
-            // 
-            // splitContainer16
-            // 
-            resources.ApplyResources(this.splitContainer16, "splitContainer16");
-            this.splitContainer16.Name = "splitContainer16";
-            // 
-            // splitContainer16.Panel1
-            // 
-            this.splitContainer16.Panel1.Controls.Add(this.label49);
-            // 
-            // splitContainer16.Panel2
-            // 
-            this.splitContainer16.Panel2.Controls.Add(this.label51);
-            // 
-            // label51
-            // 
-            this.label51.BackColor = System.Drawing.Color.Transparent;
-            this.label51.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            resources.ApplyResources(this.label51, "label51");
-            this.label51.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.label51.ForeColor = System.Drawing.Color.Black;
-            this.label51.Name = "label51";
-            // 
-            // label49
-            // 
-            this.label49.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
-            this.label49.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            resources.ApplyResources(this.label49, "label49");
-            this.label49.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.label49.ForeColor = System.Drawing.Color.Black;
-            this.label49.Name = "label49";
-            // 
-            // textBox19
-            // 
-            this.textBox19.BackColor = System.Drawing.Color.Green;
-            this.textBox19.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            resources.ApplyResources(this.textBox19, "textBox19");
-            this.textBox19.ForeColor = System.Drawing.Color.Transparent;
-            this.textBox19.Name = "textBox19";
-            // 
-            // LoadPort05State_lb
-            // 
-            this.LoadPort05State_lb.BackColor = System.Drawing.Color.Transparent;
-            this.LoadPort05State_lb.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            resources.ApplyResources(this.LoadPort05State_lb, "LoadPort05State_lb");
-            this.LoadPort05State_lb.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.LoadPort05State_lb.ForeColor = System.Drawing.Color.Black;
-            this.LoadPort05State_lb.Name = "LoadPort05State_lb";
-            this.LoadPort05State_lb.MouseClick += new System.Windows.Forms.MouseEventHandler(this.State_lb_Click);
-            // 
-            // LoadPort05Assign_Gv
-            // 
-            this.LoadPort05Assign_Gv.AllowUserToAddRows = false;
-            this.LoadPort05Assign_Gv.AllowUserToDeleteRows = false;
-            this.LoadPort05Assign_Gv.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.DisplayedCells;
-            this.LoadPort05Assign_Gv.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            resources.ApplyResources(this.LoadPort05Assign_Gv, "LoadPort05Assign_Gv");
-            this.LoadPort05Assign_Gv.Name = "LoadPort05Assign_Gv";
-            this.LoadPort05Assign_Gv.ReadOnly = true;
-            this.LoadPort05Assign_Gv.RowHeadersVisible = false;
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("微軟正黑體", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-            this.LoadPort05Assign_Gv.RowsDefaultCellStyle = dataGridViewCellStyle3;
-            this.LoadPort05Assign_Gv.RowTemplate.Height = 21;
-            this.LoadPort05Assign_Gv.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.LoadPort05Assign_Gv.StandardTab = true;
-            this.LoadPort05Assign_Gv.CellFormatting += new System.Windows.Forms.DataGridViewCellFormattingEventHandler(this.Assign_Gv_CellFormatting);
-            this.LoadPort05Assign_Gv.MouseClick += new System.Windows.Forms.MouseEventHandler(this.Assign_Gv_MouseClick);
-            // 
-            // tableLayoutPanel21
-            // 
-            resources.ApplyResources(this.tableLayoutPanel21, "tableLayoutPanel21");
-            this.tableLayoutPanel21.Controls.Add(this.LoadPort05_Start_Btn, 0, 4);
-            this.tableLayoutPanel21.Controls.Add(this.LoadPort05Assign_Gv, 0, 2);
-            this.tableLayoutPanel21.Controls.Add(this.LoadPort05State_lb, 0, 0);
-            this.tableLayoutPanel21.Controls.Add(this.textBox19, 0, 1);
-            this.tableLayoutPanel21.Controls.Add(this.splitContainer16, 0, 3);
-            this.tableLayoutPanel21.Name = "tableLayoutPanel21";
-            // 
-            // splitContainer14
-            // 
-            resources.ApplyResources(this.splitContainer14, "splitContainer14");
-            this.splitContainer14.Name = "splitContainer14";
-            // 
-            // splitContainer14.Panel1
-            // 
-            this.splitContainer14.Panel1.Controls.Add(this.label43);
-            // 
-            // splitContainer14.Panel2
-            // 
-            this.splitContainer14.Panel2.Controls.Add(this.label44);
-            // 
-            // label44
-            // 
-            this.label44.BackColor = System.Drawing.Color.Transparent;
-            this.label44.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            resources.ApplyResources(this.label44, "label44");
-            this.label44.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.label44.ForeColor = System.Drawing.Color.Black;
-            this.label44.Name = "label44";
-            // 
-            // label43
-            // 
-            this.label43.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
-            this.label43.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            resources.ApplyResources(this.label43, "label43");
-            this.label43.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.label43.ForeColor = System.Drawing.Color.Black;
-            this.label43.Name = "label43";
-            // 
-            // textBox17
-            // 
-            this.textBox17.BackColor = System.Drawing.Color.Green;
-            this.textBox17.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            resources.ApplyResources(this.textBox17, "textBox17");
-            this.textBox17.ForeColor = System.Drawing.Color.Transparent;
-            this.textBox17.Name = "textBox17";
-            // 
-            // LoadPort07State_lb
-            // 
-            this.LoadPort07State_lb.BackColor = System.Drawing.Color.Transparent;
-            this.LoadPort07State_lb.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            resources.ApplyResources(this.LoadPort07State_lb, "LoadPort07State_lb");
-            this.LoadPort07State_lb.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.LoadPort07State_lb.ForeColor = System.Drawing.Color.Black;
-            this.LoadPort07State_lb.Name = "LoadPort07State_lb";
-            this.LoadPort07State_lb.MouseClick += new System.Windows.Forms.MouseEventHandler(this.State_lb_Click);
-            // 
-            // LoadPort07Assign_Gv
-            // 
-            this.LoadPort07Assign_Gv.AllowUserToAddRows = false;
-            this.LoadPort07Assign_Gv.AllowUserToDeleteRows = false;
-            this.LoadPort07Assign_Gv.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.DisplayedCells;
-            this.LoadPort07Assign_Gv.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            resources.ApplyResources(this.LoadPort07Assign_Gv, "LoadPort07Assign_Gv");
-            this.LoadPort07Assign_Gv.Name = "LoadPort07Assign_Gv";
-            this.LoadPort07Assign_Gv.ReadOnly = true;
-            this.LoadPort07Assign_Gv.RowHeadersVisible = false;
-            dataGridViewCellStyle5.Font = new System.Drawing.Font("微軟正黑體", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-            this.LoadPort07Assign_Gv.RowsDefaultCellStyle = dataGridViewCellStyle5;
-            this.LoadPort07Assign_Gv.RowTemplate.Height = 21;
-            this.LoadPort07Assign_Gv.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.LoadPort07Assign_Gv.StandardTab = true;
-            this.LoadPort07Assign_Gv.CellFormatting += new System.Windows.Forms.DataGridViewCellFormattingEventHandler(this.Assign_Gv_CellFormatting);
-            // 
-            // tableLayoutPanel19
-            // 
-            resources.ApplyResources(this.tableLayoutPanel19, "tableLayoutPanel19");
-            this.tableLayoutPanel19.Controls.Add(this.LoadPort07_Start_Btn, 0, 4);
-            this.tableLayoutPanel19.Controls.Add(this.LoadPort07Assign_Gv, 0, 2);
-            this.tableLayoutPanel19.Controls.Add(this.LoadPort07State_lb, 0, 0);
-            this.tableLayoutPanel19.Controls.Add(this.textBox17, 0, 1);
-            this.tableLayoutPanel19.Controls.Add(this.splitContainer14, 0, 3);
-            this.tableLayoutPanel19.Name = "tableLayoutPanel19";
-            // 
-            // splitContainer3
-            // 
-            resources.ApplyResources(this.splitContainer3, "splitContainer3");
-            this.splitContainer3.Name = "splitContainer3";
-            // 
-            // splitContainer3.Panel1
-            // 
-            this.splitContainer3.Panel1.Controls.Add(this.label31);
-            // 
-            // splitContainer3.Panel2
-            // 
-            this.splitContainer3.Panel2.Controls.Add(this.label30);
-            // 
-            // label30
-            // 
-            this.label30.BackColor = System.Drawing.Color.Transparent;
-            this.label30.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            resources.ApplyResources(this.label30, "label30");
-            this.label30.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.label30.ForeColor = System.Drawing.Color.Black;
-            this.label30.Name = "label30";
-            // 
-            // label31
-            // 
-            this.label31.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
-            this.label31.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            resources.ApplyResources(this.label31, "label31");
-            this.label31.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.label31.ForeColor = System.Drawing.Color.Black;
-            this.label31.Name = "label31";
-            // 
-            // textBox16
-            // 
-            this.textBox16.BackColor = System.Drawing.Color.Green;
-            this.textBox16.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            resources.ApplyResources(this.textBox16, "textBox16");
-            this.textBox16.ForeColor = System.Drawing.Color.Transparent;
-            this.textBox16.Name = "textBox16";
-            // 
-            // LoadPort03State_lb
-            // 
-            this.LoadPort03State_lb.BackColor = System.Drawing.Color.Transparent;
-            this.LoadPort03State_lb.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            resources.ApplyResources(this.LoadPort03State_lb, "LoadPort03State_lb");
-            this.LoadPort03State_lb.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.LoadPort03State_lb.ForeColor = System.Drawing.Color.Black;
-            this.LoadPort03State_lb.Name = "LoadPort03State_lb";
-            this.LoadPort03State_lb.MouseClick += new System.Windows.Forms.MouseEventHandler(this.State_lb_Click);
-            // 
-            // LoadPort03Assign_Gv
-            // 
-            this.LoadPort03Assign_Gv.AllowUserToAddRows = false;
-            this.LoadPort03Assign_Gv.AllowUserToDeleteRows = false;
-            this.LoadPort03Assign_Gv.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.DisplayedCells;
-            this.LoadPort03Assign_Gv.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            resources.ApplyResources(this.LoadPort03Assign_Gv, "LoadPort03Assign_Gv");
-            this.LoadPort03Assign_Gv.Name = "LoadPort03Assign_Gv";
-            this.LoadPort03Assign_Gv.ReadOnly = true;
-            this.LoadPort03Assign_Gv.RowHeadersVisible = false;
-            dataGridViewCellStyle9.Font = new System.Drawing.Font("微軟正黑體", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-            this.LoadPort03Assign_Gv.RowsDefaultCellStyle = dataGridViewCellStyle9;
-            this.LoadPort03Assign_Gv.RowTemplate.Height = 21;
-            this.LoadPort03Assign_Gv.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.LoadPort03Assign_Gv.StandardTab = true;
-            this.LoadPort03Assign_Gv.CellFormatting += new System.Windows.Forms.DataGridViewCellFormattingEventHandler(this.Assign_Gv_CellFormatting);
-            this.LoadPort03Assign_Gv.DataBindingComplete += new System.Windows.Forms.DataGridViewBindingCompleteEventHandler(this.LoadPort01_DataBindingComplete);
-            this.LoadPort03Assign_Gv.MouseClick += new System.Windows.Forms.MouseEventHandler(this.Assign_Gv_MouseClick);
-            // 
-            // tableLayoutPanel15
-            // 
-            resources.ApplyResources(this.tableLayoutPanel15, "tableLayoutPanel15");
-            this.tableLayoutPanel15.Controls.Add(this.LoadPort03_Start_Btn, 0, 4);
-            this.tableLayoutPanel15.Controls.Add(this.LoadPort03Assign_Gv, 0, 2);
-            this.tableLayoutPanel15.Controls.Add(this.LoadPort03State_lb, 0, 0);
-            this.tableLayoutPanel15.Controls.Add(this.textBox16, 0, 1);
-            this.tableLayoutPanel15.Controls.Add(this.splitContainer3, 0, 3);
-            this.tableLayoutPanel15.Name = "tableLayoutPanel15";
-            // 
-            // LoadPort01_Start_Btn
-            // 
-            resources.ApplyResources(this.LoadPort01_Start_Btn, "LoadPort01_Start_Btn");
-            this.LoadPort01_Start_Btn.Name = "LoadPort01_Start_Btn";
-            this.LoadPort01_Start_Btn.UseVisualStyleBackColor = true;
-            this.LoadPort01_Start_Btn.Click += new System.EventHandler(this.PortStart_Btn_Click);
-            // 
-            // splitContainer7
-            // 
-            resources.ApplyResources(this.splitContainer7, "splitContainer7");
-            this.splitContainer7.Name = "splitContainer7";
-            // 
-            // splitContainer7.Panel1
-            // 
-            this.splitContainer7.Panel1.Controls.Add(this.label36);
-            // 
-            // splitContainer7.Panel2
-            // 
-            this.splitContainer7.Panel2.Controls.Add(this.label37);
-            // 
-            // label37
-            // 
-            this.label37.BackColor = System.Drawing.Color.Transparent;
-            this.label37.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            resources.ApplyResources(this.label37, "label37");
-            this.label37.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.label37.ForeColor = System.Drawing.Color.Black;
-            this.label37.Name = "label37";
-            // 
-            // label36
-            // 
-            this.label36.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
-            this.label36.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            resources.ApplyResources(this.label36, "label36");
-            this.label36.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.label36.ForeColor = System.Drawing.Color.Black;
-            this.label36.Name = "label36";
-            // 
-            // textBox10
-            // 
-            this.textBox10.BackColor = System.Drawing.Color.Green;
-            this.textBox10.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            resources.ApplyResources(this.textBox10, "textBox10");
-            this.textBox10.ForeColor = System.Drawing.Color.Transparent;
-            this.textBox10.Name = "textBox10";
-            // 
-            // LoadPort01State_lb
-            // 
-            this.LoadPort01State_lb.BackColor = System.Drawing.Color.Transparent;
-            this.LoadPort01State_lb.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            resources.ApplyResources(this.LoadPort01State_lb, "LoadPort01State_lb");
-            this.LoadPort01State_lb.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.LoadPort01State_lb.ForeColor = System.Drawing.Color.Black;
-            this.LoadPort01State_lb.Name = "LoadPort01State_lb";
-            this.LoadPort01State_lb.MouseClick += new System.Windows.Forms.MouseEventHandler(this.State_lb_Click);
-            // 
-            // LoadPort01Assign_Gv
-            // 
-            this.LoadPort01Assign_Gv.AllowUserToAddRows = false;
-            this.LoadPort01Assign_Gv.AllowUserToDeleteRows = false;
-            this.LoadPort01Assign_Gv.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.DisplayedCells;
-            this.LoadPort01Assign_Gv.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            resources.ApplyResources(this.LoadPort01Assign_Gv, "LoadPort01Assign_Gv");
-            this.LoadPort01Assign_Gv.Name = "LoadPort01Assign_Gv";
-            this.LoadPort01Assign_Gv.ReadOnly = true;
-            this.LoadPort01Assign_Gv.RowHeadersVisible = false;
-            dataGridViewCellStyle7.Font = new System.Drawing.Font("微軟正黑體", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-            this.LoadPort01Assign_Gv.RowsDefaultCellStyle = dataGridViewCellStyle7;
-            this.LoadPort01Assign_Gv.RowTemplate.Height = 21;
-            this.LoadPort01Assign_Gv.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.LoadPort01Assign_Gv.StandardTab = true;
-            this.LoadPort01Assign_Gv.CellFormatting += new System.Windows.Forms.DataGridViewCellFormattingEventHandler(this.Assign_Gv_CellFormatting);
-            this.LoadPort01Assign_Gv.MouseClick += new System.Windows.Forms.MouseEventHandler(this.Assign_Gv_MouseClick);
-            // 
-            // tableLayoutPanel17
-            // 
-            resources.ApplyResources(this.tableLayoutPanel17, "tableLayoutPanel17");
-            this.tableLayoutPanel17.Controls.Add(this.LoadPort01Assign_Gv, 0, 2);
-            this.tableLayoutPanel17.Controls.Add(this.LoadPort01State_lb, 0, 0);
-            this.tableLayoutPanel17.Controls.Add(this.textBox10, 0, 1);
-            this.tableLayoutPanel17.Controls.Add(this.splitContainer7, 0, 3);
-            this.tableLayoutPanel17.Controls.Add(this.LoadPort01_Start_Btn, 0, 4);
-            this.tableLayoutPanel17.Name = "tableLayoutPanel17";
-            // 
-            // splitContainer6
-            // 
-            resources.ApplyResources(this.splitContainer6, "splitContainer6");
-            this.splitContainer6.Name = "splitContainer6";
-            // 
-            // splitContainer6.Panel1
-            // 
-            this.splitContainer6.Panel1.Controls.Add(this.label33);
-            // 
-            // splitContainer6.Panel2
-            // 
-            this.splitContainer6.Panel2.Controls.Add(this.label34);
-            // 
-            // label34
-            // 
-            this.label34.BackColor = System.Drawing.Color.Transparent;
-            this.label34.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            resources.ApplyResources(this.label34, "label34");
-            this.label34.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.label34.ForeColor = System.Drawing.Color.Black;
-            this.label34.Name = "label34";
-            // 
-            // label33
-            // 
-            this.label33.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
-            this.label33.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            resources.ApplyResources(this.label33, "label33");
-            this.label33.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.label33.ForeColor = System.Drawing.Color.Black;
-            this.label33.Name = "label33";
-            // 
-            // textBox1
-            // 
-            this.textBox1.BackColor = System.Drawing.Color.Green;
-            this.textBox1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            resources.ApplyResources(this.textBox1, "textBox1");
-            this.textBox1.ForeColor = System.Drawing.Color.Transparent;
-            this.textBox1.Name = "textBox1";
-            // 
-            // LoadPort04State_lb
-            // 
-            this.LoadPort04State_lb.BackColor = System.Drawing.Color.Transparent;
-            this.LoadPort04State_lb.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            resources.ApplyResources(this.LoadPort04State_lb, "LoadPort04State_lb");
-            this.LoadPort04State_lb.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.LoadPort04State_lb.ForeColor = System.Drawing.Color.Black;
-            this.LoadPort04State_lb.Name = "LoadPort04State_lb";
-            this.LoadPort04State_lb.MouseClick += new System.Windows.Forms.MouseEventHandler(this.State_lb_Click);
-            // 
-            // LoadPort04Assign_Gv
-            // 
-            this.LoadPort04Assign_Gv.AllowUserToAddRows = false;
-            this.LoadPort04Assign_Gv.AllowUserToDeleteRows = false;
-            this.LoadPort04Assign_Gv.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.DisplayedCells;
-            this.LoadPort04Assign_Gv.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            resources.ApplyResources(this.LoadPort04Assign_Gv, "LoadPort04Assign_Gv");
-            this.LoadPort04Assign_Gv.Name = "LoadPort04Assign_Gv";
-            this.LoadPort04Assign_Gv.ReadOnly = true;
-            this.LoadPort04Assign_Gv.RowHeadersVisible = false;
-            dataGridViewCellStyle8.Font = new System.Drawing.Font("微軟正黑體", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-            this.LoadPort04Assign_Gv.RowsDefaultCellStyle = dataGridViewCellStyle8;
-            this.LoadPort04Assign_Gv.RowTemplate.Height = 21;
-            this.LoadPort04Assign_Gv.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.LoadPort04Assign_Gv.StandardTab = true;
-            this.LoadPort04Assign_Gv.CellFormatting += new System.Windows.Forms.DataGridViewCellFormattingEventHandler(this.Assign_Gv_CellFormatting);
-            this.LoadPort04Assign_Gv.MouseClick += new System.Windows.Forms.MouseEventHandler(this.Assign_Gv_MouseClick);
-            // 
-            // tableLayoutPanel16
-            // 
-            resources.ApplyResources(this.tableLayoutPanel16, "tableLayoutPanel16");
-            this.tableLayoutPanel16.Controls.Add(this.LoadPort04_Start_Btn, 0, 4);
-            this.tableLayoutPanel16.Controls.Add(this.LoadPort04Assign_Gv, 0, 2);
-            this.tableLayoutPanel16.Controls.Add(this.LoadPort04State_lb, 0, 0);
-            this.tableLayoutPanel16.Controls.Add(this.textBox1, 0, 1);
-            this.tableLayoutPanel16.Controls.Add(this.splitContainer6, 0, 3);
-            this.tableLayoutPanel16.Name = "tableLayoutPanel16";
-            // 
-            // splitContainer11
-            // 
-            resources.ApplyResources(this.splitContainer11, "splitContainer11");
-            this.splitContainer11.Name = "splitContainer11";
-            // 
-            // splitContainer11.Panel1
-            // 
-            this.splitContainer11.Panel1.Controls.Add(this.label40);
-            // 
-            // splitContainer11.Panel2
-            // 
-            this.splitContainer11.Panel2.Controls.Add(this.label41);
-            // 
-            // label41
-            // 
-            this.label41.BackColor = System.Drawing.Color.Transparent;
-            this.label41.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            resources.ApplyResources(this.label41, "label41");
-            this.label41.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.label41.ForeColor = System.Drawing.Color.Black;
-            this.label41.Name = "label41";
-            // 
-            // label40
-            // 
-            this.label40.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
-            this.label40.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            resources.ApplyResources(this.label40, "label40");
-            this.label40.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.label40.ForeColor = System.Drawing.Color.Black;
-            this.label40.Name = "label40";
-            // 
-            // textBox11
-            // 
-            this.textBox11.BackColor = System.Drawing.Color.Green;
-            this.textBox11.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            resources.ApplyResources(this.textBox11, "textBox11");
-            this.textBox11.ForeColor = System.Drawing.Color.Transparent;
-            this.textBox11.Name = "textBox11";
-            // 
-            // LoadPort02State_lb
-            // 
-            this.LoadPort02State_lb.BackColor = System.Drawing.Color.Transparent;
-            this.LoadPort02State_lb.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            resources.ApplyResources(this.LoadPort02State_lb, "LoadPort02State_lb");
-            this.LoadPort02State_lb.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.LoadPort02State_lb.ForeColor = System.Drawing.Color.Black;
-            this.LoadPort02State_lb.Name = "LoadPort02State_lb";
-            this.LoadPort02State_lb.MouseClick += new System.Windows.Forms.MouseEventHandler(this.State_lb_Click);
-            // 
-            // LoadPort02Assign_Gv
-            // 
-            this.LoadPort02Assign_Gv.AllowUserToAddRows = false;
-            this.LoadPort02Assign_Gv.AllowUserToDeleteRows = false;
-            this.LoadPort02Assign_Gv.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.DisplayedCells;
-            this.LoadPort02Assign_Gv.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            resources.ApplyResources(this.LoadPort02Assign_Gv, "LoadPort02Assign_Gv");
-            this.LoadPort02Assign_Gv.Name = "LoadPort02Assign_Gv";
-            this.LoadPort02Assign_Gv.ReadOnly = true;
-            this.LoadPort02Assign_Gv.RowHeadersVisible = false;
-            dataGridViewCellStyle6.Font = new System.Drawing.Font("微軟正黑體", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-            this.LoadPort02Assign_Gv.RowsDefaultCellStyle = dataGridViewCellStyle6;
-            this.LoadPort02Assign_Gv.RowTemplate.Height = 21;
-            this.LoadPort02Assign_Gv.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.LoadPort02Assign_Gv.StandardTab = true;
-            this.LoadPort02Assign_Gv.CellFormatting += new System.Windows.Forms.DataGridViewCellFormattingEventHandler(this.Assign_Gv_CellFormatting);
-            this.LoadPort02Assign_Gv.MouseClick += new System.Windows.Forms.MouseEventHandler(this.Assign_Gv_MouseClick);
-            // 
-            // tableLayoutPanel18
-            // 
-            resources.ApplyResources(this.tableLayoutPanel18, "tableLayoutPanel18");
-            this.tableLayoutPanel18.Controls.Add(this.LoadPort02Assign_Gv, 0, 2);
-            this.tableLayoutPanel18.Controls.Add(this.LoadPort02State_lb, 0, 0);
-            this.tableLayoutPanel18.Controls.Add(this.textBox11, 0, 1);
-            this.tableLayoutPanel18.Controls.Add(this.splitContainer11, 0, 3);
-            this.tableLayoutPanel18.Controls.Add(this.LoadPort02_Start_Btn, 0, 4);
-            this.tableLayoutPanel18.Name = "tableLayoutPanel18";
-            // 
-            // LoadPort02_Start_Btn
-            // 
-            resources.ApplyResources(this.LoadPort02_Start_Btn, "LoadPort02_Start_Btn");
-            this.LoadPort02_Start_Btn.Name = "LoadPort02_Start_Btn";
-            this.LoadPort02_Start_Btn.UseVisualStyleBackColor = true;
-            this.LoadPort02_Start_Btn.Click += new System.EventHandler(this.PortStart_Btn_Click);
-            // 
-            // LoadPort03_Start_Btn
-            // 
-            resources.ApplyResources(this.LoadPort03_Start_Btn, "LoadPort03_Start_Btn");
-            this.LoadPort03_Start_Btn.Name = "LoadPort03_Start_Btn";
-            this.LoadPort03_Start_Btn.UseVisualStyleBackColor = true;
-            this.LoadPort03_Start_Btn.Click += new System.EventHandler(this.PortStart_Btn_Click);
-            // 
-            // LoadPort04_Start_Btn
-            // 
-            resources.ApplyResources(this.LoadPort04_Start_Btn, "LoadPort04_Start_Btn");
-            this.LoadPort04_Start_Btn.Name = "LoadPort04_Start_Btn";
-            this.LoadPort04_Start_Btn.UseVisualStyleBackColor = true;
-            this.LoadPort04_Start_Btn.Click += new System.EventHandler(this.PortStart_Btn_Click);
-            // 
-            // LoadPort05_Start_Btn
-            // 
-            resources.ApplyResources(this.LoadPort05_Start_Btn, "LoadPort05_Start_Btn");
-            this.LoadPort05_Start_Btn.Name = "LoadPort05_Start_Btn";
-            this.LoadPort05_Start_Btn.UseVisualStyleBackColor = true;
-            this.LoadPort05_Start_Btn.Click += new System.EventHandler(this.PortStart_Btn_Click);
-            // 
-            // LoadPort06_Start_Btn
-            // 
-            resources.ApplyResources(this.LoadPort06_Start_Btn, "LoadPort06_Start_Btn");
-            this.LoadPort06_Start_Btn.Name = "LoadPort06_Start_Btn";
-            this.LoadPort06_Start_Btn.UseVisualStyleBackColor = true;
-            this.LoadPort06_Start_Btn.Click += new System.EventHandler(this.PortStart_Btn_Click);
-            // 
-            // LoadPort07_Start_Btn
-            // 
-            resources.ApplyResources(this.LoadPort07_Start_Btn, "LoadPort07_Start_Btn");
-            this.LoadPort07_Start_Btn.Name = "LoadPort07_Start_Btn";
-            this.LoadPort07_Start_Btn.UseVisualStyleBackColor = true;
-            this.LoadPort07_Start_Btn.Click += new System.EventHandler(this.PortStart_Btn_Click);
-            // 
-            // LoadPort08_Start_Btn
-            // 
-            resources.ApplyResources(this.LoadPort08_Start_Btn, "LoadPort08_Start_Btn");
-            this.LoadPort08_Start_Btn.Name = "LoadPort08_Start_Btn";
-            this.LoadPort08_Start_Btn.UseVisualStyleBackColor = true;
-            this.LoadPort08_Start_Btn.Click += new System.EventHandler(this.PortStart_Btn_Click);
-            // 
             // directorySearcher1
             // 
             this.directorySearcher1.ClientTimeout = System.TimeSpan.Parse("-00:00:01");
             this.directorySearcher1.ServerPageTimeLimit = System.TimeSpan.Parse("-00:00:01");
             this.directorySearcher1.ServerTimeLimit = System.TimeSpan.Parse("-00:00:01");
+            // 
+            // tabPage1
+            // 
+            this.tabPage1.Controls.Add(this.gbSettingSECS);
+            resources.ApplyResources(this.tabPage1, "tabPage1");
+            this.tabPage1.Name = "tabPage1";
+            this.tabPage1.UseVisualStyleBackColor = true;
+            // 
+            // gbSettingSECS
+            // 
+            this.gbSettingSECS.BackColor = System.Drawing.SystemColors.Control;
+            this.gbSettingSECS.Controls.Add(this.spcSECSSetting);
+            resources.ApplyResources(this.gbSettingSECS, "gbSettingSECS");
+            this.gbSettingSECS.Name = "gbSettingSECS";
+            this.gbSettingSECS.TabStop = false;
+            // 
+            // spcSECSSetting
+            // 
+            resources.ApplyResources(this.spcSECSSetting, "spcSECSSetting");
+            this.spcSECSSetting.Name = "spcSECSSetting";
+            // 
+            // spcSECSSetting.Panel1
+            // 
+            this.spcSECSSetting.Panel1.Controls.Add(this.gbSettingSECS_L);
+            // 
+            // spcSECSSetting.Panel2
+            // 
+            this.spcSECSSetting.Panel2.Controls.Add(this.gbSettingSECS_R);
+            // 
+            // gbSettingSECS_L
+            // 
+            this.gbSettingSECS_L.Controls.Add(this.tevSECSList);
+            resources.ApplyResources(this.gbSettingSECS_L, "gbSettingSECS_L");
+            this.gbSettingSECS_L.Name = "gbSettingSECS_L";
+            this.gbSettingSECS_L.TabStop = false;
+            // 
+            // tevSECSList
+            // 
+            resources.ApplyResources(this.tevSECSList, "tevSECSList");
+            this.tevSECSList.Name = "tevSECSList";
+            this.tevSECSList.Nodes.AddRange(new System.Windows.Forms.TreeNode[] {
+            ((System.Windows.Forms.TreeNode)(resources.GetObject("tevSECSList.Nodes")))});
+            // 
+            // gbSettingSECS_R
+            // 
+            this.gbSettingSECS_R.Controls.Add(this.button2);
+            this.gbSettingSECS_R.Controls.Add(this.dgvSECSData);
+            resources.ApplyResources(this.gbSettingSECS_R, "gbSettingSECS_R");
+            this.gbSettingSECS_R.Name = "gbSettingSECS_R";
+            this.gbSettingSECS_R.TabStop = false;
+            // 
+            // button2
+            // 
+            resources.ApplyResources(this.button2, "button2");
+            this.button2.Name = "button2";
+            this.button2.UseVisualStyleBackColor = true;
+            // 
+            // dgvSECSData
+            // 
+            this.dgvSECSData.AllowUserToAddRows = false;
+            this.dgvSECSData.AllowUserToDeleteRows = false;
+            this.dgvSECSData.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.dgvSECSData.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvSECSData.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.SECSSettingGrid_Item,
+            this.SECSSettingGrid_Value,
+            this.SECSSettingGrid_Range,
+            this.SECSSettingGrid_Description});
+            resources.ApplyResources(this.dgvSECSData, "dgvSECSData");
+            this.dgvSECSData.Name = "dgvSECSData";
+            this.dgvSECSData.RowTemplate.Height = 24;
+            // 
+            // SECSSettingGrid_Item
+            // 
+            this.SECSSettingGrid_Item.DataPropertyName = "Item";
+            dataGridViewCellStyle76.BackColor = System.Drawing.SystemColors.Control;
+            this.SECSSettingGrid_Item.DefaultCellStyle = dataGridViewCellStyle76;
+            this.SECSSettingGrid_Item.Frozen = true;
+            resources.ApplyResources(this.SECSSettingGrid_Item, "SECSSettingGrid_Item");
+            this.SECSSettingGrid_Item.Name = "SECSSettingGrid_Item";
+            this.SECSSettingGrid_Item.ReadOnly = true;
+            // 
+            // SECSSettingGrid_Value
+            // 
+            this.SECSSettingGrid_Value.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.SECSSettingGrid_Value.DataPropertyName = "Value";
+            dataGridViewCellStyle77.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle77.Font = new System.Drawing.Font("微軟正黑體", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
+            this.SECSSettingGrid_Value.DefaultCellStyle = dataGridViewCellStyle77;
+            this.SECSSettingGrid_Value.FillWeight = 12F;
+            resources.ApplyResources(this.SECSSettingGrid_Value, "SECSSettingGrid_Value");
+            this.SECSSettingGrid_Value.Name = "SECSSettingGrid_Value";
+            // 
+            // SECSSettingGrid_Range
+            // 
+            this.SECSSettingGrid_Range.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.SECSSettingGrid_Range.DataPropertyName = "Range";
+            dataGridViewCellStyle78.BackColor = System.Drawing.SystemColors.Control;
+            this.SECSSettingGrid_Range.DefaultCellStyle = dataGridViewCellStyle78;
+            this.SECSSettingGrid_Range.FillWeight = 12F;
+            resources.ApplyResources(this.SECSSettingGrid_Range, "SECSSettingGrid_Range");
+            this.SECSSettingGrid_Range.Name = "SECSSettingGrid_Range";
+            this.SECSSettingGrid_Range.ReadOnly = true;
+            // 
+            // SECSSettingGrid_Description
+            // 
+            this.SECSSettingGrid_Description.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.SECSSettingGrid_Description.DataPropertyName = "Description";
+            dataGridViewCellStyle79.BackColor = System.Drawing.SystemColors.Control;
+            this.SECSSettingGrid_Description.DefaultCellStyle = dataGridViewCellStyle79;
+            this.SECSSettingGrid_Description.FillWeight = 76F;
+            resources.ApplyResources(this.SECSSettingGrid_Description, "SECSSettingGrid_Description");
+            this.SECSSettingGrid_Description.Name = "SECSSettingGrid_Description";
+            this.SECSSettingGrid_Description.ReadOnly = true;
             // 
             // FormMain
             // 
@@ -6562,6 +6702,20 @@ namespace Adam
             this.tableLayoutPanel14.ResumeLayout(false);
             this.groupBox11.ResumeLayout(false);
             this.tableLayoutPanel12.ResumeLayout(false);
+            this.tableLayoutPanel22.ResumeLayout(false);
+            this.tableLayoutPanel22.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.LoadPort06Assign_Gv)).EndInit();
+            this.splitContainer17.Panel1.ResumeLayout(false);
+            this.splitContainer17.Panel2.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.splitContainer17)).EndInit();
+            this.splitContainer17.ResumeLayout(false);
+            this.tableLayoutPanel21.ResumeLayout(false);
+            this.tableLayoutPanel21.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.LoadPort05Assign_Gv)).EndInit();
+            this.splitContainer16.Panel1.ResumeLayout(false);
+            this.splitContainer16.Panel2.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.splitContainer16)).EndInit();
+            this.splitContainer16.ResumeLayout(false);
             this.tableLayoutPanel20.ResumeLayout(false);
             this.tableLayoutPanel20.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.LoadPort08Assign_Gv)).EndInit();
@@ -6569,6 +6723,41 @@ namespace Adam
             this.splitContainer15.Panel2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer15)).EndInit();
             this.splitContainer15.ResumeLayout(false);
+            this.tableLayoutPanel19.ResumeLayout(false);
+            this.tableLayoutPanel19.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.LoadPort07Assign_Gv)).EndInit();
+            this.splitContainer14.Panel1.ResumeLayout(false);
+            this.splitContainer14.Panel2.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.splitContainer14)).EndInit();
+            this.splitContainer14.ResumeLayout(false);
+            this.tableLayoutPanel18.ResumeLayout(false);
+            this.tableLayoutPanel18.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.LoadPort02Assign_Gv)).EndInit();
+            this.splitContainer11.Panel1.ResumeLayout(false);
+            this.splitContainer11.Panel2.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.splitContainer11)).EndInit();
+            this.splitContainer11.ResumeLayout(false);
+            this.tableLayoutPanel17.ResumeLayout(false);
+            this.tableLayoutPanel17.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.LoadPort01Assign_Gv)).EndInit();
+            this.splitContainer7.Panel1.ResumeLayout(false);
+            this.splitContainer7.Panel2.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.splitContainer7)).EndInit();
+            this.splitContainer7.ResumeLayout(false);
+            this.tableLayoutPanel16.ResumeLayout(false);
+            this.tableLayoutPanel16.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.LoadPort04Assign_Gv)).EndInit();
+            this.splitContainer6.Panel1.ResumeLayout(false);
+            this.splitContainer6.Panel2.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.splitContainer6)).EndInit();
+            this.splitContainer6.ResumeLayout(false);
+            this.tableLayoutPanel15.ResumeLayout(false);
+            this.tableLayoutPanel15.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.LoadPort03Assign_Gv)).EndInit();
+            this.splitContainer3.Panel1.ResumeLayout(false);
+            this.splitContainer3.Panel2.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.splitContainer3)).EndInit();
+            this.splitContainer3.ResumeLayout(false);
             this.tabStatus.ResumeLayout(false);
             this.tableLayoutPanel26.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dgvRstatus)).EndInit();
@@ -6718,55 +6907,15 @@ namespace Adam
             this.contextMenuStrip1.ResumeLayout(false);
             this.contextMenuStrip4.ResumeLayout(false);
             this.panel3.ResumeLayout(false);
-            this.splitContainer17.Panel1.ResumeLayout(false);
-            this.splitContainer17.Panel2.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.splitContainer17)).EndInit();
-            this.splitContainer17.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.LoadPort06Assign_Gv)).EndInit();
-            this.tableLayoutPanel22.ResumeLayout(false);
-            this.tableLayoutPanel22.PerformLayout();
-            this.splitContainer16.Panel1.ResumeLayout(false);
-            this.splitContainer16.Panel2.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.splitContainer16)).EndInit();
-            this.splitContainer16.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.LoadPort05Assign_Gv)).EndInit();
-            this.tableLayoutPanel21.ResumeLayout(false);
-            this.tableLayoutPanel21.PerformLayout();
-            this.splitContainer14.Panel1.ResumeLayout(false);
-            this.splitContainer14.Panel2.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.splitContainer14)).EndInit();
-            this.splitContainer14.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.LoadPort07Assign_Gv)).EndInit();
-            this.tableLayoutPanel19.ResumeLayout(false);
-            this.tableLayoutPanel19.PerformLayout();
-            this.splitContainer3.Panel1.ResumeLayout(false);
-            this.splitContainer3.Panel2.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.splitContainer3)).EndInit();
-            this.splitContainer3.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.LoadPort03Assign_Gv)).EndInit();
-            this.tableLayoutPanel15.ResumeLayout(false);
-            this.tableLayoutPanel15.PerformLayout();
-            this.splitContainer7.Panel1.ResumeLayout(false);
-            this.splitContainer7.Panel2.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.splitContainer7)).EndInit();
-            this.splitContainer7.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.LoadPort01Assign_Gv)).EndInit();
-            this.tableLayoutPanel17.ResumeLayout(false);
-            this.tableLayoutPanel17.PerformLayout();
-            this.splitContainer6.Panel1.ResumeLayout(false);
-            this.splitContainer6.Panel2.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.splitContainer6)).EndInit();
-            this.splitContainer6.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.LoadPort04Assign_Gv)).EndInit();
-            this.tableLayoutPanel16.ResumeLayout(false);
-            this.tableLayoutPanel16.PerformLayout();
-            this.splitContainer11.Panel1.ResumeLayout(false);
-            this.splitContainer11.Panel2.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.splitContainer11)).EndInit();
-            this.splitContainer11.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.LoadPort02Assign_Gv)).EndInit();
-            this.tableLayoutPanel18.ResumeLayout(false);
-            this.tableLayoutPanel18.PerformLayout();
+            this.tabPage1.ResumeLayout(false);
+            this.gbSettingSECS.ResumeLayout(false);
+            this.spcSECSSetting.Panel1.ResumeLayout(false);
+            this.spcSECSSetting.Panel2.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.spcSECSSetting)).EndInit();
+            this.spcSECSSetting.ResumeLayout(false);
+            this.gbSettingSECS_L.ResumeLayout(false);
+            this.gbSettingSECS_R.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.dgvSECSData)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -7399,6 +7548,18 @@ namespace Adam
         private System.Windows.Forms.Label label31;
         private System.Windows.Forms.Label label30;
         private System.DirectoryServices.DirectorySearcher directorySearcher1;
+        private System.Windows.Forms.TabPage tabPage1;
+        private System.Windows.Forms.GroupBox gbSettingSECS;
+        private System.Windows.Forms.SplitContainer spcSECSSetting;
+        private System.Windows.Forms.GroupBox gbSettingSECS_L;
+        private System.Windows.Forms.TreeView tevSECSList;
+        private System.Windows.Forms.GroupBox gbSettingSECS_R;
+        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.DataGridView dgvSECSData;
+        private System.Windows.Forms.DataGridViewTextBoxColumn SECSSettingGrid_Item;
+        private System.Windows.Forms.DataGridViewTextBoxColumn SECSSettingGrid_Value;
+        private System.Windows.Forms.DataGridViewTextBoxColumn SECSSettingGrid_Range;
+        private System.Windows.Forms.DataGridViewTextBoxColumn SECSSettingGrid_Description;
     }
 }
 
