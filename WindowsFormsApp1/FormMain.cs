@@ -21,6 +21,7 @@ using System.Diagnostics;
 using Adam.UI_Update.OCR;
 using Adam.UI_Update.WaferMapping;
 using System.Threading;
+using Adam.UI_Update.Authroity;
 
 namespace Adam
 {
@@ -160,10 +161,20 @@ namespace Adam
             g.DrawString(_tabPage.Text, _tabFont, _textBrush, _tabBounds, new StringFormat(_stringFlags));
         }
 
-        private void button18_Click(object sender, EventArgs e)
+        private void btnLogInOut_Click(object sender, EventArgs e)
         {
-            GUI.FormLogin formLogin = new GUI.FormLogin();
-            formLogin.ShowDialog();
+            switch (btnLogInOut.Text)
+            {
+                case "Login":
+                    GUI.FormLogin formLogin = new GUI.FormLogin();
+                    formLogin.ShowDialog();
+                    break;
+                case "Logout":
+                    AuthroityUpdate.UpdateLogoutInfo();
+                    //disable authroity function
+                    AuthroityUpdate.UpdateFuncInit("");
+                    break;
+            }
         }
 
         private void toolStripMenuItem2_Click(object sender, EventArgs e)
@@ -247,7 +258,7 @@ namespace Adam
             formTerminal.ShowDialog();
         }
 
-        private void button70_Click(object sender, EventArgs e)
+        private void btnTeach_Click(object sender, EventArgs e)
         {
             UI_TEST.Teaching teaching = new UI_TEST.Teaching();
             teaching.ShowDialog();
@@ -259,7 +270,7 @@ namespace Adam
             runningScreen.ShowDialog();
         }
 
-        private void button5_Click(object sender, EventArgs e)
+        private void btnVersion_Click(object sender, EventArgs e)
         {
             GUI.FormVersion formVersion = new GUI.FormVersion();
             formVersion.ShowDialog();
@@ -586,15 +597,11 @@ namespace Adam
         {
             if (tgsMode_SW.Checked)
             {
-                splitButton5.Text = "Auto Mode";
-                splitButton5.BackColor = Color.Red;
-                splitButton5.Enabled = false;
-                button70.Enabled = false;
+                btnMaintence.Text = "Auto Mode";
+                btnMaintence.BackColor = Color.Red;
+                btnMaintence.Enabled = false;
+                btnTeach.Enabled = false;
                 EnablePage(tabControl1.TabPages[5], false);
-
-
-
-                
 
                 Node Aligner1 = NodeManagement.Get("Aligner01");
                 if (Aligner1 != null)
@@ -608,10 +615,10 @@ namespace Adam
             }
             else
             {
-                splitButton5.Text = "Maintenance Mode";
-                splitButton5.BackColor = Color.WhiteSmoke;
-                splitButton5.Enabled = true;
-                button70.Enabled = true;
+                btnMaintence.Text = "Maintenance Mode";
+                btnMaintence.BackColor = Color.WhiteSmoke;
+                btnMaintence.Enabled = true;
+                btnTeach.Enabled = true;
                 EnablePage(hiddenPages[0], true);
                 RouteCtrl.Stop();//book
                                  //test

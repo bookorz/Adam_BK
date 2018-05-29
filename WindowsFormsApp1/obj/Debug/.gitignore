@@ -14,3 +14,4 @@
 *.FormMain.resources
 *.pdb
 /Adam.csproj.FileListAbsolute.txt
+/DesignTimeResolveAssemblyReferences.cache

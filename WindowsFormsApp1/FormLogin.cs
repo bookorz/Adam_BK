@@ -1,4 +1,5 @@
-﻿using Adam.Util;
+﻿using Adam.UI_Update.Authroity;
+using Adam.Util;
 using MySql.Data.MySqlClient;
 using System;
 using System.Collections.Generic;
@@ -48,25 +49,25 @@ namespace GUI
             {
                 //Console.Write("\n ID:" + rs["user_id"] + " Password:" + rs["password"] + " MD5:" + rs["md5"]);
 
-                string user_id;
-                string user_name;
-                string user_group_id;
+                string user_id = "";
+                string user_name = "";
+                string user_group_id = "";
                 while (rs.Read())
                 {
                     user_id = (string) rs["user_id"];
                     user_name = (string)rs["user_name"];
                     user_group_id = (string)rs["user_group_id"];
-                    MessageBox.Show(user_id + " " + user_name + " " + user_group_id + " ", "Message");
                     result = true;
                 }
                 rs.Close();
                 if (result)
                 {
-                    MessageBox.Show(tbUserID.Text + "\n" + tbPassword.Text, "登入成功");
+                    AuthroityUpdate.UpdateLoginInfo(user_id, user_name, user_group_id);
+                    this.Close();
                 }
                 else
                 {
-                    MessageBox.Show(tbUserID.Text + "\n" + tbPassword.Text, "登入失敗");
+                    MessageBox.Show("Please check data and login again.", "Login Fail");
                 }
             }
 
