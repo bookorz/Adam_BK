@@ -1,6 +1,7 @@
 ﻿using MySql.Data.MySqlClient;
 using System;
 using System.Collections.Generic;
+using System.Data;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -43,20 +44,31 @@ namespace Adam.Util
         /// <param name="sql">SQL</param>
         /// <param name="parameters">參數</param>
         /// <returns></returns>
-        public MySqlDataReader GetDataReader(string sql, Dictionary<string, object> parameters)
+        public DataTableReader GetDataReader(string sql, Dictionary<string, object> parameters)
         {
-            //sql = "SELECT * FROM list_item";
-            open_Conn();
-            MySqlCommand command = new MySqlCommand(sql, Connection_);
-            // set parameters
-            foreach (KeyValuePair<string, object> param in parameters)
+            DataTableReader reader = null;
+            try
             {
-                command.Parameters.AddWithValue(param.Key, param.Value);
+                //sql = "SELECT * FROM list_item";
+                open_Conn();
+                MySqlCommand command = new MySqlCommand(sql, Connection_);
+                // set parameters
+                foreach (KeyValuePair<string, object> param in parameters)
+                {
+                    command.Parameters.AddWithValue(param.Key, param.Value);
+                }
+                //get query result
+                MySqlDataReader rs = command.ExecuteReader();
+                var dt = new DataTable();
+                dt.Load(rs);
+                reader =  dt.CreateDataReader();
+                close_Conn();
             }
-            //get query result
-            MySqlDataReader data = command.ExecuteReader();
-            close_Conn();
-            return data;
+            catch(Exception e)
+            {
+                Console.Write(sql);
+            }
+            return reader;
         }
 
         /// <summary>
