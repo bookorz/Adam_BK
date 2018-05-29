@@ -101,6 +101,14 @@ namespace Adam
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle69 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle70 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle71 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle72 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle73 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle74 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle75 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle76 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle77 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle78 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle79 = new System.Windows.Forms.DataGridViewCellStyle();
             this.splitContainer5 = new System.Windows.Forms.SplitContainer();
             this.label23 = new System.Windows.Forms.Label();
             this.textBox14 = new System.Windows.Forms.TextBox();
@@ -134,9 +142,6 @@ namespace Adam
             this.label25 = new System.Windows.Forms.Label();
             this.groupBox13 = new System.Windows.Forms.GroupBox();
             this.textBox15 = new System.Windows.Forms.TextBox();
-            this.splitContainer3 = new System.Windows.Forms.SplitContainer();
-            this.label31 = new System.Windows.Forms.Label();
-            this.label30 = new System.Windows.Forms.Label();
             this.splitContainer12 = new System.Windows.Forms.SplitContainer();
             this.groupBox18 = new System.Windows.Forms.GroupBox();
             this.OCR01Offline_Btn = new System.Windows.Forms.Button();
@@ -157,7 +162,7 @@ namespace Adam
             this.label194 = new System.Windows.Forms.Label();
             this.label193 = new System.Windows.Forms.Label();
             this.groupBox5 = new System.Windows.Forms.GroupBox();
-            this.btnSECSSetting_Save = new System.Windows.Forms.Button();
+            this.button17 = new System.Windows.Forms.Button();
             this.button16 = new System.Windows.Forms.Button();
             this.button15 = new System.Windows.Forms.Button();
             this.button14 = new System.Windows.Forms.Button();
@@ -254,11 +259,70 @@ namespace Adam
             this.tableLayoutPanel14 = new System.Windows.Forms.TableLayoutPanel();
             this.groupBox11 = new System.Windows.Forms.GroupBox();
             this.tableLayoutPanel12 = new System.Windows.Forms.TableLayoutPanel();
-            this.tableLayoutPanel15 = new System.Windows.Forms.TableLayoutPanel();
+            this.tableLayoutPanel22 = new System.Windows.Forms.TableLayoutPanel();
+            this.LoadPort06_Start_Btn = new System.Windows.Forms.Button();
+            this.LoadPort06Assign_Gv = new System.Windows.Forms.DataGridView();
+            this.LoadPort06State_lb = new System.Windows.Forms.Label();
+            this.textBox20 = new System.Windows.Forms.TextBox();
+            this.splitContainer17 = new System.Windows.Forms.SplitContainer();
+            this.label53 = new System.Windows.Forms.Label();
+            this.label54 = new System.Windows.Forms.Label();
+            this.tableLayoutPanel21 = new System.Windows.Forms.TableLayoutPanel();
+            this.LoadPort05_Start_Btn = new System.Windows.Forms.Button();
+            this.LoadPort05Assign_Gv = new System.Windows.Forms.DataGridView();
+            this.LoadPort05State_lb = new System.Windows.Forms.Label();
+            this.textBox19 = new System.Windows.Forms.TextBox();
+            this.splitContainer16 = new System.Windows.Forms.SplitContainer();
+            this.label49 = new System.Windows.Forms.Label();
+            this.label51 = new System.Windows.Forms.Label();
+            this.tableLayoutPanel20 = new System.Windows.Forms.TableLayoutPanel();
+            this.LoadPort08_Start_Btn = new System.Windows.Forms.Button();
+            this.LoadPort08Assign_Gv = new System.Windows.Forms.DataGridView();
+            this.LoadPort08State_lb = new System.Windows.Forms.Label();
+            this.textBox18 = new System.Windows.Forms.TextBox();
+            this.splitContainer15 = new System.Windows.Forms.SplitContainer();
+            this.label46 = new System.Windows.Forms.Label();
+            this.label47 = new System.Windows.Forms.Label();
+            this.tableLayoutPanel19 = new System.Windows.Forms.TableLayoutPanel();
+            this.LoadPort07_Start_Btn = new System.Windows.Forms.Button();
+            this.LoadPort07Assign_Gv = new System.Windows.Forms.DataGridView();
+            this.LoadPort07State_lb = new System.Windows.Forms.Label();
+            this.textBox17 = new System.Windows.Forms.TextBox();
+            this.splitContainer14 = new System.Windows.Forms.SplitContainer();
+            this.label43 = new System.Windows.Forms.Label();
+            this.label44 = new System.Windows.Forms.Label();
+            this.tableLayoutPanel18 = new System.Windows.Forms.TableLayoutPanel();
+            this.LoadPort02Assign_Gv = new System.Windows.Forms.DataGridView();
+            this.LoadPort02State_lb = new System.Windows.Forms.Label();
+            this.textBox11 = new System.Windows.Forms.TextBox();
+            this.splitContainer11 = new System.Windows.Forms.SplitContainer();
+            this.label40 = new System.Windows.Forms.Label();
+            this.label41 = new System.Windows.Forms.Label();
+            this.LoadPort02_Start_Btn = new System.Windows.Forms.Button();
+            this.tableLayoutPanel17 = new System.Windows.Forms.TableLayoutPanel();
             this.LoadPort01Assign_Gv = new System.Windows.Forms.DataGridView();
-            this.WaferAssignMenu = new System.Windows.Forms.ContextMenuStrip(this.components);
-            this.label29 = new System.Windows.Forms.Label();
+            this.LoadPort01State_lb = new System.Windows.Forms.Label();
+            this.textBox10 = new System.Windows.Forms.TextBox();
+            this.splitContainer7 = new System.Windows.Forms.SplitContainer();
+            this.label36 = new System.Windows.Forms.Label();
+            this.label37 = new System.Windows.Forms.Label();
+            this.LoadPort01_Start_Btn = new System.Windows.Forms.Button();
+            this.tableLayoutPanel16 = new System.Windows.Forms.TableLayoutPanel();
+            this.LoadPort04_Start_Btn = new System.Windows.Forms.Button();
+            this.LoadPort04Assign_Gv = new System.Windows.Forms.DataGridView();
+            this.LoadPort04State_lb = new System.Windows.Forms.Label();
+            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.splitContainer6 = new System.Windows.Forms.SplitContainer();
+            this.label33 = new System.Windows.Forms.Label();
+            this.label34 = new System.Windows.Forms.Label();
+            this.tableLayoutPanel15 = new System.Windows.Forms.TableLayoutPanel();
+            this.LoadPort03_Start_Btn = new System.Windows.Forms.Button();
+            this.LoadPort03Assign_Gv = new System.Windows.Forms.DataGridView();
+            this.LoadPort03State_lb = new System.Windows.Forms.Label();
             this.textBox16 = new System.Windows.Forms.TextBox();
+            this.splitContainer3 = new System.Windows.Forms.SplitContainer();
+            this.label31 = new System.Windows.Forms.Label();
+            this.label30 = new System.Windows.Forms.Label();
             this.tabStatus = new System.Windows.Forms.TabPage();
             this.tableLayoutPanel26 = new System.Windows.Forms.TableLayoutPanel();
             this.dgvRstatus = new System.Windows.Forms.DataGridView();
@@ -640,14 +704,6 @@ namespace Adam
             this.label191 = new System.Windows.Forms.Label();
             this.textBox69 = new System.Windows.Forms.TextBox();
             this.label192 = new System.Windows.Forms.Label();
-            this.tbpSECSSetting = new System.Windows.Forms.TabPage();
-            this.gbSettingSECS = new System.Windows.Forms.GroupBox();
-            this.spcSECSSetting = new System.Windows.Forms.SplitContainer();
-            this.gbSettingSECS_L = new System.Windows.Forms.GroupBox();
-            this.tevSECSList = new System.Windows.Forms.TreeView();
-            this.gbSettingSECS_R = new System.Windows.Forms.GroupBox();
-            this.button2 = new System.Windows.Forms.Button();
-            this.dgvSECSData = new System.Windows.Forms.DataGridView();
             this.panel2 = new System.Windows.Forms.Panel();
             this.panel4 = new System.Windows.Forms.Panel();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
@@ -678,6 +734,15 @@ namespace Adam
             this.transTestToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.terminalToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.panel3 = new System.Windows.Forms.Panel();
+            this.directorySearcher1 = new System.DirectoryServices.DirectorySearcher();
+            this.tabPage1 = new System.Windows.Forms.TabPage();
+            this.gbSettingSECS = new System.Windows.Forms.GroupBox();
+            this.spcSECSSetting = new System.Windows.Forms.SplitContainer();
+            this.gbSettingSECS_L = new System.Windows.Forms.GroupBox();
+            this.tevSECSList = new System.Windows.Forms.TreeView();
+            this.gbSettingSECS_R = new System.Windows.Forms.GroupBox();
+            this.button2 = new System.Windows.Forms.Button();
+            this.dgvSECSData = new System.Windows.Forms.DataGridView();
             this.SECSSettingGrid_Item = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.SECSSettingGrid_Value = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.SECSSettingGrid_Range = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -713,10 +778,6 @@ namespace Adam
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).BeginInit();
             this.groupBox13.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.splitContainer3)).BeginInit();
-            this.splitContainer3.Panel1.SuspendLayout();
-            this.splitContainer3.Panel2.SuspendLayout();
-            this.splitContainer3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer12)).BeginInit();
             this.splitContainer12.Panel1.SuspendLayout();
             this.splitContainer12.Panel2.SuspendLayout();
@@ -763,8 +824,54 @@ namespace Adam
             this.tableLayoutPanel14.SuspendLayout();
             this.groupBox11.SuspendLayout();
             this.tableLayoutPanel12.SuspendLayout();
-            this.tableLayoutPanel15.SuspendLayout();
+            this.tableLayoutPanel22.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.LoadPort06Assign_Gv)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.splitContainer17)).BeginInit();
+            this.splitContainer17.Panel1.SuspendLayout();
+            this.splitContainer17.Panel2.SuspendLayout();
+            this.splitContainer17.SuspendLayout();
+            this.tableLayoutPanel21.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.LoadPort05Assign_Gv)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.splitContainer16)).BeginInit();
+            this.splitContainer16.Panel1.SuspendLayout();
+            this.splitContainer16.Panel2.SuspendLayout();
+            this.splitContainer16.SuspendLayout();
+            this.tableLayoutPanel20.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.LoadPort08Assign_Gv)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.splitContainer15)).BeginInit();
+            this.splitContainer15.Panel1.SuspendLayout();
+            this.splitContainer15.Panel2.SuspendLayout();
+            this.splitContainer15.SuspendLayout();
+            this.tableLayoutPanel19.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.LoadPort07Assign_Gv)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.splitContainer14)).BeginInit();
+            this.splitContainer14.Panel1.SuspendLayout();
+            this.splitContainer14.Panel2.SuspendLayout();
+            this.splitContainer14.SuspendLayout();
+            this.tableLayoutPanel18.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.LoadPort02Assign_Gv)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.splitContainer11)).BeginInit();
+            this.splitContainer11.Panel1.SuspendLayout();
+            this.splitContainer11.Panel2.SuspendLayout();
+            this.splitContainer11.SuspendLayout();
+            this.tableLayoutPanel17.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.LoadPort01Assign_Gv)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.splitContainer7)).BeginInit();
+            this.splitContainer7.Panel1.SuspendLayout();
+            this.splitContainer7.Panel2.SuspendLayout();
+            this.splitContainer7.SuspendLayout();
+            this.tableLayoutPanel16.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.LoadPort04Assign_Gv)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.splitContainer6)).BeginInit();
+            this.splitContainer6.Panel1.SuspendLayout();
+            this.splitContainer6.Panel2.SuspendLayout();
+            this.splitContainer6.SuspendLayout();
+            this.tableLayoutPanel15.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.LoadPort03Assign_Gv)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.splitContainer3)).BeginInit();
+            this.splitContainer3.Panel1.SuspendLayout();
+            this.splitContainer3.Panel2.SuspendLayout();
+            this.splitContainer3.SuspendLayout();
             this.tabStatus.SuspendLayout();
             this.tableLayoutPanel26.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvRstatus)).BeginInit();
@@ -871,15 +978,6 @@ namespace Adam
             this.groupBox52.SuspendLayout();
             this.panel50.SuspendLayout();
             this.groupBox53.SuspendLayout();
-            this.tbpSECSSetting.SuspendLayout();
-            this.gbSettingSECS.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.spcSECSSetting)).BeginInit();
-            this.spcSECSSetting.Panel1.SuspendLayout();
-            this.spcSECSSetting.Panel2.SuspendLayout();
-            this.spcSECSSetting.SuspendLayout();
-            this.gbSettingSECS_L.SuspendLayout();
-            this.gbSettingSECS_R.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvSECSData)).BeginInit();
             this.panel2.SuspendLayout();
             this.panel4.SuspendLayout();
             this.tableLayoutPanel1.SuspendLayout();
@@ -888,6 +986,15 @@ namespace Adam
             this.contextMenuStrip1.SuspendLayout();
             this.contextMenuStrip4.SuspendLayout();
             this.panel3.SuspendLayout();
+            this.tabPage1.SuspendLayout();
+            this.gbSettingSECS.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.spcSECSSetting)).BeginInit();
+            this.spcSECSSetting.Panel1.SuspendLayout();
+            this.spcSECSSetting.Panel2.SuspendLayout();
+            this.spcSECSSetting.SuspendLayout();
+            this.gbSettingSECS_L.SuspendLayout();
+            this.gbSettingSECS_R.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvSECSData)).BeginInit();
             this.SuspendLayout();
             // 
             // splitContainer5
@@ -1185,37 +1292,6 @@ namespace Adam
             resources.ApplyResources(this.textBox15, "textBox15");
             this.textBox15.Name = "textBox15";
             // 
-            // splitContainer3
-            // 
-            resources.ApplyResources(this.splitContainer3, "splitContainer3");
-            this.splitContainer3.Name = "splitContainer3";
-            // 
-            // splitContainer3.Panel1
-            // 
-            this.splitContainer3.Panel1.Controls.Add(this.label31);
-            // 
-            // splitContainer3.Panel2
-            // 
-            this.splitContainer3.Panel2.Controls.Add(this.label30);
-            // 
-            // label31
-            // 
-            this.label31.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
-            this.label31.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            resources.ApplyResources(this.label31, "label31");
-            this.label31.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.label31.ForeColor = System.Drawing.Color.Black;
-            this.label31.Name = "label31";
-            // 
-            // label30
-            // 
-            this.label30.BackColor = System.Drawing.Color.Transparent;
-            this.label30.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            resources.ApplyResources(this.label30, "label30");
-            this.label30.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.label30.ForeColor = System.Drawing.Color.Black;
-            this.label30.Name = "label30";
-            // 
             // splitContainer12
             // 
             resources.ApplyResources(this.splitContainer12, "splitContainer12");
@@ -1242,20 +1318,20 @@ namespace Adam
             // 
             // OCR01Offline_Btn
             // 
-            resources.ApplyResources(this.OCR01Offline_Btn, "OCR01Offline_Btn");
             this.OCR01Offline_Btn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
             this.OCR01Offline_Btn.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
             this.OCR01Offline_Btn.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
+            resources.ApplyResources(this.OCR01Offline_Btn, "OCR01Offline_Btn");
             this.OCR01Offline_Btn.Name = "OCR01Offline_Btn";
             this.OCR01Offline_Btn.UseVisualStyleBackColor = false;
             this.OCR01Offline_Btn.Click += new System.EventHandler(this.OCRButton);
             // 
             // OCR01Online_Btn
             // 
-            resources.ApplyResources(this.OCR01Online_Btn, "OCR01Online_Btn");
             this.OCR01Online_Btn.BackColor = System.Drawing.Color.White;
             this.OCR01Online_Btn.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
             this.OCR01Online_Btn.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
+            resources.ApplyResources(this.OCR01Online_Btn, "OCR01Online_Btn");
             this.OCR01Online_Btn.Name = "OCR01Online_Btn";
             this.OCR01Online_Btn.UseVisualStyleBackColor = false;
             this.OCR01Online_Btn.Click += new System.EventHandler(this.OCRButton);
@@ -1388,7 +1464,7 @@ namespace Adam
             // 
             // groupBox5
             // 
-            this.groupBox5.Controls.Add(this.btnSECSSetting_Save);
+            this.groupBox5.Controls.Add(this.button17);
             this.groupBox5.Controls.Add(this.button16);
             this.groupBox5.Controls.Add(this.button15);
             this.groupBox5.Controls.Add(this.button14);
@@ -1403,12 +1479,12 @@ namespace Adam
             this.groupBox5.Name = "groupBox5";
             this.groupBox5.TabStop = false;
             // 
-            // btnSECSSetting_Save
+            // button17
             // 
-            resources.ApplyResources(this.btnSECSSetting_Save, "btnSECSSetting_Save");
-            this.btnSECSSetting_Save.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
-            this.btnSECSSetting_Save.Name = "btnSECSSetting_Save";
-            this.btnSECSSetting_Save.UseVisualStyleBackColor = false;
+            resources.ApplyResources(this.button17, "button17");
+            this.button17.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
+            this.button17.Name = "button17";
+            this.button17.UseVisualStyleBackColor = false;
             // 
             // button16
             // 
@@ -2305,49 +2381,646 @@ namespace Adam
             // tableLayoutPanel12
             // 
             resources.ApplyResources(this.tableLayoutPanel12, "tableLayoutPanel12");
+            this.tableLayoutPanel12.Controls.Add(this.tableLayoutPanel22, 0, 0);
+            this.tableLayoutPanel12.Controls.Add(this.tableLayoutPanel21, 0, 0);
+            this.tableLayoutPanel12.Controls.Add(this.tableLayoutPanel20, 0, 0);
+            this.tableLayoutPanel12.Controls.Add(this.tableLayoutPanel19, 0, 0);
+            this.tableLayoutPanel12.Controls.Add(this.tableLayoutPanel18, 0, 0);
+            this.tableLayoutPanel12.Controls.Add(this.tableLayoutPanel17, 0, 0);
+            this.tableLayoutPanel12.Controls.Add(this.tableLayoutPanel16, 0, 0);
             this.tableLayoutPanel12.Controls.Add(this.tableLayoutPanel15, 0, 0);
             this.tableLayoutPanel12.Name = "tableLayoutPanel12";
             // 
-            // tableLayoutPanel15
+            // tableLayoutPanel22
             // 
-            resources.ApplyResources(this.tableLayoutPanel15, "tableLayoutPanel15");
-            this.tableLayoutPanel15.Controls.Add(this.LoadPort01Assign_Gv, 0, 2);
-            this.tableLayoutPanel15.Controls.Add(this.label29, 0, 0);
-            this.tableLayoutPanel15.Controls.Add(this.textBox16, 0, 1);
-            this.tableLayoutPanel15.Controls.Add(this.splitContainer3, 0, 3);
-            this.tableLayoutPanel15.Name = "tableLayoutPanel15";
+            resources.ApplyResources(this.tableLayoutPanel22, "tableLayoutPanel22");
+            this.tableLayoutPanel22.Controls.Add(this.LoadPort06_Start_Btn, 0, 4);
+            this.tableLayoutPanel22.Controls.Add(this.LoadPort06Assign_Gv, 0, 2);
+            this.tableLayoutPanel22.Controls.Add(this.LoadPort06State_lb, 0, 0);
+            this.tableLayoutPanel22.Controls.Add(this.textBox20, 0, 1);
+            this.tableLayoutPanel22.Controls.Add(this.splitContainer17, 0, 3);
+            this.tableLayoutPanel22.Name = "tableLayoutPanel22";
+            // 
+            // LoadPort06_Start_Btn
+            // 
+            resources.ApplyResources(this.LoadPort06_Start_Btn, "LoadPort06_Start_Btn");
+            this.LoadPort06_Start_Btn.Name = "LoadPort06_Start_Btn";
+            this.LoadPort06_Start_Btn.UseVisualStyleBackColor = true;
+            this.LoadPort06_Start_Btn.Click += new System.EventHandler(this.PortStart_Btn_Click);
+            // 
+            // LoadPort06Assign_Gv
+            // 
+            this.LoadPort06Assign_Gv.AllowUserToAddRows = false;
+            this.LoadPort06Assign_Gv.AllowUserToDeleteRows = false;
+            this.LoadPort06Assign_Gv.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.DisplayedCells;
+            this.LoadPort06Assign_Gv.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            resources.ApplyResources(this.LoadPort06Assign_Gv, "LoadPort06Assign_Gv");
+            this.LoadPort06Assign_Gv.Name = "LoadPort06Assign_Gv";
+            this.LoadPort06Assign_Gv.ReadOnly = true;
+            this.LoadPort06Assign_Gv.RowHeadersVisible = false;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("微軟正黑體", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
+            this.LoadPort06Assign_Gv.RowsDefaultCellStyle = dataGridViewCellStyle2;
+            this.LoadPort06Assign_Gv.RowTemplate.Height = 21;
+            this.LoadPort06Assign_Gv.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.LoadPort06Assign_Gv.StandardTab = true;
+            this.LoadPort06Assign_Gv.CellFormatting += new System.Windows.Forms.DataGridViewCellFormattingEventHandler(this.Assign_Gv_CellFormatting);
+            // 
+            // LoadPort06State_lb
+            // 
+            this.LoadPort06State_lb.BackColor = System.Drawing.Color.Transparent;
+            this.LoadPort06State_lb.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            resources.ApplyResources(this.LoadPort06State_lb, "LoadPort06State_lb");
+            this.LoadPort06State_lb.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.LoadPort06State_lb.ForeColor = System.Drawing.Color.Black;
+            this.LoadPort06State_lb.Name = "LoadPort06State_lb";
+            this.LoadPort06State_lb.MouseClick += new System.Windows.Forms.MouseEventHandler(this.State_lb_Click);
+            // 
+            // textBox20
+            // 
+            this.textBox20.BackColor = System.Drawing.Color.Green;
+            this.textBox20.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            resources.ApplyResources(this.textBox20, "textBox20");
+            this.textBox20.ForeColor = System.Drawing.Color.Transparent;
+            this.textBox20.Name = "textBox20";
+            // 
+            // splitContainer17
+            // 
+            resources.ApplyResources(this.splitContainer17, "splitContainer17");
+            this.splitContainer17.Name = "splitContainer17";
+            // 
+            // splitContainer17.Panel1
+            // 
+            this.splitContainer17.Panel1.Controls.Add(this.label53);
+            // 
+            // splitContainer17.Panel2
+            // 
+            this.splitContainer17.Panel2.Controls.Add(this.label54);
+            // 
+            // label53
+            // 
+            this.label53.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.label53.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            resources.ApplyResources(this.label53, "label53");
+            this.label53.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.label53.ForeColor = System.Drawing.Color.Black;
+            this.label53.Name = "label53";
+            // 
+            // label54
+            // 
+            this.label54.BackColor = System.Drawing.Color.Transparent;
+            this.label54.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            resources.ApplyResources(this.label54, "label54");
+            this.label54.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.label54.ForeColor = System.Drawing.Color.Black;
+            this.label54.Name = "label54";
+            // 
+            // tableLayoutPanel21
+            // 
+            resources.ApplyResources(this.tableLayoutPanel21, "tableLayoutPanel21");
+            this.tableLayoutPanel21.Controls.Add(this.LoadPort05_Start_Btn, 0, 4);
+            this.tableLayoutPanel21.Controls.Add(this.LoadPort05Assign_Gv, 0, 2);
+            this.tableLayoutPanel21.Controls.Add(this.LoadPort05State_lb, 0, 0);
+            this.tableLayoutPanel21.Controls.Add(this.textBox19, 0, 1);
+            this.tableLayoutPanel21.Controls.Add(this.splitContainer16, 0, 3);
+            this.tableLayoutPanel21.Name = "tableLayoutPanel21";
+            // 
+            // LoadPort05_Start_Btn
+            // 
+            resources.ApplyResources(this.LoadPort05_Start_Btn, "LoadPort05_Start_Btn");
+            this.LoadPort05_Start_Btn.Name = "LoadPort05_Start_Btn";
+            this.LoadPort05_Start_Btn.UseVisualStyleBackColor = true;
+            this.LoadPort05_Start_Btn.Click += new System.EventHandler(this.PortStart_Btn_Click);
+            // 
+            // LoadPort05Assign_Gv
+            // 
+            this.LoadPort05Assign_Gv.AllowUserToAddRows = false;
+            this.LoadPort05Assign_Gv.AllowUserToDeleteRows = false;
+            this.LoadPort05Assign_Gv.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.DisplayedCells;
+            this.LoadPort05Assign_Gv.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            resources.ApplyResources(this.LoadPort05Assign_Gv, "LoadPort05Assign_Gv");
+            this.LoadPort05Assign_Gv.Name = "LoadPort05Assign_Gv";
+            this.LoadPort05Assign_Gv.ReadOnly = true;
+            this.LoadPort05Assign_Gv.RowHeadersVisible = false;
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("微軟正黑體", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
+            this.LoadPort05Assign_Gv.RowsDefaultCellStyle = dataGridViewCellStyle3;
+            this.LoadPort05Assign_Gv.RowTemplate.Height = 21;
+            this.LoadPort05Assign_Gv.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.LoadPort05Assign_Gv.StandardTab = true;
+            this.LoadPort05Assign_Gv.CellFormatting += new System.Windows.Forms.DataGridViewCellFormattingEventHandler(this.Assign_Gv_CellFormatting);
+            this.LoadPort05Assign_Gv.MouseClick += new System.Windows.Forms.MouseEventHandler(this.Assign_Gv_MouseClick);
+            // 
+            // LoadPort05State_lb
+            // 
+            this.LoadPort05State_lb.BackColor = System.Drawing.Color.Transparent;
+            this.LoadPort05State_lb.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            resources.ApplyResources(this.LoadPort05State_lb, "LoadPort05State_lb");
+            this.LoadPort05State_lb.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.LoadPort05State_lb.ForeColor = System.Drawing.Color.Black;
+            this.LoadPort05State_lb.Name = "LoadPort05State_lb";
+            this.LoadPort05State_lb.MouseClick += new System.Windows.Forms.MouseEventHandler(this.State_lb_Click);
+            // 
+            // textBox19
+            // 
+            this.textBox19.BackColor = System.Drawing.Color.Green;
+            this.textBox19.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            resources.ApplyResources(this.textBox19, "textBox19");
+            this.textBox19.ForeColor = System.Drawing.Color.Transparent;
+            this.textBox19.Name = "textBox19";
+            // 
+            // splitContainer16
+            // 
+            resources.ApplyResources(this.splitContainer16, "splitContainer16");
+            this.splitContainer16.Name = "splitContainer16";
+            // 
+            // splitContainer16.Panel1
+            // 
+            this.splitContainer16.Panel1.Controls.Add(this.label49);
+            // 
+            // splitContainer16.Panel2
+            // 
+            this.splitContainer16.Panel2.Controls.Add(this.label51);
+            // 
+            // label49
+            // 
+            this.label49.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.label49.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            resources.ApplyResources(this.label49, "label49");
+            this.label49.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.label49.ForeColor = System.Drawing.Color.Black;
+            this.label49.Name = "label49";
+            // 
+            // label51
+            // 
+            this.label51.BackColor = System.Drawing.Color.Transparent;
+            this.label51.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            resources.ApplyResources(this.label51, "label51");
+            this.label51.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.label51.ForeColor = System.Drawing.Color.Black;
+            this.label51.Name = "label51";
+            // 
+            // tableLayoutPanel20
+            // 
+            resources.ApplyResources(this.tableLayoutPanel20, "tableLayoutPanel20");
+            this.tableLayoutPanel20.Controls.Add(this.LoadPort08_Start_Btn, 0, 4);
+            this.tableLayoutPanel20.Controls.Add(this.LoadPort08Assign_Gv, 0, 2);
+            this.tableLayoutPanel20.Controls.Add(this.LoadPort08State_lb, 0, 0);
+            this.tableLayoutPanel20.Controls.Add(this.textBox18, 0, 1);
+            this.tableLayoutPanel20.Controls.Add(this.splitContainer15, 0, 3);
+            this.tableLayoutPanel20.Name = "tableLayoutPanel20";
+            // 
+            // LoadPort08_Start_Btn
+            // 
+            resources.ApplyResources(this.LoadPort08_Start_Btn, "LoadPort08_Start_Btn");
+            this.LoadPort08_Start_Btn.Name = "LoadPort08_Start_Btn";
+            this.LoadPort08_Start_Btn.UseVisualStyleBackColor = true;
+            this.LoadPort08_Start_Btn.Click += new System.EventHandler(this.PortStart_Btn_Click);
+            // 
+            // LoadPort08Assign_Gv
+            // 
+            this.LoadPort08Assign_Gv.AllowUserToAddRows = false;
+            this.LoadPort08Assign_Gv.AllowUserToDeleteRows = false;
+            this.LoadPort08Assign_Gv.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.DisplayedCells;
+            this.LoadPort08Assign_Gv.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            resources.ApplyResources(this.LoadPort08Assign_Gv, "LoadPort08Assign_Gv");
+            this.LoadPort08Assign_Gv.Name = "LoadPort08Assign_Gv";
+            this.LoadPort08Assign_Gv.ReadOnly = true;
+            this.LoadPort08Assign_Gv.RowHeadersVisible = false;
+            dataGridViewCellStyle4.Font = new System.Drawing.Font("微軟正黑體", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
+            this.LoadPort08Assign_Gv.RowsDefaultCellStyle = dataGridViewCellStyle4;
+            this.LoadPort08Assign_Gv.RowTemplate.Height = 21;
+            this.LoadPort08Assign_Gv.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.LoadPort08Assign_Gv.StandardTab = true;
+            this.LoadPort08Assign_Gv.CellFormatting += new System.Windows.Forms.DataGridViewCellFormattingEventHandler(this.Assign_Gv_CellFormatting);
+            // 
+            // LoadPort08State_lb
+            // 
+            this.LoadPort08State_lb.BackColor = System.Drawing.Color.Transparent;
+            this.LoadPort08State_lb.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            resources.ApplyResources(this.LoadPort08State_lb, "LoadPort08State_lb");
+            this.LoadPort08State_lb.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.LoadPort08State_lb.ForeColor = System.Drawing.Color.Black;
+            this.LoadPort08State_lb.Name = "LoadPort08State_lb";
+            this.LoadPort08State_lb.MouseClick += new System.Windows.Forms.MouseEventHandler(this.State_lb_Click);
+            // 
+            // textBox18
+            // 
+            this.textBox18.BackColor = System.Drawing.Color.Green;
+            this.textBox18.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            resources.ApplyResources(this.textBox18, "textBox18");
+            this.textBox18.ForeColor = System.Drawing.Color.Transparent;
+            this.textBox18.Name = "textBox18";
+            // 
+            // splitContainer15
+            // 
+            resources.ApplyResources(this.splitContainer15, "splitContainer15");
+            this.splitContainer15.Name = "splitContainer15";
+            // 
+            // splitContainer15.Panel1
+            // 
+            this.splitContainer15.Panel1.Controls.Add(this.label46);
+            // 
+            // splitContainer15.Panel2
+            // 
+            this.splitContainer15.Panel2.Controls.Add(this.label47);
+            // 
+            // label46
+            // 
+            this.label46.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.label46.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            resources.ApplyResources(this.label46, "label46");
+            this.label46.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.label46.ForeColor = System.Drawing.Color.Black;
+            this.label46.Name = "label46";
+            // 
+            // label47
+            // 
+            this.label47.BackColor = System.Drawing.Color.Transparent;
+            this.label47.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            resources.ApplyResources(this.label47, "label47");
+            this.label47.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.label47.ForeColor = System.Drawing.Color.Black;
+            this.label47.Name = "label47";
+            // 
+            // tableLayoutPanel19
+            // 
+            resources.ApplyResources(this.tableLayoutPanel19, "tableLayoutPanel19");
+            this.tableLayoutPanel19.Controls.Add(this.LoadPort07_Start_Btn, 0, 4);
+            this.tableLayoutPanel19.Controls.Add(this.LoadPort07Assign_Gv, 0, 2);
+            this.tableLayoutPanel19.Controls.Add(this.LoadPort07State_lb, 0, 0);
+            this.tableLayoutPanel19.Controls.Add(this.textBox17, 0, 1);
+            this.tableLayoutPanel19.Controls.Add(this.splitContainer14, 0, 3);
+            this.tableLayoutPanel19.Name = "tableLayoutPanel19";
+            // 
+            // LoadPort07_Start_Btn
+            // 
+            resources.ApplyResources(this.LoadPort07_Start_Btn, "LoadPort07_Start_Btn");
+            this.LoadPort07_Start_Btn.Name = "LoadPort07_Start_Btn";
+            this.LoadPort07_Start_Btn.UseVisualStyleBackColor = true;
+            this.LoadPort07_Start_Btn.Click += new System.EventHandler(this.PortStart_Btn_Click);
+            // 
+            // LoadPort07Assign_Gv
+            // 
+            this.LoadPort07Assign_Gv.AllowUserToAddRows = false;
+            this.LoadPort07Assign_Gv.AllowUserToDeleteRows = false;
+            this.LoadPort07Assign_Gv.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.DisplayedCells;
+            this.LoadPort07Assign_Gv.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            resources.ApplyResources(this.LoadPort07Assign_Gv, "LoadPort07Assign_Gv");
+            this.LoadPort07Assign_Gv.Name = "LoadPort07Assign_Gv";
+            this.LoadPort07Assign_Gv.ReadOnly = true;
+            this.LoadPort07Assign_Gv.RowHeadersVisible = false;
+            dataGridViewCellStyle5.Font = new System.Drawing.Font("微軟正黑體", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
+            this.LoadPort07Assign_Gv.RowsDefaultCellStyle = dataGridViewCellStyle5;
+            this.LoadPort07Assign_Gv.RowTemplate.Height = 21;
+            this.LoadPort07Assign_Gv.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.LoadPort07Assign_Gv.StandardTab = true;
+            this.LoadPort07Assign_Gv.CellFormatting += new System.Windows.Forms.DataGridViewCellFormattingEventHandler(this.Assign_Gv_CellFormatting);
+            // 
+            // LoadPort07State_lb
+            // 
+            this.LoadPort07State_lb.BackColor = System.Drawing.Color.Transparent;
+            this.LoadPort07State_lb.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            resources.ApplyResources(this.LoadPort07State_lb, "LoadPort07State_lb");
+            this.LoadPort07State_lb.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.LoadPort07State_lb.ForeColor = System.Drawing.Color.Black;
+            this.LoadPort07State_lb.Name = "LoadPort07State_lb";
+            this.LoadPort07State_lb.MouseClick += new System.Windows.Forms.MouseEventHandler(this.State_lb_Click);
+            // 
+            // textBox17
+            // 
+            this.textBox17.BackColor = System.Drawing.Color.Green;
+            this.textBox17.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            resources.ApplyResources(this.textBox17, "textBox17");
+            this.textBox17.ForeColor = System.Drawing.Color.Transparent;
+            this.textBox17.Name = "textBox17";
+            // 
+            // splitContainer14
+            // 
+            resources.ApplyResources(this.splitContainer14, "splitContainer14");
+            this.splitContainer14.Name = "splitContainer14";
+            // 
+            // splitContainer14.Panel1
+            // 
+            this.splitContainer14.Panel1.Controls.Add(this.label43);
+            // 
+            // splitContainer14.Panel2
+            // 
+            this.splitContainer14.Panel2.Controls.Add(this.label44);
+            // 
+            // label43
+            // 
+            this.label43.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.label43.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            resources.ApplyResources(this.label43, "label43");
+            this.label43.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.label43.ForeColor = System.Drawing.Color.Black;
+            this.label43.Name = "label43";
+            // 
+            // label44
+            // 
+            this.label44.BackColor = System.Drawing.Color.Transparent;
+            this.label44.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            resources.ApplyResources(this.label44, "label44");
+            this.label44.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.label44.ForeColor = System.Drawing.Color.Black;
+            this.label44.Name = "label44";
+            // 
+            // tableLayoutPanel18
+            // 
+            resources.ApplyResources(this.tableLayoutPanel18, "tableLayoutPanel18");
+            this.tableLayoutPanel18.Controls.Add(this.LoadPort02Assign_Gv, 0, 2);
+            this.tableLayoutPanel18.Controls.Add(this.LoadPort02State_lb, 0, 0);
+            this.tableLayoutPanel18.Controls.Add(this.textBox11, 0, 1);
+            this.tableLayoutPanel18.Controls.Add(this.splitContainer11, 0, 3);
+            this.tableLayoutPanel18.Controls.Add(this.LoadPort02_Start_Btn, 0, 4);
+            this.tableLayoutPanel18.Name = "tableLayoutPanel18";
+            // 
+            // LoadPort02Assign_Gv
+            // 
+            this.LoadPort02Assign_Gv.AllowUserToAddRows = false;
+            this.LoadPort02Assign_Gv.AllowUserToDeleteRows = false;
+            this.LoadPort02Assign_Gv.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.DisplayedCells;
+            this.LoadPort02Assign_Gv.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            resources.ApplyResources(this.LoadPort02Assign_Gv, "LoadPort02Assign_Gv");
+            this.LoadPort02Assign_Gv.Name = "LoadPort02Assign_Gv";
+            this.LoadPort02Assign_Gv.ReadOnly = true;
+            this.LoadPort02Assign_Gv.RowHeadersVisible = false;
+            dataGridViewCellStyle6.Font = new System.Drawing.Font("微軟正黑體", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
+            this.LoadPort02Assign_Gv.RowsDefaultCellStyle = dataGridViewCellStyle6;
+            this.LoadPort02Assign_Gv.RowTemplate.Height = 21;
+            this.LoadPort02Assign_Gv.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.LoadPort02Assign_Gv.StandardTab = true;
+            this.LoadPort02Assign_Gv.CellFormatting += new System.Windows.Forms.DataGridViewCellFormattingEventHandler(this.Assign_Gv_CellFormatting);
+            this.LoadPort02Assign_Gv.MouseClick += new System.Windows.Forms.MouseEventHandler(this.Assign_Gv_MouseClick);
+            // 
+            // LoadPort02State_lb
+            // 
+            this.LoadPort02State_lb.BackColor = System.Drawing.Color.Transparent;
+            this.LoadPort02State_lb.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            resources.ApplyResources(this.LoadPort02State_lb, "LoadPort02State_lb");
+            this.LoadPort02State_lb.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.LoadPort02State_lb.ForeColor = System.Drawing.Color.Black;
+            this.LoadPort02State_lb.Name = "LoadPort02State_lb";
+            this.LoadPort02State_lb.MouseClick += new System.Windows.Forms.MouseEventHandler(this.State_lb_Click);
+            // 
+            // textBox11
+            // 
+            this.textBox11.BackColor = System.Drawing.Color.Green;
+            this.textBox11.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            resources.ApplyResources(this.textBox11, "textBox11");
+            this.textBox11.ForeColor = System.Drawing.Color.Transparent;
+            this.textBox11.Name = "textBox11";
+            // 
+            // splitContainer11
+            // 
+            resources.ApplyResources(this.splitContainer11, "splitContainer11");
+            this.splitContainer11.Name = "splitContainer11";
+            // 
+            // splitContainer11.Panel1
+            // 
+            this.splitContainer11.Panel1.Controls.Add(this.label40);
+            // 
+            // splitContainer11.Panel2
+            // 
+            this.splitContainer11.Panel2.Controls.Add(this.label41);
+            // 
+            // label40
+            // 
+            this.label40.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.label40.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            resources.ApplyResources(this.label40, "label40");
+            this.label40.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.label40.ForeColor = System.Drawing.Color.Black;
+            this.label40.Name = "label40";
+            // 
+            // label41
+            // 
+            this.label41.BackColor = System.Drawing.Color.Transparent;
+            this.label41.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            resources.ApplyResources(this.label41, "label41");
+            this.label41.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.label41.ForeColor = System.Drawing.Color.Black;
+            this.label41.Name = "label41";
+            // 
+            // LoadPort02_Start_Btn
+            // 
+            resources.ApplyResources(this.LoadPort02_Start_Btn, "LoadPort02_Start_Btn");
+            this.LoadPort02_Start_Btn.Name = "LoadPort02_Start_Btn";
+            this.LoadPort02_Start_Btn.UseVisualStyleBackColor = true;
+            this.LoadPort02_Start_Btn.Click += new System.EventHandler(this.PortStart_Btn_Click);
+            // 
+            // tableLayoutPanel17
+            // 
+            resources.ApplyResources(this.tableLayoutPanel17, "tableLayoutPanel17");
+            this.tableLayoutPanel17.Controls.Add(this.LoadPort01Assign_Gv, 0, 2);
+            this.tableLayoutPanel17.Controls.Add(this.LoadPort01State_lb, 0, 0);
+            this.tableLayoutPanel17.Controls.Add(this.textBox10, 0, 1);
+            this.tableLayoutPanel17.Controls.Add(this.splitContainer7, 0, 3);
+            this.tableLayoutPanel17.Controls.Add(this.LoadPort01_Start_Btn, 0, 4);
+            this.tableLayoutPanel17.Name = "tableLayoutPanel17";
             // 
             // LoadPort01Assign_Gv
             // 
             this.LoadPort01Assign_Gv.AllowUserToAddRows = false;
             this.LoadPort01Assign_Gv.AllowUserToDeleteRows = false;
-            this.LoadPort01Assign_Gv.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.ColumnHeader;
-            this.LoadPort01Assign_Gv.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
+            this.LoadPort01Assign_Gv.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.DisplayedCells;
             this.LoadPort01Assign_Gv.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.LoadPort01Assign_Gv.ContextMenuStrip = this.WaferAssignMenu;
             resources.ApplyResources(this.LoadPort01Assign_Gv, "LoadPort01Assign_Gv");
-            this.LoadPort01Assign_Gv.MultiSelect = false;
             this.LoadPort01Assign_Gv.Name = "LoadPort01Assign_Gv";
             this.LoadPort01Assign_Gv.ReadOnly = true;
             this.LoadPort01Assign_Gv.RowHeadersVisible = false;
-            this.LoadPort01Assign_Gv.RowTemplate.Height = 10;
-            this.LoadPort01Assign_Gv.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.CellSelect;
+            dataGridViewCellStyle7.Font = new System.Drawing.Font("微軟正黑體", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
+            this.LoadPort01Assign_Gv.RowsDefaultCellStyle = dataGridViewCellStyle7;
+            this.LoadPort01Assign_Gv.RowTemplate.Height = 21;
+            this.LoadPort01Assign_Gv.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.LoadPort01Assign_Gv.StandardTab = true;
-            this.LoadPort01Assign_Gv.DataBindingComplete += new System.Windows.Forms.DataGridViewBindingCompleteEventHandler(this.LoadPort01_DataBindingComplete);
+            this.LoadPort01Assign_Gv.CellFormatting += new System.Windows.Forms.DataGridViewCellFormattingEventHandler(this.Assign_Gv_CellFormatting);
+            this.LoadPort01Assign_Gv.MouseClick += new System.Windows.Forms.MouseEventHandler(this.Assign_Gv_MouseClick);
             // 
-            // WaferAssignMenu
+            // LoadPort01State_lb
             // 
-            this.WaferAssignMenu.Name = "WaferAssignMenu";
-            resources.ApplyResources(this.WaferAssignMenu, "WaferAssignMenu");
+            this.LoadPort01State_lb.BackColor = System.Drawing.Color.Transparent;
+            this.LoadPort01State_lb.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            resources.ApplyResources(this.LoadPort01State_lb, "LoadPort01State_lb");
+            this.LoadPort01State_lb.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.LoadPort01State_lb.ForeColor = System.Drawing.Color.Black;
+            this.LoadPort01State_lb.Name = "LoadPort01State_lb";
+            this.LoadPort01State_lb.MouseClick += new System.Windows.Forms.MouseEventHandler(this.State_lb_Click);
             // 
-            // label29
+            // textBox10
             // 
-            this.label29.BackColor = System.Drawing.Color.Transparent;
-            this.label29.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            resources.ApplyResources(this.label29, "label29");
-            this.label29.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.label29.ForeColor = System.Drawing.Color.Black;
-            this.label29.Name = "label29";
+            this.textBox10.BackColor = System.Drawing.Color.Green;
+            this.textBox10.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            resources.ApplyResources(this.textBox10, "textBox10");
+            this.textBox10.ForeColor = System.Drawing.Color.Transparent;
+            this.textBox10.Name = "textBox10";
+            // 
+            // splitContainer7
+            // 
+            resources.ApplyResources(this.splitContainer7, "splitContainer7");
+            this.splitContainer7.Name = "splitContainer7";
+            // 
+            // splitContainer7.Panel1
+            // 
+            this.splitContainer7.Panel1.Controls.Add(this.label36);
+            // 
+            // splitContainer7.Panel2
+            // 
+            this.splitContainer7.Panel2.Controls.Add(this.label37);
+            // 
+            // label36
+            // 
+            this.label36.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.label36.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            resources.ApplyResources(this.label36, "label36");
+            this.label36.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.label36.ForeColor = System.Drawing.Color.Black;
+            this.label36.Name = "label36";
+            // 
+            // label37
+            // 
+            this.label37.BackColor = System.Drawing.Color.Transparent;
+            this.label37.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            resources.ApplyResources(this.label37, "label37");
+            this.label37.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.label37.ForeColor = System.Drawing.Color.Black;
+            this.label37.Name = "label37";
+            // 
+            // LoadPort01_Start_Btn
+            // 
+            resources.ApplyResources(this.LoadPort01_Start_Btn, "LoadPort01_Start_Btn");
+            this.LoadPort01_Start_Btn.Name = "LoadPort01_Start_Btn";
+            this.LoadPort01_Start_Btn.UseVisualStyleBackColor = true;
+            this.LoadPort01_Start_Btn.Click += new System.EventHandler(this.PortStart_Btn_Click);
+            // 
+            // tableLayoutPanel16
+            // 
+            resources.ApplyResources(this.tableLayoutPanel16, "tableLayoutPanel16");
+            this.tableLayoutPanel16.Controls.Add(this.LoadPort04_Start_Btn, 0, 4);
+            this.tableLayoutPanel16.Controls.Add(this.LoadPort04Assign_Gv, 0, 2);
+            this.tableLayoutPanel16.Controls.Add(this.LoadPort04State_lb, 0, 0);
+            this.tableLayoutPanel16.Controls.Add(this.textBox1, 0, 1);
+            this.tableLayoutPanel16.Controls.Add(this.splitContainer6, 0, 3);
+            this.tableLayoutPanel16.Name = "tableLayoutPanel16";
+            // 
+            // LoadPort04_Start_Btn
+            // 
+            resources.ApplyResources(this.LoadPort04_Start_Btn, "LoadPort04_Start_Btn");
+            this.LoadPort04_Start_Btn.Name = "LoadPort04_Start_Btn";
+            this.LoadPort04_Start_Btn.UseVisualStyleBackColor = true;
+            this.LoadPort04_Start_Btn.Click += new System.EventHandler(this.PortStart_Btn_Click);
+            // 
+            // LoadPort04Assign_Gv
+            // 
+            this.LoadPort04Assign_Gv.AllowUserToAddRows = false;
+            this.LoadPort04Assign_Gv.AllowUserToDeleteRows = false;
+            this.LoadPort04Assign_Gv.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.DisplayedCells;
+            this.LoadPort04Assign_Gv.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            resources.ApplyResources(this.LoadPort04Assign_Gv, "LoadPort04Assign_Gv");
+            this.LoadPort04Assign_Gv.Name = "LoadPort04Assign_Gv";
+            this.LoadPort04Assign_Gv.ReadOnly = true;
+            this.LoadPort04Assign_Gv.RowHeadersVisible = false;
+            dataGridViewCellStyle8.Font = new System.Drawing.Font("微軟正黑體", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
+            this.LoadPort04Assign_Gv.RowsDefaultCellStyle = dataGridViewCellStyle8;
+            this.LoadPort04Assign_Gv.RowTemplate.Height = 21;
+            this.LoadPort04Assign_Gv.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.LoadPort04Assign_Gv.StandardTab = true;
+            this.LoadPort04Assign_Gv.CellFormatting += new System.Windows.Forms.DataGridViewCellFormattingEventHandler(this.Assign_Gv_CellFormatting);
+            this.LoadPort04Assign_Gv.MouseClick += new System.Windows.Forms.MouseEventHandler(this.Assign_Gv_MouseClick);
+            // 
+            // LoadPort04State_lb
+            // 
+            this.LoadPort04State_lb.BackColor = System.Drawing.Color.Transparent;
+            this.LoadPort04State_lb.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            resources.ApplyResources(this.LoadPort04State_lb, "LoadPort04State_lb");
+            this.LoadPort04State_lb.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.LoadPort04State_lb.ForeColor = System.Drawing.Color.Black;
+            this.LoadPort04State_lb.Name = "LoadPort04State_lb";
+            this.LoadPort04State_lb.MouseClick += new System.Windows.Forms.MouseEventHandler(this.State_lb_Click);
+            // 
+            // textBox1
+            // 
+            this.textBox1.BackColor = System.Drawing.Color.Green;
+            this.textBox1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            resources.ApplyResources(this.textBox1, "textBox1");
+            this.textBox1.ForeColor = System.Drawing.Color.Transparent;
+            this.textBox1.Name = "textBox1";
+            // 
+            // splitContainer6
+            // 
+            resources.ApplyResources(this.splitContainer6, "splitContainer6");
+            this.splitContainer6.Name = "splitContainer6";
+            // 
+            // splitContainer6.Panel1
+            // 
+            this.splitContainer6.Panel1.Controls.Add(this.label33);
+            // 
+            // splitContainer6.Panel2
+            // 
+            this.splitContainer6.Panel2.Controls.Add(this.label34);
+            // 
+            // label33
+            // 
+            this.label33.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.label33.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            resources.ApplyResources(this.label33, "label33");
+            this.label33.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.label33.ForeColor = System.Drawing.Color.Black;
+            this.label33.Name = "label33";
+            // 
+            // label34
+            // 
+            this.label34.BackColor = System.Drawing.Color.Transparent;
+            this.label34.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            resources.ApplyResources(this.label34, "label34");
+            this.label34.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.label34.ForeColor = System.Drawing.Color.Black;
+            this.label34.Name = "label34";
+            // 
+            // tableLayoutPanel15
+            // 
+            resources.ApplyResources(this.tableLayoutPanel15, "tableLayoutPanel15");
+            this.tableLayoutPanel15.Controls.Add(this.LoadPort03_Start_Btn, 0, 4);
+            this.tableLayoutPanel15.Controls.Add(this.LoadPort03Assign_Gv, 0, 2);
+            this.tableLayoutPanel15.Controls.Add(this.LoadPort03State_lb, 0, 0);
+            this.tableLayoutPanel15.Controls.Add(this.textBox16, 0, 1);
+            this.tableLayoutPanel15.Controls.Add(this.splitContainer3, 0, 3);
+            this.tableLayoutPanel15.Name = "tableLayoutPanel15";
+            // 
+            // LoadPort03_Start_Btn
+            // 
+            resources.ApplyResources(this.LoadPort03_Start_Btn, "LoadPort03_Start_Btn");
+            this.LoadPort03_Start_Btn.Name = "LoadPort03_Start_Btn";
+            this.LoadPort03_Start_Btn.UseVisualStyleBackColor = true;
+            this.LoadPort03_Start_Btn.Click += new System.EventHandler(this.PortStart_Btn_Click);
+            // 
+            // LoadPort03Assign_Gv
+            // 
+            this.LoadPort03Assign_Gv.AllowUserToAddRows = false;
+            this.LoadPort03Assign_Gv.AllowUserToDeleteRows = false;
+            this.LoadPort03Assign_Gv.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.DisplayedCells;
+            this.LoadPort03Assign_Gv.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            resources.ApplyResources(this.LoadPort03Assign_Gv, "LoadPort03Assign_Gv");
+            this.LoadPort03Assign_Gv.Name = "LoadPort03Assign_Gv";
+            this.LoadPort03Assign_Gv.ReadOnly = true;
+            this.LoadPort03Assign_Gv.RowHeadersVisible = false;
+            dataGridViewCellStyle9.Font = new System.Drawing.Font("微軟正黑體", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
+            this.LoadPort03Assign_Gv.RowsDefaultCellStyle = dataGridViewCellStyle9;
+            this.LoadPort03Assign_Gv.RowTemplate.Height = 21;
+            this.LoadPort03Assign_Gv.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.LoadPort03Assign_Gv.StandardTab = true;
+            this.LoadPort03Assign_Gv.CellFormatting += new System.Windows.Forms.DataGridViewCellFormattingEventHandler(this.Assign_Gv_CellFormatting);
+            this.LoadPort03Assign_Gv.DataBindingComplete += new System.Windows.Forms.DataGridViewBindingCompleteEventHandler(this.LoadPort01_DataBindingComplete);
+            this.LoadPort03Assign_Gv.MouseClick += new System.Windows.Forms.MouseEventHandler(this.Assign_Gv_MouseClick);
+            // 
+            // LoadPort03State_lb
+            // 
+            this.LoadPort03State_lb.BackColor = System.Drawing.Color.Transparent;
+            this.LoadPort03State_lb.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            resources.ApplyResources(this.LoadPort03State_lb, "LoadPort03State_lb");
+            this.LoadPort03State_lb.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.LoadPort03State_lb.ForeColor = System.Drawing.Color.Black;
+            this.LoadPort03State_lb.Name = "LoadPort03State_lb";
+            this.LoadPort03State_lb.MouseClick += new System.Windows.Forms.MouseEventHandler(this.State_lb_Click);
             // 
             // textBox16
             // 
@@ -2356,6 +3029,37 @@ namespace Adam
             resources.ApplyResources(this.textBox16, "textBox16");
             this.textBox16.ForeColor = System.Drawing.Color.Transparent;
             this.textBox16.Name = "textBox16";
+            // 
+            // splitContainer3
+            // 
+            resources.ApplyResources(this.splitContainer3, "splitContainer3");
+            this.splitContainer3.Name = "splitContainer3";
+            // 
+            // splitContainer3.Panel1
+            // 
+            this.splitContainer3.Panel1.Controls.Add(this.label31);
+            // 
+            // splitContainer3.Panel2
+            // 
+            this.splitContainer3.Panel2.Controls.Add(this.label30);
+            // 
+            // label31
+            // 
+            this.label31.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.label31.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            resources.ApplyResources(this.label31, "label31");
+            this.label31.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.label31.ForeColor = System.Drawing.Color.Black;
+            this.label31.Name = "label31";
+            // 
+            // label30
+            // 
+            this.label30.BackColor = System.Drawing.Color.Transparent;
+            this.label30.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            resources.ApplyResources(this.label30, "label30");
+            this.label30.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.label30.ForeColor = System.Drawing.Color.Black;
+            this.label30.Name = "label30";
             // 
             // tabStatus
             // 
@@ -2422,264 +3126,264 @@ namespace Adam
             // 
             // Column0
             // 
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            this.Column0.DefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle10.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            this.Column0.DefaultCellStyle = dataGridViewCellStyle10;
             resources.ApplyResources(this.Column0, "Column0");
             this.Column0.Name = "Column0";
             this.Column0.ReadOnly = true;
             // 
             // Column1
             // 
-            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            this.Column1.DefaultCellStyle = dataGridViewCellStyle3;
+            dataGridViewCellStyle11.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            this.Column1.DefaultCellStyle = dataGridViewCellStyle11;
             resources.ApplyResources(this.Column1, "Column1");
             this.Column1.Name = "Column1";
             this.Column1.ReadOnly = true;
             // 
             // Column2
             // 
-            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            this.Column2.DefaultCellStyle = dataGridViewCellStyle4;
+            dataGridViewCellStyle12.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            this.Column2.DefaultCellStyle = dataGridViewCellStyle12;
             resources.ApplyResources(this.Column2, "Column2");
             this.Column2.Name = "Column2";
             this.Column2.ReadOnly = true;
             // 
             // Column3
             // 
-            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            this.Column3.DefaultCellStyle = dataGridViewCellStyle5;
+            dataGridViewCellStyle13.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            this.Column3.DefaultCellStyle = dataGridViewCellStyle13;
             resources.ApplyResources(this.Column3, "Column3");
             this.Column3.Name = "Column3";
             this.Column3.ReadOnly = true;
             // 
             // Column4
             // 
-            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            this.Column4.DefaultCellStyle = dataGridViewCellStyle6;
+            dataGridViewCellStyle14.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            this.Column4.DefaultCellStyle = dataGridViewCellStyle14;
             resources.ApplyResources(this.Column4, "Column4");
             this.Column4.Name = "Column4";
             this.Column4.ReadOnly = true;
             // 
             // Column5
             // 
-            dataGridViewCellStyle7.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            this.Column5.DefaultCellStyle = dataGridViewCellStyle7;
+            dataGridViewCellStyle15.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            this.Column5.DefaultCellStyle = dataGridViewCellStyle15;
             resources.ApplyResources(this.Column5, "Column5");
             this.Column5.Name = "Column5";
             this.Column5.ReadOnly = true;
             // 
             // Column6
             // 
-            dataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            this.Column6.DefaultCellStyle = dataGridViewCellStyle8;
+            dataGridViewCellStyle16.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            this.Column6.DefaultCellStyle = dataGridViewCellStyle16;
             resources.ApplyResources(this.Column6, "Column6");
             this.Column6.Name = "Column6";
             this.Column6.ReadOnly = true;
             // 
             // Column7
             // 
-            dataGridViewCellStyle9.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            this.Column7.DefaultCellStyle = dataGridViewCellStyle9;
+            dataGridViewCellStyle17.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            this.Column7.DefaultCellStyle = dataGridViewCellStyle17;
             resources.ApplyResources(this.Column7, "Column7");
             this.Column7.Name = "Column7";
             this.Column7.ReadOnly = true;
             // 
             // Column8
             // 
-            dataGridViewCellStyle10.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            this.Column8.DefaultCellStyle = dataGridViewCellStyle10;
+            dataGridViewCellStyle18.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            this.Column8.DefaultCellStyle = dataGridViewCellStyle18;
             resources.ApplyResources(this.Column8, "Column8");
             this.Column8.Name = "Column8";
             this.Column8.ReadOnly = true;
             // 
             // Column9
             // 
-            dataGridViewCellStyle11.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            this.Column9.DefaultCellStyle = dataGridViewCellStyle11;
+            dataGridViewCellStyle19.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            this.Column9.DefaultCellStyle = dataGridViewCellStyle19;
             resources.ApplyResources(this.Column9, "Column9");
             this.Column9.Name = "Column9";
             this.Column9.ReadOnly = true;
             // 
             // Column10
             // 
-            dataGridViewCellStyle12.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            this.Column10.DefaultCellStyle = dataGridViewCellStyle12;
+            dataGridViewCellStyle20.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            this.Column10.DefaultCellStyle = dataGridViewCellStyle20;
             resources.ApplyResources(this.Column10, "Column10");
             this.Column10.Name = "Column10";
             this.Column10.ReadOnly = true;
             // 
             // Column11
             // 
-            dataGridViewCellStyle13.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            this.Column11.DefaultCellStyle = dataGridViewCellStyle13;
+            dataGridViewCellStyle21.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            this.Column11.DefaultCellStyle = dataGridViewCellStyle21;
             resources.ApplyResources(this.Column11, "Column11");
             this.Column11.Name = "Column11";
             this.Column11.ReadOnly = true;
             // 
             // Column12
             // 
-            dataGridViewCellStyle14.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            this.Column12.DefaultCellStyle = dataGridViewCellStyle14;
+            dataGridViewCellStyle22.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            this.Column12.DefaultCellStyle = dataGridViewCellStyle22;
             resources.ApplyResources(this.Column12, "Column12");
             this.Column12.Name = "Column12";
             this.Column12.ReadOnly = true;
             // 
             // Column13
             // 
-            dataGridViewCellStyle15.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            this.Column13.DefaultCellStyle = dataGridViewCellStyle15;
+            dataGridViewCellStyle23.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            this.Column13.DefaultCellStyle = dataGridViewCellStyle23;
             resources.ApplyResources(this.Column13, "Column13");
             this.Column13.Name = "Column13";
             this.Column13.ReadOnly = true;
             // 
             // Column14
             // 
-            dataGridViewCellStyle16.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            this.Column14.DefaultCellStyle = dataGridViewCellStyle16;
+            dataGridViewCellStyle24.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            this.Column14.DefaultCellStyle = dataGridViewCellStyle24;
             resources.ApplyResources(this.Column14, "Column14");
             this.Column14.Name = "Column14";
             this.Column14.ReadOnly = true;
             // 
             // Column15
             // 
-            dataGridViewCellStyle17.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            this.Column15.DefaultCellStyle = dataGridViewCellStyle17;
+            dataGridViewCellStyle25.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            this.Column15.DefaultCellStyle = dataGridViewCellStyle25;
             resources.ApplyResources(this.Column15, "Column15");
             this.Column15.Name = "Column15";
             this.Column15.ReadOnly = true;
             // 
             // Column16
             // 
-            dataGridViewCellStyle18.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            this.Column16.DefaultCellStyle = dataGridViewCellStyle18;
+            dataGridViewCellStyle26.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            this.Column16.DefaultCellStyle = dataGridViewCellStyle26;
             resources.ApplyResources(this.Column16, "Column16");
             this.Column16.Name = "Column16";
             this.Column16.ReadOnly = true;
             // 
             // Column17
             // 
-            dataGridViewCellStyle19.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            this.Column17.DefaultCellStyle = dataGridViewCellStyle19;
+            dataGridViewCellStyle27.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            this.Column17.DefaultCellStyle = dataGridViewCellStyle27;
             resources.ApplyResources(this.Column17, "Column17");
             this.Column17.Name = "Column17";
             this.Column17.ReadOnly = true;
             // 
             // Column18
             // 
-            dataGridViewCellStyle20.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            this.Column18.DefaultCellStyle = dataGridViewCellStyle20;
+            dataGridViewCellStyle28.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            this.Column18.DefaultCellStyle = dataGridViewCellStyle28;
             resources.ApplyResources(this.Column18, "Column18");
             this.Column18.Name = "Column18";
             this.Column18.ReadOnly = true;
             // 
             // Column19
             // 
-            dataGridViewCellStyle21.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            this.Column19.DefaultCellStyle = dataGridViewCellStyle21;
+            dataGridViewCellStyle29.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            this.Column19.DefaultCellStyle = dataGridViewCellStyle29;
             resources.ApplyResources(this.Column19, "Column19");
             this.Column19.Name = "Column19";
             this.Column19.ReadOnly = true;
             // 
             // Column20
             // 
-            dataGridViewCellStyle22.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            this.Column20.DefaultCellStyle = dataGridViewCellStyle22;
+            dataGridViewCellStyle30.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            this.Column20.DefaultCellStyle = dataGridViewCellStyle30;
             resources.ApplyResources(this.Column20, "Column20");
             this.Column20.Name = "Column20";
             this.Column20.ReadOnly = true;
             // 
             // Column21
             // 
-            dataGridViewCellStyle23.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            this.Column21.DefaultCellStyle = dataGridViewCellStyle23;
+            dataGridViewCellStyle31.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            this.Column21.DefaultCellStyle = dataGridViewCellStyle31;
             resources.ApplyResources(this.Column21, "Column21");
             this.Column21.Name = "Column21";
             this.Column21.ReadOnly = true;
             // 
             // Column22
             // 
-            dataGridViewCellStyle24.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            this.Column22.DefaultCellStyle = dataGridViewCellStyle24;
+            dataGridViewCellStyle32.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            this.Column22.DefaultCellStyle = dataGridViewCellStyle32;
             resources.ApplyResources(this.Column22, "Column22");
             this.Column22.Name = "Column22";
             this.Column22.ReadOnly = true;
             // 
             // Column23
             // 
-            dataGridViewCellStyle25.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            this.Column23.DefaultCellStyle = dataGridViewCellStyle25;
+            dataGridViewCellStyle33.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            this.Column23.DefaultCellStyle = dataGridViewCellStyle33;
             resources.ApplyResources(this.Column23, "Column23");
             this.Column23.Name = "Column23";
             this.Column23.ReadOnly = true;
             // 
             // Column24
             // 
-            dataGridViewCellStyle26.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            this.Column24.DefaultCellStyle = dataGridViewCellStyle26;
+            dataGridViewCellStyle34.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            this.Column24.DefaultCellStyle = dataGridViewCellStyle34;
             resources.ApplyResources(this.Column24, "Column24");
             this.Column24.Name = "Column24";
             this.Column24.ReadOnly = true;
             // 
             // Column25
             // 
-            dataGridViewCellStyle27.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            this.Column25.DefaultCellStyle = dataGridViewCellStyle27;
+            dataGridViewCellStyle35.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            this.Column25.DefaultCellStyle = dataGridViewCellStyle35;
             resources.ApplyResources(this.Column25, "Column25");
             this.Column25.Name = "Column25";
             this.Column25.ReadOnly = true;
             // 
             // Column26
             // 
-            dataGridViewCellStyle28.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            this.Column26.DefaultCellStyle = dataGridViewCellStyle28;
+            dataGridViewCellStyle36.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            this.Column26.DefaultCellStyle = dataGridViewCellStyle36;
             resources.ApplyResources(this.Column26, "Column26");
             this.Column26.Name = "Column26";
             this.Column26.ReadOnly = true;
             // 
             // Column27
             // 
-            dataGridViewCellStyle29.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            this.Column27.DefaultCellStyle = dataGridViewCellStyle29;
+            dataGridViewCellStyle37.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            this.Column27.DefaultCellStyle = dataGridViewCellStyle37;
             resources.ApplyResources(this.Column27, "Column27");
             this.Column27.Name = "Column27";
             this.Column27.ReadOnly = true;
             // 
             // Column28
             // 
-            dataGridViewCellStyle30.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            this.Column28.DefaultCellStyle = dataGridViewCellStyle30;
+            dataGridViewCellStyle38.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            this.Column28.DefaultCellStyle = dataGridViewCellStyle38;
             resources.ApplyResources(this.Column28, "Column28");
             this.Column28.Name = "Column28";
             this.Column28.ReadOnly = true;
             // 
             // Column29
             // 
-            dataGridViewCellStyle31.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            this.Column29.DefaultCellStyle = dataGridViewCellStyle31;
+            dataGridViewCellStyle39.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            this.Column29.DefaultCellStyle = dataGridViewCellStyle39;
             resources.ApplyResources(this.Column29, "Column29");
             this.Column29.Name = "Column29";
             this.Column29.ReadOnly = true;
             // 
             // Column30
             // 
-            dataGridViewCellStyle32.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            this.Column30.DefaultCellStyle = dataGridViewCellStyle32;
+            dataGridViewCellStyle40.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            this.Column30.DefaultCellStyle = dataGridViewCellStyle40;
             resources.ApplyResources(this.Column30, "Column30");
             this.Column30.Name = "Column30";
             this.Column30.ReadOnly = true;
             // 
             // Column31
             // 
-            dataGridViewCellStyle33.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            this.Column31.DefaultCellStyle = dataGridViewCellStyle33;
+            dataGridViewCellStyle41.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            this.Column31.DefaultCellStyle = dataGridViewCellStyle41;
             resources.ApplyResources(this.Column31, "Column31");
             this.Column31.Name = "Column31";
             this.Column31.ReadOnly = true;
             // 
             // Column32
             // 
-            dataGridViewCellStyle34.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            this.Column32.DefaultCellStyle = dataGridViewCellStyle34;
+            dataGridViewCellStyle42.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            this.Column32.DefaultCellStyle = dataGridViewCellStyle42;
             resources.ApplyResources(this.Column32, "Column32");
             this.Column32.Name = "Column32";
             this.Column32.ReadOnly = true;
@@ -2954,264 +3658,264 @@ namespace Adam
             // 
             // dataGridViewTextBoxColumn49
             // 
-            dataGridViewCellStyle35.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            this.dataGridViewTextBoxColumn49.DefaultCellStyle = dataGridViewCellStyle35;
+            dataGridViewCellStyle43.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            this.dataGridViewTextBoxColumn49.DefaultCellStyle = dataGridViewCellStyle43;
             resources.ApplyResources(this.dataGridViewTextBoxColumn49, "dataGridViewTextBoxColumn49");
             this.dataGridViewTextBoxColumn49.Name = "dataGridViewTextBoxColumn49";
             this.dataGridViewTextBoxColumn49.ReadOnly = true;
             // 
             // dataGridViewTextBoxColumn50
             // 
-            dataGridViewCellStyle36.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            this.dataGridViewTextBoxColumn50.DefaultCellStyle = dataGridViewCellStyle36;
+            dataGridViewCellStyle44.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            this.dataGridViewTextBoxColumn50.DefaultCellStyle = dataGridViewCellStyle44;
             resources.ApplyResources(this.dataGridViewTextBoxColumn50, "dataGridViewTextBoxColumn50");
             this.dataGridViewTextBoxColumn50.Name = "dataGridViewTextBoxColumn50";
             this.dataGridViewTextBoxColumn50.ReadOnly = true;
             // 
             // dataGridViewTextBoxColumn51
             // 
-            dataGridViewCellStyle37.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            this.dataGridViewTextBoxColumn51.DefaultCellStyle = dataGridViewCellStyle37;
+            dataGridViewCellStyle45.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            this.dataGridViewTextBoxColumn51.DefaultCellStyle = dataGridViewCellStyle45;
             resources.ApplyResources(this.dataGridViewTextBoxColumn51, "dataGridViewTextBoxColumn51");
             this.dataGridViewTextBoxColumn51.Name = "dataGridViewTextBoxColumn51";
             this.dataGridViewTextBoxColumn51.ReadOnly = true;
             // 
             // dataGridViewTextBoxColumn52
             // 
-            dataGridViewCellStyle38.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            this.dataGridViewTextBoxColumn52.DefaultCellStyle = dataGridViewCellStyle38;
+            dataGridViewCellStyle46.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            this.dataGridViewTextBoxColumn52.DefaultCellStyle = dataGridViewCellStyle46;
             resources.ApplyResources(this.dataGridViewTextBoxColumn52, "dataGridViewTextBoxColumn52");
             this.dataGridViewTextBoxColumn52.Name = "dataGridViewTextBoxColumn52";
             this.dataGridViewTextBoxColumn52.ReadOnly = true;
             // 
             // dataGridViewTextBoxColumn53
             // 
-            dataGridViewCellStyle39.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            this.dataGridViewTextBoxColumn53.DefaultCellStyle = dataGridViewCellStyle39;
+            dataGridViewCellStyle47.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            this.dataGridViewTextBoxColumn53.DefaultCellStyle = dataGridViewCellStyle47;
             resources.ApplyResources(this.dataGridViewTextBoxColumn53, "dataGridViewTextBoxColumn53");
             this.dataGridViewTextBoxColumn53.Name = "dataGridViewTextBoxColumn53";
             this.dataGridViewTextBoxColumn53.ReadOnly = true;
             // 
             // dataGridViewTextBoxColumn54
             // 
-            dataGridViewCellStyle40.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            this.dataGridViewTextBoxColumn54.DefaultCellStyle = dataGridViewCellStyle40;
+            dataGridViewCellStyle48.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            this.dataGridViewTextBoxColumn54.DefaultCellStyle = dataGridViewCellStyle48;
             resources.ApplyResources(this.dataGridViewTextBoxColumn54, "dataGridViewTextBoxColumn54");
             this.dataGridViewTextBoxColumn54.Name = "dataGridViewTextBoxColumn54";
             this.dataGridViewTextBoxColumn54.ReadOnly = true;
             // 
             // dataGridViewTextBoxColumn55
             // 
-            dataGridViewCellStyle41.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            this.dataGridViewTextBoxColumn55.DefaultCellStyle = dataGridViewCellStyle41;
+            dataGridViewCellStyle49.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            this.dataGridViewTextBoxColumn55.DefaultCellStyle = dataGridViewCellStyle49;
             resources.ApplyResources(this.dataGridViewTextBoxColumn55, "dataGridViewTextBoxColumn55");
             this.dataGridViewTextBoxColumn55.Name = "dataGridViewTextBoxColumn55";
             this.dataGridViewTextBoxColumn55.ReadOnly = true;
             // 
             // dataGridViewTextBoxColumn56
             // 
-            dataGridViewCellStyle42.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            this.dataGridViewTextBoxColumn56.DefaultCellStyle = dataGridViewCellStyle42;
+            dataGridViewCellStyle50.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            this.dataGridViewTextBoxColumn56.DefaultCellStyle = dataGridViewCellStyle50;
             resources.ApplyResources(this.dataGridViewTextBoxColumn56, "dataGridViewTextBoxColumn56");
             this.dataGridViewTextBoxColumn56.Name = "dataGridViewTextBoxColumn56";
             this.dataGridViewTextBoxColumn56.ReadOnly = true;
             // 
             // dataGridViewTextBoxColumn57
             // 
-            dataGridViewCellStyle43.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            this.dataGridViewTextBoxColumn57.DefaultCellStyle = dataGridViewCellStyle43;
+            dataGridViewCellStyle51.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            this.dataGridViewTextBoxColumn57.DefaultCellStyle = dataGridViewCellStyle51;
             resources.ApplyResources(this.dataGridViewTextBoxColumn57, "dataGridViewTextBoxColumn57");
             this.dataGridViewTextBoxColumn57.Name = "dataGridViewTextBoxColumn57";
             this.dataGridViewTextBoxColumn57.ReadOnly = true;
             // 
             // dataGridViewTextBoxColumn58
             // 
-            dataGridViewCellStyle44.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            this.dataGridViewTextBoxColumn58.DefaultCellStyle = dataGridViewCellStyle44;
+            dataGridViewCellStyle52.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            this.dataGridViewTextBoxColumn58.DefaultCellStyle = dataGridViewCellStyle52;
             resources.ApplyResources(this.dataGridViewTextBoxColumn58, "dataGridViewTextBoxColumn58");
             this.dataGridViewTextBoxColumn58.Name = "dataGridViewTextBoxColumn58";
             this.dataGridViewTextBoxColumn58.ReadOnly = true;
             // 
             // dataGridViewTextBoxColumn59
             // 
-            dataGridViewCellStyle45.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            this.dataGridViewTextBoxColumn59.DefaultCellStyle = dataGridViewCellStyle45;
+            dataGridViewCellStyle53.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            this.dataGridViewTextBoxColumn59.DefaultCellStyle = dataGridViewCellStyle53;
             resources.ApplyResources(this.dataGridViewTextBoxColumn59, "dataGridViewTextBoxColumn59");
             this.dataGridViewTextBoxColumn59.Name = "dataGridViewTextBoxColumn59";
             this.dataGridViewTextBoxColumn59.ReadOnly = true;
             // 
             // dataGridViewTextBoxColumn60
             // 
-            dataGridViewCellStyle46.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            this.dataGridViewTextBoxColumn60.DefaultCellStyle = dataGridViewCellStyle46;
+            dataGridViewCellStyle54.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            this.dataGridViewTextBoxColumn60.DefaultCellStyle = dataGridViewCellStyle54;
             resources.ApplyResources(this.dataGridViewTextBoxColumn60, "dataGridViewTextBoxColumn60");
             this.dataGridViewTextBoxColumn60.Name = "dataGridViewTextBoxColumn60";
             this.dataGridViewTextBoxColumn60.ReadOnly = true;
             // 
             // dataGridViewTextBoxColumn61
             // 
-            dataGridViewCellStyle47.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            this.dataGridViewTextBoxColumn61.DefaultCellStyle = dataGridViewCellStyle47;
+            dataGridViewCellStyle55.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            this.dataGridViewTextBoxColumn61.DefaultCellStyle = dataGridViewCellStyle55;
             resources.ApplyResources(this.dataGridViewTextBoxColumn61, "dataGridViewTextBoxColumn61");
             this.dataGridViewTextBoxColumn61.Name = "dataGridViewTextBoxColumn61";
             this.dataGridViewTextBoxColumn61.ReadOnly = true;
             // 
             // dataGridViewTextBoxColumn62
             // 
-            dataGridViewCellStyle48.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            this.dataGridViewTextBoxColumn62.DefaultCellStyle = dataGridViewCellStyle48;
+            dataGridViewCellStyle56.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            this.dataGridViewTextBoxColumn62.DefaultCellStyle = dataGridViewCellStyle56;
             resources.ApplyResources(this.dataGridViewTextBoxColumn62, "dataGridViewTextBoxColumn62");
             this.dataGridViewTextBoxColumn62.Name = "dataGridViewTextBoxColumn62";
             this.dataGridViewTextBoxColumn62.ReadOnly = true;
             // 
             // dataGridViewTextBoxColumn63
             // 
-            dataGridViewCellStyle49.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            this.dataGridViewTextBoxColumn63.DefaultCellStyle = dataGridViewCellStyle49;
+            dataGridViewCellStyle57.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            this.dataGridViewTextBoxColumn63.DefaultCellStyle = dataGridViewCellStyle57;
             resources.ApplyResources(this.dataGridViewTextBoxColumn63, "dataGridViewTextBoxColumn63");
             this.dataGridViewTextBoxColumn63.Name = "dataGridViewTextBoxColumn63";
             this.dataGridViewTextBoxColumn63.ReadOnly = true;
             // 
             // dataGridViewTextBoxColumn64
             // 
-            dataGridViewCellStyle50.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            this.dataGridViewTextBoxColumn64.DefaultCellStyle = dataGridViewCellStyle50;
+            dataGridViewCellStyle58.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            this.dataGridViewTextBoxColumn64.DefaultCellStyle = dataGridViewCellStyle58;
             resources.ApplyResources(this.dataGridViewTextBoxColumn64, "dataGridViewTextBoxColumn64");
             this.dataGridViewTextBoxColumn64.Name = "dataGridViewTextBoxColumn64";
             this.dataGridViewTextBoxColumn64.ReadOnly = true;
             // 
             // dataGridViewTextBoxColumn65
             // 
-            dataGridViewCellStyle51.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            this.dataGridViewTextBoxColumn65.DefaultCellStyle = dataGridViewCellStyle51;
+            dataGridViewCellStyle59.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            this.dataGridViewTextBoxColumn65.DefaultCellStyle = dataGridViewCellStyle59;
             resources.ApplyResources(this.dataGridViewTextBoxColumn65, "dataGridViewTextBoxColumn65");
             this.dataGridViewTextBoxColumn65.Name = "dataGridViewTextBoxColumn65";
             this.dataGridViewTextBoxColumn65.ReadOnly = true;
             // 
             // dataGridViewTextBoxColumn66
             // 
-            dataGridViewCellStyle52.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            this.dataGridViewTextBoxColumn66.DefaultCellStyle = dataGridViewCellStyle52;
+            dataGridViewCellStyle60.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            this.dataGridViewTextBoxColumn66.DefaultCellStyle = dataGridViewCellStyle60;
             resources.ApplyResources(this.dataGridViewTextBoxColumn66, "dataGridViewTextBoxColumn66");
             this.dataGridViewTextBoxColumn66.Name = "dataGridViewTextBoxColumn66";
             this.dataGridViewTextBoxColumn66.ReadOnly = true;
             // 
             // dataGridViewTextBoxColumn67
             // 
-            dataGridViewCellStyle53.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            this.dataGridViewTextBoxColumn67.DefaultCellStyle = dataGridViewCellStyle53;
+            dataGridViewCellStyle61.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            this.dataGridViewTextBoxColumn67.DefaultCellStyle = dataGridViewCellStyle61;
             resources.ApplyResources(this.dataGridViewTextBoxColumn67, "dataGridViewTextBoxColumn67");
             this.dataGridViewTextBoxColumn67.Name = "dataGridViewTextBoxColumn67";
             this.dataGridViewTextBoxColumn67.ReadOnly = true;
             // 
             // dataGridViewTextBoxColumn68
             // 
-            dataGridViewCellStyle54.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            this.dataGridViewTextBoxColumn68.DefaultCellStyle = dataGridViewCellStyle54;
+            dataGridViewCellStyle62.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            this.dataGridViewTextBoxColumn68.DefaultCellStyle = dataGridViewCellStyle62;
             resources.ApplyResources(this.dataGridViewTextBoxColumn68, "dataGridViewTextBoxColumn68");
             this.dataGridViewTextBoxColumn68.Name = "dataGridViewTextBoxColumn68";
             this.dataGridViewTextBoxColumn68.ReadOnly = true;
             // 
             // dataGridViewTextBoxColumn69
             // 
-            dataGridViewCellStyle55.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            this.dataGridViewTextBoxColumn69.DefaultCellStyle = dataGridViewCellStyle55;
+            dataGridViewCellStyle63.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            this.dataGridViewTextBoxColumn69.DefaultCellStyle = dataGridViewCellStyle63;
             resources.ApplyResources(this.dataGridViewTextBoxColumn69, "dataGridViewTextBoxColumn69");
             this.dataGridViewTextBoxColumn69.Name = "dataGridViewTextBoxColumn69";
             this.dataGridViewTextBoxColumn69.ReadOnly = true;
             // 
             // dataGridViewTextBoxColumn70
             // 
-            dataGridViewCellStyle56.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            this.dataGridViewTextBoxColumn70.DefaultCellStyle = dataGridViewCellStyle56;
+            dataGridViewCellStyle64.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            this.dataGridViewTextBoxColumn70.DefaultCellStyle = dataGridViewCellStyle64;
             resources.ApplyResources(this.dataGridViewTextBoxColumn70, "dataGridViewTextBoxColumn70");
             this.dataGridViewTextBoxColumn70.Name = "dataGridViewTextBoxColumn70";
             this.dataGridViewTextBoxColumn70.ReadOnly = true;
             // 
             // dataGridViewTextBoxColumn71
             // 
-            dataGridViewCellStyle57.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            this.dataGridViewTextBoxColumn71.DefaultCellStyle = dataGridViewCellStyle57;
+            dataGridViewCellStyle65.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            this.dataGridViewTextBoxColumn71.DefaultCellStyle = dataGridViewCellStyle65;
             resources.ApplyResources(this.dataGridViewTextBoxColumn71, "dataGridViewTextBoxColumn71");
             this.dataGridViewTextBoxColumn71.Name = "dataGridViewTextBoxColumn71";
             this.dataGridViewTextBoxColumn71.ReadOnly = true;
             // 
             // dataGridViewTextBoxColumn72
             // 
-            dataGridViewCellStyle58.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            this.dataGridViewTextBoxColumn72.DefaultCellStyle = dataGridViewCellStyle58;
+            dataGridViewCellStyle66.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            this.dataGridViewTextBoxColumn72.DefaultCellStyle = dataGridViewCellStyle66;
             resources.ApplyResources(this.dataGridViewTextBoxColumn72, "dataGridViewTextBoxColumn72");
             this.dataGridViewTextBoxColumn72.Name = "dataGridViewTextBoxColumn72";
             this.dataGridViewTextBoxColumn72.ReadOnly = true;
             // 
             // dataGridViewTextBoxColumn73
             // 
-            dataGridViewCellStyle59.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            this.dataGridViewTextBoxColumn73.DefaultCellStyle = dataGridViewCellStyle59;
+            dataGridViewCellStyle67.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            this.dataGridViewTextBoxColumn73.DefaultCellStyle = dataGridViewCellStyle67;
             resources.ApplyResources(this.dataGridViewTextBoxColumn73, "dataGridViewTextBoxColumn73");
             this.dataGridViewTextBoxColumn73.Name = "dataGridViewTextBoxColumn73";
             this.dataGridViewTextBoxColumn73.ReadOnly = true;
             // 
             // dataGridViewTextBoxColumn74
             // 
-            dataGridViewCellStyle60.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            this.dataGridViewTextBoxColumn74.DefaultCellStyle = dataGridViewCellStyle60;
+            dataGridViewCellStyle68.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            this.dataGridViewTextBoxColumn74.DefaultCellStyle = dataGridViewCellStyle68;
             resources.ApplyResources(this.dataGridViewTextBoxColumn74, "dataGridViewTextBoxColumn74");
             this.dataGridViewTextBoxColumn74.Name = "dataGridViewTextBoxColumn74";
             this.dataGridViewTextBoxColumn74.ReadOnly = true;
             // 
             // dataGridViewTextBoxColumn75
             // 
-            dataGridViewCellStyle61.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            this.dataGridViewTextBoxColumn75.DefaultCellStyle = dataGridViewCellStyle61;
+            dataGridViewCellStyle69.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            this.dataGridViewTextBoxColumn75.DefaultCellStyle = dataGridViewCellStyle69;
             resources.ApplyResources(this.dataGridViewTextBoxColumn75, "dataGridViewTextBoxColumn75");
             this.dataGridViewTextBoxColumn75.Name = "dataGridViewTextBoxColumn75";
             this.dataGridViewTextBoxColumn75.ReadOnly = true;
             // 
             // dataGridViewTextBoxColumn76
             // 
-            dataGridViewCellStyle62.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            this.dataGridViewTextBoxColumn76.DefaultCellStyle = dataGridViewCellStyle62;
+            dataGridViewCellStyle70.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            this.dataGridViewTextBoxColumn76.DefaultCellStyle = dataGridViewCellStyle70;
             resources.ApplyResources(this.dataGridViewTextBoxColumn76, "dataGridViewTextBoxColumn76");
             this.dataGridViewTextBoxColumn76.Name = "dataGridViewTextBoxColumn76";
             this.dataGridViewTextBoxColumn76.ReadOnly = true;
             // 
             // dataGridViewTextBoxColumn77
             // 
-            dataGridViewCellStyle63.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            this.dataGridViewTextBoxColumn77.DefaultCellStyle = dataGridViewCellStyle63;
+            dataGridViewCellStyle71.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            this.dataGridViewTextBoxColumn77.DefaultCellStyle = dataGridViewCellStyle71;
             resources.ApplyResources(this.dataGridViewTextBoxColumn77, "dataGridViewTextBoxColumn77");
             this.dataGridViewTextBoxColumn77.Name = "dataGridViewTextBoxColumn77";
             this.dataGridViewTextBoxColumn77.ReadOnly = true;
             // 
             // dataGridViewTextBoxColumn78
             // 
-            dataGridViewCellStyle64.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            this.dataGridViewTextBoxColumn78.DefaultCellStyle = dataGridViewCellStyle64;
+            dataGridViewCellStyle72.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            this.dataGridViewTextBoxColumn78.DefaultCellStyle = dataGridViewCellStyle72;
             resources.ApplyResources(this.dataGridViewTextBoxColumn78, "dataGridViewTextBoxColumn78");
             this.dataGridViewTextBoxColumn78.Name = "dataGridViewTextBoxColumn78";
             this.dataGridViewTextBoxColumn78.ReadOnly = true;
             // 
             // dataGridViewTextBoxColumn79
             // 
-            dataGridViewCellStyle65.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            this.dataGridViewTextBoxColumn79.DefaultCellStyle = dataGridViewCellStyle65;
+            dataGridViewCellStyle73.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            this.dataGridViewTextBoxColumn79.DefaultCellStyle = dataGridViewCellStyle73;
             resources.ApplyResources(this.dataGridViewTextBoxColumn79, "dataGridViewTextBoxColumn79");
             this.dataGridViewTextBoxColumn79.Name = "dataGridViewTextBoxColumn79";
             this.dataGridViewTextBoxColumn79.ReadOnly = true;
             // 
             // dataGridViewTextBoxColumn80
             // 
-            dataGridViewCellStyle66.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            this.dataGridViewTextBoxColumn80.DefaultCellStyle = dataGridViewCellStyle66;
+            dataGridViewCellStyle74.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            this.dataGridViewTextBoxColumn80.DefaultCellStyle = dataGridViewCellStyle74;
             resources.ApplyResources(this.dataGridViewTextBoxColumn80, "dataGridViewTextBoxColumn80");
             this.dataGridViewTextBoxColumn80.Name = "dataGridViewTextBoxColumn80";
             this.dataGridViewTextBoxColumn80.ReadOnly = true;
             // 
             // dataGridViewTextBoxColumn81
             // 
-            dataGridViewCellStyle67.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            this.dataGridViewTextBoxColumn81.DefaultCellStyle = dataGridViewCellStyle67;
+            dataGridViewCellStyle75.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            this.dataGridViewTextBoxColumn81.DefaultCellStyle = dataGridViewCellStyle75;
             resources.ApplyResources(this.dataGridViewTextBoxColumn81, "dataGridViewTextBoxColumn81");
             this.dataGridViewTextBoxColumn81.Name = "dataGridViewTextBoxColumn81";
             this.dataGridViewTextBoxColumn81.ReadOnly = true;
@@ -3259,19 +3963,19 @@ namespace Adam
             // 
             // button26
             // 
-            resources.ApplyResources(this.button26, "button26");
             this.button26.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
             this.button26.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
             this.button26.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
+            resources.ApplyResources(this.button26, "button26");
             this.button26.Name = "button26";
             this.button26.UseVisualStyleBackColor = false;
             // 
             // button28
             // 
-            resources.ApplyResources(this.button28, "button28");
             this.button28.BackColor = System.Drawing.Color.White;
             this.button28.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
             this.button28.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
+            resources.ApplyResources(this.button28, "button28");
             this.button28.Name = "button28";
             this.button28.UseVisualStyleBackColor = false;
             // 
@@ -3332,19 +4036,19 @@ namespace Adam
             // 
             // button4
             // 
-            resources.ApplyResources(this.button4, "button4");
             this.button4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
             this.button4.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
             this.button4.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
+            resources.ApplyResources(this.button4, "button4");
             this.button4.Name = "button4";
             this.button4.UseVisualStyleBackColor = false;
             // 
             // button24
             // 
-            resources.ApplyResources(this.button24, "button24");
             this.button24.BackColor = System.Drawing.Color.White;
             this.button24.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
             this.button24.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
+            resources.ApplyResources(this.button24, "button24");
             this.button24.Name = "button24";
             this.button24.UseVisualStyleBackColor = false;
             // 
@@ -3405,20 +4109,20 @@ namespace Adam
             // 
             // OCR02Offline_Btn
             // 
-            resources.ApplyResources(this.OCR02Offline_Btn, "OCR02Offline_Btn");
             this.OCR02Offline_Btn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
             this.OCR02Offline_Btn.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
             this.OCR02Offline_Btn.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
+            resources.ApplyResources(this.OCR02Offline_Btn, "OCR02Offline_Btn");
             this.OCR02Offline_Btn.Name = "OCR02Offline_Btn";
             this.OCR02Offline_Btn.UseVisualStyleBackColor = false;
             this.OCR02Offline_Btn.Click += new System.EventHandler(this.OCRButton);
             // 
             // OCR02Online_Btn
             // 
-            resources.ApplyResources(this.OCR02Online_Btn, "OCR02Online_Btn");
             this.OCR02Online_Btn.BackColor = System.Drawing.Color.White;
             this.OCR02Online_Btn.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
             this.OCR02Online_Btn.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
+            resources.ApplyResources(this.OCR02Online_Btn, "OCR02Online_Btn");
             this.OCR02Online_Btn.Name = "OCR02Online_Btn";
             this.OCR02Online_Btn.UseVisualStyleBackColor = false;
             this.OCR02Online_Btn.Click += new System.EventHandler(this.OCRButton);
@@ -3471,13 +4175,12 @@ namespace Adam
             this.tabControl3.Controls.Add(this.tabPage13);
             this.tabControl3.Controls.Add(this.tabPage14);
             this.tabControl3.Controls.Add(this.tp_bk);
-            this.tabControl3.Controls.Add(this.tbpSECSSetting);
+            this.tabControl3.Controls.Add(this.tabPage1);
             this.tabControl3.DrawMode = System.Windows.Forms.TabDrawMode.OwnerDrawFixed;
             this.tabControl3.Multiline = true;
             this.tabControl3.Name = "tabControl3";
             this.tabControl3.SelectedIndex = 0;
             this.tabControl3.SizeMode = System.Windows.Forms.TabSizeMode.Fixed;
-            this.tabControl3.SelectedIndexChanged += new System.EventHandler(this.tabControl3_SelectedIndexChanged);
             // 
             // tabPage11
             // 
@@ -5528,77 +6231,6 @@ namespace Adam
             resources.ApplyResources(this.label192, "label192");
             this.label192.Name = "label192";
             // 
-            // tbpSECSSetting
-            // 
-            this.tbpSECSSetting.BackColor = System.Drawing.SystemColors.Control;
-            this.tbpSECSSetting.Controls.Add(this.gbSettingSECS);
-            resources.ApplyResources(this.tbpSECSSetting, "tbpSECSSetting");
-            this.tbpSECSSetting.Name = "tbpSECSSetting";
-            // 
-            // gbSettingSECS
-            // 
-            this.gbSettingSECS.Controls.Add(this.spcSECSSetting);
-            resources.ApplyResources(this.gbSettingSECS, "gbSettingSECS");
-            this.gbSettingSECS.Name = "gbSettingSECS";
-            this.gbSettingSECS.TabStop = false;
-            // 
-            // spcSECSSetting
-            // 
-            resources.ApplyResources(this.spcSECSSetting, "spcSECSSetting");
-            this.spcSECSSetting.Name = "spcSECSSetting";
-            // 
-            // spcSECSSetting.Panel1
-            // 
-            this.spcSECSSetting.Panel1.Controls.Add(this.gbSettingSECS_L);
-            // 
-            // spcSECSSetting.Panel2
-            // 
-            this.spcSECSSetting.Panel2.Controls.Add(this.gbSettingSECS_R);
-            // 
-            // gbSettingSECS_L
-            // 
-            this.gbSettingSECS_L.Controls.Add(this.tevSECSList);
-            resources.ApplyResources(this.gbSettingSECS_L, "gbSettingSECS_L");
-            this.gbSettingSECS_L.Name = "gbSettingSECS_L";
-            this.gbSettingSECS_L.TabStop = false;
-            // 
-            // tevSECSList
-            // 
-            resources.ApplyResources(this.tevSECSList, "tevSECSList");
-            this.tevSECSList.Name = "tevSECSList";
-            this.tevSECSList.Nodes.AddRange(new System.Windows.Forms.TreeNode[] {
-            ((System.Windows.Forms.TreeNode)(resources.GetObject("tevSECSList.Nodes")))});
-            this.tevSECSList.AfterSelect += new System.Windows.Forms.TreeViewEventHandler(this.tevSECSList_AfterSelect);
-            // 
-            // gbSettingSECS_R
-            // 
-            this.gbSettingSECS_R.Controls.Add(this.button2);
-            this.gbSettingSECS_R.Controls.Add(this.dgvSECSData);
-            resources.ApplyResources(this.gbSettingSECS_R, "gbSettingSECS_R");
-            this.gbSettingSECS_R.Name = "gbSettingSECS_R";
-            this.gbSettingSECS_R.TabStop = false;
-            // 
-            // button2
-            // 
-            resources.ApplyResources(this.button2, "button2");
-            this.button2.Name = "button2";
-            this.button2.UseVisualStyleBackColor = true;
-            // 
-            // dgvSECSData
-            // 
-            this.dgvSECSData.AllowUserToAddRows = false;
-            this.dgvSECSData.AllowUserToDeleteRows = false;
-            this.dgvSECSData.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.dgvSECSData.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvSECSData.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.SECSSettingGrid_Item,
-            this.SECSSettingGrid_Value,
-            this.SECSSettingGrid_Range,
-            this.SECSSettingGrid_Description});
-            resources.ApplyResources(this.dgvSECSData, "dgvSECSData");
-            this.dgvSECSData.Name = "dgvSECSData";
-            this.dgvSECSData.RowTemplate.Height = 24;
-            // 
             // panel2
             // 
             this.panel2.Controls.Add(this.panel4);
@@ -5853,11 +6485,88 @@ namespace Adam
             resources.ApplyResources(this.panel3, "panel3");
             this.panel3.Name = "panel3";
             // 
+            // directorySearcher1
+            // 
+            this.directorySearcher1.ClientTimeout = System.TimeSpan.Parse("-00:00:01");
+            this.directorySearcher1.ServerPageTimeLimit = System.TimeSpan.Parse("-00:00:01");
+            this.directorySearcher1.ServerTimeLimit = System.TimeSpan.Parse("-00:00:01");
+            // 
+            // tabPage1
+            // 
+            this.tabPage1.Controls.Add(this.gbSettingSECS);
+            resources.ApplyResources(this.tabPage1, "tabPage1");
+            this.tabPage1.Name = "tabPage1";
+            this.tabPage1.UseVisualStyleBackColor = true;
+            // 
+            // gbSettingSECS
+            // 
+            this.gbSettingSECS.BackColor = System.Drawing.SystemColors.Control;
+            this.gbSettingSECS.Controls.Add(this.spcSECSSetting);
+            resources.ApplyResources(this.gbSettingSECS, "gbSettingSECS");
+            this.gbSettingSECS.Name = "gbSettingSECS";
+            this.gbSettingSECS.TabStop = false;
+            // 
+            // spcSECSSetting
+            // 
+            resources.ApplyResources(this.spcSECSSetting, "spcSECSSetting");
+            this.spcSECSSetting.Name = "spcSECSSetting";
+            // 
+            // spcSECSSetting.Panel1
+            // 
+            this.spcSECSSetting.Panel1.Controls.Add(this.gbSettingSECS_L);
+            // 
+            // spcSECSSetting.Panel2
+            // 
+            this.spcSECSSetting.Panel2.Controls.Add(this.gbSettingSECS_R);
+            // 
+            // gbSettingSECS_L
+            // 
+            this.gbSettingSECS_L.Controls.Add(this.tevSECSList);
+            resources.ApplyResources(this.gbSettingSECS_L, "gbSettingSECS_L");
+            this.gbSettingSECS_L.Name = "gbSettingSECS_L";
+            this.gbSettingSECS_L.TabStop = false;
+            // 
+            // tevSECSList
+            // 
+            resources.ApplyResources(this.tevSECSList, "tevSECSList");
+            this.tevSECSList.Name = "tevSECSList";
+            this.tevSECSList.Nodes.AddRange(new System.Windows.Forms.TreeNode[] {
+            ((System.Windows.Forms.TreeNode)(resources.GetObject("tevSECSList.Nodes")))});
+            // 
+            // gbSettingSECS_R
+            // 
+            this.gbSettingSECS_R.Controls.Add(this.button2);
+            this.gbSettingSECS_R.Controls.Add(this.dgvSECSData);
+            resources.ApplyResources(this.gbSettingSECS_R, "gbSettingSECS_R");
+            this.gbSettingSECS_R.Name = "gbSettingSECS_R";
+            this.gbSettingSECS_R.TabStop = false;
+            // 
+            // button2
+            // 
+            resources.ApplyResources(this.button2, "button2");
+            this.button2.Name = "button2";
+            this.button2.UseVisualStyleBackColor = true;
+            // 
+            // dgvSECSData
+            // 
+            this.dgvSECSData.AllowUserToAddRows = false;
+            this.dgvSECSData.AllowUserToDeleteRows = false;
+            this.dgvSECSData.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.dgvSECSData.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvSECSData.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.SECSSettingGrid_Item,
+            this.SECSSettingGrid_Value,
+            this.SECSSettingGrid_Range,
+            this.SECSSettingGrid_Description});
+            resources.ApplyResources(this.dgvSECSData, "dgvSECSData");
+            this.dgvSECSData.Name = "dgvSECSData";
+            this.dgvSECSData.RowTemplate.Height = 24;
+            // 
             // SECSSettingGrid_Item
             // 
             this.SECSSettingGrid_Item.DataPropertyName = "Item";
-            dataGridViewCellStyle68.BackColor = System.Drawing.SystemColors.Control;
-            this.SECSSettingGrid_Item.DefaultCellStyle = dataGridViewCellStyle68;
+            dataGridViewCellStyle76.BackColor = System.Drawing.SystemColors.Control;
+            this.SECSSettingGrid_Item.DefaultCellStyle = dataGridViewCellStyle76;
             this.SECSSettingGrid_Item.Frozen = true;
             resources.ApplyResources(this.SECSSettingGrid_Item, "SECSSettingGrid_Item");
             this.SECSSettingGrid_Item.Name = "SECSSettingGrid_Item";
@@ -5867,9 +6576,9 @@ namespace Adam
             // 
             this.SECSSettingGrid_Value.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
             this.SECSSettingGrid_Value.DataPropertyName = "Value";
-            dataGridViewCellStyle69.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle69.Font = new System.Drawing.Font("微軟正黑體", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-            this.SECSSettingGrid_Value.DefaultCellStyle = dataGridViewCellStyle69;
+            dataGridViewCellStyle77.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle77.Font = new System.Drawing.Font("微軟正黑體", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
+            this.SECSSettingGrid_Value.DefaultCellStyle = dataGridViewCellStyle77;
             this.SECSSettingGrid_Value.FillWeight = 12F;
             resources.ApplyResources(this.SECSSettingGrid_Value, "SECSSettingGrid_Value");
             this.SECSSettingGrid_Value.Name = "SECSSettingGrid_Value";
@@ -5878,8 +6587,8 @@ namespace Adam
             // 
             this.SECSSettingGrid_Range.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
             this.SECSSettingGrid_Range.DataPropertyName = "Range";
-            dataGridViewCellStyle70.BackColor = System.Drawing.SystemColors.Control;
-            this.SECSSettingGrid_Range.DefaultCellStyle = dataGridViewCellStyle70;
+            dataGridViewCellStyle78.BackColor = System.Drawing.SystemColors.Control;
+            this.SECSSettingGrid_Range.DefaultCellStyle = dataGridViewCellStyle78;
             this.SECSSettingGrid_Range.FillWeight = 12F;
             resources.ApplyResources(this.SECSSettingGrid_Range, "SECSSettingGrid_Range");
             this.SECSSettingGrid_Range.Name = "SECSSettingGrid_Range";
@@ -5889,8 +6598,8 @@ namespace Adam
             // 
             this.SECSSettingGrid_Description.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
             this.SECSSettingGrid_Description.DataPropertyName = "Description";
-            dataGridViewCellStyle71.BackColor = System.Drawing.SystemColors.Control;
-            this.SECSSettingGrid_Description.DefaultCellStyle = dataGridViewCellStyle71;
+            dataGridViewCellStyle79.BackColor = System.Drawing.SystemColors.Control;
+            this.SECSSettingGrid_Description.DefaultCellStyle = dataGridViewCellStyle79;
             this.SECSSettingGrid_Description.FillWeight = 76F;
             resources.ApplyResources(this.SECSSettingGrid_Description, "SECSSettingGrid_Description");
             this.SECSSettingGrid_Description.Name = "SECSSettingGrid_Description";
@@ -5941,10 +6650,6 @@ namespace Adam
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).EndInit();
             this.groupBox13.ResumeLayout(false);
             this.groupBox13.PerformLayout();
-            this.splitContainer3.Panel1.ResumeLayout(false);
-            this.splitContainer3.Panel2.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.splitContainer3)).EndInit();
-            this.splitContainer3.ResumeLayout(false);
             this.splitContainer12.Panel1.ResumeLayout(false);
             this.splitContainer12.Panel2.ResumeLayout(false);
             this.splitContainer12.Panel2.PerformLayout();
@@ -5997,9 +6702,62 @@ namespace Adam
             this.tableLayoutPanel14.ResumeLayout(false);
             this.groupBox11.ResumeLayout(false);
             this.tableLayoutPanel12.ResumeLayout(false);
+            this.tableLayoutPanel22.ResumeLayout(false);
+            this.tableLayoutPanel22.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.LoadPort06Assign_Gv)).EndInit();
+            this.splitContainer17.Panel1.ResumeLayout(false);
+            this.splitContainer17.Panel2.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.splitContainer17)).EndInit();
+            this.splitContainer17.ResumeLayout(false);
+            this.tableLayoutPanel21.ResumeLayout(false);
+            this.tableLayoutPanel21.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.LoadPort05Assign_Gv)).EndInit();
+            this.splitContainer16.Panel1.ResumeLayout(false);
+            this.splitContainer16.Panel2.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.splitContainer16)).EndInit();
+            this.splitContainer16.ResumeLayout(false);
+            this.tableLayoutPanel20.ResumeLayout(false);
+            this.tableLayoutPanel20.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.LoadPort08Assign_Gv)).EndInit();
+            this.splitContainer15.Panel1.ResumeLayout(false);
+            this.splitContainer15.Panel2.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.splitContainer15)).EndInit();
+            this.splitContainer15.ResumeLayout(false);
+            this.tableLayoutPanel19.ResumeLayout(false);
+            this.tableLayoutPanel19.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.LoadPort07Assign_Gv)).EndInit();
+            this.splitContainer14.Panel1.ResumeLayout(false);
+            this.splitContainer14.Panel2.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.splitContainer14)).EndInit();
+            this.splitContainer14.ResumeLayout(false);
+            this.tableLayoutPanel18.ResumeLayout(false);
+            this.tableLayoutPanel18.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.LoadPort02Assign_Gv)).EndInit();
+            this.splitContainer11.Panel1.ResumeLayout(false);
+            this.splitContainer11.Panel2.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.splitContainer11)).EndInit();
+            this.splitContainer11.ResumeLayout(false);
+            this.tableLayoutPanel17.ResumeLayout(false);
+            this.tableLayoutPanel17.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.LoadPort01Assign_Gv)).EndInit();
+            this.splitContainer7.Panel1.ResumeLayout(false);
+            this.splitContainer7.Panel2.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.splitContainer7)).EndInit();
+            this.splitContainer7.ResumeLayout(false);
+            this.tableLayoutPanel16.ResumeLayout(false);
+            this.tableLayoutPanel16.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.LoadPort04Assign_Gv)).EndInit();
+            this.splitContainer6.Panel1.ResumeLayout(false);
+            this.splitContainer6.Panel2.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.splitContainer6)).EndInit();
+            this.splitContainer6.ResumeLayout(false);
             this.tableLayoutPanel15.ResumeLayout(false);
             this.tableLayoutPanel15.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.LoadPort01Assign_Gv)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.LoadPort03Assign_Gv)).EndInit();
+            this.splitContainer3.Panel1.ResumeLayout(false);
+            this.splitContainer3.Panel2.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.splitContainer3)).EndInit();
+            this.splitContainer3.ResumeLayout(false);
             this.tabStatus.ResumeLayout(false);
             this.tableLayoutPanel26.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dgvRstatus)).EndInit();
@@ -6140,15 +6898,6 @@ namespace Adam
             this.panel50.ResumeLayout(false);
             this.groupBox53.ResumeLayout(false);
             this.groupBox53.PerformLayout();
-            this.tbpSECSSetting.ResumeLayout(false);
-            this.gbSettingSECS.ResumeLayout(false);
-            this.spcSECSSetting.Panel1.ResumeLayout(false);
-            this.spcSECSSetting.Panel2.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.spcSECSSetting)).EndInit();
-            this.spcSECSSetting.ResumeLayout(false);
-            this.gbSettingSECS_L.ResumeLayout(false);
-            this.gbSettingSECS_R.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.dgvSECSData)).EndInit();
             this.panel2.ResumeLayout(false);
             this.panel4.ResumeLayout(false);
             this.tableLayoutPanel1.ResumeLayout(false);
@@ -6158,6 +6907,15 @@ namespace Adam
             this.contextMenuStrip1.ResumeLayout(false);
             this.contextMenuStrip4.ResumeLayout(false);
             this.panel3.ResumeLayout(false);
+            this.tabPage1.ResumeLayout(false);
+            this.gbSettingSECS.ResumeLayout(false);
+            this.spcSECSSetting.Panel1.ResumeLayout(false);
+            this.spcSECSSetting.Panel2.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.spcSECSSetting)).EndInit();
+            this.spcSECSSetting.ResumeLayout(false);
+            this.gbSettingSECS_L.ResumeLayout(false);
+            this.gbSettingSECS_R.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.dgvSECSData)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -6201,7 +6959,7 @@ namespace Adam
         private System.Windows.Forms.Button button9;
         private System.Windows.Forms.Button button7;
         private System.Windows.Forms.Button button6;
-        private System.Windows.Forms.Button btnSECSSetting_Save;
+        private System.Windows.Forms.Button button17;
         private System.Windows.Forms.Button button16;
         private System.Windows.Forms.Button button15;
         private System.Windows.Forms.TextBox Robot01_State;
@@ -6297,13 +7055,6 @@ namespace Adam
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel14;
         private System.Windows.Forms.GroupBox groupBox11;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel12;
-        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel15;
-        private System.Windows.Forms.DataGridView LoadPort01Assign_Gv;
-        private System.Windows.Forms.Label label29;
-        private System.Windows.Forms.TextBox textBox16;
-        private System.Windows.Forms.SplitContainer splitContainer3;
-        private System.Windows.Forms.Label label31;
-        private System.Windows.Forms.Label label30;
         private System.Windows.Forms.SplitContainer splitContainer13;
         private System.Windows.Forms.GroupBox groupBox19;
         private System.Windows.Forms.Button button27;
@@ -6730,17 +7481,81 @@ namespace Adam
         private System.Windows.Forms.TextBox OCR02Read_Tb;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.PictureBox OCR02_Pic;
-        private System.Windows.Forms.ContextMenuStrip WaferAssignMenu;
         private JCS.ToggleSwitch tgsMode_SW;
         private JCS.ToggleSwitch tgsConnection;
-        private System.Windows.Forms.TabPage tbpSECSSetting;
+        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel20;
+        private System.Windows.Forms.DataGridView LoadPort08Assign_Gv;
+        private System.Windows.Forms.Label LoadPort08State_lb;
+        private System.Windows.Forms.TextBox textBox18;
+        private System.Windows.Forms.SplitContainer splitContainer15;
+        private System.Windows.Forms.Label label46;
+        private System.Windows.Forms.Label label47;
+        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel22;
+        private System.Windows.Forms.Button LoadPort06_Start_Btn;
+        private System.Windows.Forms.DataGridView LoadPort06Assign_Gv;
+        private System.Windows.Forms.Label LoadPort06State_lb;
+        private System.Windows.Forms.TextBox textBox20;
+        private System.Windows.Forms.SplitContainer splitContainer17;
+        private System.Windows.Forms.Label label53;
+        private System.Windows.Forms.Label label54;
+        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel21;
+        private System.Windows.Forms.Button LoadPort05_Start_Btn;
+        private System.Windows.Forms.DataGridView LoadPort05Assign_Gv;
+        private System.Windows.Forms.Label LoadPort05State_lb;
+        private System.Windows.Forms.TextBox textBox19;
+        private System.Windows.Forms.SplitContainer splitContainer16;
+        private System.Windows.Forms.Label label49;
+        private System.Windows.Forms.Label label51;
+        private System.Windows.Forms.Button LoadPort08_Start_Btn;
+        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel19;
+        private System.Windows.Forms.Button LoadPort07_Start_Btn;
+        private System.Windows.Forms.DataGridView LoadPort07Assign_Gv;
+        private System.Windows.Forms.Label LoadPort07State_lb;
+        private System.Windows.Forms.TextBox textBox17;
+        private System.Windows.Forms.SplitContainer splitContainer14;
+        private System.Windows.Forms.Label label43;
+        private System.Windows.Forms.Label label44;
+        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel18;
+        private System.Windows.Forms.DataGridView LoadPort02Assign_Gv;
+        private System.Windows.Forms.Label LoadPort02State_lb;
+        private System.Windows.Forms.TextBox textBox11;
+        private System.Windows.Forms.SplitContainer splitContainer11;
+        private System.Windows.Forms.Label label40;
+        private System.Windows.Forms.Label label41;
+        private System.Windows.Forms.Button LoadPort02_Start_Btn;
+        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel17;
+        private System.Windows.Forms.DataGridView LoadPort01Assign_Gv;
+        private System.Windows.Forms.Label LoadPort01State_lb;
+        private System.Windows.Forms.TextBox textBox10;
+        private System.Windows.Forms.SplitContainer splitContainer7;
+        private System.Windows.Forms.Label label36;
+        private System.Windows.Forms.Label label37;
+        private System.Windows.Forms.Button LoadPort01_Start_Btn;
+        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel16;
+        private System.Windows.Forms.Button LoadPort04_Start_Btn;
+        private System.Windows.Forms.DataGridView LoadPort04Assign_Gv;
+        private System.Windows.Forms.Label LoadPort04State_lb;
+        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.SplitContainer splitContainer6;
+        private System.Windows.Forms.Label label33;
+        private System.Windows.Forms.Label label34;
+        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel15;
+        private System.Windows.Forms.Button LoadPort03_Start_Btn;
+        private System.Windows.Forms.DataGridView LoadPort03Assign_Gv;
+        private System.Windows.Forms.Label LoadPort03State_lb;
+        private System.Windows.Forms.TextBox textBox16;
+        private System.Windows.Forms.SplitContainer splitContainer3;
+        private System.Windows.Forms.Label label31;
+        private System.Windows.Forms.Label label30;
+        private System.DirectoryServices.DirectorySearcher directorySearcher1;
+        private System.Windows.Forms.TabPage tabPage1;
         private System.Windows.Forms.GroupBox gbSettingSECS;
         private System.Windows.Forms.SplitContainer spcSECSSetting;
         private System.Windows.Forms.GroupBox gbSettingSECS_L;
-        private System.Windows.Forms.GroupBox gbSettingSECS_R;
         private System.Windows.Forms.TreeView tevSECSList;
-        private System.Windows.Forms.DataGridView dgvSECSData;
+        private System.Windows.Forms.GroupBox gbSettingSECS_R;
         private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.DataGridView dgvSECSData;
         private System.Windows.Forms.DataGridViewTextBoxColumn SECSSettingGrid_Item;
         private System.Windows.Forms.DataGridViewTextBoxColumn SECSSettingGrid_Value;
         private System.Windows.Forms.DataGridViewTextBoxColumn SECSSettingGrid_Range;

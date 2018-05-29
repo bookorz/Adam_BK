@@ -19,6 +19,7 @@ using Adam.UI_Update.Manual;
 using System.Collections;
 using System.Diagnostics;
 using Adam.UI_Update.OCR;
+using Adam.UI_Update.WaferMapping;
 
 namespace Adam
 {
@@ -26,8 +27,7 @@ namespace Adam
     {
         public static RouteControl RouteCtrl;
         private static readonly ILog logger = LogManager.GetLogger(typeof(FormMain));
-        private DataTable dtSECS = new DataTable();
-        private ContainerSet containerSet = new ContainerSet();
+        object CurrentSelected = null;
 
         public FormMain()
         {
@@ -83,13 +83,9 @@ namespace Adam
             dgDevice.Rows.Add("DIO", "Advantech", 2, "", "DIO2", true);
 
             //vSBRobotStatus.Maximum = pbRobotState.Width - pnlRobotState.Width + vSBRobotStatus.Width; 水平
-            vSBRobotStatus.Maximum = pbRobotState.Height - pnlRobotState.Height + 40 ;//+ vSBRobotStatus.Height
+            vSBRobotStatus.Maximum = pbRobotState.Height - pnlRobotState.Height + 40;//+ vSBRobotStatus.Height
             vSBAlignerStatus.Maximum = pbAlignerState.Height - pnlAlignerState.Height + 40;// + vSBAlignerStatus.Height
-            vSBPortStatus.Maximum = pbPortState.Height - pnlPortState.Height  + 40;//+ vSBPortStatus.Height
-
-
-            // SECS Setting
-            containerSet.TableFormatting(ref dtSECS, System.AppDomain.CurrentDomain.BaseDirectory + "SECSSetting.xml");
+            vSBPortStatus.Maximum = pbPortState.Height - pnlPortState.Height + 40;//+ vSBPortStatus.Height
         }
 
         private void Initialize()
@@ -114,7 +110,7 @@ namespace Adam
             try
             {
 
-                
+
             }
             catch (Exception ex)
             {
@@ -329,7 +325,7 @@ namespace Adam
                     switch (Txn.Method)
                     {
                         case Transaction.Command.OCRType.GetOnline:
-                            OCRUpdate.UpdateOCRStatus(Node.Name,Msg.Value);
+                            OCRUpdate.UpdateOCRStatus(Node.Name, Msg.Value);
                             break;
                     }
                     break;
@@ -343,9 +339,9 @@ namespace Adam
             {
                 case "LoadPort":
                     ManualPortStatusUpdate.UpdateLog(Node.Name, Msg.Command);
-                    break;               
+                    break;
             }
-            
+
         }
 
         public void On_Command_Finished(Node Node, Transaction Txn, ReturnMessage Msg)
@@ -356,7 +352,7 @@ namespace Adam
             {
                 case "LoadPort":
                     ManualPortStatusUpdate.UpdateLog(Node.Name, Msg.Command);
-                    
+
                     switch (Msg.Command)
                     {
                         case Transaction.Command.LoadPortType.MappingLoad:
@@ -369,12 +365,12 @@ namespace Adam
                     switch (Txn.Method)
                     {
                         case Transaction.Command.OCRType.Read:
-                            OCRUpdate.UpdateOCRRead(Node.Name,Msg.Value);
-                            break;                      
+                            OCRUpdate.UpdateOCRRead(Node.Name, Msg.Value);
+                            break;
                     }
                     break;
             }
-            
+
         }
 
         public void On_Command_TimeOut(Node Node, Transaction Txn)
@@ -406,8 +402,8 @@ namespace Adam
                     break;
             }
             //logger.Debug(JsonConvert.SerializeObject(Msg));
-            
-            
+
+
         }
 
         public void On_Node_State_Changed(Node Node, string Status)
@@ -439,22 +435,22 @@ namespace Adam
 
                     //add robot status
                     dgvRstatus.Rows.Clear();
-                    for (int i = 0; i < r_status.Length ; i++)
+                    for (int i = 0; i < r_status.Length; i++)
                     {
                         DataGridViewRow row = (DataGridViewRow)dgvRstatus.Rows[0].Clone();
                         String robot = "Robot" + (i + 1);
                         row.Cells[0].Value = robot;
-                        for(int j = 0; j < r_status[i].Length; j++)
+                        for (int j = 0; j < r_status[i].Length; j++)
                         {
                             string status = r_status[i].Substring(j, 1);
                             row.Cells[j + 1].Value = status;
-                            row.Cells[j + 1].Style.BackColor = ConfigUtil.GetStatusColor("Robot","Sanwa", status);
+                            row.Cells[j + 1].Style.BackColor = ConfigUtil.GetStatusColor("Robot", "Sanwa", status);
                         }
                         dgvRstatus.Rows.Add(row);
                     }
                     //add aligner status
                     dgvAstatus.Rows.Clear();
-                    for (int i = 0; i < a_status.Length ; i++)
+                    for (int i = 0; i < a_status.Length; i++)
                     {
                         DataGridViewRow row = (DataGridViewRow)dgvAstatus.Rows[0].Clone();
                         String robot = "Aligner" + (i + 1);
@@ -469,7 +465,7 @@ namespace Adam
                     }
                     //add load port status        
                     dgvLstatus.Rows.Clear();
-                    for (int i = 0; i < l_status.Length ; i++)
+                    for (int i = 0; i < l_status.Length; i++)
                     {
                         DataGridViewRow row = (DataGridViewRow)dgvLstatus.Rows[0].Clone();
                         String robot = "LoadPort" + (i + 1);
@@ -489,6 +485,22 @@ namespace Adam
                     NodeManagement.Get("OCR01").SendCommand(txn);
                     break;
                 default:
+                    WaferAssignUpdate.UpdateLoadPortMapping("LoadPort01", "111211111?111110111W11111");
+                    WaferAssignUpdate.UpdateLoadPortMapping("LoadPort02", "11WW111112111111011110111");
+                    WaferAssignUpdate.UpdateLoadPortMapping("LoadPort03", "0000000000000000000000000");
+                    WaferAssignUpdate.UpdateLoadPortMapping("LoadPort04", "0000000000000000000000000");
+                    WaferAssignUpdate.UpdateLoadPortMapping("LoadPort05", "0000000000000000000000000");
+                    WaferAssignUpdate.UpdateLoadPortMapping("LoadPort06", "0000000000000000000000000");
+                    WaferAssignUpdate.UpdateLoadPortMapping("LoadPort07", "0000000000000000000000000");
+                    WaferAssignUpdate.UpdateLoadPortMapping("LoadPort08", "0000000000000000000000000");
+                    WaferAssignUpdate.UpdateLoadPortMode("LoadPort01", "LD");
+                    WaferAssignUpdate.UpdateLoadPortMode("LoadPort02", "LD");
+                    WaferAssignUpdate.UpdateLoadPortMode("LoadPort03", "LD");
+                    WaferAssignUpdate.UpdateLoadPortMode("LoadPort04", "LD");
+                    WaferAssignUpdate.UpdateLoadPortMode("LoadPort05", "UD");
+                    WaferAssignUpdate.UpdateLoadPortMode("LoadPort06", "UD");
+                    WaferAssignUpdate.UpdateLoadPortMode("LoadPort07", "UD");
+                    WaferAssignUpdate.UpdateLoadPortMode("LoadPort08", "UD");
                     break;
             }
         }
@@ -619,33 +631,200 @@ namespace Adam
             }
         }
 
-        private void tabControl3_SelectedIndexChanged(object sender, EventArgs e)
+        private void Assign_Gv_CellFormatting(object sender, DataGridViewCellFormattingEventArgs e)
         {
-            if (tabControl3.SelectedTab.Name.Equals("tbpSECSSetting"))
+            switch (e.ColumnIndex)
             {
-                dgvSECSData.DataSource = null;
+                case 1:
+                    switch (e.Value)
+                    {
+                        case "No wafer":
+                            e.CellStyle.BackColor = Color.Gray;
+                            e.CellStyle.ForeColor = Color.White;
+                            break;
+                        case "Crossed":
+
+                            e.CellStyle.BackColor = Color.Red;
+                            e.CellStyle.ForeColor = Color.White;
+                            break;
+                        case "Undefined":
+                            e.CellStyle.BackColor = Color.Red;
+                            e.CellStyle.ForeColor = Color.White;
+                            break;
+                        case "Double":
+                            e.CellStyle.BackColor = Color.Red;
+                            e.CellStyle.ForeColor = Color.White;
+                            break;
+                        default:
+                            e.CellStyle.BackColor = Color.Green;
+                            e.CellStyle.ForeColor = Color.White;
+                            break;
+
+                    }
+                    break;
+                
             }
         }
 
-        private void tevSECSList_AfterSelect(object sender, TreeViewEventArgs e)
+        private void Assign_Gv_MouseClick(object sender, MouseEventArgs e)
         {
-            DataTable dtTemp = new DataTable();
-
-            var query = (from a in dtSECS.AsEnumerable()
-                         where a.Field<string>("List") == tevSECSList.SelectedNode.Name
-                         select a).ToList();
-
-            if (query.Count > 0)
+            if (e.Button == MouseButtons.Right)
             {
-                dtTemp = query.CopyToDataTable();
-                dtTemp.TableName = "Table";
-                dgvSECSData.AutoGenerateColumns = false;
-                dgvSECSData.DataSource = dtTemp;
-                
+                ContextMenu m = new ContextMenu();
+
+
+                string PortName = (sender as DataGridView).Name.Replace("Assign_Gv", "");
+                if (NodeManagement.Get(PortName).Mode.Equals("LD"))
+                {
+
+                    CurrentSelected = sender;
+                    foreach (Node eachPort in NodeManagement.GetLoadPortList("UD"))
+                    {
+                        List<MenuItem> tmpAry = new List<MenuItem>();
+                        for (int i = 1; i <= 25; i++)
+                        {
+                            MenuItem tmp;
+                            if (!eachPort.JobList.ContainsKey(i.ToString()))
+                            {
+                                tmp = new MenuItem(eachPort.Name + "-" + i.ToString(), AssignPort);
+
+                            }
+                            else
+                            {
+                                tmp = new MenuItem(eachPort.Name + "-" + i.ToString(), AssignPort);
+                                tmp.Enabled = false;
+                            }
+                            tmpAry.Add(tmp);
+                        }
+                        m.MenuItems.Add(eachPort.Name, tmpAry.ToArray());
+                    }
+
+
+                }
+
+                m.Show((DataGridView)sender, new Point(e.X, e.Y));
+
+            }
+        }
+
+        private void AssignPort(object sender, EventArgs e)
+        {
+            string PortName = (sender as MenuItem).Text.Split('-')[0];
+            string Slot = (sender as MenuItem).Text.Split('-')[1];
+            if ((CurrentSelected as DataGridView).SelectedRows.Count == 0)
+            {
+                MessageBox.Show("請選擇來源Slot");
+            }
+            else if ((CurrentSelected as DataGridView).SelectedRows.Count == 1)
+            {
+                string waferId = (CurrentSelected as DataGridView).SelectedRows[0].Cells["Job_Id"].Value.ToString();
+                string OrgDest = (CurrentSelected as DataGridView).SelectedRows[0].Cells["Destination"].Value.ToString();
+                string OrgDestSlot = (CurrentSelected as DataGridView).SelectedRows[0].Cells["DestinationSlot"].Value.ToString();
+                Job wafer = JobManagement.Get(waferId);
+                if (wafer != null)
+                {
+                    wafer.Destination = PortName;
+                    wafer.DisplayDestination = PortName.Replace("Load","");
+                    wafer.DestinationSlot = Slot;
+                    if (!OrgDest.Equals(""))
+                    {
+                        NodeManagement.Get(OrgDest).RemoveJob(OrgDestSlot);
+                    }
+                    NodeManagement.Get(PortName).AddJob(Slot,wafer);
+                    (CurrentSelected as DataGridView).Refresh();
+                }
+                else
+                {
+                    MessageBox.Show("找不到此Wafer資料:" + wafer.Job_Id);
+                }
+
+            }
+            else if ((CurrentSelected as DataGridView).SelectedRows.Count > 1)
+            {
+                int StartSlot = Convert.ToInt32(Slot);
+                foreach(DataGridViewRow each in (CurrentSelected as DataGridView).SelectedRows)
+                {
+                    string waferId = each.Cells["Job_Id"].Value.ToString();
+                    string OrgDest = each.Cells["Destination"].Value.ToString();
+                    string OrgDestSlot = each.Cells["DestinationSlot"].Value.ToString();
+                    Job wafer = JobManagement.Get(waferId);
+                    if (wafer != null)
+                    {
+                        while (true)
+                        {
+                            if (NodeManagement.Get(PortName).GetJob(StartSlot.ToString()) == null)
+                            {
+                                wafer.Destination = PortName;
+                                wafer.DisplayDestination = PortName.Replace("Load", "");
+                                wafer.DestinationSlot = StartSlot.ToString();
+                                if (!OrgDest.Equals(""))
+                                {
+                                    NodeManagement.Get(OrgDest).RemoveJob(OrgDestSlot);
+                                }
+                                NodeManagement.Get(PortName).AddJob(StartSlot.ToString(), wafer);
+                                (CurrentSelected as DataGridView).Refresh();
+                                break;
+                            }
+                            else
+                            {
+                                StartSlot++;
+                                if (StartSlot > 25)
+                                {
+                                    break;
+                                }
+                            }
+                        }
+                        StartSlot++;
+                        if (StartSlot > 25)
+                        {
+                            break;
+                        }
+                    }
+                }
+            }
+        }
+
+        private void State_lb_Click(object sender, MouseEventArgs e)
+        {
+            if (e.Button == MouseButtons.Right)
+            {
+                CurrentSelected = sender;
+                ContextMenu m = new ContextMenu();
+                m.MenuItems.Add(new MenuItem("Change to LD", PortModeChange));
+                m.MenuItems.Add(new MenuItem("Change to UD", PortModeChange));
+                m.Show((Label)sender, new Point(e.X, e.Y));
+            }
+        }
+
+        private void PortModeChange(object sender, EventArgs e)
+        {
+            string Name = (CurrentSelected as Label).Name.Replace("State_lb", "");
+            switch (((MenuItem)sender).Text)
+            {
+                case "Change to LD":
+                    NodeManagement.Get(Name).Mode = "LD";
+                    WaferAssignUpdate.UpdateLoadPortMode(Name, "LD");
+                    break;
+                case "Change to UD":
+                    NodeManagement.Get(Name).Mode = "UD";
+                    WaferAssignUpdate.UpdateLoadPortMode(Name, "UD");
+                    break;
+            }
+
+        }
+
+        private void PortStart_Btn_Click(object sender, EventArgs e)
+        {
+            string PortName = (sender as Button).Name.Replace("_Start_Btn", "");
+            Node port =  NodeManagement.Get(PortName);
+            if (port != null)
+            {
+                port.Available = true;
+                port.Fetchable = true;
             }
             else
             {
-                dgvSECSData.DataSource = null;
+                MessageBox.Show(PortName + " 不存在");
             }
         }
     }
