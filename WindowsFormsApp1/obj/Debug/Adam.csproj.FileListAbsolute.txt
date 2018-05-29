@@ -253,3 +253,9 @@ D:\SyncSourceCode\Adam\WindowsFormsApp1\bin\Debug\SplitButton.pdb
 D:\SyncSourceCode\Adam\WindowsFormsApp1\bin\Debug\ToggleSwitch.pdb
 D:\SyncSourceCode\Adam\WindowsFormsApp1\obj\Debug\ja-JP\Adam.resources.dll
 D:\SyncSourceCode\Adam\WindowsFormsApp1\obj\Debug\Adam.csproj.CopyComplete
+C:\軟體專案開發\team\adam\WindowsFormsApp1\bin\Debug\SplitButton.dll
+C:\軟體專案開發\team\adam\WindowsFormsApp1\bin\Debug\ToggleSwitch.dll
+C:\軟體專案開發\team\adam\WindowsFormsApp1\bin\Debug\SplitButton.pdb
+C:\軟體專案開發\team\adam\WindowsFormsApp1\bin\Debug\ToggleSwitch.pdb
+C:\軟體專案開發\team\adam\WindowsFormsApp1\bin\Debug\nModbusPC.dll
+C:\軟體專案開發\team\adam\WindowsFormsApp1\bin\Debug\mysql.data.dll
