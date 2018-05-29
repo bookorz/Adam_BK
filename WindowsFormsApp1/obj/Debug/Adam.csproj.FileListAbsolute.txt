@@ -257,3 +257,4 @@ C:\Users\ethan_huang\source\repos\Adam\WindowsFormsApp1\bin\Debug\SplitButton.dl
 C:\Users\ethan_huang\source\repos\Adam\WindowsFormsApp1\bin\Debug\ToggleSwitch.dll
 C:\Users\ethan_huang\source\repos\Adam\WindowsFormsApp1\bin\Debug\SplitButton.pdb
 C:\Users\ethan_huang\source\repos\Adam\WindowsFormsApp1\bin\Debug\ToggleSwitch.pdb
+C:\Users\ethan_huang\source\repos\Adam\WindowsFormsApp1\bin\Debug\mysql.data.dll
