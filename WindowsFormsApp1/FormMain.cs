@@ -21,7 +21,7 @@ using System.Diagnostics;
 using Adam.UI_Update.OCR;
 using Adam.UI_Update.WaferMapping;
 using System.Threading;
-using Adam.UI_Update.Authroity;
+using Adam.UI_Update.Authority;
 
 namespace Adam
 {
@@ -170,9 +170,9 @@ namespace Adam
                     formLogin.ShowDialog();
                     break;
                 case "Logout":
-                    AuthroityUpdate.UpdateLogoutInfo();
+                    AuthorityUpdate.UpdateLogoutInfo();
                     //disable authroity function
-                    AuthroityUpdate.UpdateFuncInit("");
+                    AuthorityUpdate.UpdateFuncInit("");
                     break;
             }
         }

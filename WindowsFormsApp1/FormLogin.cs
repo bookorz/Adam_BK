@@ -1,4 +1,4 @@
-﻿using Adam.UI_Update.Authroity;
+﻿using Adam.UI_Update.Authority;
 using Adam.Util;
 using MySql.Data.MySqlClient;
 using System;
@@ -62,7 +62,7 @@ namespace GUI
                 rs.Close();
                 if (result)
                 {
-                    AuthroityUpdate.UpdateLoginInfo(user_id, user_name, user_group_id);
+                    AuthorityUpdate.UpdateLoginInfo(user_id, user_name, user_group_id);
                     this.Close();
                 }
                 else
