@@ -29,42 +29,61 @@
         private void InitializeComponent()
         {
             this.panel40 = new System.Windows.Forms.Panel();
-            this.button33 = new System.Windows.Forms.Button();
+            this.tbPassword = new System.Windows.Forms.TextBox();
+            this.tbUserID = new System.Windows.Forms.TextBox();
+            this.btnCancel = new System.Windows.Forms.Button();
             this.label80 = new System.Windows.Forms.Label();
             this.label84 = new System.Windows.Forms.Label();
-            this.button26 = new System.Windows.Forms.Button();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.btnLogin = new System.Windows.Forms.Button();
             this.panel40.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel40
             // 
             this.panel40.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.panel40.Controls.Add(this.textBox2);
-            this.panel40.Controls.Add(this.textBox1);
-            this.panel40.Controls.Add(this.button33);
+            this.panel40.Controls.Add(this.tbPassword);
+            this.panel40.Controls.Add(this.tbUserID);
+            this.panel40.Controls.Add(this.btnCancel);
             this.panel40.Controls.Add(this.label80);
             this.panel40.Controls.Add(this.label84);
-            this.panel40.Controls.Add(this.button26);
+            this.panel40.Controls.Add(this.btnLogin);
             this.panel40.Location = new System.Drawing.Point(12, 12);
             this.panel40.Name = "panel40";
             this.panel40.Size = new System.Drawing.Size(422, 192);
             this.panel40.TabIndex = 65;
             // 
-            // button33
+            // tbPassword
             // 
-            this.button33.BackColor = System.Drawing.Color.DarkGray;
-            this.button33.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.button33.FlatAppearance.BorderSize = 2;
-            this.button33.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.button33.Font = new System.Drawing.Font("微軟正黑體", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-            this.button33.Location = new System.Drawing.Point(98, 125);
-            this.button33.Name = "button33";
-            this.button33.Size = new System.Drawing.Size(148, 46);
-            this.button33.TabIndex = 67;
-            this.button33.Text = "Cancel";
-            this.button33.UseVisualStyleBackColor = false;
+            this.tbPassword.Font = new System.Drawing.Font("微軟正黑體", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
+            this.tbPassword.Location = new System.Drawing.Point(134, 66);
+            this.tbPassword.Name = "tbPassword";
+            this.tbPassword.PasswordChar = '*';
+            this.tbPassword.Size = new System.Drawing.Size(266, 39);
+            this.tbPassword.TabIndex = 69;
+            // 
+            // tbUserID
+            // 
+            this.tbUserID.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
+            this.tbUserID.Font = new System.Drawing.Font("微軟正黑體", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
+            this.tbUserID.Location = new System.Drawing.Point(134, 12);
+            this.tbUserID.Name = "tbUserID";
+            this.tbUserID.Size = new System.Drawing.Size(266, 39);
+            this.tbUserID.TabIndex = 68;
+            // 
+            // btnCancel
+            // 
+            this.btnCancel.BackColor = System.Drawing.Color.DarkGray;
+            this.btnCancel.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.btnCancel.FlatAppearance.BorderSize = 2;
+            this.btnCancel.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnCancel.Font = new System.Drawing.Font("微軟正黑體", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
+            this.btnCancel.Location = new System.Drawing.Point(98, 125);
+            this.btnCancel.Name = "btnCancel";
+            this.btnCancel.Size = new System.Drawing.Size(148, 46);
+            this.btnCancel.TabIndex = 67;
+            this.btnCancel.Text = "Cancel";
+            this.btnCancel.UseVisualStyleBackColor = false;
+            this.btnCancel.Click += new System.EventHandler(this.btnCancel_Click);
             // 
             // label80
             // 
@@ -87,35 +106,20 @@
             this.label84.TabIndex = 56;
             this.label84.Text = "User ID";
             // 
-            // button26
+            // btnLogin
             // 
-            this.button26.BackColor = System.Drawing.Color.DarkGray;
-            this.button26.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.button26.FlatAppearance.BorderSize = 2;
-            this.button26.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.button26.Font = new System.Drawing.Font("微軟正黑體", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-            this.button26.Location = new System.Drawing.Point(252, 125);
-            this.button26.Name = "button26";
-            this.button26.Size = new System.Drawing.Size(148, 46);
-            this.button26.TabIndex = 53;
-            this.button26.Text = "Login";
-            this.button26.UseVisualStyleBackColor = false;
-            // 
-            // textBox1
-            // 
-            this.textBox1.Font = new System.Drawing.Font("微軟正黑體", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-            this.textBox1.Location = new System.Drawing.Point(134, 12);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(266, 39);
-            this.textBox1.TabIndex = 68;
-            // 
-            // textBox2
-            // 
-            this.textBox2.Font = new System.Drawing.Font("微軟正黑體", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-            this.textBox2.Location = new System.Drawing.Point(134, 66);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(266, 39);
-            this.textBox2.TabIndex = 69;
+            this.btnLogin.BackColor = System.Drawing.Color.DarkGray;
+            this.btnLogin.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.btnLogin.FlatAppearance.BorderSize = 2;
+            this.btnLogin.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnLogin.Font = new System.Drawing.Font("微軟正黑體", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
+            this.btnLogin.Location = new System.Drawing.Point(252, 125);
+            this.btnLogin.Name = "btnLogin";
+            this.btnLogin.Size = new System.Drawing.Size(148, 46);
+            this.btnLogin.TabIndex = 53;
+            this.btnLogin.Text = "Login";
+            this.btnLogin.UseVisualStyleBackColor = false;
+            this.btnLogin.Click += new System.EventHandler(this.btnLogin_Click);
             // 
             // FormLogin
             // 
@@ -135,11 +139,11 @@
         #endregion
 
         private System.Windows.Forms.Panel panel40;
-        private System.Windows.Forms.Button button33;
+        private System.Windows.Forms.Button btnCancel;
         private System.Windows.Forms.Label label80;
         private System.Windows.Forms.Label label84;
-        private System.Windows.Forms.Button button26;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.Button btnLogin;
+        private System.Windows.Forms.TextBox tbPassword;
+        private System.Windows.Forms.TextBox tbUserID;
     }
 }
