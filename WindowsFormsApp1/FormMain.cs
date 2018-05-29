@@ -20,6 +20,7 @@ using System.Collections;
 using System.Diagnostics;
 using Adam.UI_Update.OCR;
 using Adam.UI_Update.WaferMapping;
+using System.Threading;
 
 namespace Adam
 {
@@ -190,6 +191,13 @@ namespace Adam
         {
             string strMsg = "Move to Home position. OK?";
             MessageBox.Show(strMsg, "Org.Back", MessageBoxButtons.OKCancel, MessageBoxIcon.Exclamation, MessageBoxDefaultButton.Button1, MessageBoxOptions.ServiceNotification);
+
+            Transaction txn = new Transaction();
+            txn.Method = Transaction.Command.RobotType.RobotHome;
+            NodeManagement.Get("Robot01").SendCommand(txn);
+            txn = new Transaction();
+            txn.Method = Transaction.Command.RobotType.RobotHome;
+            NodeManagement.Get("Robot02").SendCommand(txn);
 
         }
 
@@ -586,7 +594,7 @@ namespace Adam
 
 
 
-                JobManagement.Initial();
+                
 
                 Node Aligner1 = NodeManagement.Get("Aligner01");
                 if (Aligner1 != null)
@@ -594,29 +602,9 @@ namespace Adam
                     Aligner1.LockByNode = "LoadPort01";
                 }
 
-                Node P1 = NodeManagement.Get("LoadPort01");
-                P1.Available = true;
-                P1.Fetchable = true;
-                P1.JobList.Clear();
+                ThreadPool.QueueUserWorkItem(new WaitCallback(RouteCtrl.Auto), "Normal");
 
-                for (int i = 1; i <= 25; i++)
-                {
-                    Job w = new Job();
-                    w.Job_Id = "Wafer" + i.ToString("000");
-
-                    w.AlignerFlag = true;
-                    w.OCRFlag = false;
-                    w.Position = P1.Name;
-                    w.ProcessFlag = false;
-                    w.FromPort = P1.Name;
-                    w.Slot = i.ToString();
-                    w.Destination = "LoadPort02";
-                    w.DestinationSlot = i.ToString(); ;
-                    JobManagement.Add(w.Job_Id, w);
-                    P1.JobList.TryAdd(w.Slot, w);
-                }
-
-                RouteCtrl.Auto("Normal");
+               
             }
             else
             {
@@ -726,6 +714,8 @@ namespace Adam
                     wafer.Destination = PortName;
                     wafer.DisplayDestination = PortName.Replace("Load","");
                     wafer.DestinationSlot = Slot;
+                    wafer.ProcessFlag = false;
+                    wafer.Position = PortName;
                     if (!OrgDest.Equals(""))
                     {
                         NodeManagement.Get(OrgDest).RemoveJob(OrgDestSlot);
@@ -757,12 +747,14 @@ namespace Adam
                                 wafer.Destination = PortName;
                                 wafer.DisplayDestination = PortName.Replace("Load", "");
                                 wafer.DestinationSlot = StartSlot.ToString();
+                                wafer.Position = PortName;
+                                wafer.ProcessFlag = false;
                                 if (!OrgDest.Equals(""))
                                 {
                                     NodeManagement.Get(OrgDest).RemoveJob(OrgDestSlot);
                                 }
                                 NodeManagement.Get(PortName).AddJob(StartSlot.ToString(), wafer);
-                                (CurrentSelected as DataGridView).Refresh();
+                               
                                 break;
                             }
                             else
@@ -781,7 +773,9 @@ namespace Adam
                         }
                     }
                 }
+                 (CurrentSelected as DataGridView).Refresh();
             }
+           
         }
 
         private void State_lb_Click(object sender, MouseEventArgs e)
