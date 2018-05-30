@@ -264,3 +264,17 @@ C:\軟體專案開發\team\adam\WindowsFormsApp1\bin\Debug\ToggleSwitch.dll
 C:\軟體專案開發\team\adam\WindowsFormsApp1\bin\Debug\nModbusPC.dll
 C:\軟體專案開發\team\adam\WindowsFormsApp1\bin\Debug\SplitButton.pdb
 C:\軟體專案開發\team\adam\WindowsFormsApp1\bin\Debug\ToggleSwitch.pdb
+D:\SyncSourceCode\Adam\WindowsFormsApp1\obj\Debug\Adam.Menu.FormFrame.resources
+D:\SyncSourceCode\Adam\WindowsFormsApp1\obj\Debug\Adam.Menu.SystemSetting.FormAccountSetting.resources
+D:\SyncSourceCode\Adam\WindowsFormsApp1\obj\Debug\Adam.Menu.SystemSetting.FormAlarmEventSet.resources
+D:\SyncSourceCode\Adam\WindowsFormsApp1\obj\Debug\Adam.Menu.SystemSetting.FormConfiguration.resources
+D:\SyncSourceCode\Adam\WindowsFormsApp1\obj\Debug\Adam.Menu.SystemSetting.FormDeviceManager.resources
+D:\SyncSourceCode\Adam\WindowsFormsApp1\obj\Debug\Adam.Menu.SystemSetting.FormOnlineSettings.resources
+D:\SyncSourceCode\Adam\WindowsFormsApp1\obj\Debug\Adam.Menu.SystemSetting.FormSECSSet.resources
+D:\SyncSourceCode\Adam\WindowsFormsApp1\obj\Debug\Adam.Menu.SystemSetting.FormSystemSetting.resources
+D:\SyncSourceCode\Adam\WindowsFormsApp1\bin\Debug\mysql.data.dll
+D:\SyncSourceCode\Adam\WindowsFormsApp1\obj\Debug\Adam.Menu.Monitoring.FormMonitoring.resources
+D:\SyncSourceCode\Adam\WindowsFormsApp1\obj\Debug\Adam.Menu.Communications.FormCommunications.resources
+D:\SyncSourceCode\Adam\WindowsFormsApp1\obj\Debug\Adam.Menu.OCR.FormOCR.resources
+D:\SyncSourceCode\Adam\WindowsFormsApp1\obj\Debug\Adam.Menu.Status.FormStatus.resources
+D:\SyncSourceCode\Adam\WindowsFormsApp1\obj\Debug\Adam.Menu.WaferMapping.FormWaferMapping.resources

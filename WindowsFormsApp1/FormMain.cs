@@ -31,6 +31,13 @@ namespace Adam
         private static readonly ILog logger = LogManager.GetLogger(typeof(FormMain));
         object CurrentSelected = null;
 
+        private Menu.Monitoring.FormMonitoring formMonitoring = new Menu.Monitoring.FormMonitoring();
+        private Menu.Communications.FormCommunications formCommunications = new Menu.Communications.FormCommunications();
+        private Menu.WaferMapping.FormWaferMapping formWafer = new Menu.WaferMapping.FormWaferMapping();
+        private Menu.Status.FormStatus formStatus = new Menu.Status.FormStatus();
+        private Menu.OCR.FormOCR formOCR = new Menu.OCR.FormOCR();
+        private Menu.SystemSetting.FormSystemSetting formSystem = new Menu.SystemSetting.FormSystemSetting();
+
         public FormMain()
         {
             InitializeComponent();
@@ -38,56 +45,56 @@ namespace Adam
             Initialize();
             RouteCtrl = new RouteControl(this);
 
-            ts.SelectedIndex = 0;
-            t2.Text = "CURRENT USER NAME";
-            t1.Text = "CURRENT_ID";
-            t3.SelectedIndex = 3;
-            t4.Text = "***";
-            t5.Text = "***";
-            ts.Enabled = false;
-            t4.Enabled = true;
-            t5.Enabled = true;
-            //for (int i = 0; i < 100; i++)
+            //ts.SelectedIndex = 0;
+            //t2.Text = "CURRENT USER NAME";
+            //t1.Text = "CURRENT_ID";
+            //t3.SelectedIndex = 3;
+            //t4.Text = "***";
+            //t5.Text = "***";
+            //ts.Enabled = false;
+            //t4.Enabled = true;
+            //t5.Enabled = true;
+            ////for (int i = 0; i < 100; i++)
+            ////{
+            ////    this.dg1.Rows.Add("", "", "", "", "");
+            ////}
+            ////dg1.Rows[60].Selected = true;
+            //tabControl3.DrawItem += new DrawItemEventHandler(tabControl2_DrawItem);
+            //tabControl3.TabPages.Remove(tp_bk);//隱藏目前沒使用到的頁面
+            //cb17.SelectedIndex = 0;
+            //cb18.SelectedIndex = 0;
+            //cb19.SelectedIndex = 0;
+            //cb20.SelectedIndex = 0;
+            //cb21.SelectedIndex = 0;
+            //cb22.SelectedIndex = 0;
+            //cb23.SelectedIndex = 0;
+            //cb24.SelectedIndex = 0;
+            //cb25.SelectedIndex = 0;
+            //for (double i = 360; i > 0; i = i - 1)
             //{
-            //    this.dg1.Rows.Add("", "", "", "", "");
+            //    dd1.Items.Add(i);
+            //    dd2.Items.Add(i);
             //}
-            //dg1.Rows[60].Selected = true;
-            tabControl3.DrawItem += new DrawItemEventHandler(tabControl2_DrawItem);
-            tabControl3.TabPages.Remove(tp_bk);//隱藏目前沒使用到的頁面
-            cb17.SelectedIndex = 0;
-            cb18.SelectedIndex = 0;
-            cb19.SelectedIndex = 0;
-            cb20.SelectedIndex = 0;
-            cb21.SelectedIndex = 0;
-            cb22.SelectedIndex = 0;
-            cb23.SelectedIndex = 0;
-            cb24.SelectedIndex = 0;
-            cb25.SelectedIndex = 0;
-            for (double i = 360; i > 0; i = i - 1)
-            {
-                dd1.Items.Add(i);
-                dd2.Items.Add(i);
-            }
-            dd1.Items.Add("Offset");
-            dd2.Items.Add("Offset");
-            dd1.SelectedIndex = 360;
-            dd2.SelectedIndex = 360;
-            cba1.SelectedIndex = 0;
-            cba2.SelectedIndex = 0;
+            //dd1.Items.Add("Offset");
+            //dd2.Items.Add("Offset");
+            //dd1.SelectedIndex = 360;
+            //dd2.SelectedIndex = 360;
+            //cba1.SelectedIndex = 0;
+            //cba2.SelectedIndex = 0;
 
-            dgDevice.Rows.Add("Robot", "Kawasaki", 1, "", "Robot1", true);
-            dgDevice.Rows.Add("Aligner", "Sanwa", 1, "$1", "Aligner1", true);
-            dgDevice.Rows.Add("Aligner", "Sanwa", 2, "$2", "Aligner2", true);
-            dgDevice.Rows.Add("Load Port", "TDK", 1, "", "LoadPort01", true);
-            dgDevice.Rows.Add("Load Port", "TDK", 2, "", "LoadPort02", true);
-            dgDevice.Rows.Add("Load Port", "TDK", 3, "", "LoadPort03", true);
-            dgDevice.Rows.Add("DIO", "Advantech", 1, "", "DIO1", true);
-            dgDevice.Rows.Add("DIO", "Advantech", 2, "", "DIO2", true);
+            //dgDevice.Rows.Add("Robot", "Kawasaki", 1, "", "Robot1", true);
+            //dgDevice.Rows.Add("Aligner", "Sanwa", 1, "$1", "Aligner1", true);
+            //dgDevice.Rows.Add("Aligner", "Sanwa", 2, "$2", "Aligner2", true);
+            //dgDevice.Rows.Add("Load Port", "TDK", 1, "", "LoadPort01", true);
+            //dgDevice.Rows.Add("Load Port", "TDK", 2, "", "LoadPort02", true);
+            //dgDevice.Rows.Add("Load Port", "TDK", 3, "", "LoadPort03", true);
+            //dgDevice.Rows.Add("DIO", "Advantech", 1, "", "DIO1", true);
+            //dgDevice.Rows.Add("DIO", "Advantech", 2, "", "DIO2", true);
 
-            //vSBRobotStatus.Maximum = pbRobotState.Width - pnlRobotState.Width + vSBRobotStatus.Width; 水平
-            vSBRobotStatus.Maximum = pbRobotState.Height - pnlRobotState.Height + 40;//+ vSBRobotStatus.Height
-            vSBAlignerStatus.Maximum = pbAlignerState.Height - pnlAlignerState.Height + 40;// + vSBAlignerStatus.Height
-            vSBPortStatus.Maximum = pbPortState.Height - pnlPortState.Height + 40;//+ vSBPortStatus.Height
+            ////vSBRobotStatus.Maximum = pbRobotState.Width - pnlRobotState.Width + vSBRobotStatus.Width; 水平
+            //vSBRobotStatus.Maximum = pbRobotState.Height - pnlRobotState.Height + 40;//+ vSBRobotStatus.Height
+            //vSBAlignerStatus.Maximum = pbAlignerState.Height - pnlAlignerState.Height + 40;// + vSBAlignerStatus.Height
+            //vSBPortStatus.Maximum = pbPortState.Height - pnlPortState.Height + 40;//+ vSBPortStatus.Height
         }
 
         private void Initialize()
@@ -108,11 +115,16 @@ namespace Adam
 
         private void Form1_Load(object sender, EventArgs e)
         {
+            Control[] ctrlForm = new Control[] { formMonitoring, formCommunications, formWafer, formStatus, formOCR, formSystem };
 
             try
             {
-
-
+                for (int i = 0; i < ctrlForm.Length; i++)
+                {
+                    ((Form)ctrlForm[i]).TopLevel = false;
+                    tbcMian.TabPages[i].Controls.Add(((Form)ctrlForm[i]));
+                    ((Form)ctrlForm[i]).Show();
+                }
             }
             catch (Exception ex)
             {
@@ -123,42 +135,6 @@ namespace Adam
         private void LoadPort01_DataBindingComplete(object sender, DataGridViewBindingCompleteEventArgs e)
         {
             ((DataGridView)sender).ClearSelection();
-        }
-
-        private void tabControl2_DrawItem(Object sender, System.Windows.Forms.DrawItemEventArgs e)
-        {
-            Graphics g = e.Graphics;
-            Brush _textBrush;
-
-            // Get the item from the collection.
-            TabPage _tabPage = tabControl3.TabPages[e.Index];
-
-            // Get the real bounds for the tab rectangle.
-            Rectangle _tabBounds = tabControl3.GetTabRect(e.Index);
-
-            if (e.State == DrawItemState.Selected)
-            {
-
-                // Draw a different background color, and don't paint a focus rectangle.
-                //_textBrush = new SolidBrush(Color.DarkGray);
-                //g.FillRectangle(Brushes.Transparent, e.Bounds);
-                _textBrush = new System.Drawing.SolidBrush(e.ForeColor);
-                g.FillRectangle(Brushes.SkyBlue, e.Bounds);
-            }
-            else
-            {
-                _textBrush = new System.Drawing.SolidBrush(e.ForeColor);
-                e.DrawBackground();
-            }
-
-            // Use our own font.
-            Font _tabFont = new Font("微軟正黑體", (float)18.0, FontStyle.Bold, GraphicsUnit.Pixel);
-
-            // Draw string. Center the text.
-            StringFormat _stringFlags = new StringFormat();
-            _stringFlags.Alignment = StringAlignment.Center;
-            _stringFlags.LineAlignment = StringAlignment.Center;
-            g.DrawString(_tabPage.Text, _tabFont, _textBrush, _tabBounds, new StringFormat(_stringFlags));
         }
 
         private void btnLogInOut_Click(object sender, EventArgs e)
@@ -282,12 +258,12 @@ namespace Adam
         {
             if (enable)
             {
-                tabControl1.TabPages.Add(page);
+                tbcMian.TabPages.Add(page);
                 hiddenPages.Remove(page);
             }
             else
             {
-                tabControl1.TabPages.Remove(page);
+                tbcMian.TabPages.Remove(page);
                 hiddenPages.Add(page);
             }
         }
@@ -420,9 +396,6 @@ namespace Adam
                     }
                     break;
             }
-            //logger.Debug(JsonConvert.SerializeObject(Msg));
-
-
         }
 
         public void On_Node_State_Changed(Node Node, string Status)
@@ -444,142 +417,142 @@ namespace Adam
 
         private void tabControl1_Selected(object sender, TabControlEventArgs e)
         {
-            switch (e.TabPage.Text)
-            {
-                case "Status":
-                    string[] r_status = new string[] { "01010101011111010111101111101011", "01011101011111010111101010101011" };
-                    string[] a_status = new string[] { "01110101011111010111101010101011", "11010101011111010111101010101011" };
-                    string[] l_status = new string[] { "111101010?1?2101100?", "1211010101?210?11001", "1111010101?2101100?1", "1111010101?210?11001",
-                                                       "2111010101?210?11001", "111101?0101210?11001", "1011010101?210?11001", "011101?101210?11001"};
+            //switch (e.TabPage.Text)
+            //{
+            //    case "Status":
+            //        string[] r_status = new string[] { "01010101011111010111101111101011", "01011101011111010111101010101011" };
+            //        string[] a_status = new string[] { "01110101011111010111101010101011", "11010101011111010111101010101011" };
+            //        string[] l_status = new string[] { "111101010?1?2101100?", "1211010101?210?11001", "1111010101?2101100?1", "1111010101?210?11001",
+            //                                           "2111010101?210?11001", "111101?0101210?11001", "1011010101?210?11001", "011101?101210?11001"};
 
-                    //add robot status
-                    dgvRstatus.Rows.Clear();
-                    for (int i = 0; i < r_status.Length; i++)
-                    {
-                        DataGridViewRow row = (DataGridViewRow)dgvRstatus.Rows[0].Clone();
-                        String robot = "Robot" + (i + 1);
-                        row.Cells[0].Value = robot;
-                        for (int j = 0; j < r_status[i].Length; j++)
-                        {
-                            string status = r_status[i].Substring(j, 1);
-                            row.Cells[j + 1].Value = status;
-                            row.Cells[j + 1].Style.BackColor = ConfigUtil.GetStatusColor("Robot", "Sanwa", status);
-                        }
-                        dgvRstatus.Rows.Add(row);
-                    }
-                    //add aligner status
-                    dgvAstatus.Rows.Clear();
-                    for (int i = 0; i < a_status.Length; i++)
-                    {
-                        DataGridViewRow row = (DataGridViewRow)dgvAstatus.Rows[0].Clone();
-                        String robot = "Aligner" + (i + 1);
-                        row.Cells[0].Value = robot;
-                        for (int j = 0; j < a_status[i].Length; j++)
-                        {
-                            string status = a_status[i].Substring(j, 1);
-                            row.Cells[j + 1].Value = status;
-                            row.Cells[j + 1].Style.BackColor = ConfigUtil.GetStatusColor("Aligner", "Sanwa", status);
-                        }
-                        dgvAstatus.Rows.Add(row);
-                    }
-                    //add load port status        
-                    dgvLstatus.Rows.Clear();
-                    for (int i = 0; i < l_status.Length; i++)
-                    {
-                        DataGridViewRow row = (DataGridViewRow)dgvLstatus.Rows[0].Clone();
-                        String robot = "LoadPort" + (i + 1);
-                        row.Cells[0].Value = robot;
-                        for (int j = 0; j < l_status[i].Length; j++)
-                        {
-                            string status = l_status[i].Substring(j, 1);
-                            row.Cells[j + 1].Value = status;
-                            row.Cells[j + 1].Style.BackColor = ConfigUtil.GetStatusColor("LoadPort", "TDK", status);
-                        }
-                        dgvLstatus.Rows.Add(row);
-                    }
-                    break;
-                case "OCR":
-                    Transaction txn = new Transaction();
-                    txn.Method = Transaction.Command.OCRType.GetOnline;
-                    NodeManagement.Get("OCR01").SendCommand(txn);
-                    break;
-                default:
-                    WaferAssignUpdate.UpdateLoadPortMapping("LoadPort01", "111211111?111110111W11111");
-                    WaferAssignUpdate.UpdateLoadPortMapping("LoadPort02", "11WW111112111111011110111");
-                    WaferAssignUpdate.UpdateLoadPortMapping("LoadPort03", "0000000000000000000000000");
-                    WaferAssignUpdate.UpdateLoadPortMapping("LoadPort04", "0000000000000000000000000");
-                    WaferAssignUpdate.UpdateLoadPortMapping("LoadPort05", "0000000000000000000000000");
-                    WaferAssignUpdate.UpdateLoadPortMapping("LoadPort06", "0000000000000000000000000");
-                    WaferAssignUpdate.UpdateLoadPortMapping("LoadPort07", "0000000000000000000000000");
-                    WaferAssignUpdate.UpdateLoadPortMapping("LoadPort08", "0000000000000000000000000");
-                    WaferAssignUpdate.UpdateLoadPortMode("LoadPort01", "LD");
-                    WaferAssignUpdate.UpdateLoadPortMode("LoadPort02", "LD");
-                    WaferAssignUpdate.UpdateLoadPortMode("LoadPort03", "LD");
-                    WaferAssignUpdate.UpdateLoadPortMode("LoadPort04", "LD");
-                    WaferAssignUpdate.UpdateLoadPortMode("LoadPort05", "UD");
-                    WaferAssignUpdate.UpdateLoadPortMode("LoadPort06", "UD");
-                    WaferAssignUpdate.UpdateLoadPortMode("LoadPort07", "UD");
-                    WaferAssignUpdate.UpdateLoadPortMode("LoadPort08", "UD");
-                    break;
-            }
+            //        //add robot status
+            //        dgvRstatus.Rows.Clear();
+            //        for (int i = 0; i < r_status.Length; i++)
+            //        {
+            //            DataGridViewRow row = (DataGridViewRow)dgvRstatus.Rows[0].Clone();
+            //            String robot = "Robot" + (i + 1);
+            //            row.Cells[0].Value = robot;
+            //            for (int j = 0; j < r_status[i].Length; j++)
+            //            {
+            //                string status = r_status[i].Substring(j, 1);
+            //                row.Cells[j + 1].Value = status;
+            //                row.Cells[j + 1].Style.BackColor = ConfigUtil.GetStatusColor("Robot", "Sanwa", status);
+            //            }
+            //            dgvRstatus.Rows.Add(row);
+            //        }
+            //        //add aligner status
+            //        dgvAstatus.Rows.Clear();
+            //        for (int i = 0; i < a_status.Length; i++)
+            //        {
+            //            DataGridViewRow row = (DataGridViewRow)dgvAstatus.Rows[0].Clone();
+            //            String robot = "Aligner" + (i + 1);
+            //            row.Cells[0].Value = robot;
+            //            for (int j = 0; j < a_status[i].Length; j++)
+            //            {
+            //                string status = a_status[i].Substring(j, 1);
+            //                row.Cells[j + 1].Value = status;
+            //                row.Cells[j + 1].Style.BackColor = ConfigUtil.GetStatusColor("Aligner", "Sanwa", status);
+            //            }
+            //            dgvAstatus.Rows.Add(row);
+            //        }
+            //        //add load port status        
+            //        dgvLstatus.Rows.Clear();
+            //        for (int i = 0; i < l_status.Length; i++)
+            //        {
+            //            DataGridViewRow row = (DataGridViewRow)dgvLstatus.Rows[0].Clone();
+            //            String robot = "LoadPort" + (i + 1);
+            //            row.Cells[0].Value = robot;
+            //            for (int j = 0; j < l_status[i].Length; j++)
+            //            {
+            //                string status = l_status[i].Substring(j, 1);
+            //                row.Cells[j + 1].Value = status;
+            //                row.Cells[j + 1].Style.BackColor = ConfigUtil.GetStatusColor("LoadPort", "TDK", status);
+            //            }
+            //            dgvLstatus.Rows.Add(row);
+            //        }
+            //        break;
+            //    case "OCR":
+            //        Transaction txn = new Transaction();
+            //        txn.Method = Transaction.Command.OCRType.GetOnline;
+            //        NodeManagement.Get("OCR01").SendCommand(txn);
+            //        break;
+            //    default:
+            //        WaferAssignUpdate.UpdateLoadPortMapping("LoadPort01", "111211111?111110111W11111");
+            //        WaferAssignUpdate.UpdateLoadPortMapping("LoadPort02", "11WW111112111111011110111");
+            //        WaferAssignUpdate.UpdateLoadPortMapping("LoadPort03", "0000000000000000000000000");
+            //        WaferAssignUpdate.UpdateLoadPortMapping("LoadPort04", "0000000000000000000000000");
+            //        WaferAssignUpdate.UpdateLoadPortMapping("LoadPort05", "0000000000000000000000000");
+            //        WaferAssignUpdate.UpdateLoadPortMapping("LoadPort06", "0000000000000000000000000");
+            //        WaferAssignUpdate.UpdateLoadPortMapping("LoadPort07", "0000000000000000000000000");
+            //        WaferAssignUpdate.UpdateLoadPortMapping("LoadPort08", "0000000000000000000000000");
+            //        WaferAssignUpdate.UpdateLoadPortMode("LoadPort01", "LD");
+            //        WaferAssignUpdate.UpdateLoadPortMode("LoadPort02", "LD");
+            //        WaferAssignUpdate.UpdateLoadPortMode("LoadPort03", "LD");
+            //        WaferAssignUpdate.UpdateLoadPortMode("LoadPort04", "LD");
+            //        WaferAssignUpdate.UpdateLoadPortMode("LoadPort05", "UD");
+            //        WaferAssignUpdate.UpdateLoadPortMode("LoadPort06", "UD");
+            //        WaferAssignUpdate.UpdateLoadPortMode("LoadPort07", "UD");
+            //        WaferAssignUpdate.UpdateLoadPortMode("LoadPort08", "UD");
+            //        break;
+            //}
         }
 
         private void vSBRobotStatus_Scroll(object sender, ScrollEventArgs e)
         {
-            pbRobotState.Top = -vSBRobotStatus.Value;
+            //pbRobotState.Top = -vSBRobotStatus.Value;
         }
 
         private void vSBAlignerStatus_Scroll(object sender, ScrollEventArgs e)
         {
-            pbAlignerState.Top = -vSBAlignerStatus.Value;
+            //pbAlignerState.Top = -vSBAlignerStatus.Value;
         }
 
         private void vSBPortStatus_Scroll(object sender, ScrollEventArgs e)
         {
-            pbPortState.Top = -vSBPortStatus.Value;
+            //pbPortState.Top = -vSBPortStatus.Value;
         }
 
-        private void OCRButton(object sender, EventArgs e)
-        {
-            Button TriggerBtn = sender as Button;
-            Transaction txn = new Transaction();
-            switch (TriggerBtn.Name)
-            {
-                case "OCR01Online_Btn":
-                    OCR01Online_Btn.Enabled = false;
-                    OCR01Offline_Btn.Enabled = true;
-                    txn.Method = Transaction.Command.OCRType.Online;
-                    NodeManagement.Get("OCR01").SendCommand(txn);
-                    break;
-                case "OCR01Offline_Btn":
-                    OCR01Online_Btn.Enabled = true;
-                    OCR01Offline_Btn.Enabled = false;
-                    txn.Method = Transaction.Command.OCRType.Offline;
-                    NodeManagement.Get("OCR01").SendCommand(txn);
-                    break;
-                case "OCR01Read_Bt":
-                    txn.Method = Transaction.Command.OCRType.Read;
-                    NodeManagement.Get("OCR01").SendCommand(txn);
-                    break;
-                case "OCR02Online_Btn":
-                    OCR01Online_Btn.Enabled = false;
-                    OCR01Offline_Btn.Enabled = true;
-                    txn.Method = Transaction.Command.OCRType.Online;
-                    NodeManagement.Get("OCR02").SendCommand(txn);
-                    break;
-                case "OCR02Offline_Btn":
-                    OCR01Online_Btn.Enabled = true;
-                    OCR01Offline_Btn.Enabled = false;
-                    txn.Method = Transaction.Command.OCRType.Offline;
-                    NodeManagement.Get("OCR02").SendCommand(txn);
-                    break;
-                case "OCR02Read_Bt":
-                    txn.Method = Transaction.Command.OCRType.Read;
-                    NodeManagement.Get("OCR02").SendCommand(txn);
-                    break;
-            }
+        //private void OCRButton(object sender, EventArgs e)
+        //{
+        //    Button TriggerBtn = sender as Button;
+        //    Transaction txn = new Transaction();
+        //    switch (TriggerBtn.Name)
+        //    {
+        //        case "OCR01Online_Btn":
+        //            OCR01Online_Btn.Enabled = false;
+        //            OCR01Offline_Btn.Enabled = true;
+        //            txn.Method = Transaction.Command.OCRType.Online;
+        //            NodeManagement.Get("OCR01").SendCommand(txn);
+        //            break;
+        //        case "OCR01Offline_Btn":
+        //            OCR01Online_Btn.Enabled = true;
+        //            OCR01Offline_Btn.Enabled = false;
+        //            txn.Method = Transaction.Command.OCRType.Offline;
+        //            NodeManagement.Get("OCR01").SendCommand(txn);
+        //            break;
+        //        case "OCR01Read_Bt":
+        //            txn.Method = Transaction.Command.OCRType.Read;
+        //            NodeManagement.Get("OCR01").SendCommand(txn);
+        //            break;
+        //        case "OCR02Online_Btn":
+        //            OCR01Online_Btn.Enabled = false;
+        //            OCR01Offline_Btn.Enabled = true;
+        //            txn.Method = Transaction.Command.OCRType.Online;
+        //            NodeManagement.Get("OCR02").SendCommand(txn);
+        //            break;
+        //        case "OCR02Offline_Btn":
+        //            OCR01Online_Btn.Enabled = true;
+        //            OCR01Offline_Btn.Enabled = false;
+        //            txn.Method = Transaction.Command.OCRType.Offline;
+        //            NodeManagement.Get("OCR02").SendCommand(txn);
+        //            break;
+        //        case "OCR02Read_Bt":
+        //            txn.Method = Transaction.Command.OCRType.Read;
+        //            NodeManagement.Get("OCR02").SendCommand(txn);
+        //            break;
+        //    }
 
-        }
+        //}
 
         private void tgsConnection_CheckedChanged(object sender, EventArgs e)
         {
@@ -601,7 +574,7 @@ namespace Adam
                 btnMaintence.BackColor = Color.Red;
                 btnMaintence.Enabled = false;
                 btnTeach.Enabled = false;
-                EnablePage(tabControl1.TabPages[5], false);
+                EnablePage(tbcMian.TabPages[5], false);
 
                 Node Aligner1 = NodeManagement.Get("Aligner01");
                 if (Aligner1 != null)
