@@ -494,7 +494,7 @@
             this.btnRMoveDown.Name = "btnRMoveDown";
             this.btnRMoveDown.Size = new System.Drawing.Size(280, 45);
             this.btnRMoveDown.TabIndex = 47;
-            this.btnRMoveDown.Text = "Move Stage Down";
+            this.btnRMoveDown.Text = "Move Stage Down(GET)";
             this.btnRMoveDown.UseVisualStyleBackColor = false;
             this.btnRMoveDown.Click += new System.EventHandler(this.RobotFunction_Click);
             // 
@@ -506,7 +506,7 @@
             this.btnRGetWait.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnRGetWait.Font = new System.Drawing.Font("微軟正黑體", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
             this.btnRGetWait.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.btnRGetWait.Location = new System.Drawing.Point(57, 328);
+            this.btnRGetWait.Location = new System.Drawing.Point(57, 265);
             this.btnRGetWait.Name = "btnRGetWait";
             this.btnRGetWait.Size = new System.Drawing.Size(280, 45);
             this.btnRGetWait.TabIndex = 44;
@@ -533,7 +533,7 @@
             this.btnRGet.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnRGet.Font = new System.Drawing.Font("微軟正黑體", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
             this.btnRGet.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.btnRGet.Location = new System.Drawing.Point(57, 268);
+            this.btnRGet.Location = new System.Drawing.Point(57, 328);
             this.btnRGet.Name = "btnRGet";
             this.btnRGet.Size = new System.Drawing.Size(280, 45);
             this.btnRGet.TabIndex = 18;
@@ -679,7 +679,7 @@
             this.btnRMoveUp.Name = "btnRMoveUp";
             this.btnRMoveUp.Size = new System.Drawing.Size(280, 45);
             this.btnRMoveUp.TabIndex = 46;
-            this.btnRMoveUp.Text = "Move Stage Up";
+            this.btnRMoveUp.Text = "Move Stage Up(PUT)";
             this.btnRMoveUp.UseVisualStyleBackColor = false;
             this.btnRMoveUp.Click += new System.EventHandler(this.RobotFunction_Click);
             // 
@@ -713,7 +713,7 @@
             this.btnRPutWait.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnRPutWait.Font = new System.Drawing.Font("微軟正黑體", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
             this.btnRPutWait.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.btnRPutWait.Location = new System.Drawing.Point(58, 328);
+            this.btnRPutWait.Location = new System.Drawing.Point(58, 265);
             this.btnRPutWait.Name = "btnRPutWait";
             this.btnRPutWait.Size = new System.Drawing.Size(280, 45);
             this.btnRPutWait.TabIndex = 45;
@@ -751,7 +751,7 @@
             this.btnRPut.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnRPut.Font = new System.Drawing.Font("微軟正黑體", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
             this.btnRPut.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.btnRPut.Location = new System.Drawing.Point(58, 268);
+            this.btnRPut.Location = new System.Drawing.Point(58, 328);
             this.btnRPut.Name = "btnRPut";
             this.btnRPut.Size = new System.Drawing.Size(280, 45);
             this.btnRPut.TabIndex = 43;
