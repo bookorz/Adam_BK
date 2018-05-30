@@ -8981,7 +8981,7 @@
     <value>NoControl</value>
   </data>
   <data name="button61.Location" type="System.Drawing.Point, System.Drawing">
-    <value>955, 517</value>
+    <value>951, 513</value>
   </data>
   <data name="button61.Size" type="System.Drawing.Size, System.Drawing">
     <value>148, 46</value>
@@ -12320,7 +12320,7 @@
     <value>NoControl</value>
   </data>
   <data name="button62.Location" type="System.Drawing.Point, System.Drawing">
-    <value>1109, 517</value>
+    <value>1105, 513</value>
   </data>
   <data name="button62.Size" type="System.Drawing.Size, System.Drawing">
     <value>148, 46</value>
@@ -12356,7 +12356,7 @@
     <value>NoControl</value>
   </data>
   <data name="button63.Location" type="System.Drawing.Point, System.Drawing">
-    <value>801, 517</value>
+    <value>797, 513</value>
   </data>
   <data name="button63.Size" type="System.Drawing.Size, System.Drawing">
     <value>148, 46</value>
@@ -18356,6 +18356,30 @@
   <data name="&gt;&gt;Enable111.Type" xml:space="preserve">
     <value>System.Windows.Forms.DataGridViewCheckBoxColumn, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
+  <data name="&gt;&gt;SECSSettingGrid_Item.Name" xml:space="preserve">
+    <value>SECSSettingGrid_Item</value>
+  </data>
+  <data name="&gt;&gt;SECSSettingGrid_Item.Type" xml:space="preserve">
+    <value>System.Windows.Forms.DataGridViewTextBoxColumn, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;SECSSettingGrid_Value.Name" xml:space="preserve">
+    <value>SECSSettingGrid_Value</value>
+  </data>
+  <data name="&gt;&gt;SECSSettingGrid_Value.Type" xml:space="preserve">
+    <value>System.Windows.Forms.DataGridViewTextBoxColumn, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;SECSSettingGrid_Range.Name" xml:space="preserve">
+    <value>SECSSettingGrid_Range</value>
+  </data>
+  <data name="&gt;&gt;SECSSettingGrid_Range.Type" xml:space="preserve">
+    <value>System.Windows.Forms.DataGridViewTextBoxColumn, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;SECSSettingGrid_Description.Name" xml:space="preserve">
+    <value>SECSSettingGrid_Description</value>
+  </data>
+  <data name="&gt;&gt;SECSSettingGrid_Description.Type" xml:space="preserve">
+    <value>System.Windows.Forms.DataGridViewTextBoxColumn, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
   <data name="&gt;&gt;toolStripMenuItem3.Name" xml:space="preserve">
     <value>toolStripMenuItem3</value>
   </data>
@@ -18451,30 +18475,6 @@
   </data>
   <data name="&gt;&gt;directorySearcher1.Type" xml:space="preserve">
     <value>System.DirectoryServices.DirectorySearcher, System.DirectoryServices, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="&gt;&gt;SECSSettingGrid_Item.Name" xml:space="preserve">
-    <value>SECSSettingGrid_Item</value>
-  </data>
-  <data name="&gt;&gt;SECSSettingGrid_Item.Type" xml:space="preserve">
-    <value>System.Windows.Forms.DataGridViewTextBoxColumn, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;SECSSettingGrid_Value.Name" xml:space="preserve">
-    <value>SECSSettingGrid_Value</value>
-  </data>
-  <data name="&gt;&gt;SECSSettingGrid_Value.Type" xml:space="preserve">
-    <value>System.Windows.Forms.DataGridViewTextBoxColumn, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;SECSSettingGrid_Range.Name" xml:space="preserve">
-    <value>SECSSettingGrid_Range</value>
-  </data>
-  <data name="&gt;&gt;SECSSettingGrid_Range.Type" xml:space="preserve">
-    <value>System.Windows.Forms.DataGridViewTextBoxColumn, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;SECSSettingGrid_Description.Name" xml:space="preserve">
-    <value>SECSSettingGrid_Description</value>
-  </data>
-  <data name="&gt;&gt;SECSSettingGrid_Description.Type" xml:space="preserve">
-    <value>System.Windows.Forms.DataGridViewTextBoxColumn, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;$this.Name" xml:space="preserve">
     <value>FormMain</value>

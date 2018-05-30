@@ -704,6 +704,18 @@ namespace Adam
             this.label191 = new System.Windows.Forms.Label();
             this.textBox69 = new System.Windows.Forms.TextBox();
             this.label192 = new System.Windows.Forms.Label();
+            this.tabPage1 = new System.Windows.Forms.TabPage();
+            this.gbSettingSECS = new System.Windows.Forms.GroupBox();
+            this.spcSECSSetting = new System.Windows.Forms.SplitContainer();
+            this.gbSettingSECS_L = new System.Windows.Forms.GroupBox();
+            this.tevSECSList = new System.Windows.Forms.TreeView();
+            this.gbSettingSECS_R = new System.Windows.Forms.GroupBox();
+            this.button2 = new System.Windows.Forms.Button();
+            this.dgvSECSData = new System.Windows.Forms.DataGridView();
+            this.SECSSettingGrid_Item = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.SECSSettingGrid_Value = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.SECSSettingGrid_Range = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.SECSSettingGrid_Description = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.panel2 = new System.Windows.Forms.Panel();
             this.panel4 = new System.Windows.Forms.Panel();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
@@ -735,18 +747,6 @@ namespace Adam
             this.terminalToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.panel3 = new System.Windows.Forms.Panel();
             this.directorySearcher1 = new System.DirectoryServices.DirectorySearcher();
-            this.tabPage1 = new System.Windows.Forms.TabPage();
-            this.gbSettingSECS = new System.Windows.Forms.GroupBox();
-            this.spcSECSSetting = new System.Windows.Forms.SplitContainer();
-            this.gbSettingSECS_L = new System.Windows.Forms.GroupBox();
-            this.tevSECSList = new System.Windows.Forms.TreeView();
-            this.gbSettingSECS_R = new System.Windows.Forms.GroupBox();
-            this.button2 = new System.Windows.Forms.Button();
-            this.dgvSECSData = new System.Windows.Forms.DataGridView();
-            this.SECSSettingGrid_Item = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.SECSSettingGrid_Value = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.SECSSettingGrid_Range = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.SECSSettingGrid_Description = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer5)).BeginInit();
             this.splitContainer5.Panel1.SuspendLayout();
             this.splitContainer5.Panel2.SuspendLayout();
@@ -978,14 +978,6 @@ namespace Adam
             this.groupBox52.SuspendLayout();
             this.panel50.SuspendLayout();
             this.groupBox53.SuspendLayout();
-            this.panel2.SuspendLayout();
-            this.panel4.SuspendLayout();
-            this.tableLayoutPanel1.SuspendLayout();
-            this.contextMenuStrip3.SuspendLayout();
-            this.contextMenuStrip2.SuspendLayout();
-            this.contextMenuStrip1.SuspendLayout();
-            this.contextMenuStrip4.SuspendLayout();
-            this.panel3.SuspendLayout();
             this.tabPage1.SuspendLayout();
             this.gbSettingSECS.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.spcSECSSetting)).BeginInit();
@@ -995,6 +987,14 @@ namespace Adam
             this.gbSettingSECS_L.SuspendLayout();
             this.gbSettingSECS_R.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvSECSData)).BeginInit();
+            this.panel2.SuspendLayout();
+            this.panel4.SuspendLayout();
+            this.tableLayoutPanel1.SuspendLayout();
+            this.contextMenuStrip3.SuspendLayout();
+            this.contextMenuStrip2.SuspendLayout();
+            this.contextMenuStrip1.SuspendLayout();
+            this.contextMenuStrip4.SuspendLayout();
+            this.panel3.SuspendLayout();
             this.SuspendLayout();
             // 
             // splitContainer5
@@ -6231,6 +6231,120 @@ namespace Adam
             resources.ApplyResources(this.label192, "label192");
             this.label192.Name = "label192";
             // 
+            // tabPage1
+            // 
+            this.tabPage1.Controls.Add(this.gbSettingSECS);
+            resources.ApplyResources(this.tabPage1, "tabPage1");
+            this.tabPage1.Name = "tabPage1";
+            this.tabPage1.UseVisualStyleBackColor = true;
+            // 
+            // gbSettingSECS
+            // 
+            this.gbSettingSECS.BackColor = System.Drawing.SystemColors.Control;
+            this.gbSettingSECS.Controls.Add(this.spcSECSSetting);
+            resources.ApplyResources(this.gbSettingSECS, "gbSettingSECS");
+            this.gbSettingSECS.Name = "gbSettingSECS";
+            this.gbSettingSECS.TabStop = false;
+            // 
+            // spcSECSSetting
+            // 
+            resources.ApplyResources(this.spcSECSSetting, "spcSECSSetting");
+            this.spcSECSSetting.Name = "spcSECSSetting";
+            // 
+            // spcSECSSetting.Panel1
+            // 
+            this.spcSECSSetting.Panel1.Controls.Add(this.gbSettingSECS_L);
+            // 
+            // spcSECSSetting.Panel2
+            // 
+            this.spcSECSSetting.Panel2.Controls.Add(this.gbSettingSECS_R);
+            // 
+            // gbSettingSECS_L
+            // 
+            this.gbSettingSECS_L.Controls.Add(this.tevSECSList);
+            resources.ApplyResources(this.gbSettingSECS_L, "gbSettingSECS_L");
+            this.gbSettingSECS_L.Name = "gbSettingSECS_L";
+            this.gbSettingSECS_L.TabStop = false;
+            // 
+            // tevSECSList
+            // 
+            resources.ApplyResources(this.tevSECSList, "tevSECSList");
+            this.tevSECSList.Name = "tevSECSList";
+            this.tevSECSList.Nodes.AddRange(new System.Windows.Forms.TreeNode[] {
+            ((System.Windows.Forms.TreeNode)(resources.GetObject("tevSECSList.Nodes")))});
+            // 
+            // gbSettingSECS_R
+            // 
+            this.gbSettingSECS_R.Controls.Add(this.button2);
+            this.gbSettingSECS_R.Controls.Add(this.dgvSECSData);
+            resources.ApplyResources(this.gbSettingSECS_R, "gbSettingSECS_R");
+            this.gbSettingSECS_R.Name = "gbSettingSECS_R";
+            this.gbSettingSECS_R.TabStop = false;
+            // 
+            // button2
+            // 
+            resources.ApplyResources(this.button2, "button2");
+            this.button2.Name = "button2";
+            this.button2.UseVisualStyleBackColor = true;
+            // 
+            // dgvSECSData
+            // 
+            this.dgvSECSData.AllowUserToAddRows = false;
+            this.dgvSECSData.AllowUserToDeleteRows = false;
+            this.dgvSECSData.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.dgvSECSData.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvSECSData.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.SECSSettingGrid_Item,
+            this.SECSSettingGrid_Value,
+            this.SECSSettingGrid_Range,
+            this.SECSSettingGrid_Description});
+            resources.ApplyResources(this.dgvSECSData, "dgvSECSData");
+            this.dgvSECSData.Name = "dgvSECSData";
+            this.dgvSECSData.RowTemplate.Height = 24;
+            // 
+            // SECSSettingGrid_Item
+            // 
+            this.SECSSettingGrid_Item.DataPropertyName = "Item";
+            dataGridViewCellStyle76.BackColor = System.Drawing.SystemColors.Control;
+            this.SECSSettingGrid_Item.DefaultCellStyle = dataGridViewCellStyle76;
+            this.SECSSettingGrid_Item.Frozen = true;
+            resources.ApplyResources(this.SECSSettingGrid_Item, "SECSSettingGrid_Item");
+            this.SECSSettingGrid_Item.Name = "SECSSettingGrid_Item";
+            this.SECSSettingGrid_Item.ReadOnly = true;
+            // 
+            // SECSSettingGrid_Value
+            // 
+            this.SECSSettingGrid_Value.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.SECSSettingGrid_Value.DataPropertyName = "Value";
+            dataGridViewCellStyle77.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle77.Font = new System.Drawing.Font("微軟正黑體", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
+            this.SECSSettingGrid_Value.DefaultCellStyle = dataGridViewCellStyle77;
+            this.SECSSettingGrid_Value.FillWeight = 12F;
+            resources.ApplyResources(this.SECSSettingGrid_Value, "SECSSettingGrid_Value");
+            this.SECSSettingGrid_Value.Name = "SECSSettingGrid_Value";
+            // 
+            // SECSSettingGrid_Range
+            // 
+            this.SECSSettingGrid_Range.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.SECSSettingGrid_Range.DataPropertyName = "Range";
+            dataGridViewCellStyle78.BackColor = System.Drawing.SystemColors.Control;
+            this.SECSSettingGrid_Range.DefaultCellStyle = dataGridViewCellStyle78;
+            this.SECSSettingGrid_Range.FillWeight = 12F;
+            resources.ApplyResources(this.SECSSettingGrid_Range, "SECSSettingGrid_Range");
+            this.SECSSettingGrid_Range.Name = "SECSSettingGrid_Range";
+            this.SECSSettingGrid_Range.ReadOnly = true;
+            // 
+            // SECSSettingGrid_Description
+            // 
+            this.SECSSettingGrid_Description.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.SECSSettingGrid_Description.DataPropertyName = "Description";
+            dataGridViewCellStyle79.BackColor = System.Drawing.SystemColors.Control;
+            this.SECSSettingGrid_Description.DefaultCellStyle = dataGridViewCellStyle79;
+            this.SECSSettingGrid_Description.FillWeight = 76F;
+            resources.ApplyResources(this.SECSSettingGrid_Description, "SECSSettingGrid_Description");
+            this.SECSSettingGrid_Description.Name = "SECSSettingGrid_Description";
+            this.SECSSettingGrid_Description.ReadOnly = true;
+            // 
             // panel2
             // 
             this.panel2.Controls.Add(this.panel4);
@@ -6490,120 +6604,6 @@ namespace Adam
             this.directorySearcher1.ClientTimeout = System.TimeSpan.Parse("-00:00:01");
             this.directorySearcher1.ServerPageTimeLimit = System.TimeSpan.Parse("-00:00:01");
             this.directorySearcher1.ServerTimeLimit = System.TimeSpan.Parse("-00:00:01");
-            // 
-            // tabPage1
-            // 
-            this.tabPage1.Controls.Add(this.gbSettingSECS);
-            resources.ApplyResources(this.tabPage1, "tabPage1");
-            this.tabPage1.Name = "tabPage1";
-            this.tabPage1.UseVisualStyleBackColor = true;
-            // 
-            // gbSettingSECS
-            // 
-            this.gbSettingSECS.BackColor = System.Drawing.SystemColors.Control;
-            this.gbSettingSECS.Controls.Add(this.spcSECSSetting);
-            resources.ApplyResources(this.gbSettingSECS, "gbSettingSECS");
-            this.gbSettingSECS.Name = "gbSettingSECS";
-            this.gbSettingSECS.TabStop = false;
-            // 
-            // spcSECSSetting
-            // 
-            resources.ApplyResources(this.spcSECSSetting, "spcSECSSetting");
-            this.spcSECSSetting.Name = "spcSECSSetting";
-            // 
-            // spcSECSSetting.Panel1
-            // 
-            this.spcSECSSetting.Panel1.Controls.Add(this.gbSettingSECS_L);
-            // 
-            // spcSECSSetting.Panel2
-            // 
-            this.spcSECSSetting.Panel2.Controls.Add(this.gbSettingSECS_R);
-            // 
-            // gbSettingSECS_L
-            // 
-            this.gbSettingSECS_L.Controls.Add(this.tevSECSList);
-            resources.ApplyResources(this.gbSettingSECS_L, "gbSettingSECS_L");
-            this.gbSettingSECS_L.Name = "gbSettingSECS_L";
-            this.gbSettingSECS_L.TabStop = false;
-            // 
-            // tevSECSList
-            // 
-            resources.ApplyResources(this.tevSECSList, "tevSECSList");
-            this.tevSECSList.Name = "tevSECSList";
-            this.tevSECSList.Nodes.AddRange(new System.Windows.Forms.TreeNode[] {
-            ((System.Windows.Forms.TreeNode)(resources.GetObject("tevSECSList.Nodes")))});
-            // 
-            // gbSettingSECS_R
-            // 
-            this.gbSettingSECS_R.Controls.Add(this.button2);
-            this.gbSettingSECS_R.Controls.Add(this.dgvSECSData);
-            resources.ApplyResources(this.gbSettingSECS_R, "gbSettingSECS_R");
-            this.gbSettingSECS_R.Name = "gbSettingSECS_R";
-            this.gbSettingSECS_R.TabStop = false;
-            // 
-            // button2
-            // 
-            resources.ApplyResources(this.button2, "button2");
-            this.button2.Name = "button2";
-            this.button2.UseVisualStyleBackColor = true;
-            // 
-            // dgvSECSData
-            // 
-            this.dgvSECSData.AllowUserToAddRows = false;
-            this.dgvSECSData.AllowUserToDeleteRows = false;
-            this.dgvSECSData.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.dgvSECSData.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvSECSData.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.SECSSettingGrid_Item,
-            this.SECSSettingGrid_Value,
-            this.SECSSettingGrid_Range,
-            this.SECSSettingGrid_Description});
-            resources.ApplyResources(this.dgvSECSData, "dgvSECSData");
-            this.dgvSECSData.Name = "dgvSECSData";
-            this.dgvSECSData.RowTemplate.Height = 24;
-            // 
-            // SECSSettingGrid_Item
-            // 
-            this.SECSSettingGrid_Item.DataPropertyName = "Item";
-            dataGridViewCellStyle76.BackColor = System.Drawing.SystemColors.Control;
-            this.SECSSettingGrid_Item.DefaultCellStyle = dataGridViewCellStyle76;
-            this.SECSSettingGrid_Item.Frozen = true;
-            resources.ApplyResources(this.SECSSettingGrid_Item, "SECSSettingGrid_Item");
-            this.SECSSettingGrid_Item.Name = "SECSSettingGrid_Item";
-            this.SECSSettingGrid_Item.ReadOnly = true;
-            // 
-            // SECSSettingGrid_Value
-            // 
-            this.SECSSettingGrid_Value.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.SECSSettingGrid_Value.DataPropertyName = "Value";
-            dataGridViewCellStyle77.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle77.Font = new System.Drawing.Font("微軟正黑體", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-            this.SECSSettingGrid_Value.DefaultCellStyle = dataGridViewCellStyle77;
-            this.SECSSettingGrid_Value.FillWeight = 12F;
-            resources.ApplyResources(this.SECSSettingGrid_Value, "SECSSettingGrid_Value");
-            this.SECSSettingGrid_Value.Name = "SECSSettingGrid_Value";
-            // 
-            // SECSSettingGrid_Range
-            // 
-            this.SECSSettingGrid_Range.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.SECSSettingGrid_Range.DataPropertyName = "Range";
-            dataGridViewCellStyle78.BackColor = System.Drawing.SystemColors.Control;
-            this.SECSSettingGrid_Range.DefaultCellStyle = dataGridViewCellStyle78;
-            this.SECSSettingGrid_Range.FillWeight = 12F;
-            resources.ApplyResources(this.SECSSettingGrid_Range, "SECSSettingGrid_Range");
-            this.SECSSettingGrid_Range.Name = "SECSSettingGrid_Range";
-            this.SECSSettingGrid_Range.ReadOnly = true;
-            // 
-            // SECSSettingGrid_Description
-            // 
-            this.SECSSettingGrid_Description.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.SECSSettingGrid_Description.DataPropertyName = "Description";
-            dataGridViewCellStyle79.BackColor = System.Drawing.SystemColors.Control;
-            this.SECSSettingGrid_Description.DefaultCellStyle = dataGridViewCellStyle79;
-            this.SECSSettingGrid_Description.FillWeight = 76F;
-            resources.ApplyResources(this.SECSSettingGrid_Description, "SECSSettingGrid_Description");
-            this.SECSSettingGrid_Description.Name = "SECSSettingGrid_Description";
-            this.SECSSettingGrid_Description.ReadOnly = true;
             // 
             // FormMain
             // 
@@ -6898,15 +6898,6 @@ namespace Adam
             this.panel50.ResumeLayout(false);
             this.groupBox53.ResumeLayout(false);
             this.groupBox53.PerformLayout();
-            this.panel2.ResumeLayout(false);
-            this.panel4.ResumeLayout(false);
-            this.tableLayoutPanel1.ResumeLayout(false);
-            this.tableLayoutPanel1.PerformLayout();
-            this.contextMenuStrip3.ResumeLayout(false);
-            this.contextMenuStrip2.ResumeLayout(false);
-            this.contextMenuStrip1.ResumeLayout(false);
-            this.contextMenuStrip4.ResumeLayout(false);
-            this.panel3.ResumeLayout(false);
             this.tabPage1.ResumeLayout(false);
             this.gbSettingSECS.ResumeLayout(false);
             this.spcSECSSetting.Panel1.ResumeLayout(false);
@@ -6916,6 +6907,15 @@ namespace Adam
             this.gbSettingSECS_L.ResumeLayout(false);
             this.gbSettingSECS_R.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dgvSECSData)).EndInit();
+            this.panel2.ResumeLayout(false);
+            this.panel4.ResumeLayout(false);
+            this.tableLayoutPanel1.ResumeLayout(false);
+            this.tableLayoutPanel1.PerformLayout();
+            this.contextMenuStrip3.ResumeLayout(false);
+            this.contextMenuStrip2.ResumeLayout(false);
+            this.contextMenuStrip1.ResumeLayout(false);
+            this.contextMenuStrip4.ResumeLayout(false);
+            this.panel3.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
