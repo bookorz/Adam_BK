@@ -15,3 +15,17 @@
 *.pdb
 /Adam.csproj.FileListAbsolute.txt
 /DesignTimeResolveAssemblyReferences.cache
+/Adam.Menu.Communications.FormCommunications.resources
+/Adam.Menu.FormFrame.resources
+/Adam.Menu.Monitoring.FormMonitoring.resources
+/Adam.Menu.OCR.FormOCR.resources
+/Adam.Menu.Status.FormStatus.resources
+/Adam.Menu.SystemSetting.FormAccountSetting.resources
+/Adam.Menu.SystemSetting.FormAlarmEventSet.resources
+/Adam.Menu.SystemSetting.FormConfiguration.resources
+/Adam.Menu.SystemSetting.FormDeviceManager.resources
+/Adam.Menu.SystemSetting.FormOnlineSettings.resources
+/Adam.Menu.SystemSetting.FormSECSSet.resources
+/Adam.Menu.SystemSetting.FormSystemSetting.resources
+/Adam.Menu.WaferMapping.FormWaferMapping.resources
+/build.force

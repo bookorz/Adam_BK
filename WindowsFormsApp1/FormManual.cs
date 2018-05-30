@@ -7,6 +7,7 @@ using System.Data;
 using System.Drawing;
 using System.Linq;
 using System.Text;
+using System.Threading;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using TransferControl.Management;
@@ -15,6 +16,8 @@ namespace GUI
 {
     public partial class FormManual : Form
     {
+        Boolean isRobotMoveDown = false;//Get option 1
+        Boolean isRobotMoveUp = false;//Put option 1
         public FormManual()
         {
             InitializeComponent();
@@ -291,12 +294,12 @@ namespace GUI
             String ctrlName = "NA";
             if (rbR1.Checked)
             {
-                nodeName = "Robert1";
+                nodeName = "Robot01";
                 ctrlName = "RobotController01";
             }
             if (rbR2.Checked)
             {
-                nodeName = "Robert2";
+                nodeName = "Robot02";
                 ctrlName = "RobotController02";
             }
             Node robot = NodeManagement.Get(nodeName);
@@ -312,12 +315,18 @@ namespace GUI
                     break;
                 case "btnRInit":
                     //txns[0].Method = Transaction.Command.LoadPortType.MappingDown;
+                    isRobotMoveDown = false;//Get option 1
+                    isRobotMoveUp = false;//Put option 1
                     break;
                 case "btnROrg":
                     txns[0].Method = Transaction.Command.RobotType.RobotHome;
+                    isRobotMoveDown = false;//Get option 1
+                    isRobotMoveUp = false;//Put option 1
                     break;
                 case "btnRHome":
                     txns[0].Method = Transaction.Command.RobotType.RobotHome;
+                    isRobotMoveDown = false;//Get option 1
+                    isRobotMoveUp = false;//Put option 1
                     break;
                 case "btnRChgSpeed":
                     txns[0].Method = Transaction.Command.RobotType.RobotSpeed;
@@ -342,24 +351,54 @@ namespace GUI
                     txns[0].Arm = "0";
                     break;
                 case "btnRGet":
-                    txns[0].Method = Transaction.Command.RobotType.Get;
+                    if (cbRA1Point.Text == "" || cbRA1Slot.Text == "" || cbRA1Arm.Text == "" )
+                    {
+                        MessageBox.Show(" Insufficient information, please select source!", "Invalid source");
+                        return;
+                    }
+                    if(isRobotMoveDown)
+                        txns[0].Method = Transaction.Command.RobotType.GetAfterWait;
+                    else
+                        txns[0].Method = Transaction.Command.RobotType.Get;
                     txns[0].Point = ConfigUtil.GetStagePoint(cbRA1Point.Text);
                     txns[0].Arm = ConfigUtil.GetArmID(cbRA1Arm.Text);
                     txns[0].Slot = cbRA1Slot.Text;
+                    isRobotMoveDown = false;//Get option 1
+                    isRobotMoveUp = false;//Put option 1
                     break;
                 case "btnRPut":
-                    txns[0].Method = Transaction.Command.RobotType.Put;
+                    if (cbRA2Point.Text == "" || cbRA2Slot.Text == "" || cbRA2Arm.Text == "")
+                    {
+                        MessageBox.Show(" Insufficient information, please select destination!", "Invalid destination");
+                        return;
+                    }
+                    if (isRobotMoveUp)
+                        txns[0].Method = Transaction.Command.RobotType.PutBack;
+                    else
+                        txns[0].Method = Transaction.Command.RobotType.Put;
                     txns[0].Point = ConfigUtil.GetStagePoint(cbRA2Point.Text);
                     txns[0].Arm = ConfigUtil.GetArmID(cbRA2Arm.Text);
                     txns[0].Slot = cbRA2Slot.Text;
+                    isRobotMoveDown = false;//Get option 1
+                    isRobotMoveUp = false;//Put option 1
                     break;
                 case "btnRGetWait":
+                    if (cbRA1Point.Text == "" || cbRA1Slot.Text == "" || cbRA1Arm.Text == "")
+                    {
+                        MessageBox.Show(" Insufficient information, please select source!", "Invalid source");
+                        return;
+                    }
                     txns[0].Method = Transaction.Command.RobotType.GetWait;
                     txns[0].Point = ConfigUtil.GetStagePoint(cbRA1Point.Text);
                     txns[0].Arm = ConfigUtil.GetArmID(cbRA1Arm.Text);
                     txns[0].Slot = cbRA1Slot.Text;
                     break;
                 case "btnRPutWait":
+                    if (cbRA2Point.Text == "" || cbRA2Slot.Text == "" || cbRA2Arm.Text == "")
+                    {
+                        MessageBox.Show(" Insufficient information, please select destination!", "Invalid destination");
+                        return;
+                    }
                     txns[0].Method = Transaction.Command.RobotType.PutWait;
                     txns[0].Point = ConfigUtil.GetStagePoint(cbRA2Point.Text);
                     txns[0].Arm = ConfigUtil.GetArmID(cbRA2Arm.Text);
@@ -398,7 +437,16 @@ namespace GUI
             {
                 MessageBox.Show("Command is empty!");
             }
+            this.ResumeLayout(false);
+            //this.Enabled = false;
+            this.Cursor = Cursors.WaitCursor;
+            //this.Enabled = false;
+            //this.Cursor = Cursors.WaitCursor;
             setRobotStatus();
+            Thread.Sleep(2000);
+            this.ResumeLayout(true);
+            //this.Enabled = false;
+            this.Cursor = Cursors.Default;
         }
         private void setRobotStatus()
         {

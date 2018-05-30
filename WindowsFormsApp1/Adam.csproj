@@ -142,6 +142,84 @@
     <Compile Include="FormLLSetting.designer.cs">
       <DependentUpon>FormLLSetting.cs</DependentUpon>
     </Compile>
+    <Compile Include="Menu\Communications\FormCommunications.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Menu\Communications\FormCommunications.Designer.cs">
+      <DependentUpon>FormCommunications.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Menu\FormFrame.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Menu\FormFrame.Designer.cs">
+      <DependentUpon>FormFrame.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Menu\Monitoring\FormMonitoring.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Menu\Monitoring\FormMonitoring.Designer.cs">
+      <DependentUpon>FormMonitoring.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Menu\OCR\FormOCR.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Menu\OCR\FormOCR.Designer.cs">
+      <DependentUpon>FormOCR.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Menu\Status\FormStatus.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Menu\Status\FormStatus.Designer.cs">
+      <DependentUpon>FormStatus.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Menu\SystemSetting\FormAccountSetting.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Menu\SystemSetting\FormAccountSetting.Designer.cs">
+      <DependentUpon>FormAccountSetting.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Menu\SystemSetting\FormAlarmEventSet .cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Menu\SystemSetting\FormAlarmEventSet .Designer.cs">
+      <DependentUpon>FormAlarmEventSet .cs</DependentUpon>
+    </Compile>
+    <Compile Include="Menu\SystemSetting\FormConfiguration.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Menu\SystemSetting\FormConfiguration.Designer.cs">
+      <DependentUpon>FormConfiguration.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Menu\SystemSetting\FormDeviceManager.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Menu\SystemSetting\FormDeviceManager.Designer.cs">
+      <DependentUpon>FormDeviceManager.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Menu\SystemSetting\FormOnlineSettings.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Menu\SystemSetting\FormOnlineSettings.Designer.cs">
+      <DependentUpon>FormOnlineSettings.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Menu\SystemSetting\FormSECSSet.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Menu\SystemSetting\FormSECSSet.Designer.cs">
+      <DependentUpon>FormSECSSet.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Menu\SystemSetting\FormSystemSetting.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Menu\SystemSetting\FormSystemSetting.Designer.cs">
+      <DependentUpon>FormSystemSetting.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Menu\WaferMapping\FormWaferMapping.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Menu\WaferMapping\FormWaferMapping.Designer.cs">
+      <DependentUpon>FormWaferMapping.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="FormRunning.cs">
@@ -165,6 +243,7 @@
     <Compile Include="UI_Update\Aauthority\AuthorityUpdate.cs" />
     <Compile Include="UI_Update\Layout\DIOUpdate.cs" />
     <Compile Include="UI_Update\Manual\PortStatusUpdate.cs" />
+    <Compile Include="UI_Update\Manual\RobotStatusUpdate.cs" />
     <Compile Include="UI_Update\Monitoring\ConnectionStatusUpdate.cs" />
     <Compile Include="UI_Update\Monitoring\NodeStatusUpdate.cs" />
     <Compile Include="UI_Update\OCR\OCRUpdate.cs" />
@@ -207,6 +286,45 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FormLLSetting.resx">
       <DependentUpon>FormLLSetting.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Menu\Communications\FormCommunications.resx">
+      <DependentUpon>FormCommunications.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Menu\FormFrame.resx">
+      <DependentUpon>FormFrame.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Menu\Monitoring\FormMonitoring.resx">
+      <DependentUpon>FormMonitoring.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Menu\OCR\FormOCR.resx">
+      <DependentUpon>FormOCR.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Menu\Status\FormStatus.resx">
+      <DependentUpon>FormStatus.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Menu\SystemSetting\FormAccountSetting.resx">
+      <DependentUpon>FormAccountSetting.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Menu\SystemSetting\FormAlarmEventSet .resx">
+      <DependentUpon>FormAlarmEventSet .cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Menu\SystemSetting\FormConfiguration.resx">
+      <DependentUpon>FormConfiguration.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Menu\SystemSetting\FormDeviceManager.resx">
+      <DependentUpon>FormDeviceManager.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Menu\SystemSetting\FormOnlineSettings.resx">
+      <DependentUpon>FormOnlineSettings.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Menu\SystemSetting\FormSECSSet.resx">
+      <DependentUpon>FormSECSSet.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Menu\SystemSetting\FormSystemSetting.resx">
+      <DependentUpon>FormSystemSetting.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Menu\WaferMapping\FormWaferMapping.resx">
+      <DependentUpon>FormWaferMapping.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -264,5 +382,6 @@
     <None Include="Resources\Image70.png" />
     <Content Include="Resources\sanwa_aligner_status.png" />
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
