@@ -78,6 +78,14 @@ namespace Adam
             pointMap["Port6"] = "1206";
             pointMap["Port7"] = "1207";
             pointMap["Port8"] = "1208";
+            pointMap["Port_A"] = "1201";
+            pointMap["Port_B"] = "1202";
+            pointMap["Port_C"] = "1203";
+            pointMap["Port_D"] = "1204";
+            pointMap["Port_E"] = "1205";
+            pointMap["Port_F"] = "1206";
+            pointMap["Port_G"] = "1207";
+            pointMap["Port_H"] = "1208";
             pointMap["LoadPort1"] = "1201";
             pointMap["LoadPort2"] = "1202";
             pointMap["LoadPort3"] = "1203";
@@ -95,10 +103,10 @@ namespace Adam
         static public string GetArmID(string arm)
         {
             Dictionary<string, string> armMap = new Dictionary<string, string>();
-            armMap["Upper"] = "0";
-            armMap["Lower"] = "1";
-            armMap["R"] = "0";
-            armMap["K"] = "1";
+            armMap["Upper"] = "1";
+            armMap["Lower"] = "2";
+            armMap["R"] = "1";
+            armMap["K"] = "2";
             return armMap[arm];
         }
         static public digitState[] GetRobotStatusItem(string vendor)

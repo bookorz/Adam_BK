@@ -291,12 +291,12 @@ namespace GUI
             String ctrlName = "NA";
             if (rbR1.Checked)
             {
-                nodeName = "Robert1";
+                nodeName = "Robot01";
                 ctrlName = "RobotController01";
             }
             if (rbR2.Checked)
             {
-                nodeName = "Robert2";
+                nodeName = "Robot02";
                 ctrlName = "RobotController02";
             }
             Node robot = NodeManagement.Get(nodeName);
