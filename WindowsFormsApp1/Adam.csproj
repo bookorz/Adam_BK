@@ -162,6 +162,7 @@
     <Compile Include="FormTeaching.designer.cs">
       <DependentUpon>FormTeaching.cs</DependentUpon>
     </Compile>
+    <Compile Include="UI_Update\Aauthority\AuthorityUpdate.cs" />
     <Compile Include="UI_Update\Layout\DIOUpdate.cs" />
     <Compile Include="UI_Update\Manual\PortStatusUpdate.cs" />
     <Compile Include="UI_Update\Monitoring\ConnectionStatusUpdate.cs" />

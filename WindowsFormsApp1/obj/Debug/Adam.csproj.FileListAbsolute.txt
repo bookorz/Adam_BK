@@ -258,3 +258,9 @@ C:\Users\ethan_huang\source\repos\Adam\WindowsFormsApp1\bin\Debug\ToggleSwitch.d
 C:\Users\ethan_huang\source\repos\Adam\WindowsFormsApp1\bin\Debug\SplitButton.pdb
 C:\Users\ethan_huang\source\repos\Adam\WindowsFormsApp1\bin\Debug\ToggleSwitch.pdb
 C:\Users\ethan_huang\source\repos\Adam\WindowsFormsApp1\bin\Debug\mysql.data.dll
+C:\軟體專案開發\team\adam\WindowsFormsApp1\bin\Debug\mysql.data.dll
+C:\軟體專案開發\team\adam\WindowsFormsApp1\bin\Debug\SplitButton.dll
+C:\軟體專案開發\team\adam\WindowsFormsApp1\bin\Debug\ToggleSwitch.dll
+C:\軟體專案開發\team\adam\WindowsFormsApp1\bin\Debug\nModbusPC.dll
+C:\軟體專案開發\team\adam\WindowsFormsApp1\bin\Debug\SplitButton.pdb
+C:\軟體專案開發\team\adam\WindowsFormsApp1\bin\Debug\ToggleSwitch.pdb
