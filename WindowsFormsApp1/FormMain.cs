@@ -324,6 +324,14 @@ namespace Adam
                             break;
                     }
                     break;
+                case "Robot":
+                    switch (Txn.Method)
+                    {
+                        case Transaction.Command.RobotType.RobotSpeed:
+                            ManualRobotStatusUpdate.ShowMsg("Change speed completed.");
+                            break;
+                    }
+                    break;
             }
         }
 
@@ -334,6 +342,17 @@ namespace Adam
             {
                 case "LoadPort":
                     ManualPortStatusUpdate.UpdateLog(Node.Name, Msg.Command);
+                    break;
+                case "Robot":
+                    switch (Txn.Method)
+                    {
+                        case Transaction.Command.RobotType.RobotSpeed:
+                            ManualRobotStatusUpdate.ShowMsg("Change speed fail.");
+                            break;
+                        default:
+                            ManualRobotStatusUpdate.ShowMsg("Execute: failure!");
+                            break;
+                    }
                     break;
             }
 
@@ -361,6 +380,14 @@ namespace Adam
                     {
                         case Transaction.Command.OCRType.Read:
                             OCRUpdate.UpdateOCRRead(Node.Name, Msg.Value);
+                            break;
+                    }
+                    break;
+                case "Robot":
+                    switch (Txn.Method)
+                    {
+                        default:
+                            ManualRobotStatusUpdate.ShowMsg("Execute: Success!");
                             break;
                     }
                     break;
