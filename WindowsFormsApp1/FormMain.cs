@@ -821,7 +821,7 @@ namespace Adam
             if (port != null)
             {
                 port.Available = true;
-                port.Fetchable = true;
+               
             }
             else
             {

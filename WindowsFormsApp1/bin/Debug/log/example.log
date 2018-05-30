@@ -4091,3 +4091,6 @@
 2018-05-29 19:25:03,250 [20] DEBUG Adam.FormMain - On_Controller_State_Changed
 2018-05-29 19:25:03,280 [4] DEBUG TransferControl.Engine.RouteControl - LoadPortController01 Connection_Error
 2018-05-29 19:25:03,281 [4] DEBUG Adam.FormMain - On_Controller_State_Changed
+2018-05-30 09:19:04,457 [1] DEBUG TransferControl.Engine.RouteControl - OCRController01 Connection_Error
+2018-05-30 09:19:04,500 [1] DEBUG Adam.FormMain - On_Controller_State_Changed
+2018-05-30 09:19:04,500 [1] DEBUG TransferControl.Controller.DeviceController - OCRController01 Send:GO Wafer:
