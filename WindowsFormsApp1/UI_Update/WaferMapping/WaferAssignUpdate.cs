@@ -19,7 +19,7 @@ namespace Adam.UI_Update.WaferMapping
         {
             try
             {
-                Form form = Application.OpenForms["FormMain"];
+                Form form = Application.OpenForms["FormWaferMapping"];
                 DataGridView Port_gv;
                 if (form == null)
                     return;
@@ -44,7 +44,7 @@ namespace Adam.UI_Update.WaferMapping
                         Job wafer = new Job();
                         wafer.Slot = (i+1).ToString();
                         wafer.FromPort = PortName;
-                        
+                        wafer.Position = PortName;
                         string Slot = (i + 1).ToString("00");
                         switch (Mapping[i])
                         {
@@ -86,13 +86,13 @@ namespace Adam.UI_Update.WaferMapping
                         }
 
                     }
+
                     Port_gv.DataSource = MappingData;
-                    
                     Port_gv.Columns["Slot"].Width = 25;
                     Port_gv.Columns["Slot"].HeaderText = "S";
                     Port_gv.Columns["Job_Id"].Width = 75;
                     Port_gv.Columns["Destination"].Visible = false;
-                    Port_gv.Columns["DisplayDestination"].Width = 55; 
+                    Port_gv.Columns["DisplayDestination"].Width = 55;
                     Port_gv.Columns["DestinationSlot"].Width = 30;
                     Port_gv.Columns["ProcessFlag"].Visible = false;
                     Port_gv.Columns["Piority"].Visible = false;
@@ -107,9 +107,12 @@ namespace Adam.UI_Update.WaferMapping
                     Port_gv.Columns["WaitToDo"].Visible = false;
                     Port_gv.Columns["FetchRobot"].Visible = false;
                     Port_gv.Columns["ProcessNode"].Visible = false;
-                    Port_gv.Columns["DisplayDestination"].HeaderText = "Dest";                   
+                    Port_gv.Columns["DisplayDestination"].HeaderText = "Dest";
                     Port_gv.Columns["DestinationSlot"].HeaderText = "DS";
                     Port_gv.ColumnHeadersDefaultCellStyle.Font = new Font("Arial", 10);
+                    
+                    
+                    
                     
                 }
 
@@ -125,7 +128,7 @@ namespace Adam.UI_Update.WaferMapping
         {
             try
             {
-                Form form = Application.OpenForms["FormMain"];
+                Form form = Application.OpenForms["FormWaferMapping"];
                 Label Port_Mode;
                 if (form == null)
                     return;

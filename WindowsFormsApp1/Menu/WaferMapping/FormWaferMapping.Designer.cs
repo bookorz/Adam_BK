@@ -222,6 +222,7 @@
             this.LoadPort06_Start_Btn.TabIndex = 66;
             this.LoadPort06_Start_Btn.Text = "Start Process";
             this.LoadPort06_Start_Btn.UseVisualStyleBackColor = true;
+            this.LoadPort06_Start_Btn.Click += new System.EventHandler(this.PortStart_Btn_Click);
             // 
             // LoadPort06Assign_Gv
             // 
@@ -241,6 +242,8 @@
             this.LoadPort06Assign_Gv.Size = new System.Drawing.Size(189, 555);
             this.LoadPort06Assign_Gv.StandardTab = true;
             this.LoadPort06Assign_Gv.TabIndex = 53;
+            this.LoadPort06Assign_Gv.CellFormatting += new System.Windows.Forms.DataGridViewCellFormattingEventHandler(this.Assign_Gv_CellFormatting);
+            this.LoadPort06Assign_Gv.MouseClick += new System.Windows.Forms.MouseEventHandler(this.Assign_Gv_MouseClick);
             // 
             // LoadPort06State_lb
             // 
@@ -256,6 +259,7 @@
             this.LoadPort06State_lb.TabIndex = 54;
             this.LoadPort06State_lb.Text = "LoadPort06";
             this.LoadPort06State_lb.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.LoadPort06State_lb.MouseClick += new System.Windows.Forms.MouseEventHandler(this.State_lb_Click);
             // 
             // textBox20
             // 
@@ -348,6 +352,7 @@
             this.LoadPort05_Start_Btn.TabIndex = 66;
             this.LoadPort05_Start_Btn.Text = "Start Process";
             this.LoadPort05_Start_Btn.UseVisualStyleBackColor = true;
+            this.LoadPort05_Start_Btn.Click += new System.EventHandler(this.PortStart_Btn_Click);
             // 
             // LoadPort05Assign_Gv
             // 
@@ -367,6 +372,8 @@
             this.LoadPort05Assign_Gv.Size = new System.Drawing.Size(189, 555);
             this.LoadPort05Assign_Gv.StandardTab = true;
             this.LoadPort05Assign_Gv.TabIndex = 53;
+            this.LoadPort05Assign_Gv.CellFormatting += new System.Windows.Forms.DataGridViewCellFormattingEventHandler(this.Assign_Gv_CellFormatting);
+            this.LoadPort05Assign_Gv.MouseClick += new System.Windows.Forms.MouseEventHandler(this.Assign_Gv_MouseClick);
             // 
             // LoadPort05State_lb
             // 
@@ -382,6 +389,7 @@
             this.LoadPort05State_lb.TabIndex = 54;
             this.LoadPort05State_lb.Text = "LoadPort05";
             this.LoadPort05State_lb.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.LoadPort05State_lb.MouseClick += new System.Windows.Forms.MouseEventHandler(this.State_lb_Click);
             // 
             // textBox19
             // 
@@ -474,6 +482,7 @@
             this.LoadPort08_Start_Btn.TabIndex = 66;
             this.LoadPort08_Start_Btn.Text = "Start Process";
             this.LoadPort08_Start_Btn.UseVisualStyleBackColor = true;
+            this.LoadPort08_Start_Btn.Click += new System.EventHandler(this.PortStart_Btn_Click);
             // 
             // LoadPort08Assign_Gv
             // 
@@ -493,6 +502,8 @@
             this.LoadPort08Assign_Gv.Size = new System.Drawing.Size(195, 555);
             this.LoadPort08Assign_Gv.StandardTab = true;
             this.LoadPort08Assign_Gv.TabIndex = 53;
+            this.LoadPort08Assign_Gv.CellFormatting += new System.Windows.Forms.DataGridViewCellFormattingEventHandler(this.Assign_Gv_CellFormatting);
+            this.LoadPort08Assign_Gv.MouseClick += new System.Windows.Forms.MouseEventHandler(this.Assign_Gv_MouseClick);
             // 
             // LoadPort08State_lb
             // 
@@ -508,6 +519,7 @@
             this.LoadPort08State_lb.TabIndex = 54;
             this.LoadPort08State_lb.Text = "LoadPort08";
             this.LoadPort08State_lb.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.LoadPort08State_lb.MouseClick += new System.Windows.Forms.MouseEventHandler(this.State_lb_Click);
             // 
             // textBox18
             // 
@@ -600,6 +612,7 @@
             this.LoadPort07_Start_Btn.TabIndex = 66;
             this.LoadPort07_Start_Btn.Text = "Start Process";
             this.LoadPort07_Start_Btn.UseVisualStyleBackColor = true;
+            this.LoadPort07_Start_Btn.Click += new System.EventHandler(this.PortStart_Btn_Click);
             // 
             // LoadPort07Assign_Gv
             // 
@@ -619,6 +632,8 @@
             this.LoadPort07Assign_Gv.Size = new System.Drawing.Size(189, 555);
             this.LoadPort07Assign_Gv.StandardTab = true;
             this.LoadPort07Assign_Gv.TabIndex = 53;
+            this.LoadPort07Assign_Gv.CellFormatting += new System.Windows.Forms.DataGridViewCellFormattingEventHandler(this.Assign_Gv_CellFormatting);
+            this.LoadPort07Assign_Gv.MouseClick += new System.Windows.Forms.MouseEventHandler(this.Assign_Gv_MouseClick);
             // 
             // LoadPort07State_lb
             // 
@@ -634,6 +649,7 @@
             this.LoadPort07State_lb.TabIndex = 54;
             this.LoadPort07State_lb.Text = "LoadPort07";
             this.LoadPort07State_lb.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.LoadPort07State_lb.MouseClick += new System.Windows.Forms.MouseEventHandler(this.State_lb_Click);
             // 
             // textBox17
             // 
@@ -735,6 +751,8 @@
             this.LoadPort02Assign_Gv.Size = new System.Drawing.Size(189, 555);
             this.LoadPort02Assign_Gv.StandardTab = true;
             this.LoadPort02Assign_Gv.TabIndex = 53;
+            this.LoadPort02Assign_Gv.CellFormatting += new System.Windows.Forms.DataGridViewCellFormattingEventHandler(this.Assign_Gv_CellFormatting);
+            this.LoadPort02Assign_Gv.MouseClick += new System.Windows.Forms.MouseEventHandler(this.Assign_Gv_MouseClick);
             // 
             // LoadPort02State_lb
             // 
@@ -750,6 +768,7 @@
             this.LoadPort02State_lb.TabIndex = 54;
             this.LoadPort02State_lb.Text = "LoadPort02";
             this.LoadPort02State_lb.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.LoadPort02State_lb.MouseClick += new System.Windows.Forms.MouseEventHandler(this.State_lb_Click);
             // 
             // textBox11
             // 
@@ -821,6 +840,7 @@
             this.LoadPort02_Start_Btn.TabIndex = 63;
             this.LoadPort02_Start_Btn.Text = "Start Process";
             this.LoadPort02_Start_Btn.UseVisualStyleBackColor = true;
+            this.LoadPort02_Start_Btn.Click += new System.EventHandler(this.PortStart_Btn_Click);
             // 
             // tableLayoutPanel17
             // 
@@ -860,6 +880,8 @@
             this.LoadPort01Assign_Gv.Size = new System.Drawing.Size(188, 552);
             this.LoadPort01Assign_Gv.StandardTab = true;
             this.LoadPort01Assign_Gv.TabIndex = 53;
+            this.LoadPort01Assign_Gv.CellFormatting += new System.Windows.Forms.DataGridViewCellFormattingEventHandler(this.Assign_Gv_CellFormatting);
+            this.LoadPort01Assign_Gv.MouseClick += new System.Windows.Forms.MouseEventHandler(this.Assign_Gv_MouseClick);
             // 
             // LoadPort01State_lb
             // 
@@ -875,6 +897,7 @@
             this.LoadPort01State_lb.TabIndex = 54;
             this.LoadPort01State_lb.Text = "LoadPort01";
             this.LoadPort01State_lb.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.LoadPort01State_lb.MouseClick += new System.Windows.Forms.MouseEventHandler(this.State_lb_Click);
             // 
             // textBox10
             // 
@@ -946,6 +969,7 @@
             this.LoadPort01_Start_Btn.TabIndex = 63;
             this.LoadPort01_Start_Btn.Text = "Start Process";
             this.LoadPort01_Start_Btn.UseVisualStyleBackColor = true;
+            this.LoadPort01_Start_Btn.Click += new System.EventHandler(this.PortStart_Btn_Click);
             // 
             // tableLayoutPanel16
             // 
@@ -977,6 +1001,7 @@
             this.LoadPort04_Start_Btn.TabIndex = 65;
             this.LoadPort04_Start_Btn.Text = "Start Process";
             this.LoadPort04_Start_Btn.UseVisualStyleBackColor = true;
+            this.LoadPort04_Start_Btn.Click += new System.EventHandler(this.PortStart_Btn_Click);
             // 
             // LoadPort04Assign_Gv
             // 
@@ -996,6 +1021,8 @@
             this.LoadPort04Assign_Gv.Size = new System.Drawing.Size(189, 555);
             this.LoadPort04Assign_Gv.StandardTab = true;
             this.LoadPort04Assign_Gv.TabIndex = 53;
+            this.LoadPort04Assign_Gv.CellFormatting += new System.Windows.Forms.DataGridViewCellFormattingEventHandler(this.Assign_Gv_CellFormatting);
+            this.LoadPort04Assign_Gv.MouseClick += new System.Windows.Forms.MouseEventHandler(this.Assign_Gv_MouseClick);
             // 
             // LoadPort04State_lb
             // 
@@ -1011,6 +1038,7 @@
             this.LoadPort04State_lb.TabIndex = 54;
             this.LoadPort04State_lb.Text = "LoadPort04";
             this.LoadPort04State_lb.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.LoadPort04State_lb.MouseClick += new System.Windows.Forms.MouseEventHandler(this.State_lb_Click);
             // 
             // textBox1
             // 
@@ -1104,6 +1132,7 @@
             this.LoadPort03_Start_Btn.TabIndex = 64;
             this.LoadPort03_Start_Btn.Text = "Start Process";
             this.LoadPort03_Start_Btn.UseVisualStyleBackColor = true;
+            this.LoadPort03_Start_Btn.Click += new System.EventHandler(this.PortStart_Btn_Click);
             // 
             // LoadPort03Assign_Gv
             // 
@@ -1123,6 +1152,8 @@
             this.LoadPort03Assign_Gv.Size = new System.Drawing.Size(189, 555);
             this.LoadPort03Assign_Gv.StandardTab = true;
             this.LoadPort03Assign_Gv.TabIndex = 53;
+            this.LoadPort03Assign_Gv.CellFormatting += new System.Windows.Forms.DataGridViewCellFormattingEventHandler(this.Assign_Gv_CellFormatting);
+            this.LoadPort03Assign_Gv.MouseClick += new System.Windows.Forms.MouseEventHandler(this.Assign_Gv_MouseClick);
             // 
             // LoadPort03State_lb
             // 
@@ -1138,6 +1169,7 @@
             this.LoadPort03State_lb.TabIndex = 54;
             this.LoadPort03State_lb.Text = "LoadPort03";
             this.LoadPort03State_lb.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.LoadPort03State_lb.MouseClick += new System.Windows.Forms.MouseEventHandler(this.State_lb_Click);
             // 
             // textBox16
             // 
@@ -1205,6 +1237,7 @@
             this.ClientSize = new System.Drawing.Size(1620, 760);
             this.Controls.Add(this.groupBox11);
             this.Name = "FormWaferMapping";
+            this.Load += new System.EventHandler(this.FormWaferMapping_Load);
             this.groupBox11.ResumeLayout(false);
             this.tableLayoutPanel12.ResumeLayout(false);
             this.tableLayoutPanel22.ResumeLayout(false);

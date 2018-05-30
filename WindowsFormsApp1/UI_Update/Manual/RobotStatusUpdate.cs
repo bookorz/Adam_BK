@@ -35,7 +35,7 @@ namespace Adam.UI_Update.Manual
                     Form manual = Application.OpenForms["FormManual"];
                     manual.Cursor = Cursors.Default;
                     manual.Enabled = true;
-                    MessageBox.Show(msg);
+                   // MessageBox.Show(msg);
                 }
             }
             catch
