@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Adam.UI_Update.Alarm;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -7,6 +8,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using TransferControl.Management;
 
 namespace Adam
 {
@@ -16,11 +18,13 @@ namespace Adam
         {
             InitializeComponent();
 
-            for (int i = 0; i < 100; i++)
-            {
-                this.dg1.Rows.Add("", "", "", "", "");
-            }
-            dg1.Rows[60].Selected = true;
+            
+        }
+
+        private void FormAlarmHis_Load(object sender, EventArgs e)
+        {
+            
+            AlarmUpdate.UpdateAlarmHistory(AlarmManagement.GetHistory());
         }
     }
 }

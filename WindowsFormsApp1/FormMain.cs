@@ -24,6 +24,7 @@ using System.Threading;
 using Adam.UI_Update.Authority;
 using DIOControl;
 using Adam.UI_Update.Layout;
+using Adam.UI_Update.Alarm;
 
 namespace Adam
 {
@@ -31,9 +32,10 @@ namespace Adam
     {
         public static RouteControl RouteCtrl;
         public static DIO DIO;
+        public static AlarmMapping AlmMapping;
         private static readonly ILog logger = LogManager.GetLogger(typeof(FormMain));
         object CurrentSelected = null;
-
+        AlarmFrom alarmFrom = new AlarmFrom();
         private Menu.Monitoring.FormMonitoring formMonitoring = new Menu.Monitoring.FormMonitoring();
         private Menu.Communications.FormCommunications formCommunications = new Menu.Communications.FormCommunications();
         private Menu.WaferMapping.FormWaferMapping formWafer = new Menu.WaferMapping.FormWaferMapping();
@@ -48,6 +50,7 @@ namespace Adam
             Initialize();
             RouteCtrl = new RouteControl(this);
             DIO = new DIO(this);
+            AlmMapping = new AlarmMapping();
             //ts.SelectedIndex = 0;
             //t2.Text = "CURRENT USER NAME";
             //t1.Text = "CURRENT_ID";
@@ -279,7 +282,7 @@ namespace Adam
 
         private void toolStripMenuItem1_Click(object sender, EventArgs e)
         {
-            SorterControl.AlarmFrom alarmFrom = new SorterControl.AlarmFrom();
+            AlarmFrom alarmFrom = new AlarmFrom();
             alarmFrom.Text = "MessageFrom";
             alarmFrom.BackColor = Color.Blue;
             alarmFrom.ResetAll_bt.Enabled = false;
@@ -288,8 +291,8 @@ namespace Adam
 
         private void aAAToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            SorterControl.AlarmFrom alarmFrom = new SorterControl.AlarmFrom();
-            alarmFrom.ShowDialog();
+           
+            alarmFrom.Show();
         }
 
         public void On_Command_Excuted(Node Node, Transaction Txn, ReturnMessage Msg)
@@ -363,23 +366,31 @@ namespace Adam
         public void On_Command_Error(Node Node, Transaction Txn, ReturnMessage Msg)
         {
             logger.Debug("On_Command_Error");
-            switch (Txn.FormName)
+            AlarmInfo CurrentAlarm = new AlarmInfo();
+            CurrentAlarm.NodeName = Node.Name;
+            CurrentAlarm.AlarmCode = Msg.Value;
+            try
             {
-                case "FormManual":
-                    switch (Node.Type)
-                    {
-                        case "LoadPort":
-                            ManualPortStatusUpdate.UpdateLog(Node.Name, Msg.Command);
-                            break;
-                        case "Robot":
-                            MessageBox.Show(Node.Name + " " + Msg.Command + " error:" + Msg.Value, "Command Error");
-                            break;
-                        case "Aligner":
-                            MessageBox.Show(Node.Name + " " + Msg.Command + " error:" + Msg.Value, "Command Error");
-                            break;
-                    }
-                    break;
+
+                AlarmMessage Detail = AlmMapping.Get(Node.Brand, Node.Type, CurrentAlarm.AlarmCode);
+
+                CurrentAlarm.SystemAlarmCode = Detail.CodeID;
+                CurrentAlarm.Desc = Detail.Code_Cause;
+                CurrentAlarm.EngDesc = Detail.Code_Cause_English;
             }
+            catch (Exception e)
+            {
+                CurrentAlarm.Desc = "未定義";
+                logger.Error(Node.Controller + "-" + Node.AdrNo + "(GetAlarmMessage)" + e.Message + "\n" + e.StackTrace);
+            }
+            CurrentAlarm.TimeStamp = DateTime.Now.ToString("yyyy/MM/dd HH:mm:ss:fff");
+
+            AlarmManagement.Add(CurrentAlarm);
+            Form form = Application.OpenForms["AlarmFrom"];
+
+            alarmFrom.Show();
+            AlarmUpdate.UpdateAlarmList(AlarmManagement.GetAll());
+            AlarmUpdate.UpdateAlarmHistory(AlarmManagement.GetHistory());
         }
 
         public void On_Command_Finished(Node Node, Transaction Txn, ReturnMessage Msg)
@@ -420,41 +431,63 @@ namespace Adam
         public void On_Command_TimeOut(Node Node, Transaction Txn)
         {
             logger.Debug("On_Command_TimeOut");
-            switch (Txn.FormName)
-            {
-                case "FormManual":
-                    switch (Node.Type)
-                    {
-                        case "LoadPort":
-                            ManualPortStatusUpdate.UpdateLog(Node.Name, Txn.CommandEncodeStr + " Timeout!");
-                            break;
-                        case "Robot":
-                            MessageBox.Show(Node.Name + " " + Txn.CommandEncodeStr + " Timeout!", "Command Timeout");
-                            break;
-                        case "Aligner":
-                            MessageBox.Show(Node.Name + " " + Txn.CommandEncodeStr + " Timeout!", "Command Timeout");
-                            break;
-                    }
-                    break;
-            }
+            AlarmInfo CurrentAlarm = new AlarmInfo();
+            CurrentAlarm.NodeName = Node.Name.Replace("Status", "");
+            CurrentAlarm.AlarmCode = "00000001";
+            CurrentAlarm.SystemAlarmCode = "FF00000001";
+            CurrentAlarm.Desc = "命令逾時,連線異常";
+            CurrentAlarm.TimeStamp = DateTime.Now.ToString("yyyy/MM/dd HH:mm:ss:fff");
+
+            AlarmManagement.Add(CurrentAlarm);
+            AlarmUpdate.UpdateAlarmList(AlarmManagement.GetAll());
+            AlarmUpdate.UpdateAlarmHistory(AlarmManagement.GetHistory());
         }
 
         public void On_Event_Trigger(Node Node, ReturnMessage Msg)
         {
             logger.Debug("On_Event_Trigger");
-            Transaction txn = new Transaction();
-            switch (Node.Type)
+            if (Msg.Command.Equals("ERROR"))
             {
-                case "LoadPort":
-                    ManualPortStatusUpdate.UpdateLog(Node.Name, Msg.Command);
-                    switch (Msg.Command)
-                    {
-                        case "MANSW":
-                            txn.Method = Transaction.Command.LoadPortType.MappingLoad;
-                            Node.SendCommand(txn);
-                            break;
-                    }
-                    break;
+                Node.InitialComplete = false;
+                logger.Debug("On_Command_Error");
+                AlarmInfo CurrentAlarm = new AlarmInfo();
+                CurrentAlarm.NodeName = Node.Name;
+                CurrentAlarm.AlarmCode = Msg.Value;
+                try
+                {
+
+                    AlarmMessage Detail = AlmMapping.Get(Node.Brand, Node.Type, CurrentAlarm.AlarmCode);
+
+                    CurrentAlarm.SystemAlarmCode = Detail.CodeID;
+                    CurrentAlarm.Desc = Detail.Code_Cause;
+                    CurrentAlarm.EngDesc = Detail.Code_Cause_English;
+                }
+                catch
+                {
+                    CurrentAlarm.Desc = "未定義";
+                }
+                CurrentAlarm.TimeStamp = DateTime.Now.ToString("yyyy/MM/dd HH:mm:ss:fff");
+
+                AlarmManagement.Add(CurrentAlarm);
+                AlarmUpdate.UpdateAlarmList(AlarmManagement.GetAll());
+                AlarmUpdate.UpdateAlarmHistory(AlarmManagement.GetHistory());
+            }
+            else
+            {
+                Transaction txn = new Transaction();
+                switch (Node.Type)
+                {
+                    case "LoadPort":
+                        ManualPortStatusUpdate.UpdateLog(Node.Name, Msg.Command);
+                        switch (Msg.Command)
+                        {
+                            case "MANSW":
+                                txn.Method = Transaction.Command.LoadPortType.MappingLoad;
+                                Node.SendCommand(txn);
+                                break;
+                        }
+                        break;
+                }
             }
         }
 
