@@ -1,4 +1,5 @@
-﻿using Adam.UI_Update.WaferMapping;
+﻿using Adam.UI_Update.Monitoring;
+using Adam.UI_Update.WaferMapping;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -28,14 +29,14 @@ namespace Adam.Menu.WaferMapping
 
         private void InitialForm(object input)
         {
-            WaferAssignUpdate.UpdateLoadPortMapping("LoadPort01", "111211111?111110111W11111");
-            WaferAssignUpdate.UpdateLoadPortMapping("LoadPort02", "11WW111112111111011110111");
-            WaferAssignUpdate.UpdateLoadPortMapping("LoadPort03", "0000000000000000000000000");
-            WaferAssignUpdate.UpdateLoadPortMapping("LoadPort04", "0000000000000000000000000");
-            WaferAssignUpdate.UpdateLoadPortMapping("LoadPort05", "11WW111112111111011110111");
-            WaferAssignUpdate.UpdateLoadPortMapping("LoadPort06", "0000000000000000000000000");
-            WaferAssignUpdate.UpdateLoadPortMapping("LoadPort07", "0000000000000000000000000");
-            WaferAssignUpdate.UpdateLoadPortMapping("LoadPort08", "0000000000000000000000000");
+            //WaferAssignUpdate.UpdateLoadPortMapping("LoadPort01", "111211111?111110111W11111");
+            //WaferAssignUpdate.UpdateLoadPortMapping("LoadPort02", "11WW111112111111011110111");
+            //WaferAssignUpdate.UpdateLoadPortMapping("LoadPort03", "0000000000000000000000000");
+            //WaferAssignUpdate.UpdateLoadPortMapping("LoadPort04", "0000000000000000000000000");
+            //WaferAssignUpdate.UpdateLoadPortMapping("LoadPort05", "11WW111112111111011110111");
+            //WaferAssignUpdate.UpdateLoadPortMapping("LoadPort06", "0000000000000000000000000");
+            //WaferAssignUpdate.UpdateLoadPortMapping("LoadPort07", "0000000000000000000000000");
+            //WaferAssignUpdate.UpdateLoadPortMapping("LoadPort08", "0000000000000000000000000");
             WaferAssignUpdate.UpdateLoadPortMode("LoadPort01", "LD");
             WaferAssignUpdate.UpdateLoadPortMode("LoadPort02", "LD");
             WaferAssignUpdate.UpdateLoadPortMode("LoadPort03", "UD");
@@ -58,14 +59,7 @@ namespace Adam.Menu.WaferMapping
                             e.CellStyle.ForeColor = Color.White;
                             break;
                         case "Crossed":
-
-                            e.CellStyle.BackColor = Color.Red;
-                            e.CellStyle.ForeColor = Color.White;
-                            break;
-                        case "Undefined":
-                            e.CellStyle.BackColor = Color.Red;
-                            e.CellStyle.ForeColor = Color.White;
-                            break;
+                        case "Undefined":                           
                         case "Double":
                             e.CellStyle.BackColor = Color.Red;
                             e.CellStyle.ForeColor = Color.White;
@@ -177,6 +171,7 @@ namespace Adam.Menu.WaferMapping
                     }
                 }
                  (CurrentSelected as DataGridView).Refresh();
+                JobMoveUpdate.UpdateNodesJob((CurrentSelected as DataGridView).Name.Replace("Assign_Gv", ""));
             }
         }
 
@@ -193,26 +188,36 @@ namespace Adam.Menu.WaferMapping
                 string waferId = (CurrentSelected as DataGridView).SelectedRows[0].Cells["Job_Id"].Value.ToString();
                 string OrgDest = (CurrentSelected as DataGridView).SelectedRows[0].Cells["Destination"].Value.ToString();
                 string OrgDestSlot = (CurrentSelected as DataGridView).SelectedRows[0].Cells["DestinationSlot"].Value.ToString();
-                Job wafer = JobManagement.Get(waferId);
-                if (wafer != null)
-                {
-                    wafer.Destination = PortName;
-                    wafer.DisplayDestination = PortName.Replace("Load", "");
-                    wafer.DestinationSlot = Slot;
-                    wafer.ProcessFlag = false;
-                    //wafer.Position = PortName;
-                    if (!OrgDest.Equals(""))
-                    {
-                        NodeManagement.Get(OrgDest).RemoveReserve(OrgDestSlot);
-                    }
-                    NodeManagement.Get(PortName).AddReserve(Slot, wafer);
-                    (CurrentSelected as DataGridView).Refresh();
-                }
-                else
-                {
-                    MessageBox.Show("找不到此Wafer資料:" + wafer.Job_Id);
-                }
 
+                Job UDSlot = NodeManagement.Get(PortName).GetJob(Slot);
+                    if(UDSlot == null)
+                {
+                    MessageBox.Show(PortName+"沒有FOUP或是尚未進行Mapping");
+                    return;
+                }
+                if (UDSlot.MapFlag == false)
+                {
+                    Job wafer = JobManagement.Get(waferId);
+                    if (wafer != null)
+                    {
+                        wafer.Destination = PortName;
+                        wafer.DisplayDestination = PortName.Replace("Load", "");
+                        wafer.DestinationSlot = Slot;
+                        wafer.ProcessFlag = false;
+                        //wafer.Position = PortName;
+                        if (!OrgDest.Equals(""))
+                        {
+                            NodeManagement.Get(OrgDest).RemoveReserve(OrgDestSlot);
+                        }
+                        NodeManagement.Get(PortName).AddReserve(Slot, wafer);
+                        (CurrentSelected as DataGridView).Refresh();
+                        JobMoveUpdate.UpdateNodesJob((CurrentSelected as DataGridView).Name.Replace("Assign_Gv", ""));
+                    }
+                    else
+                    {
+                        MessageBox.Show("找不到此Wafer資料");
+                    }
+                }
             }
             else if ((CurrentSelected as DataGridView).SelectedRows.Count > 1)
             {
@@ -227,7 +232,7 @@ namespace Adam.Menu.WaferMapping
                     {
                         while (true)
                         {
-                            if (NodeManagement.Get(PortName).GetJob(StartSlot.ToString()) == null)
+                            if (NodeManagement.Get(PortName).GetJob(StartSlot.ToString()).MapFlag == false)
                             {
                                 wafer.Destination = PortName;
                                 wafer.DisplayDestination = PortName.Replace("Load", "");
@@ -259,7 +264,10 @@ namespace Adam.Menu.WaferMapping
                     }
                 }
                  (CurrentSelected as DataGridView).Refresh();
+                JobMoveUpdate.UpdateNodesJob((CurrentSelected as DataGridView).Name.Replace("Assign_Gv", ""));
+                
             }
+
 
         }
 
@@ -271,6 +279,8 @@ namespace Adam.Menu.WaferMapping
                 ContextMenu m = new ContextMenu();
                 m.MenuItems.Add(new MenuItem("Change to LD", PortModeChange));
                 m.MenuItems.Add(new MenuItem("Change to UD", PortModeChange));
+                m.MenuItems.Add(new MenuItem("Fake Data(Full)", PortModeChange));
+                m.MenuItems.Add(new MenuItem("Fake Data(Empty)", PortModeChange));
                 m.Show((Label)sender, new Point(e.X, e.Y));
             }
         }
@@ -287,6 +297,12 @@ namespace Adam.Menu.WaferMapping
                 case "Change to UD":
                     NodeManagement.Get(Name).Mode = "UD";
                     WaferAssignUpdate.UpdateLoadPortMode(Name, "UD");
+                    break;
+                case "Fake Data(Full)":
+                    WaferAssignUpdate.UpdateLoadPortMapping(Name, "111211111?111110111W11111");
+                    break;
+                case "Fake Data(Empty)":
+                    WaferAssignUpdate.UpdateLoadPortMapping(Name, "0000000000000000000000000");
                     break;
             }
 
