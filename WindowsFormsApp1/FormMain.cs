@@ -328,7 +328,23 @@ namespace Adam
                     switch (Txn.Method)
                     {
                         case Transaction.Command.RobotType.RobotSpeed:
-                            ManualRobotStatusUpdate.ShowMsg("Change speed completed.");
+                        case Transaction.Command.RobotType.RobotMode:
+                        case Transaction.Command.RobotType.GetStatus:
+                        case Transaction.Command.RobotType.GetSpeed:
+                        case Transaction.Command.RobotType.GetRIO:
+                            ManualRobotStatusUpdate.UpdateGUIInfo(Txn.Method, Node.Name, Msg.Value);//update 手動功能畫面
+                            break;
+                    }
+                    break;
+                case "Aligner":
+                    switch (Txn.Method)
+                    {
+                        case Transaction.Command.AlignerType.AlignerSpeed:
+                        case Transaction.Command.AlignerType.AlignerMode:
+                        case Transaction.Command.AlignerType.GetStatus:
+                        case Transaction.Command.AlignerType.GetSpeed:
+                        case Transaction.Command.AlignerType.GetRIO:
+                            ManualAlignerStatusUpdate.UpdateGUIInfo(Txn.Method, Node.Name, Msg.Value);//update 手動功能畫面
                             break;
                     }
                     break;
@@ -344,15 +360,10 @@ namespace Adam
                     ManualPortStatusUpdate.UpdateLog(Node.Name, Msg.Command);
                     break;
                 case "Robot":
-                    switch (Txn.Method)
-                    {
-                        case Transaction.Command.RobotType.RobotSpeed:
-                            ManualRobotStatusUpdate.ShowMsg("Change speed fail.");
-                            break;
-                        default:
-                            ManualRobotStatusUpdate.ShowMsg("Execute: failure!");
-                            break;
-                    }
+                    MessageBox.Show(Node.Name + " " + Msg.Command + " error:" + Msg.Value, "Command Error");
+                    break;
+                case "Aligner":
+                    MessageBox.Show(Node.Name + " " + Msg.Command + " error:" + Msg.Value, "Command Error");
                     break;
             }
 
@@ -384,12 +395,10 @@ namespace Adam
                     }
                     break;
                 case "Robot":
-                    switch (Txn.Method)
-                    {
-                        default:
-                            ManualRobotStatusUpdate.ShowMsg("Execute: Success!");
-                            break;
-                    }
+                    ManualRobotStatusUpdate.UpdateGUIInfo(Txn.Method, Node.Name, Msg.Value);//update 手動功能畫面
+                    break;
+                case "Aligner":
+                    ManualAlignerStatusUpdate.UpdateGUIInfo(Txn.Method, Node.Name, Msg.Value);//update 手動功能畫面
                     break;
             }
 
@@ -402,6 +411,12 @@ namespace Adam
             {
                 case "LoadPort":
                     ManualPortStatusUpdate.UpdateLog(Node.Name, Txn.CommandEncodeStr + " Timeout!");
+                    break;
+                case "Robot":
+                    MessageBox.Show(Node.Name + " " + Txn.CommandEncodeStr + " Timeout!" , "Command Timeout");
+                    break;
+                case "Aligner":
+                    MessageBox.Show(Node.Name + " " + Txn.CommandEncodeStr + " Timeout!" , "Command Timeout");
                     break;
             }
         }
@@ -611,7 +626,7 @@ namespace Adam
 
                 ThreadPool.QueueUserWorkItem(new WaitCallback(RouteCtrl.Auto), "Normal");
 
-               
+
             }
             else
             {
@@ -657,7 +672,7 @@ namespace Adam
 
                     }
                     break;
-                
+
             }
         }
 
@@ -719,7 +734,7 @@ namespace Adam
                 if (wafer != null)
                 {
                     wafer.Destination = PortName;
-                    wafer.DisplayDestination = PortName.Replace("Load","");
+                    wafer.DisplayDestination = PortName.Replace("Load", "");
                     wafer.DestinationSlot = Slot;
                     wafer.ProcessFlag = false;
                     wafer.Position = PortName;
@@ -727,7 +742,7 @@ namespace Adam
                     {
                         NodeManagement.Get(OrgDest).RemoveJob(OrgDestSlot);
                     }
-                    NodeManagement.Get(PortName).AddJob(Slot,wafer);
+                    NodeManagement.Get(PortName).AddJob(Slot, wafer);
                     (CurrentSelected as DataGridView).Refresh();
                 }
                 else
@@ -739,7 +754,7 @@ namespace Adam
             else if ((CurrentSelected as DataGridView).SelectedRows.Count > 1)
             {
                 int StartSlot = Convert.ToInt32(Slot);
-                foreach(DataGridViewRow each in (CurrentSelected as DataGridView).SelectedRows)
+                foreach (DataGridViewRow each in (CurrentSelected as DataGridView).SelectedRows)
                 {
                     string waferId = each.Cells["Job_Id"].Value.ToString();
                     string OrgDest = each.Cells["Destination"].Value.ToString();
@@ -761,7 +776,7 @@ namespace Adam
                                     NodeManagement.Get(OrgDest).RemoveJob(OrgDestSlot);
                                 }
                                 NodeManagement.Get(PortName).AddJob(StartSlot.ToString(), wafer);
-                               
+
                                 break;
                             }
                             else
@@ -782,7 +797,7 @@ namespace Adam
                 }
                  (CurrentSelected as DataGridView).Refresh();
             }
-           
+
         }
 
         private void State_lb_Click(object sender, MouseEventArgs e)
@@ -817,11 +832,11 @@ namespace Adam
         private void PortStart_Btn_Click(object sender, EventArgs e)
         {
             string PortName = (sender as Button).Name.Replace("_Start_Btn", "");
-            Node port =  NodeManagement.Get(PortName);
+            Node port = NodeManagement.Get(PortName);
             if (port != null)
             {
                 port.Available = true;
-               
+
             }
             else
             {

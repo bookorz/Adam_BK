@@ -68,8 +68,8 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="ConfigUtil.cs" />
-    <Compile Include="DBUtil.cs" />
+    <Compile Include="Util\ConfigUtil.cs" />
+    <Compile Include="Util\DBUtil.cs" />
     <Compile Include="FormAlarm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -242,12 +242,14 @@
     </Compile>
     <Compile Include="UI_Update\Aauthority\AuthorityUpdate.cs" />
     <Compile Include="UI_Update\Layout\DIOUpdate.cs" />
+    <Compile Include="UI_Update\Manual\AlignerStatusUpdate.cs" />
     <Compile Include="UI_Update\Manual\PortStatusUpdate.cs" />
     <Compile Include="UI_Update\Manual\RobotStatusUpdate.cs" />
     <Compile Include="UI_Update\Monitoring\ConnectionStatusUpdate.cs" />
     <Compile Include="UI_Update\Monitoring\NodeStatusUpdate.cs" />
     <Compile Include="UI_Update\OCR\OCRUpdate.cs" />
     <Compile Include="UI_Update\WaferMapping\WaferAssignUpdate.cs" />
+    <Compile Include="Util\StateUtil.cs" />
     <EmbeddedResource Include="FormAlarm.resx">
       <DependentUpon>FormAlarm.cs</DependentUpon>
     </EmbeddedResource>

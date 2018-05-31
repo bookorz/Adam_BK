@@ -197,11 +197,11 @@ namespace GUI
                 {
                     cbA1Angle.Text = "0";
                 }
-                if (dudA1AngleOffset.Text.Equals(""))
+                if (udA1AngleOffset.Text.Equals(""))
                 {
-                    dudA1AngleOffset.Text = "0";
+                    udA1AngleOffset.Text = "0";
                 }
-                angle = Convert.ToString(int.Parse(cbA1Angle.Text) + int.Parse(dudA1AngleOffset.Text));
+                angle = Convert.ToString(int.Parse(cbA1Angle.Text) + int.Parse(udA1AngleOffset.Text));
             }
             if (btn.Name.IndexOf("A2") > 0)
             {
@@ -211,11 +211,11 @@ namespace GUI
                 {
                     cbA2Angle.Text = "0";
                 }
-                if (dudA2AngleOffset.Text.Equals(""))
+                if (udA2AngleOffset.Text.Equals(""))
                 {
-                    dudA2AngleOffset.Text = "0";
+                    udA2AngleOffset.Text = "0";
                 }
-                angle = Convert.ToString(int.Parse(cbA2Angle.Text) + int.Parse(dudA2AngleOffset.Text));
+                angle = Convert.ToString(int.Parse(cbA2Angle.Text) + int.Parse(udA2AngleOffset.Text));
             }
             //MessageBox.Show(nodeName);
             //return;
@@ -274,6 +274,16 @@ namespace GUI
                 case "btnAlign":
                     txns[0].Method = Transaction.Command.AlignerType.Align;
                     txns[0].Angle = angle;
+                    txns[0].Value = angle;
+                    break;
+                case "btnChgMode":
+                    if(cbA1NewMode.SelectedIndex < 0)
+                    {
+                        MessageBox.Show(" Insufficient information, please select mode!", "Invalid Mode");
+                        return;
+                    }
+                    txns[0].Method = Transaction.Command.AlignerType.AlignerMode;
+                    txns[0].Arm = Convert.ToString(cbA1NewMode.SelectedIndex);
                     break;
             }
             if (!txns[0].Method.Equals(""))
@@ -284,6 +294,8 @@ namespace GUI
             {
                 MessageBox.Show("Command is empty!");
             }
+            this.Enabled = false;
+            this.Cursor = Cursors.WaitCursor;
             setAlignerStatus();
         }
 
@@ -405,17 +417,29 @@ namespace GUI
                     txns[0].Slot = cbRA2Slot.Text;
                     break;
                 case "btnRMoveDown":
+                    isRobotMoveDown = true;
                     txns[0].Method = Transaction.Command.RobotType.WaitBeforeGet;//GET option 1
                     txns[0].Point = ConfigUtil.GetStagePoint(cbRA1Point.Text);
                     txns[0].Arm = ConfigUtil.GetArmID(cbRA1Arm.Text);
                     txns[0].Slot = cbRA1Slot.Text;
                     break;
                 case "btnRMoveUp":
+                    isRobotMoveUp = true;
                     txns[0].Method = Transaction.Command.RobotType.WaitBeforePut;//Put option 1
                     txns[0].Point = ConfigUtil.GetStagePoint(cbRA2Point.Text);
                     txns[0].Arm = ConfigUtil.GetArmID(cbRA2Arm.Text);
                     txns[0].Slot = cbRA2Slot.Text;
                     break;
+                case "btnRChgMode":
+                    if (cbRNewMode.SelectedIndex < 0)
+                    {
+                        MessageBox.Show(" Insufficient information, please select mode!", "Invalid Mode");
+                        return;
+                    }
+                    txns[0].Method = Transaction.Command.RobotType.RobotMode;
+                    txns[0].Arm = Convert.ToString(cbRNewMode.SelectedIndex);
+                    break;
+                    
                 case "btnRPutPut":
                     //txns[0].Method = Transaction.Command.RobotType.MappingDown;
                     break;
@@ -437,16 +461,9 @@ namespace GUI
             {
                 MessageBox.Show("Command is empty!");
             }
-            this.ResumeLayout(false);
-            //this.Enabled = false;
+            this.Enabled = false;
             this.Cursor = Cursors.WaitCursor;
-            //this.Enabled = false;
-            //this.Cursor = Cursors.WaitCursor;
             setRobotStatus();
-            Thread.Sleep(2000);
-            this.ResumeLayout(true);
-            //this.Enabled = false;
-            this.Cursor = Cursors.Default;
         }
         private void setRobotStatus()
         {

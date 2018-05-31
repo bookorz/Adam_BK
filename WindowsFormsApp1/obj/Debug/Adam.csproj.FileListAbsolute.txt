@@ -278,3 +278,16 @@ D:\SyncSourceCode\Adam\WindowsFormsApp1\obj\Debug\Adam.Menu.Communications.FormC
 D:\SyncSourceCode\Adam\WindowsFormsApp1\obj\Debug\Adam.Menu.OCR.FormOCR.resources
 D:\SyncSourceCode\Adam\WindowsFormsApp1\obj\Debug\Adam.Menu.Status.FormStatus.resources
 D:\SyncSourceCode\Adam\WindowsFormsApp1\obj\Debug\Adam.Menu.WaferMapping.FormWaferMapping.resources
+C:\軟體專案開發\team\adam\WindowsFormsApp1\obj\Debug\Adam.Menu.Communications.FormCommunications.resources
+C:\軟體專案開發\team\adam\WindowsFormsApp1\obj\Debug\Adam.Menu.FormFrame.resources
+C:\軟體專案開發\team\adam\WindowsFormsApp1\obj\Debug\Adam.Menu.Monitoring.FormMonitoring.resources
+C:\軟體專案開發\team\adam\WindowsFormsApp1\obj\Debug\Adam.Menu.OCR.FormOCR.resources
+C:\軟體專案開發\team\adam\WindowsFormsApp1\obj\Debug\Adam.Menu.Status.FormStatus.resources
+C:\軟體專案開發\team\adam\WindowsFormsApp1\obj\Debug\Adam.Menu.SystemSetting.FormAccountSetting.resources
+C:\軟體專案開發\team\adam\WindowsFormsApp1\obj\Debug\Adam.Menu.SystemSetting.FormAlarmEventSet.resources
+C:\軟體專案開發\team\adam\WindowsFormsApp1\obj\Debug\Adam.Menu.SystemSetting.FormConfiguration.resources
+C:\軟體專案開發\team\adam\WindowsFormsApp1\obj\Debug\Adam.Menu.SystemSetting.FormDeviceManager.resources
+C:\軟體專案開發\team\adam\WindowsFormsApp1\obj\Debug\Adam.Menu.SystemSetting.FormOnlineSettings.resources
+C:\軟體專案開發\team\adam\WindowsFormsApp1\obj\Debug\Adam.Menu.SystemSetting.FormSECSSet.resources
+C:\軟體專案開發\team\adam\WindowsFormsApp1\obj\Debug\Adam.Menu.SystemSetting.FormSystemSetting.resources
+C:\軟體專案開發\team\adam\WindowsFormsApp1\obj\Debug\Adam.Menu.WaferMapping.FormWaferMapping.resources
