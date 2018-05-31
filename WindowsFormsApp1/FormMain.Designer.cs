@@ -78,7 +78,7 @@ namespace Adam
             this.tabMonitor = new System.Windows.Forms.TabPage();
             this.tabComm = new System.Windows.Forms.TabPage();
             this.tabMapping = new System.Windows.Forms.TabPage();
-            this.tableLayoutPanel14 = new System.Windows.Forms.TableLayoutPanel();
+            this.tabStatus = new System.Windows.Forms.TabPage();
             this.tabOCR = new System.Windows.Forms.TabPage();
             this.tabSetting = new System.Windows.Forms.TabPage();
             this.panel2 = new System.Windows.Forms.Panel();
@@ -112,7 +112,6 @@ namespace Adam
             this.terminalToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.panel3 = new System.Windows.Forms.Panel();
             this.directorySearcher1 = new System.DirectoryServices.DirectorySearcher();
-            this.tabStatus = new System.Windows.Forms.TabPage();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer13)).BeginInit();
             this.splitContainer13.Panel1.SuspendLayout();
             this.splitContainer13.Panel2.SuspendLayout();
@@ -128,7 +127,6 @@ namespace Adam
             this.groupBox2.SuspendLayout();
             this.tableLayoutPanel2.SuspendLayout();
             this.tbcMian.SuspendLayout();
-            this.tabMapping.SuspendLayout();
             this.panel2.SuspendLayout();
             this.panel4.SuspendLayout();
             this.tableLayoutPanel1.SuspendLayout();
@@ -510,14 +508,15 @@ namespace Adam
             // 
             this.tabMapping.BackColor = System.Drawing.SystemColors.Control;
             this.tabMapping.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.tabMapping.Controls.Add(this.tableLayoutPanel14);
             resources.ApplyResources(this.tabMapping, "tabMapping");
             this.tabMapping.Name = "tabMapping";
             // 
-            // tableLayoutPanel14
+            // tabStatus
             // 
-            resources.ApplyResources(this.tableLayoutPanel14, "tableLayoutPanel14");
-            this.tableLayoutPanel14.Name = "tableLayoutPanel14";
+            this.tabStatus.BackColor = System.Drawing.SystemColors.Control;
+            this.tabStatus.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            resources.ApplyResources(this.tabStatus, "tabStatus");
+            this.tabStatus.Name = "tabStatus";
             // 
             // tabOCR
             // 
@@ -793,13 +792,6 @@ namespace Adam
             this.directorySearcher1.ServerPageTimeLimit = System.TimeSpan.Parse("-00:00:01");
             this.directorySearcher1.ServerTimeLimit = System.TimeSpan.Parse("-00:00:01");
             // 
-            // tabStatus
-            // 
-            this.tabStatus.BackColor = System.Drawing.SystemColors.Control;
-            this.tabStatus.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            resources.ApplyResources(this.tabStatus, "tabStatus");
-            this.tabStatus.Name = "tabStatus";
-            // 
             // FormMain
             // 
             resources.ApplyResources(this, "$this");
@@ -828,7 +820,6 @@ namespace Adam
             this.groupBox2.ResumeLayout(false);
             this.tableLayoutPanel2.ResumeLayout(false);
             this.tbcMian.ResumeLayout(false);
-            this.tabMapping.ResumeLayout(false);
             this.panel2.ResumeLayout(false);
             this.panel4.ResumeLayout(false);
             this.tableLayoutPanel1.ResumeLayout(false);
@@ -884,7 +875,6 @@ namespace Adam
         private System.Windows.Forms.Button button16;
         private System.Windows.Forms.Button button15;
         private System.Windows.Forms.Button btnLogInOut;
-        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel14;
         private System.Windows.Forms.SplitContainer splitContainer13;
         private System.Windows.Forms.GroupBox groupBox19;
         private System.Windows.Forms.Button button27;

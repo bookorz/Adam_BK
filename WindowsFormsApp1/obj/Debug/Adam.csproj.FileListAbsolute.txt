@@ -291,3 +291,16 @@ C:\軟體專案開發\team\adam\WindowsFormsApp1\obj\Debug\Adam.Menu.SystemSetti
 C:\軟體專案開發\team\adam\WindowsFormsApp1\obj\Debug\Adam.Menu.SystemSetting.FormSECSSet.resources
 C:\軟體專案開發\team\adam\WindowsFormsApp1\obj\Debug\Adam.Menu.SystemSetting.FormSystemSetting.resources
 C:\軟體專案開發\team\adam\WindowsFormsApp1\obj\Debug\Adam.Menu.WaferMapping.FormWaferMapping.resources
+C:\Users\ethan_huang\source\repos\Adam\WindowsFormsApp1\obj\Debug\Adam.Menu.Communications.FormCommunications.resources
+C:\Users\ethan_huang\source\repos\Adam\WindowsFormsApp1\obj\Debug\Adam.Menu.FormFrame.resources
+C:\Users\ethan_huang\source\repos\Adam\WindowsFormsApp1\obj\Debug\Adam.Menu.Monitoring.FormMonitoring.resources
+C:\Users\ethan_huang\source\repos\Adam\WindowsFormsApp1\obj\Debug\Adam.Menu.OCR.FormOCR.resources
+C:\Users\ethan_huang\source\repos\Adam\WindowsFormsApp1\obj\Debug\Adam.Menu.Status.FormStatus.resources
+C:\Users\ethan_huang\source\repos\Adam\WindowsFormsApp1\obj\Debug\Adam.Menu.SystemSetting.FormAccountSetting.resources
+C:\Users\ethan_huang\source\repos\Adam\WindowsFormsApp1\obj\Debug\Adam.Menu.SystemSetting.FormAlarmEventSet.resources
+C:\Users\ethan_huang\source\repos\Adam\WindowsFormsApp1\obj\Debug\Adam.Menu.SystemSetting.FormConfiguration.resources
+C:\Users\ethan_huang\source\repos\Adam\WindowsFormsApp1\obj\Debug\Adam.Menu.SystemSetting.FormDeviceManager.resources
+C:\Users\ethan_huang\source\repos\Adam\WindowsFormsApp1\obj\Debug\Adam.Menu.SystemSetting.FormOnlineSettings.resources
+C:\Users\ethan_huang\source\repos\Adam\WindowsFormsApp1\obj\Debug\Adam.Menu.SystemSetting.FormSECSSet.resources
+C:\Users\ethan_huang\source\repos\Adam\WindowsFormsApp1\obj\Debug\Adam.Menu.SystemSetting.FormSystemSetting.resources
+C:\Users\ethan_huang\source\repos\Adam\WindowsFormsApp1\obj\Debug\Adam.Menu.WaferMapping.FormWaferMapping.resources

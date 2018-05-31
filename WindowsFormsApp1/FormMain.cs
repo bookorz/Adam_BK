@@ -471,6 +471,13 @@ namespace Adam
             logger.Debug("On_Port_Finished");
         }
 
+        public void On_Job_Location_Changed(Job Job)
+        {
+            JobMoveUpdate.UpdateJobMove(Job.Job_Id);
+            WaferAssignUpdate.RefreshMapping(Job.LastNode);
+            WaferAssignUpdate.RefreshMapping(Job.Position);
+        }
+
         private void tabControl1_Selected(object sender, TabControlEventArgs e)
         {
             //switch (e.TabPage.Text)
