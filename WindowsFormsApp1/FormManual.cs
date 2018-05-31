@@ -192,6 +192,7 @@ namespace GUI
             String nodeName = "NA";
             String ctrlName = "NA";
             String angle = "0";
+            string speed = "0";
             if (btn.Name.IndexOf("A1") > 0)
             {
                 nodeName = "Aligner01";
@@ -205,6 +206,7 @@ namespace GUI
                     udA1AngleOffset.Text = "0";
                 }
                 angle = Convert.ToString(int.Parse(cbA1Angle.Text) + int.Parse(udA1AngleOffset.Text));
+                speed = nudA1SpeedNew.Text.Equals("100") ? "0" : nudA1SpeedNew.Text;
             }
             if (btn.Name.IndexOf("A2") > 0)
             {
@@ -219,6 +221,7 @@ namespace GUI
                     udA2AngleOffset.Text = "0";
                 }
                 angle = Convert.ToString(int.Parse(cbA2Angle.Text) + int.Parse(udA2AngleOffset.Text));
+                speed = nudA2SpeedNew.Text.Equals("100") ? "0" : nudA2SpeedNew.Text;
             }
             //MessageBox.Show(nodeName);
             //return;
@@ -271,6 +274,7 @@ namespace GUI
                     break;
                 case "btnChgSpeed":
                     txns[0].Method = Transaction.Command.AlignerType.AlignerSpeed;
+                    txns[0].Arm = speed;
                     break;
                 case "btnReset":
                     txns[0].Method = Transaction.Command.AlignerType.Reset;
@@ -347,7 +351,7 @@ namespace GUI
                     break;
                 case "btnRChgSpeed":
                     txns[0].Method = Transaction.Command.RobotType.RobotSpeed;
-                    txns[0].Arm = cbRNewSpeed.Text;
+                    txns[0].Arm = nudRNewSpeed.Text.Equals("100")? "0": nudRNewSpeed.Text;
                     break;
                 //上臂
                 case "btnRRVacuOn":
@@ -511,16 +515,16 @@ namespace GUI
         {
 
         }
-
-        private void setRobotStatus(object sender, EventArgs e)
-        {
-            setRobotStatus();
-        }
-
+        
         private void FormManual_EnabledChanged(object sender, EventArgs e)
         {
             if (tbcManual.SelectedTab.Text.Equals("Robot"))
                 setRobotStatus();
+        }
+
+        private void rb_CheckedChanged(object sender, EventArgs e)
+        {
+            setRobotStatus();
         }
     }
 }
