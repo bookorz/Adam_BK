@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.tabControl1 = new System.Windows.Forms.TabControl();
+            this.tbcManual = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
             this.groupBox20 = new System.Windows.Forms.GroupBox();
             this.panel9 = new System.Windows.Forms.Panel();
@@ -68,6 +68,11 @@
             this.groupBox21 = new System.Windows.Forms.GroupBox();
             this.panel13 = new System.Windows.Forms.Panel();
             this.panel14 = new System.Windows.Forms.Panel();
+            this.label23 = new System.Windows.Forms.Label();
+            this.cbRCurrentMode = new System.Windows.Forms.ComboBox();
+            this.btnRChgMode = new System.Windows.Forms.Button();
+            this.cbRNewMode = new System.Windows.Forms.ComboBox();
+            this.label24 = new System.Windows.Forms.Label();
             this.btnRHome = new System.Windows.Forms.Button();
             this.btnRDisConn = new System.Windows.Forms.Button();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
@@ -309,12 +314,8 @@
             this.Btn_DoorClose_A = new System.Windows.Forms.Button();
             this.Btn_UnLatchDoor_A = new System.Windows.Forms.Button();
             this.Btn_LatchDoor_A = new System.Windows.Forms.Button();
-            this.label23 = new System.Windows.Forms.Label();
-            this.cbRCurrentMode = new System.Windows.Forms.ComboBox();
-            this.btnRChgMode = new System.Windows.Forms.Button();
-            this.cbRNewMode = new System.Windows.Forms.ComboBox();
-            this.label24 = new System.Windows.Forms.Label();
-            this.tabControl1.SuspendLayout();
+            this.button1 = new System.Windows.Forms.Button();
+            this.tbcManual.SuspendLayout();
             this.tabPage1.SuspendLayout();
             this.groupBox20.SuspendLayout();
             this.panel9.SuspendLayout();
@@ -348,16 +349,16 @@
             this.TblPanel_A.SuspendLayout();
             this.SuspendLayout();
             // 
-            // tabControl1
+            // tbcManual
             // 
-            this.tabControl1.Controls.Add(this.tabPage1);
-            this.tabControl1.Controls.Add(this.tabPage2);
-            this.tabControl1.Controls.Add(this.tabPage3);
-            this.tabControl1.Location = new System.Drawing.Point(12, 12);
-            this.tabControl1.Name = "tabControl1";
-            this.tabControl1.SelectedIndex = 0;
-            this.tabControl1.Size = new System.Drawing.Size(1495, 841);
-            this.tabControl1.TabIndex = 0;
+            this.tbcManual.Controls.Add(this.tabPage1);
+            this.tbcManual.Controls.Add(this.tabPage2);
+            this.tbcManual.Controls.Add(this.tabPage3);
+            this.tbcManual.Location = new System.Drawing.Point(12, 12);
+            this.tbcManual.Name = "tbcManual";
+            this.tbcManual.SelectedIndex = 0;
+            this.tbcManual.Size = new System.Drawing.Size(1495, 841);
+            this.tbcManual.TabIndex = 0;
             // 
             // tabPage1
             // 
@@ -939,6 +940,7 @@
             // panel14
             // 
             this.panel14.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.panel14.Controls.Add(this.button1);
             this.panel14.Controls.Add(this.label23);
             this.panel14.Controls.Add(this.cbRCurrentMode);
             this.panel14.Controls.Add(this.btnRChgMode);
@@ -970,6 +972,77 @@
             this.panel14.Name = "panel14";
             this.panel14.Size = new System.Drawing.Size(629, 715);
             this.panel14.TabIndex = 18;
+            // 
+            // label23
+            // 
+            this.label23.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.label23.AutoSize = true;
+            this.label23.Font = new System.Drawing.Font("微軟正黑體", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
+            this.label23.Location = new System.Drawing.Point(74, 658);
+            this.label23.Name = "label23";
+            this.label23.Size = new System.Drawing.Size(138, 30);
+            this.label23.TabIndex = 106;
+            this.label23.Text = "New Mode";
+            this.label23.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            // 
+            // cbRCurrentMode
+            // 
+            this.cbRCurrentMode.Enabled = false;
+            this.cbRCurrentMode.FormattingEnabled = true;
+            this.cbRCurrentMode.Items.AddRange(new object[] {
+            "Normal",
+            "Dry Mode",
+            "Test Mode",
+            "Step Mode"});
+            this.cbRCurrentMode.Location = new System.Drawing.Point(224, 606);
+            this.cbRCurrentMode.Name = "cbRCurrentMode";
+            this.cbRCurrentMode.Size = new System.Drawing.Size(248, 38);
+            this.cbRCurrentMode.TabIndex = 105;
+            // 
+            // btnRChgMode
+            // 
+            this.btnRChgMode.BackColor = System.Drawing.Color.DarkGray;
+            this.btnRChgMode.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.btnRChgMode.FlatAppearance.BorderSize = 2;
+            this.btnRChgMode.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnRChgMode.Font = new System.Drawing.Font("微軟正黑體", 14.25F);
+            this.btnRChgMode.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.btnRChgMode.Location = new System.Drawing.Point(488, 647);
+            this.btnRChgMode.Name = "btnRChgMode";
+            this.btnRChgMode.Size = new System.Drawing.Size(126, 46);
+            this.btnRChgMode.TabIndex = 104;
+            this.btnRChgMode.Text = "Change";
+            this.btnRChgMode.UseVisualStyleBackColor = false;
+            this.btnRChgMode.Click += new System.EventHandler(this.RobotFunction_Click);
+            // 
+            // cbRNewMode
+            // 
+            this.cbRNewMode.FormattingEnabled = true;
+            this.cbRNewMode.Items.AddRange(new object[] {
+            "Normal",
+            "Dry Mode",
+            "Test Mode",
+            "Step Mode"});
+            this.cbRNewMode.Location = new System.Drawing.Point(224, 655);
+            this.cbRNewMode.Name = "cbRNewMode";
+            this.cbRNewMode.Size = new System.Drawing.Size(248, 38);
+            this.cbRNewMode.TabIndex = 103;
+            // 
+            // label24
+            // 
+            this.label24.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.label24.AutoSize = true;
+            this.label24.Font = new System.Drawing.Font("微軟正黑體", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
+            this.label24.Location = new System.Drawing.Point(39, 606);
+            this.label24.Name = "label24";
+            this.label24.Size = new System.Drawing.Size(173, 30);
+            this.label24.TabIndex = 102;
+            this.label24.Text = "Current Mode";
+            this.label24.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
             // btnRHome
             // 
@@ -4387,76 +4460,15 @@
             this.Btn_LatchDoor_A.UseVisualStyleBackColor = true;
             this.Btn_LatchDoor_A.Click += new System.EventHandler(this.PortFunction_Click);
             // 
-            // label23
+            // button1
             // 
-            this.label23.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.label23.AutoSize = true;
-            this.label23.Font = new System.Drawing.Font("微軟正黑體", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-            this.label23.Location = new System.Drawing.Point(74, 658);
-            this.label23.Name = "label23";
-            this.label23.Size = new System.Drawing.Size(138, 30);
-            this.label23.TabIndex = 106;
-            this.label23.Text = "New Mode";
-            this.label23.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            // 
-            // cbRCurrentMode
-            // 
-            this.cbRCurrentMode.Enabled = false;
-            this.cbRCurrentMode.FormattingEnabled = true;
-            this.cbRCurrentMode.Items.AddRange(new object[] {
-            "Normal",
-            "Dry Mode",
-            "Test Mode",
-            "Step Mode"});
-            this.cbRCurrentMode.Location = new System.Drawing.Point(224, 606);
-            this.cbRCurrentMode.Name = "cbRCurrentMode";
-            this.cbRCurrentMode.Size = new System.Drawing.Size(248, 38);
-            this.cbRCurrentMode.TabIndex = 105;
-            // 
-            // btnRChgMode
-            // 
-            this.btnRChgMode.BackColor = System.Drawing.Color.DarkGray;
-            this.btnRChgMode.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.btnRChgMode.FlatAppearance.BorderSize = 2;
-            this.btnRChgMode.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.btnRChgMode.Font = new System.Drawing.Font("微軟正黑體", 14.25F);
-            this.btnRChgMode.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.btnRChgMode.Location = new System.Drawing.Point(488, 647);
-            this.btnRChgMode.Name = "btnRChgMode";
-            this.btnRChgMode.Size = new System.Drawing.Size(126, 46);
-            this.btnRChgMode.TabIndex = 104;
-            this.btnRChgMode.Text = "Change";
-            this.btnRChgMode.UseVisualStyleBackColor = false;
-            this.btnRChgMode.Click += new System.EventHandler(this.RobotFunction_Click);
-            // 
-            // cbRNewMode
-            // 
-            this.cbRNewMode.FormattingEnabled = true;
-            this.cbRNewMode.Items.AddRange(new object[] {
-            "Normal",
-            "Dry Mode",
-            "Test Mode",
-            "Step Mode"});
-            this.cbRNewMode.Location = new System.Drawing.Point(224, 655);
-            this.cbRNewMode.Name = "cbRNewMode";
-            this.cbRNewMode.Size = new System.Drawing.Size(248, 38);
-            this.cbRNewMode.TabIndex = 103;
-            // 
-            // label24
-            // 
-            this.label24.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.label24.AutoSize = true;
-            this.label24.Font = new System.Drawing.Font("微軟正黑體", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-            this.label24.Location = new System.Drawing.Point(39, 606);
-            this.label24.Name = "label24";
-            this.label24.Size = new System.Drawing.Size(173, 30);
-            this.label24.TabIndex = 102;
-            this.label24.Text = "Current Mode";
-            this.label24.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.button1.Location = new System.Drawing.Point(488, 349);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(119, 40);
+            this.button1.TabIndex = 107;
+            this.button1.Text = "button1";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.setRobotStatus);
             // 
             // FormManual
             // 
@@ -4464,7 +4476,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.Control;
             this.ClientSize = new System.Drawing.Size(1512, 858);
-            this.Controls.Add(this.tabControl1);
+            this.Controls.Add(this.tbcManual);
             this.Font = new System.Drawing.Font("微軟正黑體", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
             this.Margin = new System.Windows.Forms.Padding(6, 7, 6, 7);
             this.MaximizeBox = false;
@@ -4472,7 +4484,8 @@
             this.Name = "FormManual";
             this.Text = "Manual";
             this.Load += new System.EventHandler(this.FormManual_Load);
-            this.tabControl1.ResumeLayout(false);
+            this.EnabledChanged += new System.EventHandler(this.FormManual_EnabledChanged);
+            this.tbcManual.ResumeLayout(false);
             this.tabPage1.ResumeLayout(false);
             this.groupBox20.ResumeLayout(false);
             this.panel9.ResumeLayout(false);
@@ -4521,7 +4534,7 @@
 
         #endregion
 
-        private System.Windows.Forms.TabControl tabControl1;
+        private System.Windows.Forms.TabControl tbcManual;
         private System.Windows.Forms.TabPage tabPage1;
         private System.Windows.Forms.TabPage tabPage2;
         private System.Windows.Forms.TabPage tabPage3;
@@ -4807,5 +4820,6 @@
         private System.Windows.Forms.Button btnRChgMode;
         private System.Windows.Forms.ComboBox cbRNewMode;
         private System.Windows.Forms.Label label24;
+        private System.Windows.Forms.Button button1;
     }
 }

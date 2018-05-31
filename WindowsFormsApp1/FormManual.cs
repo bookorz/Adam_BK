@@ -27,6 +27,8 @@ namespace GUI
         private void FormManual_Load(object sender, EventArgs e)
         {
             Initialize();
+            if (tbcManual.SelectedTab.Text.Equals("Robot"))
+                setRobotStatus();
         }
 
         public void Initialize()
@@ -470,11 +472,55 @@ namespace GUI
         }
         private void setRobotStatus()
         {
+            String nodeName = "NA";
+            if (rbR1.Checked)
+            {
+                nodeName = "Robot01";
+            }
+            if (rbR2.Checked)
+            {
+                nodeName = "Robot02";
+            }                       
+            Node robot = NodeManagement.Get(nodeName);
+            Transaction[] txns = new Transaction[3];
+            txns[0] = new Transaction();
+            txns[0].Method = Transaction.Command.RobotType.GetStatus;
 
+            txns[1] = new Transaction();
+            txns[1].Method = Transaction.Command.RobotType.GetSpeed;
+
+            txns[2] = new Transaction();
+            txns[2].Method = Transaction.Command.RobotType.GetRIO;
+            txns[2].Value = "4";//4 R-Hold Status 回饋 R 軸 Wafer/ Panel 保留狀態
+            
+            foreach (Transaction txn in txns)
+            {
+                if (!txn.Method.Equals(""))
+                {
+                    txn.FormName = "FormManual";
+                    robot.SendCommand(txn);
+                }
+                else
+                {
+                    MessageBox.Show("Command is empty!");
+                }
+            }
+            
         }
         private void setAlignerStatus()
         {
 
+        }
+
+        private void setRobotStatus(object sender, EventArgs e)
+        {
+            setRobotStatus();
+        }
+
+        private void FormManual_EnabledChanged(object sender, EventArgs e)
+        {
+            if (tbcManual.SelectedTab.Text.Equals("Robot"))
+                setRobotStatus();
         }
     }
 }

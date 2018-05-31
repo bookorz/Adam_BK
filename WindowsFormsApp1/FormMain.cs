@@ -335,7 +335,7 @@ namespace Adam
                                 case Transaction.Command.RobotType.GetStatus:
                                 case Transaction.Command.RobotType.GetSpeed:
                                 case Transaction.Command.RobotType.GetRIO:
-                                    ManualRobotStatusUpdate.UpdateGUIInfo(Txn.Method, Node.Name, Msg.Value);//update 手動功能畫面
+                                    ManualRobotStatusUpdate.UpdateGUIInfo(Txn, Node.Name, Msg.Value);//update 手動功能畫面
                                     break;
                             }
                             break;
@@ -404,7 +404,7 @@ namespace Adam
                     }
                     break;
                 case "Robot":
-                    ManualRobotStatusUpdate.UpdateGUIInfo(Txn.Method, Node.Name, Msg.Value);//update 手動功能畫面
+                    ManualRobotStatusUpdate.UpdateGUIInfo(Txn, Node.Name, Msg.Value);//update 手動功能畫面
                     break;
                 case "Aligner":
                     ManualAlignerStatusUpdate.UpdateGUIInfo(Txn.Method, Node.Name, Msg.Value);//update 手動功能畫面
