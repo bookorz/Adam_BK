@@ -304,3 +304,5 @@ C:\Users\ethan_huang\source\repos\Adam\WindowsFormsApp1\obj\Debug\Adam.Menu.Syst
 C:\Users\ethan_huang\source\repos\Adam\WindowsFormsApp1\obj\Debug\Adam.Menu.SystemSetting.FormSECSSet.resources
 C:\Users\ethan_huang\source\repos\Adam\WindowsFormsApp1\obj\Debug\Adam.Menu.SystemSetting.FormSystemSetting.resources
 C:\Users\ethan_huang\source\repos\Adam\WindowsFormsApp1\obj\Debug\Adam.Menu.WaferMapping.FormWaferMapping.resources
+C:\Users\ethan_huang\source\repos\Adam\WindowsFormsApp1\bin\Debug\DIOControl.dll
+C:\Users\ethan_huang\source\repos\Adam\WindowsFormsApp1\bin\Debug\DIOControl.pdb

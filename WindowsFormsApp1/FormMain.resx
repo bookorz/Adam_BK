@@ -429,337 +429,337 @@
   <data name="&gt;&gt;splitContainer13.Panel1.ZOrder" xml:space="preserve">
     <value>0</value>
   </data>
-  <data name="button17.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+  <data name="DifferentialPressureAlarm2_Signal.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>Top, Left, Right</value>
   </data>
-  <data name="button17.FlatStyle" type="System.Windows.Forms.FlatStyle, System.Windows.Forms">
+  <data name="DifferentialPressureAlarm2_Signal.FlatStyle" type="System.Windows.Forms.FlatStyle, System.Windows.Forms">
     <value>Flat</value>
   </data>
-  <data name="button17.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+  <data name="DifferentialPressureAlarm2_Signal.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
   </data>
-  <data name="button17.Location" type="System.Drawing.Point, System.Drawing">
-    <value>6, 455</value>
+  <data name="DifferentialPressureAlarm2_Signal.Location" type="System.Drawing.Point, System.Drawing">
+    <value>6, 454</value>
   </data>
-  <data name="button17.Size" type="System.Drawing.Size, System.Drawing">
+  <data name="DifferentialPressureAlarm2_Signal.Size" type="System.Drawing.Size, System.Drawing">
     <value>230, 35</value>
   </data>
-  <data name="button17.TabIndex" type="System.Int32, mscorlib">
-    <value>10</value>
+  <data name="DifferentialPressureAlarm2_Signal.TabIndex" type="System.Int32, mscorlib">
+    <value>11</value>
   </data>
-  <data name="button17.Text" xml:space="preserve">
-    <value>Differential Manometer</value>
+  <data name="DifferentialPressureAlarm2_Signal.Text" xml:space="preserve">
+    <value>Differential Manometer2</value>
   </data>
-  <data name="&gt;&gt;button17.Name" xml:space="preserve">
-    <value>button17</value>
+  <data name="&gt;&gt;DifferentialPressureAlarm2_Signal.Name" xml:space="preserve">
+    <value>DifferentialPressureAlarm2_Signal</value>
   </data>
-  <data name="&gt;&gt;button17.Type" xml:space="preserve">
+  <data name="&gt;&gt;DifferentialPressureAlarm2_Signal.Type" xml:space="preserve">
     <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;button17.Parent" xml:space="preserve">
+  <data name="&gt;&gt;DifferentialPressureAlarm2_Signal.Parent" xml:space="preserve">
     <value>groupBox5</value>
   </data>
-  <data name="&gt;&gt;button17.ZOrder" xml:space="preserve">
+  <data name="&gt;&gt;DifferentialPressureAlarm2_Signal.ZOrder" xml:space="preserve">
     <value>0</value>
   </data>
-  <data name="button16.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+  <data name="DifferentialPressureAlarm1_Signal.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>Top, Left, Right</value>
   </data>
-  <data name="button16.FlatStyle" type="System.Windows.Forms.FlatStyle, System.Windows.Forms">
+  <data name="DifferentialPressureAlarm1_Signal.FlatStyle" type="System.Windows.Forms.FlatStyle, System.Windows.Forms">
     <value>Flat</value>
   </data>
-  <data name="button16.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+  <data name="DifferentialPressureAlarm1_Signal.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
   </data>
-  <data name="button16.Location" type="System.Drawing.Point, System.Drawing">
-    <value>6, 414</value>
+  <data name="DifferentialPressureAlarm1_Signal.Location" type="System.Drawing.Point, System.Drawing">
+    <value>6, 413</value>
   </data>
-  <data name="button16.Size" type="System.Drawing.Size, System.Drawing">
+  <data name="DifferentialPressureAlarm1_Signal.Size" type="System.Drawing.Size, System.Drawing">
     <value>230, 35</value>
   </data>
-  <data name="button16.TabIndex" type="System.Int32, mscorlib">
+  <data name="DifferentialPressureAlarm1_Signal.TabIndex" type="System.Int32, mscorlib">
+    <value>10</value>
+  </data>
+  <data name="DifferentialPressureAlarm1_Signal.Text" xml:space="preserve">
+    <value>Differential Manometer1</value>
+  </data>
+  <data name="&gt;&gt;DifferentialPressureAlarm1_Signal.Name" xml:space="preserve">
+    <value>DifferentialPressureAlarm1_Signal</value>
+  </data>
+  <data name="&gt;&gt;DifferentialPressureAlarm1_Signal.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;DifferentialPressureAlarm1_Signal.Parent" xml:space="preserve">
+    <value>groupBox5</value>
+  </data>
+  <data name="&gt;&gt;DifferentialPressureAlarm1_Signal.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="LoadPortVacuum_Signal.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Top, Left, Right</value>
+  </data>
+  <data name="LoadPortVacuum_Signal.FlatStyle" type="System.Windows.Forms.FlatStyle, System.Windows.Forms">
+    <value>Flat</value>
+  </data>
+  <data name="LoadPortVacuum_Signal.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="LoadPortVacuum_Signal.Location" type="System.Drawing.Point, System.Drawing">
+    <value>6, 372</value>
+  </data>
+  <data name="LoadPortVacuum_Signal.Size" type="System.Drawing.Size, System.Drawing">
+    <value>230, 35</value>
+  </data>
+  <data name="LoadPortVacuum_Signal.TabIndex" type="System.Int32, mscorlib">
     <value>9</value>
   </data>
-  <data name="button16.Text" xml:space="preserve">
-    <value>Load Port Air</value>
+  <data name="LoadPortVacuum_Signal.Text" xml:space="preserve">
+    <value>Load Port Vacuum</value>
   </data>
-  <data name="&gt;&gt;button16.Name" xml:space="preserve">
-    <value>button16</value>
+  <data name="&gt;&gt;LoadPortVacuum_Signal.Name" xml:space="preserve">
+    <value>LoadPortVacuum_Signal</value>
   </data>
-  <data name="&gt;&gt;button16.Type" xml:space="preserve">
+  <data name="&gt;&gt;LoadPortVacuum_Signal.Type" xml:space="preserve">
     <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;button16.Parent" xml:space="preserve">
+  <data name="&gt;&gt;LoadPortVacuum_Signal.Parent" xml:space="preserve">
     <value>groupBox5</value>
   </data>
-  <data name="&gt;&gt;button16.ZOrder" xml:space="preserve">
-    <value>1</value>
+  <data name="&gt;&gt;LoadPortVacuum_Signal.ZOrder" xml:space="preserve">
+    <value>2</value>
   </data>
-  <data name="button15.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+  <data name="SafetyRelay_Signal.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>Top, Left, Right</value>
   </data>
-  <data name="button15.FlatStyle" type="System.Windows.Forms.FlatStyle, System.Windows.Forms">
+  <data name="SafetyRelay_Signal.FlatStyle" type="System.Windows.Forms.FlatStyle, System.Windows.Forms">
     <value>Flat</value>
   </data>
-  <data name="button15.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+  <data name="SafetyRelay_Signal.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
   </data>
-  <data name="button15.Location" type="System.Drawing.Point, System.Drawing">
-    <value>6, 373</value>
+  <data name="SafetyRelay_Signal.Location" type="System.Drawing.Point, System.Drawing">
+    <value>6, 331</value>
   </data>
-  <data name="button15.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+  <data name="SafetyRelay_Signal.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
     <value>0, 0, 0, 0</value>
   </data>
-  <data name="button15.Size" type="System.Drawing.Size, System.Drawing">
+  <data name="SafetyRelay_Signal.Size" type="System.Drawing.Size, System.Drawing">
     <value>230, 35</value>
   </data>
-  <data name="button15.TabIndex" type="System.Int32, mscorlib">
+  <data name="SafetyRelay_Signal.TabIndex" type="System.Int32, mscorlib">
     <value>8</value>
   </data>
-  <data name="button15.Text" xml:space="preserve">
+  <data name="SafetyRelay_Signal.Text" xml:space="preserve">
     <value>Safety Relay</value>
   </data>
-  <data name="&gt;&gt;button15.Name" xml:space="preserve">
-    <value>button15</value>
+  <data name="&gt;&gt;SafetyRelay_Signal.Name" xml:space="preserve">
+    <value>SafetyRelay_Signal</value>
   </data>
-  <data name="&gt;&gt;button15.Type" xml:space="preserve">
+  <data name="&gt;&gt;SafetyRelay_Signal.Type" xml:space="preserve">
     <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;button15.Parent" xml:space="preserve">
+  <data name="&gt;&gt;SafetyRelay_Signal.Parent" xml:space="preserve">
     <value>groupBox5</value>
   </data>
-  <data name="&gt;&gt;button15.ZOrder" xml:space="preserve">
-    <value>2</value>
-  </data>
-  <data name="button14.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
-    <value>Top, Left, Right</value>
-  </data>
-  <data name="button14.FlatStyle" type="System.Windows.Forms.FlatStyle, System.Windows.Forms">
-    <value>Flat</value>
-  </data>
-  <data name="button14.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
-  </data>
-  <data name="button14.Location" type="System.Drawing.Point, System.Drawing">
-    <value>6, 332</value>
-  </data>
-  <data name="button14.Size" type="System.Drawing.Size, System.Drawing">
-    <value>230, 35</value>
-  </data>
-  <data name="button14.TabIndex" type="System.Int32, mscorlib">
-    <value>7</value>
-  </data>
-  <data name="button14.Text" xml:space="preserve">
-    <value>Differential Pressure</value>
-  </data>
-  <data name="&gt;&gt;button14.Name" xml:space="preserve">
-    <value>button14</value>
-  </data>
-  <data name="&gt;&gt;button14.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;button14.Parent" xml:space="preserve">
-    <value>groupBox5</value>
-  </data>
-  <data name="&gt;&gt;button14.ZOrder" xml:space="preserve">
+  <data name="&gt;&gt;SafetyRelay_Signal.ZOrder" xml:space="preserve">
     <value>3</value>
   </data>
-  <data name="button13.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+  <data name="IonizerAlarm_Signal.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>Top, Left, Right</value>
   </data>
-  <data name="button13.FlatStyle" type="System.Windows.Forms.FlatStyle, System.Windows.Forms">
+  <data name="IonizerAlarm_Signal.FlatStyle" type="System.Windows.Forms.FlatStyle, System.Windows.Forms">
     <value>Flat</value>
   </data>
-  <data name="button13.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+  <data name="IonizerAlarm_Signal.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
   </data>
-  <data name="button13.Location" type="System.Drawing.Point, System.Drawing">
+  <data name="IonizerAlarm_Signal.Location" type="System.Drawing.Point, System.Drawing">
     <value>6, 291</value>
   </data>
-  <data name="button13.Size" type="System.Drawing.Size, System.Drawing">
+  <data name="IonizerAlarm_Signal.Size" type="System.Drawing.Size, System.Drawing">
     <value>230, 35</value>
   </data>
-  <data name="button13.TabIndex" type="System.Int32, mscorlib">
+  <data name="IonizerAlarm_Signal.TabIndex" type="System.Int32, mscorlib">
     <value>6</value>
   </data>
-  <data name="button13.Text" xml:space="preserve">
-    <value>Ionizer</value>
+  <data name="IonizerAlarm_Signal.Text" xml:space="preserve">
+    <value>Ionizer Alarm</value>
   </data>
-  <data name="&gt;&gt;button13.Name" xml:space="preserve">
-    <value>button13</value>
+  <data name="&gt;&gt;IonizerAlarm_Signal.Name" xml:space="preserve">
+    <value>IonizerAlarm_Signal</value>
   </data>
-  <data name="&gt;&gt;button13.Type" xml:space="preserve">
+  <data name="&gt;&gt;IonizerAlarm_Signal.Type" xml:space="preserve">
     <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;button13.Parent" xml:space="preserve">
+  <data name="&gt;&gt;IonizerAlarm_Signal.Parent" xml:space="preserve">
     <value>groupBox5</value>
   </data>
-  <data name="&gt;&gt;button13.ZOrder" xml:space="preserve">
+  <data name="&gt;&gt;IonizerAlarm_Signal.ZOrder" xml:space="preserve">
     <value>4</value>
   </data>
-  <data name="button12.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+  <data name="FFU_Signal.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>Top, Left, Right</value>
   </data>
-  <data name="button12.FlatStyle" type="System.Windows.Forms.FlatStyle, System.Windows.Forms">
+  <data name="FFU_Signal.FlatStyle" type="System.Windows.Forms.FlatStyle, System.Windows.Forms">
     <value>Flat</value>
   </data>
-  <data name="button12.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+  <data name="FFU_Signal.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
   </data>
-  <data name="button12.Location" type="System.Drawing.Point, System.Drawing">
+  <data name="FFU_Signal.Location" type="System.Drawing.Point, System.Drawing">
     <value>6, 250</value>
   </data>
-  <data name="button12.Size" type="System.Drawing.Size, System.Drawing">
+  <data name="FFU_Signal.Size" type="System.Drawing.Size, System.Drawing">
     <value>230, 35</value>
   </data>
-  <data name="button12.TabIndex" type="System.Int32, mscorlib">
+  <data name="FFU_Signal.TabIndex" type="System.Int32, mscorlib">
     <value>5</value>
   </data>
-  <data name="button12.Text" xml:space="preserve">
+  <data name="FFU_Signal.Text" xml:space="preserve">
     <value>FFU</value>
   </data>
-  <data name="&gt;&gt;button12.Name" xml:space="preserve">
-    <value>button12</value>
+  <data name="&gt;&gt;FFU_Signal.Name" xml:space="preserve">
+    <value>FFU_Signal</value>
   </data>
-  <data name="&gt;&gt;button12.Type" xml:space="preserve">
+  <data name="&gt;&gt;FFU_Signal.Type" xml:space="preserve">
     <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;button12.Parent" xml:space="preserve">
+  <data name="&gt;&gt;FFU_Signal.Parent" xml:space="preserve">
     <value>groupBox5</value>
   </data>
-  <data name="&gt;&gt;button12.ZOrder" xml:space="preserve">
+  <data name="&gt;&gt;FFU_Signal.ZOrder" xml:space="preserve">
     <value>5</value>
   </data>
-  <data name="button11.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+  <data name="IonizerAir_Signal.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>Top, Left, Right</value>
   </data>
-  <data name="button11.FlatStyle" type="System.Windows.Forms.FlatStyle, System.Windows.Forms">
+  <data name="IonizerAir_Signal.FlatStyle" type="System.Windows.Forms.FlatStyle, System.Windows.Forms">
     <value>Flat</value>
   </data>
-  <data name="button11.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+  <data name="IonizerAir_Signal.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
   </data>
-  <data name="button11.Location" type="System.Drawing.Point, System.Drawing">
+  <data name="IonizerAir_Signal.Location" type="System.Drawing.Point, System.Drawing">
     <value>6, 209</value>
   </data>
-  <data name="button11.Size" type="System.Drawing.Size, System.Drawing">
+  <data name="IonizerAir_Signal.Size" type="System.Drawing.Size, System.Drawing">
     <value>230, 35</value>
   </data>
-  <data name="button11.TabIndex" type="System.Int32, mscorlib">
+  <data name="IonizerAir_Signal.TabIndex" type="System.Int32, mscorlib">
     <value>4</value>
   </data>
-  <data name="button11.Text" xml:space="preserve">
-    <value>Drive Power</value>
+  <data name="IonizerAir_Signal.Text" xml:space="preserve">
+    <value>IonizerAir</value>
   </data>
-  <data name="&gt;&gt;button11.Name" xml:space="preserve">
-    <value>button11</value>
+  <data name="&gt;&gt;IonizerAir_Signal.Name" xml:space="preserve">
+    <value>IonizerAir_Signal</value>
   </data>
-  <data name="&gt;&gt;button11.Type" xml:space="preserve">
+  <data name="&gt;&gt;IonizerAir_Signal.Type" xml:space="preserve">
     <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;button11.Parent" xml:space="preserve">
+  <data name="&gt;&gt;IonizerAir_Signal.Parent" xml:space="preserve">
     <value>groupBox5</value>
   </data>
-  <data name="&gt;&gt;button11.ZOrder" xml:space="preserve">
+  <data name="&gt;&gt;IonizerAir_Signal.ZOrder" xml:space="preserve">
     <value>6</value>
   </data>
-  <data name="button10.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+  <data name="Air_Signal.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>Top, Left, Right</value>
   </data>
-  <data name="button10.FlatStyle" type="System.Windows.Forms.FlatStyle, System.Windows.Forms">
+  <data name="Air_Signal.FlatStyle" type="System.Windows.Forms.FlatStyle, System.Windows.Forms">
     <value>Flat</value>
   </data>
-  <data name="button10.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+  <data name="Air_Signal.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
   </data>
-  <data name="button10.Location" type="System.Drawing.Point, System.Drawing">
+  <data name="Air_Signal.Location" type="System.Drawing.Point, System.Drawing">
     <value>6, 168</value>
   </data>
-  <data name="button10.Size" type="System.Drawing.Size, System.Drawing">
+  <data name="Air_Signal.Size" type="System.Drawing.Size, System.Drawing">
     <value>230, 35</value>
   </data>
-  <data name="button10.TabIndex" type="System.Int32, mscorlib">
+  <data name="Air_Signal.TabIndex" type="System.Int32, mscorlib">
     <value>3</value>
   </data>
-  <data name="button10.Text" xml:space="preserve">
+  <data name="Air_Signal.Text" xml:space="preserve">
     <value>Air</value>
   </data>
-  <data name="&gt;&gt;button10.Name" xml:space="preserve">
-    <value>button10</value>
+  <data name="&gt;&gt;Air_Signal.Name" xml:space="preserve">
+    <value>Air_Signal</value>
   </data>
-  <data name="&gt;&gt;button10.Type" xml:space="preserve">
+  <data name="&gt;&gt;Air_Signal.Type" xml:space="preserve">
     <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;button10.Parent" xml:space="preserve">
+  <data name="&gt;&gt;Air_Signal.Parent" xml:space="preserve">
     <value>groupBox5</value>
   </data>
-  <data name="&gt;&gt;button10.ZOrder" xml:space="preserve">
+  <data name="&gt;&gt;Air_Signal.ZOrder" xml:space="preserve">
     <value>7</value>
   </data>
-  <data name="button9.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+  <data name="Vacuum_Signal.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>Top, Left, Right</value>
   </data>
-  <data name="button9.FlatStyle" type="System.Windows.Forms.FlatStyle, System.Windows.Forms">
+  <data name="Vacuum_Signal.FlatStyle" type="System.Windows.Forms.FlatStyle, System.Windows.Forms">
     <value>Flat</value>
   </data>
-  <data name="button9.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+  <data name="Vacuum_Signal.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
   </data>
-  <data name="button9.Location" type="System.Drawing.Point, System.Drawing">
+  <data name="Vacuum_Signal.Location" type="System.Drawing.Point, System.Drawing">
     <value>6, 127</value>
   </data>
-  <data name="button9.Size" type="System.Drawing.Size, System.Drawing">
+  <data name="Vacuum_Signal.Size" type="System.Drawing.Size, System.Drawing">
     <value>230, 35</value>
   </data>
-  <data name="button9.TabIndex" type="System.Int32, mscorlib">
+  <data name="Vacuum_Signal.TabIndex" type="System.Int32, mscorlib">
     <value>2</value>
   </data>
-  <data name="button9.Text" xml:space="preserve">
+  <data name="Vacuum_Signal.Text" xml:space="preserve">
     <value>Vacuum</value>
   </data>
-  <data name="&gt;&gt;button9.Name" xml:space="preserve">
-    <value>button9</value>
+  <data name="&gt;&gt;Vacuum_Signal.Name" xml:space="preserve">
+    <value>Vacuum_Signal</value>
   </data>
-  <data name="&gt;&gt;button9.Type" xml:space="preserve">
+  <data name="&gt;&gt;Vacuum_Signal.Type" xml:space="preserve">
     <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;button9.Parent" xml:space="preserve">
+  <data name="&gt;&gt;Vacuum_Signal.Parent" xml:space="preserve">
     <value>groupBox5</value>
   </data>
-  <data name="&gt;&gt;button9.ZOrder" xml:space="preserve">
+  <data name="&gt;&gt;Vacuum_Signal.ZOrder" xml:space="preserve">
     <value>8</value>
   </data>
-  <data name="button7.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+  <data name="DoorSwitch_Signal.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>Top, Left, Right</value>
   </data>
-  <data name="button7.FlatStyle" type="System.Windows.Forms.FlatStyle, System.Windows.Forms">
+  <data name="DoorSwitch_Signal.FlatStyle" type="System.Windows.Forms.FlatStyle, System.Windows.Forms">
     <value>Flat</value>
   </data>
-  <data name="button7.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+  <data name="DoorSwitch_Signal.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
   </data>
-  <data name="button7.Location" type="System.Drawing.Point, System.Drawing">
+  <data name="DoorSwitch_Signal.Location" type="System.Drawing.Point, System.Drawing">
     <value>6, 86</value>
   </data>
-  <data name="button7.Size" type="System.Drawing.Size, System.Drawing">
+  <data name="DoorSwitch_Signal.Size" type="System.Drawing.Size, System.Drawing">
     <value>230, 35</value>
   </data>
-  <data name="button7.TabIndex" type="System.Int32, mscorlib">
+  <data name="DoorSwitch_Signal.TabIndex" type="System.Int32, mscorlib">
     <value>1</value>
   </data>
-  <data name="button7.Text" xml:space="preserve">
+  <data name="DoorSwitch_Signal.Text" xml:space="preserve">
     <value>Door Switch</value>
   </data>
-  <data name="&gt;&gt;button7.Name" xml:space="preserve">
-    <value>button7</value>
+  <data name="&gt;&gt;DoorSwitch_Signal.Name" xml:space="preserve">
+    <value>DoorSwitch_Signal</value>
   </data>
-  <data name="&gt;&gt;button7.Type" xml:space="preserve">
+  <data name="&gt;&gt;DoorSwitch_Signal.Type" xml:space="preserve">
     <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;button7.Parent" xml:space="preserve">
+  <data name="&gt;&gt;DoorSwitch_Signal.Parent" xml:space="preserve">
     <value>groupBox5</value>
   </data>
-  <data name="&gt;&gt;button7.ZOrder" xml:space="preserve">
+  <data name="&gt;&gt;DoorSwitch_Signal.ZOrder" xml:space="preserve">
     <value>9</value>
   </data>
   <data name="button6.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
@@ -1375,112 +1375,112 @@
   <data name="tableLayoutPanel2.ColumnCount" type="System.Int32, mscorlib">
     <value>1</value>
   </data>
-  <data name="panel8.BackgroundImageLayout" type="System.Windows.Forms.ImageLayout, System.Windows.Forms">
+  <data name="Blue_Signal.BackgroundImageLayout" type="System.Windows.Forms.ImageLayout, System.Windows.Forms">
     <value>None</value>
   </data>
-  <data name="panel8.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+  <data name="Blue_Signal.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
     <value>Fill</value>
   </data>
-  <data name="panel8.Location" type="System.Drawing.Point, System.Drawing">
+  <data name="Blue_Signal.Location" type="System.Drawing.Point, System.Drawing">
     <value>3, 96</value>
   </data>
-  <data name="panel8.Size" type="System.Drawing.Size, System.Drawing">
+  <data name="Blue_Signal.Size" type="System.Drawing.Size, System.Drawing">
     <value>119, 25</value>
   </data>
-  <data name="panel8.TabIndex" type="System.Int32, mscorlib">
+  <data name="Blue_Signal.TabIndex" type="System.Int32, mscorlib">
     <value>3</value>
   </data>
-  <data name="&gt;&gt;panel8.Name" xml:space="preserve">
-    <value>panel8</value>
+  <data name="&gt;&gt;Blue_Signal.Name" xml:space="preserve">
+    <value>Blue_Signal</value>
   </data>
-  <data name="&gt;&gt;panel8.Type" xml:space="preserve">
+  <data name="&gt;&gt;Blue_Signal.Type" xml:space="preserve">
     <value>System.Windows.Forms.Panel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;panel8.Parent" xml:space="preserve">
+  <data name="&gt;&gt;Blue_Signal.Parent" xml:space="preserve">
     <value>tableLayoutPanel2</value>
   </data>
-  <data name="&gt;&gt;panel8.ZOrder" xml:space="preserve">
+  <data name="&gt;&gt;Blue_Signal.ZOrder" xml:space="preserve">
     <value>0</value>
   </data>
-  <data name="panel5.BackgroundImageLayout" type="System.Windows.Forms.ImageLayout, System.Windows.Forms">
+  <data name="Red_Signal.BackgroundImageLayout" type="System.Windows.Forms.ImageLayout, System.Windows.Forms">
     <value>None</value>
   </data>
-  <data name="panel5.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+  <data name="Red_Signal.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
     <value>Fill</value>
   </data>
-  <data name="panel5.Location" type="System.Drawing.Point, System.Drawing">
+  <data name="Red_Signal.Location" type="System.Drawing.Point, System.Drawing">
     <value>3, 3</value>
   </data>
-  <data name="panel5.Size" type="System.Drawing.Size, System.Drawing">
+  <data name="Red_Signal.Size" type="System.Drawing.Size, System.Drawing">
     <value>119, 25</value>
   </data>
-  <data name="panel5.TabIndex" type="System.Int32, mscorlib">
+  <data name="Red_Signal.TabIndex" type="System.Int32, mscorlib">
     <value>2</value>
   </data>
-  <data name="&gt;&gt;panel5.Name" xml:space="preserve">
-    <value>panel5</value>
+  <data name="&gt;&gt;Red_Signal.Name" xml:space="preserve">
+    <value>Red_Signal</value>
   </data>
-  <data name="&gt;&gt;panel5.Type" xml:space="preserve">
+  <data name="&gt;&gt;Red_Signal.Type" xml:space="preserve">
     <value>System.Windows.Forms.Panel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;panel5.Parent" xml:space="preserve">
+  <data name="&gt;&gt;Red_Signal.Parent" xml:space="preserve">
     <value>tableLayoutPanel2</value>
   </data>
-  <data name="&gt;&gt;panel5.ZOrder" xml:space="preserve">
+  <data name="&gt;&gt;Red_Signal.ZOrder" xml:space="preserve">
     <value>1</value>
   </data>
-  <data name="panel6.BackgroundImageLayout" type="System.Windows.Forms.ImageLayout, System.Windows.Forms">
+  <data name="Orange_Signal.BackgroundImageLayout" type="System.Windows.Forms.ImageLayout, System.Windows.Forms">
     <value>None</value>
   </data>
-  <data name="panel6.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+  <data name="Orange_Signal.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
     <value>Fill</value>
   </data>
-  <data name="panel6.Location" type="System.Drawing.Point, System.Drawing">
+  <data name="Orange_Signal.Location" type="System.Drawing.Point, System.Drawing">
     <value>3, 34</value>
   </data>
-  <data name="panel6.Size" type="System.Drawing.Size, System.Drawing">
+  <data name="Orange_Signal.Size" type="System.Drawing.Size, System.Drawing">
     <value>119, 25</value>
   </data>
-  <data name="panel6.TabIndex" type="System.Int32, mscorlib">
+  <data name="Orange_Signal.TabIndex" type="System.Int32, mscorlib">
     <value>3</value>
   </data>
-  <data name="&gt;&gt;panel6.Name" xml:space="preserve">
-    <value>panel6</value>
+  <data name="&gt;&gt;Orange_Signal.Name" xml:space="preserve">
+    <value>Orange_Signal</value>
   </data>
-  <data name="&gt;&gt;panel6.Type" xml:space="preserve">
+  <data name="&gt;&gt;Orange_Signal.Type" xml:space="preserve">
     <value>System.Windows.Forms.Panel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;panel6.Parent" xml:space="preserve">
+  <data name="&gt;&gt;Orange_Signal.Parent" xml:space="preserve">
     <value>tableLayoutPanel2</value>
   </data>
-  <data name="&gt;&gt;panel6.ZOrder" xml:space="preserve">
+  <data name="&gt;&gt;Orange_Signal.ZOrder" xml:space="preserve">
     <value>2</value>
   </data>
-  <data name="panel7.BackgroundImageLayout" type="System.Windows.Forms.ImageLayout, System.Windows.Forms">
+  <data name="Green_Signal.BackgroundImageLayout" type="System.Windows.Forms.ImageLayout, System.Windows.Forms">
     <value>None</value>
   </data>
-  <data name="panel7.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+  <data name="Green_Signal.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
     <value>Fill</value>
   </data>
-  <data name="panel7.Location" type="System.Drawing.Point, System.Drawing">
+  <data name="Green_Signal.Location" type="System.Drawing.Point, System.Drawing">
     <value>3, 65</value>
   </data>
-  <data name="panel7.Size" type="System.Drawing.Size, System.Drawing">
+  <data name="Green_Signal.Size" type="System.Drawing.Size, System.Drawing">
     <value>119, 25</value>
   </data>
-  <data name="panel7.TabIndex" type="System.Int32, mscorlib">
+  <data name="Green_Signal.TabIndex" type="System.Int32, mscorlib">
     <value>3</value>
   </data>
-  <data name="&gt;&gt;panel7.Name" xml:space="preserve">
-    <value>panel7</value>
+  <data name="&gt;&gt;Green_Signal.Name" xml:space="preserve">
+    <value>Green_Signal</value>
   </data>
-  <data name="&gt;&gt;panel7.Type" xml:space="preserve">
+  <data name="&gt;&gt;Green_Signal.Type" xml:space="preserve">
     <value>System.Windows.Forms.Panel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;panel7.Parent" xml:space="preserve">
+  <data name="&gt;&gt;Green_Signal.Parent" xml:space="preserve">
     <value>tableLayoutPanel2</value>
   </data>
-  <data name="&gt;&gt;panel7.ZOrder" xml:space="preserve">
+  <data name="&gt;&gt;Green_Signal.ZOrder" xml:space="preserve">
     <value>3</value>
   </data>
   <data name="tableLayoutPanel2.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
@@ -1511,7 +1511,7 @@
     <value>0</value>
   </data>
   <data name="tableLayoutPanel2.LayoutSettings" type="System.Windows.Forms.TableLayoutSettings, System.Windows.Forms">
-    <value>&lt;?xml version="1.0" encoding="utf-16"?&gt;&lt;TableLayoutSettings&gt;&lt;Controls&gt;&lt;Control Name="panel8" Row="3" RowSpan="1" Column="0" ColumnSpan="1" /&gt;&lt;Control Name="panel5" Row="0" RowSpan="1" Column="0" ColumnSpan="1" /&gt;&lt;Control Name="panel6" Row="1" RowSpan="1" Column="0" ColumnSpan="1" /&gt;&lt;Control Name="panel7" Row="2" RowSpan="1" Column="0" ColumnSpan="1" /&gt;&lt;/Controls&gt;&lt;Columns Styles="Percent,100,Absolute,20" /&gt;&lt;Rows Styles="Percent,25,Percent,25,Percent,25,Percent,25" /&gt;&lt;/TableLayoutSettings&gt;</value>
+    <value>&lt;?xml version="1.0" encoding="utf-16"?&gt;&lt;TableLayoutSettings&gt;&lt;Controls&gt;&lt;Control Name="Blue_Signal" Row="3" RowSpan="1" Column="0" ColumnSpan="1" /&gt;&lt;Control Name="Red_Signal" Row="0" RowSpan="1" Column="0" ColumnSpan="1" /&gt;&lt;Control Name="Orange_Signal" Row="1" RowSpan="1" Column="0" ColumnSpan="1" /&gt;&lt;Control Name="Green_Signal" Row="2" RowSpan="1" Column="0" ColumnSpan="1" /&gt;&lt;/Controls&gt;&lt;Columns Styles="Percent,100,Absolute,20" /&gt;&lt;Rows Styles="Percent,25,Percent,25,Percent,25,Percent,25" /&gt;&lt;/TableLayoutSettings&gt;</value>
   </data>
   <data name="groupBox2.Location" type="System.Drawing.Point, System.Drawing">
     <value>1749, 3</value>

@@ -19,11 +19,11 @@ namespace Adam.UI_Update.Layout
             try
             {
                 Form form = Application.OpenForms["FormMain"];
-                
+
                 if (form == null)
                     return;
 
-                
+
 
                 if (form.InvokeRequired)
                 {
@@ -32,19 +32,51 @@ namespace Adam.UI_Update.Layout
                 }
                 else
                 {
-                    Button Signal = form.Controls.Find(Parameter+"_Signal", true).FirstOrDefault() as Button;
+                    Button Signal = form.Controls.Find(Parameter + "_Signal", true).FirstOrDefault() as Button;
                     if (Signal == null)
                         return;
-
-                    switch (Value.ToUpper())
+                    switch (Parameter)
                     {
-                        case "TRUE":
-                            Signal.BackColor = Color.Lime;
+                        case "Red":
+                        case "Orange":
+                        case "Green":
+                        case "Blue":
+                            if (Value.ToUpper().Equals("TRUE"))
+                            {
+                                switch (Parameter)
+                                {
+                                    case "Red":
+                                        Signal.BackColor = Color.Red;
+                                        break;
+                                    case "Orange":
+                                        Signal.BackColor = Color.DarkOrange;
+                                        break;
+                                    case "Green":
+                                        Signal.BackColor = Color.Green;
+                                        break;
+                                    case "Blue":
+                                        Signal.BackColor = Color.Blue;
+                                        break;
+                                }
+                            }
+                            else
+                            {
+                                Signal.BackColor = Color.Silver;
+                            }
                             break;
-                        case "FALSE":
-                            Signal.BackColor = Color.Red;
+                        default:
+                            switch (Value.ToUpper())
+                            {
+                                case "TRUE":
+                                    Signal.BackColor = Color.Lime;
+                                    break;
+                                case "FALSE":
+                                    Signal.BackColor = Color.Red;
+                                    break;
+                            }
                             break;
                     }
+
 
                 }
 
