@@ -5,6 +5,7 @@ using System.Drawing;
 using System.IO;
 using System.Linq;
 using System.Text;
+using System.Threading;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using TransferControl.Engine;
@@ -21,7 +22,7 @@ namespace Adam.UI_Update.OCR
         {
             try
             {
-                Form form = Application.OpenForms["FormMain"];
+                Form form = Application.OpenForms["FormOCR"];
                 TextBox Tb_OCRRead;
                 if (form == null)
                     return;
@@ -54,8 +55,8 @@ namespace Adam.UI_Update.OCR
                             src = RouteControl.SysConfig.OCR2ImgSourcePath;
                             break;
                     }
-                     
-
+                    Thread.Sleep(500);
+                    string saveTmpPath = save + "/" + WaferID + "_" + DateTime.Now.ToString("yyyy_mm_dd_HH_MM_ss") + ".bmp";
                     string savePath = save + "/" + WaferID + "_" + DateTime.Now.ToString("yyyy_mm_dd_HH_MM_ss") + ".jpg";
                     WaferID = WaferID.Replace("[", "").Replace("]", "").Split(',')[0];
                     Tb_OCRRead.Text = WaferID;
@@ -64,11 +65,12 @@ namespace Adam.UI_Update.OCR
                     if (fileList.Count != 0)
                     {
                         fileList.Sort((x, y) => { return -File.GetLastWriteTime(x).CompareTo(File.GetLastWriteTime(y)); });
-
-                        Image bmp = Image.FromFile(fileList[0]);
+                        File.Copy(fileList[0], saveTmpPath);
+                        Image bmp = Image.FromFile(saveTmpPath);
                         bmp.Save(savePath, System.Drawing.Imaging.ImageFormat.Jpeg);
                         bmp.Dispose();
                         PictureBox Pic_OCR = form.Controls.Find(OCRName + "_Pic", true).FirstOrDefault() as PictureBox;
+                        File.Delete(saveTmpPath);
                         if (Pic_OCR == null)
                             return;
                         Pic_OCR.Image = Image.FromFile(savePath);
@@ -87,7 +89,7 @@ namespace Adam.UI_Update.OCR
         {
             try
             {
-                Form form = Application.OpenForms["FormMain"];
+                Form form = Application.OpenForms["FormOCR"];
                 Button Btn_OCROnline;
                 if (form == null)
                     return;

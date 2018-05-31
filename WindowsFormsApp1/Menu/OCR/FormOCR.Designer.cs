@@ -387,6 +387,7 @@
             this.OCR02Offline_Btn.TabIndex = 3;
             this.OCR02Offline_Btn.Text = "OCR Offline Mode";
             this.OCR02Offline_Btn.UseVisualStyleBackColor = false;
+            this.OCR02Offline_Btn.Click += new System.EventHandler(this.OCRButton);
             // 
             // OCR02Online_Btn
             // 
@@ -402,6 +403,7 @@
             this.OCR02Online_Btn.TabIndex = 2;
             this.OCR02Online_Btn.Text = "OCR Online Mode";
             this.OCR02Online_Btn.UseVisualStyleBackColor = false;
+            this.OCR02Online_Btn.Click += new System.EventHandler(this.OCRButton);
             // 
             // OCR02Read_Bt
             // 
@@ -418,6 +420,7 @@
             this.OCR02Read_Bt.TabIndex = 63;
             this.OCR02Read_Bt.Text = "Read";
             this.OCR02Read_Bt.UseVisualStyleBackColor = false;
+            this.OCR02Read_Bt.Click += new System.EventHandler(this.OCRButton);
             // 
             // OCR02Read_Tb
             // 
@@ -504,6 +507,7 @@
             this.OCR01Offline_Btn.TabIndex = 3;
             this.OCR01Offline_Btn.Text = "OCR Offline Mode";
             this.OCR01Offline_Btn.UseVisualStyleBackColor = false;
+            this.OCR01Offline_Btn.Click += new System.EventHandler(this.OCRButton);
             // 
             // OCR01Online_Btn
             // 
@@ -519,6 +523,7 @@
             this.OCR01Online_Btn.TabIndex = 2;
             this.OCR01Online_Btn.Text = "OCR Online Mode";
             this.OCR01Online_Btn.UseVisualStyleBackColor = false;
+            this.OCR01Online_Btn.Click += new System.EventHandler(this.OCRButton);
             // 
             // OCR01Read_Bt
             // 
@@ -535,6 +540,7 @@
             this.OCR01Read_Bt.TabIndex = 63;
             this.OCR01Read_Bt.Text = "Read";
             this.OCR01Read_Bt.UseVisualStyleBackColor = false;
+            this.OCR01Read_Bt.Click += new System.EventHandler(this.OCRButton);
             // 
             // OCR01Read_Tb
             // 
