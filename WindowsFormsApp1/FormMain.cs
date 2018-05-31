@@ -22,12 +22,15 @@ using Adam.UI_Update.OCR;
 using Adam.UI_Update.WaferMapping;
 using System.Threading;
 using Adam.UI_Update.Authority;
+using DIOControl;
+using Adam.UI_Update.Layout;
 
 namespace Adam
 {
-    public partial class FormMain : Form, IEngineReport
+    public partial class FormMain : Form, IEngineReport , IDIOTriggerReport
     {
         public static RouteControl RouteCtrl;
+        public static DIO DIO;
         private static readonly ILog logger = LogManager.GetLogger(typeof(FormMain));
         object CurrentSelected = null;
 
@@ -44,7 +47,7 @@ namespace Adam
             XmlConfigurator.Configure();
             Initialize();
             RouteCtrl = new RouteControl(this);
-
+            DIO = new DIO(this);
             //ts.SelectedIndex = 0;
             //t2.Text = "CURRENT USER NAME";
             //t1.Text = "CURRENT_ID";
@@ -622,11 +625,14 @@ namespace Adam
             if (tgsConnection.Checked)
             {
                 RouteCtrl.ConnectAll();
+                DIO.Connect();
             }
             else
             {
                 RouteCtrl.DisconnectAll();
+                DIO.Close();
             }
+            
         }
 
         private void tgsMode_SW_CheckedChanged(object sender, EventArgs e)
@@ -863,6 +869,16 @@ namespace Adam
             {
                 MessageBox.Show(PortName + " 不存在");
             }
+        }
+
+        public void On_Data_Chnaged(string Parameter, string Value)
+        {
+            DIOUpdate.UpdateDIOStatus(Parameter, Value);
+        }
+
+        public void On_Error_Occurred(string ErrorMsg)
+        {
+            //斷線 發ALARM
         }
     }
 }
