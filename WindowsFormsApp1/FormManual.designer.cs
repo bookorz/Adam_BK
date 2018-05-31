@@ -89,7 +89,6 @@
             this.btnROrg = new System.Windows.Forms.Button();
             this.btnRInit = new System.Windows.Forms.Button();
             this.tbRLwaferSensor = new System.Windows.Forms.TextBox();
-            this.cbRNewSpeed = new System.Windows.Forms.ComboBox();
             this.tbRSpeed = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
@@ -128,7 +127,6 @@
             this.btnA2Reset = new System.Windows.Forms.Button();
             this.label16 = new System.Windows.Forms.Label();
             this.btnA2Init = new System.Windows.Forms.Button();
-            this.tbA2Speed = new System.Windows.Forms.TextBox();
             this.btnA2DisConn = new System.Windows.Forms.Button();
             this.btnA2VacuOff = new System.Windows.Forms.Button();
             this.label15 = new System.Windows.Forms.Label();
@@ -144,7 +142,6 @@
             this.btnA2Align = new System.Windows.Forms.Button();
             this.label10 = new System.Windows.Forms.Label();
             this.tbA2VacSolenoid = new System.Windows.Forms.TextBox();
-            this.cbA2SpeedNew = new System.Windows.Forms.ComboBox();
             this.groupBox22 = new System.Windows.Forms.GroupBox();
             this.panel15 = new System.Windows.Forms.Panel();
             this.panel16 = new System.Windows.Forms.Panel();
@@ -160,7 +157,6 @@
             this.tbA1Error = new System.Windows.Forms.TextBox();
             this.cbA1Angle = new System.Windows.Forms.ComboBox();
             this.label70 = new System.Windows.Forms.Label();
-            this.tbA1Speed = new System.Windows.Forms.TextBox();
             this.label71 = new System.Windows.Forms.Label();
             this.label72 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
@@ -169,7 +165,6 @@
             this.label5 = new System.Windows.Forms.Label();
             this.btnA1ChgSpeed = new System.Windows.Forms.Button();
             this.label73 = new System.Windows.Forms.Label();
-            this.cbA1SpeedNew = new System.Windows.Forms.ComboBox();
             this.tbA1VacSolenoid = new System.Windows.Forms.TextBox();
             this.btnA1Align = new System.Windows.Forms.Button();
             this.label74 = new System.Windows.Forms.Label();
@@ -314,7 +309,11 @@
             this.Btn_DoorClose_A = new System.Windows.Forms.Button();
             this.Btn_UnLatchDoor_A = new System.Windows.Forms.Button();
             this.Btn_LatchDoor_A = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
+            this.nudRNewSpeed = new System.Windows.Forms.NumericUpDown();
+            this.nudA1SpeedNew = new System.Windows.Forms.NumericUpDown();
+            this.nudA2SpeedNew = new System.Windows.Forms.NumericUpDown();
+            this.tbA2Speed = new System.Windows.Forms.TextBox();
+            this.tbA1Speed = new System.Windows.Forms.TextBox();
             this.tbcManual.SuspendLayout();
             this.tabPage1.SuspendLayout();
             this.groupBox20.SuspendLayout();
@@ -347,6 +346,9 @@
             this.groupBox9.SuspendLayout();
             this.groupBox25.SuspendLayout();
             this.TblPanel_A.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.nudRNewSpeed)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nudA1SpeedNew)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nudA2SpeedNew)).BeginInit();
             this.SuspendLayout();
             // 
             // tbcManual
@@ -940,7 +942,7 @@
             // panel14
             // 
             this.panel14.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.panel14.Controls.Add(this.button1);
+            this.panel14.Controls.Add(this.nudRNewSpeed);
             this.panel14.Controls.Add(this.label23);
             this.panel14.Controls.Add(this.cbRCurrentMode);
             this.panel14.Controls.Add(this.btnRChgMode);
@@ -955,7 +957,6 @@
             this.panel14.Controls.Add(this.btnROrg);
             this.panel14.Controls.Add(this.btnRInit);
             this.panel14.Controls.Add(this.tbRLwaferSensor);
-            this.panel14.Controls.Add(this.cbRNewSpeed);
             this.panel14.Controls.Add(this.tbRSpeed);
             this.panel14.Controls.Add(this.label2);
             this.panel14.Controls.Add(this.groupBox1);
@@ -980,11 +981,11 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.label23.AutoSize = true;
             this.label23.Font = new System.Drawing.Font("微軟正黑體", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-            this.label23.Location = new System.Drawing.Point(74, 658);
+            this.label23.Location = new System.Drawing.Point(37, 609);
             this.label23.Name = "label23";
-            this.label23.Size = new System.Drawing.Size(138, 30);
+            this.label23.Size = new System.Drawing.Size(174, 30);
             this.label23.TabIndex = 106;
-            this.label23.Text = "New Mode";
+            this.label23.Text = "Change Mode";
             this.label23.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
             // cbRCurrentMode
@@ -996,10 +997,11 @@
             "Dry Mode",
             "Test Mode",
             "Step Mode"});
-            this.cbRCurrentMode.Location = new System.Drawing.Point(224, 606);
+            this.cbRCurrentMode.Location = new System.Drawing.Point(224, 655);
             this.cbRCurrentMode.Name = "cbRCurrentMode";
             this.cbRCurrentMode.Size = new System.Drawing.Size(248, 38);
             this.cbRCurrentMode.TabIndex = 105;
+            this.cbRCurrentMode.Visible = false;
             // 
             // btnRChgMode
             // 
@@ -1009,7 +1011,7 @@
             this.btnRChgMode.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnRChgMode.Font = new System.Drawing.Font("微軟正黑體", 14.25F);
             this.btnRChgMode.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.btnRChgMode.Location = new System.Drawing.Point(488, 647);
+            this.btnRChgMode.Location = new System.Drawing.Point(488, 606);
             this.btnRChgMode.Name = "btnRChgMode";
             this.btnRChgMode.Size = new System.Drawing.Size(126, 46);
             this.btnRChgMode.TabIndex = 104;
@@ -1025,7 +1027,7 @@
             "Dry Mode",
             "Test Mode",
             "Step Mode"});
-            this.cbRNewMode.Location = new System.Drawing.Point(224, 655);
+            this.cbRNewMode.Location = new System.Drawing.Point(224, 606);
             this.cbRNewMode.Name = "cbRNewMode";
             this.cbRNewMode.Size = new System.Drawing.Size(248, 38);
             this.cbRNewMode.TabIndex = 103;
@@ -1037,12 +1039,13 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.label24.AutoSize = true;
             this.label24.Font = new System.Drawing.Font("微軟正黑體", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-            this.label24.Location = new System.Drawing.Point(39, 606);
+            this.label24.Location = new System.Drawing.Point(38, 658);
             this.label24.Name = "label24";
             this.label24.Size = new System.Drawing.Size(173, 30);
             this.label24.TabIndex = 102;
             this.label24.Text = "Current Mode";
             this.label24.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.label24.Visible = false;
             // 
             // btnRHome
             // 
@@ -1270,25 +1273,6 @@
             this.tbRLwaferSensor.Text = "OFF";
             this.tbRLwaferSensor.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
-            // cbRNewSpeed
-            // 
-            this.cbRNewSpeed.FormattingEnabled = true;
-            this.cbRNewSpeed.Items.AddRange(new object[] {
-            "10",
-            "20",
-            "30",
-            "40",
-            "50",
-            "60",
-            "70",
-            "80",
-            "90",
-            "0(100)"});
-            this.cbRNewSpeed.Location = new System.Drawing.Point(224, 283);
-            this.cbRNewSpeed.Name = "cbRNewSpeed";
-            this.cbRNewSpeed.Size = new System.Drawing.Size(106, 38);
-            this.cbRNewSpeed.TabIndex = 53;
-            // 
             // tbRSpeed
             // 
             this.tbRSpeed.BackColor = System.Drawing.Color.WhiteSmoke;
@@ -1346,6 +1330,7 @@
             this.rbR2.TabStop = true;
             this.rbR2.Text = "Robot2";
             this.rbR2.UseVisualStyleBackColor = true;
+            this.rbR2.CheckedChanged += new System.EventHandler(this.rb_CheckedChanged);
             // 
             // rbR1
             // 
@@ -1359,6 +1344,7 @@
             this.rbR1.TabStop = true;
             this.rbR1.Text = "Robot1";
             this.rbR1.UseVisualStyleBackColor = true;
+            this.rbR1.CheckedChanged += new System.EventHandler(this.rb_CheckedChanged);
             // 
             // label63
             // 
@@ -1506,6 +1492,7 @@
             // panel18
             // 
             this.panel18.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.panel18.Controls.Add(this.nudA2SpeedNew);
             this.panel18.Controls.Add(this.label21);
             this.panel18.Controls.Add(this.udA2AngleOffset);
             this.panel18.Controls.Add(this.cbA2CurrentMode);
@@ -1541,7 +1528,6 @@
             this.panel18.Controls.Add(this.btnA2Align);
             this.panel18.Controls.Add(this.label10);
             this.panel18.Controls.Add(this.tbA2VacSolenoid);
-            this.panel18.Controls.Add(this.cbA2SpeedNew);
             this.panel18.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel18.Location = new System.Drawing.Point(20, 20);
             this.panel18.Name = "panel18";
@@ -1816,18 +1802,6 @@
             this.btnA2Init.UseVisualStyleBackColor = false;
             this.btnA2Init.Click += new System.EventHandler(this.AlignerFunction_Click);
             // 
-            // tbA2Speed
-            // 
-            this.tbA2Speed.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.tbA2Speed.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.tbA2Speed.Location = new System.Drawing.Point(235, 337);
-            this.tbA2Speed.Name = "tbA2Speed";
-            this.tbA2Speed.ReadOnly = true;
-            this.tbA2Speed.Size = new System.Drawing.Size(118, 32);
-            this.tbA2Speed.TabIndex = 28;
-            this.tbA2Speed.Text = "90";
-            this.tbA2Speed.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            // 
             // btnA2DisConn
             // 
             this.btnA2DisConn.BackColor = System.Drawing.Color.DarkGray;
@@ -2036,25 +2010,6 @@
             this.tbA2VacSolenoid.Text = "OFF";
             this.tbA2VacSolenoid.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
-            // cbA2SpeedNew
-            // 
-            this.cbA2SpeedNew.FormattingEnabled = true;
-            this.cbA2SpeedNew.Items.AddRange(new object[] {
-            "10",
-            "20",
-            "30",
-            "40",
-            "50",
-            "60",
-            "70",
-            "80",
-            "90",
-            "0(100)"});
-            this.cbA2SpeedNew.Location = new System.Drawing.Point(235, 392);
-            this.cbA2SpeedNew.Name = "cbA2SpeedNew";
-            this.cbA2SpeedNew.Size = new System.Drawing.Size(118, 38);
-            this.cbA2SpeedNew.TabIndex = 49;
-            // 
             // groupBox22
             // 
             this.groupBox22.BackColor = System.Drawing.SystemColors.ControlLight;
@@ -2084,6 +2039,7 @@
             // panel16
             // 
             this.panel16.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.panel16.Controls.Add(this.nudA1SpeedNew);
             this.panel16.Controls.Add(this.label20);
             this.panel16.Controls.Add(this.cbA1CurrentMode);
             this.panel16.Controls.Add(this.udA1AngleOffset);
@@ -2105,7 +2061,6 @@
             this.panel16.Controls.Add(this.label5);
             this.panel16.Controls.Add(this.btnA1ChgSpeed);
             this.panel16.Controls.Add(this.label73);
-            this.panel16.Controls.Add(this.cbA1SpeedNew);
             this.panel16.Controls.Add(this.tbA1VacSolenoid);
             this.panel16.Controls.Add(this.btnA1Align);
             this.panel16.Controls.Add(this.label74);
@@ -2133,7 +2088,7 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.label20.AutoSize = true;
             this.label20.Font = new System.Drawing.Font("微軟正黑體", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-            this.label20.Location = new System.Drawing.Point(78, 644);
+            this.label20.Location = new System.Drawing.Point(78, 597);
             this.label20.Name = "label20";
             this.label20.Size = new System.Drawing.Size(138, 30);
             this.label20.TabIndex = 101;
@@ -2149,7 +2104,7 @@
             "Dry Mode",
             "Test Mode",
             "Step Mode"});
-            this.cbA1CurrentMode.Location = new System.Drawing.Point(228, 592);
+            this.cbA1CurrentMode.Location = new System.Drawing.Point(228, 643);
             this.cbA1CurrentMode.Name = "cbA1CurrentMode";
             this.cbA1CurrentMode.Size = new System.Drawing.Size(261, 38);
             this.cbA1CurrentMode.TabIndex = 100;
@@ -2179,7 +2134,7 @@
             this.btnA1ChgMode.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnA1ChgMode.Font = new System.Drawing.Font("微軟正黑體", 14.25F);
             this.btnA1ChgMode.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.btnA1ChgMode.Location = new System.Drawing.Point(504, 633);
+            this.btnA1ChgMode.Location = new System.Drawing.Point(504, 589);
             this.btnA1ChgMode.Name = "btnA1ChgMode";
             this.btnA1ChgMode.Size = new System.Drawing.Size(126, 46);
             this.btnA1ChgMode.TabIndex = 98;
@@ -2195,7 +2150,7 @@
             "Dry Mode",
             "Test Mode",
             "Step Mode"});
-            this.cbA1NewMode.Location = new System.Drawing.Point(228, 641);
+            this.cbA1NewMode.Location = new System.Drawing.Point(228, 592);
             this.cbA1NewMode.Name = "cbA1NewMode";
             this.cbA1NewMode.Size = new System.Drawing.Size(261, 38);
             this.cbA1NewMode.TabIndex = 97;
@@ -2207,7 +2162,7 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.label19.AutoSize = true;
             this.label19.Font = new System.Drawing.Font("微軟正黑體", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-            this.label19.Location = new System.Drawing.Point(43, 592);
+            this.label19.Location = new System.Drawing.Point(43, 646);
             this.label19.Name = "label19";
             this.label19.Size = new System.Drawing.Size(173, 30);
             this.label19.TabIndex = 95;
@@ -2293,18 +2248,6 @@
             this.label70.Size = new System.Drawing.Size(119, 30);
             this.label70.TabIndex = 51;
             this.label70.Text = "Last Error";
-            // 
-            // tbA1Speed
-            // 
-            this.tbA1Speed.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.tbA1Speed.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.tbA1Speed.Location = new System.Drawing.Point(228, 343);
-            this.tbA1Speed.Name = "tbA1Speed";
-            this.tbA1Speed.ReadOnly = true;
-            this.tbA1Speed.Size = new System.Drawing.Size(118, 32);
-            this.tbA1Speed.TabIndex = 28;
-            this.tbA1Speed.Text = "90";
-            this.tbA1Speed.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // label71
             // 
@@ -2407,25 +2350,6 @@
             this.label73.Size = new System.Drawing.Size(172, 30);
             this.label73.TabIndex = 0;
             this.label73.Text = "Aligner Status";
-            // 
-            // cbA1SpeedNew
-            // 
-            this.cbA1SpeedNew.FormattingEnabled = true;
-            this.cbA1SpeedNew.Items.AddRange(new object[] {
-            "10",
-            "20",
-            "30",
-            "40",
-            "50",
-            "60",
-            "70",
-            "80",
-            "90",
-            "0(100)"});
-            this.cbA1SpeedNew.Location = new System.Drawing.Point(228, 398);
-            this.cbA1SpeedNew.Name = "cbA1SpeedNew";
-            this.cbA1SpeedNew.Size = new System.Drawing.Size(118, 38);
-            this.cbA1SpeedNew.TabIndex = 49;
             // 
             // tbA1VacSolenoid
             // 
@@ -4460,15 +4384,98 @@
             this.Btn_LatchDoor_A.UseVisualStyleBackColor = true;
             this.Btn_LatchDoor_A.Click += new System.EventHandler(this.PortFunction_Click);
             // 
-            // button1
+            // nudRNewSpeed
             // 
-            this.button1.Location = new System.Drawing.Point(488, 349);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(119, 40);
-            this.button1.TabIndex = 107;
-            this.button1.Text = "button1";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.setRobotStatus);
+            this.nudRNewSpeed.Increment = new decimal(new int[] {
+            10,
+            0,
+            0,
+            0});
+            this.nudRNewSpeed.Location = new System.Drawing.Point(224, 284);
+            this.nudRNewSpeed.Minimum = new decimal(new int[] {
+            1,
+            0,
+            0,
+            0});
+            this.nudRNewSpeed.Name = "nudRNewSpeed";
+            this.nudRNewSpeed.Size = new System.Drawing.Size(106, 39);
+            this.nudRNewSpeed.TabIndex = 107;
+            this.nudRNewSpeed.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.nudRNewSpeed.Value = new decimal(new int[] {
+            100,
+            0,
+            0,
+            0});
+            // 
+            // nudA1SpeedNew
+            // 
+            this.nudA1SpeedNew.Increment = new decimal(new int[] {
+            10,
+            0,
+            0,
+            0});
+            this.nudA1SpeedNew.Location = new System.Drawing.Point(228, 402);
+            this.nudA1SpeedNew.Minimum = new decimal(new int[] {
+            1,
+            0,
+            0,
+            0});
+            this.nudA1SpeedNew.Name = "nudA1SpeedNew";
+            this.nudA1SpeedNew.Size = new System.Drawing.Size(118, 39);
+            this.nudA1SpeedNew.TabIndex = 108;
+            this.nudA1SpeedNew.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.nudA1SpeedNew.Value = new decimal(new int[] {
+            100,
+            0,
+            0,
+            0});
+            // 
+            // nudA2SpeedNew
+            // 
+            this.nudA2SpeedNew.Increment = new decimal(new int[] {
+            10,
+            0,
+            0,
+            0});
+            this.nudA2SpeedNew.Location = new System.Drawing.Point(235, 393);
+            this.nudA2SpeedNew.Minimum = new decimal(new int[] {
+            1,
+            0,
+            0,
+            0});
+            this.nudA2SpeedNew.Name = "nudA2SpeedNew";
+            this.nudA2SpeedNew.Size = new System.Drawing.Size(118, 39);
+            this.nudA2SpeedNew.TabIndex = 109;
+            this.nudA2SpeedNew.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.nudA2SpeedNew.Value = new decimal(new int[] {
+            100,
+            0,
+            0,
+            0});
+            // 
+            // tbA2Speed
+            // 
+            this.tbA2Speed.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.tbA2Speed.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.tbA2Speed.Location = new System.Drawing.Point(235, 337);
+            this.tbA2Speed.Name = "tbA2Speed";
+            this.tbA2Speed.ReadOnly = true;
+            this.tbA2Speed.Size = new System.Drawing.Size(118, 32);
+            this.tbA2Speed.TabIndex = 28;
+            this.tbA2Speed.Text = "90";
+            this.tbA2Speed.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // tbA1Speed
+            // 
+            this.tbA1Speed.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.tbA1Speed.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.tbA1Speed.Location = new System.Drawing.Point(228, 343);
+            this.tbA1Speed.Name = "tbA1Speed";
+            this.tbA1Speed.ReadOnly = true;
+            this.tbA1Speed.Size = new System.Drawing.Size(118, 32);
+            this.tbA1Speed.TabIndex = 28;
+            this.tbA1Speed.Text = "90";
+            this.tbA1Speed.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // FormManual
             // 
@@ -4528,6 +4535,9 @@
             this.groupBox25.ResumeLayout(false);
             this.TblPanel_A.ResumeLayout(false);
             this.TblPanel_A.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.nudRNewSpeed)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nudA1SpeedNew)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nudA2SpeedNew)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -4728,7 +4738,6 @@
         private System.Windows.Forms.Panel panel16;
         private System.Windows.Forms.TextBox tbA1Error;
         private System.Windows.Forms.Label label70;
-        private System.Windows.Forms.TextBox tbA1Speed;
         private System.Windows.Forms.Label label71;
         private System.Windows.Forms.Label label72;
         private System.Windows.Forms.TextBox tbA1Servo;
@@ -4745,7 +4754,6 @@
         private System.Windows.Forms.Button btnA1Home;
         private System.Windows.Forms.Button btnA1Init;
         private System.Windows.Forms.Button btnA1ChgSpeed;
-        private System.Windows.Forms.ComboBox cbA1SpeedNew;
         private System.Windows.Forms.Button btnA1ServoOn;
         private System.Windows.Forms.Button btnA1ServoOff;
         private System.Windows.Forms.Button btnA1VacuOff;
@@ -4754,7 +4762,6 @@
         private System.Windows.Forms.Button btnA1Conn;
         private System.Windows.Forms.Button btnA1VacuOn;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.ComboBox cbRNewSpeed;
         private System.Windows.Forms.TextBox tbRSpeed;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.GroupBox groupBox2;
@@ -4786,7 +4793,6 @@
         private System.Windows.Forms.Button btnA2Reset;
         private System.Windows.Forms.Label label16;
         private System.Windows.Forms.Button btnA2Init;
-        private System.Windows.Forms.TextBox tbA2Speed;
         private System.Windows.Forms.Button btnA2DisConn;
         private System.Windows.Forms.Button btnA2VacuOff;
         private System.Windows.Forms.Label label15;
@@ -4802,7 +4808,6 @@
         private System.Windows.Forms.Button btnA2Align;
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.TextBox tbA2VacSolenoid;
-        private System.Windows.Forms.ComboBox cbA2SpeedNew;
         private System.Windows.Forms.Button btnA1ChgMode;
         private System.Windows.Forms.ComboBox cbA1NewMode;
         private System.Windows.Forms.Label label19;
@@ -4820,6 +4825,10 @@
         private System.Windows.Forms.Button btnRChgMode;
         private System.Windows.Forms.ComboBox cbRNewMode;
         private System.Windows.Forms.Label label24;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.NumericUpDown nudRNewSpeed;
+        private System.Windows.Forms.NumericUpDown nudA2SpeedNew;
+        private System.Windows.Forms.NumericUpDown nudA1SpeedNew;
+        private System.Windows.Forms.TextBox tbA2Speed;
+        private System.Windows.Forms.TextBox tbA1Speed;
     }
 }
