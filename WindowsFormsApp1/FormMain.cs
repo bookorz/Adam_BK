@@ -29,7 +29,7 @@ namespace Adam
     {
         public static RouteControl RouteCtrl;
         private static readonly ILog logger = LogManager.GetLogger(typeof(FormMain));
-        
+        object CurrentSelected = null;
 
         private Menu.Monitoring.FormMonitoring formMonitoring = new Menu.Monitoring.FormMonitoring();
         private Menu.Communications.FormCommunications formCommunications = new Menu.Communications.FormCommunications();
@@ -124,7 +124,6 @@ namespace Adam
                     ((Form)ctrlForm[i]).TopLevel = false;
                     tbcMian.TabPages[i].Controls.Add(((Form)ctrlForm[i]));
                     ((Form)ctrlForm[i]).Show();
-                    IntPtr dummy = ((Form)ctrlForm[i]).Handle;
                 }
             }
             catch (Exception ex)
@@ -171,21 +170,8 @@ namespace Adam
         private void toolStripMenuItem4_Click(object sender, EventArgs e)
         {
             string strMsg = "This equipment performs the initialization and origin search OK?\r\n" + "This equipment will be initalized, each axis will return to home position.\r\n" + "Check the condition of the wafer.";
-            if (MessageBox.Show(strMsg, "Initialize", MessageBoxButtons.OKCancel, MessageBoxIcon.Exclamation, MessageBoxDefaultButton.Button1, MessageBoxOptions.ServiceNotification) == DialogResult.OK)
-            {
-                Transaction txn = new Transaction();
-                txn.Method = Transaction.Command.RobotType.Reset;
-                NodeManagement.Get("Robot01").SendCommand(txn);
-                txn = new Transaction();
-                txn.Method = Transaction.Command.RobotType.Reset;
-                NodeManagement.Get("Robot02").SendCommand(txn);
-                txn = new Transaction();
-                txn.Method = Transaction.Command.AlignerType.Reset;
-                NodeManagement.Get("Aligner01").SendCommand(txn);
-                txn = new Transaction();
-                txn.Method = Transaction.Command.AlignerType.Reset;
-                NodeManagement.Get("Aligner02").SendCommand(txn);
-            }
+            MessageBox.Show(strMsg, "Initialize", MessageBoxButtons.OKCancel, MessageBoxIcon.Exclamation, MessageBoxDefaultButton.Button1, MessageBoxOptions.ServiceNotification);
+
         }
 
         private void toolStripMenuItem5_Click(object sender, EventArgs e)
@@ -307,105 +293,64 @@ namespace Adam
         {
             logger.Debug("On_Command_Excuted");
             Transaction txn = new Transaction();
-            switch (Node.Type)
+            switch (Txn.FormName)
             {
-                case "LoadPort":
-                    ManualPortStatusUpdate.UpdateLog(Node.Name, Msg.Command);
-                    switch (Txn.Method)
+                case "FormManual":
+                    switch (Node.Type)
                     {
-                        case Transaction.Command.LoadPortType.ReadVersion:
-                            ManualPortStatusUpdate.UpdateVersion(Node.Name, Msg.Value);
-                            break;
-                        case Transaction.Command.LoadPortType.GetLED:
-                            ManualPortStatusUpdate.UpdateLED(Node.Name, Msg.Value);
-                            break;
-                        case Transaction.Command.LoadPortType.ReadStatus:
-                            ManualPortStatusUpdate.UpdateStatus(Node.Name, Msg.Value);
-                            break;
-                        case Transaction.Command.LoadPortType.GetCount:
+                        case "LoadPort":
+                            ManualPortStatusUpdate.UpdateLog(Node.Name, Msg.Command);
+                            switch (Txn.Method)
+                            {
+                                case Transaction.Command.LoadPortType.ReadVersion:
+                                    ManualPortStatusUpdate.UpdateVersion(Node.Name, Msg.Value);
+                                    break;
+                                case Transaction.Command.LoadPortType.GetLED:
+                                    ManualPortStatusUpdate.UpdateLED(Node.Name, Msg.Value);
+                                    break;
+                                case Transaction.Command.LoadPortType.ReadStatus:
+                                    ManualPortStatusUpdate.UpdateStatus(Node.Name, Msg.Value);
+                                    break;
+                                case Transaction.Command.LoadPortType.GetCount:
 
+                                    break;
+                                case Transaction.Command.LoadPortType.GetMapping:
+                                    ManualPortStatusUpdate.UpdateMapping(Node.Name, Msg.Value);
+                                    break;
+                            }
                             break;
-                        case Transaction.Command.LoadPortType.GetMapping:
-                            ManualPortStatusUpdate.UpdateMapping(Node.Name, Msg.Value);
+                        case "OCR":
+                            switch (Txn.Method)
+                            {
+                                case Transaction.Command.OCRType.GetOnline:
+                                    OCRUpdate.UpdateOCRStatus(Node.Name, Msg.Value);
+                                    break;
+                            }
                             break;
-                    }
-                    break;
-                case "OCR":
-                    switch (Txn.Method)
-                    {
-                        case Transaction.Command.OCRType.GetOnline:
-                            OCRUpdate.UpdateOCRStatus(Node.Name, Msg.Value);
+                        case "Robot":
+                            switch (Txn.Method)
+                            {
+                                case Transaction.Command.RobotType.RobotSpeed:
+                                case Transaction.Command.RobotType.RobotMode:
+                                case Transaction.Command.RobotType.GetStatus:
+                                case Transaction.Command.RobotType.GetSpeed:
+                                case Transaction.Command.RobotType.GetRIO:
+                                    ManualRobotStatusUpdate.UpdateGUIInfo(Txn, Node.Name, Msg.Value);//update 手動功能畫面
+                                    break;
+                            }
                             break;
-                    }
-                    break;
-                case "Robot":
-                    switch (Txn.Method)
-                    {
-                        case Transaction.Command.RobotType.RobotSpeed:
-                            ManualRobotStatusUpdate.ShowMsg("Change speed completed.");
-                            txn = new Transaction();
-                            txn.TargetJobs = new List<Job>();
-                            txn.Method = Transaction.Command.RobotType.RobotHome;
-                            txn.Arm = "";
-                            Node.SendCommand(txn);
+                        case "Aligner":
+                            switch (Txn.Method)
+                            {
+                                case Transaction.Command.AlignerType.AlignerSpeed:
+                                case Transaction.Command.AlignerType.AlignerMode:
+                                case Transaction.Command.AlignerType.GetStatus:
+                                case Transaction.Command.AlignerType.GetSpeed:
+                                case Transaction.Command.AlignerType.GetRIO:
+                                    ManualAlignerStatusUpdate.UpdateGUIInfo(Txn.Method, Node.Name, Msg.Value);//update 手動功能畫面
+                                    break;
+                            }
                             break;
-                        case Transaction.Command.RobotType.Reset:
-                            txn = new Transaction();
-                            txn.TargetJobs = new List<Job>();
-                            txn.Method = Transaction.Command.RobotType.RobotServo;
-                            txn.Arm = "1";
-                            Node.SendCommand(txn);
-                            break;
-                        case Transaction.Command.RobotType.RobotServo:
-                            txn = new Transaction();
-                            txn.TargetJobs = new List<Job>();
-                            txn.Method = Transaction.Command.RobotType.RobotMode;
-                            txn.Arm = "1";
-                            Node.SendCommand(txn);
-                            break;
-                        case Transaction.Command.RobotType.RobotMode:
-                            txn = new Transaction();
-                            txn.TargetJobs = new List<Job>();
-                            txn.Method = Transaction.Command.RobotType.WaferRelease;
-                            txn.Arm = "1";
-                            Node.SendCommand(txn);
-                            break;
-
-                        
-                    }
-                    break;
-                case "Aligner":
-                    switch (Txn.Method)
-                    {
-                        case Transaction.Command.AlignerType.Reset:
-                            txn = new Transaction();
-                            txn.TargetJobs = new List<Job>();
-                            txn.Method = Transaction.Command.AlignerType.AlignerServo;
-                            txn.Arm = "1";
-                            Node.SendCommand(txn);
-                            break;
-                        case Transaction.Command.AlignerType.AlignerServo:
-                            txn = new Transaction();
-                            txn.TargetJobs = new List<Job>();
-                            txn.Method = Transaction.Command.AlignerType.AlignerMode;
-                            txn.Arm = "1";
-                            Node.SendCommand(txn);
-                            break;
-                        case Transaction.Command.AlignerType.AlignerMode:
-                            txn = new Transaction();
-                            txn.TargetJobs = new List<Job>();
-                            txn.Method = Transaction.Command.AlignerType.AlignerSpeed;
-                            txn.Arm = "0";
-                            Node.SendCommand(txn);
-                            break;
-                        case Transaction.Command.AlignerType.AlignerSpeed:
-                            txn = new Transaction();
-                            txn.TargetJobs = new List<Job>();
-                            txn.Method = Transaction.Command.AlignerType.AlignerOrigin;
-                            txn.Arm = "0";
-                            Node.SendCommand(txn);
-                            break;
-
                     }
                     break;
             }
@@ -414,24 +359,23 @@ namespace Adam
         public void On_Command_Error(Node Node, Transaction Txn, ReturnMessage Msg)
         {
             logger.Debug("On_Command_Error");
-            switch (Node.Type)
+            switch (Txn.FormName)
             {
-                case "LoadPort":
-                    ManualPortStatusUpdate.UpdateLog(Node.Name, Msg.Command);
-                    break;
-                case "Robot":
-                    switch (Txn.Method)
+                case "FormManual":
+                    switch (Node.Type)
                     {
-                        case Transaction.Command.RobotType.RobotSpeed:
-                            ManualRobotStatusUpdate.ShowMsg("Change speed fail.");
+                        case "LoadPort":
+                            ManualPortStatusUpdate.UpdateLog(Node.Name, Msg.Command);
                             break;
-                        default:
-                            ManualRobotStatusUpdate.ShowMsg("Execute: failure!");
+                        case "Robot":
+                            MessageBox.Show(Node.Name + " " + Msg.Command + " error:" + Msg.Value, "Command Error");
+                            break;
+                        case "Aligner":
+                            MessageBox.Show(Node.Name + " " + Msg.Command + " error:" + Msg.Value, "Command Error");
                             break;
                     }
                     break;
             }
-
         }
 
         public void On_Command_Finished(Node Node, Transaction Txn, ReturnMessage Msg)
@@ -460,52 +404,10 @@ namespace Adam
                     }
                     break;
                 case "Robot":
-                   
-                    switch (Txn.Method)
-                    {
-                        case Transaction.Command.RobotType.WaferRelease:
-                            if (Txn.Arm.Equals("1"))
-                            {
-                                txn = new Transaction();
-                                txn.TargetJobs = new List<Job>();
-                                txn.Method = Transaction.Command.RobotType.WaferRelease;
-                                txn.Arm = "2";
-                                Node.SendCommand(txn);
-                            }
-                            else
-                            {
-                                txn = new Transaction();
-                                txn.TargetJobs = new List<Job>();
-                                txn.Method = Transaction.Command.RobotType.RobotSpeed;
-                                txn.Arm = "0";
-                                Node.SendCommand(txn);
-                            }
-                            break;
-
-                        case Transaction.Command.RobotType.RobotHome:
-                            //end
-
-                            break;
-                        default:
-                            ManualRobotStatusUpdate.ShowMsg("Execute: Success!");
-                            break;
-                    }
+                    ManualRobotStatusUpdate.UpdateGUIInfo(Txn, Node.Name, Msg.Value);//update 手動功能畫面
                     break;
                 case "Aligner":
-                    switch (Txn.Method)
-                    {
-
-                        case Transaction.Command.AlignerType.AlignerOrigin:
-                            txn = new Transaction();
-                            txn.TargetJobs = new List<Job>();
-                            txn.Method = Transaction.Command.AlignerType.Retract;
-                            txn.Arm = "0";
-                            Node.SendCommand(txn);
-                            break;
-                        case Transaction.Command.AlignerType.Retract:
-                            //end
-                            break;
-                    }
+                    ManualAlignerStatusUpdate.UpdateGUIInfo(Txn.Method, Node.Name, Msg.Value);//update 手動功能畫面
                     break;
             }
 
@@ -514,10 +416,21 @@ namespace Adam
         public void On_Command_TimeOut(Node Node, Transaction Txn)
         {
             logger.Debug("On_Command_TimeOut");
-            switch (Node.Type)
+            switch (Txn.FormName)
             {
-                case "LoadPort":
-                    ManualPortStatusUpdate.UpdateLog(Node.Name, Txn.CommandEncodeStr + " Timeout!");
+                case "FormManual":
+                    switch (Node.Type)
+                    {
+                        case "LoadPort":
+                            ManualPortStatusUpdate.UpdateLog(Node.Name, Txn.CommandEncodeStr + " Timeout!");
+                            break;
+                        case "Robot":
+                            MessageBox.Show(Node.Name + " " + Txn.CommandEncodeStr + " Timeout!", "Command Timeout");
+                            break;
+                        case "Aligner":
+                            MessageBox.Show(Node.Name + " " + Txn.CommandEncodeStr + " Timeout!", "Command Timeout");
+                            break;
+                    }
                     break;
             }
         }
@@ -662,14 +575,53 @@ namespace Adam
             //pbPortState.Top = -vSBPortStatus.Value;
         }
 
-        
+        //private void OCRButton(object sender, EventArgs e)
+        //{
+        //    Button TriggerBtn = sender as Button;
+        //    Transaction txn = new Transaction();
+        //    switch (TriggerBtn.Name)
+        //    {
+        //        case "OCR01Online_Btn":
+        //            OCR01Online_Btn.Enabled = false;
+        //            OCR01Offline_Btn.Enabled = true;
+        //            txn.Method = Transaction.Command.OCRType.Online;
+        //            NodeManagement.Get("OCR01").SendCommand(txn);
+        //            break;
+        //        case "OCR01Offline_Btn":
+        //            OCR01Online_Btn.Enabled = true;
+        //            OCR01Offline_Btn.Enabled = false;
+        //            txn.Method = Transaction.Command.OCRType.Offline;
+        //            NodeManagement.Get("OCR01").SendCommand(txn);
+        //            break;
+        //        case "OCR01Read_Bt":
+        //            txn.Method = Transaction.Command.OCRType.Read;
+        //            NodeManagement.Get("OCR01").SendCommand(txn);
+        //            break;
+        //        case "OCR02Online_Btn":
+        //            OCR01Online_Btn.Enabled = false;
+        //            OCR01Offline_Btn.Enabled = true;
+        //            txn.Method = Transaction.Command.OCRType.Online;
+        //            NodeManagement.Get("OCR02").SendCommand(txn);
+        //            break;
+        //        case "OCR02Offline_Btn":
+        //            OCR01Online_Btn.Enabled = true;
+        //            OCR01Offline_Btn.Enabled = false;
+        //            txn.Method = Transaction.Command.OCRType.Offline;
+        //            NodeManagement.Get("OCR02").SendCommand(txn);
+        //            break;
+        //        case "OCR02Read_Bt":
+        //            txn.Method = Transaction.Command.OCRType.Read;
+        //            NodeManagement.Get("OCR02").SendCommand(txn);
+        //            break;
+        //    }
+
+        //}
 
         private void tgsConnection_CheckedChanged(object sender, EventArgs e)
         {
             if (tgsConnection.Checked)
             {
                 RouteCtrl.ConnectAll();
-                
             }
             else
             {
@@ -695,7 +647,7 @@ namespace Adam
 
                 ThreadPool.QueueUserWorkItem(new WaitCallback(RouteCtrl.Auto), "Normal");
 
-               
+
             }
             else
             {
@@ -710,6 +662,207 @@ namespace Adam
             }
         }
 
-        
+        private void Assign_Gv_CellFormatting(object sender, DataGridViewCellFormattingEventArgs e)
+        {
+            switch (e.ColumnIndex)
+            {
+                case 1:
+                    switch (e.Value)
+                    {
+                        case "No wafer":
+                            e.CellStyle.BackColor = Color.Gray;
+                            e.CellStyle.ForeColor = Color.White;
+                            break;
+                        case "Crossed":
+
+                            e.CellStyle.BackColor = Color.Red;
+                            e.CellStyle.ForeColor = Color.White;
+                            break;
+                        case "Undefined":
+                            e.CellStyle.BackColor = Color.Red;
+                            e.CellStyle.ForeColor = Color.White;
+                            break;
+                        case "Double":
+                            e.CellStyle.BackColor = Color.Red;
+                            e.CellStyle.ForeColor = Color.White;
+                            break;
+                        default:
+                            e.CellStyle.BackColor = Color.Green;
+                            e.CellStyle.ForeColor = Color.White;
+                            break;
+
+                    }
+                    break;
+
+            }
+        }
+
+        private void Assign_Gv_MouseClick(object sender, MouseEventArgs e)
+        {
+            if (e.Button == MouseButtons.Right)
+            {
+                ContextMenu m = new ContextMenu();
+
+
+                string PortName = (sender as DataGridView).Name.Replace("Assign_Gv", "");
+                if (NodeManagement.Get(PortName).Mode.Equals("LD"))
+                {
+
+                    CurrentSelected = sender;
+                    foreach (Node eachPort in NodeManagement.GetLoadPortList("UD"))
+                    {
+                        List<MenuItem> tmpAry = new List<MenuItem>();
+                        for (int i = 1; i <= 25; i++)
+                        {
+                            MenuItem tmp;
+                            if (!eachPort.JobList.ContainsKey(i.ToString()))
+                            {
+                                tmp = new MenuItem(eachPort.Name + "-" + i.ToString(), AssignPort);
+
+                            }
+                            else
+                            {
+                                tmp = new MenuItem(eachPort.Name + "-" + i.ToString(), AssignPort);
+                                tmp.Enabled = false;
+                            }
+                            tmpAry.Add(tmp);
+                        }
+                        m.MenuItems.Add(eachPort.Name, tmpAry.ToArray());
+                    }
+
+
+                }
+
+                m.Show((DataGridView)sender, new Point(e.X, e.Y));
+
+            }
+        }
+
+        private void AssignPort(object sender, EventArgs e)
+        {
+            string PortName = (sender as MenuItem).Text.Split('-')[0];
+            string Slot = (sender as MenuItem).Text.Split('-')[1];
+            if ((CurrentSelected as DataGridView).SelectedRows.Count == 0)
+            {
+                MessageBox.Show("請選擇來源Slot");
+            }
+            else if ((CurrentSelected as DataGridView).SelectedRows.Count == 1)
+            {
+                string waferId = (CurrentSelected as DataGridView).SelectedRows[0].Cells["Job_Id"].Value.ToString();
+                string OrgDest = (CurrentSelected as DataGridView).SelectedRows[0].Cells["Destination"].Value.ToString();
+                string OrgDestSlot = (CurrentSelected as DataGridView).SelectedRows[0].Cells["DestinationSlot"].Value.ToString();
+                Job wafer = JobManagement.Get(waferId);
+                if (wafer != null)
+                {
+                    wafer.Destination = PortName;
+                    wafer.DisplayDestination = PortName.Replace("Load", "");
+                    wafer.DestinationSlot = Slot;
+                    wafer.ProcessFlag = false;
+                    wafer.Position = PortName;
+                    if (!OrgDest.Equals(""))
+                    {
+                        NodeManagement.Get(OrgDest).RemoveJob(OrgDestSlot);
+                    }
+                    NodeManagement.Get(PortName).AddJob(Slot, wafer);
+                    (CurrentSelected as DataGridView).Refresh();
+                }
+                else
+                {
+                    MessageBox.Show("找不到此Wafer資料:" + wafer.Job_Id);
+                }
+
+            }
+            else if ((CurrentSelected as DataGridView).SelectedRows.Count > 1)
+            {
+                int StartSlot = Convert.ToInt32(Slot);
+                foreach (DataGridViewRow each in (CurrentSelected as DataGridView).SelectedRows)
+                {
+                    string waferId = each.Cells["Job_Id"].Value.ToString();
+                    string OrgDest = each.Cells["Destination"].Value.ToString();
+                    string OrgDestSlot = each.Cells["DestinationSlot"].Value.ToString();
+                    Job wafer = JobManagement.Get(waferId);
+                    if (wafer != null)
+                    {
+                        while (true)
+                        {
+                            if (NodeManagement.Get(PortName).GetJob(StartSlot.ToString()) == null)
+                            {
+                                wafer.Destination = PortName;
+                                wafer.DisplayDestination = PortName.Replace("Load", "");
+                                wafer.DestinationSlot = StartSlot.ToString();
+                                wafer.Position = PortName;
+                                wafer.ProcessFlag = false;
+                                if (!OrgDest.Equals(""))
+                                {
+                                    NodeManagement.Get(OrgDest).RemoveJob(OrgDestSlot);
+                                }
+                                NodeManagement.Get(PortName).AddJob(StartSlot.ToString(), wafer);
+
+                                break;
+                            }
+                            else
+                            {
+                                StartSlot++;
+                                if (StartSlot > 25)
+                                {
+                                    break;
+                                }
+                            }
+                        }
+                        StartSlot++;
+                        if (StartSlot > 25)
+                        {
+                            break;
+                        }
+                    }
+                }
+                 (CurrentSelected as DataGridView).Refresh();
+            }
+
+        }
+
+        private void State_lb_Click(object sender, MouseEventArgs e)
+        {
+            if (e.Button == MouseButtons.Right)
+            {
+                CurrentSelected = sender;
+                ContextMenu m = new ContextMenu();
+                m.MenuItems.Add(new MenuItem("Change to LD", PortModeChange));
+                m.MenuItems.Add(new MenuItem("Change to UD", PortModeChange));
+                m.Show((Label)sender, new Point(e.X, e.Y));
+            }
+        }
+
+        private void PortModeChange(object sender, EventArgs e)
+        {
+            string Name = (CurrentSelected as Label).Name.Replace("State_lb", "");
+            switch (((MenuItem)sender).Text)
+            {
+                case "Change to LD":
+                    NodeManagement.Get(Name).Mode = "LD";
+                    WaferAssignUpdate.UpdateLoadPortMode(Name, "LD");
+                    break;
+                case "Change to UD":
+                    NodeManagement.Get(Name).Mode = "UD";
+                    WaferAssignUpdate.UpdateLoadPortMode(Name, "UD");
+                    break;
+            }
+
+        }
+
+        private void PortStart_Btn_Click(object sender, EventArgs e)
+        {
+            string PortName = (sender as Button).Name.Replace("_Start_Btn", "");
+            Node port = NodeManagement.Get(PortName);
+            if (port != null)
+            {
+                port.Available = true;
+
+            }
+            else
+            {
+                MessageBox.Show(PortName + " 不存在");
+            }
+        }
     }
 }

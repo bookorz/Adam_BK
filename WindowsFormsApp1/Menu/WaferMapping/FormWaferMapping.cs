@@ -1,4 +1,4 @@
-﻿using Adam.UI_Update.Monitoring;
+using Adam.UI_Update.Monitoring;
 using Adam.UI_Update.WaferMapping;
 using System;
 using System.Collections.Generic;

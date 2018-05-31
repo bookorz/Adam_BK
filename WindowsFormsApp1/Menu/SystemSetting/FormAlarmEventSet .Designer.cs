@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             this.gbAlarmSetting = new System.Windows.Forms.GroupBox();
             this.spcAlarmSetting = new System.Windows.Forms.SplitContainer();
             this.gbAlarmSettingCondition = new System.Windows.Forms.GroupBox();
@@ -245,7 +245,7 @@
             // 
             this.btnSave.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.btnSave.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.btnSave.Location = new System.Drawing.Point(845, 655);
+            this.btnSave.Location = new System.Drawing.Point(848, 658);
             this.btnSave.Name = "btnSave";
             this.btnSave.Size = new System.Drawing.Size(229, 48);
             this.btnSave.TabIndex = 6;
@@ -300,9 +300,9 @@
             // 
             // Event_AlarmLED_Red
             // 
-            dataGridViewCellStyle2.BackColor = System.Drawing.Color.Red;
-            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.White;
-            this.Event_AlarmLED_Red.DefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.Red;
+            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.White;
+            this.Event_AlarmLED_Red.DefaultCellStyle = dataGridViewCellStyle1;
             this.Event_AlarmLED_Red.HeaderText = "Red";
             this.Event_AlarmLED_Red.Name = "Event_AlarmLED_Red";
             // 
@@ -339,7 +339,6 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "FormAlarmEventSet";
             this.Text = "Alarm Event Set ";
-            this.Load += new System.EventHandler(this.FormAlarmEventSet_Load);
             this.gbAlarmSetting.ResumeLayout(false);
             this.spcAlarmSetting.Panel1.ResumeLayout(false);
             this.spcAlarmSetting.Panel2.ResumeLayout(false);

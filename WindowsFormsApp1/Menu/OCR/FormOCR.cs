@@ -57,10 +57,5 @@ namespace Adam.Menu.OCR
             }
 
         }
-
-        private void FormOCR_Validated(object sender, EventArgs e)
-        {
-
-        }
     }
 }
