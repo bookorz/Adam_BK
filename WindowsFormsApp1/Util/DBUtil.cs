@@ -109,5 +109,36 @@ namespace Adam.Util
             return affectLines;
         }
 
+        /// <summary>
+        /// 取得 MySqlDataTable
+        /// </summary>
+        /// <param name="sql">SQL</param>
+        /// <param name="parameters">參數</param>
+        /// <returns></returns>
+        public DataTable GetDataTable(string sql, Dictionary<string, object> parameters)
+        {
+            DataTable dt = new DataTable();
+            try
+            {
+                //sql = "SELECT * FROM list_item";
+                open_Conn();
+                MySqlCommand command = new MySqlCommand(sql, Connection_);
+                // set parameters
+                foreach (KeyValuePair<string, object> param in parameters)
+                {
+                    command.Parameters.AddWithValue(param.Key, param.Value);
+                }
+                //get query result
+                MySqlDataReader rs = command.ExecuteReader();
+                dt.Load(rs);
+                close_Conn();
+            }
+            catch (Exception e)
+            {
+                throw new Exception(e.ToString());
+            }
+            return dt;
+        }
+
     }
 }
