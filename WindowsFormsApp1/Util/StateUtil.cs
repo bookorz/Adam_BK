@@ -41,11 +41,58 @@ namespace Adam.Util
                 case "Robot02":
                     robot2.State = msg;
                     break;
+                case "Aligner01":
+                    aligner1.State = msg;
+                    break;
+                case "Aligner02":
+                    aligner2.State = msg;
+                    break;
             }
         }
+        public static void UpdateError(string device, string msg)
+        {
+            switch (device)
+            {
+                case "Robot01":
+                    break;
+                case "Robot02":
+                    break;
+                case "Aligner01":
+                    aligner1.Error = msg;
+                    break;
+                case "Aligner02":
+                    aligner2.Error = msg;
+                    break;
+            }
+        }
+        
+
+        //public static void UpdateDeviceState(string device, string state)
+        //{
+        //    RobotState robot = null;
+        //    switch (device)
+        //    {
+        //        case "Robot01":
+        //            robot = robot1;
+        //            break;
+        //        case "Robot02":
+        //            robot = robot2;
+        //            break;
+        //        case "Aligner01":
+        //            aligner1.State = msg;
+        //            break;
+        //        case "Aligner02":
+        //            aligner2.State = msg;
+        //            break;
+        //        default:
+        //            return;
+        //    }
+        //}
+
         public static void UpdateRIO(string device, string msg)
         {
             RobotState robot = null;
+            AlignerState aligner = null;
             switch (device)
             {
                 case "Robot01":
@@ -53,6 +100,12 @@ namespace Adam.Util
                     break;
                 case "Robot02":
                     robot = robot2;
+                    break;
+                case "Aligner01":
+                    aligner = aligner1;
+                    break;
+                case "Aligner02":
+                    aligner = aligner2;
                     break;
                 default:
                     return;
@@ -64,12 +117,14 @@ namespace Adam.Util
             {
                 case "004":
                     robot.Vacuum_R = result[1];
+                    aligner.Vacuum = result[1];
                     break;
                 case "005":
                     robot.Vacuum_L = result[1];
                     break;
                 case "008":
                     robot.Present_R = result[1];
+                    aligner.Present = result[1];
                     break;
                 case "009":
                     robot.Present_L = result[1];
@@ -85,6 +140,12 @@ namespace Adam.Util
                     break;
                 case "Robot02":
                     robot2.Speed = msg;
+                    break;
+                case "Aligner01":
+                    aligner1.Speed = msg;
+                    break;
+                case "Aligner02":
+                    aligner2.Speed = msg;
                     break;
             }
         }
@@ -140,6 +201,8 @@ namespace Adam.Util
         string _vacuum;
         string _speed;
         string _mode;
+        string _servo;
+        string _error;
         public AlignerState(string name)
         {
             this.Name = name;
@@ -149,6 +212,8 @@ namespace Adam.Util
             this.Vacuum = "";
             this.Speed = "";
             this.Mode = "";
+            this.Servo = "";
+            this.Error = "";
         }
         public string Name { get => _name; set => _name = value; }
         public string Status { get => _status; set => _status = value; }
@@ -157,6 +222,8 @@ namespace Adam.Util
         public string Vacuum { get => _vacuum; set => _vacuum = value; }
         public string Speed { get => _speed; set => _speed = value; }
         public string Mode { get => _mode; set => _mode = value; }
+        public string Servo { get => _servo; set => _servo = value; }
+        public string Error { get => _error; set => _error = value; }
     }
     class LoadPortState
     {

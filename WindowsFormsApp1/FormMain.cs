@@ -347,7 +347,8 @@ namespace Adam
                                 case Transaction.Command.AlignerType.GetStatus:
                                 case Transaction.Command.AlignerType.GetSpeed:
                                 case Transaction.Command.AlignerType.GetRIO:
-                                    ManualAlignerStatusUpdate.UpdateGUIInfo(Txn.Method, Node.Name, Msg.Value);//update 手動功能畫面
+                                case Transaction.Command.AlignerType.GetError:
+                                    ManualAlignerStatusUpdate.UpdateGUIInfo(Txn, Node.Name, Msg.Value);//update 手動功能畫面
                                     break;
                             }
                             break;
@@ -407,7 +408,7 @@ namespace Adam
                     ManualRobotStatusUpdate.UpdateGUIInfo(Txn, Node.Name, Msg.Value);//update 手動功能畫面
                     break;
                 case "Aligner":
-                    ManualAlignerStatusUpdate.UpdateGUIInfo(Txn.Method, Node.Name, Msg.Value);//update 手動功能畫面
+                    ManualAlignerStatusUpdate.UpdateGUIInfo(Txn, Node.Name, Msg.Value);//update 手動功能畫面
                     break;
             }
 
@@ -458,6 +459,17 @@ namespace Adam
         {
             logger.Debug("On_Node_State_Changed");
             NodeStatusUpdate.UpdateNodeState(Node.Name, Status);
+            switch (Node.Name)
+            {
+                case "Robot01":
+                case "Robot02":
+                    ManualRobotStatusUpdate.UpdateGUIStatus(Node.Name, Status);//update 手動功能畫面
+                    break;
+                case "Aligner01":
+                case "Aligner02":
+                    ManualAlignerStatusUpdate.UpdateGUIStatus(Node.Name, Status);//update 手動功能畫面
+                    break;
+            }
         }
 
         public void On_Controller_State_Changed(string Device_ID, string Status)

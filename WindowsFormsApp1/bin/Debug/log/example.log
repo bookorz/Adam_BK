@@ -11260,3 +11260,39 @@
 2018-05-31 13:09:08,876 [1] DEBUG TransferControl.Engine.RouteControl - RobotController01 Connection_Error
 2018-05-31 13:09:08,879 [1] DEBUG Adam.FormMain - On_Controller_State_Changed
 2018-05-31 13:09:08,879 [1] DEBUG TransferControl.Controller.DeviceController - RobotController01 Send:$1GET:RIO__:004 Wafer:
+2018-05-31 14:54:38,991 [1] DEBUG TransferControl.Engine.RouteControl - RobotController01 Connection_Error
+2018-05-31 14:54:39,030 [1] DEBUG Adam.FormMain - On_Controller_State_Changed
+2018-05-31 14:54:39,030 [1] DEBUG TransferControl.Controller.DeviceController - RobotController01 Send:$1GET:STS__ Wafer:
+2018-05-31 14:54:39,049 [1] DEBUG TransferControl.Engine.RouteControl - RobotController01 Connection_Error
+2018-05-31 14:54:39,051 [1] DEBUG Adam.FormMain - On_Controller_State_Changed
+2018-05-31 14:54:39,051 [1] DEBUG TransferControl.Controller.DeviceController - RobotController01 Send:$1GET:SP___ Wafer:
+2018-05-31 14:54:39,069 [1] DEBUG TransferControl.Engine.RouteControl - RobotController01 Connection_Error
+2018-05-31 14:54:39,071 [1] DEBUG Adam.FormMain - On_Controller_State_Changed
+2018-05-31 14:54:39,071 [1] DEBUG TransferControl.Controller.DeviceController - RobotController01 Send:$1GET:RIO__:004 Wafer:
+2018-05-31 16:22:00,235 [1] DEBUG TransferControl.Engine.RouteControl - RobotController01 Connection_Error
+2018-05-31 16:22:00,325 [1] DEBUG Adam.FormMain - On_Controller_State_Changed
+2018-05-31 16:22:00,325 [1] DEBUG TransferControl.Controller.DeviceController - RobotController01 Send:$1GET:STS__ Wafer:
+2018-05-31 16:22:00,345 [1] DEBUG TransferControl.Engine.RouteControl - RobotController01 Connection_Error
+2018-05-31 16:22:00,354 [1] DEBUG Adam.FormMain - On_Controller_State_Changed
+2018-05-31 16:22:00,354 [1] DEBUG TransferControl.Controller.DeviceController - RobotController01 Send:$1GET:SP___ Wafer:
+2018-05-31 16:22:00,365 [1] DEBUG TransferControl.Engine.RouteControl - RobotController01 Connection_Error
+2018-05-31 16:22:00,374 [1] DEBUG Adam.FormMain - On_Controller_State_Changed
+2018-05-31 16:22:00,374 [1] DEBUG TransferControl.Controller.DeviceController - RobotController01 Send:$1GET:RIO__:004 Wafer:
+2018-05-31 16:32:08,887 [1] DEBUG TransferControl.Engine.RouteControl - RobotController01 Connection_Error
+2018-05-31 16:32:08,922 [1] DEBUG Adam.FormMain - On_Controller_State_Changed
+2018-05-31 16:32:08,922 [1] DEBUG TransferControl.Controller.DeviceController - RobotController01 Send:$1GET:STS__ Wafer:
+2018-05-31 16:32:08,934 [1] DEBUG TransferControl.Engine.RouteControl - RobotController01 Connection_Error
+2018-05-31 16:32:08,942 [1] DEBUG Adam.FormMain - On_Controller_State_Changed
+2018-05-31 16:32:08,942 [1] DEBUG TransferControl.Controller.DeviceController - RobotController01 Send:$1GET:SP___ Wafer:
+2018-05-31 16:32:08,955 [1] DEBUG TransferControl.Engine.RouteControl - RobotController01 Connection_Error
+2018-05-31 16:32:08,955 [1] DEBUG Adam.FormMain - On_Controller_State_Changed
+2018-05-31 16:32:08,955 [1] DEBUG TransferControl.Controller.DeviceController - RobotController01 Send:$1GET:RIO__:004 Wafer:
+2018-05-31 16:32:44,403 [1] DEBUG TransferControl.Engine.RouteControl - RobotController01 Connection_Error
+2018-05-31 16:32:44,432 [1] DEBUG Adam.FormMain - On_Controller_State_Changed
+2018-05-31 16:32:44,432 [1] DEBUG TransferControl.Controller.DeviceController - RobotController01 Send:$1GET:STS__ Wafer:
+2018-05-31 16:32:44,444 [1] DEBUG TransferControl.Engine.RouteControl - RobotController01 Connection_Error
+2018-05-31 16:32:44,451 [1] DEBUG Adam.FormMain - On_Controller_State_Changed
+2018-05-31 16:32:44,451 [1] DEBUG TransferControl.Controller.DeviceController - RobotController01 Send:$1GET:SP___ Wafer:
+2018-05-31 16:32:44,464 [1] DEBUG TransferControl.Engine.RouteControl - RobotController01 Connection_Error
+2018-05-31 16:32:44,464 [1] DEBUG Adam.FormMain - On_Controller_State_Changed
+2018-05-31 16:32:44,464 [1] DEBUG TransferControl.Controller.DeviceController - RobotController01 Send:$1GET:RIO__:004 Wafer:

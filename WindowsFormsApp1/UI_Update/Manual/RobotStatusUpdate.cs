@@ -202,5 +202,28 @@ namespace Adam.UI_Update.Manual
                 tbRLVacuSolenoid.BackColor = color;
             }
         }
+
+        public static void UpdateGUIStatus(string name, string status)
+        {
+            StateUtil.Init();
+            RobotState robot = StateUtil.GetDeviceState(name) != null ? (RobotState)StateUtil.GetDeviceState(name) : null;
+            Form form = Application.OpenForms["FormManual"];
+            if (form == null || robot == null)
+            {
+                return;
+            }
+            //update robot status           
+            Control tbRStatus = form.Controls.Find("tbRStatus", true).FirstOrDefault() as Control;
+            tbRStatus.Text = status;
+            switch (status)
+            {
+                case "RUN":
+                    tbRStatus.BackColor = Color.Lime;
+                    break;
+                case "IDLE":
+                    tbRStatus.BackColor = Color.Yellow;
+                    break;
+            }
+        }
     }
 }

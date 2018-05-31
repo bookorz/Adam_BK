@@ -27,8 +27,7 @@ namespace GUI
         private void FormManual_Load(object sender, EventArgs e)
         {
             Initialize();
-            if (tbcManual.SelectedTab.Text.Equals("Robot"))
-                setRobotStatus();
+            Update_Manual_Status();
         }
 
         public void Initialize()
@@ -472,7 +471,7 @@ namespace GUI
             }
             this.Enabled = false;
             this.Cursor = Cursors.WaitCursor;
-            setRobotStatus();
+            Update_Manual_Status();
         }
         private void setRobotStatus()
         {
@@ -513,18 +512,59 @@ namespace GUI
         }
         private void setAlignerStatus()
         {
+            Node aligner1 = NodeManagement.Get("Aligner01");
+            Node aligner2 = NodeManagement.Get("Aligner02");
+            Transaction[] txns = new Transaction[4];
+            txns[0] = new Transaction();
+            txns[0].Method = Transaction.Command.AlignerType.GetStatus;
 
+            txns[1] = new Transaction();
+            txns[1].Method = Transaction.Command.AlignerType.GetSpeed;
+
+            txns[2] = new Transaction();
+            txns[2].Method = Transaction.Command.AlignerType.GetRIO;
+            txns[2].Value = "4";// 4 Hold Status 回饋 Wafer/ Panel 保留狀態
+
+            txns[3] = new Transaction();
+            txns[3].Method = Transaction.Command.AlignerType.GetError;
+            txns[3].Value = "00";// 履歷號碼  2 位數  10 進位, 00最新
+
+            foreach (Transaction txn in txns)
+            {
+                if (!txn.Method.Equals(""))
+                {
+                    txn.FormName = "FormManual";
+                    aligner1.SendCommand(txn);
+                    aligner2.SendCommand(txn);
+                }
+                else
+                {
+                    MessageBox.Show("Command is empty!");
+                }
+            }
         }
         
         private void FormManual_EnabledChanged(object sender, EventArgs e)
         {
-            if (tbcManual.SelectedTab.Text.Equals("Robot"))
-                setRobotStatus();
+            Update_Manual_Status();
         }
 
         private void rb_CheckedChanged(object sender, EventArgs e)
         {
-            setRobotStatus();
+            Update_Manual_Status();
+        }
+
+        private void tbcManual_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            Update_Manual_Status();
+        }
+
+        private void Update_Manual_Status()
+        {
+            if (tbcManual.SelectedTab.Text.Equals("Robot"))
+                setRobotStatus();
+            if (tbcManual.SelectedTab.Text.Equals("Aligner"))
+                setAlignerStatus();
         }
     }
 }
