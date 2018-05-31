@@ -292,59 +292,64 @@ namespace Adam
         public void On_Command_Excuted(Node Node, Transaction Txn, ReturnMessage Msg)
         {
             logger.Debug("On_Command_Excuted");
-
-            switch (Node.Type)
+            Transaction txn = new Transaction();
+            switch (Txn.FormName)
             {
-                case "LoadPort":
-                    ManualPortStatusUpdate.UpdateLog(Node.Name, Msg.Command);
-                    switch (Txn.Method)
+                case "FormManual":
+                    switch (Node.Type)
                     {
-                        case Transaction.Command.LoadPortType.ReadVersion:
-                            ManualPortStatusUpdate.UpdateVersion(Node.Name, Msg.Value);
-                            break;
-                        case Transaction.Command.LoadPortType.GetLED:
-                            ManualPortStatusUpdate.UpdateLED(Node.Name, Msg.Value);
-                            break;
-                        case Transaction.Command.LoadPortType.ReadStatus:
-                            ManualPortStatusUpdate.UpdateStatus(Node.Name, Msg.Value);
-                            break;
-                        case Transaction.Command.LoadPortType.GetCount:
+                        case "LoadPort":
+                            ManualPortStatusUpdate.UpdateLog(Node.Name, Msg.Command);
+                            switch (Txn.Method)
+                            {
+                                case Transaction.Command.LoadPortType.ReadVersion:
+                                    ManualPortStatusUpdate.UpdateVersion(Node.Name, Msg.Value);
+                                    break;
+                                case Transaction.Command.LoadPortType.GetLED:
+                                    ManualPortStatusUpdate.UpdateLED(Node.Name, Msg.Value);
+                                    break;
+                                case Transaction.Command.LoadPortType.ReadStatus:
+                                    ManualPortStatusUpdate.UpdateStatus(Node.Name, Msg.Value);
+                                    break;
+                                case Transaction.Command.LoadPortType.GetCount:
 
+                                    break;
+                                case Transaction.Command.LoadPortType.GetMapping:
+                                    ManualPortStatusUpdate.UpdateMapping(Node.Name, Msg.Value);
+                                    break;
+                            }
                             break;
-                        case Transaction.Command.LoadPortType.GetMapping:
-                            ManualPortStatusUpdate.UpdateMapping(Node.Name, Msg.Value);
+                        case "OCR":
+                            switch (Txn.Method)
+                            {
+                                case Transaction.Command.OCRType.GetOnline:
+                                    OCRUpdate.UpdateOCRStatus(Node.Name, Msg.Value);
+                                    break;
+                            }
                             break;
-                    }
-                    break;
-                case "OCR":
-                    switch (Txn.Method)
-                    {
-                        case Transaction.Command.OCRType.GetOnline:
-                            OCRUpdate.UpdateOCRStatus(Node.Name, Msg.Value);
+                        case "Robot":
+                            switch (Txn.Method)
+                            {
+                                case Transaction.Command.RobotType.RobotSpeed:
+                                case Transaction.Command.RobotType.RobotMode:
+                                case Transaction.Command.RobotType.GetStatus:
+                                case Transaction.Command.RobotType.GetSpeed:
+                                case Transaction.Command.RobotType.GetRIO:
+                                    ManualRobotStatusUpdate.UpdateGUIInfo(Txn.Method, Node.Name, Msg.Value);//update 手動功能畫面
+                                    break;
+                            }
                             break;
-                    }
-                    break;
-                case "Robot":
-                    switch (Txn.Method)
-                    {
-                        case Transaction.Command.RobotType.RobotSpeed:
-                        case Transaction.Command.RobotType.RobotMode:
-                        case Transaction.Command.RobotType.GetStatus:
-                        case Transaction.Command.RobotType.GetSpeed:
-                        case Transaction.Command.RobotType.GetRIO:
-                            ManualRobotStatusUpdate.UpdateGUIInfo(Txn.Method, Node.Name, Msg.Value);//update 手動功能畫面
-                            break;
-                    }
-                    break;
-                case "Aligner":
-                    switch (Txn.Method)
-                    {
-                        case Transaction.Command.AlignerType.AlignerSpeed:
-                        case Transaction.Command.AlignerType.AlignerMode:
-                        case Transaction.Command.AlignerType.GetStatus:
-                        case Transaction.Command.AlignerType.GetSpeed:
-                        case Transaction.Command.AlignerType.GetRIO:
-                            ManualAlignerStatusUpdate.UpdateGUIInfo(Txn.Method, Node.Name, Msg.Value);//update 手動功能畫面
+                        case "Aligner":
+                            switch (Txn.Method)
+                            {
+                                case Transaction.Command.AlignerType.AlignerSpeed:
+                                case Transaction.Command.AlignerType.AlignerMode:
+                                case Transaction.Command.AlignerType.GetStatus:
+                                case Transaction.Command.AlignerType.GetSpeed:
+                                case Transaction.Command.AlignerType.GetRIO:
+                                    ManualAlignerStatusUpdate.UpdateGUIInfo(Txn.Method, Node.Name, Msg.Value);//update 手動功能畫面
+                                    break;
+                            }
                             break;
                     }
                     break;
@@ -354,19 +359,23 @@ namespace Adam
         public void On_Command_Error(Node Node, Transaction Txn, ReturnMessage Msg)
         {
             logger.Debug("On_Command_Error");
-            switch (Node.Type)
+            switch (Txn.FormName)
             {
-                case "LoadPort":
-                    ManualPortStatusUpdate.UpdateLog(Node.Name, Msg.Command);
-                    break;
-                case "Robot":
-                    MessageBox.Show(Node.Name + " " + Msg.Command + " error:" + Msg.Value, "Command Error");
-                    break;
-                case "Aligner":
-                    MessageBox.Show(Node.Name + " " + Msg.Command + " error:" + Msg.Value, "Command Error");
+                case "FormManual":
+                    switch (Node.Type)
+                    {
+                        case "LoadPort":
+                            ManualPortStatusUpdate.UpdateLog(Node.Name, Msg.Command);
+                            break;
+                        case "Robot":
+                            MessageBox.Show(Node.Name + " " + Msg.Command + " error:" + Msg.Value, "Command Error");
+                            break;
+                        case "Aligner":
+                            MessageBox.Show(Node.Name + " " + Msg.Command + " error:" + Msg.Value, "Command Error");
+                            break;
+                    }
                     break;
             }
-
         }
 
         public void On_Command_Finished(Node Node, Transaction Txn, ReturnMessage Msg)
@@ -407,16 +416,21 @@ namespace Adam
         public void On_Command_TimeOut(Node Node, Transaction Txn)
         {
             logger.Debug("On_Command_TimeOut");
-            switch (Node.Type)
+            switch (Txn.FormName)
             {
-                case "LoadPort":
-                    ManualPortStatusUpdate.UpdateLog(Node.Name, Txn.CommandEncodeStr + " Timeout!");
-                    break;
-                case "Robot":
-                    MessageBox.Show(Node.Name + " " + Txn.CommandEncodeStr + " Timeout!" , "Command Timeout");
-                    break;
-                case "Aligner":
-                    MessageBox.Show(Node.Name + " " + Txn.CommandEncodeStr + " Timeout!" , "Command Timeout");
+                case "FormManual":
+                    switch (Node.Type)
+                    {
+                        case "LoadPort":
+                            ManualPortStatusUpdate.UpdateLog(Node.Name, Txn.CommandEncodeStr + " Timeout!");
+                            break;
+                        case "Robot":
+                            MessageBox.Show(Node.Name + " " + Txn.CommandEncodeStr + " Timeout!", "Command Timeout");
+                            break;
+                        case "Aligner":
+                            MessageBox.Show(Node.Name + " " + Txn.CommandEncodeStr + " Timeout!", "Command Timeout");
+                            break;
+                    }
                     break;
             }
         }

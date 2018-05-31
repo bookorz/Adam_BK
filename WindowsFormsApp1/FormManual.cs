@@ -46,6 +46,7 @@ namespace GUI
         {
             Node port = NodeManagement.Get(Cb_LoadPortSelect.Text);
             Transaction txn = new Transaction();
+            txn.FormName = "FormManual";
             if (port == null)
             {
                 MessageBox.Show(Cb_LoadPortSelect.Text + " can't found!");
@@ -222,6 +223,7 @@ namespace GUI
             Node aligner = NodeManagement.Get(nodeName);
             Transaction[] txns = new Transaction[1];
             txns[0] = new Transaction();
+            txns[0].FormName = "FormManual";
             if (aligner == null)
             {
                 MessageBox.Show(nodeName + " can't found!");
@@ -317,6 +319,7 @@ namespace GUI
             Node robot = NodeManagement.Get(nodeName);
             Transaction[] txns = new Transaction[1];
             txns[0] = new Transaction();
+            txns[0].FormName = "FormManual";
             switch (btn.Name)
             {
                 case "btnRConn":
