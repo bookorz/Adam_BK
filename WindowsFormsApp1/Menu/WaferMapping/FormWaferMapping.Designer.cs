@@ -1229,6 +1229,7 @@
             this.ClientSize = new System.Drawing.Size(1620, 760);
             this.Controls.Add(this.groupBox11);
             this.Name = "FormWaferMapping";
+            this.Load += new System.EventHandler(this.FormWaferMapping_Load);
             this.groupBox11.ResumeLayout(false);
             this.tableLayoutPanel12.ResumeLayout(false);
             this.tableLayoutPanel22.ResumeLayout(false);

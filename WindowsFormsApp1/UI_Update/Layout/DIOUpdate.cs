@@ -23,18 +23,19 @@ namespace Adam.UI_Update.Layout
                 if (form == null)
                     return;
 
+                Button Signal = form.Controls.Find(Parameter + "_Signal", true).FirstOrDefault() as Button;
+               
+                if (Signal == null)
+                    return;
 
-
-                if (form.InvokeRequired)
+                if (Signal.InvokeRequired)
                 {
                     UpdateDIO ph = new UpdateDIO(UpdateDIOStatus);
-                    form.BeginInvoke(ph, Parameter, Value);
+                    Signal.BeginInvoke(ph, Parameter, Value);
                 }
                 else
                 {
-                    Button Signal = form.Controls.Find(Parameter + "_Signal", true).FirstOrDefault() as Button;
-                    if (Signal == null)
-                        return;
+
                     switch (Parameter)
                     {
                         case "Red":
@@ -58,6 +59,17 @@ namespace Adam.UI_Update.Layout
                                         Signal.BackColor = Color.Blue;
                                         break;
                                 }
+                            }
+                            else
+                            {
+                                Signal.BackColor = Color.Silver;
+                            }
+                            break;
+                        case "Buzzer1":
+                        case "Buzzer2":
+                            if (Value.ToUpper().Equals("TRUE"))
+                            {
+                                Signal.BackColor = Color.Yellow;
                             }
                             else
                             {

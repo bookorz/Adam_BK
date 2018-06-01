@@ -24,16 +24,18 @@ using System.Threading;
 using Adam.UI_Update.Authority;
 using DIOControl;
 using Adam.UI_Update.Layout;
+using Adam.UI_Update.Alarm;
 
 namespace Adam
 {
-    public partial class FormMain : Form, IEngineReport , IDIOTriggerReport
+    public partial class FormMain : Form, IEngineReport, IDIOTriggerReport
     {
         public static RouteControl RouteCtrl;
         public static DIO DIO;
+        public static AlarmMapping AlmMapping;
         private static readonly ILog logger = LogManager.GetLogger(typeof(FormMain));
         object CurrentSelected = null;
-
+        AlarmFrom alarmFrom = new AlarmFrom();
         private Menu.Monitoring.FormMonitoring formMonitoring = new Menu.Monitoring.FormMonitoring();
         private Menu.Communications.FormCommunications formCommunications = new Menu.Communications.FormCommunications();
         private Menu.WaferMapping.FormWaferMapping formWafer = new Menu.WaferMapping.FormWaferMapping();
@@ -48,56 +50,8 @@ namespace Adam
             Initialize();
             RouteCtrl = new RouteControl(this);
             DIO = new DIO(this);
-            //ts.SelectedIndex = 0;
-            //t2.Text = "CURRENT USER NAME";
-            //t1.Text = "CURRENT_ID";
-            //t3.SelectedIndex = 3;
-            //t4.Text = "***";
-            //t5.Text = "***";
-            //ts.Enabled = false;
-            //t4.Enabled = true;
-            //t5.Enabled = true;
-            ////for (int i = 0; i < 100; i++)
-            ////{
-            ////    this.dg1.Rows.Add("", "", "", "", "");
-            ////}
-            ////dg1.Rows[60].Selected = true;
-            //tabControl3.DrawItem += new DrawItemEventHandler(tabControl2_DrawItem);
-            //tabControl3.TabPages.Remove(tp_bk);//隱藏目前沒使用到的頁面
-            //cb17.SelectedIndex = 0;
-            //cb18.SelectedIndex = 0;
-            //cb19.SelectedIndex = 0;
-            //cb20.SelectedIndex = 0;
-            //cb21.SelectedIndex = 0;
-            //cb22.SelectedIndex = 0;
-            //cb23.SelectedIndex = 0;
-            //cb24.SelectedIndex = 0;
-            //cb25.SelectedIndex = 0;
-            //for (double i = 360; i > 0; i = i - 1)
-            //{
-            //    dd1.Items.Add(i);
-            //    dd2.Items.Add(i);
-            //}
-            //dd1.Items.Add("Offset");
-            //dd2.Items.Add("Offset");
-            //dd1.SelectedIndex = 360;
-            //dd2.SelectedIndex = 360;
-            //cba1.SelectedIndex = 0;
-            //cba2.SelectedIndex = 0;
-
-            //dgDevice.Rows.Add("Robot", "Kawasaki", 1, "", "Robot1", true);
-            //dgDevice.Rows.Add("Aligner", "Sanwa", 1, "$1", "Aligner1", true);
-            //dgDevice.Rows.Add("Aligner", "Sanwa", 2, "$2", "Aligner2", true);
-            //dgDevice.Rows.Add("Load Port", "TDK", 1, "", "LoadPort01", true);
-            //dgDevice.Rows.Add("Load Port", "TDK", 2, "", "LoadPort02", true);
-            //dgDevice.Rows.Add("Load Port", "TDK", 3, "", "LoadPort03", true);
-            //dgDevice.Rows.Add("DIO", "Advantech", 1, "", "DIO1", true);
-            //dgDevice.Rows.Add("DIO", "Advantech", 2, "", "DIO2", true);
-
-            ////vSBRobotStatus.Maximum = pbRobotState.Width - pnlRobotState.Width + vSBRobotStatus.Width; 水平
-            //vSBRobotStatus.Maximum = pbRobotState.Height - pnlRobotState.Height + 40;//+ vSBRobotStatus.Height
-            //vSBAlignerStatus.Maximum = pbAlignerState.Height - pnlAlignerState.Height + 40;// + vSBAlignerStatus.Height
-            //vSBPortStatus.Maximum = pbPortState.Height - pnlPortState.Height + 40;//+ vSBPortStatus.Height
+            AlmMapping = new AlarmMapping();
+           
         }
 
         private void Initialize()
@@ -127,7 +81,11 @@ namespace Adam
                     ((Form)ctrlForm[i]).TopLevel = false;
                     tbcMian.TabPages[i].Controls.Add(((Form)ctrlForm[i]));
                     ((Form)ctrlForm[i]).Show();
+                    tbcMian.SelectTab(i);
                 }
+                tbcMian.SelectTab(0);
+                alarmFrom.Show();
+                alarmFrom.Visible = false;
             }
             catch (Exception ex)
             {
@@ -279,7 +237,7 @@ namespace Adam
 
         private void toolStripMenuItem1_Click(object sender, EventArgs e)
         {
-            SorterControl.AlarmFrom alarmFrom = new SorterControl.AlarmFrom();
+            AlarmFrom alarmFrom = new AlarmFrom();
             alarmFrom.Text = "MessageFrom";
             alarmFrom.BackColor = Color.Blue;
             alarmFrom.ResetAll_bt.Enabled = false;
@@ -288,8 +246,8 @@ namespace Adam
 
         private void aAAToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            SorterControl.AlarmFrom alarmFrom = new SorterControl.AlarmFrom();
-            alarmFrom.ShowDialog();
+
+            alarmFrom.Visible = true;
         }
 
         public void On_Command_Excuted(Node Node, Transaction Txn, ReturnMessage Msg)
@@ -363,23 +321,32 @@ namespace Adam
         public void On_Command_Error(Node Node, Transaction Txn, ReturnMessage Msg)
         {
             logger.Debug("On_Command_Error");
-            switch (Txn.FormName)
+            AlarmInfo CurrentAlarm = new AlarmInfo();
+            CurrentAlarm.NodeName = Node.Name;
+            CurrentAlarm.AlarmCode = Msg.Value;
+            try
             {
-                case "FormManual":
-                    switch (Node.Type)
-                    {
-                        case "LoadPort":
-                            ManualPortStatusUpdate.UpdateLog(Node.Name, Msg.Command);
-                            break;
-                        case "Robot":
-                            MessageBox.Show(Node.Name + " " + Msg.Command + " error:" + Msg.Value, "Command Error");
-                            break;
-                        case "Aligner":
-                            MessageBox.Show(Node.Name + " " + Msg.Command + " error:" + Msg.Value, "Command Error");
-                            break;
-                    }
-                    break;
+
+                AlarmMessage Detail = AlmMapping.Get(Node.Brand, Node.Type, CurrentAlarm.AlarmCode);
+
+                CurrentAlarm.SystemAlarmCode = Detail.CodeID;
+                CurrentAlarm.Desc = Detail.Code_Cause;
+                CurrentAlarm.EngDesc = Detail.Code_Cause_English;
             }
+            catch (Exception e)
+            {
+                CurrentAlarm.Desc = "未定義";
+                logger.Error(Node.Controller + "-" + Node.AdrNo + "(GetAlarmMessage)" + e.Message + "\n" + e.StackTrace);
+            }
+            CurrentAlarm.TimeStamp = DateTime.Now.ToString("yyyy/MM/dd HH:mm:ss:fff");
+
+            AlarmManagement.Add(CurrentAlarm);
+            Form form = Application.OpenForms["AlarmFrom"];
+
+            alarmFrom.Show();
+            alarmFrom.BringToFront();
+            //AlarmUpdate.UpdateAlarmList(AlarmManagement.GetAll());
+            //AlarmUpdate.UpdateAlarmHistory(AlarmManagement.GetHistory());
         }
 
         public void On_Command_Finished(Node Node, Transaction Txn, ReturnMessage Msg)
@@ -420,41 +387,63 @@ namespace Adam
         public void On_Command_TimeOut(Node Node, Transaction Txn)
         {
             logger.Debug("On_Command_TimeOut");
-            switch (Txn.FormName)
-            {
-                case "FormManual":
-                    switch (Node.Type)
-                    {
-                        case "LoadPort":
-                            ManualPortStatusUpdate.UpdateLog(Node.Name, Txn.CommandEncodeStr + " Timeout!");
-                            break;
-                        case "Robot":
-                            MessageBox.Show(Node.Name + " " + Txn.CommandEncodeStr + " Timeout!", "Command Timeout");
-                            break;
-                        case "Aligner":
-                            MessageBox.Show(Node.Name + " " + Txn.CommandEncodeStr + " Timeout!", "Command Timeout");
-                            break;
-                    }
-                    break;
-            }
+            AlarmInfo CurrentAlarm = new AlarmInfo();
+            CurrentAlarm.NodeName = Node.Name.Replace("Status", "");
+            CurrentAlarm.AlarmCode = "00000001";
+            CurrentAlarm.SystemAlarmCode = "FF00000001";
+            CurrentAlarm.Desc = "命令逾時,連線異常";
+            CurrentAlarm.TimeStamp = DateTime.Now.ToString("yyyy/MM/dd HH:mm:ss:fff");
+
+            AlarmManagement.Add(CurrentAlarm);
+            AlarmUpdate.UpdateAlarmList(AlarmManagement.GetAll());
+            AlarmUpdate.UpdateAlarmHistory(AlarmManagement.GetHistory());
         }
 
         public void On_Event_Trigger(Node Node, ReturnMessage Msg)
         {
             logger.Debug("On_Event_Trigger");
-            Transaction txn = new Transaction();
-            switch (Node.Type)
+            if (Msg.Command.Equals("ERROR"))
             {
-                case "LoadPort":
-                    ManualPortStatusUpdate.UpdateLog(Node.Name, Msg.Command);
-                    switch (Msg.Command)
-                    {
-                        case "MANSW":
-                            txn.Method = Transaction.Command.LoadPortType.MappingLoad;
-                            Node.SendCommand(txn);
-                            break;
-                    }
-                    break;
+                Node.InitialComplete = false;
+                logger.Debug("On_Command_Error");
+                AlarmInfo CurrentAlarm = new AlarmInfo();
+                CurrentAlarm.NodeName = Node.Name;
+                CurrentAlarm.AlarmCode = Msg.Value;
+                try
+                {
+
+                    AlarmMessage Detail = AlmMapping.Get(Node.Brand, Node.Type, CurrentAlarm.AlarmCode);
+
+                    CurrentAlarm.SystemAlarmCode = Detail.CodeID;
+                    CurrentAlarm.Desc = Detail.Code_Cause;
+                    CurrentAlarm.EngDesc = Detail.Code_Cause_English;
+                }
+                catch
+                {
+                    CurrentAlarm.Desc = "未定義";
+                }
+                CurrentAlarm.TimeStamp = DateTime.Now.ToString("yyyy/MM/dd HH:mm:ss:fff");
+
+                AlarmManagement.Add(CurrentAlarm);
+                AlarmUpdate.UpdateAlarmList(AlarmManagement.GetAll());
+                AlarmUpdate.UpdateAlarmHistory(AlarmManagement.GetHistory());
+            }
+            else
+            {
+                Transaction txn = new Transaction();
+                switch (Node.Type)
+                {
+                    case "LoadPort":
+                        ManualPortStatusUpdate.UpdateLog(Node.Name, Msg.Command);
+                        switch (Msg.Command)
+                        {
+                            case "MANSW":
+                                txn.Method = Transaction.Command.LoadPortType.MappingLoad;
+                                Node.SendCommand(txn);
+                                break;
+                        }
+                        break;
+                }
             }
         }
 
@@ -493,87 +482,7 @@ namespace Adam
             WaferAssignUpdate.RefreshMapping(Job.Position);
         }
 
-        private void tabControl1_Selected(object sender, TabControlEventArgs e)
-        {
-            //switch (e.TabPage.Text)
-            //{
-            //    case "Status":
-            //        string[] r_status = new string[] { "01010101011111010111101111101011", "01011101011111010111101010101011" };
-            //        string[] a_status = new string[] { "01110101011111010111101010101011", "11010101011111010111101010101011" };
-            //        string[] l_status = new string[] { "111101010?1?2101100?", "1211010101?210?11001", "1111010101?2101100?1", "1111010101?210?11001",
-            //                                           "2111010101?210?11001", "111101?0101210?11001", "1011010101?210?11001", "011101?101210?11001"};
-
-            //        //add robot status
-            //        dgvRstatus.Rows.Clear();
-            //        for (int i = 0; i < r_status.Length; i++)
-            //        {
-            //            DataGridViewRow row = (DataGridViewRow)dgvRstatus.Rows[0].Clone();
-            //            String robot = "Robot" + (i + 1);
-            //            row.Cells[0].Value = robot;
-            //            for (int j = 0; j < r_status[i].Length; j++)
-            //            {
-            //                string status = r_status[i].Substring(j, 1);
-            //                row.Cells[j + 1].Value = status;
-            //                row.Cells[j + 1].Style.BackColor = ConfigUtil.GetStatusColor("Robot", "Sanwa", status);
-            //            }
-            //            dgvRstatus.Rows.Add(row);
-            //        }
-            //        //add aligner status
-            //        dgvAstatus.Rows.Clear();
-            //        for (int i = 0; i < a_status.Length; i++)
-            //        {
-            //            DataGridViewRow row = (DataGridViewRow)dgvAstatus.Rows[0].Clone();
-            //            String robot = "Aligner" + (i + 1);
-            //            row.Cells[0].Value = robot;
-            //            for (int j = 0; j < a_status[i].Length; j++)
-            //            {
-            //                string status = a_status[i].Substring(j, 1);
-            //                row.Cells[j + 1].Value = status;
-            //                row.Cells[j + 1].Style.BackColor = ConfigUtil.GetStatusColor("Aligner", "Sanwa", status);
-            //            }
-            //            dgvAstatus.Rows.Add(row);
-            //        }
-            //        //add load port status        
-            //        dgvLstatus.Rows.Clear();
-            //        for (int i = 0; i < l_status.Length; i++)
-            //        {
-            //            DataGridViewRow row = (DataGridViewRow)dgvLstatus.Rows[0].Clone();
-            //            String robot = "LoadPort" + (i + 1);
-            //            row.Cells[0].Value = robot;
-            //            for (int j = 0; j < l_status[i].Length; j++)
-            //            {
-            //                string status = l_status[i].Substring(j, 1);
-            //                row.Cells[j + 1].Value = status;
-            //                row.Cells[j + 1].Style.BackColor = ConfigUtil.GetStatusColor("LoadPort", "TDK", status);
-            //            }
-            //            dgvLstatus.Rows.Add(row);
-            //        }
-            //        break;
-            //    case "OCR":
-            //        Transaction txn = new Transaction();
-            //        txn.Method = Transaction.Command.OCRType.GetOnline;
-            //        NodeManagement.Get("OCR01").SendCommand(txn);
-            //        break;
-            //    default:
-            //        WaferAssignUpdate.UpdateLoadPortMapping("LoadPort01", "111211111?111110111W11111");
-            //        WaferAssignUpdate.UpdateLoadPortMapping("LoadPort02", "11WW111112111111011110111");
-            //        WaferAssignUpdate.UpdateLoadPortMapping("LoadPort03", "0000000000000000000000000");
-            //        WaferAssignUpdate.UpdateLoadPortMapping("LoadPort04", "0000000000000000000000000");
-            //        WaferAssignUpdate.UpdateLoadPortMapping("LoadPort05", "0000000000000000000000000");
-            //        WaferAssignUpdate.UpdateLoadPortMapping("LoadPort06", "0000000000000000000000000");
-            //        WaferAssignUpdate.UpdateLoadPortMapping("LoadPort07", "0000000000000000000000000");
-            //        WaferAssignUpdate.UpdateLoadPortMapping("LoadPort08", "0000000000000000000000000");
-            //        WaferAssignUpdate.UpdateLoadPortMode("LoadPort01", "LD");
-            //        WaferAssignUpdate.UpdateLoadPortMode("LoadPort02", "LD");
-            //        WaferAssignUpdate.UpdateLoadPortMode("LoadPort03", "LD");
-            //        WaferAssignUpdate.UpdateLoadPortMode("LoadPort04", "LD");
-            //        WaferAssignUpdate.UpdateLoadPortMode("LoadPort05", "UD");
-            //        WaferAssignUpdate.UpdateLoadPortMode("LoadPort06", "UD");
-            //        WaferAssignUpdate.UpdateLoadPortMode("LoadPort07", "UD");
-            //        WaferAssignUpdate.UpdateLoadPortMode("LoadPort08", "UD");
-            //        break;
-            //}
-        }
+        
 
         private void vSBRobotStatus_Scroll(object sender, ScrollEventArgs e)
         {
@@ -590,47 +499,7 @@ namespace Adam
             //pbPortState.Top = -vSBPortStatus.Value;
         }
 
-        //private void OCRButton(object sender, EventArgs e)
-        //{
-        //    Button TriggerBtn = sender as Button;
-        //    Transaction txn = new Transaction();
-        //    switch (TriggerBtn.Name)
-        //    {
-        //        case "OCR01Online_Btn":
-        //            OCR01Online_Btn.Enabled = false;
-        //            OCR01Offline_Btn.Enabled = true;
-        //            txn.Method = Transaction.Command.OCRType.Online;
-        //            NodeManagement.Get("OCR01").SendCommand(txn);
-        //            break;
-        //        case "OCR01Offline_Btn":
-        //            OCR01Online_Btn.Enabled = true;
-        //            OCR01Offline_Btn.Enabled = false;
-        //            txn.Method = Transaction.Command.OCRType.Offline;
-        //            NodeManagement.Get("OCR01").SendCommand(txn);
-        //            break;
-        //        case "OCR01Read_Bt":
-        //            txn.Method = Transaction.Command.OCRType.Read;
-        //            NodeManagement.Get("OCR01").SendCommand(txn);
-        //            break;
-        //        case "OCR02Online_Btn":
-        //            OCR01Online_Btn.Enabled = false;
-        //            OCR01Offline_Btn.Enabled = true;
-        //            txn.Method = Transaction.Command.OCRType.Online;
-        //            NodeManagement.Get("OCR02").SendCommand(txn);
-        //            break;
-        //        case "OCR02Offline_Btn":
-        //            OCR01Online_Btn.Enabled = true;
-        //            OCR01Offline_Btn.Enabled = false;
-        //            txn.Method = Transaction.Command.OCRType.Offline;
-        //            NodeManagement.Get("OCR02").SendCommand(txn);
-        //            break;
-        //        case "OCR02Read_Bt":
-        //            txn.Method = Transaction.Command.OCRType.Read;
-        //            NodeManagement.Get("OCR02").SendCommand(txn);
-        //            break;
-        //    }
-
-        //}
+       
 
         private void tgsConnection_CheckedChanged(object sender, EventArgs e)
         {
@@ -644,7 +513,7 @@ namespace Adam
                 RouteCtrl.DisconnectAll();
                 DIO.Close();
             }
-            
+
         }
 
         private void tgsMode_SW_CheckedChanged(object sender, EventArgs e)
@@ -680,208 +549,9 @@ namespace Adam
             }
         }
 
-        private void Assign_Gv_CellFormatting(object sender, DataGridViewCellFormattingEventArgs e)
-        {
-            switch (e.ColumnIndex)
-            {
-                case 1:
-                    switch (e.Value)
-                    {
-                        case "No wafer":
-                            e.CellStyle.BackColor = Color.Gray;
-                            e.CellStyle.ForeColor = Color.White;
-                            break;
-                        case "Crossed":
-
-                            e.CellStyle.BackColor = Color.Red;
-                            e.CellStyle.ForeColor = Color.White;
-                            break;
-                        case "Undefined":
-                            e.CellStyle.BackColor = Color.Red;
-                            e.CellStyle.ForeColor = Color.White;
-                            break;
-                        case "Double":
-                            e.CellStyle.BackColor = Color.Red;
-                            e.CellStyle.ForeColor = Color.White;
-                            break;
-                        default:
-                            e.CellStyle.BackColor = Color.Green;
-                            e.CellStyle.ForeColor = Color.White;
-                            break;
-
-                    }
-                    break;
-
-            }
-        }
-
-        private void Assign_Gv_MouseClick(object sender, MouseEventArgs e)
-        {
-            if (e.Button == MouseButtons.Right)
-            {
-                ContextMenu m = new ContextMenu();
 
 
-                string PortName = (sender as DataGridView).Name.Replace("Assign_Gv", "");
-                if (NodeManagement.Get(PortName).Mode.Equals("LD"))
-                {
 
-                    CurrentSelected = sender;
-                    foreach (Node eachPort in NodeManagement.GetLoadPortList("UD"))
-                    {
-                        List<MenuItem> tmpAry = new List<MenuItem>();
-                        for (int i = 1; i <= 25; i++)
-                        {
-                            MenuItem tmp;
-                            if (!eachPort.JobList.ContainsKey(i.ToString()))
-                            {
-                                tmp = new MenuItem(eachPort.Name + "-" + i.ToString(), AssignPort);
-
-                            }
-                            else
-                            {
-                                tmp = new MenuItem(eachPort.Name + "-" + i.ToString(), AssignPort);
-                                tmp.Enabled = false;
-                            }
-                            tmpAry.Add(tmp);
-                        }
-                        m.MenuItems.Add(eachPort.Name, tmpAry.ToArray());
-                    }
-
-
-                }
-
-                m.Show((DataGridView)sender, new Point(e.X, e.Y));
-
-            }
-        }
-
-        private void AssignPort(object sender, EventArgs e)
-        {
-            string PortName = (sender as MenuItem).Text.Split('-')[0];
-            string Slot = (sender as MenuItem).Text.Split('-')[1];
-            if ((CurrentSelected as DataGridView).SelectedRows.Count == 0)
-            {
-                MessageBox.Show("請選擇來源Slot");
-            }
-            else if ((CurrentSelected as DataGridView).SelectedRows.Count == 1)
-            {
-                string waferId = (CurrentSelected as DataGridView).SelectedRows[0].Cells["Job_Id"].Value.ToString();
-                string OrgDest = (CurrentSelected as DataGridView).SelectedRows[0].Cells["Destination"].Value.ToString();
-                string OrgDestSlot = (CurrentSelected as DataGridView).SelectedRows[0].Cells["DestinationSlot"].Value.ToString();
-                Job wafer = JobManagement.Get(waferId);
-                if (wafer != null)
-                {
-                    wafer.Destination = PortName;
-                    wafer.DisplayDestination = PortName.Replace("Load", "");
-                    wafer.DestinationSlot = Slot;
-                    wafer.ProcessFlag = false;
-                    wafer.Position = PortName;
-                    if (!OrgDest.Equals(""))
-                    {
-                        NodeManagement.Get(OrgDest).RemoveJob(OrgDestSlot);
-                    }
-                    NodeManagement.Get(PortName).AddJob(Slot, wafer);
-                    (CurrentSelected as DataGridView).Refresh();
-                }
-                else
-                {
-                    MessageBox.Show("找不到此Wafer資料:" + wafer.Job_Id);
-                }
-
-            }
-            else if ((CurrentSelected as DataGridView).SelectedRows.Count > 1)
-            {
-                int StartSlot = Convert.ToInt32(Slot);
-                foreach (DataGridViewRow each in (CurrentSelected as DataGridView).SelectedRows)
-                {
-                    string waferId = each.Cells["Job_Id"].Value.ToString();
-                    string OrgDest = each.Cells["Destination"].Value.ToString();
-                    string OrgDestSlot = each.Cells["DestinationSlot"].Value.ToString();
-                    Job wafer = JobManagement.Get(waferId);
-                    if (wafer != null)
-                    {
-                        while (true)
-                        {
-                            if (NodeManagement.Get(PortName).GetJob(StartSlot.ToString()) == null)
-                            {
-                                wafer.Destination = PortName;
-                                wafer.DisplayDestination = PortName.Replace("Load", "");
-                                wafer.DestinationSlot = StartSlot.ToString();
-                                wafer.Position = PortName;
-                                wafer.ProcessFlag = false;
-                                if (!OrgDest.Equals(""))
-                                {
-                                    NodeManagement.Get(OrgDest).RemoveJob(OrgDestSlot);
-                                }
-                                NodeManagement.Get(PortName).AddJob(StartSlot.ToString(), wafer);
-
-                                break;
-                            }
-                            else
-                            {
-                                StartSlot++;
-                                if (StartSlot > 25)
-                                {
-                                    break;
-                                }
-                            }
-                        }
-                        StartSlot++;
-                        if (StartSlot > 25)
-                        {
-                            break;
-                        }
-                    }
-                }
-                 (CurrentSelected as DataGridView).Refresh();
-            }
-
-        }
-
-        private void State_lb_Click(object sender, MouseEventArgs e)
-        {
-            if (e.Button == MouseButtons.Right)
-            {
-                CurrentSelected = sender;
-                ContextMenu m = new ContextMenu();
-                m.MenuItems.Add(new MenuItem("Change to LD", PortModeChange));
-                m.MenuItems.Add(new MenuItem("Change to UD", PortModeChange));
-                m.Show((Label)sender, new Point(e.X, e.Y));
-            }
-        }
-
-        private void PortModeChange(object sender, EventArgs e)
-        {
-            string Name = (CurrentSelected as Label).Name.Replace("State_lb", "");
-            switch (((MenuItem)sender).Text)
-            {
-                case "Change to LD":
-                    NodeManagement.Get(Name).Mode = "LD";
-                    WaferAssignUpdate.UpdateLoadPortMode(Name, "LD");
-                    break;
-                case "Change to UD":
-                    NodeManagement.Get(Name).Mode = "UD";
-                    WaferAssignUpdate.UpdateLoadPortMode(Name, "UD");
-                    break;
-            }
-
-        }
-
-        private void PortStart_Btn_Click(object sender, EventArgs e)
-        {
-            string PortName = (sender as Button).Name.Replace("_Start_Btn", "");
-            Node port = NodeManagement.Get(PortName);
-            if (port != null)
-            {
-                port.Available = true;
-
-            }
-            else
-            {
-                MessageBox.Show(PortName + " 不存在");
-            }
-        }
 
         public void On_Data_Chnaged(string Parameter, string Value)
         {
@@ -891,6 +561,90 @@ namespace Adam
         public void On_Error_Occurred(string ErrorMsg)
         {
             //斷線 發ALARM
+            logger.Debug("On_Error_Occurred");
+            AlarmInfo CurrentAlarm = new AlarmInfo();
+            CurrentAlarm.NodeName = "DIO";
+            CurrentAlarm.AlarmCode = "00000002";
+            CurrentAlarm.SystemAlarmCode = "FF00000002";
+            CurrentAlarm.Desc = "連線異常";
+            CurrentAlarm.TimeStamp = DateTime.Now.ToString("yyyy/MM/dd HH:mm:ss:fff");
+
+            AlarmManagement.Add(CurrentAlarm);
+            AlarmUpdate.UpdateAlarmList(AlarmManagement.GetAll());
+            AlarmUpdate.UpdateAlarmHistory(AlarmManagement.GetHistory());
         }
+
+
+
+
+
+        private void Signal_MouseClick(object sender, MouseEventArgs e)
+        {
+            switch ((sender as Button).Name)
+            {
+                case "Red_Signal":
+                    if (DIO.GetIO("OUT","Red").ToUpper().Equals("TRUE"))
+                    {
+                        DIO.SetIO("Red", "False");
+                    }
+                    else
+                    {
+                        DIO.SetIO("Red", "True");
+                    }
+                    break;
+                case "Orange_Signal":
+                    if (DIO.GetIO("OUT", "Orange").ToUpper().Equals("TRUE"))
+                    {
+                        DIO.SetIO("Orange", "False");
+                    }
+                    else
+                    {
+                        DIO.SetIO("Orange", "True");
+                    }
+                    break;
+                case "Green_Signal":
+                    if (DIO.GetIO("OUT", "Green").ToUpper().Equals("TRUE"))
+                    {
+                        DIO.SetIO("Green", "False");
+                    }
+                    else
+                    {
+                        DIO.SetIO("Green", "True");
+                    }
+                    break;
+                case "Blue_Signal":
+                    if (DIO.GetIO("OUT", "Blue").ToUpper().Equals("TRUE"))
+                    {
+                        DIO.SetIO("Blue", "False");
+                    }
+                    else
+                    {
+                        DIO.SetIO("Blue", "True");
+                    }
+                    break;
+                case "Buzzer1_Signal":
+                    if (DIO.GetIO("OUT", "Buzzer1").ToUpper().Equals("TRUE"))
+                    {
+                        DIO.SetIO("Buzzer1", "False");
+                    }
+                    else
+                    {
+                        DIO.SetIO("Buzzer1", "True");
+                    }
+                    break;
+                case "Buzzer2_Signal":
+                    if (DIO.GetIO("OUT", "Buzzer2").ToUpper().Equals("TRUE"))
+                    {
+                        DIO.SetIO("Buzzer2", "False");
+                    }
+                    else
+                    {
+                        DIO.SetIO("Buzzer2", "True");
+                    }
+                    break;
+            }
+        }
+
+       
     }
 }

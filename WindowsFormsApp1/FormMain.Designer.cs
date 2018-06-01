@@ -30,7 +30,7 @@ namespace Adam
         {
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormMain));
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             this.splitContainer13 = new System.Windows.Forms.SplitContainer();
             this.groupBox54 = new System.Windows.Forms.GroupBox();
             this.tgsMode_SW = new JCS.ToggleSwitch();
@@ -43,11 +43,13 @@ namespace Adam
             this.label194 = new System.Windows.Forms.Label();
             this.label193 = new System.Windows.Forms.Label();
             this.groupBox5 = new System.Windows.Forms.GroupBox();
+            this.DifferentialPressureAlarm2_Signal = new System.Windows.Forms.Button();
             this.DifferentialPressureAlarm1_Signal = new System.Windows.Forms.Button();
             this.LoadPortVacuum_Signal = new System.Windows.Forms.Button();
             this.SafetyRelay_Signal = new System.Windows.Forms.Button();
             this.IonizerAlarm_Signal = new System.Windows.Forms.Button();
             this.FFU_Signal = new System.Windows.Forms.Button();
+            this.IonizerAir_Signal = new System.Windows.Forms.Button();
             this.Air_Signal = new System.Windows.Forms.Button();
             this.Vacuum_Signal = new System.Windows.Forms.Button();
             this.DoorSwitch_Signal = new System.Windows.Forms.Button();
@@ -67,11 +69,6 @@ namespace Adam
             this.groupBox3 = new System.Windows.Forms.GroupBox();
             this.Conn_gv = new System.Windows.Forms.DataGridView();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
-            this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
-            this.Blue_Signal = new System.Windows.Forms.Panel();
-            this.Red_Signal = new System.Windows.Forms.Panel();
-            this.Orange_Signal = new System.Windows.Forms.Panel();
-            this.Green_Signal = new System.Windows.Forms.Panel();
             this.tbcMian = new System.Windows.Forms.TabControl();
             this.tabMonitor = new System.Windows.Forms.TabPage();
             this.tabComm = new System.Windows.Forms.TabPage();
@@ -110,8 +107,13 @@ namespace Adam
             this.terminalToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.panel3 = new System.Windows.Forms.Panel();
             this.directorySearcher1 = new System.DirectoryServices.DirectorySearcher();
-            this.IonizerAir_Signal = new System.Windows.Forms.Button();
-            this.DifferentialPressureAlarm2_Signal = new System.Windows.Forms.Button();
+            this.Red_Signal = new System.Windows.Forms.Button();
+            this.Orange_Signal = new System.Windows.Forms.Button();
+            this.Green_Signal = new System.Windows.Forms.Button();
+            this.Blue_Signal = new System.Windows.Forms.Button();
+            this.groupBox4 = new System.Windows.Forms.GroupBox();
+            this.Buzzer2_Signal = new System.Windows.Forms.Button();
+            this.Buzzer1_Signal = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer13)).BeginInit();
             this.splitContainer13.Panel1.SuspendLayout();
             this.splitContainer13.Panel2.SuspendLayout();
@@ -125,7 +127,6 @@ namespace Adam
             this.groupBox3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.Conn_gv)).BeginInit();
             this.groupBox2.SuspendLayout();
-            this.tableLayoutPanel2.SuspendLayout();
             this.tbcMian.SuspendLayout();
             this.panel2.SuspendLayout();
             this.panel4.SuspendLayout();
@@ -135,6 +136,7 @@ namespace Adam
             this.contextMenuStrip1.SuspendLayout();
             this.contextMenuStrip4.SuspendLayout();
             this.panel3.SuspendLayout();
+            this.groupBox4.SuspendLayout();
             this.SuspendLayout();
             // 
             // splitContainer13
@@ -248,6 +250,13 @@ namespace Adam
             this.groupBox5.Name = "groupBox5";
             this.groupBox5.TabStop = false;
             // 
+            // DifferentialPressureAlarm2_Signal
+            // 
+            resources.ApplyResources(this.DifferentialPressureAlarm2_Signal, "DifferentialPressureAlarm2_Signal");
+            this.DifferentialPressureAlarm2_Signal.BackColor = System.Drawing.Color.Gray;
+            this.DifferentialPressureAlarm2_Signal.Name = "DifferentialPressureAlarm2_Signal";
+            this.DifferentialPressureAlarm2_Signal.UseVisualStyleBackColor = false;
+            // 
             // DifferentialPressureAlarm1_Signal
             // 
             resources.ApplyResources(this.DifferentialPressureAlarm1_Signal, "DifferentialPressureAlarm1_Signal");
@@ -283,6 +292,13 @@ namespace Adam
             this.FFU_Signal.Name = "FFU_Signal";
             this.FFU_Signal.UseVisualStyleBackColor = false;
             // 
+            // IonizerAir_Signal
+            // 
+            resources.ApplyResources(this.IonizerAir_Signal, "IonizerAir_Signal");
+            this.IonizerAir_Signal.BackColor = System.Drawing.Color.Gray;
+            this.IonizerAir_Signal.Name = "IonizerAir_Signal";
+            this.IonizerAir_Signal.UseVisualStyleBackColor = false;
+            // 
             // Air_Signal
             // 
             resources.ApplyResources(this.Air_Signal, "Air_Signal");
@@ -314,6 +330,7 @@ namespace Adam
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.White;
+            this.panel1.Controls.Add(this.groupBox4);
             this.panel1.Controls.Add(this.groupBox1);
             this.panel1.Controls.Add(this.label1);
             this.panel1.Controls.Add(this.pictureBox1);
@@ -405,14 +422,14 @@ namespace Adam
             this.Conn_gv.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.Conn_gv.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
             this.Conn_gv.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("微軟正黑體", 12F);
-            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.Conn_gv.DefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("微軟正黑體", 12F);
+            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.Conn_gv.DefaultCellStyle = dataGridViewCellStyle2;
             resources.ApplyResources(this.Conn_gv, "Conn_gv");
             this.Conn_gv.MultiSelect = false;
             this.Conn_gv.Name = "Conn_gv";
@@ -424,42 +441,12 @@ namespace Adam
             // groupBox2
             // 
             resources.ApplyResources(this.groupBox2, "groupBox2");
-            this.groupBox2.Controls.Add(this.tableLayoutPanel2);
+            this.groupBox2.Controls.Add(this.Blue_Signal);
+            this.groupBox2.Controls.Add(this.Green_Signal);
+            this.groupBox2.Controls.Add(this.Orange_Signal);
+            this.groupBox2.Controls.Add(this.Red_Signal);
             this.groupBox2.Name = "groupBox2";
             this.groupBox2.TabStop = false;
-            // 
-            // tableLayoutPanel2
-            // 
-            resources.ApplyResources(this.tableLayoutPanel2, "tableLayoutPanel2");
-            this.tableLayoutPanel2.Controls.Add(this.Blue_Signal, 0, 3);
-            this.tableLayoutPanel2.Controls.Add(this.Red_Signal, 0, 0);
-            this.tableLayoutPanel2.Controls.Add(this.Orange_Signal, 0, 1);
-            this.tableLayoutPanel2.Controls.Add(this.Green_Signal, 0, 2);
-            this.tableLayoutPanel2.Name = "tableLayoutPanel2";
-            // 
-            // Blue_Signal
-            // 
-            this.Blue_Signal.BackColor = System.Drawing.Color.Blue;
-            resources.ApplyResources(this.Blue_Signal, "Blue_Signal");
-            this.Blue_Signal.Name = "Blue_Signal";
-            // 
-            // Red_Signal
-            // 
-            this.Red_Signal.BackColor = System.Drawing.Color.Red;
-            resources.ApplyResources(this.Red_Signal, "Red_Signal");
-            this.Red_Signal.Name = "Red_Signal";
-            // 
-            // Orange_Signal
-            // 
-            this.Orange_Signal.BackColor = System.Drawing.Color.DarkOrange;
-            resources.ApplyResources(this.Orange_Signal, "Orange_Signal");
-            this.Orange_Signal.Name = "Orange_Signal";
-            // 
-            // Green_Signal
-            // 
-            this.Green_Signal.BackColor = System.Drawing.Color.Green;
-            resources.ApplyResources(this.Green_Signal, "Green_Signal");
-            this.Green_Signal.Name = "Green_Signal";
             // 
             // tbcMian
             // 
@@ -473,7 +460,6 @@ namespace Adam
             this.tbcMian.Name = "tbcMian";
             this.tbcMian.SelectedIndex = 0;
             this.tbcMian.SizeMode = System.Windows.Forms.TabSizeMode.Fixed;
-            this.tbcMian.Selected += new System.Windows.Forms.TabControlEventHandler(this.tabControl1_Selected);
             // 
             // tabMonitor
             // 
@@ -778,19 +764,61 @@ namespace Adam
             this.directorySearcher1.ServerPageTimeLimit = System.TimeSpan.Parse("-00:00:01");
             this.directorySearcher1.ServerTimeLimit = System.TimeSpan.Parse("-00:00:01");
             // 
-            // IonizerAir_Signal
+            // Red_Signal
             // 
-            resources.ApplyResources(this.IonizerAir_Signal, "IonizerAir_Signal");
-            this.IonizerAir_Signal.BackColor = System.Drawing.Color.Gray;
-            this.IonizerAir_Signal.Name = "IonizerAir_Signal";
-            this.IonizerAir_Signal.UseVisualStyleBackColor = false;
+            this.Red_Signal.BackColor = System.Drawing.Color.Gray;
+            resources.ApplyResources(this.Red_Signal, "Red_Signal");
+            this.Red_Signal.Name = "Red_Signal";
+            this.Red_Signal.UseVisualStyleBackColor = false;
+            this.Red_Signal.MouseClick += new System.Windows.Forms.MouseEventHandler(this.Signal_MouseClick);
             // 
-            // DifferentialPressureAlarm2_Signal
+            // Orange_Signal
             // 
-            resources.ApplyResources(this.DifferentialPressureAlarm2_Signal, "DifferentialPressureAlarm2_Signal");
-            this.DifferentialPressureAlarm2_Signal.BackColor = System.Drawing.Color.Gray;
-            this.DifferentialPressureAlarm2_Signal.Name = "DifferentialPressureAlarm2_Signal";
-            this.DifferentialPressureAlarm2_Signal.UseVisualStyleBackColor = false;
+            this.Orange_Signal.BackColor = System.Drawing.Color.Gray;
+            resources.ApplyResources(this.Orange_Signal, "Orange_Signal");
+            this.Orange_Signal.Name = "Orange_Signal";
+            this.Orange_Signal.UseVisualStyleBackColor = false;
+            this.Orange_Signal.MouseClick += new System.Windows.Forms.MouseEventHandler(this.Signal_MouseClick);
+            // 
+            // Green_Signal
+            // 
+            this.Green_Signal.BackColor = System.Drawing.Color.Gray;
+            resources.ApplyResources(this.Green_Signal, "Green_Signal");
+            this.Green_Signal.Name = "Green_Signal";
+            this.Green_Signal.UseVisualStyleBackColor = false;
+            this.Green_Signal.MouseClick += new System.Windows.Forms.MouseEventHandler(this.Signal_MouseClick);
+            // 
+            // Blue_Signal
+            // 
+            this.Blue_Signal.BackColor = System.Drawing.Color.Gray;
+            resources.ApplyResources(this.Blue_Signal, "Blue_Signal");
+            this.Blue_Signal.Name = "Blue_Signal";
+            this.Blue_Signal.UseVisualStyleBackColor = false;
+            this.Blue_Signal.MouseClick += new System.Windows.Forms.MouseEventHandler(this.Signal_MouseClick);
+            // 
+            // groupBox4
+            // 
+            resources.ApplyResources(this.groupBox4, "groupBox4");
+            this.groupBox4.Controls.Add(this.Buzzer2_Signal);
+            this.groupBox4.Controls.Add(this.Buzzer1_Signal);
+            this.groupBox4.Name = "groupBox4";
+            this.groupBox4.TabStop = false;
+            // 
+            // Buzzer2_Signal
+            // 
+            this.Buzzer2_Signal.BackColor = System.Drawing.Color.Gray;
+            resources.ApplyResources(this.Buzzer2_Signal, "Buzzer2_Signal");
+            this.Buzzer2_Signal.Name = "Buzzer2_Signal";
+            this.Buzzer2_Signal.UseVisualStyleBackColor = false;
+            this.Buzzer2_Signal.MouseClick += new System.Windows.Forms.MouseEventHandler(this.Signal_MouseClick);
+            // 
+            // Buzzer1_Signal
+            // 
+            this.Buzzer1_Signal.BackColor = System.Drawing.Color.Gray;
+            resources.ApplyResources(this.Buzzer1_Signal, "Buzzer1_Signal");
+            this.Buzzer1_Signal.Name = "Buzzer1_Signal";
+            this.Buzzer1_Signal.UseVisualStyleBackColor = false;
+            this.Buzzer1_Signal.MouseClick += new System.Windows.Forms.MouseEventHandler(this.Signal_MouseClick);
             // 
             // FormMain
             // 
@@ -818,7 +846,6 @@ namespace Adam
             this.groupBox3.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.Conn_gv)).EndInit();
             this.groupBox2.ResumeLayout(false);
-            this.tableLayoutPanel2.ResumeLayout(false);
             this.tbcMian.ResumeLayout(false);
             this.panel2.ResumeLayout(false);
             this.panel4.ResumeLayout(false);
@@ -829,6 +856,7 @@ namespace Adam
             this.contextMenuStrip1.ResumeLayout(false);
             this.contextMenuStrip4.ResumeLayout(false);
             this.panel3.ResumeLayout(false);
+            this.groupBox4.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -849,11 +877,6 @@ namespace Adam
         private System.Windows.Forms.Button btnHelp;
         private System.Windows.Forms.Button btnVersion;
         private System.Windows.Forms.GroupBox groupBox2;
-        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel2;
-        private System.Windows.Forms.Panel Blue_Signal;
-        private System.Windows.Forms.Panel Red_Signal;
-        private System.Windows.Forms.Panel Orange_Signal;
-        private System.Windows.Forms.Panel Green_Signal;
         private System.Windows.Forms.GroupBox groupBox3;
         private System.Windows.Forms.DataGridView Conn_gv;
         private System.Windows.Forms.PictureBox pictureBox1;
@@ -916,6 +939,13 @@ namespace Adam
         private System.Windows.Forms.TabPage tabStatus;
         private System.Windows.Forms.Button IonizerAir_Signal;
         private System.Windows.Forms.Button DifferentialPressureAlarm2_Signal;
+        private System.Windows.Forms.Button Blue_Signal;
+        private System.Windows.Forms.Button Green_Signal;
+        private System.Windows.Forms.Button Orange_Signal;
+        private System.Windows.Forms.Button Red_Signal;
+        private System.Windows.Forms.GroupBox groupBox4;
+        private System.Windows.Forms.Button Buzzer2_Signal;
+        private System.Windows.Forms.Button Buzzer1_Signal;
     }
 }
 

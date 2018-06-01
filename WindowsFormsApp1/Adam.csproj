@@ -68,6 +68,7 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="UI_Update\Alarm\AlarmUpdate.cs" />
     <Compile Include="Util\ConfigUtil.cs" />
     <Compile Include="Util\DBUtil.cs" />
     <Compile Include="FormAlarm.cs">

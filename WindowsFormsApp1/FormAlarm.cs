@@ -1,4 +1,5 @@
 ﻿//using SorterControl.Management;
+using Adam.UI_Update.Alarm;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -8,8 +9,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using TransferControl.Management;
 
-namespace SorterControl
+namespace Adam
 {
     public partial class AlarmFrom : Form
     {
@@ -28,10 +30,9 @@ namespace SorterControl
             //}
         }
 
-        private void AlarmFrom_FormClosing(object sender, FormClosingEventArgs e)
+        private void AlarmFrom_Load(object sender, EventArgs e)
         {
-            e.Cancel = true;
-            this.Visible = false;
+            AlarmUpdate.UpdateAlarmList(AlarmManagement.GetAll());
         }
     }
 }

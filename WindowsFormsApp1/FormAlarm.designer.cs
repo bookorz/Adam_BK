@@ -1,4 +1,4 @@
-﻿namespace SorterControl
+﻿namespace Adam
 {
     partial class AlarmFrom
     {
@@ -74,7 +74,8 @@
             this.Controls.Add(this.AlarmList_gv);
             this.Name = "AlarmFrom";
             this.Text = "AlarmFrom";
-            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.AlarmFrom_FormClosing);
+            this.TopMost = true;
+            this.Load += new System.EventHandler(this.AlarmFrom_Load);
             ((System.ComponentModel.ISupportInitialize)(this.AlarmList_gv)).EndInit();
             this.ResumeLayout(false);
 
