@@ -15,9 +15,11 @@ namespace Adam.UI_Update.Manual
     {
         static ILog logger = LogManager.GetLogger(typeof(ManualAlignerStatusUpdate));
         //delegate void ShowMessage(string str);
-        delegate void UpdateGUI(Transaction txn, string name, string msg);
+        delegate void UpdateGUI_D(Transaction txn, string name, string msg);
+        delegate void UpdateStatus_D(string device);
+        delegate void UpdateGUIStatus_D(string name, string status);
 
-        public static void UpdateGUIInfo(Transaction txn, string name, string msg)
+        public static void UpdateGUI(Transaction txn, string name, string msg)
         {
             try
             {
@@ -29,13 +31,11 @@ namespace Adam.UI_Update.Manual
 
                 if (manual.InvokeRequired)
                 {
-                    UpdateGUI ph = new UpdateGUI(UpdateGUIInfo);
+                    UpdateGUI_D ph = new UpdateGUI_D(UpdateGUI);
                     manual.BeginInvoke(ph, txn, name, msg);
                 }
                 else
                 {
-                    manual.Cursor = Cursors.Default;
-                    manual.Enabled = true;
                     switch (method)
                     {
                         case Transaction.Command.AlignerType.GetStatus:
@@ -50,8 +50,14 @@ namespace Adam.UI_Update.Manual
                         case Transaction.Command.AlignerType.GetError:
                             StateUtil.UpdateError(name, msg);
                             break;
+                        default:
+                            manual.Cursor = Cursors.Default;
+                            //manual.Enabled = true;
+                            Control tbcManual = manual.Controls.Find("tbcManual", true).FirstOrDefault() as Control;
+                            tbcManual.Enabled = true;
+                            break;
                     }
-                    updateStatus(name);
+                    UpdateStatus(name);
                     if (method.Equals(Transaction.Command.AlignerType.GetRIO))
                     {
                         Transaction next_txn = new Transaction();
@@ -82,175 +88,201 @@ namespace Adam.UI_Update.Manual
                 Console.WriteLine("Exception caught: {0}", e);
             }
         }
-        private static void updateStatus(string device)
+        private static void UpdateStatus(string device)
         {
-            StateUtil.Init();
-            AlignerState aligner = StateUtil.GetDeviceState(device) != null ? (AlignerState)StateUtil.GetDeviceState(device) : null;
-            Form form = Application.OpenForms["FormManual"];
-            if (form == null || aligner == null)
-            {
+            Form manual = Application.OpenForms["FormManual"];
+
+            if (manual == null)
                 return;
-            }
-            string servo = "";
-            string state = aligner.State != null? aligner.State.Trim():"";
-            if (state.Length == 32)
-            {
-                servo = state.Substring(10 - 1, 1).Equals("1")?"ON":"OFF";// 10 Servo On 0 = Servo off 1 = Servo On
-            }
 
-            Control tbStatus = null;
-            Control tbServo = null;
-            Control tbWaferSensor = null;
-            Control tbVacSolenoid = null;
-            Control tbSpeed = null;
-            Control tbError = null;
+            if (manual.InvokeRequired)
+            {
+                UpdateStatus_D ph = new UpdateStatus_D(UpdateStatus);
+                manual.BeginInvoke(ph, device);
+            }
+            else
+            {
+                StateUtil.Init();
+                AlignerState aligner = StateUtil.GetDeviceState(device) != null ? (AlignerState)StateUtil.GetDeviceState(device) : null;
+                if (aligner == null)
+                {
+                    return;
+                }
+                string servo = "";
+                string state = aligner.State != null ? aligner.State.Trim() : "";
+                if (state.Length == 32)
+                {
+                    servo = state.Substring(10 - 1, 1).Equals("1") ? "ON" : "OFF";// 10 Servo On 0 = Servo off 1 = Servo On
+                }
 
-            if (device.Equals("Aligner01"))
-            {
-                tbStatus = form.Controls.Find("tbA1Status", true).FirstOrDefault() as Control;
-                tbServo = form.Controls.Find("tbA1Servo", true).FirstOrDefault() as Control;
-                tbWaferSensor = form.Controls.Find("tbA1WaferSensor", true).FirstOrDefault() as Control;
-                tbVacSolenoid = form.Controls.Find("tbA1VacSolenoid", true).FirstOrDefault() as Control;
-                tbSpeed = form.Controls.Find("tbA1Speed", true).FirstOrDefault() as Control;
-                tbError = form.Controls.Find("tbA1Error", true).FirstOrDefault() as Control;
-            }
-            else if(device.Equals("Aligner02"))
-            {
-                tbStatus = form.Controls.Find("tbA2Status", true).FirstOrDefault() as Control;
-                tbServo = form.Controls.Find("tbA2Servo", true).FirstOrDefault() as Control;
-                tbWaferSensor = form.Controls.Find("tbA2WaferSensor", true).FirstOrDefault() as Control;
-                tbVacSolenoid = form.Controls.Find("tbA2VacSolenoid", true).FirstOrDefault() as Control;
-                tbSpeed = form.Controls.Find("tbA2Speed", true).FirstOrDefault() as Control;
-                tbError = form.Controls.Find("tbA2Error", true).FirstOrDefault() as Control;
-            }         
+                Control tbStatus = null;
+                Control tbServo = null;
+                Control tbWaferSensor = null;
+                Control tbVacSolenoid = null;
+                Control tbSpeed = null;
+                Control tbError = null;
 
-            if (tbStatus != null)
-            {
-               // tbStatus.Text = aligner.Status;
-                tbStatus.Text = aligner.State;
-                Color color = new Color();
-                switch (tbStatus.Text)
+                if (device.Equals("Aligner01"))
                 {
-                    case "N/A":
-                        color = Color.Gray;
-                        break;
-                    case "0:Start":
-                        color = Color.LightGreen;
-                        break;
-                    case "1:Start Finish":
-                        color = Color.LightSkyBlue;
-                        break;
-                    case "2:System Error Finish":
-                        color = Color.Red;
-                        break;
-                    default:
-                        color = Color.White;
-                        break;
+                    tbStatus = manual.Controls.Find("tbA1Status", true).FirstOrDefault() as Control;
+                    tbServo = manual.Controls.Find("tbA1Servo", true).FirstOrDefault() as Control;
+                    tbWaferSensor = manual.Controls.Find("tbA1WaferSensor", true).FirstOrDefault() as Control;
+                    tbVacSolenoid = manual.Controls.Find("tbA1VacSolenoid", true).FirstOrDefault() as Control;
+                    tbSpeed = manual.Controls.Find("tbA1Speed", true).FirstOrDefault() as Control;
+                    tbError = manual.Controls.Find("tbA1Error", true).FirstOrDefault() as Control;
                 }
-                tbStatus.BackColor = color;
-            }            
-            if (tbServo != null)
-            {
-                tbServo.Text = aligner.Servo.Equals("1") ? "ON" : "OFF";
-                Color color = new Color();
-                switch (tbServo.Text)
+                else if (device.Equals("Aligner02"))
                 {
-                    case "OFF":
-                        color = Color.Gray;
-                        break;
-                    case "ON":
-                        color = Color.LightGreen;
-                        break;
-                    default:
-                        color = Color.White;
-                        break;
+                    tbStatus = manual.Controls.Find("tbA2Status", true).FirstOrDefault() as Control;
+                    tbServo = manual.Controls.Find("tbA2Servo", true).FirstOrDefault() as Control;
+                    tbWaferSensor = manual.Controls.Find("tbA2WaferSensor", true).FirstOrDefault() as Control;
+                    tbVacSolenoid = manual.Controls.Find("tbA2VacSolenoid", true).FirstOrDefault() as Control;
+                    tbSpeed = manual.Controls.Find("tbA2Speed", true).FirstOrDefault() as Control;
+                    tbError = manual.Controls.Find("tbA2Error", true).FirstOrDefault() as Control;
                 }
-                tbServo.BackColor = color;
-            }
-            if (tbWaferSensor != null)
-            {
-                tbWaferSensor.Text = aligner.Present.Equals("1") ? "ON" : "OFF"; Color color = new Color();
-                switch (tbWaferSensor.Text)
+
+                if (tbStatus != null && false) //debug
                 {
-                    case "OFF":
-                        color = Color.Gray;
-                        break;
-                    case "ON":
-                        color = Color.LightGreen;
-                        break;
-                    default:
-                        color = Color.White;
-                        break;
+                    // tbStatus.Text = aligner.Status;
+                    tbStatus.Text = aligner.State;
+                    Color color = new Color();
+                    switch (tbStatus.Text)
+                    {
+                        case "N/A":
+                            color = Color.MintCream;
+                            break;
+                        case "0:Start":
+                            color = Color.LightGreen;
+                            break;
+                        case "1:Start Finish":
+                            color = Color.LightSkyBlue;
+                            break;
+                        case "2:System Error Finish":
+                            color = Color.Red;
+                            break;
+                        default:
+                            color = Color.White;
+                            break;
+                    }
+                    tbStatus.BackColor = color;
                 }
-                tbWaferSensor.BackColor = color;
-            }
-            if (tbVacSolenoid != null)
-            {
-                tbVacSolenoid.Text = aligner.Vacuum.Equals("1") ? "ON" : "OFF"; Color color = new Color();
-                switch (tbVacSolenoid.Text)
+                if (tbServo != null)
                 {
-                    case "OFF":
-                        color = Color.Gray;
-                        break;
-                    case "ON":
-                        color = Color.LightGreen;
-                        break;
-                    default:
-                        color = Color.White;
-                        break;
+                    tbServo.Text = aligner.Servo.Equals("1") ? "ON" : "OFF";
+                    Color color = new Color();
+                    switch (tbServo.Text)
+                    {
+                        case "OFF":
+                            color = Color.MintCream;
+                            break;
+                        case "ON":
+                            color = Color.LightGreen;
+                            break;
+                        default:
+                            color = Color.White;
+                            break;
+                    }
+                    tbServo.BackColor = color;
                 }
-                tbVacSolenoid.BackColor = color;
+                if (tbWaferSensor != null)
+                {
+                    tbWaferSensor.Text = aligner.Present.Equals("1") ? "ON" : "OFF"; Color color = new Color();
+                    switch (tbWaferSensor.Text)
+                    {
+                        case "OFF":
+                            color = Color.MintCream;
+                            break;
+                        case "ON":
+                            color = Color.LightGreen;
+                            break;
+                        default:
+                            color = Color.White;
+                            break;
+                    }
+                    tbWaferSensor.BackColor = color;
+                }
+                if (tbVacSolenoid != null)
+                {
+                    tbVacSolenoid.Text = aligner.Vacuum.Equals("1") ? "ON" : "OFF"; Color color = new Color();
+                    switch (tbVacSolenoid.Text)
+                    {
+                        case "OFF":
+                            color = Color.MintCream;
+                            break;
+                        case "ON":
+                            color = Color.LightGreen;
+                            break;
+                        default:
+                            color = Color.White;
+                            break;
+                    }
+                    tbVacSolenoid.BackColor = color;
+                }
+                if (tbSpeed != null)
+                {
+                    tbSpeed.Text = aligner.Speed.Equals("00") ? "100" : aligner.Speed;
+                }
+                if (tbError != null)
+                {
+                    tbError.Text = aligner.Error;
+                }
             }
-            if (tbSpeed != null)
-            {
-                tbSpeed.Text = aligner.Speed.Equals("00") ? "100" : aligner.Speed;
-            }
-            if (tbError != null)
-            {
-                tbError.Text = aligner.Error;
-            }
+                
 
         }
 
         public static void UpdateGUIStatus(string name, string status)
         {
-            StateUtil.Init();
-            AlignerState aligner = StateUtil.GetDeviceState(name) != null ? (AlignerState)StateUtil.GetDeviceState(name) : null;
-            Form form = Application.OpenForms["FormManual"];
-            if (form == null || aligner == null)
-            {
+            Form manual = Application.OpenForms["FormManual"];
+
+            if (manual == null)
                 return;
-            }
-            //update robot status
-            switch (name)
+
+            if (manual.InvokeRequired)
             {
-                case "Aligner01":
-                    Control tbA1Status = form.Controls.Find("tbRStatus", true).FirstOrDefault() as Control;
-                    tbA1Status.Text = status;
-                    switch (status)
-                    {
-                        case "RUN":
-                            tbA1Status.BackColor = Color.Lime;
-                            break;
-                        case "IDLE":
-                            tbA1Status.BackColor = Color.Yellow;
-                            break;
-                    }
-                    break;
-                case "Aligner02":
-                    Control tbA2Status = form.Controls.Find("tbRStatus", true).FirstOrDefault() as Control;
-                    tbA2Status.Text = status;
-                    switch (status)
-                    {
-                        case "RUN":
-                            tbA2Status.BackColor = Color.Lime;
-                            break;
-                        case "IDLE":
-                            tbA2Status.BackColor = Color.Yellow;
-                            break;
-                    }
-                    break;
+                UpdateGUIStatus_D ph = new UpdateGUIStatus_D(UpdateGUIStatus);
+                manual.BeginInvoke(ph, name, status);
             }
+            else
+            {
+                StateUtil.Init();
+                AlignerState aligner = StateUtil.GetDeviceState(name) != null ? (AlignerState)StateUtil.GetDeviceState(name) : null;
+                if (aligner == null)
+                {
+                    return;
+                }
+                //update robot status
+                switch (name)
+                {
+                    case "Aligner01":
+                        Control tbA1Status = manual.Controls.Find("tbA1Status", true).FirstOrDefault() as Control;
+                        tbA1Status.Text = status;
+                        switch (status)
+                        {
+                            case "RUN":
+                                tbA1Status.BackColor = Color.Lime;
+                                break;
+                            case "IDLE":
+                                tbA1Status.BackColor = Color.Yellow;
+                                break;
+                        }
+                        break;
+                    case "Aligner02":
+                        Control tbA2Status = manual.Controls.Find("tbA2Status", true).FirstOrDefault() as Control;
+                        tbA2Status.Text = status;
+                        switch (status)
+                        {
+                            case "RUN":
+                                tbA2Status.BackColor = Color.Lime;
+                                break;
+                            case "IDLE":
+                                tbA2Status.BackColor = Color.Yellow;
+                                break;
+                        }
+                        break;
+                }
+            }
+                
         }
 
     }

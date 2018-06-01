@@ -15,9 +15,11 @@ namespace Adam.UI_Update.Manual
     {
         static ILog logger = LogManager.GetLogger(typeof(ManualRobotStatusUpdate));
         //delegate void ShowMessage(string str);
-        delegate void UpdateGUI(Transaction txn, string name, string msg);
+        delegate void UpdateGUI_D(Transaction txn, string name, string msg);
+        delegate void UpdateStatus_D(string device);
+        delegate void UpdateGUIStatus_D(string name, string status);
 
-        public static void UpdateGUIInfo(Transaction txn, string name, string msg)
+        public static void UpdateGUI(Transaction txn, string name, string msg)
         {
             try
             {
@@ -29,13 +31,11 @@ namespace Adam.UI_Update.Manual
 
                 if (manual.InvokeRequired)
                 {
-                    UpdateGUI ph = new UpdateGUI(UpdateGUIInfo);
+                    UpdateGUI_D ph = new UpdateGUI_D(UpdateGUI);
                     manual.BeginInvoke(ph, txn, name, msg);
                 }
                 else
                 {
-                    manual.Cursor = Cursors.Default;
-                    manual.Enabled = true;
                     switch (method)
                     {
                         case Transaction.Command.RobotType.GetStatus:
@@ -47,8 +47,13 @@ namespace Adam.UI_Update.Manual
                         case Transaction.Command.RobotType.GetRIO:
                             StateUtil.UpdateRIO(name, msg);
                             break;
+                        default:
+                            manual.Cursor = Cursors.Default;
+                            Control tbcManual = manual.Controls.Find("tbcManual", true).FirstOrDefault() as Control;
+                            tbcManual.Enabled = true;
+                            break;
                     }
-                    updateStatus(name);
+                    UpdateStatus(name);
                     if (method.Equals(Transaction.Command.RobotType.GetRIO))
                     {
                         Transaction next_txn = new Transaction();
@@ -88,142 +93,167 @@ namespace Adam.UI_Update.Manual
             }
         }
 
-        private static void updateStatus(string device)
+        private static void UpdateStatus(string device)
         {
-            StateUtil.Init();
-            RobotState robot = StateUtil.GetDeviceState(device) != null ? (RobotState)StateUtil.GetDeviceState(device) : null;
-            Form form = Application.OpenForms["FormManual"];
-            if (form == null || robot == null)
-            {
-                return;
-            }
+            Form manual = Application.OpenForms["FormManual"];
 
-            Control tbRStatus = form.Controls.Find("tbRStatus", true).FirstOrDefault() as Control;
-            if (tbRStatus != null)
+            if (manual == null)
+                return;
+
+            if (manual.InvokeRequired)
             {
-                tbRStatus.Text = robot.Status;
-                Color color = new Color();
-                switch (tbRStatus.Text)
+                UpdateStatus_D ph = new UpdateStatus_D(UpdateStatus);
+                manual.BeginInvoke(ph, device);
+            }
+            else
+            {
+                StateUtil.Init();
+                RobotState robot = StateUtil.GetDeviceState(device) != null ? (RobotState)StateUtil.GetDeviceState(device) : null;
+                if (robot == null)
                 {
-                    case "N/A":
-                        color = Color.Gray;
-                        break;
-                    case "0:Start":
-                        color = Color.LightGreen;
-                        break;
-                    case "1:Start Finish":
-                        color = Color.LightSkyBlue;
-                        break;
-                    case "2:System Error Finish":
-                        color = Color.Red;
-                        break;
-                    default:
-                        color = Color.White;
-                        break;
+                    return;
                 }
-                tbRStatus.BackColor = color;
-            }
-            Control tbRSpeed = form.Controls.Find("tbRSpeed", true).FirstOrDefault() as Control;
-            if (tbRSpeed != null)
-            {
-                tbRSpeed.Text = robot.Speed.Equals("00") ? "100" : robot.Speed;
-            }
-            Control tbRRwaferSensor = form.Controls.Find("tbRRwaferSensor", true).FirstOrDefault() as Control;
-            if (tbRRwaferSensor != null)
-            {
-                tbRRwaferSensor.Text = robot.Present_R.Equals("1") ? "ON" : "OFF";
-                Color color = new Color();
-                switch (tbRRwaferSensor.Text)
+                Control tbRStatus = manual.Controls.Find("tbRStatus", true).FirstOrDefault() as Control;
+                if (tbRStatus != null && false)//debug
                 {
-                    case "OFF":
-                        color = Color.Gray;
-                        break;
-                    case "ON":
-                        color = Color.LightGreen;
-                        break;
-                    default:
-                        color = Color.White;
-                        break;
+                    tbRStatus.Text = robot.Status;
+                    Color color = new Color();
+                    switch (tbRStatus.Text)
+                    {
+                        case "N/A":
+                            color = Color.MintCream;
+                            break;
+                        case "0:Start":
+                            color = Color.LightGreen;
+                            break;
+                        case "1:Start Finish":
+                            color = Color.LightSkyBlue;
+                            break;
+                        case "2:System Error Finish":
+                            color = Color.Red;
+                            break;
+                        default:
+                            color = Color.White;
+                            break;
+                    }
+                    tbRStatus.BackColor = color;
                 }
-                tbRRwaferSensor.BackColor = color;
-            }
-            Control tbRRVacuSolenoid = form.Controls.Find("tbRRVacuSolenoid", true).FirstOrDefault() as Control;
-            if (tbRRVacuSolenoid != null)
-            {
-                tbRRVacuSolenoid.Text = robot.Vacuum_R.Equals("1") ? "ON" : "OFF"; Color color = new Color();
-                switch (tbRRVacuSolenoid.Text)
+                Control tbRSpeed = manual.Controls.Find("tbRSpeed", true).FirstOrDefault() as Control;
+                if (tbRSpeed != null)
                 {
-                    case "OFF":
-                        color = Color.Gray;
-                        break;
-                    case "ON":
-                        color = Color.LightGreen;
-                        break;
-                    default:
-                        color = Color.White;
-                        break;
+                    tbRSpeed.Text = robot.Speed.Equals("00") ? "100" : robot.Speed;
                 }
-                tbRRVacuSolenoid.BackColor = color;
-            }
-            Control tbRLwaferSensor = form.Controls.Find("tbRLwaferSensor", true).FirstOrDefault() as Control;
-            if (tbRLwaferSensor != null)
-            {
-                tbRLwaferSensor.Text = robot.Present_L.Equals("1") ? "ON" : "OFF"; Color color = new Color();
-                switch (tbRLwaferSensor.Text)
+                Control tbRRwaferSensor = manual.Controls.Find("tbRRwaferSensor", true).FirstOrDefault() as Control;
+                if (tbRRwaferSensor != null)
                 {
-                    case "OFF":
-                        color = Color.Gray;
-                        break;
-                    case "ON":
-                        color = Color.LightGreen;
-                        break;
-                    default:
-                        color = Color.White;
-                        break;
+                    tbRRwaferSensor.Text = robot.Present_R.Equals("1") ? "ON" : "OFF";
+                    Color color = new Color();
+                    switch (tbRRwaferSensor.Text)
+                    {
+                        case "OFF":
+                            color = Color.MintCream;
+                            break;
+                        case "ON":
+                            color = Color.LightGreen;
+                            break;
+                        default:
+                            color = Color.White;
+                            break;
+                    }
+                    tbRRwaferSensor.BackColor = color;
                 }
-                tbRLwaferSensor.BackColor = color;
-            }
-            Control tbRLVacuSolenoid = form.Controls.Find("tbRLVacuSolenoid", true).FirstOrDefault() as Control;
-            if (tbRLVacuSolenoid != null)
-            {
-                tbRLVacuSolenoid.Text = robot.Vacuum_L.Equals("1") ? "ON" : "OFF"; Color color = new Color();
-                switch (tbRLVacuSolenoid.Text)
+                Control tbRRVacuSolenoid = manual.Controls.Find("tbRRVacuSolenoid", true).FirstOrDefault() as Control;
+                if (tbRRVacuSolenoid != null)
                 {
-                    case "OFF":
-                        color = Color.Gray;
-                        break;
-                    case "ON":
-                        color = Color.LightGreen;
-                        break;
-                    default:
-                        color = Color.White;
-                        break;
+                    tbRRVacuSolenoid.Text = robot.Vacuum_R.Equals("1") ? "ON" : "OFF"; Color color = new Color();
+                    switch (tbRRVacuSolenoid.Text)
+                    {
+                        case "OFF":
+                            color = Color.MintCream;
+                            break;
+                        case "ON":
+                            color = Color.LightGreen;
+                            break;
+                        default:
+                            color = Color.White;
+                            break;
+                    }
+                    tbRRVacuSolenoid.BackColor = color;
                 }
-                tbRLVacuSolenoid.BackColor = color;
+                Control tbRLwaferSensor = manual.Controls.Find("tbRLwaferSensor", true).FirstOrDefault() as Control;
+                if (tbRLwaferSensor != null)
+                {
+                    tbRLwaferSensor.Text = robot.Present_L.Equals("1") ? "ON" : "OFF"; Color color = new Color();
+                    switch (tbRLwaferSensor.Text)
+                    {
+                        case "OFF":
+                            color = Color.MintCream;
+                            break;
+                        case "ON":
+                            color = Color.LightGreen;
+                            break;
+                        default:
+                            color = Color.White;
+                            break;
+                    }
+                    tbRLwaferSensor.BackColor = color;
+                }
+                Control tbRLVacuSolenoid = manual.Controls.Find("tbRLVacuSolenoid", true).FirstOrDefault() as Control;
+                if (tbRLVacuSolenoid != null)
+                {
+                    tbRLVacuSolenoid.Text = robot.Vacuum_L.Equals("1") ? "ON" : "OFF"; Color color = new Color();
+                    switch (tbRLVacuSolenoid.Text)
+                    {
+                        case "OFF":
+                            color = Color.MintCream;
+                            break;
+                        case "ON":
+                            color = Color.LightGreen;
+                            break;
+                        default:
+                            color = Color.White;
+                            break;
+                    }
+                    tbRLVacuSolenoid.BackColor = color;
+                }
             }
+                
         }
 
         public static void UpdateGUIStatus(string name, string status)
         {
-            StateUtil.Init();
-            RobotState robot = StateUtil.GetDeviceState(name) != null ? (RobotState)StateUtil.GetDeviceState(name) : null;
-            Form form = Application.OpenForms["FormManual"];
-            if (form == null || robot == null)
-            {
+            Form manual = Application.OpenForms["FormManual"];
+
+            if (manual == null)
                 return;
-            }
-            //update robot status           
-            Control tbRStatus = form.Controls.Find("tbRStatus", true).FirstOrDefault() as Control;
-            tbRStatus.Text = status;
-            switch (status)
+
+            if (manual.InvokeRequired)
             {
-                case "RUN":
-                    tbRStatus.BackColor = Color.Lime;
-                    break;
-                case "IDLE":
-                    tbRStatus.BackColor = Color.Yellow;
-                    break;
+                UpdateGUIStatus_D ph = new UpdateGUIStatus_D(UpdateGUIStatus);
+                manual.BeginInvoke(ph, name, status);
             }
+            else
+            {
+                StateUtil.Init();
+                RobotState robot = StateUtil.GetDeviceState(name) != null ? (RobotState)StateUtil.GetDeviceState(name) : null;
+                if (robot == null)
+                {
+                    return;
+                }
+                //update robot status           
+                TextBox tbRStatus = manual.Controls.Find("tbRStatus", true).FirstOrDefault() as TextBox;
+                tbRStatus.Text = status;
+                switch (status)
+                {
+                    case "RUN":
+                        tbRStatus.BackColor = Color.Lime;
+                        break;
+                    case "IDLE":
+                        tbRStatus.BackColor = Color.Yellow;
+                        break;
+                }
+            }
+                
         }
     }
 }

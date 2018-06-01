@@ -34,7 +34,7 @@
             this.panel9 = new System.Windows.Forms.Panel();
             this.tableLayoutPanel23 = new System.Windows.Forms.TableLayoutPanel();
             this.tableLayoutPanel24 = new System.Windows.Forms.TableLayoutPanel();
-            this.panel12 = new System.Windows.Forms.Panel();
+            this.pnlRobotCmdA1 = new System.Windows.Forms.Panel();
             this.label56 = new System.Windows.Forms.Label();
             this.label57 = new System.Windows.Forms.Label();
             this.cbRA1Point = new System.Windows.Forms.ComboBox();
@@ -47,7 +47,7 @@
             this.label61 = new System.Windows.Forms.Label();
             this.cbRA1Slot = new System.Windows.Forms.ComboBox();
             this.cbRA1Arm = new System.Windows.Forms.ComboBox();
-            this.panel11 = new System.Windows.Forms.Panel();
+            this.pnlRobotCmdA2 = new System.Windows.Forms.Panel();
             this.label7 = new System.Windows.Forms.Label();
             this.label14 = new System.Windows.Forms.Label();
             this.cbRA2Point = new System.Windows.Forms.ComboBox();
@@ -67,7 +67,7 @@
             this.btnRGetPut = new System.Windows.Forms.Button();
             this.groupBox21 = new System.Windows.Forms.GroupBox();
             this.panel13 = new System.Windows.Forms.Panel();
-            this.panel14 = new System.Windows.Forms.Panel();
+            this.pnlRobotStatus = new System.Windows.Forms.Panel();
             this.nudRNewSpeed = new System.Windows.Forms.NumericUpDown();
             this.label23 = new System.Windows.Forms.Label();
             this.cbRCurrentMode = new System.Windows.Forms.ComboBox();
@@ -320,12 +320,12 @@
             this.panel9.SuspendLayout();
             this.tableLayoutPanel23.SuspendLayout();
             this.tableLayoutPanel24.SuspendLayout();
-            this.panel12.SuspendLayout();
-            this.panel11.SuspendLayout();
+            this.pnlRobotCmdA1.SuspendLayout();
+            this.pnlRobotCmdA2.SuspendLayout();
             this.panel10.SuspendLayout();
             this.groupBox21.SuspendLayout();
             this.panel13.SuspendLayout();
-            this.panel14.SuspendLayout();
+            this.pnlRobotStatus.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.nudRNewSpeed)).BeginInit();
             this.groupBox2.SuspendLayout();
             this.groupBox1.SuspendLayout();
@@ -422,8 +422,8 @@
             this.tableLayoutPanel24.ColumnCount = 2;
             this.tableLayoutPanel24.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
             this.tableLayoutPanel24.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel24.Controls.Add(this.panel12, 0, 0);
-            this.tableLayoutPanel24.Controls.Add(this.panel11, 1, 0);
+            this.tableLayoutPanel24.Controls.Add(this.pnlRobotCmdA1, 0, 0);
+            this.tableLayoutPanel24.Controls.Add(this.pnlRobotCmdA2, 1, 0);
             this.tableLayoutPanel24.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanel24.Location = new System.Drawing.Point(3, 3);
             this.tableLayoutPanel24.Name = "tableLayoutPanel24";
@@ -433,26 +433,26 @@
             this.tableLayoutPanel24.Size = new System.Drawing.Size(750, 500);
             this.tableLayoutPanel24.TabIndex = 0;
             // 
-            // panel12
+            // pnlRobotCmdA1
             // 
-            this.panel12.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.panel12.Controls.Add(this.label56);
-            this.panel12.Controls.Add(this.label57);
-            this.panel12.Controls.Add(this.cbRA1Point);
-            this.panel12.Controls.Add(this.label58);
-            this.panel12.Controls.Add(this.btnRMoveDown);
-            this.panel12.Controls.Add(this.btnRGetWait);
-            this.panel12.Controls.Add(this.label59);
-            this.panel12.Controls.Add(this.btnRGet);
-            this.panel12.Controls.Add(this.label60);
-            this.panel12.Controls.Add(this.label61);
-            this.panel12.Controls.Add(this.cbRA1Slot);
-            this.panel12.Controls.Add(this.cbRA1Arm);
-            this.panel12.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel12.Location = new System.Drawing.Point(3, 3);
-            this.panel12.Name = "panel12";
-            this.panel12.Size = new System.Drawing.Size(369, 494);
-            this.panel12.TabIndex = 50;
+            this.pnlRobotCmdA1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.pnlRobotCmdA1.Controls.Add(this.label56);
+            this.pnlRobotCmdA1.Controls.Add(this.label57);
+            this.pnlRobotCmdA1.Controls.Add(this.cbRA1Point);
+            this.pnlRobotCmdA1.Controls.Add(this.label58);
+            this.pnlRobotCmdA1.Controls.Add(this.btnRMoveDown);
+            this.pnlRobotCmdA1.Controls.Add(this.btnRGetWait);
+            this.pnlRobotCmdA1.Controls.Add(this.label59);
+            this.pnlRobotCmdA1.Controls.Add(this.btnRGet);
+            this.pnlRobotCmdA1.Controls.Add(this.label60);
+            this.pnlRobotCmdA1.Controls.Add(this.label61);
+            this.pnlRobotCmdA1.Controls.Add(this.cbRA1Slot);
+            this.pnlRobotCmdA1.Controls.Add(this.cbRA1Arm);
+            this.pnlRobotCmdA1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.pnlRobotCmdA1.Location = new System.Drawing.Point(3, 3);
+            this.pnlRobotCmdA1.Name = "pnlRobotCmdA1";
+            this.pnlRobotCmdA1.Size = new System.Drawing.Size(369, 494);
+            this.pnlRobotCmdA1.TabIndex = 50;
             // 
             // label56
             // 
@@ -633,26 +633,26 @@
             this.cbRA1Arm.Size = new System.Drawing.Size(208, 38);
             this.cbRA1Arm.TabIndex = 41;
             // 
-            // panel11
+            // pnlRobotCmdA2
             // 
-            this.panel11.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.panel11.Controls.Add(this.label7);
-            this.panel11.Controls.Add(this.label14);
-            this.panel11.Controls.Add(this.cbRA2Point);
-            this.panel11.Controls.Add(this.btnRMoveUp);
-            this.panel11.Controls.Add(this.label51);
-            this.panel11.Controls.Add(this.label52);
-            this.panel11.Controls.Add(this.btnRPutWait);
-            this.panel11.Controls.Add(this.label53);
-            this.panel11.Controls.Add(this.label54);
-            this.panel11.Controls.Add(this.btnRPut);
-            this.panel11.Controls.Add(this.cbRA2Slot);
-            this.panel11.Controls.Add(this.cbRA2Arm);
-            this.panel11.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel11.Location = new System.Drawing.Point(378, 3);
-            this.panel11.Name = "panel11";
-            this.panel11.Size = new System.Drawing.Size(369, 494);
-            this.panel11.TabIndex = 49;
+            this.pnlRobotCmdA2.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.pnlRobotCmdA2.Controls.Add(this.label7);
+            this.pnlRobotCmdA2.Controls.Add(this.label14);
+            this.pnlRobotCmdA2.Controls.Add(this.cbRA2Point);
+            this.pnlRobotCmdA2.Controls.Add(this.btnRMoveUp);
+            this.pnlRobotCmdA2.Controls.Add(this.label51);
+            this.pnlRobotCmdA2.Controls.Add(this.label52);
+            this.pnlRobotCmdA2.Controls.Add(this.btnRPutWait);
+            this.pnlRobotCmdA2.Controls.Add(this.label53);
+            this.pnlRobotCmdA2.Controls.Add(this.label54);
+            this.pnlRobotCmdA2.Controls.Add(this.btnRPut);
+            this.pnlRobotCmdA2.Controls.Add(this.cbRA2Slot);
+            this.pnlRobotCmdA2.Controls.Add(this.cbRA2Arm);
+            this.pnlRobotCmdA2.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.pnlRobotCmdA2.Location = new System.Drawing.Point(378, 3);
+            this.pnlRobotCmdA2.Name = "pnlRobotCmdA2";
+            this.pnlRobotCmdA2.Size = new System.Drawing.Size(369, 494);
+            this.pnlRobotCmdA2.TabIndex = 49;
             // 
             // label7
             // 
@@ -932,7 +932,7 @@
             // panel13
             // 
             this.panel13.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panel13.Controls.Add(this.panel14);
+            this.panel13.Controls.Add(this.pnlRobotStatus);
             this.panel13.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel13.Location = new System.Drawing.Point(3, 35);
             this.panel13.Name = "panel13";
@@ -940,40 +940,40 @@
             this.panel13.Size = new System.Drawing.Size(671, 757);
             this.panel13.TabIndex = 19;
             // 
-            // panel14
+            // pnlRobotStatus
             // 
-            this.panel14.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.panel14.Controls.Add(this.nudRNewSpeed);
-            this.panel14.Controls.Add(this.label23);
-            this.panel14.Controls.Add(this.cbRCurrentMode);
-            this.panel14.Controls.Add(this.btnRChgMode);
-            this.panel14.Controls.Add(this.cbRNewMode);
-            this.panel14.Controls.Add(this.label24);
-            this.panel14.Controls.Add(this.btnRHome);
-            this.panel14.Controls.Add(this.btnRDisConn);
-            this.panel14.Controls.Add(this.groupBox2);
-            this.panel14.Controls.Add(this.label3);
-            this.panel14.Controls.Add(this.btnRChgSpeed);
-            this.panel14.Controls.Add(this.btnRConn);
-            this.panel14.Controls.Add(this.btnROrg);
-            this.panel14.Controls.Add(this.btnRInit);
-            this.panel14.Controls.Add(this.tbRLwaferSensor);
-            this.panel14.Controls.Add(this.tbRSpeed);
-            this.panel14.Controls.Add(this.label2);
-            this.panel14.Controls.Add(this.groupBox1);
-            this.panel14.Controls.Add(this.label63);
-            this.panel14.Controls.Add(this.tbRStatus);
-            this.panel14.Controls.Add(this.label64);
-            this.panel14.Controls.Add(this.label66);
-            this.panel14.Controls.Add(this.tbRRwaferSensor);
-            this.panel14.Controls.Add(this.label67);
-            this.panel14.Controls.Add(this.label68);
-            this.panel14.Controls.Add(this.label69);
-            this.panel14.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel14.Location = new System.Drawing.Point(20, 20);
-            this.panel14.Name = "panel14";
-            this.panel14.Size = new System.Drawing.Size(629, 715);
-            this.panel14.TabIndex = 18;
+            this.pnlRobotStatus.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.pnlRobotStatus.Controls.Add(this.nudRNewSpeed);
+            this.pnlRobotStatus.Controls.Add(this.label23);
+            this.pnlRobotStatus.Controls.Add(this.cbRCurrentMode);
+            this.pnlRobotStatus.Controls.Add(this.btnRChgMode);
+            this.pnlRobotStatus.Controls.Add(this.cbRNewMode);
+            this.pnlRobotStatus.Controls.Add(this.label24);
+            this.pnlRobotStatus.Controls.Add(this.btnRHome);
+            this.pnlRobotStatus.Controls.Add(this.btnRDisConn);
+            this.pnlRobotStatus.Controls.Add(this.groupBox2);
+            this.pnlRobotStatus.Controls.Add(this.label3);
+            this.pnlRobotStatus.Controls.Add(this.btnRChgSpeed);
+            this.pnlRobotStatus.Controls.Add(this.btnRConn);
+            this.pnlRobotStatus.Controls.Add(this.btnROrg);
+            this.pnlRobotStatus.Controls.Add(this.btnRInit);
+            this.pnlRobotStatus.Controls.Add(this.tbRLwaferSensor);
+            this.pnlRobotStatus.Controls.Add(this.tbRSpeed);
+            this.pnlRobotStatus.Controls.Add(this.label2);
+            this.pnlRobotStatus.Controls.Add(this.groupBox1);
+            this.pnlRobotStatus.Controls.Add(this.label63);
+            this.pnlRobotStatus.Controls.Add(this.tbRStatus);
+            this.pnlRobotStatus.Controls.Add(this.label64);
+            this.pnlRobotStatus.Controls.Add(this.label66);
+            this.pnlRobotStatus.Controls.Add(this.tbRRwaferSensor);
+            this.pnlRobotStatus.Controls.Add(this.label67);
+            this.pnlRobotStatus.Controls.Add(this.label68);
+            this.pnlRobotStatus.Controls.Add(this.label69);
+            this.pnlRobotStatus.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.pnlRobotStatus.Location = new System.Drawing.Point(20, 20);
+            this.pnlRobotStatus.Name = "pnlRobotStatus";
+            this.pnlRobotStatus.Size = new System.Drawing.Size(629, 715);
+            this.pnlRobotStatus.TabIndex = 18;
             // 
             // nudRNewSpeed
             // 
@@ -1173,7 +1173,7 @@
             // 
             // tbRRVacuSolenoid
             // 
-            this.tbRRVacuSolenoid.BackColor = System.Drawing.Color.OrangeRed;
+            this.tbRRVacuSolenoid.BackColor = System.Drawing.Color.WhiteSmoke;
             this.tbRRVacuSolenoid.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.tbRRVacuSolenoid.Location = new System.Drawing.Point(223, 35);
             this.tbRRVacuSolenoid.Name = "tbRRVacuSolenoid";
@@ -1383,14 +1383,14 @@
             // 
             // tbRStatus
             // 
-            this.tbRStatus.BackColor = System.Drawing.Color.ForestGreen;
+            this.tbRStatus.BackColor = System.Drawing.Color.WhiteSmoke;
             this.tbRStatus.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.tbRStatus.Location = new System.Drawing.Point(224, 103);
             this.tbRStatus.Name = "tbRStatus";
             this.tbRStatus.ReadOnly = true;
             this.tbRStatus.Size = new System.Drawing.Size(106, 32);
             this.tbRStatus.TabIndex = 1;
-            this.tbRStatus.Text = "RUN";
+            this.tbRStatus.Text = "N/A";
             this.tbRStatus.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // label64
@@ -1417,7 +1417,7 @@
             // 
             // tbRRwaferSensor
             // 
-            this.tbRRwaferSensor.BackColor = System.Drawing.Color.OrangeRed;
+            this.tbRRwaferSensor.BackColor = System.Drawing.Color.WhiteSmoke;
             this.tbRRwaferSensor.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.tbRRwaferSensor.Location = new System.Drawing.Point(224, 423);
             this.tbRRwaferSensor.Name = "tbRRwaferSensor";
@@ -1640,6 +1640,7 @@
             this.btnA2ChgMode.TabIndex = 104;
             this.btnA2ChgMode.Text = "Change";
             this.btnA2ChgMode.UseVisualStyleBackColor = false;
+            this.btnA2ChgMode.Click += new System.EventHandler(this.AlignerFunction_Click);
             // 
             // btnA2Org
             // 
@@ -1720,14 +1721,14 @@
             // 
             // tbA2Status
             // 
-            this.tbA2Status.BackColor = System.Drawing.Color.Green;
+            this.tbA2Status.BackColor = System.Drawing.Color.WhiteSmoke;
             this.tbA2Status.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.tbA2Status.Location = new System.Drawing.Point(235, 34);
             this.tbA2Status.Name = "tbA2Status";
             this.tbA2Status.ReadOnly = true;
             this.tbA2Status.Size = new System.Drawing.Size(118, 32);
             this.tbA2Status.TabIndex = 20;
-            this.tbA2Status.Text = "IDLE";
+            this.tbA2Status.Text = "N/A";
             this.tbA2Status.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // label17
@@ -2382,14 +2383,14 @@
             // 
             // tbA1Servo
             // 
-            this.tbA1Servo.BackColor = System.Drawing.Color.OrangeRed;
+            this.tbA1Servo.BackColor = System.Drawing.Color.WhiteSmoke;
             this.tbA1Servo.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.tbA1Servo.Location = new System.Drawing.Point(228, 174);
             this.tbA1Servo.Name = "tbA1Servo";
             this.tbA1Servo.ReadOnly = true;
             this.tbA1Servo.Size = new System.Drawing.Size(118, 32);
             this.tbA1Servo.TabIndex = 24;
-            this.tbA1Servo.Text = "ON";
+            this.tbA1Servo.Text = "OFF";
             this.tbA1Servo.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // tbA1Status
@@ -2513,14 +2514,14 @@
             // 
             // tbA1WaferSensor
             // 
-            this.tbA1WaferSensor.BackColor = System.Drawing.Color.OrangeRed;
+            this.tbA1WaferSensor.BackColor = System.Drawing.Color.WhiteSmoke;
             this.tbA1WaferSensor.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.tbA1WaferSensor.Location = new System.Drawing.Point(228, 231);
             this.tbA1WaferSensor.Name = "tbA1WaferSensor";
             this.tbA1WaferSensor.ReadOnly = true;
             this.tbA1WaferSensor.Size = new System.Drawing.Size(118, 32);
             this.tbA1WaferSensor.TabIndex = 8;
-            this.tbA1WaferSensor.Text = "ON";
+            this.tbA1WaferSensor.Text = "OFF";
             this.tbA1WaferSensor.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // btnA1Home
@@ -4486,10 +4487,12 @@
             this.ClientSize = new System.Drawing.Size(1512, 858);
             this.Controls.Add(this.tbcManual);
             this.Font = new System.Drawing.Font("微軟正黑體", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Fixed3D;
             this.Margin = new System.Windows.Forms.Padding(6, 7, 6, 7);
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "FormManual";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Manual";
             this.Load += new System.EventHandler(this.FormManual_Load);
             this.EnabledChanged += new System.EventHandler(this.FormManual_EnabledChanged);
@@ -4499,15 +4502,15 @@
             this.panel9.ResumeLayout(false);
             this.tableLayoutPanel23.ResumeLayout(false);
             this.tableLayoutPanel24.ResumeLayout(false);
-            this.panel12.ResumeLayout(false);
-            this.panel12.PerformLayout();
-            this.panel11.ResumeLayout(false);
-            this.panel11.PerformLayout();
+            this.pnlRobotCmdA1.ResumeLayout(false);
+            this.pnlRobotCmdA1.PerformLayout();
+            this.pnlRobotCmdA2.ResumeLayout(false);
+            this.pnlRobotCmdA2.PerformLayout();
             this.panel10.ResumeLayout(false);
             this.groupBox21.ResumeLayout(false);
             this.panel13.ResumeLayout(false);
-            this.panel14.ResumeLayout(false);
-            this.panel14.PerformLayout();
+            this.pnlRobotStatus.ResumeLayout(false);
+            this.pnlRobotStatus.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.nudRNewSpeed)).EndInit();
             this.groupBox2.ResumeLayout(false);
             this.groupBox2.PerformLayout();
@@ -4682,7 +4685,7 @@
         private System.Windows.Forms.Panel panel9;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel23;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel24;
-        private System.Windows.Forms.Panel panel12;
+        private System.Windows.Forms.Panel pnlRobotCmdA1;
         private System.Windows.Forms.Label label56;
         private System.Windows.Forms.Label label57;
         private System.Windows.Forms.ComboBox cbRA1Point;
@@ -4695,7 +4698,7 @@
         private System.Windows.Forms.Label label61;
         private System.Windows.Forms.ComboBox cbRA1Slot;
         private System.Windows.Forms.ComboBox cbRA1Arm;
-        private System.Windows.Forms.Panel panel11;
+        private System.Windows.Forms.Panel pnlRobotCmdA2;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label label14;
         private System.Windows.Forms.ComboBox cbRA2Point;
@@ -4715,7 +4718,7 @@
         private System.Windows.Forms.Button btnRGetPut;
         private System.Windows.Forms.GroupBox groupBox21;
         private System.Windows.Forms.Panel panel13;
-        private System.Windows.Forms.Panel panel14;
+        private System.Windows.Forms.Panel pnlRobotStatus;
         private System.Windows.Forms.Label label63;
         private System.Windows.Forms.TextBox tbRRVacuSolenoid;
         private System.Windows.Forms.TextBox tbRStatus;

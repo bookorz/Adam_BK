@@ -189,13 +189,11 @@ namespace GUI
         {
             Button btn = (Button)sender;
             String nodeName = "NA";
-            String ctrlName = "NA";
             String angle = "0";
             string speed = "0";
             if (btn.Name.IndexOf("A1") > 0)
             {
                 nodeName = "Aligner01";
-                ctrlName = "RobotController01";
                 if (cbA1Angle.Text.Equals(""))
                 {
                     cbA1Angle.Text = "0";
@@ -210,7 +208,6 @@ namespace GUI
             if (btn.Name.IndexOf("A2") > 0)
             {
                 nodeName = "Aligner02";
-                ctrlName = "AlignerController02";
                 if (cbA2Angle.Text.Equals(""))
                 {
                     cbA2Angle.Text = "0";
@@ -221,9 +218,7 @@ namespace GUI
                 }
                 angle = Convert.ToString(int.Parse(cbA2Angle.Text) + int.Parse(udA2AngleOffset.Text));
                 speed = nudA2SpeedNew.Text.Equals("100") ? "0" : nudA2SpeedNew.Text;
-            }
-            //MessageBox.Show(nodeName);
-            //return;
+            };
             Node aligner = NodeManagement.Get(nodeName);
             Transaction[] txns = new Transaction[1];
             txns[0] = new Transaction();
@@ -237,10 +232,10 @@ namespace GUI
             switch (btnFuncName)
             {
                 case "btnConn":
-                    ControllerManagement.Get(ctrlName).Connect();
+                    ControllerManagement.Get(aligner.Controller).Connect();
                     break;
                 case "btnDisConn":
-                    ControllerManagement.Get(ctrlName).Close();
+                    ControllerManagement.Get(aligner.Controller).Close();
                     break;
                 case "btnInit":
                     //txns = new Transaction[4];
@@ -284,13 +279,22 @@ namespace GUI
                     txns[0].Value = angle;
                     break;
                 case "btnChgMode":
-                    if(cbA1NewMode.SelectedIndex < 0)
+                    int mode = -1;
+                    if (btn.Name.IndexOf("A1") > 0)
+                    {
+                        mode = cbA1NewMode.SelectedIndex;
+                    }
+                    if (btn.Name.IndexOf("A2") > 0)
+                    {
+                        mode = cbA2NewMode.SelectedIndex;
+                    }
+                    if(mode < 0)
                     {
                         MessageBox.Show(" Insufficient information, please select mode!", "Invalid Mode");
                         return;
                     }
                     txns[0].Method = Transaction.Command.AlignerType.AlignerMode;
-                    txns[0].Arm = Convert.ToString(cbA1NewMode.SelectedIndex);
+                    txns[0].Arm = Convert.ToString(mode);
                     break;
             }
             if (!txns[0].Method.Equals(""))
@@ -301,8 +305,8 @@ namespace GUI
             {
                 MessageBox.Show("Command is empty!");
             }
-            this.Enabled = false;
             this.Cursor = Cursors.WaitCursor;
+            tbcManual.Enabled = false;
             setAlignerStatus();
         }
 
@@ -310,16 +314,13 @@ namespace GUI
         {
             Button btn = (Button)sender;
             String nodeName = "NA";
-            String ctrlName = "NA";
             if (rbR1.Checked)
             {
                 nodeName = "Robot01";
-                ctrlName = "RobotController01";
             }
             if (rbR2.Checked)
             {
                 nodeName = "Robot02";
-                ctrlName = "RobotController02";
             }
             Node robot = NodeManagement.Get(nodeName);
             Transaction[] txns = new Transaction[1];
@@ -328,10 +329,10 @@ namespace GUI
             switch (btn.Name)
             {
                 case "btnRConn":
-                    ControllerManagement.Get(ctrlName).Connect();
+                    ControllerManagement.Get(robot.Controller).Connect();
                     break;
                 case "btnRDisConn":
-                    ControllerManagement.Get(ctrlName).Close();
+                    ControllerManagement.Get(robot.Controller).Close();
                     break;
                 case "btnRInit":
                     //txns[0].Method = Transaction.Command.LoadPortType.MappingDown;
@@ -469,8 +470,8 @@ namespace GUI
             {
                 MessageBox.Show("Command is empty!");
             }
-            this.Enabled = false;
             this.Cursor = Cursors.WaitCursor;
+            tbcManual.Enabled = false;
             Update_Manual_Status();
         }
         private void setRobotStatus()
