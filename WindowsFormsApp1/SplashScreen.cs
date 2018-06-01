@@ -41,7 +41,7 @@ namespace Adam
             // 设置窗体的类型  
             const string showInfo = "我們正在努力加載程序，請稍後...";
             FormBorderStyle = FormBorderStyle.None;
-            StartPosition = FormStartPosition.CenterParent;
+            StartPosition = FormStartPosition.CenterScreen;
             ShowInTaskbar = false;
             bitmap = new Bitmap(Properties.Resources.SplashScreen);
             ClientSize = bitmap.Size;
@@ -50,7 +50,7 @@ namespace Adam
             {
                 using (Graphics g = Graphics.FromImage(bitmap))
                 {
-                    g.DrawString(showInfo, font, Brushes.White, 130, 100);
+                    g.DrawString(showInfo, font, Brushes.White, 130, 240);
                 }
             }
 
