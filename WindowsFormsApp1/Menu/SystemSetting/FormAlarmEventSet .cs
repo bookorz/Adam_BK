@@ -29,11 +29,11 @@ namespace Adam.Menu.SystemSetting
                 dtTemp = new DataTable();
 
                 strSql = "SELECT list_type, list_id, CONCAT(list_name, ' - ', list_name_en) name, list_name, list_name_en, list_value, sort_sequence, active " +
-                         "  FROM list_item " +
-                         " WHERE list_type = @list_type" +
-                         "   AND active = @active " +
-                         "   AND list_id <> @list_id " +
-                         " ORDER BY sort_sequence ASC ";
+                         "FROM list_item " +
+                         "WHERE list_type = @list_type " +
+                         "AND active = @active " +
+                         "AND list_id <> @list_id " +
+                         "ORDER BY sort_sequence ASC ";
 
 
                 keyValues.Add("@list_type", "VENDOR_CODE");
@@ -74,7 +74,7 @@ namespace Adam.Menu.SystemSetting
                     dtTemp = new DataTable();
 
                     strSql = "SELECT * " +
-                             " FROM alarm_event_config " +
+                             "FROM alarm_event_config " +
                              "WHERE Device_Name = @Device_Name " +
                              "ORDER BY alarm_no ASC";
 

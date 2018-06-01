@@ -68,6 +68,7 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+<<<<<<< Updated upstream
     <Compile Include="SplashScreen.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -75,6 +76,20 @@
       <DependentUpon>SplashScreen.cs</DependentUpon>
     </Compile>
     <Compile Include="UI_Update\Alarm\AlarmUpdate.cs" />
+=======
+    <Compile Include="Menu\SystemSetting\FormCodeSetting.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Menu\SystemSetting\FormCodeSetting.Designer.cs">
+      <DependentUpon>FormCodeSetting.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Menu\SystemSetting\FormSettingFram.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Menu\SystemSetting\FormSettingFram.Designer.cs">
+      <DependentUpon>FormSettingFram.cs</DependentUpon>
+    </Compile>
+>>>>>>> Stashed changes
     <Compile Include="Util\ConfigUtil.cs" />
     <Compile Include="Util\DBUtil.cs" />
     <Compile Include="FormAlarm.cs">
@@ -318,6 +333,9 @@
     <EmbeddedResource Include="Menu\SystemSetting\FormAlarmEventSet .resx">
       <DependentUpon>FormAlarmEventSet .cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Menu\SystemSetting\FormCodeSetting.resx">
+      <DependentUpon>FormCodeSetting.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Menu\SystemSetting\FormConfiguration.resx">
       <DependentUpon>FormConfiguration.cs</DependentUpon>
     </EmbeddedResource>
@@ -329,6 +347,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Menu\SystemSetting\FormSECSSet.resx">
       <DependentUpon>FormSECSSet.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Menu\SystemSetting\FormSettingFram.resx">
+      <DependentUpon>FormSettingFram.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Menu\SystemSetting\FormSystemSetting.resx">
       <DependentUpon>FormSystemSetting.cs</DependentUpon>

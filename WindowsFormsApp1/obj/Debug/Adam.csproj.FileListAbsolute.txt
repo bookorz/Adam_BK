@@ -290,6 +290,7 @@ C:\軟體專案開發\team\adam\WindowsFormsApp1\obj\Debug\Adam.Menu.SystemSetti
 C:\軟體專案開發\team\adam\WindowsFormsApp1\obj\Debug\Adam.Menu.SystemSetting.FormSECSSet.resources
 C:\軟體專案開發\team\adam\WindowsFormsApp1\obj\Debug\Adam.Menu.SystemSetting.FormSystemSetting.resources
 C:\軟體專案開發\team\adam\WindowsFormsApp1\obj\Debug\Adam.Menu.WaferMapping.FormWaferMapping.resources
+<<<<<<< Updated upstream
 C:\Users\ethan_huang\source\repos\Adam\WindowsFormsApp1\obj\Debug\Adam.Menu.Communications.FormCommunications.resources
 C:\Users\ethan_huang\source\repos\Adam\WindowsFormsApp1\obj\Debug\Adam.Menu.FormFrame.resources
 C:\Users\ethan_huang\source\repos\Adam\WindowsFormsApp1\obj\Debug\Adam.Menu.Monitoring.FormMonitoring.resources
@@ -307,3 +308,7 @@ C:\Users\ethan_huang\source\repos\Adam\WindowsFormsApp1\bin\Debug\DIOControl.dll
 C:\Users\ethan_huang\source\repos\Adam\WindowsFormsApp1\bin\Debug\DIOControl.pdb
 C:\Users\ethan_huang\source\repos\Adam\WindowsFormsApp1\obj\Debug\Adam.AlarmFrom.resources
 C:\Users\ethan_huang\source\repos\Adam\WindowsFormsApp1\obj\Debug\Adam.SplashScreen.resources
+=======
+D:\SyncSourceCode\Adam\WindowsFormsApp1\obj\Debug\Adam.Menu.SystemSetting.FormSettingFram.resources
+D:\SyncSourceCode\Adam\WindowsFormsApp1\obj\Debug\Adam.Menu.SystemSetting.FormCodeSetting.resources
+>>>>>>> Stashed changes

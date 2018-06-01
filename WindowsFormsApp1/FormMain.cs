@@ -86,11 +86,19 @@ namespace Adam
                     ((Form)ctrlForm[i]).Show();
                     tbcMian.SelectTab(i);
                 }
+<<<<<<< Updated upstream
                 tbcMian.SelectTab(0);
                 alarmFrom.Hide();
                 alarmFrom.Show();
                 //alarmFrom.Visible = false;
                 alarmFrom.Hide();
+=======
+
+                //this.FormBorderStyle = FormBorderStyle.FixedToolWindow;
+                //this.WindowState = FormWindowState.Minimized;
+                //this.WindowState = FormWindowState.Maximized;
+                //this.TopLevel = true;
+>>>>>>> Stashed changes
             }
             catch (Exception ex)
             {
