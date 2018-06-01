@@ -75,5 +75,61 @@ namespace Adam.UI_Update.Monitoring
                 logger.Error("UpdateControllerStatus: Update fail.");
             }
         }
+
+        public static void UpdateDIOStatus(string Device_ID, string Status)
+        {
+            try
+            {
+                Form form = Application.OpenForms["FormMain"];
+                DataGridView Conn_gv;
+                if (form == null)
+                    return;
+
+                Conn_gv = form.Controls.Find("DIO_gv", true).FirstOrDefault() as DataGridView;
+                if (Conn_gv == null)
+                    return;
+
+                if (Conn_gv.InvokeRequired)
+                {
+                    UpdateController ph = new UpdateController(UpdateDIOStatus);
+                    Conn_gv.BeginInvoke(ph, Device_ID, Status);
+                }
+                else
+                {
+                    if (Conn_gv.DataSource == null)
+                    {
+                        Conn_gv.DataSource = new List<ConnectState>();
+                    }
+                    List<ConnectState> connList = (List<ConnectState>)Conn_gv.DataSource;
+
+                    var find = from Ctrl in connList
+                               where Ctrl.Device_ID.Equals(Device_ID)
+                               select Ctrl;
+
+                    if (find.Count() == 0)
+                    {
+                        ConnectState con = new ConnectState();
+                        con.Device_ID = Device_ID;
+                        con.Connection_Status = Status;
+                        connList.Add(con);
+                    }
+                    else
+                    {
+                        find.First().Connection_Status = Status;
+                    }
+                    connList.Sort((x, y) => { return x.Device_ID.CompareTo(y.Device_ID); });
+                    Conn_gv.DataSource = null;
+                    Conn_gv.DataSource = connList;
+                    //Conn_gv.Refresh();
+                    Conn_gv.ClearSelection();
+                }
+
+
+            }
+            catch
+            {
+                logger.Error("UpdateControllerStatus: Update fail.");
+            }
+        }
     }
 }

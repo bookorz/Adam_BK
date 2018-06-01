@@ -68,6 +68,12 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="SplashScreen.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SplashScreen.Designer.cs">
+      <DependentUpon>SplashScreen.cs</DependentUpon>
+    </Compile>
     <Compile Include="UI_Update\Alarm\AlarmUpdate.cs" />
     <Compile Include="Util\ConfigUtil.cs" />
     <Compile Include="Util\DBUtil.cs" />
@@ -349,6 +355,9 @@
     <EmbeddedResource Include="FormTeaching.resx">
       <DependentUpon>FormTeaching.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="SplashScreen.resx">
+      <DependentUpon>SplashScreen.cs</DependentUpon>
+    </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -383,11 +392,13 @@
     <None Include="Resources\sanwa_robot_status.png" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="Resources\SplashScreen.bmp" />
     <None Include="Resources\arrowleft.png" />
     <None Include="Resources\check.png" />
     <None Include="Resources\cross.png" />
     <None Include="Resources\handle.png" />
     <None Include="Resources\Image70.png" />
+    <None Include="Resources\index.jpg" />
     <Content Include="Resources\sanwa_aligner_status.png" />
   </ItemGroup>
   <ItemGroup />

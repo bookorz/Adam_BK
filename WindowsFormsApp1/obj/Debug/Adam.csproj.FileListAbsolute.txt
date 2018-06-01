@@ -306,3 +306,4 @@ C:\Users\ethan_huang\source\repos\Adam\WindowsFormsApp1\obj\Debug\Adam.Menu.Wafe
 C:\Users\ethan_huang\source\repos\Adam\WindowsFormsApp1\bin\Debug\DIOControl.dll
 C:\Users\ethan_huang\source\repos\Adam\WindowsFormsApp1\bin\Debug\DIOControl.pdb
 C:\Users\ethan_huang\source\repos\Adam\WindowsFormsApp1\obj\Debug\Adam.AlarmFrom.resources
+C:\Users\ethan_huang\source\repos\Adam\WindowsFormsApp1\obj\Debug\Adam.SplashScreen.resources
