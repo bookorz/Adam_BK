@@ -1,15 +1,24 @@
+using log4net;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using TransferControl.Controller;
 using TransferControl.Management;
 
 namespace Adam.Util
 {
     class StateUtil
     {
+        class ConnectState
+        {
+
+            public string Device_ID { get; set; }
+            public string Connection_Status { get; set; }
+        }
+        static ILog logger = LogManager.GetLogger(typeof(StateUtil));
         static public Dictionary<string, object> device = new Dictionary<string, object>();
         //static private Dictionary<string, AlignerState> aligner = new Dictionary<string, AlignerState>();
         //static private Dictionary<string, LoadPortState> port = new Dictionary<string, LoadPortState>();
@@ -18,12 +27,6 @@ namespace Adam.Util
         static private AlignerState aligner1 = new AlignerState("Aligner01");
         static private AlignerState aligner2 = new AlignerState("Aligner02");
 
-        //Robot   $1GET:RIO__:no[CR]   4 R-Hold Status 回饋 R 軸 Wafer/ Panel 保留狀態
-        //                             5 L-Hold Status 回饋 L 軸 Wafer/ Panel 保留狀態
-        //                             8:回饋 R 軸在席 Sensor 的狀態 
-        //                             9:回饋 L 軸在席 Sensor 的狀態
-        //Aligner $1GET:RIO__:no[CR]   4 Hold Status 回饋 Wafer/ Panel 保留狀態
-        //                             8 Present 回饋在席 Sensor 的狀態
         public static void Init()
         {
             device.Clear();
@@ -55,8 +58,10 @@ namespace Adam.Util
             switch (device)
             {
                 case "Robot01":
+                    robot1.Error = msg;
                     break;
                 case "Robot02":
+                    robot2.Error = msg;
                     break;
                 case "Aligner01":
                     aligner1.Error = msg;
@@ -66,30 +71,7 @@ namespace Adam.Util
                     break;
             }
         }
-
-
-        //public static void UpdateDeviceState(string device, string state)
-        //{
-        //    RobotState robot = null;
-        //    switch (device)
-        //    {
-        //        case "Robot01":
-        //            robot = robot1;
-        //            break;
-        //        case "Robot02":
-        //            robot = robot2;
-        //            break;
-        //        case "Aligner01":
-        //            aligner1.State = msg;
-        //            break;
-        //        case "Aligner02":
-        //            aligner2.State = msg;
-        //            break;
-        //        default:
-        //            return;
-        //    }
-        //}
-
+        
         public static void UpdateRIO(string device, string msg)
         {
             RobotState robot = null;
@@ -132,6 +114,7 @@ namespace Adam.Util
                     break;
             }
         }
+
         public static void UpdateSP(string device, string msg)
         {
             switch (device)
@@ -150,31 +133,33 @@ namespace Adam.Util
                     break;
             }
         }
+
         public static object GetDeviceState(string name)
         {
             return device[name];
         }
-        //public static void updateMode()
-        //{
 
-        //}
     }
     class RobotState
     {
-        string _name;
-        string _status;
-        string _state;
-        string _present_R;
-        string _present_L;
-        string _vacuum_L;
-        string _vacuum_R;
-        string _speed;
-        string _mode;
+        public string Name { get; set; }
+        public string Status { get; set; }
+        public string State { get; set; }
+        public string Present_R { get; set; }
+        public string Present_L { get; set; }
+        public string Vacuum_L { get; set; }
+        public string Vacuum_R { get; set; }
+        public string Speed { get; set; }
+        public string Mode { get; set; }
+        public string Error { get; set; }
+
         public RobotState(string name)
         {
             Node robot = NodeManagement.Get(name);
             this.Name = name;
             this.Status = robot != null ? robot.State : "N/A";
+            if (this.Status.Equals("N/A") && ControllerManagement.Get(name) != null)
+                this.Status = ControllerManagement.Get(name).Status;// 如果 NODE 無狀態，改抓 Controller 的狀態
             this.State = "".PadLeft(32);
             this.Present_L = "";
             this.Present_R = "";
@@ -182,29 +167,20 @@ namespace Adam.Util
             this.Vacuum_R = "";
             this.Speed = "";
             this.Mode = "";
+            this.Error = "";
         }
-
-        public string Name { get => _name; set => _name = value; }
-        public string Status { get => _status; set => _status = value; }
-        public string State { get => _state; set => _state = value; }
-        public string Present_R { get => _present_R; set => _present_R = value; }
-        public string Present_L { get => _present_L; set => _present_L = value; }
-        public string Vacuum_L { get => _vacuum_L; set => _vacuum_L = value; }
-        public string Vacuum_R { get => _vacuum_R; set => _vacuum_R = value; }
-        public string Speed { get => _speed; set => _speed = value; }
-        public string Mode { get => _mode; set => _mode = value; }
+        
     }
     class AlignerState
     {
-        string _name;
-        string _status;
-        string _state;
-        string _present;
-        string _vacuum;
-        string _speed;
-        string _mode;
-        string _servo;
-        string _error;
+        public string Name { get; set; }
+        public string Status { get; set; }
+        public string State { get; set; }
+        public string Present { get; set; }
+        public string Vacuum { get; set; }
+        public string Speed { get; set; }
+        public string Mode { get; set; }
+        public string Error { get; set; }
         public AlignerState(string name)
         {
             Node aligner = NodeManagement.Get(name);
@@ -215,18 +191,8 @@ namespace Adam.Util
             this.Vacuum = "";
             this.Speed = "";
             this.Mode = "";
-            this.Servo = "";
             this.Error = "";
         }
-        public string Name { get => _name; set => _name = value; }
-        public string Status { get => _status; set => _status = value; }
-        public string State { get => _state; set => _state = value; }
-        public string Present { get => _present; set => _present = value; }
-        public string Vacuum { get => _vacuum; set => _vacuum = value; }
-        public string Speed { get => _speed; set => _speed = value; }
-        public string Mode { get => _mode; set => _mode = value; }
-        public string Servo { get => _servo; set => _servo = value; }
-        public string Error { get => _error; set => _error = value; }
     }
     class LoadPortState
     {

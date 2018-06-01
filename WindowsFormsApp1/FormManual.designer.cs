@@ -63,17 +63,24 @@
             this.panel10 = new System.Windows.Forms.Panel();
             this.btnRPutPut = new System.Windows.Forms.Button();
             this.btnRPutGet = new System.Windows.Forms.Button();
+            this.cbRCurrentMode = new System.Windows.Forms.ComboBox();
             this.btnRGetGet = new System.Windows.Forms.Button();
             this.btnRGetPut = new System.Windows.Forms.Button();
+            this.label24 = new System.Windows.Forms.Label();
             this.groupBox21 = new System.Windows.Forms.GroupBox();
             this.panel13 = new System.Windows.Forms.Panel();
             this.pnlRobotStatus = new System.Windows.Forms.Panel();
+            this.tbRError = new System.Windows.Forms.TextBox();
+            this.label25 = new System.Windows.Forms.Label();
+            this.label26 = new System.Windows.Forms.Label();
+            this.tbRServo = new System.Windows.Forms.TextBox();
+            this.btnRServoOn = new System.Windows.Forms.Button();
+            this.btnRServoOff = new System.Windows.Forms.Button();
+            this.btnRReset = new System.Windows.Forms.Button();
             this.nudRNewSpeed = new System.Windows.Forms.NumericUpDown();
             this.label23 = new System.Windows.Forms.Label();
-            this.cbRCurrentMode = new System.Windows.Forms.ComboBox();
             this.btnRChgMode = new System.Windows.Forms.Button();
             this.cbRNewMode = new System.Windows.Forms.ComboBox();
-            this.label24 = new System.Windows.Forms.Label();
             this.btnRHome = new System.Windows.Forms.Button();
             this.btnRDisConn = new System.Windows.Forms.Button();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
@@ -838,8 +845,10 @@
             this.panel10.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.panel10.Controls.Add(this.btnRPutPut);
             this.panel10.Controls.Add(this.btnRPutGet);
+            this.panel10.Controls.Add(this.cbRCurrentMode);
             this.panel10.Controls.Add(this.btnRGetGet);
             this.panel10.Controls.Add(this.btnRGetPut);
+            this.panel10.Controls.Add(this.label24);
             this.panel10.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel10.Location = new System.Drawing.Point(3, 509);
             this.panel10.Name = "panel10";
@@ -880,6 +889,21 @@
             this.btnRPutGet.UseVisualStyleBackColor = false;
             this.btnRPutGet.Click += new System.EventHandler(this.RobotFunction_Click);
             // 
+            // cbRCurrentMode
+            // 
+            this.cbRCurrentMode.Enabled = false;
+            this.cbRCurrentMode.FormattingEnabled = true;
+            this.cbRCurrentMode.Items.AddRange(new object[] {
+            "Normal",
+            "Dry Mode",
+            "Test Mode",
+            "Step Mode"});
+            this.cbRCurrentMode.Location = new System.Drawing.Point(249, 147);
+            this.cbRCurrentMode.Name = "cbRCurrentMode";
+            this.cbRCurrentMode.Size = new System.Drawing.Size(248, 38);
+            this.cbRCurrentMode.TabIndex = 105;
+            this.cbRCurrentMode.Visible = false;
+            // 
             // btnRGetGet
             // 
             this.btnRGetGet.BackColor = System.Drawing.Color.DarkGray;
@@ -914,6 +938,21 @@
             this.btnRGetPut.UseVisualStyleBackColor = false;
             this.btnRGetPut.Click += new System.EventHandler(this.RobotFunction_Click);
             // 
+            // label24
+            // 
+            this.label24.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.label24.AutoSize = true;
+            this.label24.Font = new System.Drawing.Font("微軟正黑體", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
+            this.label24.Location = new System.Drawing.Point(63, 150);
+            this.label24.Name = "label24";
+            this.label24.Size = new System.Drawing.Size(173, 30);
+            this.label24.TabIndex = 102;
+            this.label24.Text = "Current Mode";
+            this.label24.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.label24.Visible = false;
+            // 
             // groupBox21
             // 
             this.groupBox21.BackColor = System.Drawing.SystemColors.ControlLight;
@@ -943,12 +982,17 @@
             // pnlRobotStatus
             // 
             this.pnlRobotStatus.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.pnlRobotStatus.Controls.Add(this.tbRError);
+            this.pnlRobotStatus.Controls.Add(this.label25);
+            this.pnlRobotStatus.Controls.Add(this.label26);
+            this.pnlRobotStatus.Controls.Add(this.tbRServo);
+            this.pnlRobotStatus.Controls.Add(this.btnRServoOn);
+            this.pnlRobotStatus.Controls.Add(this.btnRServoOff);
+            this.pnlRobotStatus.Controls.Add(this.btnRReset);
             this.pnlRobotStatus.Controls.Add(this.nudRNewSpeed);
             this.pnlRobotStatus.Controls.Add(this.label23);
-            this.pnlRobotStatus.Controls.Add(this.cbRCurrentMode);
             this.pnlRobotStatus.Controls.Add(this.btnRChgMode);
             this.pnlRobotStatus.Controls.Add(this.cbRNewMode);
-            this.pnlRobotStatus.Controls.Add(this.label24);
             this.pnlRobotStatus.Controls.Add(this.btnRHome);
             this.pnlRobotStatus.Controls.Add(this.btnRDisConn);
             this.pnlRobotStatus.Controls.Add(this.groupBox2);
@@ -975,6 +1019,99 @@
             this.pnlRobotStatus.Size = new System.Drawing.Size(629, 715);
             this.pnlRobotStatus.TabIndex = 18;
             // 
+            // tbRError
+            // 
+            this.tbRError.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.tbRError.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.tbRError.Location = new System.Drawing.Point(224, 670);
+            this.tbRError.Name = "tbRError";
+            this.tbRError.ReadOnly = true;
+            this.tbRError.Size = new System.Drawing.Size(243, 32);
+            this.tbRError.TabIndex = 114;
+            this.tbRError.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // label25
+            // 
+            this.label25.AutoSize = true;
+            this.label25.Font = new System.Drawing.Font("微軟正黑體", 18F);
+            this.label25.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.label25.Location = new System.Drawing.Point(92, 670);
+            this.label25.Name = "label25";
+            this.label25.Size = new System.Drawing.Size(119, 30);
+            this.label25.TabIndex = 113;
+            this.label25.Text = "Last Error";
+            // 
+            // label26
+            // 
+            this.label26.AutoSize = true;
+            this.label26.Font = new System.Drawing.Font("微軟正黑體", 18F);
+            this.label26.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.label26.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.label26.Location = new System.Drawing.Point(134, 201);
+            this.label26.Name = "label26";
+            this.label26.Size = new System.Drawing.Size(77, 30);
+            this.label26.TabIndex = 109;
+            this.label26.Text = "Servo";
+            // 
+            // tbRServo
+            // 
+            this.tbRServo.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.tbRServo.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.tbRServo.Location = new System.Drawing.Point(224, 199);
+            this.tbRServo.Name = "tbRServo";
+            this.tbRServo.ReadOnly = true;
+            this.tbRServo.Size = new System.Drawing.Size(106, 32);
+            this.tbRServo.TabIndex = 110;
+            this.tbRServo.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // btnRServoOn
+            // 
+            this.btnRServoOn.BackColor = System.Drawing.Color.DarkGray;
+            this.btnRServoOn.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.btnRServoOn.FlatAppearance.BorderSize = 2;
+            this.btnRServoOn.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnRServoOn.Font = new System.Drawing.Font("微軟正黑體", 14.25F);
+            this.btnRServoOn.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.btnRServoOn.Location = new System.Drawing.Point(347, 193);
+            this.btnRServoOn.Name = "btnRServoOn";
+            this.btnRServoOn.Size = new System.Drawing.Size(125, 46);
+            this.btnRServoOn.TabIndex = 112;
+            this.btnRServoOn.Text = "Servo On";
+            this.btnRServoOn.UseVisualStyleBackColor = false;
+            this.btnRServoOn.Click += new System.EventHandler(this.RobotFunction_Click);
+            // 
+            // btnRServoOff
+            // 
+            this.btnRServoOff.BackColor = System.Drawing.Color.DarkGray;
+            this.btnRServoOff.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.btnRServoOff.FlatAppearance.BorderSize = 2;
+            this.btnRServoOff.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnRServoOff.Font = new System.Drawing.Font("微軟正黑體", 14.25F);
+            this.btnRServoOff.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.btnRServoOff.Location = new System.Drawing.Point(488, 193);
+            this.btnRServoOff.Name = "btnRServoOff";
+            this.btnRServoOff.Size = new System.Drawing.Size(123, 46);
+            this.btnRServoOff.TabIndex = 111;
+            this.btnRServoOff.Text = "Servo Off";
+            this.btnRServoOff.UseVisualStyleBackColor = false;
+            this.btnRServoOff.Click += new System.EventHandler(this.RobotFunction_Click);
+            // 
+            // btnRReset
+            // 
+            this.btnRReset.BackColor = System.Drawing.Color.DarkGray;
+            this.btnRReset.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.btnRReset.FlatAppearance.BorderSize = 2;
+            this.btnRReset.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnRReset.Font = new System.Drawing.Font("微軟正黑體", 14.25F);
+            this.btnRReset.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.btnRReset.Location = new System.Drawing.Point(488, 659);
+            this.btnRReset.Name = "btnRReset";
+            this.btnRReset.Size = new System.Drawing.Size(126, 46);
+            this.btnRReset.TabIndex = 108;
+            this.btnRReset.Text = "Reset";
+            this.btnRReset.UseVisualStyleBackColor = false;
+            this.btnRReset.Click += new System.EventHandler(this.RobotFunction_Click);
+            // 
             // nudRNewSpeed
             // 
             this.nudRNewSpeed.Increment = new decimal(new int[] {
@@ -982,7 +1119,7 @@
             0,
             0,
             0});
-            this.nudRNewSpeed.Location = new System.Drawing.Point(224, 284);
+            this.nudRNewSpeed.Location = new System.Drawing.Point(224, 298);
             this.nudRNewSpeed.Minimum = new decimal(new int[] {
             1,
             0,
@@ -1011,21 +1148,6 @@
             this.label23.TabIndex = 106;
             this.label23.Text = "Change Mode";
             this.label23.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            // 
-            // cbRCurrentMode
-            // 
-            this.cbRCurrentMode.Enabled = false;
-            this.cbRCurrentMode.FormattingEnabled = true;
-            this.cbRCurrentMode.Items.AddRange(new object[] {
-            "Normal",
-            "Dry Mode",
-            "Test Mode",
-            "Step Mode"});
-            this.cbRCurrentMode.Location = new System.Drawing.Point(224, 655);
-            this.cbRCurrentMode.Name = "cbRCurrentMode";
-            this.cbRCurrentMode.Size = new System.Drawing.Size(248, 38);
-            this.cbRCurrentMode.TabIndex = 105;
-            this.cbRCurrentMode.Visible = false;
             // 
             // btnRChgMode
             // 
@@ -1056,21 +1178,6 @@
             this.cbRNewMode.Size = new System.Drawing.Size(248, 38);
             this.cbRNewMode.TabIndex = 103;
             // 
-            // label24
-            // 
-            this.label24.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.label24.AutoSize = true;
-            this.label24.Font = new System.Drawing.Font("微軟正黑體", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-            this.label24.Location = new System.Drawing.Point(38, 658);
-            this.label24.Name = "label24";
-            this.label24.Size = new System.Drawing.Size(173, 30);
-            this.label24.TabIndex = 102;
-            this.label24.Text = "Current Mode";
-            this.label24.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.label24.Visible = false;
-            // 
             // btnRHome
             // 
             this.btnRHome.BackColor = System.Drawing.Color.DarkGray;
@@ -1079,7 +1186,7 @@
             this.btnRHome.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnRHome.Font = new System.Drawing.Font("微軟正黑體", 14.25F);
             this.btnRHome.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.btnRHome.Location = new System.Drawing.Point(488, 156);
+            this.btnRHome.Location = new System.Drawing.Point(347, 125);
             this.btnRHome.Name = "btnRHome";
             this.btnRHome.Size = new System.Drawing.Size(123, 46);
             this.btnRHome.TabIndex = 82;
@@ -1095,7 +1202,7 @@
             this.btnRDisConn.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnRDisConn.Font = new System.Drawing.Font("微軟正黑體", 14.25F);
             this.btnRDisConn.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.btnRDisConn.Location = new System.Drawing.Point(488, 96);
+            this.btnRDisConn.Location = new System.Drawing.Point(488, 126);
             this.btnRDisConn.Name = "btnRDisConn";
             this.btnRDisConn.Size = new System.Drawing.Size(123, 46);
             this.btnRDisConn.TabIndex = 81;
@@ -1168,7 +1275,6 @@
             this.tbRLVacuSolenoid.ReadOnly = true;
             this.tbRLVacuSolenoid.Size = new System.Drawing.Size(106, 32);
             this.tbRLVacuSolenoid.TabIndex = 15;
-            this.tbRLVacuSolenoid.Text = "OFF";
             this.tbRLVacuSolenoid.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // tbRRVacuSolenoid
@@ -1180,7 +1286,6 @@
             this.tbRRVacuSolenoid.ReadOnly = true;
             this.tbRRVacuSolenoid.Size = new System.Drawing.Size(106, 32);
             this.tbRRVacuSolenoid.TabIndex = 16;
-            this.tbRRVacuSolenoid.Text = "ON";
             this.tbRRVacuSolenoid.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // btnRRVacuOff
@@ -1218,7 +1323,7 @@
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("微軟正黑體", 18F);
             this.label3.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.label3.Location = new System.Drawing.Point(38, 286);
+            this.label3.Location = new System.Drawing.Point(38, 300);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(180, 30);
             this.label3.TabIndex = 74;
@@ -1231,7 +1336,7 @@
             this.btnRChgSpeed.FlatAppearance.BorderSize = 2;
             this.btnRChgSpeed.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnRChgSpeed.Font = new System.Drawing.Font("微軟正黑體", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-            this.btnRChgSpeed.Location = new System.Drawing.Point(349, 276);
+            this.btnRChgSpeed.Location = new System.Drawing.Point(349, 290);
             this.btnRChgSpeed.Name = "btnRChgSpeed";
             this.btnRChgSpeed.Size = new System.Drawing.Size(123, 45);
             this.btnRChgSpeed.TabIndex = 73;
@@ -1246,7 +1351,7 @@
             this.btnRConn.FlatAppearance.BorderSize = 2;
             this.btnRConn.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnRConn.Font = new System.Drawing.Font("微軟正黑體", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-            this.btnRConn.Location = new System.Drawing.Point(349, 96);
+            this.btnRConn.Location = new System.Drawing.Point(488, 66);
             this.btnRConn.Name = "btnRConn";
             this.btnRConn.Size = new System.Drawing.Size(123, 45);
             this.btnRConn.TabIndex = 72;
@@ -1261,7 +1366,7 @@
             this.btnROrg.FlatAppearance.BorderSize = 2;
             this.btnROrg.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnROrg.Font = new System.Drawing.Font("微軟正黑體", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-            this.btnROrg.Location = new System.Drawing.Point(349, 156);
+            this.btnROrg.Location = new System.Drawing.Point(207, 125);
             this.btnROrg.Name = "btnROrg";
             this.btnROrg.Size = new System.Drawing.Size(123, 45);
             this.btnROrg.TabIndex = 71;
@@ -1277,12 +1382,13 @@
             this.btnRInit.FlatAppearance.BorderSize = 2;
             this.btnRInit.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnRInit.Font = new System.Drawing.Font("微軟正黑體", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-            this.btnRInit.Location = new System.Drawing.Point(207, 156);
+            this.btnRInit.Location = new System.Drawing.Point(488, 290);
             this.btnRInit.Name = "btnRInit";
             this.btnRInit.Size = new System.Drawing.Size(123, 45);
             this.btnRInit.TabIndex = 70;
             this.btnRInit.Text = "Initialize";
             this.btnRInit.UseVisualStyleBackColor = false;
+            this.btnRInit.Visible = false;
             this.btnRInit.Click += new System.EventHandler(this.RobotFunction_Click);
             // 
             // tbRLwaferSensor
@@ -1294,14 +1400,13 @@
             this.tbRLwaferSensor.ReadOnly = true;
             this.tbRLwaferSensor.Size = new System.Drawing.Size(106, 32);
             this.tbRLwaferSensor.TabIndex = 10;
-            this.tbRLwaferSensor.Text = "OFF";
             this.tbRLwaferSensor.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // tbRSpeed
             // 
-            this.tbRSpeed.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.tbRSpeed.BackColor = System.Drawing.SystemColors.Window;
             this.tbRSpeed.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.tbRSpeed.Location = new System.Drawing.Point(224, 234);
+            this.tbRSpeed.Location = new System.Drawing.Point(224, 248);
             this.tbRSpeed.Name = "tbRSpeed";
             this.tbRSpeed.ReadOnly = true;
             this.tbRSpeed.Size = new System.Drawing.Size(106, 32);
@@ -1314,7 +1419,7 @@
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("微軟正黑體", 18F);
             this.label2.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.label2.Location = new System.Drawing.Point(3, 236);
+            this.label2.Location = new System.Drawing.Point(3, 250);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(215, 30);
             this.label2.TabIndex = 51;
@@ -1326,7 +1431,7 @@
             this.groupBox1.Controls.Add(this.rbR2);
             this.groupBox1.Controls.Add(this.rbR1);
             this.groupBox1.Font = new System.Drawing.Font("微軟正黑體", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-            this.groupBox1.Location = new System.Drawing.Point(18, 19);
+            this.groupBox1.Location = new System.Drawing.Point(18, -8);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(582, 64);
             this.groupBox1.TabIndex = 20;
@@ -1375,7 +1480,7 @@
             this.label63.AutoSize = true;
             this.label63.Font = new System.Drawing.Font("微軟正黑體", 18F);
             this.label63.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.label63.Location = new System.Drawing.Point(59, 103);
+            this.label63.Location = new System.Drawing.Point(52, 71);
             this.label63.Name = "label63";
             this.label63.Size = new System.Drawing.Size(159, 30);
             this.label63.TabIndex = 0;
@@ -1385,12 +1490,11 @@
             // 
             this.tbRStatus.BackColor = System.Drawing.Color.WhiteSmoke;
             this.tbRStatus.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.tbRStatus.Location = new System.Drawing.Point(224, 103);
+            this.tbRStatus.Location = new System.Drawing.Point(224, 71);
             this.tbRStatus.Name = "tbRStatus";
             this.tbRStatus.ReadOnly = true;
-            this.tbRStatus.Size = new System.Drawing.Size(106, 32);
+            this.tbRStatus.Size = new System.Drawing.Size(237, 32);
             this.tbRStatus.TabIndex = 1;
-            this.tbRStatus.Text = "N/A";
             this.tbRStatus.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // label64
@@ -1424,7 +1528,6 @@
             this.tbRRwaferSensor.ReadOnly = true;
             this.tbRRwaferSensor.Size = new System.Drawing.Size(106, 32);
             this.tbRRwaferSensor.TabIndex = 8;
-            this.tbRRwaferSensor.Text = "ON";
             this.tbRRwaferSensor.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // label67
@@ -1649,7 +1752,7 @@
             this.btnA2Org.FlatAppearance.BorderSize = 2;
             this.btnA2Org.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnA2Org.Font = new System.Drawing.Font("微軟正黑體", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-            this.btnA2Org.Location = new System.Drawing.Point(378, 98);
+            this.btnA2Org.Location = new System.Drawing.Point(235, 99);
             this.btnA2Org.Name = "btnA2Org";
             this.btnA2Org.Size = new System.Drawing.Size(118, 45);
             this.btnA2Org.TabIndex = 94;
@@ -1679,7 +1782,6 @@
             this.tbA2WaferSensor.ReadOnly = true;
             this.tbA2WaferSensor.Size = new System.Drawing.Size(118, 32);
             this.tbA2WaferSensor.TabIndex = 56;
-            this.tbA2WaferSensor.Text = "OFF";
             this.tbA2WaferSensor.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // label22
@@ -1705,7 +1807,6 @@
             this.tbA2Servo.ReadOnly = true;
             this.tbA2Servo.Size = new System.Drawing.Size(118, 32);
             this.tbA2Servo.TabIndex = 56;
-            this.tbA2Servo.Text = "OFF";
             this.tbA2Servo.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // label18
@@ -1723,12 +1824,11 @@
             // 
             this.tbA2Status.BackColor = System.Drawing.Color.WhiteSmoke;
             this.tbA2Status.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.tbA2Status.Location = new System.Drawing.Point(235, 34);
+            this.tbA2Status.Location = new System.Drawing.Point(237, 34);
             this.tbA2Status.Name = "tbA2Status";
             this.tbA2Status.ReadOnly = true;
-            this.tbA2Status.Size = new System.Drawing.Size(118, 32);
+            this.tbA2Status.Size = new System.Drawing.Size(259, 32);
             this.tbA2Status.TabIndex = 20;
-            this.tbA2Status.Text = "N/A";
             this.tbA2Status.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // label17
@@ -1753,7 +1853,7 @@
             this.btnA2Conn.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnA2Conn.Font = new System.Drawing.Font("微軟正黑體", 14.25F);
             this.btnA2Conn.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.btnA2Conn.Location = new System.Drawing.Point(378, 28);
+            this.btnA2Conn.Location = new System.Drawing.Point(519, 28);
             this.btnA2Conn.Name = "btnA2Conn";
             this.btnA2Conn.Size = new System.Drawing.Size(118, 46);
             this.btnA2Conn.TabIndex = 21;
@@ -1805,6 +1905,7 @@
             this.cbA2Angle.Name = "cbA2Angle";
             this.cbA2Angle.Size = new System.Drawing.Size(95, 35);
             this.cbA2Angle.TabIndex = 88;
+            this.cbA2Angle.Text = "0";
             // 
             // btnA2Reset
             // 
@@ -1842,7 +1943,7 @@
             this.btnA2Init.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnA2Init.Font = new System.Drawing.Font("微軟正黑體", 14.25F);
             this.btnA2Init.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.btnA2Init.Location = new System.Drawing.Point(235, 98);
+            this.btnA2Init.Location = new System.Drawing.Point(519, 231);
             this.btnA2Init.Name = "btnA2Init";
             this.btnA2Init.Size = new System.Drawing.Size(118, 46);
             this.btnA2Init.TabIndex = 53;
@@ -1859,7 +1960,6 @@
             this.tbA2Speed.ReadOnly = true;
             this.tbA2Speed.Size = new System.Drawing.Size(118, 32);
             this.tbA2Speed.TabIndex = 28;
-            this.tbA2Speed.Text = "90";
             this.tbA2Speed.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // btnA2DisConn
@@ -1870,7 +1970,7 @@
             this.btnA2DisConn.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnA2DisConn.Font = new System.Drawing.Font("微軟正黑體", 14.25F);
             this.btnA2DisConn.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.btnA2DisConn.Location = new System.Drawing.Point(519, 28);
+            this.btnA2DisConn.Location = new System.Drawing.Point(519, 98);
             this.btnA2DisConn.Name = "btnA2DisConn";
             this.btnA2DisConn.Size = new System.Drawing.Size(118, 46);
             this.btnA2DisConn.TabIndex = 22;
@@ -1941,7 +2041,7 @@
             this.btnA2Home.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnA2Home.Font = new System.Drawing.Font("微軟正黑體", 14.25F);
             this.btnA2Home.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.btnA2Home.Location = new System.Drawing.Point(519, 98);
+            this.btnA2Home.Location = new System.Drawing.Point(378, 98);
             this.btnA2Home.Name = "btnA2Home";
             this.btnA2Home.Size = new System.Drawing.Size(118, 46);
             this.btnA2Home.TabIndex = 54;
@@ -2067,7 +2167,6 @@
             this.tbA2VacSolenoid.ReadOnly = true;
             this.tbA2VacSolenoid.Size = new System.Drawing.Size(118, 32);
             this.tbA2VacSolenoid.TabIndex = 15;
-            this.tbA2VacSolenoid.Text = "OFF";
             this.tbA2VacSolenoid.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // groupBox22
@@ -2259,7 +2358,7 @@
             this.btnA1Org.FlatAppearance.BorderSize = 2;
             this.btnA1Org.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnA1Org.Font = new System.Drawing.Font("微軟正黑體", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-            this.btnA1Org.Location = new System.Drawing.Point(371, 104);
+            this.btnA1Org.Location = new System.Drawing.Point(228, 104);
             this.btnA1Org.Name = "btnA1Org";
             this.btnA1Org.Size = new System.Drawing.Size(118, 45);
             this.btnA1Org.TabIndex = 94;
@@ -2320,6 +2419,7 @@
             this.cbA1Angle.Name = "cbA1Angle";
             this.cbA1Angle.Size = new System.Drawing.Size(95, 35);
             this.cbA1Angle.TabIndex = 88;
+            this.cbA1Angle.Text = "0";
             // 
             // label70
             // 
@@ -2341,7 +2441,6 @@
             this.tbA1Speed.ReadOnly = true;
             this.tbA1Speed.Size = new System.Drawing.Size(118, 32);
             this.tbA1Speed.TabIndex = 28;
-            this.tbA1Speed.Text = "90";
             this.tbA1Speed.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // label71
@@ -2390,7 +2489,6 @@
             this.tbA1Servo.ReadOnly = true;
             this.tbA1Servo.Size = new System.Drawing.Size(118, 32);
             this.tbA1Servo.TabIndex = 24;
-            this.tbA1Servo.Text = "OFF";
             this.tbA1Servo.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // tbA1Status
@@ -2400,9 +2498,9 @@
             this.tbA1Status.Location = new System.Drawing.Point(228, 40);
             this.tbA1Status.Name = "tbA1Status";
             this.tbA1Status.ReadOnly = true;
-            this.tbA1Status.Size = new System.Drawing.Size(118, 32);
+            this.tbA1Status.Size = new System.Drawing.Size(261, 32);
             this.tbA1Status.TabIndex = 20;
-            this.tbA1Status.Text = "N/A";
+            this.tbA1Status.Text = "Disconnected";
             this.tbA1Status.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // label5
@@ -2455,7 +2553,6 @@
             this.tbA1VacSolenoid.ReadOnly = true;
             this.tbA1VacSolenoid.Size = new System.Drawing.Size(118, 32);
             this.tbA1VacSolenoid.TabIndex = 15;
-            this.tbA1VacSolenoid.Text = "OFF";
             this.tbA1VacSolenoid.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // btnA1Align
@@ -2521,7 +2618,6 @@
             this.tbA1WaferSensor.ReadOnly = true;
             this.tbA1WaferSensor.Size = new System.Drawing.Size(118, 32);
             this.tbA1WaferSensor.TabIndex = 8;
-            this.tbA1WaferSensor.Text = "OFF";
             this.tbA1WaferSensor.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // btnA1Home
@@ -2532,7 +2628,7 @@
             this.btnA1Home.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnA1Home.Font = new System.Drawing.Font("微軟正黑體", 14.25F);
             this.btnA1Home.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.btnA1Home.Location = new System.Drawing.Point(512, 104);
+            this.btnA1Home.Location = new System.Drawing.Point(371, 103);
             this.btnA1Home.Name = "btnA1Home";
             this.btnA1Home.Size = new System.Drawing.Size(118, 46);
             this.btnA1Home.TabIndex = 54;
@@ -2580,7 +2676,7 @@
             this.btnA1DisConn.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnA1DisConn.Font = new System.Drawing.Font("微軟正黑體", 14.25F);
             this.btnA1DisConn.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.btnA1DisConn.Location = new System.Drawing.Point(512, 34);
+            this.btnA1DisConn.Location = new System.Drawing.Point(512, 103);
             this.btnA1DisConn.Name = "btnA1DisConn";
             this.btnA1DisConn.Size = new System.Drawing.Size(118, 46);
             this.btnA1DisConn.TabIndex = 22;
@@ -2597,7 +2693,7 @@
             this.btnA1Init.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnA1Init.Font = new System.Drawing.Font("微軟正黑體", 14.25F);
             this.btnA1Init.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.btnA1Init.Location = new System.Drawing.Point(228, 104);
+            this.btnA1Init.Location = new System.Drawing.Point(512, 231);
             this.btnA1Init.Name = "btnA1Init";
             this.btnA1Init.Size = new System.Drawing.Size(118, 46);
             this.btnA1Init.TabIndex = 53;
@@ -2629,7 +2725,7 @@
             this.btnA1Conn.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnA1Conn.Font = new System.Drawing.Font("微軟正黑體", 14.25F);
             this.btnA1Conn.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.btnA1Conn.Location = new System.Drawing.Point(371, 34);
+            this.btnA1Conn.Location = new System.Drawing.Point(512, 34);
             this.btnA1Conn.Name = "btnA1Conn";
             this.btnA1Conn.Size = new System.Drawing.Size(118, 46);
             this.btnA1Conn.TabIndex = 21;
@@ -4507,6 +4603,7 @@
             this.pnlRobotCmdA2.ResumeLayout(false);
             this.pnlRobotCmdA2.PerformLayout();
             this.panel10.ResumeLayout(false);
+            this.panel10.PerformLayout();
             this.groupBox21.ResumeLayout(false);
             this.panel13.ResumeLayout(false);
             this.pnlRobotStatus.ResumeLayout(false);
@@ -4834,5 +4931,12 @@
         private System.Windows.Forms.NumericUpDown nudA1SpeedNew;
         private System.Windows.Forms.TextBox tbA2Speed;
         private System.Windows.Forms.TextBox tbA1Speed;
+        private System.Windows.Forms.TextBox tbRError;
+        private System.Windows.Forms.Label label25;
+        private System.Windows.Forms.Label label26;
+        private System.Windows.Forms.TextBox tbRServo;
+        private System.Windows.Forms.Button btnRServoOn;
+        private System.Windows.Forms.Button btnRServoOff;
+        private System.Windows.Forms.Button btnRReset;
     }
 }

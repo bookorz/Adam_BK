@@ -17,7 +17,7 @@ namespace Adam.UI_Update.Manual
         //delegate void ShowMessage(string str);
         delegate void UpdateGUI_D(Transaction txn, string name, string msg);
         delegate void UpdateStatus_D(string device);
-        delegate void UpdateGUIStatus_D(string name, string status);
+        delegate void UpdateAlignerStatus_D(string name, string status);
 
         public static void UpdateGUI(Transaction txn, string name, string msg)
         {
@@ -52,7 +52,6 @@ namespace Adam.UI_Update.Manual
                             break;
                         default:
                             manual.Cursor = Cursors.Default;
-                            //manual.Enabled = true;
                             Control tbcManual = manual.Controls.Find("tbcManual", true).FirstOrDefault() as Control;
                             tbcManual.Enabled = true;
                             break;
@@ -65,10 +64,26 @@ namespace Adam.UI_Update.Manual
                         switch (txn.Value)
                         {
                             case "4":
-                                next_txn.Method = Transaction.Command.RobotType.GetRIO;
+                                next_txn.Method = Transaction.Command.AlignerType.GetRIO;
                                 next_txn.Value = "8"; //8 Present ¦^õX¦b®u Sensor ªºª¬ºA
                                 break;
                         }
+                        if (!next_txn.Method.Equals(""))
+                        {
+                            next_txn.FormName = "FormManual";
+                            Node robot = NodeManagement.Get(name);
+                            robot.SendCommand(next_txn);
+                        }
+                        else
+                        {
+                            //do nothing
+                        }
+                    }
+                    if (method.Equals(Transaction.Command.AlignerType.AlignerServo))
+                    {
+                        Transaction next_txn = new Transaction();
+                        next_txn = new Transaction();
+                        next_txn.Method = Transaction.Command.AlignerType.GetStatus;
                         if (!next_txn.Method.Equals(""))
                         {
                             next_txn.FormName = "FormManual";
@@ -88,7 +103,7 @@ namespace Adam.UI_Update.Manual
                 Console.WriteLine("Exception caught: {0}", e);
             }
         }
-        private static void UpdateStatus(string device)
+        public static void UpdateStatus(string device)
         {
             Form manual = Application.OpenForms["FormManual"];
 
@@ -141,34 +156,10 @@ namespace Adam.UI_Update.Manual
                     tbError = manual.Controls.Find("tbA2Error", true).FirstOrDefault() as Control;
                 }
 
-                if (tbStatus != null && false) //debug
-                {
-                    // tbStatus.Text = aligner.Status;
-                    tbStatus.Text = aligner.State;
-                    Color color = new Color();
-                    switch (tbStatus.Text)
-                    {
-                        case "N/A":
-                            color = Color.MintCream;
-                            break;
-                        case "0:Start":
-                            color = Color.LightGreen;
-                            break;
-                        case "1:Start Finish":
-                            color = Color.LightSkyBlue;
-                            break;
-                        case "2:System Error Finish":
-                            color = Color.Red;
-                            break;
-                        default:
-                            color = Color.White;
-                            break;
-                    }
-                    tbStatus.BackColor = color;
-                }
+                
                 if (tbServo != null)
                 {
-                    tbServo.Text = aligner.Servo.Equals("1") ? "ON" : "OFF";
+                    tbServo.Text = servo;
                     Color color = new Color();
                     switch (tbServo.Text)
                     {
@@ -231,7 +222,7 @@ namespace Adam.UI_Update.Manual
 
         }
 
-        public static void UpdateGUIStatus(string name, string status)
+        public static void UpdateAlignerStatus(string name, string status)
         {
             Form manual = Application.OpenForms["FormManual"];
 
@@ -240,7 +231,7 @@ namespace Adam.UI_Update.Manual
 
             if (manual.InvokeRequired)
             {
-                UpdateGUIStatus_D ph = new UpdateGUIStatus_D(UpdateGUIStatus);
+                UpdateAlignerStatus_D ph = new UpdateAlignerStatus_D(UpdateAlignerStatus);
                 manual.BeginInvoke(ph, name, status);
             }
             else

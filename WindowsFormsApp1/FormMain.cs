@@ -293,9 +293,12 @@ namespace Adam
                             {
                                 case Transaction.Command.RobotType.RobotSpeed:
                                 case Transaction.Command.RobotType.RobotMode:
+                                case Transaction.Command.RobotType.Reset:
+                                case Transaction.Command.RobotType.RobotServo:
                                 case Transaction.Command.RobotType.GetStatus:
                                 case Transaction.Command.RobotType.GetSpeed:
                                 case Transaction.Command.RobotType.GetRIO:
+                                case Transaction.Command.RobotType.GetError:
                                     ManualRobotStatusUpdate.UpdateGUI(Txn, Node.Name, Msg.Value);//update 手動功能畫面
                                     break;
                             }
@@ -309,6 +312,8 @@ namespace Adam
                                 case Transaction.Command.AlignerType.GetSpeed:
                                 case Transaction.Command.AlignerType.GetRIO:
                                 case Transaction.Command.AlignerType.GetError:
+                                case Transaction.Command.AlignerType.Reset:
+                                case Transaction.Command.AlignerType.AlignerServo:
                                     ManualAlignerStatusUpdate.UpdateGUI(Txn, Node.Name, Msg.Value);//update 手動功能畫面
                                     break;
                             }
@@ -455,11 +460,11 @@ namespace Adam
             {
                 case "Robot01":
                 case "Robot02":
-                    ManualRobotStatusUpdate.UpdateGUIStatus(Node.Name, Status);//update 手動功能畫面
+                    ManualRobotStatusUpdate.UpdateRobotStatus(Node.Name, Status);//update 手動功能畫面
                     break;
                 case "Aligner01":
                 case "Aligner02":
-                    ManualAlignerStatusUpdate.UpdateGUIStatus(Node.Name, Status);//update 手動功能畫面
+                    ManualAlignerStatusUpdate.UpdateAlignerStatus(Node.Name, Status);//update 手動功能畫面
                     break;
             }
         }

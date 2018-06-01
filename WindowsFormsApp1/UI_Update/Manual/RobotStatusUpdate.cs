@@ -17,7 +17,7 @@ namespace Adam.UI_Update.Manual
         //delegate void ShowMessage(string str);
         delegate void UpdateGUI_D(Transaction txn, string name, string msg);
         delegate void UpdateStatus_D(string device);
-        delegate void UpdateGUIStatus_D(string name, string status);
+        delegate void UpdateRobotStatus_D(string name, string status);
 
         public static void UpdateGUI(Transaction txn, string name, string msg)
         {
@@ -46,6 +46,9 @@ namespace Adam.UI_Update.Manual
                             break;
                         case Transaction.Command.RobotType.GetRIO:
                             StateUtil.UpdateRIO(name, msg);
+                            break;
+                        case Transaction.Command.RobotType.GetError:
+                            StateUtil.UpdateError(name, msg);
                             break;
                         default:
                             manual.Cursor = Cursors.Default;
@@ -84,6 +87,22 @@ namespace Adam.UI_Update.Manual
                             //do nothing
                         }
                     }
+                    if (method.Equals(Transaction.Command.RobotType.RobotServo))
+                    {
+                        Transaction next_txn = new Transaction();
+                        next_txn = new Transaction();
+                        next_txn.Method = Transaction.Command.RobotType.GetStatus;
+                        if (!next_txn.Method.Equals(""))
+                        {
+                            next_txn.FormName = "FormManual";
+                            Node robot = NodeManagement.Get(name);
+                            robot.SendCommand(next_txn);
+                        }
+                        else
+                        {
+                            //do nothing
+                        }
+                    }
                 }
             }
             catch (Exception e)
@@ -93,7 +112,7 @@ namespace Adam.UI_Update.Manual
             }
         }
 
-        private static void UpdateStatus(string device)
+        public static void UpdateStatus(string device)
         {
             Form manual = Application.OpenForms["FormManual"];
 
@@ -113,31 +132,7 @@ namespace Adam.UI_Update.Manual
                 {
                     return;
                 }
-                Control tbRStatus = manual.Controls.Find("tbRStatus", true).FirstOrDefault() as Control;
-                if (tbRStatus != null && false)//debug
-                {
-                    tbRStatus.Text = robot.Status;
-                    Color color = new Color();
-                    switch (tbRStatus.Text)
-                    {
-                        case "N/A":
-                            color = Color.MintCream;
-                            break;
-                        case "0:Start":
-                            color = Color.LightGreen;
-                            break;
-                        case "1:Start Finish":
-                            color = Color.LightSkyBlue;
-                            break;
-                        case "2:System Error Finish":
-                            color = Color.Red;
-                            break;
-                        default:
-                            color = Color.White;
-                            break;
-                    }
-                    tbRStatus.BackColor = color;
-                }
+                
                 Control tbRSpeed = manual.Controls.Find("tbRSpeed", true).FirstOrDefault() as Control;
                 if (tbRSpeed != null)
                 {
@@ -216,11 +211,41 @@ namespace Adam.UI_Update.Manual
                     }
                     tbRLVacuSolenoid.BackColor = color;
                 }
+                string servo = "";
+                string state = robot.State != null ? robot.State.Trim() : "";
+                if (state.Length == 32)
+                {
+                    servo = state.Substring(10 - 1, 1).Equals("1") ? "ON" : "OFF";// 10 Servo On 0 = Servo off 1 = Servo On
+                }
+                Control tbRServo = manual.Controls.Find("tbRServo", true).FirstOrDefault() as Control;
+                if (tbRServo != null)
+                {
+                    tbRServo.Text = servo;
+                    Color color = new Color();
+                    switch (tbRServo.Text)
+                    {
+                        case "OFF":
+                            color = Color.MintCream;
+                            break;
+                        case "ON":
+                            color = Color.LightGreen;
+                            break;
+                        default:
+                            color = Color.White;
+                            break;
+                    }
+                    tbRServo.BackColor = color;
+                }
+                Control tbRError = manual.Controls.Find("tbRError", true).FirstOrDefault() as Control;
+                if (tbRError != null)
+                {
+                    tbRError.Text = robot.Error;
+                }
             }
                 
         }
 
-        public static void UpdateGUIStatus(string name, string status)
+        public static void UpdateRobotStatus(string name, string status)
         {
             Form manual = Application.OpenForms["FormManual"];
 
@@ -229,7 +254,7 @@ namespace Adam.UI_Update.Manual
 
             if (manual.InvokeRequired)
             {
-                UpdateGUIStatus_D ph = new UpdateGUIStatus_D(UpdateGUIStatus);
+                UpdateRobotStatus_D ph = new UpdateRobotStatus_D(UpdateRobotStatus);
                 manual.BeginInvoke(ph, name, status);
             }
             else
