@@ -29,7 +29,7 @@ namespace Adam.UI_Update.Manual
 
                 if (portName.InvokeRequired)
                 {
-                    UpdateData ph = new UpdateData(UpdateVersion);
+                    UpdateData ph = new UpdateData(UpdateLog);
                     portName.BeginInvoke(ph, NodeName, Data);
                 }
                 else
@@ -39,7 +39,8 @@ namespace Adam.UI_Update.Manual
                         RichTextBox LOG = form.Controls.Find("RTxt_Message_A", true).FirstOrDefault() as RichTextBox;
                         if (LOG == null)
                             return;
-                        LOG.AppendText(Data);
+                        LOG.AppendText(Data+"\n");
+                        LOG.ScrollToCaret();
                     }
 
                 }

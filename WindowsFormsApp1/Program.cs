@@ -16,9 +16,9 @@ namespace Adam
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            FormMain t = new FormMain();
-            t.Hide();
-            Application.Run(t);
+            //啟動畫面
+            SplashScreen.ShowSplashScreen();
+            Application.Run(new FormMain());
         }
     }
 }

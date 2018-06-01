@@ -34,5 +34,11 @@ namespace Adam
         {
             AlarmUpdate.UpdateAlarmList(AlarmManagement.GetAll());
         }
+
+        private void AlarmFrom_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            e.Cancel = true;
+            this.Visible = false;
+        }
     }
 }
