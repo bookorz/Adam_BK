@@ -29,27 +29,27 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormCommunications));
-            this.groupBox7 = new System.Windows.Forms.GroupBox();
-            this.listBox1 = new System.Windows.Forms.ListBox();
-            this.groupBox8 = new System.Windows.Forms.GroupBox();
+            this.gbDeviceList = new System.Windows.Forms.GroupBox();
+            this.libDeviceList = new System.Windows.Forms.ListBox();
+            this.gbDeviceCommunications = new System.Windows.Forms.GroupBox();
             this.tableLayoutPanel4 = new System.Windows.Forms.TableLayoutPanel();
-            this.groupBox9 = new System.Windows.Forms.GroupBox();
+            this.gbCommunicatorType = new System.Windows.Forms.GroupBox();
             this.splitContainer1 = new System.Windows.Forms.SplitContainer();
             this.tableLayoutPanel5 = new System.Windows.Forms.TableLayoutPanel();
-            this.button19 = new System.Windows.Forms.Button();
+            this.btnTCPIP = new System.Windows.Forms.Button();
             this.button20 = new System.Windows.Forms.Button();
             this.button21 = new System.Windows.Forms.Button();
-            this.groupBox12 = new System.Windows.Forms.GroupBox();
+            this.gbCommunicatorTypeNotice = new System.Windows.Forms.GroupBox();
             this.textBox12 = new System.Windows.Forms.TextBox();
-            this.groupBox10 = new System.Windows.Forms.GroupBox();
+            this.gbIPAddressSettingandMaintain = new System.Windows.Forms.GroupBox();
             this.splitContainer2 = new System.Windows.Forms.SplitContainer();
             this.tableLayoutPanel6 = new System.Windows.Forms.TableLayoutPanel();
             this.splitContainer5 = new System.Windows.Forms.SplitContainer();
-            this.label23 = new System.Windows.Forms.Label();
-            this.textBox14 = new System.Windows.Forms.TextBox();
+            this.labPortNo = new System.Windows.Forms.Label();
+            this.txbPortNo = new System.Windows.Forms.TextBox();
             this.splitContainer4 = new System.Windows.Forms.SplitContainer();
-            this.label22 = new System.Windows.Forms.Label();
-            this.textBox13 = new System.Windows.Forms.TextBox();
+            this.labIPAddress = new System.Windows.Forms.Label();
+            this.txbIPAddress = new System.Windows.Forms.TextBox();
             this.groupBox15 = new System.Windows.Forms.GroupBox();
             this.tableLayoutPanel9 = new System.Windows.Forms.TableLayoutPanel();
             this.label28 = new System.Windows.Forms.Label();
@@ -71,17 +71,17 @@
             this.tableLayoutPanel11 = new System.Windows.Forms.TableLayoutPanel();
             this.button22 = new System.Windows.Forms.Button();
             this.button23 = new System.Windows.Forms.Button();
-            this.groupBox7.SuspendLayout();
-            this.groupBox8.SuspendLayout();
+            this.gbDeviceList.SuspendLayout();
+            this.gbDeviceCommunications.SuspendLayout();
             this.tableLayoutPanel4.SuspendLayout();
-            this.groupBox9.SuspendLayout();
+            this.gbCommunicatorType.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
             this.splitContainer1.Panel1.SuspendLayout();
             this.splitContainer1.Panel2.SuspendLayout();
             this.splitContainer1.SuspendLayout();
             this.tableLayoutPanel5.SuspendLayout();
-            this.groupBox12.SuspendLayout();
-            this.groupBox10.SuspendLayout();
+            this.gbCommunicatorTypeNotice.SuspendLayout();
+            this.gbIPAddressSettingandMaintain.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer2)).BeginInit();
             this.splitContainer2.Panel1.SuspendLayout();
             this.splitContainer2.Panel2.SuspendLayout();
@@ -110,47 +110,47 @@
             this.tableLayoutPanel11.SuspendLayout();
             this.SuspendLayout();
             // 
-            // groupBox7
+            // gbDeviceList
             // 
-            this.groupBox7.Controls.Add(this.listBox1);
-            this.groupBox7.Dock = System.Windows.Forms.DockStyle.Left;
-            this.groupBox7.Location = new System.Drawing.Point(0, 0);
-            this.groupBox7.Name = "groupBox7";
-            this.groupBox7.Size = new System.Drawing.Size(305, 760);
-            this.groupBox7.TabIndex = 2;
-            this.groupBox7.TabStop = false;
-            this.groupBox7.Text = "Device List";
+            this.gbDeviceList.Controls.Add(this.libDeviceList);
+            this.gbDeviceList.Dock = System.Windows.Forms.DockStyle.Left;
+            this.gbDeviceList.Location = new System.Drawing.Point(0, 0);
+            this.gbDeviceList.Name = "gbDeviceList";
+            this.gbDeviceList.Size = new System.Drawing.Size(305, 760);
+            this.gbDeviceList.TabIndex = 2;
+            this.gbDeviceList.TabStop = false;
+            this.gbDeviceList.Text = "Device List";
             // 
-            // listBox1
+            // libDeviceList
             // 
-            this.listBox1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.listBox1.FormattingEnabled = true;
-            this.listBox1.HorizontalExtent = 1;
-            this.listBox1.HorizontalScrollbar = true;
-            this.listBox1.ItemHeight = 20;
-            this.listBox1.Location = new System.Drawing.Point(3, 25);
-            this.listBox1.Name = "listBox1";
-            this.listBox1.ScrollAlwaysVisible = true;
-            this.listBox1.Size = new System.Drawing.Size(299, 732);
-            this.listBox1.TabIndex = 0;
+            this.libDeviceList.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.libDeviceList.FormattingEnabled = true;
+            this.libDeviceList.HorizontalExtent = 1;
+            this.libDeviceList.HorizontalScrollbar = true;
+            this.libDeviceList.ItemHeight = 20;
+            this.libDeviceList.Location = new System.Drawing.Point(3, 25);
+            this.libDeviceList.Name = "libDeviceList";
+            this.libDeviceList.ScrollAlwaysVisible = true;
+            this.libDeviceList.Size = new System.Drawing.Size(299, 732);
+            this.libDeviceList.TabIndex = 0;
             // 
-            // groupBox8
+            // gbDeviceCommunications
             // 
-            this.groupBox8.Controls.Add(this.tableLayoutPanel4);
-            this.groupBox8.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.groupBox8.Location = new System.Drawing.Point(305, 0);
-            this.groupBox8.Name = "groupBox8";
-            this.groupBox8.Size = new System.Drawing.Size(1315, 760);
-            this.groupBox8.TabIndex = 3;
-            this.groupBox8.TabStop = false;
-            this.groupBox8.Text = "Device Communications";
+            this.gbDeviceCommunications.Controls.Add(this.tableLayoutPanel4);
+            this.gbDeviceCommunications.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.gbDeviceCommunications.Location = new System.Drawing.Point(305, 0);
+            this.gbDeviceCommunications.Name = "gbDeviceCommunications";
+            this.gbDeviceCommunications.Size = new System.Drawing.Size(1315, 760);
+            this.gbDeviceCommunications.TabIndex = 3;
+            this.gbDeviceCommunications.TabStop = false;
+            this.gbDeviceCommunications.Text = "Device Communications";
             // 
             // tableLayoutPanel4
             // 
             this.tableLayoutPanel4.ColumnCount = 1;
             this.tableLayoutPanel4.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel4.Controls.Add(this.groupBox9, 0, 0);
-            this.tableLayoutPanel4.Controls.Add(this.groupBox10, 0, 1);
+            this.tableLayoutPanel4.Controls.Add(this.gbCommunicatorType, 0, 0);
+            this.tableLayoutPanel4.Controls.Add(this.gbIPAddressSettingandMaintain, 0, 1);
             this.tableLayoutPanel4.Controls.Add(this.tableLayoutPanel11, 0, 3);
             this.tableLayoutPanel4.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanel4.Location = new System.Drawing.Point(3, 25);
@@ -163,16 +163,16 @@
             this.tableLayoutPanel4.Size = new System.Drawing.Size(1309, 732);
             this.tableLayoutPanel4.TabIndex = 0;
             // 
-            // groupBox9
+            // gbCommunicatorType
             // 
-            this.groupBox9.Controls.Add(this.splitContainer1);
-            this.groupBox9.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.groupBox9.Location = new System.Drawing.Point(3, 3);
-            this.groupBox9.Name = "groupBox9";
-            this.groupBox9.Size = new System.Drawing.Size(1303, 217);
-            this.groupBox9.TabIndex = 0;
-            this.groupBox9.TabStop = false;
-            this.groupBox9.Text = "Communicator Type";
+            this.gbCommunicatorType.Controls.Add(this.splitContainer1);
+            this.gbCommunicatorType.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.gbCommunicatorType.Location = new System.Drawing.Point(3, 3);
+            this.gbCommunicatorType.Name = "gbCommunicatorType";
+            this.gbCommunicatorType.Size = new System.Drawing.Size(1303, 217);
+            this.gbCommunicatorType.TabIndex = 0;
+            this.gbCommunicatorType.TabStop = false;
+            this.gbCommunicatorType.Text = "Communicator Type";
             // 
             // splitContainer1
             // 
@@ -187,7 +187,7 @@
             // 
             // splitContainer1.Panel2
             // 
-            this.splitContainer1.Panel2.Controls.Add(this.groupBox12);
+            this.splitContainer1.Panel2.Controls.Add(this.gbCommunicatorTypeNotice);
             this.splitContainer1.Size = new System.Drawing.Size(1297, 189);
             this.splitContainer1.SplitterDistance = 813;
             this.splitContainer1.TabIndex = 0;
@@ -198,7 +198,7 @@
             this.tableLayoutPanel5.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
             this.tableLayoutPanel5.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 33.33334F));
             this.tableLayoutPanel5.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 33.33334F));
-            this.tableLayoutPanel5.Controls.Add(this.button19, 0, 1);
+            this.tableLayoutPanel5.Controls.Add(this.btnTCPIP, 0, 1);
             this.tableLayoutPanel5.Controls.Add(this.button20, 1, 1);
             this.tableLayoutPanel5.Controls.Add(this.button21, 2, 1);
             this.tableLayoutPanel5.Dock = System.Windows.Forms.DockStyle.Fill;
@@ -212,21 +212,21 @@
             this.tableLayoutPanel5.TabIndex = 0;
             this.tableLayoutPanel5.UseWaitCursor = true;
             // 
-            // button19
+            // btnTCPIP
             // 
-            this.button19.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
-            this.button19.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.button19.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
-            this.button19.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
-            this.button19.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button19.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.button19.Location = new System.Drawing.Point(3, 66);
-            this.button19.Name = "button19";
-            this.button19.Size = new System.Drawing.Size(264, 57);
-            this.button19.TabIndex = 0;
-            this.button19.Text = "TCP/IP";
-            this.button19.UseVisualStyleBackColor = false;
-            this.button19.UseWaitCursor = true;
+            this.btnTCPIP.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
+            this.btnTCPIP.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.btnTCPIP.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
+            this.btnTCPIP.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.btnTCPIP.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnTCPIP.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.btnTCPIP.Location = new System.Drawing.Point(3, 66);
+            this.btnTCPIP.Name = "btnTCPIP";
+            this.btnTCPIP.Size = new System.Drawing.Size(264, 57);
+            this.btnTCPIP.TabIndex = 0;
+            this.btnTCPIP.Text = "TCP/IP";
+            this.btnTCPIP.UseVisualStyleBackColor = false;
+            this.btnTCPIP.UseWaitCursor = true;
             // 
             // button20
             // 
@@ -260,16 +260,16 @@
             this.button21.UseVisualStyleBackColor = false;
             this.button21.UseWaitCursor = true;
             // 
-            // groupBox12
+            // gbCommunicatorTypeNotice
             // 
-            this.groupBox12.Controls.Add(this.textBox12);
-            this.groupBox12.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.groupBox12.Location = new System.Drawing.Point(0, 0);
-            this.groupBox12.Name = "groupBox12";
-            this.groupBox12.Size = new System.Drawing.Size(480, 189);
-            this.groupBox12.TabIndex = 0;
-            this.groupBox12.TabStop = false;
-            this.groupBox12.Text = "Notice";
+            this.gbCommunicatorTypeNotice.Controls.Add(this.textBox12);
+            this.gbCommunicatorTypeNotice.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.gbCommunicatorTypeNotice.Location = new System.Drawing.Point(0, 0);
+            this.gbCommunicatorTypeNotice.Name = "gbCommunicatorTypeNotice";
+            this.gbCommunicatorTypeNotice.Size = new System.Drawing.Size(480, 189);
+            this.gbCommunicatorTypeNotice.TabIndex = 0;
+            this.gbCommunicatorTypeNotice.TabStop = false;
+            this.gbCommunicatorTypeNotice.Text = "Notice";
             // 
             // textBox12
             // 
@@ -283,16 +283,16 @@
     "s independent of the access method, frame format or medium (cable, wireless etc)" +
     ". ";
             // 
-            // groupBox10
+            // gbIPAddressSettingandMaintain
             // 
-            this.groupBox10.Controls.Add(this.splitContainer2);
-            this.groupBox10.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.groupBox10.Location = new System.Drawing.Point(3, 226);
-            this.groupBox10.Name = "groupBox10";
-            this.groupBox10.Size = new System.Drawing.Size(1303, 218);
-            this.groupBox10.TabIndex = 1;
-            this.groupBox10.TabStop = false;
-            this.groupBox10.Text = "IP Address Setting and Maintain";
+            this.gbIPAddressSettingandMaintain.Controls.Add(this.splitContainer2);
+            this.gbIPAddressSettingandMaintain.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.gbIPAddressSettingandMaintain.Location = new System.Drawing.Point(3, 226);
+            this.gbIPAddressSettingandMaintain.Name = "gbIPAddressSettingandMaintain";
+            this.gbIPAddressSettingandMaintain.Size = new System.Drawing.Size(1303, 218);
+            this.gbIPAddressSettingandMaintain.TabIndex = 1;
+            this.gbIPAddressSettingandMaintain.TabStop = false;
+            this.gbIPAddressSettingandMaintain.Text = "IP Address Setting and Maintain";
             // 
             // splitContainer2
             // 
@@ -338,39 +338,39 @@
             // 
             // splitContainer5.Panel1
             // 
-            this.splitContainer5.Panel1.Controls.Add(this.label23);
+            this.splitContainer5.Panel1.Controls.Add(this.labPortNo);
             // 
             // splitContainer5.Panel2
             // 
-            this.splitContainer5.Panel2.Controls.Add(this.textBox14);
+            this.splitContainer5.Panel2.Controls.Add(this.txbPortNo);
             this.splitContainer5.Panel2.Padding = new System.Windows.Forms.Padding(0, 14, 0, 0);
             this.splitContainer5.Size = new System.Drawing.Size(397, 54);
             this.splitContainer5.SplitterDistance = 128;
             this.splitContainer5.TabIndex = 1;
             // 
-            // label23
+            // labPortNo
             // 
-            this.label23.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.label23.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.label23.Location = new System.Drawing.Point(0, 0);
-            this.label23.Name = "label23";
-            this.label23.Size = new System.Drawing.Size(128, 54);
-            this.label23.TabIndex = 0;
-            this.label23.Text = "Port No.";
-            this.label23.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.labPortNo.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.labPortNo.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.labPortNo.Location = new System.Drawing.Point(0, 0);
+            this.labPortNo.Name = "labPortNo";
+            this.labPortNo.Size = new System.Drawing.Size(128, 54);
+            this.labPortNo.TabIndex = 0;
+            this.labPortNo.Text = "Port No.";
+            this.labPortNo.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
-            // textBox14
+            // txbPortNo
             // 
-            this.textBox14.BackColor = System.Drawing.Color.White;
-            this.textBox14.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
-            this.textBox14.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.textBox14.Location = new System.Drawing.Point(0, 14);
-            this.textBox14.Name = "textBox14";
-            this.textBox14.ReadOnly = true;
-            this.textBox14.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.textBox14.Size = new System.Drawing.Size(265, 29);
-            this.textBox14.TabIndex = 0;
-            this.textBox14.Text = "8080";
+            this.txbPortNo.BackColor = System.Drawing.Color.White;
+            this.txbPortNo.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
+            this.txbPortNo.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.txbPortNo.Location = new System.Drawing.Point(0, 14);
+            this.txbPortNo.Name = "txbPortNo";
+            this.txbPortNo.ReadOnly = true;
+            this.txbPortNo.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.txbPortNo.Size = new System.Drawing.Size(265, 29);
+            this.txbPortNo.TabIndex = 0;
+            this.txbPortNo.Text = "8080";
             // 
             // splitContainer4
             // 
@@ -380,39 +380,39 @@
             // 
             // splitContainer4.Panel1
             // 
-            this.splitContainer4.Panel1.Controls.Add(this.label22);
+            this.splitContainer4.Panel1.Controls.Add(this.labIPAddress);
             // 
             // splitContainer4.Panel2
             // 
-            this.splitContainer4.Panel2.Controls.Add(this.textBox13);
+            this.splitContainer4.Panel2.Controls.Add(this.txbIPAddress);
             this.splitContainer4.Panel2.Padding = new System.Windows.Forms.Padding(0, 14, 0, 0);
             this.splitContainer4.Size = new System.Drawing.Size(404, 54);
             this.splitContainer4.SplitterDistance = 130;
             this.splitContainer4.TabIndex = 0;
             // 
-            // label22
+            // labIPAddress
             // 
-            this.label22.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.label22.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.label22.Location = new System.Drawing.Point(0, 0);
-            this.label22.Name = "label22";
-            this.label22.Size = new System.Drawing.Size(130, 54);
-            this.label22.TabIndex = 0;
-            this.label22.Text = "IP Address";
-            this.label22.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.labIPAddress.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.labIPAddress.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.labIPAddress.Location = new System.Drawing.Point(0, 0);
+            this.labIPAddress.Name = "labIPAddress";
+            this.labIPAddress.Size = new System.Drawing.Size(130, 54);
+            this.labIPAddress.TabIndex = 0;
+            this.labIPAddress.Text = "IP Address";
+            this.labIPAddress.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
-            // textBox13
+            // txbIPAddress
             // 
-            this.textBox13.BackColor = System.Drawing.Color.White;
-            this.textBox13.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
-            this.textBox13.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.textBox13.Location = new System.Drawing.Point(0, 14);
-            this.textBox13.Name = "textBox13";
-            this.textBox13.ReadOnly = true;
-            this.textBox13.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.textBox13.Size = new System.Drawing.Size(270, 29);
-            this.textBox13.TabIndex = 0;
-            this.textBox13.Text = "192.168.0.127";
+            this.txbIPAddress.BackColor = System.Drawing.Color.White;
+            this.txbIPAddress.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
+            this.txbIPAddress.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.txbIPAddress.Location = new System.Drawing.Point(0, 14);
+            this.txbIPAddress.Name = "txbIPAddress";
+            this.txbIPAddress.ReadOnly = true;
+            this.txbIPAddress.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.txbIPAddress.Size = new System.Drawing.Size(270, 29);
+            this.txbIPAddress.TabIndex = 0;
+            this.txbIPAddress.Text = "192.168.0.127";
             // 
             // groupBox15
             // 
@@ -476,8 +476,10 @@
             // 
             // numericUpDown8
             // 
+            this.numericUpDown8.BackColor = System.Drawing.Color.White;
+            this.numericUpDown8.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.numericUpDown8.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.numericUpDown8.Font = new System.Drawing.Font("微軟正黑體", 15.75F);
+            this.numericUpDown8.Font = new System.Drawing.Font("微軟正黑體", 16F);
             this.numericUpDown8.Location = new System.Drawing.Point(3, 3);
             this.numericUpDown8.Maximum = new decimal(new int[] {
             9999,
@@ -486,7 +488,7 @@
             0});
             this.numericUpDown8.Name = "numericUpDown8";
             this.numericUpDown8.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.numericUpDown8.Size = new System.Drawing.Size(75, 35);
+            this.numericUpDown8.Size = new System.Drawing.Size(75, 36);
             this.numericUpDown8.TabIndex = 0;
             this.numericUpDown8.Value = new decimal(new int[] {
             8080,
@@ -753,21 +755,21 @@
             // FormCommunications
             // 
             this.ClientSize = new System.Drawing.Size(1620, 760);
-            this.Controls.Add(this.groupBox8);
-            this.Controls.Add(this.groupBox7);
+            this.Controls.Add(this.gbDeviceCommunications);
+            this.Controls.Add(this.gbDeviceList);
             this.Name = "FormCommunications";
-            this.groupBox7.ResumeLayout(false);
-            this.groupBox8.ResumeLayout(false);
+            this.gbDeviceList.ResumeLayout(false);
+            this.gbDeviceCommunications.ResumeLayout(false);
             this.tableLayoutPanel4.ResumeLayout(false);
-            this.groupBox9.ResumeLayout(false);
+            this.gbCommunicatorType.ResumeLayout(false);
             this.splitContainer1.Panel1.ResumeLayout(false);
             this.splitContainer1.Panel2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).EndInit();
             this.splitContainer1.ResumeLayout(false);
             this.tableLayoutPanel5.ResumeLayout(false);
-            this.groupBox12.ResumeLayout(false);
-            this.groupBox12.PerformLayout();
-            this.groupBox10.ResumeLayout(false);
+            this.gbCommunicatorTypeNotice.ResumeLayout(false);
+            this.gbCommunicatorTypeNotice.PerformLayout();
+            this.gbIPAddressSettingandMaintain.ResumeLayout(false);
             this.splitContainer2.Panel1.ResumeLayout(false);
             this.splitContainer2.Panel2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer2)).EndInit();
@@ -804,27 +806,27 @@
 
         #endregion
 
-        private System.Windows.Forms.GroupBox groupBox7;
-        private System.Windows.Forms.ListBox listBox1;
-        private System.Windows.Forms.GroupBox groupBox8;
+        private System.Windows.Forms.GroupBox gbDeviceList;
+        private System.Windows.Forms.ListBox libDeviceList;
+        private System.Windows.Forms.GroupBox gbDeviceCommunications;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel4;
-        private System.Windows.Forms.GroupBox groupBox9;
+        private System.Windows.Forms.GroupBox gbCommunicatorType;
         private System.Windows.Forms.SplitContainer splitContainer1;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel5;
-        private System.Windows.Forms.Button button19;
+        private System.Windows.Forms.Button btnTCPIP;
         private System.Windows.Forms.Button button20;
         private System.Windows.Forms.Button button21;
-        private System.Windows.Forms.GroupBox groupBox12;
+        private System.Windows.Forms.GroupBox gbCommunicatorTypeNotice;
         private System.Windows.Forms.TextBox textBox12;
-        private System.Windows.Forms.GroupBox groupBox10;
+        private System.Windows.Forms.GroupBox gbIPAddressSettingandMaintain;
         private System.Windows.Forms.SplitContainer splitContainer2;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel6;
         private System.Windows.Forms.SplitContainer splitContainer5;
-        private System.Windows.Forms.Label label23;
-        private System.Windows.Forms.TextBox textBox14;
+        private System.Windows.Forms.Label labPortNo;
+        private System.Windows.Forms.TextBox txbPortNo;
         private System.Windows.Forms.SplitContainer splitContainer4;
-        private System.Windows.Forms.Label label22;
-        private System.Windows.Forms.TextBox textBox13;
+        private System.Windows.Forms.Label labIPAddress;
+        private System.Windows.Forms.TextBox txbIPAddress;
         private System.Windows.Forms.GroupBox groupBox15;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel9;
         private System.Windows.Forms.Label label28;

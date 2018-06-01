@@ -35,6 +35,7 @@
             this.tbpAccountSetting = new System.Windows.Forms.TabPage();
             this.tbpSECSSetting = new System.Windows.Forms.TabPage();
             this.tbpAlarmEventSet = new System.Windows.Forms.TabPage();
+            this.tbpCodeSetting = new System.Windows.Forms.TabPage();
             this.tbcSystemSetting.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -47,6 +48,7 @@
             this.tbcSystemSetting.Controls.Add(this.tbpAccountSetting);
             this.tbcSystemSetting.Controls.Add(this.tbpSECSSetting);
             this.tbcSystemSetting.Controls.Add(this.tbpAlarmEventSet);
+            this.tbcSystemSetting.Controls.Add(this.tbpCodeSetting);
             this.tbcSystemSetting.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tbcSystemSetting.DrawMode = System.Windows.Forms.TabDrawMode.OwnerDrawFixed;
             this.tbcSystemSetting.ItemSize = new System.Drawing.Size(40, 180);
@@ -117,6 +119,16 @@
             this.tbpAlarmEventSet.TabIndex = 6;
             this.tbpAlarmEventSet.Text = "Alarm Event Set ";
             // 
+            // tbpCodeSetting
+            // 
+            this.tbpCodeSetting.BackColor = System.Drawing.SystemColors.Control;
+            this.tbpCodeSetting.Location = new System.Drawing.Point(4, 4);
+            this.tbpCodeSetting.Name = "tbpCodeSetting";
+            this.tbpCodeSetting.Padding = new System.Windows.Forms.Padding(3);
+            this.tbpCodeSetting.Size = new System.Drawing.Size(1432, 752);
+            this.tbpCodeSetting.TabIndex = 7;
+            this.tbpCodeSetting.Text = "Code Setting";
+            // 
             // FormSystemSetting
             // 
             this.ClientSize = new System.Drawing.Size(1620, 760);
@@ -140,5 +152,6 @@
         private System.Windows.Forms.TabPage tbpAccountSetting;
         private System.Windows.Forms.TabPage tbpSECSSetting;
         private System.Windows.Forms.TabPage tbpAlarmEventSet;
+        private System.Windows.Forms.TabPage tbpCodeSetting;
     }
 }

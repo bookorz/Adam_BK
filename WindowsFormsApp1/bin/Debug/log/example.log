@@ -1,3 +1,4 @@
+<<<<<<< Updated upstream
 2018-05-31 09:39:19,152 [8] DEBUG TransferControl.Engine.RouteControl - LoadPortController05 Connecting
 2018-05-31 09:39:19,390 [17] DEBUG TransferControl.Engine.RouteControl - LoadPortController07 Connecting
 2018-05-31 09:39:19,165 [11] DEBUG TransferControl.Engine.RouteControl - OCRController02 Connecting
@@ -11797,3 +11798,5 @@
 2018-06-01 15:33:28,447 [21] DEBUG Adam.FormMain - On_Error_Occurred
 2018-06-01 15:33:28,456 [20] DEBUG TransferControl.Engine.RouteControl - AlignerController01 Connection_Error
 2018-06-01 15:33:28,456 [20] DEBUG Adam.FormMain - On_Controller_State_Changed
+=======
+>>>>>>> Stashed changes
