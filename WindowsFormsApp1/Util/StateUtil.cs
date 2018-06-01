@@ -4,6 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using TransferControl.Management;
 
 namespace Adam.Util
 {
@@ -65,7 +66,7 @@ namespace Adam.Util
                     break;
             }
         }
-        
+
 
         //public static void UpdateDeviceState(string device, string state)
         //{
@@ -110,7 +111,7 @@ namespace Adam.Util
                 default:
                     return;
             }
-            if(msg == null || msg.IndexOf(",") < 0)
+            if (msg == null || msg.IndexOf(",") < 0)
                 return;
             string[] result = msg.Split(',');
             switch (result[0])
@@ -171,8 +172,9 @@ namespace Adam.Util
         string _mode;
         public RobotState(string name)
         {
+            Node robot = NodeManagement.Get(name);
             this.Name = name;
-            this.Status = "N/A";
+            this.Status = robot != null ? robot.State : "N/A";
             this.State = "".PadLeft(32);
             this.Present_L = "";
             this.Present_R = "";
@@ -205,8 +207,9 @@ namespace Adam.Util
         string _error;
         public AlignerState(string name)
         {
+            Node aligner = NodeManagement.Get(name);
             this.Name = name;
-            this.Status = "N/A";
+            this.Status = aligner != null ? aligner.State : "N/A";
             this.State = "".PadLeft(32);
             this.Present = "";
             this.Vacuum = "";
