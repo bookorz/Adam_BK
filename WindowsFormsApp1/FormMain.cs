@@ -72,6 +72,9 @@ namespace Adam
 
         private void Form1_Load(object sender, EventArgs e)
         {
+            SplashScreen.ShowSplashScreen();
+            this.Visible = false;
+
             Control[] ctrlForm = new Control[] { formMonitoring, formCommunications, formWafer, formStatus, formOCR, formSystem };
 
             try
@@ -83,14 +86,32 @@ namespace Adam
                     ((Form)ctrlForm[i]).Show();
                     tbcMian.SelectTab(i);
                 }
+
                 tbcMian.SelectTab(0);
+                alarmFrom.Hide();
                 alarmFrom.Show();
-                alarmFrom.Visible = false;
+                //alarmFrom.Visible = false;
+                alarmFrom.Hide();
+
+
+                //this.FormBorderStyle = FormBorderStyle.FixedToolWindow;
+                //this.WindowState = FormWindowState.Minimized;
+                //this.WindowState = FormWindowState.Maximized;
+                //this.TopLevel = true;
+
             }
             catch (Exception ex)
             {
                 throw new Exception(ex.ToString());
             }
+            Thread.Sleep(2000);
+       
+            if (SplashScreen.Instance != null)
+            {
+                SplashScreen.Instance.BeginInvoke(new MethodInvoker(SplashScreen.Instance.Dispose));
+                SplashScreen.Instance = null;
+            }
+            this.Visible = true;
         }
 
         private void LoadPort01_DataBindingComplete(object sender, DataGridViewBindingCompleteEventArgs e)
@@ -555,7 +576,10 @@ namespace Adam
         }
 
 
-
+        public void On_Connection_Status_Report(string DIOName, string Status)
+        {
+            ConnectionStatusUpdate.UpdateControllerStatus(DIOName, Status);
+        }
 
 
         public void On_Data_Chnaged(string Parameter, string Value)
@@ -563,7 +587,7 @@ namespace Adam
             DIOUpdate.UpdateDIOStatus(Parameter, Value);
         }
 
-        public void On_Error_Occurred(string ErrorMsg)
+        public void On_Error_Occurred(string DIOName, string ErrorMsg)
         {
             //斷線 發ALARM
             logger.Debug("On_Error_Occurred");
@@ -650,6 +674,30 @@ namespace Adam
             }
         }
 
-       
+        private void Conn_gv_CellFormatting(object sender, DataGridViewCellFormattingEventArgs e)
+        {
+            switch (e.ColumnIndex)
+            {
+                case 1:
+                    switch (e.Value)
+                    {
+                        case "Connecting":
+                            e.CellStyle.BackColor = Color.Yellow;
+                            e.CellStyle.ForeColor = Color.Black;
+                            break;
+                        case "Connected":
+                            e.CellStyle.BackColor = Color.Green;
+                            e.CellStyle.ForeColor = Color.White;
+                            break;
+                        default:
+                            e.CellStyle.BackColor = Color.Red;
+                            e.CellStyle.ForeColor = Color.White;
+                            break;
+
+                    }
+                    break;
+
+            }
+        }
     }
 }

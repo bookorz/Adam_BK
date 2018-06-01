@@ -16,6 +16,7 @@ namespace Adam.Menu.SystemSetting
         private FormDeviceManager deviceManager = new FormDeviceManager();
         private FormOnlineSettings onlineSettings = new FormOnlineSettings();
         private FormSECSSet sECSSet = new FormSECSSet();
+        private FormCodeSetting codeSetting = new FormCodeSetting();
 
         public FormSystemSetting()
         {
@@ -70,6 +71,7 @@ namespace Adam.Menu.SystemSetting
                 deviceManager.TopLevel = false;
                 onlineSettings.TopLevel = false;
                 sECSSet.TopLevel = false;
+                codeSetting.TopLevel = false;
 
                 tbpAccountSetting.Controls.Add(accountSetting);
                 tbpAlarmEventSet.Controls.Add(formAlarm);
@@ -77,6 +79,7 @@ namespace Adam.Menu.SystemSetting
                 tbpDeviceManager.Controls.Add(deviceManager);
                 tbpOnlineSettings.Controls.Add(onlineSettings);
                 tbpSECSSetting.Controls.Add(sECSSet);
+                tbpCodeSetting.Controls.Add(codeSetting);
 
                 accountSetting.Show();
                 formAlarm.Show();
@@ -84,6 +87,7 @@ namespace Adam.Menu.SystemSetting
                 deviceManager.Show();
                 onlineSettings.Show();
                 sECSSet.Show();
+                codeSetting.Show();
             }
             catch (Exception ex)
             {

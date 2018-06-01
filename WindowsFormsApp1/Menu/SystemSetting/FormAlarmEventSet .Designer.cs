@@ -29,6 +29,14 @@
         private void InitializeComponent()
         {
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle9 = new System.Windows.Forms.DataGridViewCellStyle();
             this.gbAlarmSetting = new System.Windows.Forms.GroupBox();
             this.spcAlarmSetting = new System.Windows.Forms.SplitContainer();
             this.gbAlarmSettingCondition = new System.Windows.Forms.GroupBox();
@@ -54,6 +62,7 @@
             this.Event_AlarmLED_Bule = new System.Windows.Forms.DataGridViewComboBoxColumn();
             this.Event_AlarmBuzzer_A = new System.Windows.Forms.DataGridViewComboBoxColumn();
             this.Event_AlarmBuzzer_B = new System.Windows.Forms.DataGridViewComboBoxColumn();
+            this.Event_AlarmIS_Stop = new System.Windows.Forms.DataGridViewComboBoxColumn();
             this.gbAlarmSetting.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.spcAlarmSetting)).BeginInit();
             this.spcAlarmSetting.Panel1.SuspendLayout();
@@ -140,6 +149,7 @@
             this.tableLayoutPanel17.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 28.69955F));
             this.tableLayoutPanel17.Size = new System.Drawing.Size(321, 222);
             this.tableLayoutPanel17.TabIndex = 1;
+            this.tableLayoutPanel17.Visible = false;
             // 
             // txbAlarmConditionDeviceType
             // 
@@ -228,6 +238,7 @@
             this.lsbAlarmConditionVendorCode.Name = "lsbAlarmConditionVendorCode";
             this.lsbAlarmConditionVendorCode.Size = new System.Drawing.Size(315, 124);
             this.lsbAlarmConditionVendorCode.TabIndex = 4;
+            this.lsbAlarmConditionVendorCode.Click += new System.EventHandler(this.lsbAlarmConditionVendorCode_Click);
             // 
             // gbAlarmSettingData
             // 
@@ -251,11 +262,14 @@
             this.btnSave.TabIndex = 6;
             this.btnSave.Text = "Save";
             this.btnSave.UseVisualStyleBackColor = true;
+            this.btnSave.Click += new System.EventHandler(this.btnSave_Click);
             // 
             // dgvlsbAlarmData
             // 
             this.dgvlsbAlarmData.AllowUserToAddRows = false;
             this.dgvlsbAlarmData.AllowUserToDeleteRows = false;
+            this.dgvlsbAlarmData.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCells;
+            this.dgvlsbAlarmData.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
             this.dgvlsbAlarmData.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvlsbAlarmData.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.Event_AlarmNo,
@@ -267,7 +281,8 @@
             this.Event_AlarmLED_Green,
             this.Event_AlarmLED_Bule,
             this.Event_AlarmBuzzer_A,
-            this.Event_AlarmBuzzer_B});
+            this.Event_AlarmBuzzer_B,
+            this.Event_AlarmIS_Stop});
             this.dgvlsbAlarmData.Dock = System.Windows.Forms.DockStyle.Top;
             this.dgvlsbAlarmData.Location = new System.Drawing.Point(3, 25);
             this.dgvlsbAlarmData.Name = "dgvlsbAlarmData";
@@ -278,58 +293,161 @@
             // 
             // Event_AlarmNo
             // 
+            this.Event_AlarmNo.DataPropertyName = "alarm_no";
+            this.Event_AlarmNo.Frozen = true;
             this.Event_AlarmNo.HeaderText = "Alarm No";
             this.Event_AlarmNo.Name = "Event_AlarmNo";
             this.Event_AlarmNo.ReadOnly = true;
+            this.Event_AlarmNo.Width = 106;
             // 
             // Event_AlarmDescription
             // 
+            this.Event_AlarmDescription.DataPropertyName = "alarm_item";
             this.Event_AlarmDescription.HeaderText = "Alarm Description";
             this.Event_AlarmDescription.Name = "Event_AlarmDescription";
             this.Event_AlarmDescription.ReadOnly = true;
+            this.Event_AlarmDescription.Width = 154;
             // 
             // Event_AlarmType
             // 
+            this.Event_AlarmType.DataPropertyName = "alarm_type";
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.White;
+            this.Event_AlarmType.DefaultCellStyle = dataGridViewCellStyle1;
+            this.Event_AlarmType.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.Event_AlarmType.HeaderText = "Alarm Type";
+            this.Event_AlarmType.Items.AddRange(new object[] {
+            "System",
+            "User",
+            "Device connection failed",
+            "Initialization failed",
+            "Device timeout",
+            "Device alert error",
+            "Third-party software fails",
+            "Command timeout",
+            "Software function fails or exception",
+            "Communication fails"});
             this.Event_AlarmType.Name = "Event_AlarmType";
+            this.Event_AlarmType.Width = 90;
             // 
             // Event_AlarmLevel
             // 
+            this.Event_AlarmLevel.DataPropertyName = "alarm_level";
+            dataGridViewCellStyle2.BackColor = System.Drawing.Color.White;
+            this.Event_AlarmLevel.DefaultCellStyle = dataGridViewCellStyle2;
+            this.Event_AlarmLevel.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.Event_AlarmLevel.HeaderText = "Alarm Level";
+            this.Event_AlarmLevel.Items.AddRange(new object[] {
+            "High",
+            "Nornal",
+            "Low"});
             this.Event_AlarmLevel.Name = "Event_AlarmLevel";
+            this.Event_AlarmLevel.Width = 92;
             // 
             // Event_AlarmLED_Red
             // 
-            dataGridViewCellStyle1.BackColor = System.Drawing.Color.Red;
-            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.White;
-            this.Event_AlarmLED_Red.DefaultCellStyle = dataGridViewCellStyle1;
+            this.Event_AlarmLED_Red.DataPropertyName = "led_red";
+            dataGridViewCellStyle3.BackColor = System.Drawing.Color.Red;
+            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
+            this.Event_AlarmLED_Red.DefaultCellStyle = dataGridViewCellStyle3;
+            this.Event_AlarmLED_Red.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.Event_AlarmLED_Red.HeaderText = "Red";
+            this.Event_AlarmLED_Red.Items.AddRange(new object[] {
+            "Y",
+            "N",
+            "F"});
             this.Event_AlarmLED_Red.Name = "Event_AlarmLED_Red";
+            this.Event_AlarmLED_Red.Width = 44;
             // 
             // Event_AlarmLED_Yellow
             // 
+            this.Event_AlarmLED_Yellow.DataPropertyName = "led_yellow";
+            dataGridViewCellStyle4.BackColor = System.Drawing.Color.Yellow;
+            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
+            this.Event_AlarmLED_Yellow.DefaultCellStyle = dataGridViewCellStyle4;
+            this.Event_AlarmLED_Yellow.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.Event_AlarmLED_Yellow.HeaderText = "Yellow";
+            this.Event_AlarmLED_Yellow.Items.AddRange(new object[] {
+            "Y",
+            "N",
+            "F"});
             this.Event_AlarmLED_Yellow.Name = "Event_AlarmLED_Yellow";
+            this.Event_AlarmLED_Yellow.Width = 64;
             // 
             // Event_AlarmLED_Green
             // 
+            this.Event_AlarmLED_Green.DataPropertyName = "led_green";
+            dataGridViewCellStyle5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
+            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
+            this.Event_AlarmLED_Green.DefaultCellStyle = dataGridViewCellStyle5;
+            this.Event_AlarmLED_Green.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.Event_AlarmLED_Green.HeaderText = "Green";
+            this.Event_AlarmLED_Green.Items.AddRange(new object[] {
+            "Y",
+            "N",
+            "F"});
             this.Event_AlarmLED_Green.Name = "Event_AlarmLED_Green";
+            this.Event_AlarmLED_Green.Width = 61;
             // 
             // Event_AlarmLED_Bule
             // 
-            this.Event_AlarmLED_Bule.HeaderText = "Green";
+            this.Event_AlarmLED_Bule.DataPropertyName = "led_bule";
+            dataGridViewCellStyle6.BackColor = System.Drawing.Color.Blue;
+            dataGridViewCellStyle6.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.Color.Black;
+            this.Event_AlarmLED_Bule.DefaultCellStyle = dataGridViewCellStyle6;
+            this.Event_AlarmLED_Bule.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.Event_AlarmLED_Bule.HeaderText = "Blue";
+            this.Event_AlarmLED_Bule.Items.AddRange(new object[] {
+            "Y",
+            "N",
+            "F"});
             this.Event_AlarmLED_Bule.Name = "Event_AlarmLED_Bule";
+            this.Event_AlarmLED_Bule.Width = 48;
             // 
             // Event_AlarmBuzzer_A
             // 
+            this.Event_AlarmBuzzer_A.DataPropertyName = "buzzer_01";
+            dataGridViewCellStyle7.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.Event_AlarmBuzzer_A.DefaultCellStyle = dataGridViewCellStyle7;
+            this.Event_AlarmBuzzer_A.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.Event_AlarmBuzzer_A.HeaderText = "Buzzer A";
+            this.Event_AlarmBuzzer_A.Items.AddRange(new object[] {
+            "Y",
+            "N",
+            "F"});
             this.Event_AlarmBuzzer_A.Name = "Event_AlarmBuzzer_A";
+            this.Event_AlarmBuzzer_A.Width = 73;
             // 
             // Event_AlarmBuzzer_B
             // 
+            this.Event_AlarmBuzzer_B.DataPropertyName = "buzzer_02";
+            dataGridViewCellStyle8.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.Event_AlarmBuzzer_B.DefaultCellStyle = dataGridViewCellStyle8;
+            this.Event_AlarmBuzzer_B.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.Event_AlarmBuzzer_B.HeaderText = "Buzzer B";
+            this.Event_AlarmBuzzer_B.Items.AddRange(new object[] {
+            "Y",
+            "N",
+            "F"});
             this.Event_AlarmBuzzer_B.Name = "Event_AlarmBuzzer_B";
+            this.Event_AlarmBuzzer_B.Width = 72;
+            // 
+            // Event_AlarmIS_Stop
+            // 
+            this.Event_AlarmIS_Stop.DataPropertyName = "Is_stop";
+            dataGridViewCellStyle9.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
+            dataGridViewCellStyle9.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
+            dataGridViewCellStyle9.SelectionForeColor = System.Drawing.Color.Black;
+            this.Event_AlarmIS_Stop.DefaultCellStyle = dataGridViewCellStyle9;
+            this.Event_AlarmIS_Stop.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.Event_AlarmIS_Stop.HeaderText = "IS Stop";
+            this.Event_AlarmIS_Stop.Items.AddRange(new object[] {
+            "Y",
+            "N"});
+            this.Event_AlarmIS_Stop.Name = "Event_AlarmIS_Stop";
+            this.Event_AlarmIS_Stop.Width = 61;
             // 
             // FormAlarmEventSet
             // 
@@ -339,6 +457,7 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "FormAlarmEventSet";
             this.Text = "Alarm Event Set ";
+            this.Load += new System.EventHandler(this.FormAlarmEventSet_Load);
             this.gbAlarmSetting.ResumeLayout(false);
             this.spcAlarmSetting.Panel1.ResumeLayout(false);
             this.spcAlarmSetting.Panel2.ResumeLayout(false);
@@ -383,5 +502,6 @@
         private System.Windows.Forms.DataGridViewComboBoxColumn Event_AlarmLED_Bule;
         private System.Windows.Forms.DataGridViewComboBoxColumn Event_AlarmBuzzer_A;
         private System.Windows.Forms.DataGridViewComboBoxColumn Event_AlarmBuzzer_B;
+        private System.Windows.Forms.DataGridViewComboBoxColumn Event_AlarmIS_Stop;
     }
 }

@@ -1,3 +1,4 @@
+<<<<<<< Updated upstream
 2018-05-31 09:39:19,152 [8] DEBUG TransferControl.Engine.RouteControl - LoadPortController05 Connecting
 2018-05-31 09:39:19,390 [17] DEBUG TransferControl.Engine.RouteControl - LoadPortController07 Connecting
 2018-05-31 09:39:19,165 [11] DEBUG TransferControl.Engine.RouteControl - OCRController02 Connecting
@@ -11296,3 +11297,506 @@
 2018-05-31 16:32:44,464 [1] DEBUG TransferControl.Engine.RouteControl - RobotController01 Connection_Error
 2018-05-31 16:32:44,464 [1] DEBUG Adam.FormMain - On_Controller_State_Changed
 2018-05-31 16:32:44,464 [1] DEBUG TransferControl.Controller.DeviceController - RobotController01 Send:$1GET:RIO__:004 Wafer:
+2018-06-01 14:23:50,706 [9] DEBUG TransferControl.Engine.RouteControl - OCRController01 Connecting
+2018-06-01 14:23:50,793 [18] DEBUG TransferControl.Engine.RouteControl - AlignerController02 Connecting
+2018-06-01 14:23:50,901 [9] DEBUG Adam.FormMain - On_Controller_State_Changed
+2018-06-01 14:23:50,903 [18] DEBUG Adam.FormMain - On_Controller_State_Changed
+2018-06-01 14:23:50,714 [8] DEBUG TransferControl.Engine.RouteControl - LoadPortController04 Connecting
+2018-06-01 14:23:50,708 [11] DEBUG TransferControl.Engine.RouteControl - LoadPortController08 Connecting
+2018-06-01 14:23:50,710 [12] DEBUG TransferControl.Engine.RouteControl - LoadPortController02 Connecting
+2018-06-01 14:23:50,706 [10] DEBUG TransferControl.Engine.RouteControl - LoadPortController05 Connecting
+2018-06-01 14:23:50,904 [11] DEBUG Adam.FormMain - On_Controller_State_Changed
+2018-06-01 14:23:50,904 [8] DEBUG Adam.FormMain - On_Controller_State_Changed
+2018-06-01 14:23:50,904 [12] DEBUG Adam.FormMain - On_Controller_State_Changed
+2018-06-01 14:23:50,904 [10] DEBUG Adam.FormMain - On_Controller_State_Changed
+2018-06-01 14:23:50,744 [14] DEBUG TransferControl.Engine.RouteControl - RobotController01 Connecting
+2018-06-01 14:23:50,769 [15] DEBUG TransferControl.Engine.RouteControl - RobotController02 Connecting
+2018-06-01 14:23:50,905 [14] DEBUG Adam.FormMain - On_Controller_State_Changed
+2018-06-01 14:23:50,845 [20] DEBUG TransferControl.Engine.RouteControl - AlignerController01 Connecting
+2018-06-01 14:23:50,906 [15] DEBUG Adam.FormMain - On_Controller_State_Changed
+2018-06-01 14:23:50,819 [19] DEBUG TransferControl.Engine.RouteControl - LoadPortController07 Connecting
+2018-06-01 14:23:50,906 [20] DEBUG Adam.FormMain - On_Controller_State_Changed
+2018-06-01 14:23:50,907 [19] DEBUG Adam.FormMain - On_Controller_State_Changed
+2018-06-01 14:23:50,743 [7] DEBUG TransferControl.Engine.RouteControl - LoadPortController01 Connecting
+2018-06-01 14:23:50,769 [16] DEBUG TransferControl.Engine.RouteControl - LoadPortController03 Connecting
+2018-06-01 14:23:50,744 [13] DEBUG TransferControl.Engine.RouteControl - OCRController02 Connecting
+2018-06-01 14:23:50,793 [17] DEBUG TransferControl.Engine.RouteControl - LoadPortController06 Connecting
+2018-06-01 14:23:50,909 [7] DEBUG Adam.FormMain - On_Controller_State_Changed
+2018-06-01 14:23:50,909 [17] DEBUG Adam.FormMain - On_Controller_State_Changed
+2018-06-01 14:23:50,909 [13] DEBUG Adam.FormMain - On_Controller_State_Changed
+2018-06-01 14:23:50,910 [16] DEBUG Adam.FormMain - On_Controller_State_Changed
+2018-06-01 14:23:52,093 [11] DEBUG TransferControl.Engine.RouteControl - LoadPortController08 Connection_Error
+2018-06-01 14:23:52,093 [8] DEBUG TransferControl.Engine.RouteControl - LoadPortController04 Connection_Error
+2018-06-01 14:23:52,093 [7] DEBUG TransferControl.Engine.RouteControl - LoadPortController01 Connection_Error
+2018-06-01 14:23:52,094 [11] DEBUG Adam.FormMain - On_Controller_State_Changed
+2018-06-01 14:23:52,094 [7] DEBUG Adam.FormMain - On_Controller_State_Changed
+2018-06-01 14:23:52,094 [8] DEBUG Adam.FormMain - On_Controller_State_Changed
+2018-06-01 14:23:52,096 [16] DEBUG TransferControl.Engine.RouteControl - LoadPortController03 Connection_Error
+2018-06-01 14:23:52,096 [16] DEBUG Adam.FormMain - On_Controller_State_Changed
+2018-06-01 14:23:52,121 [10] DEBUG TransferControl.Engine.RouteControl - LoadPortController05 Connection_Error
+2018-06-01 14:23:52,121 [19] DEBUG TransferControl.Engine.RouteControl - LoadPortController07 Connection_Error
+2018-06-01 14:23:52,122 [10] DEBUG Adam.FormMain - On_Controller_State_Changed
+2018-06-01 14:23:52,122 [19] DEBUG Adam.FormMain - On_Controller_State_Changed
+2018-06-01 14:23:52,123 [9] DEBUG TransferControl.Engine.RouteControl - OCRController01 Connection_Error
+2018-06-01 14:23:52,124 [9] DEBUG Adam.FormMain - On_Controller_State_Changed
+2018-06-01 14:23:52,136 [13] DEBUG TransferControl.Engine.RouteControl - OCRController02 Connection_Error
+2018-06-01 14:23:52,137 [13] DEBUG Adam.FormMain - On_Controller_State_Changed
+2018-06-01 14:23:52,175 [17] DEBUG TransferControl.Engine.RouteControl - LoadPortController06 Connection_Error
+2018-06-01 14:23:52,175 [17] DEBUG Adam.FormMain - On_Controller_State_Changed
+2018-06-01 14:23:52,178 [12] DEBUG TransferControl.Engine.RouteControl - LoadPortController02 Connection_Error
+2018-06-01 14:23:52,178 [12] DEBUG Adam.FormMain - On_Controller_State_Changed
+2018-06-01 14:24:11,889 [21] DEBUG Adam.FormMain - On_Error_Occurred
+2018-06-01 14:24:11,906 [22] DEBUG Adam.FormMain - On_Error_Occurred
+2018-06-01 14:24:11,914 [18] DEBUG TransferControl.Engine.RouteControl - AlignerController02 Connection_Error
+2018-06-01 14:24:11,920 [15] DEBUG TransferControl.Engine.RouteControl - RobotController02 Connection_Error
+2018-06-01 14:24:11,920 [18] DEBUG Adam.FormMain - On_Controller_State_Changed
+2018-06-01 14:24:11,923 [15] DEBUG Adam.FormMain - On_Controller_State_Changed
+2018-06-01 14:24:11,934 [20] DEBUG TransferControl.Engine.RouteControl - AlignerController01 Connection_Error
+2018-06-01 14:24:11,934 [20] DEBUG Adam.FormMain - On_Controller_State_Changed
+2018-06-01 14:24:11,958 [14] DEBUG TransferControl.Engine.RouteControl - RobotController01 Connection_Error
+2018-06-01 14:24:11,958 [14] DEBUG Adam.FormMain - On_Controller_State_Changed
+2018-06-01 14:25:52,953 [9] DEBUG TransferControl.Engine.RouteControl - OCRController01 Connecting
+2018-06-01 14:25:53,040 [17] DEBUG TransferControl.Engine.RouteControl - LoadPortController06 Connecting
+2018-06-01 14:25:53,202 [17] DEBUG Adam.FormMain - On_Controller_State_Changed
+2018-06-01 14:25:53,202 [9] DEBUG Adam.FormMain - On_Controller_State_Changed
+2018-06-01 14:25:53,011 [14] DEBUG TransferControl.Engine.RouteControl - RobotController01 Connecting
+2018-06-01 14:25:53,204 [14] DEBUG Adam.FormMain - On_Controller_State_Changed
+2018-06-01 14:25:52,953 [7] DEBUG TransferControl.Engine.RouteControl - LoadPortController01 Connecting
+2018-06-01 14:25:52,957 [8] DEBUG TransferControl.Engine.RouteControl - LoadPortController04 Connecting
+2018-06-01 14:25:52,960 [11] DEBUG TransferControl.Engine.RouteControl - LoadPortController08 Connecting
+2018-06-01 14:25:52,953 [10] DEBUG TransferControl.Engine.RouteControl - LoadPortController05 Connecting
+2018-06-01 14:25:53,040 [16] DEBUG TransferControl.Engine.RouteControl - LoadPortController03 Connecting
+2018-06-01 14:25:53,206 [8] DEBUG Adam.FormMain - On_Controller_State_Changed
+2018-06-01 14:25:53,206 [11] DEBUG Adam.FormMain - On_Controller_State_Changed
+2018-06-01 14:25:53,206 [7] DEBUG Adam.FormMain - On_Controller_State_Changed
+2018-06-01 14:25:53,206 [10] DEBUG Adam.FormMain - On_Controller_State_Changed
+2018-06-01 14:25:53,206 [16] DEBUG Adam.FormMain - On_Controller_State_Changed
+2018-06-01 14:25:53,097 [19] DEBUG TransferControl.Engine.RouteControl - LoadPortController07 Connecting
+2018-06-01 14:25:52,983 [12] DEBUG TransferControl.Engine.RouteControl - LoadPortController02 Connecting
+2018-06-01 14:25:53,207 [19] DEBUG Adam.FormMain - On_Controller_State_Changed
+2018-06-01 14:25:53,110 [20] DEBUG TransferControl.Engine.RouteControl - AlignerController01 Connecting
+2018-06-01 14:25:53,207 [12] DEBUG Adam.FormMain - On_Controller_State_Changed
+2018-06-01 14:25:53,011 [15] DEBUG TransferControl.Engine.RouteControl - RobotController02 Connecting
+2018-06-01 14:25:53,207 [20] DEBUG Adam.FormMain - On_Controller_State_Changed
+2018-06-01 14:25:53,208 [15] DEBUG Adam.FormMain - On_Controller_State_Changed
+2018-06-01 14:25:52,983 [13] DEBUG TransferControl.Engine.RouteControl - OCRController02 Connecting
+2018-06-01 14:25:53,208 [13] DEBUG Adam.FormMain - On_Controller_State_Changed
+2018-06-01 14:25:53,071 [18] DEBUG TransferControl.Engine.RouteControl - AlignerController02 Connecting
+2018-06-01 14:25:53,209 [18] DEBUG Adam.FormMain - On_Controller_State_Changed
+2018-06-01 14:25:54,314 [10] DEBUG TransferControl.Engine.RouteControl - LoadPortController05 Connection_Error
+2018-06-01 14:25:54,316 [10] DEBUG Adam.FormMain - On_Controller_State_Changed
+2018-06-01 14:25:54,386 [19] DEBUG TransferControl.Engine.RouteControl - LoadPortController07 Connection_Error
+2018-06-01 14:25:54,386 [19] DEBUG Adam.FormMain - On_Controller_State_Changed
+2018-06-01 14:25:54,387 [16] DEBUG TransferControl.Engine.RouteControl - LoadPortController03 Connection_Error
+2018-06-01 14:25:54,387 [16] DEBUG Adam.FormMain - On_Controller_State_Changed
+2018-06-01 14:25:54,423 [9] DEBUG TransferControl.Engine.RouteControl - OCRController01 Connection_Error
+2018-06-01 14:25:54,423 [7] DEBUG TransferControl.Engine.RouteControl - LoadPortController01 Connection_Error
+2018-06-01 14:25:54,423 [9] DEBUG Adam.FormMain - On_Controller_State_Changed
+2018-06-01 14:25:54,423 [7] DEBUG Adam.FormMain - On_Controller_State_Changed
+2018-06-01 14:25:54,434 [8] DEBUG TransferControl.Engine.RouteControl - LoadPortController04 Connection_Error
+2018-06-01 14:25:54,435 [8] DEBUG Adam.FormMain - On_Controller_State_Changed
+2018-06-01 14:25:54,463 [12] DEBUG TransferControl.Engine.RouteControl - LoadPortController02 Connection_Error
+2018-06-01 14:25:54,463 [17] DEBUG TransferControl.Engine.RouteControl - LoadPortController06 Connection_Error
+2018-06-01 14:25:54,463 [12] DEBUG Adam.FormMain - On_Controller_State_Changed
+2018-06-01 14:25:54,464 [17] DEBUG Adam.FormMain - On_Controller_State_Changed
+2018-06-01 14:25:54,464 [13] DEBUG TransferControl.Engine.RouteControl - OCRController02 Connection_Error
+2018-06-01 14:25:54,465 [13] DEBUG Adam.FormMain - On_Controller_State_Changed
+2018-06-01 14:25:54,469 [11] DEBUG TransferControl.Engine.RouteControl - LoadPortController08 Connection_Error
+2018-06-01 14:25:54,470 [11] DEBUG Adam.FormMain - On_Controller_State_Changed
+2018-06-01 14:26:18,165 [13] DEBUG TransferControl.Engine.RouteControl - OCRController02 Connecting
+2018-06-01 14:26:18,156 [8] DEBUG TransferControl.Engine.RouteControl - LoadPortController04 Connecting
+2018-06-01 14:26:18,249 [18] DEBUG TransferControl.Engine.RouteControl - AlignerController02 Connecting
+2018-06-01 14:26:18,154 [9] DEBUG TransferControl.Engine.RouteControl - OCRController01 Connecting
+2018-06-01 14:26:18,156 [10] DEBUG TransferControl.Engine.RouteControl - LoadPortController05 Connecting
+2018-06-01 14:26:18,158 [12] DEBUG TransferControl.Engine.RouteControl - LoadPortController02 Connecting
+2018-06-01 14:26:18,154 [11] DEBUG TransferControl.Engine.RouteControl - LoadPortController08 Connecting
+2018-06-01 14:26:18,391 [18] DEBUG Adam.FormMain - On_Controller_State_Changed
+2018-06-01 14:26:18,391 [10] DEBUG Adam.FormMain - On_Controller_State_Changed
+2018-06-01 14:26:18,249 [17] DEBUG TransferControl.Engine.RouteControl - LoadPortController06 Connecting
+2018-06-01 14:26:18,221 [16] DEBUG TransferControl.Engine.RouteControl - LoadPortController03 Connecting
+2018-06-01 14:26:18,391 [9] DEBUG Adam.FormMain - On_Controller_State_Changed
+2018-06-01 14:26:18,391 [13] DEBUG Adam.FormMain - On_Controller_State_Changed
+2018-06-01 14:26:18,391 [8] DEBUG Adam.FormMain - On_Controller_State_Changed
+2018-06-01 14:26:18,391 [12] DEBUG Adam.FormMain - On_Controller_State_Changed
+2018-06-01 14:26:18,391 [11] DEBUG Adam.FormMain - On_Controller_State_Changed
+2018-06-01 14:26:18,195 [14] DEBUG TransferControl.Engine.RouteControl - RobotController01 Connecting
+2018-06-01 14:26:18,154 [7] DEBUG TransferControl.Engine.RouteControl - LoadPortController01 Connecting
+2018-06-01 14:26:18,276 [19] DEBUG TransferControl.Engine.RouteControl - LoadPortController07 Connecting
+2018-06-01 14:26:18,220 [15] DEBUG TransferControl.Engine.RouteControl - RobotController02 Connecting
+2018-06-01 14:26:18,400 [17] DEBUG Adam.FormMain - On_Controller_State_Changed
+2018-06-01 14:26:18,404 [16] DEBUG Adam.FormMain - On_Controller_State_Changed
+2018-06-01 14:26:18,405 [14] DEBUG Adam.FormMain - On_Controller_State_Changed
+2018-06-01 14:26:18,405 [7] DEBUG Adam.FormMain - On_Controller_State_Changed
+2018-06-01 14:26:18,405 [19] DEBUG Adam.FormMain - On_Controller_State_Changed
+2018-06-01 14:26:18,277 [20] DEBUG TransferControl.Engine.RouteControl - AlignerController01 Connecting
+2018-06-01 14:26:18,407 [20] DEBUG Adam.FormMain - On_Controller_State_Changed
+2018-06-01 14:26:18,408 [15] DEBUG Adam.FormMain - On_Controller_State_Changed
+2018-06-01 14:26:19,625 [10] DEBUG TransferControl.Engine.RouteControl - LoadPortController05 Connection_Error
+2018-06-01 14:26:19,625 [19] DEBUG TransferControl.Engine.RouteControl - LoadPortController07 Connection_Error
+2018-06-01 14:26:19,625 [8] DEBUG TransferControl.Engine.RouteControl - LoadPortController04 Connection_Error
+2018-06-01 14:26:19,625 [10] DEBUG Adam.FormMain - On_Controller_State_Changed
+2018-06-01 14:26:19,626 [13] DEBUG TransferControl.Engine.RouteControl - OCRController02 Connection_Error
+2018-06-01 14:26:19,626 [11] DEBUG TransferControl.Engine.RouteControl - LoadPortController08 Connection_Error
+2018-06-01 14:26:19,626 [19] DEBUG Adam.FormMain - On_Controller_State_Changed
+2018-06-01 14:26:19,626 [13] DEBUG Adam.FormMain - On_Controller_State_Changed
+2018-06-01 14:26:19,626 [11] DEBUG Adam.FormMain - On_Controller_State_Changed
+2018-06-01 14:26:19,627 [9] DEBUG TransferControl.Engine.RouteControl - OCRController01 Connection_Error
+2018-06-01 14:26:19,627 [7] DEBUG TransferControl.Engine.RouteControl - LoadPortController01 Connection_Error
+2018-06-01 14:26:19,627 [16] DEBUG TransferControl.Engine.RouteControl - LoadPortController03 Connection_Error
+2018-06-01 14:26:19,627 [16] DEBUG Adam.FormMain - On_Controller_State_Changed
+2018-06-01 14:26:19,627 [7] DEBUG Adam.FormMain - On_Controller_State_Changed
+2018-06-01 14:26:19,627 [9] DEBUG Adam.FormMain - On_Controller_State_Changed
+2018-06-01 14:26:19,634 [8] DEBUG Adam.FormMain - On_Controller_State_Changed
+2018-06-01 14:26:19,661 [17] DEBUG TransferControl.Engine.RouteControl - LoadPortController06 Connection_Error
+2018-06-01 14:26:19,663 [17] DEBUG Adam.FormMain - On_Controller_State_Changed
+2018-06-01 14:26:19,722 [12] DEBUG TransferControl.Engine.RouteControl - LoadPortController02 Connection_Error
+2018-06-01 14:26:19,722 [12] DEBUG Adam.FormMain - On_Controller_State_Changed
+2018-06-01 14:27:04,734 [8] DEBUG TransferControl.Engine.RouteControl - LoadPortController04 Connecting
+2018-06-01 14:27:04,734 [7] DEBUG TransferControl.Engine.RouteControl - LoadPortController01 Connecting
+2018-06-01 14:27:04,734 [10] DEBUG TransferControl.Engine.RouteControl - LoadPortController05 Connecting
+2018-06-01 14:27:04,734 [11] DEBUG TransferControl.Engine.RouteControl - LoadPortController08 Connecting
+2018-06-01 14:27:04,734 [9] DEBUG TransferControl.Engine.RouteControl - OCRController01 Connecting
+2018-06-01 14:27:04,737 [12] DEBUG TransferControl.Engine.RouteControl - LoadPortController02 Connecting
+2018-06-01 14:27:04,761 [13] DEBUG TransferControl.Engine.RouteControl - OCRController02 Connecting
+2018-06-01 14:27:04,785 [14] DEBUG TransferControl.Engine.RouteControl - RobotController01 Connecting
+2018-06-01 14:27:04,951 [13] DEBUG Adam.FormMain - On_Controller_State_Changed
+2018-06-01 14:27:04,952 [8] DEBUG Adam.FormMain - On_Controller_State_Changed
+2018-06-01 14:27:04,952 [14] DEBUG Adam.FormMain - On_Controller_State_Changed
+2018-06-01 14:27:04,865 [19] DEBUG TransferControl.Engine.RouteControl - LoadPortController07 Connecting
+2018-06-01 14:27:04,810 [15] DEBUG TransferControl.Engine.RouteControl - RobotController02 Connecting
+2018-06-01 14:27:04,953 [11] DEBUG Adam.FormMain - On_Controller_State_Changed
+2018-06-01 14:27:04,953 [12] DEBUG Adam.FormMain - On_Controller_State_Changed
+2018-06-01 14:27:04,953 [7] DEBUG Adam.FormMain - On_Controller_State_Changed
+2018-06-01 14:27:04,953 [10] DEBUG Adam.FormMain - On_Controller_State_Changed
+2018-06-01 14:27:04,953 [9] DEBUG Adam.FormMain - On_Controller_State_Changed
+2018-06-01 14:27:04,838 [18] DEBUG TransferControl.Engine.RouteControl - AlignerController02 Connecting
+2018-06-01 14:27:04,810 [16] DEBUG TransferControl.Engine.RouteControl - LoadPortController03 Connecting
+2018-06-01 14:27:04,838 [17] DEBUG TransferControl.Engine.RouteControl - LoadPortController06 Connecting
+2018-06-01 14:27:04,953 [15] DEBUG Adam.FormMain - On_Controller_State_Changed
+2018-06-01 14:27:04,865 [20] DEBUG TransferControl.Engine.RouteControl - AlignerController01 Connecting
+2018-06-01 14:27:04,953 [18] DEBUG Adam.FormMain - On_Controller_State_Changed
+2018-06-01 14:27:04,953 [19] DEBUG Adam.FormMain - On_Controller_State_Changed
+2018-06-01 14:27:04,953 [16] DEBUG Adam.FormMain - On_Controller_State_Changed
+2018-06-01 14:27:04,953 [17] DEBUG Adam.FormMain - On_Controller_State_Changed
+2018-06-01 14:27:04,954 [20] DEBUG Adam.FormMain - On_Controller_State_Changed
+2018-06-01 14:27:06,099 [9] DEBUG TransferControl.Engine.RouteControl - OCRController01 Connection_Error
+2018-06-01 14:27:06,100 [9] DEBUG Adam.FormMain - On_Controller_State_Changed
+2018-06-01 14:27:06,181 [7] DEBUG TransferControl.Engine.RouteControl - LoadPortController01 Connection_Error
+2018-06-01 14:27:06,181 [17] DEBUG TransferControl.Engine.RouteControl - LoadPortController06 Connection_Error
+2018-06-01 14:27:06,181 [7] DEBUG Adam.FormMain - On_Controller_State_Changed
+2018-06-01 14:27:06,181 [17] DEBUG Adam.FormMain - On_Controller_State_Changed
+2018-06-01 14:27:06,198 [13] DEBUG TransferControl.Engine.RouteControl - OCRController02 Connection_Error
+2018-06-01 14:27:06,198 [16] DEBUG TransferControl.Engine.RouteControl - LoadPortController03 Connection_Error
+2018-06-01 14:27:06,198 [19] DEBUG TransferControl.Engine.RouteControl - LoadPortController07 Connection_Error
+2018-06-01 14:27:06,198 [13] DEBUG Adam.FormMain - On_Controller_State_Changed
+2018-06-01 14:27:06,198 [19] DEBUG Adam.FormMain - On_Controller_State_Changed
+2018-06-01 14:27:06,198 [16] DEBUG Adam.FormMain - On_Controller_State_Changed
+2018-06-01 14:27:06,214 [12] DEBUG TransferControl.Engine.RouteControl - LoadPortController02 Connection_Error
+2018-06-01 14:27:06,214 [8] DEBUG TransferControl.Engine.RouteControl - LoadPortController04 Connection_Error
+2018-06-01 14:27:06,214 [11] DEBUG TransferControl.Engine.RouteControl - LoadPortController08 Connection_Error
+2018-06-01 14:27:06,214 [12] DEBUG Adam.FormMain - On_Controller_State_Changed
+2018-06-01 14:27:06,215 [11] DEBUG Adam.FormMain - On_Controller_State_Changed
+2018-06-01 14:27:06,215 [8] DEBUG Adam.FormMain - On_Controller_State_Changed
+2018-06-01 14:27:06,222 [10] DEBUG TransferControl.Engine.RouteControl - LoadPortController05 Connection_Error
+2018-06-01 14:27:06,222 [10] DEBUG Adam.FormMain - On_Controller_State_Changed
+2018-06-01 14:27:25,926 [21] DEBUG Adam.FormMain - On_Error_Occurred
+2018-06-01 14:27:25,940 [22] DEBUG Adam.FormMain - On_Error_Occurred
+2018-06-01 14:27:25,985 [15] DEBUG TransferControl.Engine.RouteControl - RobotController02 Connection_Error
+2018-06-01 14:27:25,989 [15] DEBUG Adam.FormMain - On_Controller_State_Changed
+2018-06-01 14:27:25,995 [18] DEBUG TransferControl.Engine.RouteControl - AlignerController02 Connection_Error
+2018-06-01 14:27:26,000 [14] DEBUG TransferControl.Engine.RouteControl - RobotController01 Connection_Error
+2018-06-01 14:27:26,000 [18] DEBUG Adam.FormMain - On_Controller_State_Changed
+2018-06-01 14:27:26,001 [14] DEBUG Adam.FormMain - On_Controller_State_Changed
+2018-06-01 14:27:26,012 [20] DEBUG TransferControl.Engine.RouteControl - AlignerController01 Connection_Error
+2018-06-01 14:27:26,013 [20] DEBUG Adam.FormMain - On_Controller_State_Changed
+2018-06-01 14:30:06,953 [8] DEBUG TransferControl.Engine.RouteControl - LoadPortController04 Connecting
+2018-06-01 14:30:07,201 [8] DEBUG Adam.FormMain - On_Controller_State_Changed
+2018-06-01 14:30:07,081 [19] DEBUG TransferControl.Engine.RouteControl - LoadPortController07 Connecting
+2018-06-01 14:30:07,203 [19] DEBUG Adam.FormMain - On_Controller_State_Changed
+2018-06-01 14:30:06,953 [7] DEBUG TransferControl.Engine.RouteControl - LoadPortController01 Connecting
+2018-06-01 14:30:06,954 [9] DEBUG TransferControl.Engine.RouteControl - OCRController01 Connecting
+2018-06-01 14:30:06,957 [10] DEBUG TransferControl.Engine.RouteControl - LoadPortController05 Connecting
+2018-06-01 14:30:06,960 [11] DEBUG TransferControl.Engine.RouteControl - LoadPortController08 Connecting
+2018-06-01 14:30:07,205 [9] DEBUG Adam.FormMain - On_Controller_State_Changed
+2018-06-01 14:30:07,205 [10] DEBUG Adam.FormMain - On_Controller_State_Changed
+2018-06-01 14:30:07,205 [11] DEBUG Adam.FormMain - On_Controller_State_Changed
+2018-06-01 14:30:07,205 [7] DEBUG Adam.FormMain - On_Controller_State_Changed
+2018-06-01 14:30:06,991 [13] DEBUG TransferControl.Engine.RouteControl - OCRController02 Connecting
+2018-06-01 14:30:07,205 [13] DEBUG Adam.FormMain - On_Controller_State_Changed
+2018-06-01 14:30:07,068 [18] DEBUG TransferControl.Engine.RouteControl - AlignerController02 Connecting
+2018-06-01 14:30:07,016 [14] DEBUG TransferControl.Engine.RouteControl - RobotController01 Connecting
+2018-06-01 14:30:07,207 [18] DEBUG Adam.FormMain - On_Controller_State_Changed
+2018-06-01 14:30:07,042 [16] DEBUG TransferControl.Engine.RouteControl - LoadPortController03 Connecting
+2018-06-01 14:30:07,017 [15] DEBUG TransferControl.Engine.RouteControl - RobotController02 Connecting
+2018-06-01 14:30:06,991 [12] DEBUG TransferControl.Engine.RouteControl - LoadPortController02 Connecting
+2018-06-01 14:30:07,207 [14] DEBUG Adam.FormMain - On_Controller_State_Changed
+2018-06-01 14:30:07,042 [17] DEBUG TransferControl.Engine.RouteControl - LoadPortController06 Connecting
+2018-06-01 14:30:07,110 [20] DEBUG TransferControl.Engine.RouteControl - AlignerController01 Connecting
+2018-06-01 14:30:07,207 [16] DEBUG Adam.FormMain - On_Controller_State_Changed
+2018-06-01 14:30:07,207 [15] DEBUG Adam.FormMain - On_Controller_State_Changed
+2018-06-01 14:30:07,207 [12] DEBUG Adam.FormMain - On_Controller_State_Changed
+2018-06-01 14:30:07,208 [17] DEBUG Adam.FormMain - On_Controller_State_Changed
+2018-06-01 14:30:07,208 [20] DEBUG Adam.FormMain - On_Controller_State_Changed
+2018-06-01 14:30:08,481 [11] DEBUG TransferControl.Engine.RouteControl - LoadPortController08 Connection_Error
+2018-06-01 14:30:08,481 [7] DEBUG TransferControl.Engine.RouteControl - LoadPortController01 Connection_Error
+2018-06-01 14:30:08,481 [13] DEBUG TransferControl.Engine.RouteControl - OCRController02 Connection_Error
+2018-06-01 14:30:08,481 [17] DEBUG TransferControl.Engine.RouteControl - LoadPortController06 Connection_Error
+2018-06-01 14:30:08,481 [16] DEBUG TransferControl.Engine.RouteControl - LoadPortController03 Connection_Error
+2018-06-01 14:30:08,482 [19] DEBUG TransferControl.Engine.RouteControl - LoadPortController07 Connection_Error
+2018-06-01 14:30:08,482 [11] DEBUG Adam.FormMain - On_Controller_State_Changed
+2018-06-01 14:30:08,482 [7] DEBUG Adam.FormMain - On_Controller_State_Changed
+2018-06-01 14:30:08,482 [16] DEBUG Adam.FormMain - On_Controller_State_Changed
+2018-06-01 14:30:08,482 [13] DEBUG Adam.FormMain - On_Controller_State_Changed
+2018-06-01 14:30:08,482 [17] DEBUG Adam.FormMain - On_Controller_State_Changed
+2018-06-01 14:30:08,482 [12] DEBUG TransferControl.Engine.RouteControl - LoadPortController02 Connection_Error
+2018-06-01 14:30:08,482 [9] DEBUG TransferControl.Engine.RouteControl - OCRController01 Connection_Error
+2018-06-01 14:30:08,483 [8] DEBUG TransferControl.Engine.RouteControl - LoadPortController04 Connection_Error
+2018-06-01 14:30:08,483 [10] DEBUG TransferControl.Engine.RouteControl - LoadPortController05 Connection_Error
+2018-06-01 14:30:08,483 [9] DEBUG Adam.FormMain - On_Controller_State_Changed
+2018-06-01 14:30:08,483 [19] DEBUG Adam.FormMain - On_Controller_State_Changed
+2018-06-01 14:30:08,483 [8] DEBUG Adam.FormMain - On_Controller_State_Changed
+2018-06-01 14:30:08,484 [10] DEBUG Adam.FormMain - On_Controller_State_Changed
+2018-06-01 14:30:08,489 [12] DEBUG Adam.FormMain - On_Controller_State_Changed
+2018-06-01 14:30:28,182 [22] DEBUG Adam.FormMain - On_Error_Occurred
+2018-06-01 14:30:28,188 [21] DEBUG Adam.FormMain - On_Error_Occurred
+2018-06-01 14:30:28,240 [18] DEBUG TransferControl.Engine.RouteControl - AlignerController02 Connection_Error
+2018-06-01 14:30:28,240 [18] DEBUG Adam.FormMain - On_Controller_State_Changed
+2018-06-01 14:30:28,240 [20] DEBUG TransferControl.Engine.RouteControl - AlignerController01 Connection_Error
+2018-06-01 14:30:28,241 [20] DEBUG Adam.FormMain - On_Controller_State_Changed
+2018-06-01 14:30:28,250 [14] DEBUG TransferControl.Engine.RouteControl - RobotController01 Connection_Error
+2018-06-01 14:30:28,250 [14] DEBUG Adam.FormMain - On_Controller_State_Changed
+2018-06-01 14:30:28,262 [15] DEBUG TransferControl.Engine.RouteControl - RobotController02 Connection_Error
+2018-06-01 14:30:28,263 [15] DEBUG Adam.FormMain - On_Controller_State_Changed
+2018-06-01 14:31:20,410 [7] DEBUG TransferControl.Engine.RouteControl - LoadPortController01 Connecting
+2018-06-01 14:31:20,414 [10] DEBUG TransferControl.Engine.RouteControl - LoadPortController05 Connecting
+2018-06-01 14:31:20,446 [11] DEBUG TransferControl.Engine.RouteControl - LoadPortController08 Connecting
+2018-06-01 14:31:20,411 [8] DEBUG TransferControl.Engine.RouteControl - LoadPortController04 Connecting
+2018-06-01 14:31:20,448 [13] DEBUG TransferControl.Engine.RouteControl - OCRController02 Connecting
+2018-06-01 14:31:20,413 [9] DEBUG TransferControl.Engine.RouteControl - OCRController01 Connecting
+2018-06-01 14:31:20,485 [15] DEBUG TransferControl.Engine.RouteControl - RobotController02 Connecting
+2018-06-01 14:31:20,638 [10] DEBUG Adam.FormMain - On_Controller_State_Changed
+2018-06-01 14:31:20,513 [17] DEBUG TransferControl.Engine.RouteControl - LoadPortController06 Connecting
+2018-06-01 14:31:20,638 [8] DEBUG Adam.FormMain - On_Controller_State_Changed
+2018-06-01 14:31:20,638 [13] DEBUG Adam.FormMain - On_Controller_State_Changed
+2018-06-01 14:31:20,638 [11] DEBUG Adam.FormMain - On_Controller_State_Changed
+2018-06-01 14:31:20,638 [7] DEBUG Adam.FormMain - On_Controller_State_Changed
+2018-06-01 14:31:20,539 [19] DEBUG TransferControl.Engine.RouteControl - LoadPortController07 Connecting
+2018-06-01 14:31:20,513 [18] DEBUG TransferControl.Engine.RouteControl - AlignerController02 Connecting
+2018-06-01 14:31:20,639 [9] DEBUG Adam.FormMain - On_Controller_State_Changed
+2018-06-01 14:31:20,639 [15] DEBUG Adam.FormMain - On_Controller_State_Changed
+2018-06-01 14:31:20,639 [17] DEBUG Adam.FormMain - On_Controller_State_Changed
+2018-06-01 14:31:20,639 [19] DEBUG Adam.FormMain - On_Controller_State_Changed
+2018-06-01 14:31:20,459 [14] DEBUG TransferControl.Engine.RouteControl - RobotController01 Connecting
+2018-06-01 14:31:20,639 [18] DEBUG Adam.FormMain - On_Controller_State_Changed
+2018-06-01 14:31:20,564 [20] DEBUG TransferControl.Engine.RouteControl - AlignerController01 Connecting
+2018-06-01 14:31:20,640 [14] DEBUG Adam.FormMain - On_Controller_State_Changed
+2018-06-01 14:31:20,443 [12] DEBUG TransferControl.Engine.RouteControl - LoadPortController02 Connecting
+2018-06-01 14:31:20,640 [20] DEBUG Adam.FormMain - On_Controller_State_Changed
+2018-06-01 14:31:20,640 [12] DEBUG Adam.FormMain - On_Controller_State_Changed
+2018-06-01 14:31:20,485 [16] DEBUG TransferControl.Engine.RouteControl - LoadPortController03 Connecting
+2018-06-01 14:31:20,643 [16] DEBUG Adam.FormMain - On_Controller_State_Changed
+2018-06-01 14:31:21,944 [19] DEBUG TransferControl.Engine.RouteControl - LoadPortController07 Connection_Error
+2018-06-01 14:31:21,944 [9] DEBUG TransferControl.Engine.RouteControl - OCRController01 Connection_Error
+2018-06-01 14:31:21,944 [10] DEBUG TransferControl.Engine.RouteControl - LoadPortController05 Connection_Error
+2018-06-01 14:31:21,944 [17] DEBUG TransferControl.Engine.RouteControl - LoadPortController06 Connection_Error
+2018-06-01 14:31:21,944 [11] DEBUG TransferControl.Engine.RouteControl - LoadPortController08 Connection_Error
+2018-06-01 14:31:21,944 [12] DEBUG TransferControl.Engine.RouteControl - LoadPortController02 Connection_Error
+2018-06-01 14:31:21,944 [8] DEBUG TransferControl.Engine.RouteControl - LoadPortController04 Connection_Error
+2018-06-01 14:31:21,944 [10] DEBUG Adam.FormMain - On_Controller_State_Changed
+2018-06-01 14:31:21,945 [11] DEBUG Adam.FormMain - On_Controller_State_Changed
+2018-06-01 14:31:21,945 [16] DEBUG TransferControl.Engine.RouteControl - LoadPortController03 Connection_Error
+2018-06-01 14:31:21,945 [12] DEBUG Adam.FormMain - On_Controller_State_Changed
+2018-06-01 14:31:21,944 [9] DEBUG Adam.FormMain - On_Controller_State_Changed
+2018-06-01 14:31:21,944 [17] DEBUG Adam.FormMain - On_Controller_State_Changed
+2018-06-01 14:31:21,945 [16] DEBUG Adam.FormMain - On_Controller_State_Changed
+2018-06-01 14:31:21,944 [19] DEBUG Adam.FormMain - On_Controller_State_Changed
+2018-06-01 14:31:21,944 [7] DEBUG TransferControl.Engine.RouteControl - LoadPortController01 Connection_Error
+2018-06-01 14:31:21,947 [7] DEBUG Adam.FormMain - On_Controller_State_Changed
+2018-06-01 14:31:21,953 [13] DEBUG TransferControl.Engine.RouteControl - OCRController02 Connection_Error
+2018-06-01 14:31:21,953 [13] DEBUG Adam.FormMain - On_Controller_State_Changed
+2018-06-01 14:31:21,953 [8] DEBUG Adam.FormMain - On_Controller_State_Changed
+2018-06-01 14:31:41,631 [21] DEBUG Adam.FormMain - On_Error_Occurred
+2018-06-01 14:31:41,633 [22] DEBUG Adam.FormMain - On_Error_Occurred
+2018-06-01 14:31:41,646 [15] DEBUG TransferControl.Engine.RouteControl - RobotController02 Connection_Error
+2018-06-01 14:31:41,647 [15] DEBUG Adam.FormMain - On_Controller_State_Changed
+2018-06-01 14:31:41,657 [14] DEBUG TransferControl.Engine.RouteControl - RobotController01 Connection_Error
+2018-06-01 14:31:41,658 [14] DEBUG Adam.FormMain - On_Controller_State_Changed
+2018-06-01 14:31:41,668 [18] DEBUG TransferControl.Engine.RouteControl - AlignerController02 Connection_Error
+2018-06-01 14:31:41,687 [18] DEBUG Adam.FormMain - On_Controller_State_Changed
+2018-06-01 14:31:41,693 [20] DEBUG TransferControl.Engine.RouteControl - AlignerController01 Connection_Error
+2018-06-01 14:31:41,693 [20] DEBUG Adam.FormMain - On_Controller_State_Changed
+2018-06-01 14:33:00,237 [10] DEBUG TransferControl.Engine.RouteControl - LoadPortController05 Connecting
+2018-06-01 14:33:00,500 [10] DEBUG Adam.FormMain - On_Controller_State_Changed
+2018-06-01 14:33:00,236 [8] DEBUG TransferControl.Engine.RouteControl - LoadPortController04 Connecting
+2018-06-01 14:33:00,237 [7] DEBUG TransferControl.Engine.RouteControl - LoadPortController01 Connecting
+2018-06-01 14:33:00,238 [9] DEBUG TransferControl.Engine.RouteControl - OCRController01 Connecting
+2018-06-01 14:33:00,344 [17] DEBUG TransferControl.Engine.RouteControl - LoadPortController06 Connecting
+2018-06-01 14:33:00,504 [7] DEBUG Adam.FormMain - On_Controller_State_Changed
+2018-06-01 14:33:00,504 [9] DEBUG Adam.FormMain - On_Controller_State_Changed
+2018-06-01 14:33:00,504 [8] DEBUG Adam.FormMain - On_Controller_State_Changed
+2018-06-01 14:33:00,240 [11] DEBUG TransferControl.Engine.RouteControl - LoadPortController08 Connecting
+2018-06-01 14:33:00,504 [17] DEBUG Adam.FormMain - On_Controller_State_Changed
+2018-06-01 14:33:00,292 [13] DEBUG TransferControl.Engine.RouteControl - OCRController02 Connecting
+2018-06-01 14:33:00,504 [11] DEBUG Adam.FormMain - On_Controller_State_Changed
+2018-06-01 14:33:00,504 [13] DEBUG Adam.FormMain - On_Controller_State_Changed
+2018-06-01 14:33:00,291 [14] DEBUG TransferControl.Engine.RouteControl - RobotController01 Connecting
+2018-06-01 14:33:00,265 [12] DEBUG TransferControl.Engine.RouteControl - LoadPortController02 Connecting
+2018-06-01 14:33:00,367 [18] DEBUG TransferControl.Engine.RouteControl - AlignerController02 Connecting
+2018-06-01 14:33:00,318 [15] DEBUG TransferControl.Engine.RouteControl - RobotController02 Connecting
+2018-06-01 14:33:00,318 [16] DEBUG TransferControl.Engine.RouteControl - LoadPortController03 Connecting
+2018-06-01 14:33:00,506 [12] DEBUG Adam.FormMain - On_Controller_State_Changed
+2018-06-01 14:33:00,506 [14] DEBUG Adam.FormMain - On_Controller_State_Changed
+2018-06-01 14:33:00,506 [18] DEBUG Adam.FormMain - On_Controller_State_Changed
+2018-06-01 14:33:00,507 [15] DEBUG Adam.FormMain - On_Controller_State_Changed
+2018-06-01 14:33:00,507 [16] DEBUG Adam.FormMain - On_Controller_State_Changed
+2018-06-01 14:33:00,420 [20] DEBUG TransferControl.Engine.RouteControl - AlignerController01 Connecting
+2018-06-01 14:33:00,390 [19] DEBUG TransferControl.Engine.RouteControl - LoadPortController07 Connecting
+2018-06-01 14:33:00,510 [20] DEBUG Adam.FormMain - On_Controller_State_Changed
+2018-06-01 14:33:00,510 [19] DEBUG Adam.FormMain - On_Controller_State_Changed
+2018-06-01 14:33:01,717 [10] DEBUG TransferControl.Engine.RouteControl - LoadPortController05 Connection_Error
+2018-06-01 14:33:01,717 [9] DEBUG TransferControl.Engine.RouteControl - OCRController01 Connection_Error
+2018-06-01 14:33:01,717 [19] DEBUG TransferControl.Engine.RouteControl - LoadPortController07 Connection_Error
+2018-06-01 14:33:01,717 [13] DEBUG TransferControl.Engine.RouteControl - OCRController02 Connection_Error
+2018-06-01 14:33:01,717 [9] DEBUG Adam.FormMain - On_Controller_State_Changed
+2018-06-01 14:33:01,717 [10] DEBUG Adam.FormMain - On_Controller_State_Changed
+2018-06-01 14:33:01,718 [19] DEBUG Adam.FormMain - On_Controller_State_Changed
+2018-06-01 14:33:01,718 [13] DEBUG Adam.FormMain - On_Controller_State_Changed
+2018-06-01 14:33:01,722 [12] DEBUG TransferControl.Engine.RouteControl - LoadPortController02 Connection_Error
+2018-06-01 14:33:01,723 [12] DEBUG Adam.FormMain - On_Controller_State_Changed
+2018-06-01 14:33:01,763 [7] DEBUG TransferControl.Engine.RouteControl - LoadPortController01 Connection_Error
+2018-06-01 14:33:01,763 [7] DEBUG Adam.FormMain - On_Controller_State_Changed
+2018-06-01 14:33:01,777 [11] DEBUG TransferControl.Engine.RouteControl - LoadPortController08 Connection_Error
+2018-06-01 14:33:01,778 [11] DEBUG Adam.FormMain - On_Controller_State_Changed
+2018-06-01 14:33:01,789 [8] DEBUG TransferControl.Engine.RouteControl - LoadPortController04 Connection_Error
+2018-06-01 14:33:01,789 [8] DEBUG Adam.FormMain - On_Controller_State_Changed
+2018-06-01 14:33:01,809 [16] DEBUG TransferControl.Engine.RouteControl - LoadPortController03 Connection_Error
+2018-06-01 14:33:01,810 [16] DEBUG Adam.FormMain - On_Controller_State_Changed
+2018-06-01 14:33:01,823 [17] DEBUG TransferControl.Engine.RouteControl - LoadPortController06 Connection_Error
+2018-06-01 14:33:01,824 [17] DEBUG Adam.FormMain - On_Controller_State_Changed
+2018-06-01 15:30:29,736 [7] DEBUG TransferControl.Engine.RouteControl - LoadPortController01 Connecting
+2018-06-01 15:30:29,736 [8] DEBUG TransferControl.Engine.RouteControl - LoadPortController04 Connecting
+2018-06-01 15:30:29,746 [10] DEBUG TransferControl.Engine.RouteControl - LoadPortController05 Connecting
+2018-06-01 15:30:29,739 [9] DEBUG TransferControl.Engine.RouteControl - OCRController01 Connecting
+2018-06-01 15:30:29,738 [12] DEBUG TransferControl.Engine.RouteControl - LoadPortController02 Connecting
+2018-06-01 15:30:29,738 [11] DEBUG TransferControl.Engine.RouteControl - LoadPortController08 Connecting
+2018-06-01 15:30:29,743 [13] DEBUG TransferControl.Engine.RouteControl - OCRController02 Connecting
+2018-06-01 15:30:29,776 [14] DEBUG TransferControl.Engine.RouteControl - RobotController01 Connecting
+2018-06-01 15:30:29,776 [15] DEBUG TransferControl.Engine.RouteControl - RobotController02 Connecting
+2018-06-01 15:30:30,033 [11] DEBUG Adam.FormMain - On_Controller_State_Changed
+2018-06-01 15:30:30,033 [9] DEBUG Adam.FormMain - On_Controller_State_Changed
+2018-06-01 15:30:30,033 [8] DEBUG Adam.FormMain - On_Controller_State_Changed
+2018-06-01 15:30:30,033 [13] DEBUG Adam.FormMain - On_Controller_State_Changed
+2018-06-01 15:30:30,033 [12] DEBUG Adam.FormMain - On_Controller_State_Changed
+2018-06-01 15:30:30,033 [10] DEBUG Adam.FormMain - On_Controller_State_Changed
+2018-06-01 15:30:30,034 [7] DEBUG Adam.FormMain - On_Controller_State_Changed
+2018-06-01 15:30:30,034 [15] DEBUG Adam.FormMain - On_Controller_State_Changed
+2018-06-01 15:30:30,034 [14] DEBUG Adam.FormMain - On_Controller_State_Changed
+2018-06-01 15:30:29,833 [18] DEBUG TransferControl.Engine.RouteControl - AlignerController02 Connecting
+2018-06-01 15:30:30,039 [18] DEBUG Adam.FormMain - On_Controller_State_Changed
+2018-06-01 15:30:29,805 [16] DEBUG TransferControl.Engine.RouteControl - LoadPortController03 Connecting
+2018-06-01 15:30:29,858 [20] DEBUG TransferControl.Engine.RouteControl - AlignerController01 Connecting
+2018-06-01 15:30:29,834 [19] DEBUG TransferControl.Engine.RouteControl - LoadPortController07 Connecting
+2018-06-01 15:30:30,040 [16] DEBUG Adam.FormMain - On_Controller_State_Changed
+2018-06-01 15:30:29,805 [17] DEBUG TransferControl.Engine.RouteControl - LoadPortController06 Connecting
+2018-06-01 15:30:30,041 [20] DEBUG Adam.FormMain - On_Controller_State_Changed
+2018-06-01 15:30:30,041 [19] DEBUG Adam.FormMain - On_Controller_State_Changed
+2018-06-01 15:30:30,042 [17] DEBUG Adam.FormMain - On_Controller_State_Changed
+2018-06-01 15:30:31,369 [11] DEBUG TransferControl.Engine.RouteControl - LoadPortController08 Connection_Error
+2018-06-01 15:30:31,369 [7] DEBUG TransferControl.Engine.RouteControl - LoadPortController01 Connection_Error
+2018-06-01 15:30:31,369 [13] DEBUG TransferControl.Engine.RouteControl - OCRController02 Connection_Error
+2018-06-01 15:30:31,369 [17] DEBUG TransferControl.Engine.RouteControl - LoadPortController06 Connection_Error
+2018-06-01 15:30:31,369 [11] DEBUG Adam.FormMain - On_Controller_State_Changed
+2018-06-01 15:30:31,369 [12] DEBUG TransferControl.Engine.RouteControl - LoadPortController02 Connection_Error
+2018-06-01 15:30:31,370 [13] DEBUG Adam.FormMain - On_Controller_State_Changed
+2018-06-01 15:30:31,392 [10] DEBUG TransferControl.Engine.RouteControl - LoadPortController05 Connection_Error
+2018-06-01 15:30:31,393 [16] DEBUG TransferControl.Engine.RouteControl - LoadPortController03 Connection_Error
+2018-06-01 15:30:31,370 [17] DEBUG Adam.FormMain - On_Controller_State_Changed
+2018-06-01 15:30:31,393 [10] DEBUG Adam.FormMain - On_Controller_State_Changed
+2018-06-01 15:30:31,393 [16] DEBUG Adam.FormMain - On_Controller_State_Changed
+2018-06-01 15:30:31,391 [9] DEBUG TransferControl.Engine.RouteControl - OCRController01 Connection_Error
+2018-06-01 15:30:31,391 [7] DEBUG Adam.FormMain - On_Controller_State_Changed
+2018-06-01 15:30:31,394 [9] DEBUG Adam.FormMain - On_Controller_State_Changed
+2018-06-01 15:30:31,391 [19] DEBUG TransferControl.Engine.RouteControl - LoadPortController07 Connection_Error
+2018-06-01 15:30:31,395 [19] DEBUG Adam.FormMain - On_Controller_State_Changed
+2018-06-01 15:30:31,400 [12] DEBUG Adam.FormMain - On_Controller_State_Changed
+2018-06-01 15:30:31,401 [8] DEBUG TransferControl.Engine.RouteControl - LoadPortController04 Connection_Error
+2018-06-01 15:30:31,401 [8] DEBUG Adam.FormMain - On_Controller_State_Changed
+2018-06-01 15:30:50,939 [22] DEBUG Adam.FormMain - On_Error_Occurred
+2018-06-01 15:30:50,945 [21] DEBUG Adam.FormMain - On_Error_Occurred
+2018-06-01 15:30:51,041 [14] DEBUG TransferControl.Engine.RouteControl - RobotController01 Connection_Error
+2018-06-01 15:30:51,046 [14] DEBUG Adam.FormMain - On_Controller_State_Changed
+2018-06-01 15:30:51,046 [15] DEBUG TransferControl.Engine.RouteControl - RobotController02 Connection_Error
+2018-06-01 15:30:51,048 [15] DEBUG Adam.FormMain - On_Controller_State_Changed
+2018-06-01 15:30:51,061 [18] DEBUG TransferControl.Engine.RouteControl - AlignerController02 Connection_Error
+2018-06-01 15:30:51,061 [18] DEBUG Adam.FormMain - On_Controller_State_Changed
+2018-06-01 15:30:51,072 [20] DEBUG TransferControl.Engine.RouteControl - AlignerController01 Connection_Error
+2018-06-01 15:30:51,073 [20] DEBUG Adam.FormMain - On_Controller_State_Changed
+2018-06-01 15:31:01,575 [3] DEBUG TransferControl.Engine.RouteControl - 等待可用Foup中
+2018-06-01 15:31:31,559 [3] DEBUG TransferControl.Engine.RouteControl - 可用Foup出現
+2018-06-01 15:31:31,560 [3] DEBUG TransferControl.Engine.RouteControl - Robot01:指定 LoadPort01 開始取片
+2018-06-01 15:31:31,647 [3] DEBUG TransferControl.Controller.DeviceController - RobotController01 Send:$1CMD:GET__:1201,025,1,0,0 Wafer:Wafer22 
+2018-06-01 15:31:31,649 [3] DEBUG TransferControl.Engine.RouteControl - RobotFetchMode Robot02 找不到可以搬的Port
+2018-06-01 15:31:31,649 [3] DEBUG TransferControl.Engine.RouteControl - 等待搬運週期完成
+2018-06-01 15:31:41,649 [6] DEBUG TransferControl.Controller.DeviceController - RobotController01(On_Transaction_TimeOut Txn is timeout:$1CMD:GET__:1201,025,1,0,0
+2018-06-01 15:31:41,649 [6] DEBUG TransferControl.Engine.RouteControl - Transaction TimeOut:$1CMD:GET__:1201,025,1,0,0
+2018-06-01 15:31:41,650 [6] DEBUG Adam.FormMain - On_Command_TimeOut
+2018-06-01 15:33:07,136 [7] DEBUG TransferControl.Engine.RouteControl - LoadPortController01 Connecting
+2018-06-01 15:33:07,407 [7] DEBUG Adam.FormMain - On_Controller_State_Changed
+2018-06-01 15:33:07,136 [8] DEBUG TransferControl.Engine.RouteControl - LoadPortController04 Connecting
+2018-06-01 15:33:07,137 [9] DEBUG TransferControl.Engine.RouteControl - OCRController01 Connecting
+2018-06-01 15:33:07,408 [8] DEBUG Adam.FormMain - On_Controller_State_Changed
+2018-06-01 15:33:07,408 [9] DEBUG Adam.FormMain - On_Controller_State_Changed
+2018-06-01 15:33:07,224 [15] DEBUG TransferControl.Engine.RouteControl - RobotController02 Connecting
+2018-06-01 15:33:07,409 [15] DEBUG Adam.FormMain - On_Controller_State_Changed
+2018-06-01 15:33:07,259 [16] DEBUG TransferControl.Engine.RouteControl - LoadPortController03 Connecting
+2018-06-01 15:33:07,410 [16] DEBUG Adam.FormMain - On_Controller_State_Changed
+2018-06-01 15:33:07,167 [11] DEBUG TransferControl.Engine.RouteControl - LoadPortController08 Connecting
+2018-06-01 15:33:07,412 [11] DEBUG Adam.FormMain - On_Controller_State_Changed
+2018-06-01 15:33:07,337 [20] DEBUG TransferControl.Engine.RouteControl - AlignerController01 Connecting
+2018-06-01 15:33:07,412 [20] DEBUG Adam.FormMain - On_Controller_State_Changed
+2018-06-01 15:33:07,224 [14] DEBUG TransferControl.Engine.RouteControl - RobotController01 Connecting
+2018-06-01 15:33:07,413 [14] DEBUG Adam.FormMain - On_Controller_State_Changed
+2018-06-01 15:33:07,285 [17] DEBUG TransferControl.Engine.RouteControl - LoadPortController06 Connecting
+2018-06-01 15:33:07,167 [10] DEBUG TransferControl.Engine.RouteControl - LoadPortController05 Connecting
+2018-06-01 15:33:07,337 [19] DEBUG TransferControl.Engine.RouteControl - LoadPortController07 Connecting
+2018-06-01 15:33:07,193 [13] DEBUG TransferControl.Engine.RouteControl - OCRController02 Connecting
+2018-06-01 15:33:07,306 [18] DEBUG TransferControl.Engine.RouteControl - AlignerController02 Connecting
+2018-06-01 15:33:07,193 [12] DEBUG TransferControl.Engine.RouteControl - LoadPortController02 Connecting
+2018-06-01 15:33:07,418 [17] DEBUG Adam.FormMain - On_Controller_State_Changed
+2018-06-01 15:33:07,418 [10] DEBUG Adam.FormMain - On_Controller_State_Changed
+2018-06-01 15:33:07,418 [19] DEBUG Adam.FormMain - On_Controller_State_Changed
+2018-06-01 15:33:07,418 [13] DEBUG Adam.FormMain - On_Controller_State_Changed
+2018-06-01 15:33:07,418 [12] DEBUG Adam.FormMain - On_Controller_State_Changed
+2018-06-01 15:33:07,418 [18] DEBUG Adam.FormMain - On_Controller_State_Changed
+2018-06-01 15:33:08,481 [7] DEBUG TransferControl.Engine.RouteControl - LoadPortController01 Connection_Error
+2018-06-01 15:33:08,481 [7] DEBUG Adam.FormMain - On_Controller_State_Changed
+2018-06-01 15:33:08,569 [10] DEBUG TransferControl.Engine.RouteControl - LoadPortController05 Connection_Error
+2018-06-01 15:33:08,570 [10] DEBUG Adam.FormMain - On_Controller_State_Changed
+2018-06-01 15:33:08,592 [16] DEBUG TransferControl.Engine.RouteControl - LoadPortController03 Connection_Error
+2018-06-01 15:33:08,592 [16] DEBUG Adam.FormMain - On_Controller_State_Changed
+2018-06-01 15:33:08,608 [11] DEBUG TransferControl.Engine.RouteControl - LoadPortController08 Connection_Error
+2018-06-01 15:33:08,608 [9] DEBUG TransferControl.Engine.RouteControl - OCRController01 Connection_Error
+2018-06-01 15:33:08,609 [11] DEBUG Adam.FormMain - On_Controller_State_Changed
+2018-06-01 15:33:08,609 [9] DEBUG Adam.FormMain - On_Controller_State_Changed
+2018-06-01 15:33:08,641 [8] DEBUG TransferControl.Engine.RouteControl - LoadPortController04 Connection_Error
+2018-06-01 15:33:08,641 [8] DEBUG Adam.FormMain - On_Controller_State_Changed
+2018-06-01 15:33:08,649 [12] DEBUG TransferControl.Engine.RouteControl - LoadPortController02 Connection_Error
+2018-06-01 15:33:08,650 [13] DEBUG TransferControl.Engine.RouteControl - OCRController02 Connection_Error
+2018-06-01 15:33:08,650 [12] DEBUG Adam.FormMain - On_Controller_State_Changed
+2018-06-01 15:33:08,650 [17] DEBUG TransferControl.Engine.RouteControl - LoadPortController06 Connection_Error
+2018-06-01 15:33:08,650 [13] DEBUG Adam.FormMain - On_Controller_State_Changed
+2018-06-01 15:33:08,651 [17] DEBUG Adam.FormMain - On_Controller_State_Changed
+2018-06-01 15:33:08,665 [19] DEBUG TransferControl.Engine.RouteControl - LoadPortController07 Connection_Error
+2018-06-01 15:33:08,667 [19] DEBUG Adam.FormMain - On_Controller_State_Changed
+2018-06-01 15:33:28,412 [22] DEBUG Adam.FormMain - On_Error_Occurred
+2018-06-01 15:33:28,422 [14] DEBUG TransferControl.Engine.RouteControl - RobotController01 Connection_Error
+2018-06-01 15:33:28,423 [14] DEBUG Adam.FormMain - On_Controller_State_Changed
+2018-06-01 15:33:28,434 [15] DEBUG TransferControl.Engine.RouteControl - RobotController02 Connection_Error
+2018-06-01 15:33:28,434 [15] DEBUG Adam.FormMain - On_Controller_State_Changed
+2018-06-01 15:33:28,441 [18] DEBUG TransferControl.Engine.RouteControl - AlignerController02 Connection_Error
+2018-06-01 15:33:28,441 [18] DEBUG Adam.FormMain - On_Controller_State_Changed
+2018-06-01 15:33:28,447 [21] DEBUG Adam.FormMain - On_Error_Occurred
+2018-06-01 15:33:28,456 [20] DEBUG TransferControl.Engine.RouteControl - AlignerController01 Connection_Error
+2018-06-01 15:33:28,456 [20] DEBUG Adam.FormMain - On_Controller_State_Changed
+=======
+>>>>>>> Stashed changes

@@ -6,23 +6,26 @@ using System.Drawing;
 using System.Text;
 using System.Windows.Forms;
 using Adam.Util;
+using SANWA.Utility;
 
 namespace Adam.Menu.SystemSetting
 {
-    public partial class FormAlarmEventSet : Form
+    public partial class FormCodeSetting : Adam.Menu.SystemSetting.FormSettingFram
     {
-        public FormAlarmEventSet()
+        public FormCodeSetting()
         {
             InitializeComponent();
         }
 
         private DBUtil dBUtil = new DBUtil();
 
-        private void FormAlarmEventSet_Load(object sender, EventArgs e)
+        private void FormCodeSetting_Load(object sender, EventArgs e)
         {
             string strSql = string.Empty;
             DataTable dtTemp;
             Dictionary<string, object> keyValues = new Dictionary<string, object>();
+            Controlling controlling = new Controlling();
+
 
             try
             {
@@ -30,13 +33,11 @@ namespace Adam.Menu.SystemSetting
 
                 strSql = "SELECT list_type, list_id, CONCAT(list_name, ' - ', list_name_en) name, list_name, list_name_en, list_value, sort_sequence, active " +
                          "FROM list_item " +
-                         "WHERE list_type = @list_type " +
+                         "WHERE list_type in ('VENDOR_CODE', 'DEVICE_TYPE') " +
                          "AND active = @active " +
                          "AND list_id <> @list_id " +
                          "ORDER BY sort_sequence ASC ";
 
-
-                keyValues.Add("@list_type", "VENDOR_CODE");
                 keyValues.Add("@active", "Y");
                 keyValues.Add("@list_id", "NA");
 
@@ -45,14 +46,15 @@ namespace Adam.Menu.SystemSetting
 
                 if (dtTemp.Rows.Count > 0)
                 {
-                    lsbAlarmConditionVendorCode.DataSource = dtTemp;
-                    lsbAlarmConditionVendorCode.DisplayMember = "name";
-                    lsbAlarmConditionVendorCode.ValueMember = "list_value";
-                    lsbAlarmConditionVendorCode.SelectedIndex = -1;
+                    controlling.ListBox_ItemChange(ref lsbCodeConditionVendorCode, dtTemp.Select("list_type = 'VENDOR_CODE'"), "name", "list_value");
+                    lsbCodeConditionVendorCode.SelectedIndex = -1;
+
+                    controlling.ListBox_ItemChange(ref lsbCodeConditionDeviceType, dtTemp.Select("list_type = 'DEVICE_TYPE'"), "name", "list_value");
+                    lsbCodeConditionDeviceType.SelectedIndex = -1;
                 }
                 else
                 {
-                    MessageBox.Show("list_item : VENDOR_CODE does not exist.", this.Name, MessageBoxButtons.OK, MessageBoxIcon.Error, MessageBoxDefaultButton.Button1, MessageBoxOptions.RightAlign);
+                    MessageBox.Show("list_item : VENDOR_CODE and DEVICE_TYPE does not exist.", this.Name, MessageBoxButtons.OK, MessageBoxIcon.Error, MessageBoxDefaultButton.Button1, MessageBoxOptions.RightAlign);
                 }
             }
             catch (Exception ex)
@@ -61,7 +63,7 @@ namespace Adam.Menu.SystemSetting
             }
         }
 
-        private void lsbAlarmConditionVendorCode_Click(object sender, EventArgs e)
+        private void lsbCodeConditionVendorCode_Click(object sender, EventArgs e)
         {
             string strSql = string.Empty;
             DataTable dtTemp;
@@ -69,35 +71,34 @@ namespace Adam.Menu.SystemSetting
 
             try
             {
-                if (lsbAlarmConditionVendorCode.SelectedIndex >= 0)
+                if (lsbCodeConditionVendorCode.SelectedIndex >= 0 && lsbCodeConditionDeviceType.SelectedIndex >= 0)
                 {
                     dtTemp = new DataTable();
 
                     strSql = "SELECT * " +
-                             "FROM alarm_event_config " +
-                             "WHERE Device_Name = @Device_Name " +
-                             "ORDER BY alarm_no ASC";
+                             "FROM device_code " +
+                             "WHERE node_type = @node_type " +
+                             "AND vendor = @vendor " +
+                             "AND category = @category " +
+                             "ORDER BY code_type ASC, code_id ASC";
 
-                    keyValues.Add("@Device_Name", lsbAlarmConditionVendorCode.SelectedValue.ToString());
+                    keyValues.Add("@node_type", lsbCodeConditionDeviceType.SelectedValue.ToString());
+                    keyValues.Add("@vendor", lsbCodeConditionVendorCode.SelectedValue.ToString());
+                    keyValues.Add("@category", "Command");
 
                     dtTemp = dBUtil.GetDataTable(strSql, keyValues);
-                    dgvlsbAlarmData.AutoGenerateColumns = false;
-                    dgvlsbAlarmData.DataSource = dtTemp;
+                    //dgvCodeData.AutoGenerateColumns = false;
+                    dgvCodeData.DataSource = dtTemp;
                 }
                 else
                 {
-                    dgvlsbAlarmData.DataSource = null;
+                    dgvCodeData.DataSource = null;
                 }
             }
             catch (Exception ex)
             {
                 throw new Exception(ex.ToString());
             }
-        }
-
-        private void btnSave_Click(object sender, EventArgs e)
-        {
-
         }
     }
 }

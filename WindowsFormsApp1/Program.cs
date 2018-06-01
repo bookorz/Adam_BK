@@ -16,7 +16,9 @@ namespace Adam
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new FormMain());
+            FormMain t = new FormMain();
+            t.Hide();
+            Application.Run(t);
         }
     }
 }

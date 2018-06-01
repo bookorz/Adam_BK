@@ -35,9 +35,8 @@
     <StartupObject>Adam.Program</StartupObject>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="log4net, Version=2.0.8.0, Culture=neutral, PublicKeyToken=669e0ddf0bb1aa2a, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\..\SANWA-Function-For-Test\log4net.dll</HintPath>
+    <Reference Include="log4net">
+      <HintPath>..\..\SANWAFunction\packages\log4net.dll</HintPath>
     </Reference>
     <Reference Include="mysql.data">
       <HintPath>lib\mysql.data.dll</HintPath>
@@ -46,8 +45,10 @@
       <SpecificVersion>False</SpecificVersion>
       <HintPath>..\packages\Newtonsoft.Json.11.0.2\lib\net45\Newtonsoft.Json.dll</HintPath>
     </Reference>
-    <Reference Include="SplitButton, Version=2.1.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
+    <Reference Include="nmodbuspc">
+      <HintPath>..\..\SANWAFunction\packages\nmodbuspc.dll</HintPath>
+    </Reference>
+    <Reference Include="SplitButton">
       <HintPath>..\packages\SplitButton\bin\Debug\SplitButton.dll</HintPath>
     </Reference>
     <Reference Include="System" />
@@ -62,13 +63,30 @@
     <Reference Include="System.Net.Http" />
     <Reference Include="System.Windows.Forms" />
     <Reference Include="System.Xml" />
-    <Reference Include="ToggleSwitch, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
+    <Reference Include="ToggleSwitch">
       <HintPath>..\packages\ToggleSwitch\ToggleSwitch\bin\Debug\ToggleSwitch.dll</HintPath>
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="SplashScreen.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SplashScreen.Designer.cs">
+      <DependentUpon>SplashScreen.cs</DependentUpon>
+    </Compile>
     <Compile Include="UI_Update\Alarm\AlarmUpdate.cs" />
+    <Compile Include="Menu\SystemSetting\FormCodeSetting.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Menu\SystemSetting\FormCodeSetting.Designer.cs">
+      <DependentUpon>FormCodeSetting.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Menu\SystemSetting\FormSettingFram.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Menu\SystemSetting\FormSettingFram.Designer.cs">
+      <DependentUpon>FormSettingFram.cs</DependentUpon>
+    </Compile>
     <Compile Include="Util\ConfigUtil.cs" />
     <Compile Include="Util\DBUtil.cs" />
     <Compile Include="FormAlarm.cs">
@@ -312,6 +330,9 @@
     <EmbeddedResource Include="Menu\SystemSetting\FormAlarmEventSet .resx">
       <DependentUpon>FormAlarmEventSet .cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Menu\SystemSetting\FormCodeSetting.resx">
+      <DependentUpon>FormCodeSetting.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Menu\SystemSetting\FormConfiguration.resx">
       <DependentUpon>FormConfiguration.cs</DependentUpon>
     </EmbeddedResource>
@@ -323,6 +344,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Menu\SystemSetting\FormSECSSet.resx">
       <DependentUpon>FormSECSSet.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Menu\SystemSetting\FormSettingFram.resx">
+      <DependentUpon>FormSettingFram.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Menu\SystemSetting\FormSystemSetting.resx">
       <DependentUpon>FormSystemSetting.cs</DependentUpon>
@@ -348,6 +372,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FormTeaching.resx">
       <DependentUpon>FormTeaching.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SplashScreen.resx">
+      <DependentUpon>SplashScreen.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
@@ -383,11 +410,13 @@
     <None Include="Resources\sanwa_robot_status.png" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="Resources\SplashScreen.bmp" />
     <None Include="Resources\arrowleft.png" />
     <None Include="Resources\check.png" />
     <None Include="Resources\cross.png" />
     <None Include="Resources\handle.png" />
     <None Include="Resources\Image70.png" />
+    <None Include="Resources\index.jpg" />
     <Content Include="Resources\sanwa_aligner_status.png" />
   </ItemGroup>
   <ItemGroup />
