@@ -42,20 +42,20 @@ namespace Adam.UI_Update.Alarm
                 if (AlarmList_gv.InvokeRequired)
                 {
                     UpdateAlarm ph = new UpdateAlarm(UpdateAlarmList);
-                   
+
                     AlarmList_gv.BeginInvoke(ph, AlarmList);
-                   
+
                 }
                 else
                 {
 
                     //JobList_gv.DataSource = null;
                     AlarmList_gv.DataSource = AlarmList;
-                    
+
                     //Conn_gv.Refresh();
                     AlarmList_gv.ClearSelection();
                     AlarmList_gv.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.AllCells;
-                    if (AlarmList.Count != 0)
+                    if (AlarmList.Count() != 0)
                     {
                         form.Visible = true;
                     }
