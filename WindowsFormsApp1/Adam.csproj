@@ -76,7 +76,6 @@
       <DependentUpon>SplashScreen.cs</DependentUpon>
     </Compile>
     <Compile Include="UI_Update\Alarm\AlarmUpdate.cs" />
-=======
     <Compile Include="Menu\SystemSetting\FormCodeSetting.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -89,7 +88,6 @@
     <Compile Include="Menu\SystemSetting\FormSettingFram.Designer.cs">
       <DependentUpon>FormSettingFram.cs</DependentUpon>
     </Compile>
->>>>>>> Stashed changes
     <Compile Include="Util\ConfigUtil.cs" />
     <Compile Include="Util\DBUtil.cs" />
     <Compile Include="FormAlarm.cs">
