@@ -72,7 +72,7 @@ namespace Adam
 
         private void Form1_Load(object sender, EventArgs e)
         {
-            SplashScreen.ShowSplashScreen();
+            
             this.Visible = false;
 
             Control[] ctrlForm = new Control[] { formMonitoring, formCommunications, formWafer, formStatus, formOCR, formSystem };
@@ -173,11 +173,11 @@ namespace Adam
         private void toolStripMenuItem6_Click(object sender, EventArgs e)
         {
             string strMsg = "Switching to manual mode.\r\n" + "In this mode, your operation may damage the equipment.\r\n" + "Suffcient cautions are required for your operation.";
-            if (MessageBox.Show(strMsg, "Manual", MessageBoxButtons.OKCancel, MessageBoxIcon.Exclamation, MessageBoxDefaultButton.Button1, MessageBoxOptions.ServiceNotification) == DialogResult.OK)
-            {
+            //if (MessageBox.Show(strMsg, "Manual", MessageBoxButtons.OKCancel, MessageBoxIcon.Exclamation, MessageBoxDefaultButton.Button1, MessageBoxOptions.ServiceNotification) == DialogResult.OK)
+            //{
                 GUI.FormManual formManual = new GUI.FormManual();
                 formManual.Show();
-            }
+            //}
         }
 
         private void toolStripMenuItem9_Click(object sender, EventArgs e)
@@ -281,7 +281,7 @@ namespace Adam
                     switch (Node.Type)
                     {
                         case "LoadPort":
-                            ManualPortStatusUpdate.UpdateLog(Node.Name, Msg.Command);
+                            ManualPortStatusUpdate.UpdateLog(Node.Name, Msg.Command + " Excuted");
                             switch (Txn.Method)
                             {
                                 case Transaction.Command.LoadPortType.ReadVersion:
@@ -369,45 +369,47 @@ namespace Adam
             AlarmManagement.Add(CurrentAlarm);
             Form form = Application.OpenForms["AlarmFrom"];
 
-            alarmFrom.Show();
-            alarmFrom.BringToFront();
-            //AlarmUpdate.UpdateAlarmList(AlarmManagement.GetAll());
-            //AlarmUpdate.UpdateAlarmHistory(AlarmManagement.GetHistory());
+            AlarmUpdate.UpdateAlarmList(AlarmManagement.GetAll());
+            AlarmUpdate.UpdateAlarmHistory(AlarmManagement.GetHistory());
         }
 
         public void On_Command_Finished(Node Node, Transaction Txn, ReturnMessage Msg)
         {
             logger.Debug("On_Command_Finished");
-            Transaction txn = new Transaction();
-            switch (Node.Type)
+            switch (Txn.FormName)
             {
-                case "LoadPort":
-                    ManualPortStatusUpdate.UpdateLog(Node.Name, Msg.Command);
-
-                    switch (Msg.Command)
+                case "FormManual":
+                    Transaction txn = new Transaction();
+                    switch (Node.Type)
                     {
-                        case Transaction.Command.LoadPortType.MappingLoad:
-                            txn.Method = Transaction.Command.LoadPortType.GetMapping;
-                            Node.SendCommand(txn);
+                        case "LoadPort":
+                            ManualPortStatusUpdate.UpdateLog(Node.Name, Msg.Command + " Finished");
+                            
+                            switch (Msg.Command)
+                            {
+                                case Transaction.Command.LoadPortType.MappingLoad:
+                                    txn.Method = Transaction.Command.LoadPortType.GetMapping;
+                                    Node.SendCommand(txn);
+                                    break;
+                            }
+                            break;
+                        case "OCR":
+                            switch (Txn.Method)
+                            {
+                                case Transaction.Command.OCRType.Read:
+                                    OCRUpdate.UpdateOCRRead(Node.Name, Msg.Value);
+                                    break;
+                            }
+                            break;
+                        case "Robot":
+                            ManualRobotStatusUpdate.UpdateGUI(Txn, Node.Name, Msg.Value);//update 手動功能畫面
+                            break;
+                        case "Aligner":
+                            ManualAlignerStatusUpdate.UpdateGUI(Txn, Node.Name, Msg.Value);//update 手動功能畫面
                             break;
                     }
-                    break;
-                case "OCR":
-                    switch (Txn.Method)
-                    {
-                        case Transaction.Command.OCRType.Read:
-                            OCRUpdate.UpdateOCRRead(Node.Name, Msg.Value);
-                            break;
-                    }
-                    break;
-                case "Robot":
-                    ManualRobotStatusUpdate.UpdateGUI(Txn, Node.Name, Msg.Value);//update 手動功能畫面
-                    break;
-                case "Aligner":
-                    ManualAlignerStatusUpdate.UpdateGUI(Txn, Node.Name, Msg.Value);//update 手動功能畫面
                     break;
             }
-
         }
 
         public void On_Command_TimeOut(Node Node, Transaction Txn)
@@ -460,12 +462,16 @@ namespace Adam
                 switch (Node.Type)
                 {
                     case "LoadPort":
-                        ManualPortStatusUpdate.UpdateLog(Node.Name, Msg.Command);
+                        
                         switch (Msg.Command)
                         {
                             case "MANSW":
-                                txn.Method = Transaction.Command.LoadPortType.MappingLoad;
-                                Node.SendCommand(txn);
+                                if (RouteCtrl.GetMode().Equals("Auto"))
+                                {
+                                    ManualPortStatusUpdate.UpdateLog(Node.Name, Msg.Command + " Trigger");
+                                    txn.Method = Transaction.Command.LoadPortType.MappingLoad;
+                                    Node.SendCommand(txn);
+                                }
                                 break;
                         }
                         break;
