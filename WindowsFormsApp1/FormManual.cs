@@ -151,6 +151,7 @@ namespace GUI
             }
             if (!txn.Method.Equals(""))
             {
+                ManualPortStatusUpdate.LockUI(true);
                 port.SendCommand(txn);
             }
             else
@@ -586,9 +587,9 @@ namespace GUI
             foreach (Control control in controls)
             {
                 control.Text = "";
-                control .BackColor = Color.WhiteSmoke;
+                control.BackColor = Color.WhiteSmoke;
             }
-            String nodeName = rbR1.Checked? "Robot01": "Robot02";
+            String nodeName = rbR1.Checked ? "Robot01" : "Robot02";
             SetDeviceStatus(nodeName);
             if (tbRStatus.Text.Equals("N/A") || tbRStatus.Text.Equals("Disconnected") || tbRStatus.Text.Equals("") || tbRStatus.Text.Equals("Connecting"))
             {

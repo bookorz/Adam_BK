@@ -2703,6 +2703,7 @@
             this.Btn_ReadLED_A.Tag = "01";
             this.Btn_ReadLED_A.Text = "Read LED";
             this.Btn_ReadLED_A.UseVisualStyleBackColor = true;
+            this.Btn_ReadLED_A.Click += new System.EventHandler(this.PortFunction_Click);
             // 
             // groupBox10
             // 
@@ -2782,6 +2783,7 @@
             // Lab_StateCode_06_A
             // 
             this.Lab_StateCode_06_A.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.Lab_StateCode_06_A.Font = new System.Drawing.Font("微軟正黑體", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
             this.Lab_StateCode_06_A.ImeMode = System.Windows.Forms.ImeMode.NoControl;
             this.Lab_StateCode_06_A.Location = new System.Drawing.Point(303, 144);
             this.Lab_StateCode_06_A.Name = "Lab_StateCode_06_A";
@@ -2793,6 +2795,7 @@
             // Lab_StateCode_19_A
             // 
             this.Lab_StateCode_19_A.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.Lab_StateCode_19_A.Font = new System.Drawing.Font("微軟正黑體", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
             this.Lab_StateCode_19_A.ImeMode = System.Windows.Forms.ImeMode.NoControl;
             this.Lab_StateCode_19_A.Location = new System.Drawing.Point(566, 237);
             this.Lab_StateCode_19_A.Name = "Lab_StateCode_19_A";
@@ -2804,6 +2807,7 @@
             // Lab_StateCode_17_A
             // 
             this.Lab_StateCode_17_A.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.Lab_StateCode_17_A.Font = new System.Drawing.Font("微軟正黑體", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
             this.Lab_StateCode_17_A.ImeMode = System.Windows.Forms.ImeMode.NoControl;
             this.Lab_StateCode_17_A.Location = new System.Drawing.Point(566, 191);
             this.Lab_StateCode_17_A.Name = "Lab_StateCode_17_A";
@@ -2815,6 +2819,7 @@
             // Lab_StateCode_18_A
             // 
             this.Lab_StateCode_18_A.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.Lab_StateCode_18_A.Font = new System.Drawing.Font("微軟正黑體", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
             this.Lab_StateCode_18_A.ImeMode = System.Windows.Forms.ImeMode.NoControl;
             this.Lab_StateCode_18_A.Location = new System.Drawing.Point(566, 214);
             this.Lab_StateCode_18_A.Name = "Lab_StateCode_18_A";
@@ -2826,6 +2831,7 @@
             // Lab_StateCode_16_A
             // 
             this.Lab_StateCode_16_A.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.Lab_StateCode_16_A.Font = new System.Drawing.Font("微軟正黑體", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
             this.Lab_StateCode_16_A.ImeMode = System.Windows.Forms.ImeMode.NoControl;
             this.Lab_StateCode_16_A.Location = new System.Drawing.Point(566, 167);
             this.Lab_StateCode_16_A.Name = "Lab_StateCode_16_A";
@@ -2837,6 +2843,7 @@
             // Lab_StateCode_14_A
             // 
             this.Lab_StateCode_14_A.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.Lab_StateCode_14_A.Font = new System.Drawing.Font("微軟正黑體", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
             this.Lab_StateCode_14_A.ImeMode = System.Windows.Forms.ImeMode.NoControl;
             this.Lab_StateCode_14_A.Location = new System.Drawing.Point(566, 121);
             this.Lab_StateCode_14_A.Name = "Lab_StateCode_14_A";
@@ -2848,6 +2855,7 @@
             // Lab_StateCode_15_A
             // 
             this.Lab_StateCode_15_A.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.Lab_StateCode_15_A.Font = new System.Drawing.Font("微軟正黑體", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
             this.Lab_StateCode_15_A.ImeMode = System.Windows.Forms.ImeMode.NoControl;
             this.Lab_StateCode_15_A.Location = new System.Drawing.Point(566, 144);
             this.Lab_StateCode_15_A.Name = "Lab_StateCode_15_A";
@@ -2859,6 +2867,7 @@
             // Lab_StateCode_13_A
             // 
             this.Lab_StateCode_13_A.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.Lab_StateCode_13_A.Font = new System.Drawing.Font("微軟正黑體", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
             this.Lab_StateCode_13_A.ImeMode = System.Windows.Forms.ImeMode.NoControl;
             this.Lab_StateCode_13_A.Location = new System.Drawing.Point(566, 97);
             this.Lab_StateCode_13_A.Name = "Lab_StateCode_13_A";
@@ -2870,6 +2879,7 @@
             // Lab_StateCode_11_A
             // 
             this.Lab_StateCode_11_A.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.Lab_StateCode_11_A.Font = new System.Drawing.Font("微軟正黑體", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
             this.Lab_StateCode_11_A.ImeMode = System.Windows.Forms.ImeMode.NoControl;
             this.Lab_StateCode_11_A.Location = new System.Drawing.Point(566, 51);
             this.Lab_StateCode_11_A.Name = "Lab_StateCode_11_A";
@@ -2881,6 +2891,7 @@
             // Lab_StateCode_12_A
             // 
             this.Lab_StateCode_12_A.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.Lab_StateCode_12_A.Font = new System.Drawing.Font("微軟正黑體", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
             this.Lab_StateCode_12_A.ImeMode = System.Windows.Forms.ImeMode.NoControl;
             this.Lab_StateCode_12_A.Location = new System.Drawing.Point(566, 74);
             this.Lab_StateCode_12_A.Name = "Lab_StateCode_12_A";
@@ -2991,6 +3002,7 @@
             // Lab_StateCode_10_A
             // 
             this.Lab_StateCode_10_A.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.Lab_StateCode_10_A.Font = new System.Drawing.Font("微軟正黑體", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
             this.Lab_StateCode_10_A.ImeMode = System.Windows.Forms.ImeMode.NoControl;
             this.Lab_StateCode_10_A.Location = new System.Drawing.Point(218, 237);
             this.Lab_StateCode_10_A.Name = "Lab_StateCode_10_A";
@@ -3002,6 +3014,7 @@
             // Lab_StateCode_08_A
             // 
             this.Lab_StateCode_08_A.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.Lab_StateCode_08_A.Font = new System.Drawing.Font("微軟正黑體", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
             this.Lab_StateCode_08_A.ImeMode = System.Windows.Forms.ImeMode.NoControl;
             this.Lab_StateCode_08_A.Location = new System.Drawing.Point(218, 191);
             this.Lab_StateCode_08_A.Name = "Lab_StateCode_08_A";
@@ -3013,6 +3026,7 @@
             // Lab_StateCode_09_A
             // 
             this.Lab_StateCode_09_A.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.Lab_StateCode_09_A.Font = new System.Drawing.Font("微軟正黑體", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
             this.Lab_StateCode_09_A.ImeMode = System.Windows.Forms.ImeMode.NoControl;
             this.Lab_StateCode_09_A.Location = new System.Drawing.Point(218, 214);
             this.Lab_StateCode_09_A.Name = "Lab_StateCode_09_A";
@@ -3024,6 +3038,7 @@
             // Lab_StateCode_07_A
             // 
             this.Lab_StateCode_07_A.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.Lab_StateCode_07_A.Font = new System.Drawing.Font("微軟正黑體", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
             this.Lab_StateCode_07_A.ImeMode = System.Windows.Forms.ImeMode.NoControl;
             this.Lab_StateCode_07_A.Location = new System.Drawing.Point(218, 167);
             this.Lab_StateCode_07_A.Name = "Lab_StateCode_07_A";
@@ -3035,6 +3050,7 @@
             // Lab_StateCode_04_A
             // 
             this.Lab_StateCode_04_A.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.Lab_StateCode_04_A.Font = new System.Drawing.Font("微軟正黑體", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
             this.Lab_StateCode_04_A.ImeMode = System.Windows.Forms.ImeMode.NoControl;
             this.Lab_StateCode_04_A.Location = new System.Drawing.Point(218, 121);
             this.Lab_StateCode_04_A.Name = "Lab_StateCode_04_A";
@@ -3046,6 +3062,7 @@
             // Lab_StateCode_05_A
             // 
             this.Lab_StateCode_05_A.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.Lab_StateCode_05_A.Font = new System.Drawing.Font("微軟正黑體", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
             this.Lab_StateCode_05_A.ImeMode = System.Windows.Forms.ImeMode.NoControl;
             this.Lab_StateCode_05_A.Location = new System.Drawing.Point(218, 144);
             this.Lab_StateCode_05_A.Name = "Lab_StateCode_05_A";
@@ -3057,6 +3074,7 @@
             // Lab_StateCode_03_A
             // 
             this.Lab_StateCode_03_A.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.Lab_StateCode_03_A.Font = new System.Drawing.Font("微軟正黑體", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
             this.Lab_StateCode_03_A.ImeMode = System.Windows.Forms.ImeMode.NoControl;
             this.Lab_StateCode_03_A.Location = new System.Drawing.Point(218, 97);
             this.Lab_StateCode_03_A.Name = "Lab_StateCode_03_A";
@@ -3068,6 +3086,7 @@
             // Lab_StateCode_01_A
             // 
             this.Lab_StateCode_01_A.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.Lab_StateCode_01_A.Font = new System.Drawing.Font("微軟正黑體", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
             this.Lab_StateCode_01_A.ImeMode = System.Windows.Forms.ImeMode.NoControl;
             this.Lab_StateCode_01_A.Location = new System.Drawing.Point(218, 51);
             this.Lab_StateCode_01_A.Name = "Lab_StateCode_01_A";
@@ -3079,6 +3098,7 @@
             // Lab_StateCode_02_A
             // 
             this.Lab_StateCode_02_A.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.Lab_StateCode_02_A.Font = new System.Drawing.Font("微軟正黑體", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
             this.Lab_StateCode_02_A.ImeMode = System.Windows.Forms.ImeMode.NoControl;
             this.Lab_StateCode_02_A.Location = new System.Drawing.Point(218, 74);
             this.Lab_StateCode_02_A.Name = "Lab_StateCode_02_A";
@@ -3218,6 +3238,7 @@
             // RTxt_Message_A
             // 
             this.RTxt_Message_A.BackColor = System.Drawing.SystemColors.ControlLight;
+            this.RTxt_Message_A.Font = new System.Drawing.Font("微軟正黑體", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
             this.RTxt_Message_A.Location = new System.Drawing.Point(10, 57);
             this.RTxt_Message_A.Margin = new System.Windows.Forms.Padding(0);
             this.RTxt_Message_A.Name = "RTxt_Message_A";

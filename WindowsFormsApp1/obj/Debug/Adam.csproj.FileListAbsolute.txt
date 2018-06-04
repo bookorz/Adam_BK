@@ -77,7 +77,6 @@ C:\Users\ethan_huang\source\repos\Adam\WindowsFormsApp1\bin\Debug\Newtonsoft.Jso
 C:\Users\ethan_huang\source\repos\Adam\WindowsFormsApp1\bin\Debug\SplitButton.pdb
 C:\Users\ethan_huang\source\repos\Adam\WindowsFormsApp1\bin\Debug\ToggleSwitch.pdb
 C:\Users\ethan_huang\source\repos\Adam\WindowsFormsApp1\obj\Debug\Adam.csprojAssemblyReference.cache
-C:\Users\ethan_huang\source\repos\Adam\WindowsFormsApp1\obj\Debug\Adam.AlarmFrom.resources
 C:\Users\ethan_huang\source\repos\Adam\WindowsFormsApp1\obj\Debug\Adam.FormMain.resources
 C:\Users\ethan_huang\source\repos\Adam\WindowsFormsApp1\obj\Debug\Adam.FormUnitCtrlData.resources
 C:\Users\ethan_huang\source\repos\Adam\WindowsFormsApp1\obj\Debug\Adam.FormTransTest.resources
@@ -116,3 +115,4 @@ C:\Users\ethan_huang\source\repos\Adam\WindowsFormsApp1\obj\Debug\ja-JP\Adam.res
 C:\Users\ethan_huang\source\repos\Adam\WindowsFormsApp1\obj\Debug\Adam.csproj.CopyComplete
 C:\Users\ethan_huang\source\repos\Adam\WindowsFormsApp1\obj\Debug\Adam.exe
 C:\Users\ethan_huang\source\repos\Adam\WindowsFormsApp1\obj\Debug\Adam.pdb
+C:\Users\ethan_huang\source\repos\Adam\WindowsFormsApp1\obj\Debug\Adam.FromAlarm.resources
