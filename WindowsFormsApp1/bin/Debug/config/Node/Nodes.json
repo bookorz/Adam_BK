@@ -31,7 +31,7 @@ RouteTable:[
 },
 {
 Name:"Aligner01",
-Controller:"AlignerController01",
+Controller:"RobotController01",
 AdrNo:"3",
 Type:"Aligner",
 Brand:"Sanwa",
