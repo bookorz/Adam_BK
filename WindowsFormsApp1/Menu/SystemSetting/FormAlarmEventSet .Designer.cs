@@ -262,6 +262,7 @@
             this.btnSave.TabIndex = 6;
             this.btnSave.Text = "Save";
             this.btnSave.UseVisualStyleBackColor = true;
+            this.btnSave.Visible = false;
             this.btnSave.Click += new System.EventHandler(this.btnSave_Click);
             // 
             // dgvlsbAlarmData
@@ -298,7 +299,7 @@
             this.Event_AlarmNo.HeaderText = "Alarm No";
             this.Event_AlarmNo.Name = "Event_AlarmNo";
             this.Event_AlarmNo.ReadOnly = true;
-            this.Event_AlarmNo.Width = 106;
+            this.Event_AlarmNo.Width = 97;
             // 
             // Event_AlarmDescription
             // 
