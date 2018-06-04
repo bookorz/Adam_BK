@@ -50,6 +50,9 @@ namespace Adam.UI_Update.Manual
                         case Transaction.Command.RobotType.GetError:
                             StateUtil.UpdateError(name, msg);
                             break;
+                        case Transaction.Command.RobotType.GetMode:
+                            StateUtil.UpdateMode(name, msg);
+                            break;
                         default:
                             manual.Cursor = Cursors.Default;
                             Control tbcManual = manual.Controls.Find("tbcManual", true).FirstOrDefault() as Control;
@@ -240,6 +243,11 @@ namespace Adam.UI_Update.Manual
                 if (tbRError != null)
                 {
                     tbRError.Text = robot.Error;
+                }
+                ComboBox cbRMode = manual.Controls.Find("cbRMode", true).FirstOrDefault() as ComboBox;
+                if (cbRMode != null)
+                {
+                    cbRMode.SelectedIndex = Int32.Parse(robot.Mode);
                 }
             }
                 

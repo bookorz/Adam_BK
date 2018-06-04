@@ -348,6 +348,7 @@ namespace GUI
             {
                 this.Cursor = Cursors.Default;
                 tbcManual.Enabled = true;
+                pnlMotionStop.Visible = false;
             }
             else
             {
@@ -379,6 +380,10 @@ namespace GUI
             Transaction[] txns = new Transaction[1];
             txns[0] = new Transaction();
             txns[0].FormName = "FormManual";
+            if (!btn.Name.Equals("btnRStop"))
+            {
+                pnlMotionStop.Visible = true;
+            }
             switch (btn.Name)
             {
                 case "btnRConn":
@@ -519,13 +524,13 @@ namespace GUI
                     txns[0].Slot = cbRA2Slot.Text;
                     break;
                 case "btnRChgMode":
-                    if (cbRNewMode.SelectedIndex < 0)
+                    if (cbRMode.SelectedIndex < 0)
                     {
                         MessageBox.Show(" Insufficient information, please select mode!", "Invalid Mode");
                         return;
                     }
                     txns[0].Method = Transaction.Command.RobotType.RobotMode;
-                    txns[0].Arm = Convert.ToString(cbRNewMode.SelectedIndex);
+                    txns[0].Arm = Convert.ToString(cbRMode.SelectedIndex);
                     break;
 
                 case "btnRPutPut":
@@ -555,6 +560,7 @@ namespace GUI
                     txns[0].Method = Transaction.Command.RobotType.Stop;
                     txns[0].Value = "1";//立即停止
                     txns[0].Value = "0";//減速停止
+                    SetFormEnable(true);
                     break;
                 case "btnRPause":
                     txns[0].Method = Transaction.Command.RobotType.Pause;
@@ -584,13 +590,13 @@ namespace GUI
             }
             String nodeName = rbR1.Checked? "Robot01": "Robot02";
             SetDeviceStatus(nodeName);
-            if (tbRStatus.Text.Equals("N/A") || tbRStatus.Text.Equals("Disconnected") || tbRStatus.Text.Equals(""))
+            if (tbRStatus.Text.Equals("N/A") || tbRStatus.Text.Equals("Disconnected") || tbRStatus.Text.Equals("") || tbRStatus.Text.Equals("Connecting"))
             {
                 return;//連線狀態下才執行
             }
             //向Robot 詢問狀態
             Node robot = NodeManagement.Get(nodeName);
-            Transaction[] txns = new Transaction[4];
+            Transaction[] txns = new Transaction[5];
             txns[0] = new Transaction();
             txns[0].Method = Transaction.Command.RobotType.GetStatus;
 
@@ -598,12 +604,19 @@ namespace GUI
             txns[1].Method = Transaction.Command.RobotType.GetSpeed;
 
             txns[2] = new Transaction();
-            txns[2].Method = Transaction.Command.RobotType.GetRIO;
-            txns[2].Value = "4";//4 R-Hold Status 回饋 R 軸 Wafer/ Panel 保留狀態
+            txns[2].Method = Transaction.Command.RobotType.GetMode;
 
             txns[3] = new Transaction();
             txns[3].Method = Transaction.Command.RobotType.GetError;
             txns[3].Value = "00";// 履歷號碼  2 位數  10 進位, 00最新
+
+            txns[4] = new Transaction();
+            txns[4].Method = Transaction.Command.RobotType.GetRIO;
+            txns[4].Value = "4";//4 R-Hold Status 回饋 R 軸 Wafer/ Panel 保留狀態
+
+            
+            
+            
 
             foreach (Transaction txn in txns)
             {
@@ -633,21 +646,24 @@ namespace GUI
             SetDeviceStatus("Aligner02");
             Node aligner1 = NodeManagement.Get("Aligner01");
             Node aligner2 = NodeManagement.Get("Aligner02");
-            Transaction[] txns = new Transaction[4];
+            Transaction[] txns = new Transaction[5];
             txns[0] = new Transaction();
             txns[0].Method = Transaction.Command.AlignerType.GetStatus;
 
             txns[1] = new Transaction();
             txns[1].Method = Transaction.Command.AlignerType.GetSpeed;
-
+            
             txns[2] = new Transaction();
-            txns[2].Method = Transaction.Command.AlignerType.GetRIO;
-            txns[2].Value = "4";// 4 Hold Status 回饋 Wafer/ Panel 保留狀態
+            txns[2].Method = Transaction.Command.AlignerType.GetMode;
 
             txns[3] = new Transaction();
             txns[3].Method = Transaction.Command.AlignerType.GetError;
             txns[3].Value = "00";// 履歷號碼  2 位數  10 進位, 00最新
             
+            txns[4] = new Transaction();
+            txns[4].Method = Transaction.Command.AlignerType.GetRIO;
+            txns[4].Value = "4";// 4 Hold Status 回饋 Wafer/ Panel 保留狀態
+
 
             foreach (Transaction txn in txns)
             {

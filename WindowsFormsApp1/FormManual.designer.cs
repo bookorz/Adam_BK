@@ -60,12 +60,14 @@
             this.btnRPut = new System.Windows.Forms.Button();
             this.cbRA2Slot = new System.Windows.Forms.ComboBox();
             this.cbRA2Arm = new System.Windows.Forms.ComboBox();
-            this.panel10 = new System.Windows.Forms.Panel();
+            this.pnlRCmd = new System.Windows.Forms.Panel();
+            this.btnRContinue = new System.Windows.Forms.Button();
+            this.btnRPause = new System.Windows.Forms.Button();
+            this.btnRStop = new System.Windows.Forms.Button();
             this.btnRPutPut = new System.Windows.Forms.Button();
             this.btnRPutGet = new System.Windows.Forms.Button();
             this.btnRGetGet = new System.Windows.Forms.Button();
             this.btnRGetPut = new System.Windows.Forms.Button();
-            this.label24 = new System.Windows.Forms.Label();
             this.groupBox21 = new System.Windows.Forms.GroupBox();
             this.panel13 = new System.Windows.Forms.Panel();
             this.pnlRobotStatus = new System.Windows.Forms.Panel();
@@ -74,11 +76,12 @@
             this.label26 = new System.Windows.Forms.Label();
             this.tbRServo = new System.Windows.Forms.TextBox();
             this.btnRServoOn = new System.Windows.Forms.Button();
+            this.label24 = new System.Windows.Forms.Label();
             this.btnRServoOff = new System.Windows.Forms.Button();
             this.btnRReset = new System.Windows.Forms.Button();
             this.nudRSpeed = new System.Windows.Forms.NumericUpDown();
             this.btnRChgMode = new System.Windows.Forms.Button();
-            this.cbRNewMode = new System.Windows.Forms.ComboBox();
+            this.cbRMode = new System.Windows.Forms.ComboBox();
             this.btnRHome = new System.Windows.Forms.Button();
             this.btnRDisConn = new System.Windows.Forms.Button();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
@@ -309,9 +312,7 @@
             this.Btn_DoorClose_A = new System.Windows.Forms.Button();
             this.Btn_UnLatchDoor_A = new System.Windows.Forms.Button();
             this.Btn_LatchDoor_A = new System.Windows.Forms.Button();
-            this.btnRStop = new System.Windows.Forms.Button();
-            this.btnRPause = new System.Windows.Forms.Button();
-            this.btnRContinue = new System.Windows.Forms.Button();
+            this.pnlMotionStop = new System.Windows.Forms.Panel();
             this.tbcManual.SuspendLayout();
             this.tabPage1.SuspendLayout();
             this.groupBox20.SuspendLayout();
@@ -320,7 +321,7 @@
             this.tableLayoutPanel24.SuspendLayout();
             this.pnlRobotCmdA1.SuspendLayout();
             this.pnlRobotCmdA2.SuspendLayout();
-            this.panel10.SuspendLayout();
+            this.pnlRCmd.SuspendLayout();
             this.groupBox21.SuspendLayout();
             this.panel13.SuspendLayout();
             this.pnlRobotStatus.SuspendLayout();
@@ -347,6 +348,7 @@
             this.groupBox9.SuspendLayout();
             this.groupBox25.SuspendLayout();
             this.TblPanel_A.SuspendLayout();
+            this.pnlMotionStop.SuspendLayout();
             this.SuspendLayout();
             // 
             // tbcManual
@@ -405,7 +407,7 @@
             this.tableLayoutPanel23.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
             this.tableLayoutPanel23.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 20F));
             this.tableLayoutPanel23.Controls.Add(this.tableLayoutPanel24, 0, 0);
-            this.tableLayoutPanel23.Controls.Add(this.panel10, 0, 1);
+            this.tableLayoutPanel23.Controls.Add(this.pnlRCmd, 0, 1);
             this.tableLayoutPanel23.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanel23.Location = new System.Drawing.Point(20, 20);
             this.tableLayoutPanel23.Name = "tableLayoutPanel23";
@@ -831,21 +833,66 @@
             this.cbRA2Arm.Size = new System.Drawing.Size(208, 38);
             this.cbRA2Arm.TabIndex = 41;
             // 
-            // panel10
+            // pnlRCmd
             // 
-            this.panel10.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.panel10.Controls.Add(this.btnRContinue);
-            this.panel10.Controls.Add(this.btnRPause);
-            this.panel10.Controls.Add(this.btnRStop);
-            this.panel10.Controls.Add(this.btnRPutPut);
-            this.panel10.Controls.Add(this.btnRPutGet);
-            this.panel10.Controls.Add(this.btnRGetGet);
-            this.panel10.Controls.Add(this.btnRGetPut);
-            this.panel10.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel10.Location = new System.Drawing.Point(3, 509);
-            this.panel10.Name = "panel10";
-            this.panel10.Size = new System.Drawing.Size(750, 203);
-            this.panel10.TabIndex = 51;
+            this.pnlRCmd.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.pnlRCmd.Controls.Add(this.btnRPutPut);
+            this.pnlRCmd.Controls.Add(this.btnRPutGet);
+            this.pnlRCmd.Controls.Add(this.btnRGetGet);
+            this.pnlRCmd.Controls.Add(this.btnRGetPut);
+            this.pnlRCmd.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.pnlRCmd.Location = new System.Drawing.Point(3, 509);
+            this.pnlRCmd.Name = "pnlRCmd";
+            this.pnlRCmd.Size = new System.Drawing.Size(750, 203);
+            this.pnlRCmd.TabIndex = 51;
+            // 
+            // btnRContinue
+            // 
+            this.btnRContinue.BackColor = System.Drawing.Color.ForestGreen;
+            this.btnRContinue.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.btnRContinue.FlatAppearance.BorderSize = 2;
+            this.btnRContinue.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnRContinue.Font = new System.Drawing.Font("微軟正黑體", 14.25F);
+            this.btnRContinue.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.btnRContinue.Location = new System.Drawing.Point(513, 3);
+            this.btnRContinue.Name = "btnRContinue";
+            this.btnRContinue.Size = new System.Drawing.Size(192, 36);
+            this.btnRContinue.TabIndex = 117;
+            this.btnRContinue.Text = "CONTINUE";
+            this.btnRContinue.UseVisualStyleBackColor = false;
+            this.btnRContinue.Click += new System.EventHandler(this.RobotFunction_Click);
+            // 
+            // btnRPause
+            // 
+            this.btnRPause.BackColor = System.Drawing.Color.Orange;
+            this.btnRPause.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.btnRPause.FlatAppearance.BorderSize = 2;
+            this.btnRPause.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnRPause.Font = new System.Drawing.Font("微軟正黑體", 14.25F);
+            this.btnRPause.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.btnRPause.Location = new System.Drawing.Point(277, 3);
+            this.btnRPause.Name = "btnRPause";
+            this.btnRPause.Size = new System.Drawing.Size(192, 36);
+            this.btnRPause.TabIndex = 116;
+            this.btnRPause.Text = "PAUSE";
+            this.btnRPause.UseVisualStyleBackColor = false;
+            this.btnRPause.Click += new System.EventHandler(this.RobotFunction_Click);
+            // 
+            // btnRStop
+            // 
+            this.btnRStop.BackColor = System.Drawing.Color.OrangeRed;
+            this.btnRStop.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.btnRStop.FlatAppearance.BorderSize = 2;
+            this.btnRStop.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnRStop.Font = new System.Drawing.Font("微軟正黑體", 14.25F);
+            this.btnRStop.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.btnRStop.Location = new System.Drawing.Point(49, 3);
+            this.btnRStop.Name = "btnRStop";
+            this.btnRStop.Size = new System.Drawing.Size(192, 36);
+            this.btnRStop.TabIndex = 115;
+            this.btnRStop.Text = "STOP";
+            this.btnRStop.UseVisualStyleBackColor = false;
+            this.btnRStop.Click += new System.EventHandler(this.RobotFunction_Click);
             // 
             // btnRPutPut
             // 
@@ -915,20 +962,6 @@
             this.btnRGetPut.UseVisualStyleBackColor = false;
             this.btnRGetPut.Click += new System.EventHandler(this.RobotFunction_Click);
             // 
-            // label24
-            // 
-            this.label24.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.label24.AutoSize = true;
-            this.label24.Font = new System.Drawing.Font("微軟正黑體", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-            this.label24.Location = new System.Drawing.Point(38, 572);
-            this.label24.Name = "label24";
-            this.label24.Size = new System.Drawing.Size(173, 30);
-            this.label24.TabIndex = 102;
-            this.label24.Text = "Current Mode";
-            this.label24.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            // 
             // groupBox21
             // 
             this.groupBox21.BackColor = System.Drawing.SystemColors.ControlLight;
@@ -968,7 +1001,7 @@
             this.pnlRobotStatus.Controls.Add(this.btnRReset);
             this.pnlRobotStatus.Controls.Add(this.nudRSpeed);
             this.pnlRobotStatus.Controls.Add(this.btnRChgMode);
-            this.pnlRobotStatus.Controls.Add(this.cbRNewMode);
+            this.pnlRobotStatus.Controls.Add(this.cbRMode);
             this.pnlRobotStatus.Controls.Add(this.btnRHome);
             this.pnlRobotStatus.Controls.Add(this.btnRDisConn);
             this.pnlRobotStatus.Controls.Add(this.groupBox2);
@@ -1054,6 +1087,20 @@
             this.btnRServoOn.UseVisualStyleBackColor = false;
             this.btnRServoOn.Click += new System.EventHandler(this.RobotFunction_Click);
             // 
+            // label24
+            // 
+            this.label24.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.label24.AutoSize = true;
+            this.label24.Font = new System.Drawing.Font("微軟正黑體", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
+            this.label24.Location = new System.Drawing.Point(38, 572);
+            this.label24.Name = "label24";
+            this.label24.Size = new System.Drawing.Size(173, 30);
+            this.label24.TabIndex = 102;
+            this.label24.Text = "Current Mode";
+            this.label24.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            // 
             // btnRServoOff
             // 
             this.btnRServoOff.BackColor = System.Drawing.Color.DarkGray;
@@ -1125,18 +1172,18 @@
             this.btnRChgMode.UseVisualStyleBackColor = false;
             this.btnRChgMode.Click += new System.EventHandler(this.RobotFunction_Click);
             // 
-            // cbRNewMode
+            // cbRMode
             // 
-            this.cbRNewMode.FormattingEnabled = true;
-            this.cbRNewMode.Items.AddRange(new object[] {
+            this.cbRMode.FormattingEnabled = true;
+            this.cbRMode.Items.AddRange(new object[] {
             "Normal",
             "Dry Mode",
             "Test Mode",
             "Step Mode"});
-            this.cbRNewMode.Location = new System.Drawing.Point(224, 569);
-            this.cbRNewMode.Name = "cbRNewMode";
-            this.cbRNewMode.Size = new System.Drawing.Size(248, 38);
-            this.cbRNewMode.TabIndex = 103;
+            this.cbRMode.Location = new System.Drawing.Point(224, 569);
+            this.cbRMode.Name = "cbRMode";
+            this.cbRMode.Size = new System.Drawing.Size(248, 38);
+            this.cbRMode.TabIndex = 103;
             // 
             // btnRHome
             // 
@@ -4404,53 +4451,16 @@
             this.Btn_LatchDoor_A.UseVisualStyleBackColor = true;
             this.Btn_LatchDoor_A.Click += new System.EventHandler(this.PortFunction_Click);
             // 
-            // btnRStop
+            // pnlMotionStop
             // 
-            this.btnRStop.BackColor = System.Drawing.Color.OrangeRed;
-            this.btnRStop.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.btnRStop.FlatAppearance.BorderSize = 2;
-            this.btnRStop.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.btnRStop.Font = new System.Drawing.Font("微軟正黑體", 14.25F);
-            this.btnRStop.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.btnRStop.Location = new System.Drawing.Point(60, 141);
-            this.btnRStop.Name = "btnRStop";
-            this.btnRStop.Size = new System.Drawing.Size(192, 46);
-            this.btnRStop.TabIndex = 115;
-            this.btnRStop.Text = "STOP";
-            this.btnRStop.UseVisualStyleBackColor = false;
-            this.btnRStop.Click += new System.EventHandler(this.RobotFunction_Click);
-            // 
-            // btnRPause
-            // 
-            this.btnRPause.BackColor = System.Drawing.Color.Orange;
-            this.btnRPause.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.btnRPause.FlatAppearance.BorderSize = 2;
-            this.btnRPause.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.btnRPause.Font = new System.Drawing.Font("微軟正黑體", 14.25F);
-            this.btnRPause.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.btnRPause.Location = new System.Drawing.Point(288, 141);
-            this.btnRPause.Name = "btnRPause";
-            this.btnRPause.Size = new System.Drawing.Size(192, 46);
-            this.btnRPause.TabIndex = 116;
-            this.btnRPause.Text = "PAUSE";
-            this.btnRPause.UseVisualStyleBackColor = false;
-            this.btnRPause.Click += new System.EventHandler(this.RobotFunction_Click);
-            // 
-            // btnRContinue
-            // 
-            this.btnRContinue.BackColor = System.Drawing.Color.ForestGreen;
-            this.btnRContinue.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.btnRContinue.FlatAppearance.BorderSize = 2;
-            this.btnRContinue.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.btnRContinue.Font = new System.Drawing.Font("微軟正黑體", 14.25F);
-            this.btnRContinue.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.btnRContinue.Location = new System.Drawing.Point(524, 141);
-            this.btnRContinue.Name = "btnRContinue";
-            this.btnRContinue.Size = new System.Drawing.Size(192, 46);
-            this.btnRContinue.TabIndex = 117;
-            this.btnRContinue.Text = "CONTINUE";
-            this.btnRContinue.UseVisualStyleBackColor = false;
-            this.btnRContinue.Click += new System.EventHandler(this.RobotFunction_Click);
+            this.pnlMotionStop.Controls.Add(this.btnRContinue);
+            this.pnlMotionStop.Controls.Add(this.btnRPause);
+            this.pnlMotionStop.Controls.Add(this.btnRStop);
+            this.pnlMotionStop.Location = new System.Drawing.Point(720, 3);
+            this.pnlMotionStop.Name = "pnlMotionStop";
+            this.pnlMotionStop.Size = new System.Drawing.Size(750, 42);
+            this.pnlMotionStop.TabIndex = 1;
+            this.pnlMotionStop.Visible = false;
             // 
             // FormManual
             // 
@@ -4458,6 +4468,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.Control;
             this.ClientSize = new System.Drawing.Size(1512, 858);
+            this.Controls.Add(this.pnlMotionStop);
             this.Controls.Add(this.tbcManual);
             this.Font = new System.Drawing.Font("微軟正黑體", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Fixed3D;
@@ -4479,7 +4490,7 @@
             this.pnlRobotCmdA1.PerformLayout();
             this.pnlRobotCmdA2.ResumeLayout(false);
             this.pnlRobotCmdA2.PerformLayout();
-            this.panel10.ResumeLayout(false);
+            this.pnlRCmd.ResumeLayout(false);
             this.groupBox21.ResumeLayout(false);
             this.panel13.ResumeLayout(false);
             this.pnlRobotStatus.ResumeLayout(false);
@@ -4515,6 +4526,7 @@
             this.groupBox25.ResumeLayout(false);
             this.TblPanel_A.ResumeLayout(false);
             this.TblPanel_A.PerformLayout();
+            this.pnlMotionStop.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -4684,7 +4696,7 @@
         private System.Windows.Forms.Button btnRPut;
         private System.Windows.Forms.ComboBox cbRA2Slot;
         private System.Windows.Forms.ComboBox cbRA2Arm;
-        private System.Windows.Forms.Panel panel10;
+        private System.Windows.Forms.Panel pnlRCmd;
         private System.Windows.Forms.Button btnRPutPut;
         private System.Windows.Forms.Button btnRPutGet;
         private System.Windows.Forms.Button btnRGetGet;
@@ -4790,7 +4802,7 @@
         private System.Windows.Forms.ComboBox cbA2Mode;
         private System.Windows.Forms.Label label22;
         private System.Windows.Forms.Button btnRChgMode;
-        private System.Windows.Forms.ComboBox cbRNewMode;
+        private System.Windows.Forms.ComboBox cbRMode;
         private System.Windows.Forms.Label label24;
         private System.Windows.Forms.NumericUpDown nudRSpeed;
         private System.Windows.Forms.NumericUpDown nudA2Speed;
@@ -4805,5 +4817,6 @@
         private System.Windows.Forms.Button btnRContinue;
         private System.Windows.Forms.Button btnRPause;
         private System.Windows.Forms.Button btnRStop;
+        private System.Windows.Forms.Panel pnlMotionStop;
     }
 }
