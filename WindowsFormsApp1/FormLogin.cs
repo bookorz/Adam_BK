@@ -1,6 +1,5 @@
 ﻿using Adam.UI_Update.Authority;
 using Adam.Util;
-using MySql.Data.MySqlClient;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;

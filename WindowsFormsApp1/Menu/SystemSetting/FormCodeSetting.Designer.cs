@@ -242,6 +242,7 @@
             this.btnSave.TabIndex = 6;
             this.btnSave.Text = "Save";
             this.btnSave.UseVisualStyleBackColor = true;
+            this.btnSave.Visible = false;
             // 
             // dgvCodeData
             // 
