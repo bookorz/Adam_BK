@@ -297,7 +297,7 @@ namespace GUI
                     break;
                 case "btnVacuOff":
                     txns[0].Method = Transaction.Command.AlignerType.WaferRelease;
-                    txns[0].Arm = "0";
+                    txns[0].Arm = "1";
                     break;
                 case "btnChgSpeed":
                     txns[0].Method = Transaction.Command.AlignerType.AlignerSpeed;
@@ -440,20 +440,20 @@ namespace GUI
                 //上臂
                 case "btnRRVacuOn":
                     txns[0].Method = Transaction.Command.RobotType.WaferHold;
-                    txns[0].Arm = "0";
+                    txns[0].Arm = "1";
                     break;
                 case "btnRRVacuOff":
                     txns[0].Method = Transaction.Command.RobotType.WaferRelease;
-                    txns[0].Arm = "0";
+                    txns[0].Arm = "1";
                     break;
                 //下臂
                 case "btnRLVacuOn":
                     txns[0].Method = Transaction.Command.RobotType.WaferHold;
-                    txns[0].Arm = "1";
+                    txns[0].Arm = "2";
                     break;
                 case "btnRLVacuOff":
                     txns[0].Method = Transaction.Command.RobotType.WaferRelease;
-                    txns[0].Arm = "0";
+                    txns[0].Arm = "2";
                     break;
                 case "btnRGet":
                     if (cbRA1Point.Text == "" || cbRA1Slot.Text == "" || cbRA1Arm.Text == "")
@@ -596,7 +596,7 @@ namespace GUI
             }
             //向Robot 詢問狀態
             Node robot = NodeManagement.Get(nodeName);
-            Transaction[] txns = new Transaction[5];
+            Transaction[] txns = new Transaction[6];
             txns[0] = new Transaction();
             txns[0].Method = Transaction.Command.RobotType.GetStatus;
 
@@ -614,9 +614,11 @@ namespace GUI
             txns[4].Method = Transaction.Command.RobotType.GetRIO;
             txns[4].Value = "4";//4 R-Hold Status 回饋 R 軸 Wafer/ Panel 保留狀態
 
-            
-            
-            
+            txns[5] = new Transaction();
+            txns[5].Method = Transaction.Command.RobotType.GetSV;
+            txns[5].Value = "1";
+
+
 
             foreach (Transaction txn in txns)
             {
@@ -646,7 +648,7 @@ namespace GUI
             SetDeviceStatus("Aligner02");
             Node aligner1 = NodeManagement.Get("Aligner01");
             Node aligner2 = NodeManagement.Get("Aligner02");
-            Transaction[] txns = new Transaction[5];
+            Transaction[] txns = new Transaction[6];
             txns[0] = new Transaction();
             txns[0].Method = Transaction.Command.AlignerType.GetStatus;
 
@@ -664,6 +666,9 @@ namespace GUI
             txns[4].Method = Transaction.Command.AlignerType.GetRIO;
             txns[4].Value = "4";// 4 Hold Status 回饋 Wafer/ Panel 保留狀態
 
+            txns[5] = new Transaction();
+            txns[5].Method = Transaction.Command.AlignerType.GetSV;
+            txns[5].Value = "1";// 4 Hold Status 回饋 Wafer/ Panel 保留狀態
 
             foreach (Transaction txn in txns)
             {

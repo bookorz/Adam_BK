@@ -50,6 +50,12 @@ namespace Adam.UI_Update.Manual
                         case Transaction.Command.AlignerType.GetError:
                             StateUtil.UpdateError(name, msg);
                             break;
+                        case Transaction.Command.AlignerType.GetMode:
+                            StateUtil.UpdateMode(name, msg);
+                            break;
+                        case Transaction.Command.AlignerType.GetSV:
+                            StateUtil.UpdateSV(name, msg);
+                            break;
                         default:
                             manual.Cursor = Cursors.Default;
                             Control tbcManual = manual.Controls.Find("tbcManual", true).FirstOrDefault() as Control;
@@ -57,28 +63,28 @@ namespace Adam.UI_Update.Manual
                             break;
                     }
                     UpdateStatus(name);
-                    if (method.Equals(Transaction.Command.AlignerType.GetRIO))
-                    {
-                        Transaction next_txn = new Transaction();
-                        next_txn = new Transaction();
-                        switch (txn.Value)
-                        {
-                            case "4":
-                                next_txn.Method = Transaction.Command.AlignerType.GetRIO;
-                                next_txn.Value = "8"; //8 Present 回饋在席 Sensor 的狀態
-                                break;
-                        }
-                        if (!next_txn.Method.Equals(""))
-                        {
-                            next_txn.FormName = "FormManual";
-                            Node robot = NodeManagement.Get(name);
-                            robot.SendCommand(next_txn);
-                        }
-                        else
-                        {
-                            //do nothing
-                        }
-                    }
+                    //if (method.Equals(Transaction.Command.AlignerType.GetRIO))
+                    //{
+                    //    Transaction next_txn = new Transaction();
+                    //    next_txn = new Transaction();
+                    //    switch (txn.Value)
+                    //    {
+                    //        case "4":
+                    //            next_txn.Method = Transaction.Command.AlignerType.GetRIO;
+                    //            next_txn.Value = "8"; //8 Present 回饋在席 Sensor 的狀態
+                    //            break;
+                    //    }
+                    //    if (!next_txn.Method.Equals(""))
+                    //    {
+                    //        next_txn.FormName = "FormManual";
+                    //        Node robot = NodeManagement.Get(name);
+                    //        robot.SendCommand(next_txn);
+                    //    }
+                    //    else
+                    //    {
+                    //        //do nothing
+                    //    }
+                    //}
                     if (method.Equals(Transaction.Command.AlignerType.AlignerServo))
                     {
                         Transaction next_txn = new Transaction();
@@ -180,7 +186,8 @@ namespace Adam.UI_Update.Manual
                 }
                 if (tbWaferSensor != null)
                 {
-                    tbWaferSensor.Text = aligner.Present.Equals("1") ? "ON" : "OFF"; Color color = new Color();
+                    tbWaferSensor.Text = aligner.Present.Equals("1") ? "ON" : "OFF";
+                    Color color = new Color();
                     switch (tbWaferSensor.Text)
                     {
                         case "OFF":
@@ -197,7 +204,8 @@ namespace Adam.UI_Update.Manual
                 }
                 if (tbVacSolenoid != null)
                 {
-                    tbVacSolenoid.Text = aligner.Vacuum.Equals("1") ? "ON" : "OFF"; Color color = new Color();
+                    tbVacSolenoid.Text = aligner.Vacuum.Equals("1") ? "ON" : "OFF";
+                    Color color = new Color();
                     switch (tbVacSolenoid.Text)
                     {
                         case "OFF":
