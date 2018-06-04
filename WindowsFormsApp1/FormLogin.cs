@@ -72,5 +72,10 @@ namespace GUI
             }
 
         }
+
+        private void FormLogin_Activated(object sender, EventArgs e)
+        {
+            tbUserID.Focus();
+        }
     }
 }
