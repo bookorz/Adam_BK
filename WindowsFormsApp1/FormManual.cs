@@ -204,7 +204,7 @@ namespace GUI
                     udA1AngleOffset.Text = "0";
                 }
                 angle = Convert.ToString(int.Parse(cbA1Angle.Text) + int.Parse(udA1AngleOffset.Text));
-                speed = nudA1SpeedNew.Text.Equals("100") ? "0" : nudA1SpeedNew.Text;
+                speed = nudA1Speed.Text.Equals("100") ? "0" : nudA1Speed.Text;
             }
             if (btn.Name.IndexOf("A2") > 0)
             {
@@ -218,7 +218,7 @@ namespace GUI
                     udA2AngleOffset.Text = "0";
                 }
                 angle = Convert.ToString(int.Parse(cbA2Angle.Text) + int.Parse(udA2AngleOffset.Text));
-                speed = nudA2SpeedNew.Text.Equals("100") ? "0" : nudA2SpeedNew.Text;
+                speed = nudA2Speed.Text.Equals("100") ? "0" : nudA2Speed.Text;
             };
             Node aligner = NodeManagement.Get(nodeName);
             Transaction[] txns = new Transaction[1];
@@ -315,11 +315,11 @@ namespace GUI
                     int mode = -1;
                     if (btn.Name.IndexOf("A1") > 0)
                     {
-                        mode = cbA1NewMode.SelectedIndex;
+                        mode = cbA1Mode.SelectedIndex;
                     }
                     if (btn.Name.IndexOf("A2") > 0)
                     {
-                        mode = cbA2NewMode.SelectedIndex;
+                        mode = cbA2Mode.SelectedIndex;
                     }
                     if (mode < 0)
                     {
@@ -430,7 +430,7 @@ namespace GUI
                     break;
                 case "btnRChgSpeed":
                     txns[0].Method = Transaction.Command.RobotType.RobotSpeed;
-                    txns[0].Arm = nudRNewSpeed.Text.Equals("100") ? "0" : nudRNewSpeed.Text;
+                    txns[0].Arm = nudRSpeed.Text.Equals("100") ? "0" : nudRSpeed.Text;
                     break;
                 //上臂
                 case "btnRRVacuOn":
@@ -551,6 +551,17 @@ namespace GUI
                     txns[0].Method = Transaction.Command.RobotType.RobotServo;
                     txns[0].Arm = "0";
                     break;
+                case "btnRStop":
+                    txns[0].Method = Transaction.Command.RobotType.Stop;
+                    txns[0].Value = "1";//立即停止
+                    txns[0].Value = "0";//減速停止
+                    break;
+                case "btnRPause":
+                    txns[0].Method = Transaction.Command.RobotType.Pause;
+                    break;
+                case "btnRContinue":
+                    txns[0].Method = Transaction.Command.RobotType.Continue;
+                    break;
             }
             if (!txns[0].Method.Equals(""))
             {
@@ -565,7 +576,7 @@ namespace GUI
         }
         private void setRobotStatus()
         {
-            Control[] controls = new Control[] { tbRError, tbRLVacuSolenoid, tbRLwaferSensor, tbRRVacuSolenoid, tbRRwaferSensor, tbRServo, tbRSpeed, tbRStatus };
+            Control[] controls = new Control[] { tbRError, tbRLVacuSolenoid, tbRLwaferSensor, tbRRVacuSolenoid, tbRRwaferSensor, tbRServo, nudRSpeed, tbRStatus };
             foreach (Control control in controls)
             {
                 control.Text = "";
@@ -573,7 +584,7 @@ namespace GUI
             }
             String nodeName = rbR1.Checked? "Robot01": "Robot02";
             SetDeviceStatus(nodeName);
-            if (tbRStatus.Text.Equals("N/A") || tbRStatus.Text.Equals("Disconnected"))
+            if (tbRStatus.Text.Equals("N/A") || tbRStatus.Text.Equals("Disconnected") || tbRStatus.Text.Equals(""))
             {
                 return;//連線狀態下才執行
             }
@@ -612,7 +623,7 @@ namespace GUI
 
         private void setAlignerStatus()
         {
-            Control[] controls = new Control[] { tbA1Error, tbA1Servo, tbA1Status, tbA1VacSolenoid, tbA1WaferSensor, tbA1WaferSensor, tbA2Error, tbA2Servo, tbA2Status, tbA2VacSolenoid, tbA2WaferSensor, tbA2WaferSensor };
+            Control[] controls = new Control[] { tbA1Error, tbA1Servo, tbA1Status, tbA1VacSolenoid, tbA1WaferSensor, tbA1WaferSensor, tbA2Error, tbA2Servo, tbA2Status, tbA2VacSolenoid, tbA2WaferSensor, tbA2WaferSensor, nudA1Speed, nudA2Speed };
             foreach (Control control in controls)
             {
                 control.Text = "";
@@ -643,11 +654,11 @@ namespace GUI
                 if (!txn.Method.Equals(""))
                 {
                     txn.FormName = "FormManual";
-                    if (!tbA1Status.Text.Equals("N/A") && !tbA1Status.Text.Equals("Disconnected"))
+                    if (!tbA1Status.Text.Equals("N/A") && !tbA1Status.Text.Equals("Disconnected") && !tbA1Status.Text.Equals(""))
                     {
                         aligner1.SendCommand(txn);//連線狀態下才執行
                     }
-                    if (!tbA2Status.Text.Equals("N/A") && !tbA2Status.Text.Equals("Disconnected"))
+                    if (!tbA2Status.Text.Equals("N/A") && !tbA2Status.Text.Equals("Disconnected") && !tbA2Status.Text.Equals(""))
                     {
                         aligner2.SendCommand(txn);//連線狀態下才執行
                     }

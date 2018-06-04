@@ -133,10 +133,10 @@ namespace Adam.UI_Update.Manual
                     return;
                 }
                 
-                Control tbRSpeed = manual.Controls.Find("tbRSpeed", true).FirstOrDefault() as Control;
-                if (tbRSpeed != null)
+                Control nudRSpeed = manual.Controls.Find("nudRSpeed", true).FirstOrDefault() as Control;
+                if (nudRSpeed != null)
                 {
-                    tbRSpeed.Text = robot.Speed.Equals("00") ? "100" : robot.Speed;
+                    nudRSpeed.Text = robot.Speed.Equals("00") ? "100" : Int32.Parse(robot.Speed).ToString(); 
                 }
                 Control tbRRwaferSensor = manual.Controls.Find("tbRRwaferSensor", true).FirstOrDefault() as Control;
                 if (tbRRwaferSensor != null)
