@@ -71,7 +71,26 @@ namespace Adam.Util
                     break;
             }
         }
-        
+
+        public static void UpdateMode(string device, string msg)
+        {
+            switch (device)
+            {
+                case "Robot01":
+                    robot1.Mode = msg;
+                    break;
+                case "Robot02":
+                    robot2.Mode = msg;
+                    break;
+                case "Aligner01":
+                    aligner1.Mode = msg;
+                    break;
+                case "Aligner02":
+                    aligner2.Mode = msg;
+                    break;
+            }
+        }
+
         public static void UpdateRIO(string device, string msg)
         {
             RobotState robot = null;

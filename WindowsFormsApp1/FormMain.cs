@@ -425,10 +425,16 @@ namespace Adam
                                 case Transaction.Command.RobotType.RobotMode:
                                 case Transaction.Command.RobotType.Reset:
                                 case Transaction.Command.RobotType.RobotServo:
-                                case Transaction.Command.RobotType.GetStatus:
                                 case Transaction.Command.RobotType.GetSpeed:
                                 case Transaction.Command.RobotType.GetRIO:
                                 case Transaction.Command.RobotType.GetError:
+                                case Transaction.Command.RobotType.GetMode:
+                                case Transaction.Command.RobotType.Stop:
+                                case Transaction.Command.RobotType.Pause:
+                                case Transaction.Command.RobotType.Continue:
+                                    ManualRobotStatusUpdate.UpdateGUI(Txn, Node.Name, Msg.Value);//update 手動功能畫面
+                                    break;
+                                case Transaction.Command.RobotType.GetStatus:
                                     ManualRobotStatusUpdate.UpdateGUI(Txn, Node.Name, Msg.Value);//update 手動功能畫面
                                     break;
                             }
@@ -444,6 +450,7 @@ namespace Adam
                                 case Transaction.Command.AlignerType.GetError:
                                 case Transaction.Command.AlignerType.Reset:
                                 case Transaction.Command.AlignerType.AlignerServo:
+                                case Transaction.Command.AlignerType.GetMode:
                                     ManualAlignerStatusUpdate.UpdateGUI(Txn, Node.Name, Msg.Value);//update 手動功能畫面
                                     break;
                             }

@@ -88,7 +88,6 @@
       <DependentUpon>FormSettingFram.cs</DependentUpon>
     </Compile>
     <Compile Include="Util\ConfigUtil.cs" />
-    <Compile Include="Util\DBUtil.cs" />
     <Compile Include="FormAlarm.cs">
       <SubType>Form</SubType>
     </Compile>

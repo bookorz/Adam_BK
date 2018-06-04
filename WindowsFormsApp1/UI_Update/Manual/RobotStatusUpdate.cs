@@ -50,6 +50,9 @@ namespace Adam.UI_Update.Manual
                         case Transaction.Command.RobotType.GetError:
                             StateUtil.UpdateError(name, msg);
                             break;
+                        case Transaction.Command.RobotType.GetMode:
+                            StateUtil.UpdateMode(name, msg);
+                            break;
                         default:
                             manual.Cursor = Cursors.Default;
                             Control tbcManual = manual.Controls.Find("tbcManual", true).FirstOrDefault() as Control;
@@ -133,10 +136,10 @@ namespace Adam.UI_Update.Manual
                     return;
                 }
                 
-                Control tbRSpeed = manual.Controls.Find("tbRSpeed", true).FirstOrDefault() as Control;
-                if (tbRSpeed != null)
+                Control nudRSpeed = manual.Controls.Find("nudRSpeed", true).FirstOrDefault() as Control;
+                if (nudRSpeed != null)
                 {
-                    tbRSpeed.Text = robot.Speed.Equals("00") ? "100" : robot.Speed;
+                    nudRSpeed.Text = robot.Speed.Equals("00") ? "100" : Int32.Parse(robot.Speed).ToString(); 
                 }
                 Control tbRRwaferSensor = manual.Controls.Find("tbRRwaferSensor", true).FirstOrDefault() as Control;
                 if (tbRRwaferSensor != null)
@@ -240,6 +243,11 @@ namespace Adam.UI_Update.Manual
                 if (tbRError != null)
                 {
                     tbRError.Text = robot.Error;
+                }
+                ComboBox cbRMode = manual.Controls.Find("cbRMode", true).FirstOrDefault() as ComboBox;
+                if (cbRMode != null)
+                {
+                    cbRMode.SelectedIndex = Int32.Parse(robot.Mode);
                 }
             }
                 
