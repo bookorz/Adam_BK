@@ -13,6 +13,39 @@ namespace Adam.UI_Update.Manual
     {
         static ILog logger = LogManager.GetLogger(typeof(ManualPortStatusUpdate));
         delegate void UpdateData(string NodeNAme, string Data);
+        delegate void UpdateLock(bool Enable);
+
+        public static void LockUI(bool Enable)
+        {
+            try
+            {
+                Form form = Application.OpenForms["FormManual"];
+                TabControl Tab;
+                if (form == null)
+                    return;
+
+                Tab = form.Controls.Find("tbcManual", true).FirstOrDefault() as TabControl;
+                if (Tab == null)
+                    return;
+
+                if (Tab.InvokeRequired)
+                {
+                    UpdateLock ph = new UpdateLock(LockUI);
+                    Tab.BeginInvoke(ph, Enable);
+                }
+                else
+                {
+                    Tab.Enabled = !Enable;
+
+                }
+
+
+            }
+            catch
+            {
+                logger.Error("LockUI: Update fail.");
+            }
+        }
 
         public static void UpdateLog(string NodeName, string Data)
         {
