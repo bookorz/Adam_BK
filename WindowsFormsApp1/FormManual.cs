@@ -308,8 +308,7 @@ namespace GUI
                     txns[0].Method = Transaction.Command.AlignerType.Reset;
                     break;
                 case "btnAlign":
-                    txns[0].Method = Transaction.Command.AlignerType.Align;
-                    txns[0].Angle = angle;
+                    txns[0].Method = Transaction.Command.AlignerType.Align;                   
                     txns[0].Value = angle;
                     break;
                 case "btnChgMode":

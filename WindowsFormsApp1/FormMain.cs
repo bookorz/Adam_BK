@@ -51,12 +51,12 @@ namespace Adam
             RouteCtrl = new RouteControl(this);
             DIO = new DIO(this);
             AlmMapping = new AlarmMapping();
-           
+
         }
 
         private void Initialize()
         {
-            PathManagement.LoadConfig();
+
             //檢查OCR程式有沒有開
             //Process[] pc = Process.GetProcessesByName("VB9BReaderForm");
             //if (pc.Count() == 0)
@@ -72,7 +72,7 @@ namespace Adam
 
         private void Form1_Load(object sender, EventArgs e)
         {
-            
+
             this.Visible = false;
 
             Control[] ctrlForm = new Control[] { formMonitoring, formCommunications, formWafer, formStatus, formOCR, formSystem };
@@ -105,7 +105,7 @@ namespace Adam
                 throw new Exception(ex.ToString());
             }
             Thread.Sleep(2000);
-       
+
             if (SplashScreen.Instance != null)
             {
                 SplashScreen.Instance.BeginInvoke(new MethodInvoker(SplashScreen.Instance.Dispose));
@@ -153,22 +153,10 @@ namespace Adam
         {
             string strMsg = "This equipment performs the initialization and origin search OK?\r\n" + "This equipment will be initalized, each axis will return to home position.\r\n" + "Check the condition of the wafer.";
             MessageBox.Show(strMsg, "Initialize", MessageBoxButtons.OKCancel, MessageBoxIcon.Exclamation, MessageBoxDefaultButton.Button1, MessageBoxOptions.ServiceNotification);
-            Transaction txn = new Transaction();
-            txn.FormName = "Initialize";
-            txn.Method = Transaction.Command.RobotType.Reset;
-            NodeManagement.Get("Robot01").SendCommand(txn);
-            txn = new Transaction();
-            txn.FormName = "Initialize";
-            txn.Method = Transaction.Command.RobotType.Reset;
-            NodeManagement.Get("Robot02").SendCommand(txn);
-            txn = new Transaction();
-            txn.FormName = "Initialize";
-            txn.Method = Transaction.Command.RobotType.Reset;
-            NodeManagement.Get("Aligner01").SendCommand(txn);
-            txn = new Transaction();
-            txn.FormName = "Initialize";
-            txn.Method = Transaction.Command.RobotType.Reset;
-            NodeManagement.Get("Aligner02").SendCommand(txn);
+            NodeManagement.Get("Robot01").ExcuteScript("RobotInit", "Initialize");
+            NodeManagement.Get("Robot02").ExcuteScript("RobotInit", "Initialize");
+            NodeManagement.Get("Aligner01").ExcuteScript("AlignerInit", "Initialize");
+            NodeManagement.Get("Aligner02").ExcuteScript("AlignerInit", "Initialize");
         }
 
         private void toolStripMenuItem5_Click(object sender, EventArgs e)
@@ -190,8 +178,8 @@ namespace Adam
             string strMsg = "Switching to manual mode.\r\n" + "In this mode, your operation may damage the equipment.\r\n" + "Suffcient cautions are required for your operation.";
             //if (MessageBox.Show(strMsg, "Manual", MessageBoxButtons.OKCancel, MessageBoxIcon.Exclamation, MessageBoxDefaultButton.Button1, MessageBoxOptions.ServiceNotification) == DialogResult.OK)
             //{
-                GUI.FormManual formManual = new GUI.FormManual();
-                formManual.Show();
+            GUI.FormManual formManual = new GUI.FormManual();
+            formManual.Show();
             //}
         }
 
@@ -299,89 +287,6 @@ namespace Adam
             Transaction txn = new Transaction();
             switch (Txn.FormName)
             {
-                case "Initialize":
-                    switch (Node.Type)
-                    {
-                        case "Robot":
-                            switch (Txn.Method)
-                            {
-                                case Transaction.Command.RobotType.RobotSpeed:
-                                    
-                                    txn = new Transaction();
-                                    txn.TargetJobs = new List<Job>();
-                                    txn.Method = Transaction.Command.RobotType.RobotHome;
-                                    txn.Arm = "";
-                                    txn.FormName = "Initialize";
-                                    Node.SendCommand(txn);
-                                    break;
-                                case Transaction.Command.RobotType.Reset:
-                                    txn = new Transaction();
-                                    txn.TargetJobs = new List<Job>();
-                                    txn.Method = Transaction.Command.RobotType.RobotServo;
-                                    txn.Arm = "1";
-                                    txn.FormName = "Initialize";
-                                    Node.SendCommand(txn);
-                                    break;
-                                case Transaction.Command.RobotType.RobotServo:
-                                    txn = new Transaction();
-                                    txn.TargetJobs = new List<Job>();
-                                    txn.Method = Transaction.Command.RobotType.RobotMode;
-                                    txn.Arm = "1";
-                                    txn.FormName = "Initialize";
-                                    Node.SendCommand(txn);
-                                    break;
-                                case Transaction.Command.RobotType.RobotMode:
-                                    txn = new Transaction();
-                                    txn.TargetJobs = new List<Job>();
-                                    txn.Method = Transaction.Command.RobotType.WaferRelease;
-                                    txn.Arm = "1";
-                                    txn.FormName = "Initialize";
-                                    Node.SendCommand(txn);
-                                    break;
-
-
-                            }
-                            break;
-                        case "Aligner":
-                            switch (Txn.Method)
-                            {
-                                case Transaction.Command.AlignerType.Reset:
-                                    txn = new Transaction();
-                                    txn.TargetJobs = new List<Job>();
-                                    txn.Method = Transaction.Command.AlignerType.AlignerServo;
-                                    txn.Arm = "1";
-                                    txn.FormName = "Initialize";
-                                    Node.SendCommand(txn);
-                                    break;
-                                case Transaction.Command.AlignerType.AlignerServo:
-                                    txn = new Transaction();
-                                    txn.TargetJobs = new List<Job>();
-                                    txn.Method = Transaction.Command.AlignerType.AlignerMode;
-                                    txn.Arm = "1";
-                                    txn.FormName = "Initialize";
-                                    Node.SendCommand(txn);
-                                    break;
-                                case Transaction.Command.AlignerType.AlignerMode:
-                                    txn = new Transaction();
-                                    txn.TargetJobs = new List<Job>();
-                                    txn.Method = Transaction.Command.AlignerType.AlignerSpeed;
-                                    txn.Arm = "0";
-                                    txn.FormName = "Initialize";
-                                    Node.SendCommand(txn);
-                                    break;
-                                case Transaction.Command.AlignerType.AlignerSpeed:
-                                    txn = new Transaction();
-                                    txn.TargetJobs = new List<Job>();
-                                    txn.Method = Transaction.Command.AlignerType.AlignerOrigin;
-                                    txn.Arm = "0";
-                                    txn.FormName = "Initialize";
-                                    Node.SendCommand(txn);
-                                    break;
-
-                            }
-                            break;
-                    }
-                    break;                
                 case "FormManual":
                     switch (Node.Type)
                     {
@@ -455,15 +360,15 @@ namespace Adam
                                     break;
                             }
                             break;
-                            default:
-                    AlarmManagement.Remove(Node.Name);
-                    AlarmUpdate.UpdateAlarmList(AlarmManagement.GetAll());
+                        default:
+                            AlarmManagement.Remove(Node.Name);
+                            AlarmUpdate.UpdateAlarmList(AlarmManagement.GetAll());
 
-                    break;
+                            break;
                     }
                     break;
                 default:
-                    
+
                     break;
             }
         }
@@ -514,76 +419,16 @@ namespace Adam
             logger.Debug("On_Command_Finished");
             Transaction txn = new Transaction();
             switch (Txn.FormName)
-            {
-                case "Initialize":
-                    switch (Node.Type)
-                    {
-                        case "Robot":
-
-                            switch (Txn.Method)
-                            {
-                                case Transaction.Command.RobotType.WaferRelease:
-                                    if (Txn.Arm.Equals("1"))
-                                    {
-                                        txn = new Transaction();
-                                        txn.TargetJobs = new List<Job>();
-                                        txn.Method = Transaction.Command.RobotType.WaferRelease;
-                                        txn.Arm = "2";
-                                        txn.FormName = "Initialize";
-                                        Node.SendCommand(txn);
-                                    }
-                                    else
-                                    {
-                                        txn = new Transaction();
-                                        txn.TargetJobs = new List<Job>();
-                                        txn.Method = Transaction.Command.RobotType.RobotSpeed;
-                                        txn.Arm = "0";
-                                        txn.FormName = "Initialize";
-                                        Node.SendCommand(txn);
-                                    }
-                                    break;
-
-                                case Transaction.Command.RobotType.RobotHome:
-                                    //end
-
-                                    break;
-                                
-                            }
-                            break;
-                        case "Aligner":
-                            switch (Txn.Method)
-                            {
-
-                                case Transaction.Command.AlignerType.AlignerOrigin:
-                                    txn = new Transaction();
-                                    txn.TargetJobs = new List<Job>();
-                                    txn.Method = Transaction.Command.AlignerType.Retract;
-                                    txn.Arm = "0";
-                                    txn.FormName = "Initialize";
-                                    Node.SendCommand(txn);
-                                    break;
-                                case Transaction.Command.AlignerType.Retract:
-                                    //end
-                                    break;
-                            }
-                            break;
-                    }
-                    break;
+            {                
                 case "FormManual":
-                    
+
                     switch (Node.Type)
                     {
                         case "LoadPort":
 
                             ManualPortStatusUpdate.UpdateLog(Node.Name, Msg.Command + " Finished");
                             ManualPortStatusUpdate.LockUI(false);
-                            switch (Msg.Command)
-                            {
-                                case Transaction.Command.LoadPortType.MappingLoad:
-                                    txn.Method = Transaction.Command.LoadPortType.GetMapping;
-                                    Node.SendCommand(txn);
-                                    break;
-                            }
+
                             break;
                         case "OCR":
                             switch (Txn.Method)
@@ -654,15 +499,15 @@ namespace Adam
                 switch (Node.Type)
                 {
                     case "LoadPort":
-                        
+
                         switch (Msg.Command)
                         {
                             case "MANSW":
                                 if (RouteCtrl.GetMode().Equals("Auto"))
                                 {
                                     ManualPortStatusUpdate.UpdateLog(Node.Name, Msg.Command + " Trigger");
-                                    txn.Method = Transaction.Command.LoadPortType.MappingLoad;
-                                    Node.SendCommand(txn);
+
+                                    Node.ExcuteScript("LoadPortMapping", "MANSW");
                                 }
                                 break;
                         }
@@ -706,7 +551,10 @@ namespace Adam
             WaferAssignUpdate.RefreshMapping(Job.Position);
         }
 
-        
+        public void On_Script_Finished(Node Node, string ScriptName, string FormName)
+        {
+            logger.Debug("On_Script_Finished: " + Node.Name+" Script:"+ ScriptName +" Finished, Form name:"+FormName);
+        }
 
         private void vSBRobotStatus_Scroll(object sender, ScrollEventArgs e)
         {
@@ -723,7 +571,7 @@ namespace Adam
             //pbPortState.Top = -vSBPortStatus.Value;
         }
 
-       
+
 
         private void tgsConnection_CheckedChanged(object sender, EventArgs e)
         {
@@ -810,7 +658,7 @@ namespace Adam
             switch ((sender as Button).Name)
             {
                 case "Red_Signal":
-                    if (DIO.GetIO("OUT","Red").ToUpper().Equals("TRUE"))
+                    if (DIO.GetIO("OUT", "Red").ToUpper().Equals("TRUE"))
                     {
                         DIO.SetIO("Red", "False");
                     }
@@ -897,5 +745,7 @@ namespace Adam
 
             }
         }
+
+        
     }
 }
