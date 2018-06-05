@@ -1,0 +1,80 @@
+[
+  {
+    "ExcuteMethod": "",
+    "FinishMethod": "",
+    "Method": "Reset",
+    "Arm": "",
+    "Slot": "",
+    "Position": "",
+    "Value": "",
+    "Index":"1",
+    "Flag":"Start"
+  },
+  {
+    "ExcuteMethod": "Reset",
+    "FinishMethod": "",
+    "Method": "AlignerServo",
+    "Arm": "1",
+    "Slot": "",
+    "Position": "",
+    "Value": "",
+    "Index":"2",
+    "Flag":""
+  }
+  ,
+  {
+    "ExcuteMethod": "AlignerServo",
+    "FinishMethod": "",
+    "Method": "AlignerMode",
+    "Arm": "1",
+    "Slot": "",
+    "Position": "",
+    "Value": "",
+    "Index":"3",
+    "Flag":""
+  },
+  {
+    "ExcuteMethod": "AlignerMode",
+    "FinishMethod": "",
+    "Method": "AlignerSpeed",
+    "Arm": "0",
+    "Slot": "",
+    "Position": "",
+    "Value": "",
+    "Index":"4",
+    "Flag":""
+  },
+  {
+    "ExcuteMethod": "AlignerSpeed",
+    "FinishMethod": "",
+    "Method": "AlignerOrigin",
+    "Arm": "",
+    "Slot": "",
+    "Position": "",
+    "Value": "",
+    "Index":"5",
+    "Flag":""
+  },
+  {
+    "ExcuteMethod": "",
+    "FinishMethod": "AlignerOrigin",
+    "Method": "Retract",
+    "Arm": "1",
+    "Slot": "",
+    "Position": "",
+    "Value": "",
+    "Index":"6",
+    "Flag":""
+  },
+  {
+    "ExcuteMethod": "",
+    "FinishMethod": "Retract",
+    "Method": "WaferRelease",
+    "Arm": "1",
+    "Slot": "",
+    "Position": "",
+    "Value": "",
+    "Index":"7",
+    "Flag":"End"
+  }
+]

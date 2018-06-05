@@ -1,0 +1,80 @@
+[
+  {
+    "ExcuteMethod": "",
+    "FinishMethod": "",
+    "Method": "Reset",
+    "Arm": "",
+    "Slot": "",
+    "Position": "",
+    "Value": "",
+    "Index":"1",
+    "Flag":"Start"
+  },
+  {
+    "ExcuteMethod": "Reset",
+    "FinishMethod": "",
+    "Method": "RobotServo",
+    "Arm": "1",
+    "Slot": "",
+    "Position": "",
+    "Value": "",
+    "Index":"2",
+    "Flag":""
+  }
+  ,
+  {
+    "ExcuteMethod": "RobotServo",
+    "FinishMethod": "",
+    "Method": "RobotMode",
+    "Arm": "1",
+    "Slot": "",
+    "Position": "",
+    "Value": "",
+    "Index":"3",
+    "Flag":""
+  },
+  {
+    "ExcuteMethod": "RobotMode",
+    "FinishMethod": "",
+    "Method": "RobotSpeed",
+    "Arm": "0",
+    "Slot": "",
+    "Position": "",
+    "Value": "",
+    "Index":"4",
+    "Flag":""
+  },
+  {
+    "ExcuteMethod": "RobotSpeed",
+    "FinishMethod": "",
+    "Method": "RobotHome",
+    "Arm": "",
+    "Slot": "",
+    "Position": "",
+    "Value": "",
+    "Index":"5",
+    "Flag":""
+  },
+  {
+    "ExcuteMethod": "",
+    "FinishMethod": "RobotHome",
+    "Method": "WaferRelease",
+    "Arm": "1",
+    "Slot": "",
+    "Position": "",
+    "Value": "",
+    "Index":"6",
+    "Flag":""
+  },
+  {
+    "ExcuteMethod": "",
+    "FinishMethod": "WaferRelease",
+    "Method": "WaferRelease",
+    "Arm": "2",
+    "Slot": "",
+    "Position": "",
+    "Value": "",
+    "Index":"7",
+    "Flag":"End"
+  }
+]
