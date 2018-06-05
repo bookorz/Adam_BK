@@ -61,9 +61,6 @@
             this.cbRA2Slot = new System.Windows.Forms.ComboBox();
             this.cbRA2Arm = new System.Windows.Forms.ComboBox();
             this.pnlRCmd = new System.Windows.Forms.Panel();
-            this.btnRContinue = new System.Windows.Forms.Button();
-            this.btnRPause = new System.Windows.Forms.Button();
-            this.btnRStop = new System.Windows.Forms.Button();
             this.btnRPutPut = new System.Windows.Forms.Button();
             this.btnRPutGet = new System.Windows.Forms.Button();
             this.btnRGetGet = new System.Windows.Forms.Button();
@@ -312,6 +309,9 @@
             this.Btn_DoorClose_A = new System.Windows.Forms.Button();
             this.Btn_UnLatchDoor_A = new System.Windows.Forms.Button();
             this.Btn_LatchDoor_A = new System.Windows.Forms.Button();
+            this.btnContinue = new System.Windows.Forms.Button();
+            this.btnPause = new System.Windows.Forms.Button();
+            this.btnStop = new System.Windows.Forms.Button();
             this.pnlMotionStop = new System.Windows.Forms.Panel();
             this.tbcManual.SuspendLayout();
             this.tabPage1.SuspendLayout();
@@ -845,54 +845,6 @@
             this.pnlRCmd.Name = "pnlRCmd";
             this.pnlRCmd.Size = new System.Drawing.Size(750, 203);
             this.pnlRCmd.TabIndex = 51;
-            // 
-            // btnRContinue
-            // 
-            this.btnRContinue.BackColor = System.Drawing.Color.ForestGreen;
-            this.btnRContinue.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.btnRContinue.FlatAppearance.BorderSize = 2;
-            this.btnRContinue.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.btnRContinue.Font = new System.Drawing.Font("微軟正黑體", 14.25F);
-            this.btnRContinue.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.btnRContinue.Location = new System.Drawing.Point(513, 3);
-            this.btnRContinue.Name = "btnRContinue";
-            this.btnRContinue.Size = new System.Drawing.Size(192, 36);
-            this.btnRContinue.TabIndex = 117;
-            this.btnRContinue.Text = "CONTINUE";
-            this.btnRContinue.UseVisualStyleBackColor = false;
-            this.btnRContinue.Click += new System.EventHandler(this.RobotFunction_Click);
-            // 
-            // btnRPause
-            // 
-            this.btnRPause.BackColor = System.Drawing.Color.Orange;
-            this.btnRPause.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.btnRPause.FlatAppearance.BorderSize = 2;
-            this.btnRPause.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.btnRPause.Font = new System.Drawing.Font("微軟正黑體", 14.25F);
-            this.btnRPause.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.btnRPause.Location = new System.Drawing.Point(277, 3);
-            this.btnRPause.Name = "btnRPause";
-            this.btnRPause.Size = new System.Drawing.Size(192, 36);
-            this.btnRPause.TabIndex = 116;
-            this.btnRPause.Text = "PAUSE";
-            this.btnRPause.UseVisualStyleBackColor = false;
-            this.btnRPause.Click += new System.EventHandler(this.RobotFunction_Click);
-            // 
-            // btnRStop
-            // 
-            this.btnRStop.BackColor = System.Drawing.Color.OrangeRed;
-            this.btnRStop.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.btnRStop.FlatAppearance.BorderSize = 2;
-            this.btnRStop.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.btnRStop.Font = new System.Drawing.Font("微軟正黑體", 14.25F);
-            this.btnRStop.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.btnRStop.Location = new System.Drawing.Point(49, 3);
-            this.btnRStop.Name = "btnRStop";
-            this.btnRStop.Size = new System.Drawing.Size(192, 36);
-            this.btnRStop.TabIndex = 115;
-            this.btnRStop.Text = "STOP";
-            this.btnRStop.UseVisualStyleBackColor = false;
-            this.btnRStop.Click += new System.EventHandler(this.RobotFunction_Click);
             // 
             // btnRPutPut
             // 
@@ -4472,16 +4424,63 @@
             this.Btn_LatchDoor_A.UseVisualStyleBackColor = true;
             this.Btn_LatchDoor_A.Click += new System.EventHandler(this.PortFunction_Click);
             // 
+            // btnContinue
+            // 
+            this.btnContinue.BackColor = System.Drawing.Color.ForestGreen;
+            this.btnContinue.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.btnContinue.FlatAppearance.BorderSize = 2;
+            this.btnContinue.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnContinue.Font = new System.Drawing.Font("微軟正黑體", 14.25F);
+            this.btnContinue.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.btnContinue.Location = new System.Drawing.Point(513, 3);
+            this.btnContinue.Name = "btnContinue";
+            this.btnContinue.Size = new System.Drawing.Size(192, 47);
+            this.btnContinue.TabIndex = 117;
+            this.btnContinue.Text = "CONTINUE";
+            this.btnContinue.UseVisualStyleBackColor = false;
+            this.btnContinue.Click += new System.EventHandler(this.MotionFunction_Click);
+            // 
+            // btnPause
+            // 
+            this.btnPause.BackColor = System.Drawing.Color.Orange;
+            this.btnPause.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.btnPause.FlatAppearance.BorderSize = 2;
+            this.btnPause.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnPause.Font = new System.Drawing.Font("微軟正黑體", 14.25F);
+            this.btnPause.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.btnPause.Location = new System.Drawing.Point(277, 3);
+            this.btnPause.Name = "btnPause";
+            this.btnPause.Size = new System.Drawing.Size(192, 47);
+            this.btnPause.TabIndex = 116;
+            this.btnPause.Text = "PAUSE";
+            this.btnPause.UseVisualStyleBackColor = false;
+            this.btnPause.Click += new System.EventHandler(this.MotionFunction_Click);
+            // 
+            // btnStop
+            // 
+            this.btnStop.BackColor = System.Drawing.Color.OrangeRed;
+            this.btnStop.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.btnStop.FlatAppearance.BorderSize = 2;
+            this.btnStop.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnStop.Font = new System.Drawing.Font("微軟正黑體", 14.25F);
+            this.btnStop.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.btnStop.Location = new System.Drawing.Point(49, 3);
+            this.btnStop.Name = "btnStop";
+            this.btnStop.Size = new System.Drawing.Size(192, 47);
+            this.btnStop.TabIndex = 115;
+            this.btnStop.Text = "STOP";
+            this.btnStop.UseVisualStyleBackColor = false;
+            this.btnStop.Click += new System.EventHandler(this.MotionFunction_Click);
+            // 
             // pnlMotionStop
             // 
-            this.pnlMotionStop.Controls.Add(this.btnRContinue);
-            this.pnlMotionStop.Controls.Add(this.btnRPause);
-            this.pnlMotionStop.Controls.Add(this.btnRStop);
-            this.pnlMotionStop.Location = new System.Drawing.Point(720, 3);
+            this.pnlMotionStop.Controls.Add(this.btnContinue);
+            this.pnlMotionStop.Controls.Add(this.btnPause);
+            this.pnlMotionStop.Controls.Add(this.btnStop);
+            this.pnlMotionStop.Location = new System.Drawing.Point(718, -2);
             this.pnlMotionStop.Name = "pnlMotionStop";
-            this.pnlMotionStop.Size = new System.Drawing.Size(750, 42);
+            this.pnlMotionStop.Size = new System.Drawing.Size(755, 50);
             this.pnlMotionStop.TabIndex = 1;
-            this.pnlMotionStop.Visible = false;
             // 
             // FormManual
             // 
@@ -4835,9 +4834,9 @@
         private System.Windows.Forms.Button btnRServoOn;
         private System.Windows.Forms.Button btnRServoOff;
         private System.Windows.Forms.Button btnRReset;
-        private System.Windows.Forms.Button btnRContinue;
-        private System.Windows.Forms.Button btnRPause;
-        private System.Windows.Forms.Button btnRStop;
+        private System.Windows.Forms.Button btnContinue;
+        private System.Windows.Forms.Button btnPause;
+        private System.Windows.Forms.Button btnStop;
         private System.Windows.Forms.Panel pnlMotionStop;
     }
 }

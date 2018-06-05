@@ -14,8 +14,10 @@ using TransferControl.Management;
 
 namespace GUI
 {
+    
     public partial class FormManual : Form
     {
+        private string ActiveAligner { get; set; }
         Boolean isRobotMoveDown = false;//Get option 1
         Boolean isRobotMoveUp = false;//Put option 1
         public FormManual()
@@ -221,6 +223,7 @@ namespace GUI
                 angle = Convert.ToString(int.Parse(cbA2Angle.Text) + int.Parse(udA2AngleOffset.Text));
                 speed = nudA2Speed.Text.Equals("100") ? "0" : nudA2Speed.Text;
             };
+            this.ActiveAligner = nodeName;
             Node aligner = NodeManagement.Get(nodeName);
             Transaction[] txns = new Transaction[1];
             txns[0] = new Transaction();
@@ -349,16 +352,54 @@ namespace GUI
             {
                 this.Cursor = Cursors.Default;
                 tbcManual.Enabled = true;
-                pnlMotionStop.Visible = false;
             }
             else
             {
                 this.Cursor = Cursors.WaitCursor;
                 tbcManual.Enabled = false;
             }
-
         }
 
+        private void MotionFunction_Click(object sender, EventArgs e)
+        {
+            Boolean isRobotActive = false;
+            Button btn = (Button)sender;
+            String nodeName = null ;
+            if (tbcManual.SelectedTab.Text.Equals("Robot"))
+            {
+                isRobotActive = true;
+                nodeName = rbR1.Checked ? "Robot01" : "Robot02";
+            }
+            if (tbcManual.SelectedTab.Text.Equals("Aligner"))
+                nodeName = this.ActiveAligner;
+            Node node = NodeManagement.Get(nodeName);
+            Transaction txn = new Transaction();
+            txn = new Transaction();
+            txn.FormName = "FormManual";
+            switch (btn.Name)
+            {
+                case "btnStop":
+                    txn.Method = isRobotActive ? Transaction.Command.RobotType.Stop: Transaction.Command.AlignerType.Stop;
+                    //txn.Value = "0";//減速停止
+                    txn.Value = "1";//立即停止
+                    SetFormEnable(true);
+                    break;
+                case "btnPause":
+                    txn.Method = isRobotActive ? Transaction.Command.RobotType.Pause : Transaction.Command.AlignerType.Pause;
+                    break;
+                case "btnContinue":
+                    txn.Method = isRobotActive ? Transaction.Command.RobotType.Continue : Transaction.Command.AlignerType.Continue;
+                    break;
+            }
+            if (!txn.Method.Equals(""))
+            {
+                node.SendCommand(txn);
+            }
+            else
+            {
+                MessageBox.Show("Command is empty!");
+            }
+        }
         private void RobotFunction_Click(object sender, EventArgs e)
         {
 
@@ -381,10 +422,6 @@ namespace GUI
             Transaction[] txns = new Transaction[1];
             txns[0] = new Transaction();
             txns[0].FormName = "FormManual";
-            if (!btn.Name.Equals("btnRStop"))
-            {
-                pnlMotionStop.Visible = true;
-            }
             switch (btn.Name)
             {
                 case "btnRConn":
@@ -399,9 +436,7 @@ namespace GUI
                     }
                     catch (Exception e1)
                     {
-
                     }
-
                     return;
                 case "btnRDisConn":
                     try
@@ -415,9 +450,7 @@ namespace GUI
                     }
                     catch (Exception e1)
                     {
-
                     }
-
                     return;
                 case "btnRInit":
                     //txns[0].Method = Transaction.Command.LoadPortType.MappingDown;
@@ -533,7 +566,6 @@ namespace GUI
                     txns[0].Method = Transaction.Command.RobotType.RobotMode;
                     txns[0].Arm = Convert.ToString(cbRMode.SelectedIndex);
                     break;
-
                 case "btnRPutPut":
                     //txns[0].Method = Transaction.Command.RobotType.MappingDown;
                     break;
@@ -556,18 +588,6 @@ namespace GUI
                 case "btnRServoOff":
                     txns[0].Method = Transaction.Command.RobotType.RobotServo;
                     txns[0].Arm = "0";
-                    break;
-                case "btnRStop":
-                    txns[0].Method = Transaction.Command.RobotType.Stop;
-                    txns[0].Value = "1";//立即停止
-                    txns[0].Value = "0";//減速停止
-                    SetFormEnable(true);
-                    break;
-                case "btnRPause":
-                    txns[0].Method = Transaction.Command.RobotType.Pause;
-                    break;
-                case "btnRContinue":
-                    txns[0].Method = Transaction.Command.RobotType.Continue;
                     break;
             }
             if (!txns[0].Method.Equals(""))
@@ -751,6 +771,16 @@ namespace GUI
 
         private void tbcManual_SelectedIndexChanged(object sender, EventArgs e)
         {
+            switch (tbcManual.SelectedTab.Text)
+            {
+                case "Robot":
+                case "Aligner":
+                    pnlMotionStop.Visible = true;
+                    break;
+                default:
+                    pnlMotionStop.Visible = false;
+                    break;
+            }
             Update_Manual_Status();
         }
 
