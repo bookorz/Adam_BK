@@ -100,7 +100,7 @@ namespace Adam.UI_Update.WaferMapping
 
                     Node port = NodeManagement.Get(PortName);
                     //List<Job> MappingData = new List<Job>();
-
+                    
                     int currentIdx = 1;
                     for (int i = Mapping.Length - 1; i >= 0; i--)
                     {
@@ -145,6 +145,8 @@ namespace Adam.UI_Update.WaferMapping
                         }
                         if (!port.AddJob(wafer.Slot, wafer))
                         {
+                            Job org = port.GetJob(wafer.Slot);
+                            JobManagement.Remove(org.Job_Id);
                             port.RemoveJob(wafer.Slot);
                             port.AddJob(wafer.Slot, wafer);
                         }

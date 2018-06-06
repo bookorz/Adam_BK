@@ -170,8 +170,8 @@
     "ID": "",
     "Expression": "",
     "JobStatus": "",
-    "ExcuteMethod": "Get",
-    "FinishMethod": "",
+    "ExcuteMethod": "",
+    "FinishMethod": "Get",
     "ChangeToStatus": "",
     "TodoList": [
       {
