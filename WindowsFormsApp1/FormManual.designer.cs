@@ -61,6 +61,7 @@
             this.cbRA2Slot = new System.Windows.Forms.ComboBox();
             this.cbRA2Arm = new System.Windows.Forms.ComboBox();
             this.pnlRCmd = new System.Windows.Forms.Panel();
+            this.btnRAreaSwap = new System.Windows.Forms.Button();
             this.btnRPutPut = new System.Windows.Forms.Button();
             this.btnRPutGet = new System.Windows.Forms.Button();
             this.btnRGetGet = new System.Windows.Forms.Button();
@@ -405,15 +406,16 @@
             // 
             this.tableLayoutPanel23.ColumnCount = 1;
             this.tableLayoutPanel23.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel23.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 20F));
-            this.tableLayoutPanel23.Controls.Add(this.tableLayoutPanel24, 0, 0);
-            this.tableLayoutPanel23.Controls.Add(this.pnlRCmd, 0, 1);
-            this.tableLayoutPanel23.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.tableLayoutPanel23.Controls.Add(this.tableLayoutPanel24, 0, 1);
+            this.tableLayoutPanel23.Controls.Add(this.pnlRCmd, 0, 2);
+            this.tableLayoutPanel23.Controls.Add(this.btnRAreaSwap, 0, 0);
             this.tableLayoutPanel23.Location = new System.Drawing.Point(20, 20);
             this.tableLayoutPanel23.Name = "tableLayoutPanel23";
-            this.tableLayoutPanel23.RowCount = 2;
+            this.tableLayoutPanel23.RowCount = 3;
+            this.tableLayoutPanel23.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 55F));
             this.tableLayoutPanel23.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 70.76923F));
             this.tableLayoutPanel23.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 29.23077F));
+            this.tableLayoutPanel23.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
             this.tableLayoutPanel23.Size = new System.Drawing.Size(756, 715);
             this.tableLayoutPanel23.TabIndex = 52;
             // 
@@ -425,12 +427,12 @@
             this.tableLayoutPanel24.Controls.Add(this.pnlRobotCmdA1, 0, 0);
             this.tableLayoutPanel24.Controls.Add(this.pnlRobotCmdA2, 1, 0);
             this.tableLayoutPanel24.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tableLayoutPanel24.Location = new System.Drawing.Point(3, 3);
+            this.tableLayoutPanel24.Location = new System.Drawing.Point(3, 58);
             this.tableLayoutPanel24.Name = "tableLayoutPanel24";
             this.tableLayoutPanel24.RowCount = 1;
             this.tableLayoutPanel24.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
             this.tableLayoutPanel24.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 500F));
-            this.tableLayoutPanel24.Size = new System.Drawing.Size(750, 500);
+            this.tableLayoutPanel24.Size = new System.Drawing.Size(750, 461);
             this.tableLayoutPanel24.TabIndex = 0;
             // 
             // pnlRobotCmdA1
@@ -451,7 +453,7 @@
             this.pnlRobotCmdA1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.pnlRobotCmdA1.Location = new System.Drawing.Point(3, 3);
             this.pnlRobotCmdA1.Name = "pnlRobotCmdA1";
-            this.pnlRobotCmdA1.Size = new System.Drawing.Size(369, 494);
+            this.pnlRobotCmdA1.Size = new System.Drawing.Size(369, 455);
             this.pnlRobotCmdA1.TabIndex = 50;
             // 
             // label56
@@ -481,16 +483,16 @@
             // 
             this.cbRA1Point.FormattingEnabled = true;
             this.cbRA1Point.Items.AddRange(new object[] {
-            "Port_A",
-            "Port_B",
-            "Port_C",
-            "Port_D",
-            "Port_E",
-            "Port_F",
-            "Port_G",
-            "Port_H",
-            "Aligner1",
-            "Aligner2"});
+            "LoadPort01",
+            "LoadPort02",
+            "LoadPort03",
+            "LoadPort04",
+            "LoadPort05",
+            "LoadPort06",
+            "LoadPort07",
+            "LoadPort08",
+            "Aligner01",
+            "Aligner02"});
             this.cbRA1Point.Location = new System.Drawing.Point(129, 60);
             this.cbRA1Point.Name = "cbRA1Point";
             this.cbRA1Point.Size = new System.Drawing.Size(208, 38);
@@ -592,31 +594,31 @@
             // 
             this.cbRA1Slot.FormattingEnabled = true;
             this.cbRA1Slot.Items.AddRange(new object[] {
-            "1",
-            "2",
-            "3",
-            "4",
-            "5",
-            "6",
-            "7",
-            "8",
-            "9",
-            "10",
-            "11",
-            "12",
-            "13",
-            "14",
-            "15",
-            "16",
-            "17",
-            "18",
-            "19",
-            "20",
-            "21",
-            "22",
-            "23",
+            "25",
             "24",
-            "25"});
+            "23",
+            "22",
+            "21",
+            "20",
+            "19",
+            "18",
+            "17",
+            "16",
+            "15",
+            "14",
+            "13",
+            "12",
+            "11",
+            "10",
+            "9",
+            "8",
+            "7",
+            "6",
+            "5",
+            "4",
+            "3",
+            "2",
+            "1"});
             this.cbRA1Slot.Location = new System.Drawing.Point(129, 130);
             this.cbRA1Slot.Name = "cbRA1Slot";
             this.cbRA1Slot.Size = new System.Drawing.Size(208, 38);
@@ -651,7 +653,7 @@
             this.pnlRobotCmdA2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.pnlRobotCmdA2.Location = new System.Drawing.Point(378, 3);
             this.pnlRobotCmdA2.Name = "pnlRobotCmdA2";
-            this.pnlRobotCmdA2.Size = new System.Drawing.Size(369, 494);
+            this.pnlRobotCmdA2.Size = new System.Drawing.Size(369, 455);
             this.pnlRobotCmdA2.TabIndex = 49;
             // 
             // label7
@@ -681,16 +683,16 @@
             // 
             this.cbRA2Point.FormattingEnabled = true;
             this.cbRA2Point.Items.AddRange(new object[] {
-            "Port_A",
-            "Port_B",
-            "Port_C",
-            "Port_D",
-            "Port_E",
-            "Port_F",
-            "Port_G",
-            "Port_H",
-            "Aligner1",
-            "Aligner2"});
+            "LoadPort01",
+            "LoadPort02",
+            "LoadPort03",
+            "LoadPort04",
+            "LoadPort05",
+            "LoadPort06",
+            "LoadPort07",
+            "LoadPort08",
+            "Aligner01",
+            "Aligner02"});
             this.cbRA2Point.Location = new System.Drawing.Point(130, 60);
             this.cbRA2Point.Name = "cbRA2Point";
             this.cbRA2Point.Size = new System.Drawing.Size(208, 38);
@@ -792,31 +794,31 @@
             // 
             this.cbRA2Slot.FormattingEnabled = true;
             this.cbRA2Slot.Items.AddRange(new object[] {
-            "1",
-            "2",
-            "3",
-            "4",
-            "5",
-            "6",
-            "7",
-            "8",
-            "9",
-            "10",
-            "11",
-            "12",
-            "13",
-            "14",
-            "15",
-            "16",
-            "17",
-            "18",
-            "19",
-            "20",
-            "21",
-            "22",
-            "23",
+            "25",
             "24",
-            "25"});
+            "23",
+            "22",
+            "21",
+            "20",
+            "19",
+            "18",
+            "17",
+            "16",
+            "15",
+            "14",
+            "13",
+            "12",
+            "11",
+            "10",
+            "9",
+            "8",
+            "7",
+            "6",
+            "5",
+            "4",
+            "3",
+            "2",
+            "1"});
             this.cbRA2Slot.Location = new System.Drawing.Point(130, 130);
             this.cbRA2Slot.Name = "cbRA2Slot";
             this.cbRA2Slot.Size = new System.Drawing.Size(208, 38);
@@ -841,21 +843,38 @@
             this.pnlRCmd.Controls.Add(this.btnRGetGet);
             this.pnlRCmd.Controls.Add(this.btnRGetPut);
             this.pnlRCmd.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.pnlRCmd.Location = new System.Drawing.Point(3, 509);
+            this.pnlRCmd.Location = new System.Drawing.Point(3, 525);
             this.pnlRCmd.Name = "pnlRCmd";
-            this.pnlRCmd.Size = new System.Drawing.Size(750, 203);
+            this.pnlRCmd.Size = new System.Drawing.Size(750, 187);
             this.pnlRCmd.TabIndex = 51;
+            // 
+            // btnRAreaSwap
+            // 
+            this.btnRAreaSwap.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
+            this.btnRAreaSwap.BackColor = System.Drawing.Color.DarkGray;
+            this.tableLayoutPanel23.SetColumnSpan(this.btnRAreaSwap, 2);
+            this.btnRAreaSwap.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.btnRAreaSwap.FlatAppearance.BorderSize = 2;
+            this.btnRAreaSwap.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnRAreaSwap.Font = new System.Drawing.Font("微軟正黑體", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
+            this.btnRAreaSwap.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.btnRAreaSwap.Location = new System.Drawing.Point(238, 3);
+            this.btnRAreaSwap.Name = "btnRAreaSwap";
+            this.btnRAreaSwap.Size = new System.Drawing.Size(280, 49);
+            this.btnRAreaSwap.TabIndex = 52;
+            this.btnRAreaSwap.Text = "Area1 <-> Area2";
+            this.btnRAreaSwap.UseVisualStyleBackColor = false;
+            this.btnRAreaSwap.Click += new System.EventHandler(this.btnRAreaSwap_Click);
             // 
             // btnRPutPut
             // 
             this.btnRPutPut.BackColor = System.Drawing.Color.DarkGray;
-            this.btnRPutPut.Enabled = false;
             this.btnRPutPut.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.btnRPutPut.FlatAppearance.BorderSize = 2;
             this.btnRPutPut.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnRPutPut.Font = new System.Drawing.Font("微軟正黑體", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
             this.btnRPutPut.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.btnRPutPut.Location = new System.Drawing.Point(60, 19);
+            this.btnRPutPut.Location = new System.Drawing.Point(60, 32);
             this.btnRPutPut.Name = "btnRPutPut";
             this.btnRPutPut.Size = new System.Drawing.Size(280, 45);
             this.btnRPutPut.TabIndex = 51;
@@ -866,13 +885,12 @@
             // btnRPutGet
             // 
             this.btnRPutGet.BackColor = System.Drawing.Color.DarkGray;
-            this.btnRPutGet.Enabled = false;
             this.btnRPutGet.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.btnRPutGet.FlatAppearance.BorderSize = 2;
             this.btnRPutGet.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnRPutGet.Font = new System.Drawing.Font("微軟正黑體", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
             this.btnRPutGet.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.btnRPutGet.Location = new System.Drawing.Point(436, 77);
+            this.btnRPutGet.Location = new System.Drawing.Point(436, 90);
             this.btnRPutGet.Name = "btnRPutGet";
             this.btnRPutGet.Size = new System.Drawing.Size(280, 45);
             this.btnRPutGet.TabIndex = 50;
@@ -883,13 +901,12 @@
             // btnRGetGet
             // 
             this.btnRGetGet.BackColor = System.Drawing.Color.DarkGray;
-            this.btnRGetGet.Enabled = false;
             this.btnRGetGet.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.btnRGetGet.FlatAppearance.BorderSize = 2;
             this.btnRGetGet.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnRGetGet.Font = new System.Drawing.Font("微軟正黑體", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
             this.btnRGetGet.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.btnRGetGet.Location = new System.Drawing.Point(436, 19);
+            this.btnRGetGet.Location = new System.Drawing.Point(436, 32);
             this.btnRGetGet.Name = "btnRGetGet";
             this.btnRGetGet.Size = new System.Drawing.Size(280, 45);
             this.btnRGetGet.TabIndex = 48;
@@ -900,13 +917,12 @@
             // btnRGetPut
             // 
             this.btnRGetPut.BackColor = System.Drawing.Color.DarkGray;
-            this.btnRGetPut.Enabled = false;
             this.btnRGetPut.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.btnRGetPut.FlatAppearance.BorderSize = 2;
             this.btnRGetPut.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnRGetPut.Font = new System.Drawing.Font("微軟正黑體", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
             this.btnRGetPut.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.btnRGetPut.Location = new System.Drawing.Point(60, 77);
+            this.btnRGetPut.Location = new System.Drawing.Point(60, 90);
             this.btnRGetPut.Name = "btnRGetPut";
             this.btnRGetPut.Size = new System.Drawing.Size(280, 45);
             this.btnRGetPut.TabIndex = 49;
@@ -4838,5 +4854,6 @@
         private System.Windows.Forms.Button btnPause;
         private System.Windows.Forms.Button btnStop;
         private System.Windows.Forms.Panel pnlMotionStop;
+        private System.Windows.Forms.Button btnRAreaSwap;
     }
 }
