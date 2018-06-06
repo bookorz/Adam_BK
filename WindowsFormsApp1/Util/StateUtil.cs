@@ -157,7 +157,7 @@ namespace Adam.Util
             switch (result[0])
             {
                 case "01":
-                    if(robot!=null)
+                    if(robot != null)
                         robot.Vacuum_R = result[1];
                     if (aligner != null)
                         aligner.Vacuum = result[1];

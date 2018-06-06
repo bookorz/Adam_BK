@@ -416,11 +416,14 @@ namespace GUI
                         break;
                 }
             }
+            
             String nodeName = rbR1.Checked ? "Robot01" : "Robot02";
             Node robot = NodeManagement.Get(nodeName);
             Transaction[] txns = new Transaction[1];
+            
             txns[0] = new Transaction();
             txns[0].FormName = "FormManual";
+            SetFormEnable(false);
             switch (btn.Name)
             {
                 case "btnRConn":
@@ -428,7 +431,6 @@ namespace GUI
                     {
                         ControllerManagement.Get(robot.Controller).Connect();
                         robot.State = "";
-                        SetFormEnable(false);
                         Thread.Sleep(500);//暫解
                         setRobotStatus();
                         SetFormEnable(true);
@@ -442,7 +444,6 @@ namespace GUI
                     {
                         ControllerManagement.Get(robot.Controller).Close();
                         robot.State = "";
-                        SetFormEnable(false);
                         Thread.Sleep(500);//暫解
                         setRobotStatus();
                         SetFormEnable(true);
@@ -498,7 +499,7 @@ namespace GUI
                         txns[0].Method = Transaction.Command.RobotType.GetAfterWait;
                     else
                         txns[0].Method = Transaction.Command.RobotType.Get;
-                    txns[0].Point = ConfigUtil.GetStagePoint(cbRA1Point.Text);
+                    txns[0].Position = cbRA1Point.Text;
                     txns[0].Arm = ConfigUtil.GetArmID(cbRA1Arm.Text);
                     txns[0].Slot = cbRA1Slot.Text;
                     isRobotMoveDown = false;//Get option 1
@@ -514,7 +515,7 @@ namespace GUI
                         txns[0].Method = Transaction.Command.RobotType.PutBack;
                     else
                         txns[0].Method = Transaction.Command.RobotType.Put;
-                    txns[0].Point = ConfigUtil.GetStagePoint(cbRA2Point.Text);
+                    txns[0].Position = cbRA2Point.Text;
                     txns[0].Arm = ConfigUtil.GetArmID(cbRA2Arm.Text);
                     txns[0].Slot = cbRA2Slot.Text;
                     isRobotMoveDown = false;//Get option 1
@@ -527,7 +528,7 @@ namespace GUI
                         return;
                     }
                     txns[0].Method = Transaction.Command.RobotType.GetWait;
-                    txns[0].Point = ConfigUtil.GetStagePoint(cbRA1Point.Text);
+                    txns[0].Position = cbRA1Point.Text;
                     txns[0].Arm = ConfigUtil.GetArmID(cbRA1Arm.Text);
                     txns[0].Slot = cbRA1Slot.Text;
                     break;
@@ -538,21 +539,21 @@ namespace GUI
                         return;
                     }
                     txns[0].Method = Transaction.Command.RobotType.PutWait;
-                    txns[0].Point = ConfigUtil.GetStagePoint(cbRA2Point.Text);
+                    txns[0].Position = cbRA2Point.Text;
                     txns[0].Arm = ConfigUtil.GetArmID(cbRA2Arm.Text);
                     txns[0].Slot = cbRA2Slot.Text;
                     break;
                 case "btnRMoveDown":
                     isRobotMoveDown = true;
                     txns[0].Method = Transaction.Command.RobotType.WaitBeforeGet;//GET option 1
-                    txns[0].Point = ConfigUtil.GetStagePoint(cbRA1Point.Text);
+                    txns[0].Position = cbRA1Point.Text;
                     txns[0].Arm = ConfigUtil.GetArmID(cbRA1Arm.Text);
                     txns[0].Slot = cbRA1Slot.Text;
                     break;
                 case "btnRMoveUp":
                     isRobotMoveUp = true;
                     txns[0].Method = Transaction.Command.RobotType.WaitBeforePut;//Put option 1
-                    txns[0].Point = ConfigUtil.GetStagePoint(cbRA2Point.Text);
+                    txns[0].Position = cbRA2Point.Text;
                     txns[0].Arm = ConfigUtil.GetArmID(cbRA2Arm.Text);
                     txns[0].Slot = cbRA2Slot.Text;
                     break;
@@ -566,17 +567,49 @@ namespace GUI
                     txns[0].Arm = Convert.ToString(cbRMode.SelectedIndex);
                     break;
                 case "btnRPutPut":
-                    //txns[0].Method = Transaction.Command.RobotType.MappingDown;
-                    break;
+                    if(GetScriptVar() == null)
+                    {
+                        MessageBox.Show(" Insufficient information, please select source or destination!", "Invalid source or destination");
+                        return;
+                    }
+                    else
+                    {
+                        robot.ExcuteScript("RobotManualPutPut", "FormManual-Script", GetScriptVar());
+                        return;
+                    }
                 case "btnRGetGet":
-                    //txns[0].Method = Transaction.Command.RobotType.MappingDown;
-                    break;
+                    if (GetScriptVar() == null)
+                    {
+                        MessageBox.Show(" Insufficient information, please select source or destination!", "Invalid source or destination");
+                        return;
+                    }
+                    else
+                    {
+                        robot.ExcuteScript("RobotManualGetGet", "FormManual-Script", GetScriptVar());
+                        return;
+                    }
                 case "btnRGetPut":
-                    //txns[0].Method = Transaction.Command.RobotType.MappingDown;
-                    break;
+                    if (GetScriptVar() == null)
+                    {
+                        MessageBox.Show(" Insufficient information, please select source or destination!", "Invalid source or destination");
+                        return;
+                    }
+                    else
+                    {
+                        robot.ExcuteScript("RobotManualGetPut", "FormManual-Script", GetScriptVar());
+                        return;
+                    }
                 case "btnRPutGet":
-                    //txns[0].Method = Transaction.Command.RobotType.MappingDown;
-                    break;
+                    if (GetScriptVar() == null)
+                    {
+                        MessageBox.Show(" Insufficient information, please select source or destination!", "Invalid source or destination");
+                        return;
+                    }
+                    else
+                    {
+                        robot.ExcuteScript("RobotManualPutGet", "FormManual-Script", GetScriptVar());
+                        return;
+                    }
                 case "btnRReset":
                     txns[0].Method = Transaction.Command.RobotType.Reset;
                     break;
@@ -588,6 +621,9 @@ namespace GUI
                     txns[0].Method = Transaction.Command.RobotType.RobotServo;
                     txns[0].Arm = "0";
                     break;
+                default:
+                    SetFormEnable(true);//未支援功能
+                    break;
             }
             if (!txns[0].Method.Equals(""))
             {
@@ -597,9 +633,31 @@ namespace GUI
             {
                 MessageBox.Show("Command is empty!");
             }
-            SetFormEnable(false);
-            Update_Manual_Status();
+            //SetFormEnable(false); 暫時 mark 觀察
+            //Update_Manual_Status(); 暫時 mark 觀察
         }
+
+        private Dictionary<string, string> GetScriptVar()
+        {
+            Dictionary<string, string> vars = new Dictionary<string, string>();
+            if(cbRA1Arm.SelectedIndex  < 0 || cbRA1Slot.SelectedIndex < 0 || cbRA1Point.SelectedIndex < 0)
+            {
+                return null;
+            }
+            if (cbRA2Arm.SelectedIndex < 0 || cbRA2Slot.SelectedIndex < 0 || cbRA2Point.SelectedIndex < 0)
+            {
+                return null;
+            }
+            vars.Clear();
+            vars.Add("@cbRA1Arm", ConfigUtil.GetArmID(cbRA1Arm.Text));
+            vars.Add("@cbRA1Slot", cbRA1Slot.Text);
+            vars.Add("@cbRA1Point", cbRA1Point.Text);
+            vars.Add("@cbRA2Arm", ConfigUtil.GetArmID(cbRA2Arm.Text));
+            vars.Add("@cbRA2Slot", cbRA2Slot.Text);
+            vars.Add("@cbRA2Point", cbRA2Point.Text);
+            return vars;
+        }
+
         private void setRobotStatus()
         {
             Control[] controls = new Control[] { tbRError, tbRLVacuSolenoid, tbRLwaferSensor, tbRRVacuSolenoid, tbRRwaferSensor, tbRServo, nudRSpeed, tbRStatus };
@@ -616,42 +674,7 @@ namespace GUI
             }
             //向Robot 詢問狀態
             Node robot = NodeManagement.Get(nodeName);
-            Transaction[] txns = new Transaction[6];
-            txns[0] = new Transaction();
-            txns[0].Method = Transaction.Command.RobotType.GetStatus;
-
-            txns[1] = new Transaction();
-            txns[1].Method = Transaction.Command.RobotType.GetSpeed;
-
-            txns[2] = new Transaction();
-            txns[2].Method = Transaction.Command.RobotType.GetMode;
-
-            txns[3] = new Transaction();
-            txns[3].Method = Transaction.Command.RobotType.GetError;
-            txns[3].Value = "00";// 履歷號碼  2 位數  10 進位, 00最新
-
-            txns[4] = new Transaction();
-            txns[4].Method = Transaction.Command.RobotType.GetRIO;
-            txns[4].Value = "4";//4 R-Hold Status 回饋 R 軸 Wafer/ Panel 保留狀態
-
-            txns[5] = new Transaction();
-            txns[5].Method = Transaction.Command.RobotType.GetSV;
-            txns[5].Value = "1";
-
-
-
-            foreach (Transaction txn in txns)
-            {
-                if (!txn.Method.Equals(""))
-                {
-                    txn.FormName = "FormManual";
-                    robot.SendCommand(txn);
-                }
-                else
-                {
-                    MessageBox.Show("Command is empty!");
-                }
-            }
+            robot.ExcuteScript("RobotStateGet", "FormManual-Script");
 
         }
 
@@ -668,47 +691,15 @@ namespace GUI
             SetDeviceStatus("Aligner02");
             Node aligner1 = NodeManagement.Get("Aligner01");
             Node aligner2 = NodeManagement.Get("Aligner02");
-            Transaction[] txns = new Transaction[6];
-            txns[0] = new Transaction();
-            txns[0].Method = Transaction.Command.AlignerType.GetStatus;
 
-            txns[1] = new Transaction();
-            txns[1].Method = Transaction.Command.AlignerType.GetSpeed;
-            
-            txns[2] = new Transaction();
-            txns[2].Method = Transaction.Command.AlignerType.GetMode;
-
-            txns[3] = new Transaction();
-            txns[3].Method = Transaction.Command.AlignerType.GetError;
-            txns[3].Value = "00";// 履歷號碼  2 位數  10 進位, 00最新
-            
-            txns[4] = new Transaction();
-            txns[4].Method = Transaction.Command.AlignerType.GetRIO;
-            txns[4].Value = "4";// 4 Hold Status 回饋 Wafer/ Panel 保留狀態
-
-            txns[5] = new Transaction();
-            txns[5].Method = Transaction.Command.AlignerType.GetSV;
-            txns[5].Value = "1";// 4 Hold Status 回饋 Wafer/ Panel 保留狀態
-
-            foreach (Transaction txn in txns)
+            //向Aligner 詢問狀態
+            if (!tbA1Status.Text.Equals("N/A") && !tbA1Status.Text.Equals("Disconnected") && !tbA1Status.Text.Equals(""))
             {
-                if (!txn.Method.Equals(""))
-                {
-                    txn.FormName = "FormManual";
-                    if (!tbA1Status.Text.Equals("N/A") && !tbA1Status.Text.Equals("Disconnected") && !tbA1Status.Text.Equals(""))
-                    {
-                        aligner1.SendCommand(txn);//連線狀態下才執行
-                    }
-                    if (!tbA2Status.Text.Equals("N/A") && !tbA2Status.Text.Equals("Disconnected") && !tbA2Status.Text.Equals(""))
-                    {
-                        aligner2.SendCommand(txn);//連線狀態下才執行
-                    }
-
-                }
-                else
-                {
-                    MessageBox.Show("Command is empty!");
-                }
+                aligner1.ExcuteScript("AlignerStateGet", "FormManual"); ;//連線狀態下才執行
+            }
+            if (!tbA2Status.Text.Equals("N/A") && !tbA2Status.Text.Equals("Disconnected") && !tbA2Status.Text.Equals(""))
+            {
+                aligner2.ExcuteScript("AlignerStateGet", "FormManual-Script"); ;//連線狀態下才執行
             }
         }
 
@@ -789,6 +780,22 @@ namespace GUI
                 setRobotStatus();
             if (tbcManual.SelectedTab.Text.Equals("Aligner"))
                 setAlignerStatus();
+        }
+
+        private void btnRAreaSwap_Click(object sender, EventArgs e)
+        {
+            //A1 => temp
+            int tempPoint = cbRA1Point.SelectedIndex;
+            int tempSlot = cbRA1Slot.SelectedIndex;
+            int tempArm = cbRA1Arm.SelectedIndex;
+            //A2 => A1
+            cbRA1Point.SelectedIndex = cbRA2Point.SelectedIndex;
+            cbRA1Slot.SelectedIndex = cbRA2Slot.SelectedIndex;
+            cbRA1Arm.SelectedIndex = cbRA2Arm.SelectedIndex;
+            //temp => A2
+            cbRA2Point.SelectedIndex = tempPoint;
+            cbRA2Slot.SelectedIndex = tempSlot;
+            cbRA2Arm.SelectedIndex = tempArm;
         }
     }
 }

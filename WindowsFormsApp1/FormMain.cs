@@ -353,13 +353,19 @@ namespace Adam
                                 case Transaction.Command.RobotType.RobotMode:
                                 case Transaction.Command.RobotType.Reset:
                                 case Transaction.Command.RobotType.RobotServo:
+                                //case Transaction.Command.RobotType.Stop:
+                                //case Transaction.Command.RobotType.Pause:
+                                //case Transaction.Command.RobotType.Continue:
+                                    Thread.Sleep(1000);
+                                    //向Robot 詢問狀態
+                                    Node robot = NodeManagement.Get(Node.Name);
+                                    robot.ExcuteScript("RobotStateGet", "FormManual");
+                                    ManualRobotStatusUpdate.UpdateGUI(Txn, Node.Name, Msg.Value);//update 手動功能畫面
+                                    break;
                                 case Transaction.Command.RobotType.GetSpeed:
                                 case Transaction.Command.RobotType.GetRIO:
                                 case Transaction.Command.RobotType.GetError:
                                 case Transaction.Command.RobotType.GetMode:
-                                case Transaction.Command.RobotType.Stop:
-                                case Transaction.Command.RobotType.Pause:
-                                case Transaction.Command.RobotType.Continue:
                                 case Transaction.Command.RobotType.GetStatus:
                                 case Transaction.Command.RobotType.GetSV:
                                     ManualRobotStatusUpdate.UpdateGUI(Txn, Node.Name, Msg.Value);//update 手動功能畫面
@@ -371,14 +377,20 @@ namespace Adam
                             {
                                 case Transaction.Command.AlignerType.AlignerSpeed:
                                 case Transaction.Command.AlignerType.AlignerMode:
+                                case Transaction.Command.AlignerType.Reset:
+                                case Transaction.Command.AlignerType.AlignerServo:
+                                    //Thread.Sleep(1000);
+                                    //向Aligner 詢問狀態
+                                    Node aligner = NodeManagement.Get(Node.Name);
+                                    aligner.ExcuteScript("AlignerStateGet", "FormManual");
+                                    ManualAlignerStatusUpdate.UpdateGUI(Txn, Node.Name, Msg.Value);//update 手動功能畫面
+                                    break;
+                                case Transaction.Command.AlignerType.GetMode:
+                                case Transaction.Command.AlignerType.GetSV:
                                 case Transaction.Command.AlignerType.GetStatus:
                                 case Transaction.Command.AlignerType.GetSpeed:
                                 case Transaction.Command.AlignerType.GetRIO:
                                 case Transaction.Command.AlignerType.GetError:
-                                case Transaction.Command.AlignerType.Reset:
-                                case Transaction.Command.AlignerType.AlignerServo:
-                                case Transaction.Command.AlignerType.GetMode:
-                                case Transaction.Command.AlignerType.GetSV:
                                     ManualAlignerStatusUpdate.UpdateGUI(Txn, Node.Name, Msg.Value);//update 手動功能畫面
                                     break;
                             }
@@ -440,7 +452,7 @@ namespace Adam
         public void On_Command_Finished(Node Node, Transaction Txn, ReturnMessage Msg)
         {
             logger.Debug("On_Command_Finished");
-            Transaction txn = new Transaction();
+            //Transaction txn = new Transaction();
             switch (Txn.FormName)
             {
                 case "FormManual":
@@ -456,7 +468,7 @@ namespace Adam
                                 case Transaction.Command.LoadPortType.Unload:
                                 case Transaction.Command.LoadPortType.MappingUnload:
                                 case Transaction.Command.LoadPortType.UnDock:
-                                    WaferAssignUpdate.UpdateLoadPortMapping(Node.Name, "0000000000000000000000000");
+                                    WaferAssignUpdate.UpdateLoadPortMapping(Node.Name, "");
                                     break;
                             }
                             break;
@@ -537,7 +549,7 @@ namespace Adam
                                 {
                                     ManualPortStatusUpdate.UpdateLog(Node.Name, Msg.Command + " Trigger");
 
-                                    Node.ExcuteScript("LoadPortMapping", "MANSW");
+                                    Node.ExcuteScript("LoadPortMapping", "MANSW",true);
                                 }
                                 break;
                         }
@@ -572,6 +584,9 @@ namespace Adam
         public void On_Port_Finished(string PortName)
         {
             logger.Debug("On_Port_Finished");
+            Transaction txn = new Transaction();
+            txn.Method = Transaction.Command.LoadPortType.Unload;
+            NodeManagement.Get(PortName).SendCommand(txn,true);
         }
 
         public void On_Job_Location_Changed(Job Job)
@@ -583,7 +598,19 @@ namespace Adam
 
         public void On_Script_Finished(Node Node, string ScriptName, string FormName)
         {
-            logger.Debug("On_Script_Finished: " + Node.Name + " Script:" + ScriptName + " Finished, Form name:" + FormName);
+            logger.Debug("On_Script_Finished: " + Node.Name+" Script:"+ ScriptName +" Finished, Form name:"+FormName);
+            switch (FormName)
+            {
+                case "FormManual-Script":
+
+                    switch (Node.Type)
+                    {
+                        case "Robot":
+                            ManualRobotStatusUpdate.UpdateGUI(new Transaction(), Node.Name, "");//update 手動功能畫面
+                            break;
+                    }
+                    break;
+            }
         }
 
         private void vSBRobotStatus_Scroll(object sender, ScrollEventArgs e)

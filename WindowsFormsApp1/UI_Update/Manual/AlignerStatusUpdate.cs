@@ -63,44 +63,6 @@ namespace Adam.UI_Update.Manual
                             break;
                     }
                     UpdateStatus(name);
-                    //if (method.Equals(Transaction.Command.AlignerType.GetRIO))
-                    //{
-                    //    Transaction next_txn = new Transaction();
-                    //    next_txn = new Transaction();
-                    //    switch (txn.Value)
-                    //    {
-                    //        case "4":
-                    //            next_txn.Method = Transaction.Command.AlignerType.GetRIO;
-                    //            next_txn.Value = "8"; //8 Present ¦^õX¦b®u Sensor ªºª¬ºA
-                    //            break;
-                    //    }
-                    //    if (!next_txn.Method.Equals(""))
-                    //    {
-                    //        next_txn.FormName = "FormManual";
-                    //        Node robot = NodeManagement.Get(name);
-                    //        robot.SendCommand(next_txn);
-                    //    }
-                    //    else
-                    //    {
-                    //        //do nothing
-                    //    }
-                    //}
-                    if (method.Equals(Transaction.Command.AlignerType.AlignerServo))
-                    {
-                        Transaction next_txn = new Transaction();
-                        next_txn = new Transaction();
-                        next_txn.Method = Transaction.Command.AlignerType.GetStatus;
-                        if (!next_txn.Method.Equals(""))
-                        {
-                            next_txn.FormName = "FormManual";
-                            Node robot = NodeManagement.Get(name);
-                            robot.SendCommand(next_txn);
-                        }
-                        else
-                        {
-                            //do nothing
-                        }
-                    }
                 }
             }
             catch(Exception e)

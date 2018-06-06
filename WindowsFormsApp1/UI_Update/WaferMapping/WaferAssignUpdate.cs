@@ -100,55 +100,66 @@ namespace Adam.UI_Update.WaferMapping
 
                     Node port = NodeManagement.Get(PortName);
                     //List<Job> MappingData = new List<Job>();
-                    
-                    int currentIdx = 1;
-                    for (int i = Mapping.Length - 1; i >= 0; i--)
+
+                    if (Mapping.Equals(""))
                     {
-                        Job wafer = new Job();
-                        wafer.Slot = (i + 1).ToString();
-                        wafer.FromPort = PortName;
-                        wafer.Position = PortName;
-                        string Slot = (i + 1).ToString("00");
-                        switch (Mapping[i])
+                        foreach(Job eachJob in port.JobList.Values)
                         {
-                            case '0':
-                                wafer.Job_Id = "No wafer";
-                                //MappingData.Add(wafer);
-                                break;
-                            case '1':
-                                while (true)
-                                {
-                                    wafer.Job_Id = "Wafer" + currentIdx.ToString("00");
-                                    wafer.MapFlag = true;
-                                    if (JobManagement.Add(wafer.Job_Id, wafer))
-                                    {
-
-                                        //MappingData.Add(wafer);
-                                        break;
-                                    }
-                                    currentIdx++;
-                                }
-
-                                break;
-                            case '2':
-                                wafer.Job_Id = "Crossed";
-                                //MappingData.Add(wafer);
-                                break;
-                            case '?':
-                                wafer.Job_Id = "Undefined";
-                                //MappingData.Add(wafer);
-                                break;
-                            case 'W':
-                                wafer.Job_Id = "Double";
-                                //MappingData.Add(wafer);
-                                break;
+                            JobManagement.Remove(eachJob.Job_Id);
                         }
-                        if (!port.AddJob(wafer.Slot, wafer))
+                        port.JobList.Clear();
+                    }                   
+                    else
+                    {
+                        int currentIdx = 1;
+                        for (int i = Mapping.Length - 1; i >= 0; i--)
                         {
-                            Job org = port.GetJob(wafer.Slot);
-                            JobManagement.Remove(org.Job_Id);
-                            port.RemoveJob(wafer.Slot);
-                            port.AddJob(wafer.Slot, wafer);
+                            Job wafer = new Job();
+                            wafer.Slot = (i + 1).ToString();
+                            wafer.FromPort = PortName;
+                            wafer.Position = PortName;
+                            string Slot = (i + 1).ToString("00");
+                            switch (Mapping[i])
+                            {
+                                case '0':
+                                    wafer.Job_Id = "No wafer";
+                                    //MappingData.Add(wafer);
+                                    break;
+                                case '1':
+                                    while (true)
+                                    {
+                                        wafer.Job_Id = "Wafer" + currentIdx.ToString("00");
+                                        wafer.MapFlag = true;
+                                        if (JobManagement.Add(wafer.Job_Id, wafer))
+                                        {
+
+                                            //MappingData.Add(wafer);
+                                            break;
+                                        }
+                                        currentIdx++;
+                                    }
+
+                                    break;
+                                case '2':
+                                    wafer.Job_Id = "Crossed";
+                                    //MappingData.Add(wafer);
+                                    break;
+                                case '?':
+                                    wafer.Job_Id = "Undefined";
+                                    //MappingData.Add(wafer);
+                                    break;
+                                case 'W':
+                                    wafer.Job_Id = "Double";
+                                    //MappingData.Add(wafer);
+                                    break;
+                            }
+                            if (!port.AddJob(wafer.Slot, wafer))
+                            {
+                                Job org = port.GetJob(wafer.Slot);
+                                JobManagement.Remove(org.Job_Id);
+                                port.RemoveJob(wafer.Slot);
+                                port.AddJob(wafer.Slot, wafer);
+                            }
                         }
                     }
                     List<Job> tmp = port.JobList.Values.ToList();
