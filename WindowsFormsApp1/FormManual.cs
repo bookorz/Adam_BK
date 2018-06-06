@@ -621,9 +621,6 @@ namespace GUI
                     txns[0].Method = Transaction.Command.RobotType.RobotServo;
                     txns[0].Arm = "0";
                     break;
-                default:
-                    SetFormEnable(true);//未支援功能
-                    break;
             }
             if (!txns[0].Method.Equals(""))
             {
@@ -633,8 +630,8 @@ namespace GUI
             {
                 MessageBox.Show("Command is empty!");
             }
-            //SetFormEnable(false); 暫時 mark 觀察
-            //Update_Manual_Status(); 暫時 mark 觀察
+            SetFormEnable(false); 
+            Update_Manual_Status(); 
         }
 
         private Dictionary<string, string> GetScriptVar()
@@ -674,7 +671,7 @@ namespace GUI
             }
             //向Robot 詢問狀態
             Node robot = NodeManagement.Get(nodeName);
-            robot.ExcuteScript("RobotStateGet", "FormManual-Script");
+            robot.ExcuteScript("RobotStateGet", "FormManual");
 
         }
 
@@ -699,7 +696,7 @@ namespace GUI
             }
             if (!tbA2Status.Text.Equals("N/A") && !tbA2Status.Text.Equals("Disconnected") && !tbA2Status.Text.Equals(""))
             {
-                aligner2.ExcuteScript("AlignerStateGet", "FormManual-Script"); ;//連線狀態下才執行
+                aligner2.ExcuteScript("AlignerStateGet", "FormManual"); ;//連線狀態下才執行
             }
         }
 
@@ -751,7 +748,7 @@ namespace GUI
 
         private void FormManual_EnabledChanged(object sender, EventArgs e)
         {
-            Update_Manual_Status();
+            //Update_Manual_Status();
         }
 
         private void rb_CheckedChanged(object sender, EventArgs e)

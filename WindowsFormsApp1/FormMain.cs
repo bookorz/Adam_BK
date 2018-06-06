@@ -379,7 +379,7 @@ namespace Adam
                                 case Transaction.Command.AlignerType.AlignerMode:
                                 case Transaction.Command.AlignerType.Reset:
                                 case Transaction.Command.AlignerType.AlignerServo:
-                                    //Thread.Sleep(1000);
+                                    Thread.Sleep(1000);
                                     //向Aligner 詢問狀態
                                     Node aligner = NodeManagement.Get(Node.Name);
                                     aligner.ExcuteScript("AlignerStateGet", "FormManual");
