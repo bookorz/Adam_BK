@@ -28,52 +28,60 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormCommunications));
             this.gbDeviceList = new System.Windows.Forms.GroupBox();
             this.libDeviceList = new System.Windows.Forms.ListBox();
             this.gbDeviceCommunications = new System.Windows.Forms.GroupBox();
-            this.tableLayoutPanel4 = new System.Windows.Forms.TableLayoutPanel();
+            this.tlpDeviceCommunications = new System.Windows.Forms.TableLayoutPanel();
             this.gbCommunicatorType = new System.Windows.Forms.GroupBox();
             this.splitContainer1 = new System.Windows.Forms.SplitContainer();
             this.tableLayoutPanel5 = new System.Windows.Forms.TableLayoutPanel();
+            this.btnRS232C = new System.Windows.Forms.Button();
             this.btnTCPIP = new System.Windows.Forms.Button();
-            this.button20 = new System.Windows.Forms.Button();
-            this.button21 = new System.Windows.Forms.Button();
             this.gbCommunicatorTypeNotice = new System.Windows.Forms.GroupBox();
-            this.textBox12 = new System.Windows.Forms.TextBox();
+            this.txbCommunicatoyTypeNotice = new System.Windows.Forms.TextBox();
+            this.palCommunicatorButton = new System.Windows.Forms.TableLayoutPanel();
+            this.btnSave = new System.Windows.Forms.Button();
+            this.palSettingandMaintain = new System.Windows.Forms.Panel();
             this.gbIPAddressSettingandMaintain = new System.Windows.Forms.GroupBox();
             this.splitContainer2 = new System.Windows.Forms.SplitContainer();
-            this.tableLayoutPanel6 = new System.Windows.Forms.TableLayoutPanel();
-            this.splitContainer5 = new System.Windows.Forms.SplitContainer();
-            this.labPortNo = new System.Windows.Forms.Label();
-            this.txbPortNo = new System.Windows.Forms.TextBox();
-            this.splitContainer4 = new System.Windows.Forms.SplitContainer();
+            this.gbTCPIPSetting = new System.Windows.Forms.GroupBox();
+            this.tlpTCPIP = new System.Windows.Forms.TableLayoutPanel();
+            this.txbConnectionType = new System.Windows.Forms.Label();
             this.labIPAddress = new System.Windows.Forms.Label();
-            this.txbIPAddress = new System.Windows.Forms.TextBox();
-            this.groupBox15 = new System.Windows.Forms.GroupBox();
-            this.tableLayoutPanel9 = new System.Windows.Forms.TableLayoutPanel();
-            this.label28 = new System.Windows.Forms.Label();
             this.tableLayoutPanel10 = new System.Windows.Forms.TableLayoutPanel();
-            this.numericUpDown8 = new System.Windows.Forms.NumericUpDown();
-            this.groupBox16 = new System.Windows.Forms.GroupBox();
-            this.tableLayoutPanel7 = new System.Windows.Forms.TableLayoutPanel();
-            this.label24 = new System.Windows.Forms.Label();
+            this.nudIPPort = new System.Windows.Forms.NumericUpDown();
             this.tableLayoutPanel8 = new System.Windows.Forms.TableLayoutPanel();
-            this.numericUpDown4 = new System.Windows.Forms.NumericUpDown();
+            this.nudIP04 = new System.Windows.Forms.NumericUpDown();
             this.label27 = new System.Windows.Forms.Label();
-            this.numericUpDown3 = new System.Windows.Forms.NumericUpDown();
+            this.nudIP03 = new System.Windows.Forms.NumericUpDown();
             this.label26 = new System.Windows.Forms.Label();
-            this.numericUpDown2 = new System.Windows.Forms.NumericUpDown();
-            this.numericUpDown1 = new System.Windows.Forms.NumericUpDown();
+            this.nudIP02 = new System.Windows.Forms.NumericUpDown();
+            this.nudIP01 = new System.Windows.Forms.NumericUpDown();
             this.label25 = new System.Windows.Forms.Label();
-            this.groupBox13 = new System.Windows.Forms.GroupBox();
-            this.textBox15 = new System.Windows.Forms.TextBox();
-            this.tableLayoutPanel11 = new System.Windows.Forms.TableLayoutPanel();
-            this.button22 = new System.Windows.Forms.Button();
-            this.button23 = new System.Windows.Forms.Button();
+            this.labPortNo = new System.Windows.Forms.Label();
+            this.txbConnectType = new System.Windows.Forms.TextBox();
+            this.gbRS232CSetting = new System.Windows.Forms.GroupBox();
+            this.tlpRS232C = new System.Windows.Forms.TableLayoutPanel();
+            this.txbConnectTypeCOM = new System.Windows.Forms.TextBox();
+            this.nudDataBits = new System.Windows.Forms.NumericUpDown();
+            this.labParityBit = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
+            this.nudBaudRate = new System.Windows.Forms.NumericUpDown();
+            this.labBaudRate = new System.Windows.Forms.Label();
+            this.txbParityBit = new System.Windows.Forms.TextBox();
+            this.labDataBits = new System.Windows.Forms.Label();
+            this.labStopBit = new System.Windows.Forms.Label();
+            this.labConnectTypeCOM = new System.Windows.Forms.Label();
+            this.txbStopBit = new System.Windows.Forms.TextBox();
+            this.splitContainer3 = new System.Windows.Forms.SplitContainer();
+            this.cmbPortName = new System.Windows.Forms.ComboBox();
+            this.btnRenew = new System.Windows.Forms.Button();
+            this.gpIPAddressSettingandMaintainNotice = new System.Windows.Forms.GroupBox();
+            this.txbSettingandMaintainNotice = new System.Windows.Forms.TextBox();
             this.gbDeviceList.SuspendLayout();
             this.gbDeviceCommunications.SuspendLayout();
-            this.tableLayoutPanel4.SuspendLayout();
+            this.tlpDeviceCommunications.SuspendLayout();
             this.gbCommunicatorType.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
             this.splitContainer1.Panel1.SuspendLayout();
@@ -81,33 +89,32 @@
             this.splitContainer1.SuspendLayout();
             this.tableLayoutPanel5.SuspendLayout();
             this.gbCommunicatorTypeNotice.SuspendLayout();
+            this.palCommunicatorButton.SuspendLayout();
+            this.palSettingandMaintain.SuspendLayout();
             this.gbIPAddressSettingandMaintain.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer2)).BeginInit();
             this.splitContainer2.Panel1.SuspendLayout();
             this.splitContainer2.Panel2.SuspendLayout();
             this.splitContainer2.SuspendLayout();
-            this.tableLayoutPanel6.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.splitContainer5)).BeginInit();
-            this.splitContainer5.Panel1.SuspendLayout();
-            this.splitContainer5.Panel2.SuspendLayout();
-            this.splitContainer5.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.splitContainer4)).BeginInit();
-            this.splitContainer4.Panel1.SuspendLayout();
-            this.splitContainer4.Panel2.SuspendLayout();
-            this.splitContainer4.SuspendLayout();
-            this.groupBox15.SuspendLayout();
-            this.tableLayoutPanel9.SuspendLayout();
+            this.gbTCPIPSetting.SuspendLayout();
+            this.tlpTCPIP.SuspendLayout();
             this.tableLayoutPanel10.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown8)).BeginInit();
-            this.groupBox16.SuspendLayout();
-            this.tableLayoutPanel7.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.nudIPPort)).BeginInit();
             this.tableLayoutPanel8.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown4)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown3)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).BeginInit();
-            this.groupBox13.SuspendLayout();
-            this.tableLayoutPanel11.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.nudIP04)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nudIP03)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nudIP02)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nudIP01)).BeginInit();
+            this.gbRS232CSetting.SuspendLayout();
+            this.tlpRS232C.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.nudDataBits)).BeginInit();
+            this.tableLayoutPanel2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.nudBaudRate)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.splitContainer3)).BeginInit();
+            this.splitContainer3.Panel1.SuspendLayout();
+            this.splitContainer3.Panel2.SuspendLayout();
+            this.splitContainer3.SuspendLayout();
+            this.gpIPAddressSettingandMaintainNotice.SuspendLayout();
             this.SuspendLayout();
             // 
             // gbDeviceList
@@ -133,10 +140,11 @@
             this.libDeviceList.ScrollAlwaysVisible = true;
             this.libDeviceList.Size = new System.Drawing.Size(299, 732);
             this.libDeviceList.TabIndex = 0;
+            this.libDeviceList.Click += new System.EventHandler(this.libDeviceList_Click);
             // 
             // gbDeviceCommunications
             // 
-            this.gbDeviceCommunications.Controls.Add(this.tableLayoutPanel4);
+            this.gbDeviceCommunications.Controls.Add(this.tlpDeviceCommunications);
             this.gbDeviceCommunications.Dock = System.Windows.Forms.DockStyle.Fill;
             this.gbDeviceCommunications.Location = new System.Drawing.Point(305, 0);
             this.gbDeviceCommunications.Name = "gbDeviceCommunications";
@@ -145,23 +153,23 @@
             this.gbDeviceCommunications.TabStop = false;
             this.gbDeviceCommunications.Text = "Device Communications";
             // 
-            // tableLayoutPanel4
+            // tlpDeviceCommunications
             // 
-            this.tableLayoutPanel4.ColumnCount = 1;
-            this.tableLayoutPanel4.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel4.Controls.Add(this.gbCommunicatorType, 0, 0);
-            this.tableLayoutPanel4.Controls.Add(this.gbIPAddressSettingandMaintain, 0, 1);
-            this.tableLayoutPanel4.Controls.Add(this.tableLayoutPanel11, 0, 3);
-            this.tableLayoutPanel4.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tableLayoutPanel4.Location = new System.Drawing.Point(3, 25);
-            this.tableLayoutPanel4.Name = "tableLayoutPanel4";
-            this.tableLayoutPanel4.RowCount = 4;
-            this.tableLayoutPanel4.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
-            this.tableLayoutPanel4.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 33.33334F));
-            this.tableLayoutPanel4.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 33.33334F));
-            this.tableLayoutPanel4.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 60F));
-            this.tableLayoutPanel4.Size = new System.Drawing.Size(1309, 732);
-            this.tableLayoutPanel4.TabIndex = 0;
+            this.tlpDeviceCommunications.ColumnCount = 1;
+            this.tlpDeviceCommunications.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.tlpDeviceCommunications.Controls.Add(this.gbCommunicatorType, 0, 0);
+            this.tlpDeviceCommunications.Controls.Add(this.palCommunicatorButton, 0, 2);
+            this.tlpDeviceCommunications.Controls.Add(this.palSettingandMaintain, 0, 1);
+            this.tlpDeviceCommunications.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.tlpDeviceCommunications.Location = new System.Drawing.Point(3, 25);
+            this.tlpDeviceCommunications.Name = "tlpDeviceCommunications";
+            this.tlpDeviceCommunications.RowCount = 3;
+            this.tlpDeviceCommunications.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 20F));
+            this.tlpDeviceCommunications.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 80F));
+            this.tlpDeviceCommunications.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 60F));
+            this.tlpDeviceCommunications.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
+            this.tlpDeviceCommunications.Size = new System.Drawing.Size(1309, 732);
+            this.tlpDeviceCommunications.TabIndex = 0;
             // 
             // gbCommunicatorType
             // 
@@ -169,7 +177,7 @@
             this.gbCommunicatorType.Dock = System.Windows.Forms.DockStyle.Fill;
             this.gbCommunicatorType.Location = new System.Drawing.Point(3, 3);
             this.gbCommunicatorType.Name = "gbCommunicatorType";
-            this.gbCommunicatorType.Size = new System.Drawing.Size(1303, 217);
+            this.gbCommunicatorType.Size = new System.Drawing.Size(1303, 128);
             this.gbCommunicatorType.TabIndex = 0;
             this.gbCommunicatorType.TabStop = false;
             this.gbCommunicatorType.Text = "Communicator Type";
@@ -188,111 +196,149 @@
             // splitContainer1.Panel2
             // 
             this.splitContainer1.Panel2.Controls.Add(this.gbCommunicatorTypeNotice);
-            this.splitContainer1.Size = new System.Drawing.Size(1297, 189);
+            this.splitContainer1.Size = new System.Drawing.Size(1297, 100);
             this.splitContainer1.SplitterDistance = 813;
             this.splitContainer1.TabIndex = 0;
             // 
             // tableLayoutPanel5
             // 
-            this.tableLayoutPanel5.ColumnCount = 3;
-            this.tableLayoutPanel5.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
-            this.tableLayoutPanel5.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 33.33334F));
-            this.tableLayoutPanel5.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 33.33334F));
-            this.tableLayoutPanel5.Controls.Add(this.btnTCPIP, 0, 1);
-            this.tableLayoutPanel5.Controls.Add(this.button20, 1, 1);
-            this.tableLayoutPanel5.Controls.Add(this.button21, 2, 1);
+            this.tableLayoutPanel5.ColumnCount = 6;
+            this.tableLayoutPanel5.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 5F));
+            this.tableLayoutPanel5.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 40F));
+            this.tableLayoutPanel5.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 5F));
+            this.tableLayoutPanel5.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 5F));
+            this.tableLayoutPanel5.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 40F));
+            this.tableLayoutPanel5.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 5F));
+            this.tableLayoutPanel5.Controls.Add(this.btnRS232C, 4, 1);
+            this.tableLayoutPanel5.Controls.Add(this.btnTCPIP, 1, 1);
             this.tableLayoutPanel5.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanel5.Location = new System.Drawing.Point(0, 0);
             this.tableLayoutPanel5.Name = "tableLayoutPanel5";
             this.tableLayoutPanel5.RowCount = 3;
-            this.tableLayoutPanel5.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
-            this.tableLayoutPanel5.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
-            this.tableLayoutPanel5.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
-            this.tableLayoutPanel5.Size = new System.Drawing.Size(813, 189);
+            this.tableLayoutPanel5.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 15F));
+            this.tableLayoutPanel5.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 70F));
+            this.tableLayoutPanel5.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 15F));
+            this.tableLayoutPanel5.Size = new System.Drawing.Size(813, 100);
             this.tableLayoutPanel5.TabIndex = 0;
             this.tableLayoutPanel5.UseWaitCursor = true;
             // 
+            // btnRS232C
+            // 
+            this.btnRS232C.BackColor = System.Drawing.Color.White;
+            this.btnRS232C.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.btnRS232C.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
+            this.btnRS232C.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.btnRS232C.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnRS232C.Font = new System.Drawing.Font("微軟正黑體", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
+            this.btnRS232C.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.btnRS232C.Location = new System.Drawing.Point(448, 18);
+            this.btnRS232C.Name = "btnRS232C";
+            this.btnRS232C.Size = new System.Drawing.Size(319, 64);
+            this.btnRS232C.TabIndex = 2;
+            this.btnRS232C.Text = "RS-232C";
+            this.btnRS232C.UseVisualStyleBackColor = false;
+            this.btnRS232C.UseWaitCursor = true;
+            this.btnRS232C.Click += new System.EventHandler(this.btnRS232C_Click);
+            // 
             // btnTCPIP
             // 
-            this.btnTCPIP.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
+            this.btnTCPIP.BackColor = System.Drawing.Color.White;
             this.btnTCPIP.Dock = System.Windows.Forms.DockStyle.Fill;
             this.btnTCPIP.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
             this.btnTCPIP.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
             this.btnTCPIP.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnTCPIP.Font = new System.Drawing.Font("微軟正黑體", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
             this.btnTCPIP.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.btnTCPIP.Location = new System.Drawing.Point(3, 66);
+            this.btnTCPIP.Location = new System.Drawing.Point(43, 18);
             this.btnTCPIP.Name = "btnTCPIP";
-            this.btnTCPIP.Size = new System.Drawing.Size(264, 57);
+            this.btnTCPIP.Size = new System.Drawing.Size(319, 64);
             this.btnTCPIP.TabIndex = 0;
             this.btnTCPIP.Text = "TCP/IP";
             this.btnTCPIP.UseVisualStyleBackColor = false;
             this.btnTCPIP.UseWaitCursor = true;
-            // 
-            // button20
-            // 
-            this.button20.BackColor = System.Drawing.Color.White;
-            this.button20.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.button20.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
-            this.button20.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
-            this.button20.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button20.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.button20.Location = new System.Drawing.Point(273, 66);
-            this.button20.Name = "button20";
-            this.button20.Size = new System.Drawing.Size(265, 57);
-            this.button20.TabIndex = 1;
-            this.button20.Text = "Socket";
-            this.button20.UseVisualStyleBackColor = false;
-            this.button20.UseWaitCursor = true;
-            // 
-            // button21
-            // 
-            this.button21.BackColor = System.Drawing.Color.White;
-            this.button21.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.button21.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
-            this.button21.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
-            this.button21.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button21.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.button21.Location = new System.Drawing.Point(544, 66);
-            this.button21.Name = "button21";
-            this.button21.Size = new System.Drawing.Size(266, 57);
-            this.button21.TabIndex = 2;
-            this.button21.Text = "RS-232C";
-            this.button21.UseVisualStyleBackColor = false;
-            this.button21.UseWaitCursor = true;
+            this.btnTCPIP.Click += new System.EventHandler(this.btnTCPIP_Click);
             // 
             // gbCommunicatorTypeNotice
             // 
-            this.gbCommunicatorTypeNotice.Controls.Add(this.textBox12);
+            this.gbCommunicatorTypeNotice.Controls.Add(this.txbCommunicatoyTypeNotice);
             this.gbCommunicatorTypeNotice.Dock = System.Windows.Forms.DockStyle.Fill;
             this.gbCommunicatorTypeNotice.Location = new System.Drawing.Point(0, 0);
             this.gbCommunicatorTypeNotice.Name = "gbCommunicatorTypeNotice";
-            this.gbCommunicatorTypeNotice.Size = new System.Drawing.Size(480, 189);
+            this.gbCommunicatorTypeNotice.Size = new System.Drawing.Size(480, 100);
             this.gbCommunicatorTypeNotice.TabIndex = 0;
             this.gbCommunicatorTypeNotice.TabStop = false;
             this.gbCommunicatorTypeNotice.Text = "Notice";
             // 
-            // textBox12
+            // txbCommunicatoyTypeNotice
             // 
-            this.textBox12.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.textBox12.Location = new System.Drawing.Point(3, 25);
-            this.textBox12.Multiline = true;
-            this.textBox12.Name = "textBox12";
-            this.textBox12.Size = new System.Drawing.Size(474, 161);
-            this.textBox12.TabIndex = 0;
-            this.textBox12.Text = "TCP/IP was designed to work independently of network architecture or design and i" +
-    "s independent of the access method, frame format or medium (cable, wireless etc)" +
-    ". ";
+            this.txbCommunicatoyTypeNotice.BackColor = System.Drawing.Color.White;
+            this.txbCommunicatoyTypeNotice.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.txbCommunicatoyTypeNotice.Location = new System.Drawing.Point(3, 25);
+            this.txbCommunicatoyTypeNotice.Multiline = true;
+            this.txbCommunicatoyTypeNotice.Name = "txbCommunicatoyTypeNotice";
+            this.txbCommunicatoyTypeNotice.ReadOnly = true;
+            this.txbCommunicatoyTypeNotice.ScrollBars = System.Windows.Forms.ScrollBars.Both;
+            this.txbCommunicatoyTypeNotice.Size = new System.Drawing.Size(474, 72);
+            this.txbCommunicatoyTypeNotice.TabIndex = 0;
+            // 
+            // palCommunicatorButton
+            // 
+            this.palCommunicatorButton.ColumnCount = 6;
+            this.palCommunicatorButton.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 16.66667F));
+            this.palCommunicatorButton.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 16.66667F));
+            this.palCommunicatorButton.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 16.66667F));
+            this.palCommunicatorButton.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 16.66667F));
+            this.palCommunicatorButton.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 16.66667F));
+            this.palCommunicatorButton.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 16.66667F));
+            this.palCommunicatorButton.Controls.Add(this.btnSave, 5, 0);
+            this.palCommunicatorButton.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.palCommunicatorButton.Location = new System.Drawing.Point(3, 674);
+            this.palCommunicatorButton.Name = "palCommunicatorButton";
+            this.palCommunicatorButton.RowCount = 1;
+            this.palCommunicatorButton.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.palCommunicatorButton.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 55F));
+            this.palCommunicatorButton.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 55F));
+            this.palCommunicatorButton.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 55F));
+            this.palCommunicatorButton.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 55F));
+            this.palCommunicatorButton.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 55F));
+            this.palCommunicatorButton.Size = new System.Drawing.Size(1303, 55);
+            this.palCommunicatorButton.TabIndex = 3;
+            // 
+            // btnSave
+            // 
+            this.btnSave.BackColor = System.Drawing.Color.AliceBlue;
+            this.btnSave.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.btnSave.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
+            this.btnSave.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.btnSave.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnSave.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.btnSave.Location = new System.Drawing.Point(1088, 3);
+            this.btnSave.Name = "btnSave";
+            this.btnSave.Size = new System.Drawing.Size(212, 49);
+            this.btnSave.TabIndex = 1;
+            this.btnSave.Text = "Save";
+            this.btnSave.UseVisualStyleBackColor = false;
+            this.btnSave.Visible = false;
+            // 
+            // palSettingandMaintain
+            // 
+            this.palSettingandMaintain.Controls.Add(this.gbIPAddressSettingandMaintain);
+            this.palSettingandMaintain.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.palSettingandMaintain.Location = new System.Drawing.Point(3, 137);
+            this.palSettingandMaintain.Name = "palSettingandMaintain";
+            this.palSettingandMaintain.Size = new System.Drawing.Size(1303, 531);
+            this.palSettingandMaintain.TabIndex = 4;
             // 
             // gbIPAddressSettingandMaintain
             // 
             this.gbIPAddressSettingandMaintain.Controls.Add(this.splitContainer2);
             this.gbIPAddressSettingandMaintain.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.gbIPAddressSettingandMaintain.Location = new System.Drawing.Point(3, 226);
+            this.gbIPAddressSettingandMaintain.Location = new System.Drawing.Point(0, 0);
             this.gbIPAddressSettingandMaintain.Name = "gbIPAddressSettingandMaintain";
-            this.gbIPAddressSettingandMaintain.Size = new System.Drawing.Size(1303, 218);
-            this.gbIPAddressSettingandMaintain.TabIndex = 1;
+            this.gbIPAddressSettingandMaintain.Size = new System.Drawing.Size(1303, 531);
+            this.gbIPAddressSettingandMaintain.TabIndex = 3;
             this.gbIPAddressSettingandMaintain.TabStop = false;
-            this.gbIPAddressSettingandMaintain.Text = "IP Address Setting and Maintain";
+            this.gbIPAddressSettingandMaintain.Text = "Setting and Maintain";
             // 
             // splitContainer2
             // 
@@ -302,154 +348,74 @@
             // 
             // splitContainer2.Panel1
             // 
-            this.splitContainer2.Panel1.Controls.Add(this.tableLayoutPanel6);
+            this.splitContainer2.Panel1.Controls.Add(this.gbTCPIPSetting);
+            this.splitContainer2.Panel1.Controls.Add(this.gbRS232CSetting);
             // 
             // splitContainer2.Panel2
             // 
-            this.splitContainer2.Panel2.Controls.Add(this.groupBox13);
-            this.splitContainer2.Size = new System.Drawing.Size(1297, 190);
+            this.splitContainer2.Panel2.Controls.Add(this.gpIPAddressSettingandMaintainNotice);
+            this.splitContainer2.Size = new System.Drawing.Size(1297, 503);
             this.splitContainer2.SplitterDistance = 813;
             this.splitContainer2.TabIndex = 1;
             // 
-            // tableLayoutPanel6
+            // gbTCPIPSetting
             // 
-            this.tableLayoutPanel6.ColumnCount = 2;
-            this.tableLayoutPanel6.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50.51546F));
-            this.tableLayoutPanel6.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 49.48454F));
-            this.tableLayoutPanel6.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 20F));
-            this.tableLayoutPanel6.Controls.Add(this.splitContainer5, 1, 0);
-            this.tableLayoutPanel6.Controls.Add(this.splitContainer4, 0, 0);
-            this.tableLayoutPanel6.Controls.Add(this.groupBox15, 1, 1);
-            this.tableLayoutPanel6.Controls.Add(this.groupBox16, 0, 1);
-            this.tableLayoutPanel6.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tableLayoutPanel6.Location = new System.Drawing.Point(0, 0);
-            this.tableLayoutPanel6.Name = "tableLayoutPanel6";
-            this.tableLayoutPanel6.RowCount = 2;
-            this.tableLayoutPanel6.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 60F));
-            this.tableLayoutPanel6.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel6.Size = new System.Drawing.Size(813, 190);
-            this.tableLayoutPanel6.TabIndex = 0;
+            this.gbTCPIPSetting.Controls.Add(this.tlpTCPIP);
+            this.gbTCPIPSetting.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.gbTCPIPSetting.Location = new System.Drawing.Point(0, 0);
+            this.gbTCPIPSetting.Name = "gbTCPIPSetting";
+            this.gbTCPIPSetting.Size = new System.Drawing.Size(813, 503);
+            this.gbTCPIPSetting.TabIndex = 0;
+            this.gbTCPIPSetting.TabStop = false;
+            this.gbTCPIPSetting.Text = "TCP/IP";
             // 
-            // splitContainer5
+            // tlpTCPIP
             // 
-            this.splitContainer5.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.splitContainer5.Location = new System.Drawing.Point(413, 3);
-            this.splitContainer5.Name = "splitContainer5";
+            this.tlpTCPIP.ColumnCount = 2;
+            this.tlpTCPIP.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 19.33085F));
+            this.tlpTCPIP.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 80.66914F));
+            this.tlpTCPIP.Controls.Add(this.txbConnectionType, 0, 2);
+            this.tlpTCPIP.Controls.Add(this.labIPAddress, 0, 0);
+            this.tlpTCPIP.Controls.Add(this.tableLayoutPanel10, 1, 1);
+            this.tlpTCPIP.Controls.Add(this.tableLayoutPanel8, 1, 0);
+            this.tlpTCPIP.Controls.Add(this.labPortNo, 0, 1);
+            this.tlpTCPIP.Controls.Add(this.txbConnectType, 1, 2);
+            this.tlpTCPIP.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.tlpTCPIP.Location = new System.Drawing.Point(3, 25);
+            this.tlpTCPIP.Name = "tlpTCPIP";
+            this.tlpTCPIP.RowCount = 8;
+            this.tlpTCPIP.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 12.5F));
+            this.tlpTCPIP.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 12.5F));
+            this.tlpTCPIP.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 12.5F));
+            this.tlpTCPIP.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 12.5F));
+            this.tlpTCPIP.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 12.5F));
+            this.tlpTCPIP.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 12.5F));
+            this.tlpTCPIP.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 12.5F));
+            this.tlpTCPIP.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 12.5F));
+            this.tlpTCPIP.Size = new System.Drawing.Size(807, 475);
+            this.tlpTCPIP.TabIndex = 3;
             // 
-            // splitContainer5.Panel1
+            // txbConnectionType
             // 
-            this.splitContainer5.Panel1.Controls.Add(this.labPortNo);
-            // 
-            // splitContainer5.Panel2
-            // 
-            this.splitContainer5.Panel2.Controls.Add(this.txbPortNo);
-            this.splitContainer5.Panel2.Padding = new System.Windows.Forms.Padding(0, 14, 0, 0);
-            this.splitContainer5.Size = new System.Drawing.Size(397, 54);
-            this.splitContainer5.SplitterDistance = 128;
-            this.splitContainer5.TabIndex = 1;
-            // 
-            // labPortNo
-            // 
-            this.labPortNo.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.labPortNo.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.labPortNo.Location = new System.Drawing.Point(0, 0);
-            this.labPortNo.Name = "labPortNo";
-            this.labPortNo.Size = new System.Drawing.Size(128, 54);
-            this.labPortNo.TabIndex = 0;
-            this.labPortNo.Text = "Port No.";
-            this.labPortNo.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            // 
-            // txbPortNo
-            // 
-            this.txbPortNo.BackColor = System.Drawing.Color.White;
-            this.txbPortNo.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
-            this.txbPortNo.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.txbPortNo.Location = new System.Drawing.Point(0, 14);
-            this.txbPortNo.Name = "txbPortNo";
-            this.txbPortNo.ReadOnly = true;
-            this.txbPortNo.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.txbPortNo.Size = new System.Drawing.Size(265, 29);
-            this.txbPortNo.TabIndex = 0;
-            this.txbPortNo.Text = "8080";
-            // 
-            // splitContainer4
-            // 
-            this.splitContainer4.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.splitContainer4.Location = new System.Drawing.Point(3, 3);
-            this.splitContainer4.Name = "splitContainer4";
-            // 
-            // splitContainer4.Panel1
-            // 
-            this.splitContainer4.Panel1.Controls.Add(this.labIPAddress);
-            // 
-            // splitContainer4.Panel2
-            // 
-            this.splitContainer4.Panel2.Controls.Add(this.txbIPAddress);
-            this.splitContainer4.Panel2.Padding = new System.Windows.Forms.Padding(0, 14, 0, 0);
-            this.splitContainer4.Size = new System.Drawing.Size(404, 54);
-            this.splitContainer4.SplitterDistance = 130;
-            this.splitContainer4.TabIndex = 0;
+            this.txbConnectionType.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.txbConnectionType.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.txbConnectionType.Location = new System.Drawing.Point(3, 118);
+            this.txbConnectionType.Name = "txbConnectionType";
+            this.txbConnectionType.Size = new System.Drawing.Size(149, 59);
+            this.txbConnectionType.TabIndex = 3;
+            this.txbConnectionType.Text = "Connection Type";
+            this.txbConnectionType.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
             // labIPAddress
             // 
             this.labIPAddress.Dock = System.Windows.Forms.DockStyle.Fill;
             this.labIPAddress.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.labIPAddress.Location = new System.Drawing.Point(0, 0);
+            this.labIPAddress.Location = new System.Drawing.Point(3, 0);
             this.labIPAddress.Name = "labIPAddress";
-            this.labIPAddress.Size = new System.Drawing.Size(130, 54);
+            this.labIPAddress.Size = new System.Drawing.Size(149, 59);
             this.labIPAddress.TabIndex = 0;
             this.labIPAddress.Text = "IP Address";
-            this.labIPAddress.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            // 
-            // txbIPAddress
-            // 
-            this.txbIPAddress.BackColor = System.Drawing.Color.White;
-            this.txbIPAddress.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
-            this.txbIPAddress.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.txbIPAddress.Location = new System.Drawing.Point(0, 14);
-            this.txbIPAddress.Name = "txbIPAddress";
-            this.txbIPAddress.ReadOnly = true;
-            this.txbIPAddress.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.txbIPAddress.Size = new System.Drawing.Size(270, 29);
-            this.txbIPAddress.TabIndex = 0;
-            this.txbIPAddress.Text = "192.168.0.127";
-            // 
-            // groupBox15
-            // 
-            this.groupBox15.Controls.Add(this.tableLayoutPanel9);
-            this.groupBox15.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.groupBox15.Location = new System.Drawing.Point(413, 63);
-            this.groupBox15.Name = "groupBox15";
-            this.groupBox15.Size = new System.Drawing.Size(397, 124);
-            this.groupBox15.TabIndex = 3;
-            this.groupBox15.TabStop = false;
-            // 
-            // tableLayoutPanel9
-            // 
-            this.tableLayoutPanel9.ColumnCount = 1;
-            this.tableLayoutPanel9.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel9.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 20F));
-            this.tableLayoutPanel9.Controls.Add(this.label28, 0, 0);
-            this.tableLayoutPanel9.Controls.Add(this.tableLayoutPanel10, 0, 1);
-            this.tableLayoutPanel9.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tableLayoutPanel9.Location = new System.Drawing.Point(3, 25);
-            this.tableLayoutPanel9.Name = "tableLayoutPanel9";
-            this.tableLayoutPanel9.RowCount = 2;
-            this.tableLayoutPanel9.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 31.1828F));
-            this.tableLayoutPanel9.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 68.81721F));
-            this.tableLayoutPanel9.Size = new System.Drawing.Size(391, 96);
-            this.tableLayoutPanel9.TabIndex = 4;
-            // 
-            // label28
-            // 
-            this.label28.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.label28.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.label28.Location = new System.Drawing.Point(3, 0);
-            this.label28.Name = "label28";
-            this.label28.Size = new System.Drawing.Size(385, 29);
-            this.label28.TabIndex = 1;
-            this.label28.Text = "New Port";
-            this.label28.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.labIPAddress.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
             // tableLayoutPanel10
             // 
@@ -461,9 +427,9 @@
             this.tableLayoutPanel10.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 25F));
             this.tableLayoutPanel10.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 20F));
             this.tableLayoutPanel10.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 25F));
-            this.tableLayoutPanel10.Controls.Add(this.numericUpDown8, 0, 0);
+            this.tableLayoutPanel10.Controls.Add(this.nudIPPort, 0, 0);
             this.tableLayoutPanel10.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tableLayoutPanel10.Location = new System.Drawing.Point(3, 32);
+            this.tableLayoutPanel10.Location = new System.Drawing.Point(158, 62);
             this.tableLayoutPanel10.Name = "tableLayoutPanel10";
             this.tableLayoutPanel10.RowCount = 1;
             this.tableLayoutPanel10.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
@@ -471,67 +437,30 @@
             this.tableLayoutPanel10.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 58F));
             this.tableLayoutPanel10.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 58F));
             this.tableLayoutPanel10.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 58F));
-            this.tableLayoutPanel10.Size = new System.Drawing.Size(385, 61);
+            this.tableLayoutPanel10.Size = new System.Drawing.Size(646, 53);
             this.tableLayoutPanel10.TabIndex = 2;
             // 
-            // numericUpDown8
+            // nudIPPort
             // 
-            this.numericUpDown8.BackColor = System.Drawing.Color.White;
-            this.numericUpDown8.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.numericUpDown8.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.numericUpDown8.Font = new System.Drawing.Font("微軟正黑體", 16F);
-            this.numericUpDown8.Location = new System.Drawing.Point(3, 3);
-            this.numericUpDown8.Maximum = new decimal(new int[] {
+            this.nudIPPort.BackColor = System.Drawing.Color.White;
+            this.nudIPPort.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.nudIPPort.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.nudIPPort.Font = new System.Drawing.Font("微軟正黑體", 16F);
+            this.nudIPPort.Location = new System.Drawing.Point(3, 3);
+            this.nudIPPort.Maximum = new decimal(new int[] {
             9999,
             0,
             0,
             0});
-            this.numericUpDown8.Name = "numericUpDown8";
-            this.numericUpDown8.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.numericUpDown8.Size = new System.Drawing.Size(75, 36);
-            this.numericUpDown8.TabIndex = 0;
-            this.numericUpDown8.Value = new decimal(new int[] {
+            this.nudIPPort.Name = "nudIPPort";
+            this.nudIPPort.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.nudIPPort.Size = new System.Drawing.Size(140, 36);
+            this.nudIPPort.TabIndex = 0;
+            this.nudIPPort.Value = new decimal(new int[] {
             8080,
             0,
             0,
             0});
-            // 
-            // groupBox16
-            // 
-            this.groupBox16.Controls.Add(this.tableLayoutPanel7);
-            this.groupBox16.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.groupBox16.Location = new System.Drawing.Point(3, 63);
-            this.groupBox16.Name = "groupBox16";
-            this.groupBox16.Size = new System.Drawing.Size(404, 124);
-            this.groupBox16.TabIndex = 4;
-            this.groupBox16.TabStop = false;
-            // 
-            // tableLayoutPanel7
-            // 
-            this.tableLayoutPanel7.ColumnCount = 1;
-            this.tableLayoutPanel7.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel7.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 20F));
-            this.tableLayoutPanel7.Controls.Add(this.label24, 0, 0);
-            this.tableLayoutPanel7.Controls.Add(this.tableLayoutPanel8, 0, 1);
-            this.tableLayoutPanel7.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tableLayoutPanel7.Location = new System.Drawing.Point(3, 25);
-            this.tableLayoutPanel7.Name = "tableLayoutPanel7";
-            this.tableLayoutPanel7.RowCount = 2;
-            this.tableLayoutPanel7.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
-            this.tableLayoutPanel7.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 66.66666F));
-            this.tableLayoutPanel7.Size = new System.Drawing.Size(398, 96);
-            this.tableLayoutPanel7.TabIndex = 3;
-            // 
-            // label24
-            // 
-            this.label24.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.label24.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.label24.Location = new System.Drawing.Point(3, 0);
-            this.label24.Name = "label24";
-            this.label24.Size = new System.Drawing.Size(392, 32);
-            this.label24.TabIndex = 1;
-            this.label24.Text = "New IP Address";
-            this.label24.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // tableLayoutPanel8
             // 
@@ -543,15 +472,15 @@
             this.tableLayoutPanel8.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 25F));
             this.tableLayoutPanel8.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 20F));
             this.tableLayoutPanel8.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 25F));
-            this.tableLayoutPanel8.Controls.Add(this.numericUpDown4, 6, 0);
+            this.tableLayoutPanel8.Controls.Add(this.nudIP04, 6, 0);
             this.tableLayoutPanel8.Controls.Add(this.label27, 5, 0);
-            this.tableLayoutPanel8.Controls.Add(this.numericUpDown3, 4, 0);
+            this.tableLayoutPanel8.Controls.Add(this.nudIP03, 4, 0);
             this.tableLayoutPanel8.Controls.Add(this.label26, 3, 0);
-            this.tableLayoutPanel8.Controls.Add(this.numericUpDown2, 2, 0);
-            this.tableLayoutPanel8.Controls.Add(this.numericUpDown1, 0, 0);
+            this.tableLayoutPanel8.Controls.Add(this.nudIP02, 2, 0);
+            this.tableLayoutPanel8.Controls.Add(this.nudIP01, 0, 0);
             this.tableLayoutPanel8.Controls.Add(this.label25, 1, 0);
             this.tableLayoutPanel8.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tableLayoutPanel8.Location = new System.Drawing.Point(3, 35);
+            this.tableLayoutPanel8.Location = new System.Drawing.Point(158, 3);
             this.tableLayoutPanel8.Name = "tableLayoutPanel8";
             this.tableLayoutPanel8.RowCount = 1;
             this.tableLayoutPanel8.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
@@ -559,24 +488,25 @@
             this.tableLayoutPanel8.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 56F));
             this.tableLayoutPanel8.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 56F));
             this.tableLayoutPanel8.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 56F));
-            this.tableLayoutPanel8.Size = new System.Drawing.Size(392, 58);
+            this.tableLayoutPanel8.Size = new System.Drawing.Size(646, 53);
             this.tableLayoutPanel8.TabIndex = 2;
             // 
-            // numericUpDown4
+            // nudIP04
             // 
-            this.numericUpDown4.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.numericUpDown4.Font = new System.Drawing.Font("微軟正黑體", 15.75F);
-            this.numericUpDown4.Location = new System.Drawing.Point(312, 3);
-            this.numericUpDown4.Maximum = new decimal(new int[] {
+            this.nudIP04.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.nudIP04.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.nudIP04.Font = new System.Drawing.Font("微軟正黑體", 15.75F);
+            this.nudIP04.Location = new System.Drawing.Point(501, 3);
+            this.nudIP04.Maximum = new decimal(new int[] {
             255,
             0,
             0,
             0});
-            this.numericUpDown4.Name = "numericUpDown4";
-            this.numericUpDown4.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.numericUpDown4.Size = new System.Drawing.Size(77, 35);
-            this.numericUpDown4.TabIndex = 6;
-            this.numericUpDown4.Value = new decimal(new int[] {
+            this.nudIP04.Name = "nudIP04";
+            this.nudIP04.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.nudIP04.Size = new System.Drawing.Size(142, 35);
+            this.nudIP04.TabIndex = 6;
+            this.nudIP04.Value = new decimal(new int[] {
             127,
             0,
             0,
@@ -588,27 +518,28 @@
             this.label27.Dock = System.Windows.Forms.DockStyle.Fill;
             this.label27.Font = new System.Drawing.Font("微軟正黑體", 15.75F, System.Drawing.FontStyle.Bold);
             this.label27.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.label27.Location = new System.Drawing.Point(292, 0);
+            this.label27.Location = new System.Drawing.Point(481, 0);
             this.label27.Name = "label27";
-            this.label27.Size = new System.Drawing.Size(14, 58);
+            this.label27.Size = new System.Drawing.Size(14, 53);
             this.label27.TabIndex = 5;
             this.label27.Text = ".";
             this.label27.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             // 
-            // numericUpDown3
+            // nudIP03
             // 
-            this.numericUpDown3.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.numericUpDown3.Font = new System.Drawing.Font("微軟正黑體", 15.75F);
-            this.numericUpDown3.Location = new System.Drawing.Point(209, 3);
-            this.numericUpDown3.Maximum = new decimal(new int[] {
+            this.nudIP03.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.nudIP03.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.nudIP03.Font = new System.Drawing.Font("微軟正黑體", 15.75F);
+            this.nudIP03.Location = new System.Drawing.Point(335, 3);
+            this.nudIP03.Maximum = new decimal(new int[] {
             255,
             0,
             0,
             0});
-            this.numericUpDown3.Name = "numericUpDown3";
-            this.numericUpDown3.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.numericUpDown3.Size = new System.Drawing.Size(77, 35);
-            this.numericUpDown3.TabIndex = 4;
+            this.nudIP03.Name = "nudIP03";
+            this.nudIP03.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.nudIP03.Size = new System.Drawing.Size(140, 35);
+            this.nudIP03.TabIndex = 4;
             // 
             // label26
             // 
@@ -616,53 +547,55 @@
             this.label26.Dock = System.Windows.Forms.DockStyle.Fill;
             this.label26.Font = new System.Drawing.Font("微軟正黑體", 15.75F, System.Drawing.FontStyle.Bold);
             this.label26.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.label26.Location = new System.Drawing.Point(189, 0);
+            this.label26.Location = new System.Drawing.Point(315, 0);
             this.label26.Name = "label26";
-            this.label26.Size = new System.Drawing.Size(14, 58);
+            this.label26.Size = new System.Drawing.Size(14, 53);
             this.label26.TabIndex = 3;
             this.label26.Text = ".";
             this.label26.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             // 
-            // numericUpDown2
+            // nudIP02
             // 
-            this.numericUpDown2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.numericUpDown2.Font = new System.Drawing.Font("微軟正黑體", 15.75F);
-            this.numericUpDown2.Location = new System.Drawing.Point(106, 3);
-            this.numericUpDown2.Maximum = new decimal(new int[] {
+            this.nudIP02.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.nudIP02.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.nudIP02.Font = new System.Drawing.Font("微軟正黑體", 15.75F);
+            this.nudIP02.Location = new System.Drawing.Point(169, 3);
+            this.nudIP02.Maximum = new decimal(new int[] {
             255,
             0,
             0,
             0});
-            this.numericUpDown2.Name = "numericUpDown2";
-            this.numericUpDown2.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.numericUpDown2.Size = new System.Drawing.Size(77, 35);
-            this.numericUpDown2.TabIndex = 2;
-            this.numericUpDown2.Value = new decimal(new int[] {
+            this.nudIP02.Name = "nudIP02";
+            this.nudIP02.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.nudIP02.Size = new System.Drawing.Size(140, 35);
+            this.nudIP02.TabIndex = 2;
+            this.nudIP02.Value = new decimal(new int[] {
             168,
             0,
             0,
             0});
             // 
-            // numericUpDown1
+            // nudIP01
             // 
-            this.numericUpDown1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.numericUpDown1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.numericUpDown1.Font = new System.Drawing.Font("微軟正黑體", 15.75F);
-            this.numericUpDown1.Location = new System.Drawing.Point(3, 3);
-            this.numericUpDown1.Maximum = new decimal(new int[] {
+            this.nudIP01.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.nudIP01.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.nudIP01.Font = new System.Drawing.Font("微軟正黑體", 15.75F);
+            this.nudIP01.Location = new System.Drawing.Point(3, 3);
+            this.nudIP01.Maximum = new decimal(new int[] {
             255,
             0,
             0,
             0});
-            this.numericUpDown1.Name = "numericUpDown1";
-            this.numericUpDown1.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.numericUpDown1.Size = new System.Drawing.Size(77, 35);
-            this.numericUpDown1.TabIndex = 0;
-            this.numericUpDown1.Value = new decimal(new int[] {
+            this.nudIP01.Name = "nudIP01";
+            this.nudIP01.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.nudIP01.Size = new System.Drawing.Size(140, 35);
+            this.nudIP01.TabIndex = 0;
+            this.nudIP01.Value = new decimal(new int[] {
             192,
             0,
             0,
             0});
+            this.nudIP01.Click += new System.EventHandler(this.nudIP01_Click);
             // 
             // label25
             // 
@@ -670,87 +603,295 @@
             this.label25.Dock = System.Windows.Forms.DockStyle.Fill;
             this.label25.Font = new System.Drawing.Font("微軟正黑體", 15.75F, System.Drawing.FontStyle.Bold);
             this.label25.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.label25.Location = new System.Drawing.Point(86, 0);
+            this.label25.Location = new System.Drawing.Point(149, 0);
             this.label25.Name = "label25";
-            this.label25.Size = new System.Drawing.Size(14, 58);
+            this.label25.Size = new System.Drawing.Size(14, 53);
             this.label25.TabIndex = 1;
             this.label25.Text = ".";
             this.label25.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             // 
-            // groupBox13
+            // labPortNo
             // 
-            this.groupBox13.Controls.Add(this.textBox15);
-            this.groupBox13.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.groupBox13.Location = new System.Drawing.Point(0, 0);
-            this.groupBox13.Name = "groupBox13";
-            this.groupBox13.Size = new System.Drawing.Size(480, 190);
-            this.groupBox13.TabIndex = 1;
-            this.groupBox13.TabStop = false;
-            this.groupBox13.Text = "Notice";
+            this.labPortNo.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.labPortNo.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.labPortNo.Location = new System.Drawing.Point(3, 59);
+            this.labPortNo.Name = "labPortNo";
+            this.labPortNo.Size = new System.Drawing.Size(149, 59);
+            this.labPortNo.TabIndex = 0;
+            this.labPortNo.Text = "Port No.";
+            this.labPortNo.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
-            // textBox15
+            // txbConnectType
             // 
-            this.textBox15.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.textBox15.Location = new System.Drawing.Point(3, 25);
-            this.textBox15.Multiline = true;
-            this.textBox15.Name = "textBox15";
-            this.textBox15.Size = new System.Drawing.Size(474, 162);
-            this.textBox15.TabIndex = 1;
-            this.textBox15.Text = resources.GetString("textBox15.Text");
+            this.txbConnectType.BackColor = System.Drawing.Color.White;
+            this.txbConnectType.Dock = System.Windows.Forms.DockStyle.Left;
+            this.txbConnectType.Font = new System.Drawing.Font("微軟正黑體", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
+            this.txbConnectType.Location = new System.Drawing.Point(158, 121);
+            this.txbConnectType.Name = "txbConnectType";
+            this.txbConnectType.ReadOnly = true;
+            this.txbConnectType.Size = new System.Drawing.Size(317, 35);
+            this.txbConnectType.TabIndex = 4;
+            this.txbConnectType.Text = "Socket";
             // 
-            // tableLayoutPanel11
+            // gbRS232CSetting
             // 
-            this.tableLayoutPanel11.ColumnCount = 6;
-            this.tableLayoutPanel11.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 16.66667F));
-            this.tableLayoutPanel11.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 16.66667F));
-            this.tableLayoutPanel11.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 16.66667F));
-            this.tableLayoutPanel11.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 16.66667F));
-            this.tableLayoutPanel11.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 16.66667F));
-            this.tableLayoutPanel11.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 16.66667F));
-            this.tableLayoutPanel11.Controls.Add(this.button22, 5, 0);
-            this.tableLayoutPanel11.Controls.Add(this.button23, 4, 0);
-            this.tableLayoutPanel11.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tableLayoutPanel11.Location = new System.Drawing.Point(3, 674);
-            this.tableLayoutPanel11.Name = "tableLayoutPanel11";
-            this.tableLayoutPanel11.RowCount = 1;
-            this.tableLayoutPanel11.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel11.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 55F));
-            this.tableLayoutPanel11.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 55F));
-            this.tableLayoutPanel11.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 55F));
-            this.tableLayoutPanel11.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 55F));
-            this.tableLayoutPanel11.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 55F));
-            this.tableLayoutPanel11.Size = new System.Drawing.Size(1303, 55);
-            this.tableLayoutPanel11.TabIndex = 3;
+            this.gbRS232CSetting.Controls.Add(this.tlpRS232C);
+            this.gbRS232CSetting.Location = new System.Drawing.Point(77, 148);
+            this.gbRS232CSetting.Name = "gbRS232CSetting";
+            this.gbRS232CSetting.Size = new System.Drawing.Size(813, 503);
+            this.gbRS232CSetting.TabIndex = 1;
+            this.gbRS232CSetting.TabStop = false;
+            this.gbRS232CSetting.Text = "RS-232C";
             // 
-            // button22
+            // tlpRS232C
             // 
-            this.button22.BackColor = System.Drawing.Color.AliceBlue;
-            this.button22.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.button22.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
-            this.button22.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            this.button22.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button22.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.button22.Location = new System.Drawing.Point(1088, 3);
-            this.button22.Name = "button22";
-            this.button22.Size = new System.Drawing.Size(212, 49);
-            this.button22.TabIndex = 0;
-            this.button22.Text = "Cancel";
-            this.button22.UseVisualStyleBackColor = false;
+            this.tlpRS232C.ColumnCount = 2;
+            this.tlpRS232C.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 19.33085F));
+            this.tlpRS232C.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 80.66914F));
+            this.tlpRS232C.Controls.Add(this.txbConnectTypeCOM, 1, 5);
+            this.tlpRS232C.Controls.Add(this.nudDataBits, 1, 3);
+            this.tlpRS232C.Controls.Add(this.labParityBit, 0, 2);
+            this.tlpRS232C.Controls.Add(this.label2, 0, 0);
+            this.tlpRS232C.Controls.Add(this.tableLayoutPanel2, 1, 1);
+            this.tlpRS232C.Controls.Add(this.labBaudRate, 0, 1);
+            this.tlpRS232C.Controls.Add(this.txbParityBit, 1, 2);
+            this.tlpRS232C.Controls.Add(this.labDataBits, 0, 3);
+            this.tlpRS232C.Controls.Add(this.labStopBit, 0, 4);
+            this.tlpRS232C.Controls.Add(this.labConnectTypeCOM, 0, 5);
+            this.tlpRS232C.Controls.Add(this.txbStopBit, 1, 4);
+            this.tlpRS232C.Controls.Add(this.splitContainer3, 1, 0);
+            this.tlpRS232C.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.tlpRS232C.Location = new System.Drawing.Point(3, 25);
+            this.tlpRS232C.Name = "tlpRS232C";
+            this.tlpRS232C.RowCount = 8;
+            this.tlpRS232C.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 12.5F));
+            this.tlpRS232C.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 12.5F));
+            this.tlpRS232C.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 12.5F));
+            this.tlpRS232C.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 12.5F));
+            this.tlpRS232C.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 12.5F));
+            this.tlpRS232C.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 12.5F));
+            this.tlpRS232C.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 12.5F));
+            this.tlpRS232C.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 12.5F));
+            this.tlpRS232C.Size = new System.Drawing.Size(807, 475);
+            this.tlpRS232C.TabIndex = 4;
             // 
-            // button23
+            // txbConnectTypeCOM
             // 
-            this.button23.BackColor = System.Drawing.Color.AliceBlue;
-            this.button23.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.button23.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
-            this.button23.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            this.button23.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button23.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.button23.Location = new System.Drawing.Point(871, 3);
-            this.button23.Name = "button23";
-            this.button23.Size = new System.Drawing.Size(211, 49);
-            this.button23.TabIndex = 1;
-            this.button23.Text = "Save";
-            this.button23.UseVisualStyleBackColor = false;
+            this.txbConnectTypeCOM.BackColor = System.Drawing.Color.White;
+            this.txbConnectTypeCOM.Dock = System.Windows.Forms.DockStyle.Left;
+            this.txbConnectTypeCOM.Font = new System.Drawing.Font("微軟正黑體", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
+            this.txbConnectTypeCOM.Location = new System.Drawing.Point(158, 298);
+            this.txbConnectTypeCOM.Name = "txbConnectTypeCOM";
+            this.txbConnectTypeCOM.ReadOnly = true;
+            this.txbConnectTypeCOM.Size = new System.Drawing.Size(334, 35);
+            this.txbConnectTypeCOM.TabIndex = 10;
+            this.txbConnectTypeCOM.Text = "ComPort";
+            // 
+            // nudDataBits
+            // 
+            this.nudDataBits.BackColor = System.Drawing.Color.White;
+            this.nudDataBits.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.nudDataBits.Dock = System.Windows.Forms.DockStyle.Left;
+            this.nudDataBits.Font = new System.Drawing.Font("微軟正黑體", 16F);
+            this.nudDataBits.Location = new System.Drawing.Point(158, 180);
+            this.nudDataBits.Maximum = new decimal(new int[] {
+            256,
+            0,
+            0,
+            0});
+            this.nudDataBits.Name = "nudDataBits";
+            this.nudDataBits.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.nudDataBits.Size = new System.Drawing.Size(140, 36);
+            this.nudDataBits.TabIndex = 1;
+            // 
+            // labParityBit
+            // 
+            this.labParityBit.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.labParityBit.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.labParityBit.Location = new System.Drawing.Point(3, 118);
+            this.labParityBit.Name = "labParityBit";
+            this.labParityBit.Size = new System.Drawing.Size(149, 59);
+            this.labParityBit.TabIndex = 3;
+            this.labParityBit.Text = "Parity Bit";
+            this.labParityBit.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            // 
+            // label2
+            // 
+            this.label2.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.label2.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.label2.Location = new System.Drawing.Point(3, 0);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(149, 59);
+            this.label2.TabIndex = 0;
+            this.label2.Text = "Port Name";
+            this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            // 
+            // tableLayoutPanel2
+            // 
+            this.tableLayoutPanel2.ColumnCount = 7;
+            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 25F));
+            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 20F));
+            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 25F));
+            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 20F));
+            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 25F));
+            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 20F));
+            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 25F));
+            this.tableLayoutPanel2.Controls.Add(this.nudBaudRate, 0, 0);
+            this.tableLayoutPanel2.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.tableLayoutPanel2.Location = new System.Drawing.Point(158, 62);
+            this.tableLayoutPanel2.Name = "tableLayoutPanel2";
+            this.tableLayoutPanel2.RowCount = 1;
+            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 58F));
+            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 58F));
+            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 58F));
+            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 58F));
+            this.tableLayoutPanel2.Size = new System.Drawing.Size(646, 53);
+            this.tableLayoutPanel2.TabIndex = 2;
+            // 
+            // nudBaudRate
+            // 
+            this.nudBaudRate.BackColor = System.Drawing.Color.White;
+            this.nudBaudRate.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.nudBaudRate.Cursor = System.Windows.Forms.Cursors.Default;
+            this.nudBaudRate.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.nudBaudRate.Font = new System.Drawing.Font("微軟正黑體", 16F);
+            this.nudBaudRate.Location = new System.Drawing.Point(3, 3);
+            this.nudBaudRate.Maximum = new decimal(new int[] {
+            999999,
+            0,
+            0,
+            0});
+            this.nudBaudRate.Name = "nudBaudRate";
+            this.nudBaudRate.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.nudBaudRate.Size = new System.Drawing.Size(140, 36);
+            this.nudBaudRate.TabIndex = 0;
+            // 
+            // labBaudRate
+            // 
+            this.labBaudRate.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.labBaudRate.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.labBaudRate.Location = new System.Drawing.Point(3, 59);
+            this.labBaudRate.Name = "labBaudRate";
+            this.labBaudRate.Size = new System.Drawing.Size(149, 59);
+            this.labBaudRate.TabIndex = 0;
+            this.labBaudRate.Text = "Baud Rate";
+            this.labBaudRate.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            // 
+            // txbParityBit
+            // 
+            this.txbParityBit.BackColor = System.Drawing.Color.White;
+            this.txbParityBit.Dock = System.Windows.Forms.DockStyle.Left;
+            this.txbParityBit.Font = new System.Drawing.Font("微軟正黑體", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
+            this.txbParityBit.Location = new System.Drawing.Point(158, 121);
+            this.txbParityBit.Name = "txbParityBit";
+            this.txbParityBit.Size = new System.Drawing.Size(334, 35);
+            this.txbParityBit.TabIndex = 4;
+            this.txbParityBit.Text = "None";
+            // 
+            // labDataBits
+            // 
+            this.labDataBits.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.labDataBits.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.labDataBits.Location = new System.Drawing.Point(3, 177);
+            this.labDataBits.Name = "labDataBits";
+            this.labDataBits.Size = new System.Drawing.Size(149, 59);
+            this.labDataBits.TabIndex = 5;
+            this.labDataBits.Text = "Data Bits";
+            this.labDataBits.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            // 
+            // labStopBit
+            // 
+            this.labStopBit.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.labStopBit.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.labStopBit.Location = new System.Drawing.Point(3, 236);
+            this.labStopBit.Name = "labStopBit";
+            this.labStopBit.Size = new System.Drawing.Size(149, 59);
+            this.labStopBit.TabIndex = 6;
+            this.labStopBit.Text = "Stop Bit";
+            this.labStopBit.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            // 
+            // labConnectTypeCOM
+            // 
+            this.labConnectTypeCOM.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.labConnectTypeCOM.Location = new System.Drawing.Point(3, 295);
+            this.labConnectTypeCOM.Name = "labConnectTypeCOM";
+            this.labConnectTypeCOM.Size = new System.Drawing.Size(149, 59);
+            this.labConnectTypeCOM.TabIndex = 7;
+            this.labConnectTypeCOM.Text = "Connection Type";
+            this.labConnectTypeCOM.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            // 
+            // txbStopBit
+            // 
+            this.txbStopBit.BackColor = System.Drawing.Color.White;
+            this.txbStopBit.Dock = System.Windows.Forms.DockStyle.Left;
+            this.txbStopBit.Font = new System.Drawing.Font("微軟正黑體", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
+            this.txbStopBit.Location = new System.Drawing.Point(158, 239);
+            this.txbStopBit.Name = "txbStopBit";
+            this.txbStopBit.Size = new System.Drawing.Size(334, 35);
+            this.txbStopBit.TabIndex = 9;
+            this.txbStopBit.Text = "One";
+            // 
+            // splitContainer3
+            // 
+            this.splitContainer3.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.splitContainer3.Location = new System.Drawing.Point(158, 3);
+            this.splitContainer3.Name = "splitContainer3";
+            // 
+            // splitContainer3.Panel1
+            // 
+            this.splitContainer3.Panel1.Controls.Add(this.cmbPortName);
+            // 
+            // splitContainer3.Panel2
+            // 
+            this.splitContainer3.Panel2.Controls.Add(this.btnRenew);
+            this.splitContainer3.Size = new System.Drawing.Size(646, 53);
+            this.splitContainer3.SplitterDistance = 332;
+            this.splitContainer3.TabIndex = 12;
+            // 
+            // cmbPortName
+            // 
+            this.cmbPortName.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
+            this.cmbPortName.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
+            this.cmbPortName.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.cmbPortName.Font = new System.Drawing.Font("微軟正黑體", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
+            this.cmbPortName.FormattingEnabled = true;
+            this.cmbPortName.Location = new System.Drawing.Point(0, 0);
+            this.cmbPortName.Name = "cmbPortName";
+            this.cmbPortName.Size = new System.Drawing.Size(332, 38);
+            this.cmbPortName.TabIndex = 8;
+            // 
+            // btnRenew
+            // 
+            this.btnRenew.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnRenew.Location = new System.Drawing.Point(3, 0);
+            this.btnRenew.Name = "btnRenew";
+            this.btnRenew.Size = new System.Drawing.Size(97, 35);
+            this.btnRenew.TabIndex = 11;
+            this.btnRenew.Text = "Renew";
+            this.btnRenew.UseVisualStyleBackColor = true;
+            this.btnRenew.Click += new System.EventHandler(this.btnRenew_Click);
+            // 
+            // gpIPAddressSettingandMaintainNotice
+            // 
+            this.gpIPAddressSettingandMaintainNotice.Controls.Add(this.txbSettingandMaintainNotice);
+            this.gpIPAddressSettingandMaintainNotice.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.gpIPAddressSettingandMaintainNotice.Location = new System.Drawing.Point(0, 0);
+            this.gpIPAddressSettingandMaintainNotice.Name = "gpIPAddressSettingandMaintainNotice";
+            this.gpIPAddressSettingandMaintainNotice.Size = new System.Drawing.Size(480, 503);
+            this.gpIPAddressSettingandMaintainNotice.TabIndex = 1;
+            this.gpIPAddressSettingandMaintainNotice.TabStop = false;
+            this.gpIPAddressSettingandMaintainNotice.Text = "Notice";
+            // 
+            // txbSettingandMaintainNotice
+            // 
+            this.txbSettingandMaintainNotice.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.txbSettingandMaintainNotice.Location = new System.Drawing.Point(3, 25);
+            this.txbSettingandMaintainNotice.Multiline = true;
+            this.txbSettingandMaintainNotice.Name = "txbSettingandMaintainNotice";
+            this.txbSettingandMaintainNotice.ScrollBars = System.Windows.Forms.ScrollBars.Both;
+            this.txbSettingandMaintainNotice.Size = new System.Drawing.Size(474, 475);
+            this.txbSettingandMaintainNotice.TabIndex = 1;
             // 
             // FormCommunications
             // 
@@ -758,9 +899,10 @@
             this.Controls.Add(this.gbDeviceCommunications);
             this.Controls.Add(this.gbDeviceList);
             this.Name = "FormCommunications";
+            this.Load += new System.EventHandler(this.FormCommunications_Load);
             this.gbDeviceList.ResumeLayout(false);
             this.gbDeviceCommunications.ResumeLayout(false);
-            this.tableLayoutPanel4.ResumeLayout(false);
+            this.tlpDeviceCommunications.ResumeLayout(false);
             this.gbCommunicatorType.ResumeLayout(false);
             this.splitContainer1.Panel1.ResumeLayout(false);
             this.splitContainer1.Panel2.ResumeLayout(false);
@@ -769,37 +911,36 @@
             this.tableLayoutPanel5.ResumeLayout(false);
             this.gbCommunicatorTypeNotice.ResumeLayout(false);
             this.gbCommunicatorTypeNotice.PerformLayout();
+            this.palCommunicatorButton.ResumeLayout(false);
+            this.palSettingandMaintain.ResumeLayout(false);
             this.gbIPAddressSettingandMaintain.ResumeLayout(false);
             this.splitContainer2.Panel1.ResumeLayout(false);
             this.splitContainer2.Panel2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer2)).EndInit();
             this.splitContainer2.ResumeLayout(false);
-            this.tableLayoutPanel6.ResumeLayout(false);
-            this.splitContainer5.Panel1.ResumeLayout(false);
-            this.splitContainer5.Panel2.ResumeLayout(false);
-            this.splitContainer5.Panel2.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.splitContainer5)).EndInit();
-            this.splitContainer5.ResumeLayout(false);
-            this.splitContainer4.Panel1.ResumeLayout(false);
-            this.splitContainer4.Panel2.ResumeLayout(false);
-            this.splitContainer4.Panel2.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.splitContainer4)).EndInit();
-            this.splitContainer4.ResumeLayout(false);
-            this.groupBox15.ResumeLayout(false);
-            this.tableLayoutPanel9.ResumeLayout(false);
+            this.gbTCPIPSetting.ResumeLayout(false);
+            this.tlpTCPIP.ResumeLayout(false);
+            this.tlpTCPIP.PerformLayout();
             this.tableLayoutPanel10.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown8)).EndInit();
-            this.groupBox16.ResumeLayout(false);
-            this.tableLayoutPanel7.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.nudIPPort)).EndInit();
             this.tableLayoutPanel8.ResumeLayout(false);
             this.tableLayoutPanel8.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown4)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown3)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).EndInit();
-            this.groupBox13.ResumeLayout(false);
-            this.groupBox13.PerformLayout();
-            this.tableLayoutPanel11.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.nudIP04)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nudIP03)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nudIP02)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nudIP01)).EndInit();
+            this.gbRS232CSetting.ResumeLayout(false);
+            this.tlpRS232C.ResumeLayout(false);
+            this.tlpRS232C.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.nudDataBits)).EndInit();
+            this.tableLayoutPanel2.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.nudBaudRate)).EndInit();
+            this.splitContainer3.Panel1.ResumeLayout(false);
+            this.splitContainer3.Panel2.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.splitContainer3)).EndInit();
+            this.splitContainer3.ResumeLayout(false);
+            this.gpIPAddressSettingandMaintainNotice.ResumeLayout(false);
+            this.gpIPAddressSettingandMaintainNotice.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -809,44 +950,53 @@
         private System.Windows.Forms.GroupBox gbDeviceList;
         private System.Windows.Forms.ListBox libDeviceList;
         private System.Windows.Forms.GroupBox gbDeviceCommunications;
-        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel4;
+        private System.Windows.Forms.TableLayoutPanel tlpDeviceCommunications;
         private System.Windows.Forms.GroupBox gbCommunicatorType;
         private System.Windows.Forms.SplitContainer splitContainer1;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel5;
-        private System.Windows.Forms.Button btnTCPIP;
-        private System.Windows.Forms.Button button20;
-        private System.Windows.Forms.Button button21;
         private System.Windows.Forms.GroupBox gbCommunicatorTypeNotice;
-        private System.Windows.Forms.TextBox textBox12;
+        private System.Windows.Forms.TextBox txbCommunicatoyTypeNotice;
+        private System.Windows.Forms.TableLayoutPanel palCommunicatorButton;
+        private System.Windows.Forms.Button btnSave;
         private System.Windows.Forms.GroupBox gbIPAddressSettingandMaintain;
         private System.Windows.Forms.SplitContainer splitContainer2;
-        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel6;
-        private System.Windows.Forms.SplitContainer splitContainer5;
         private System.Windows.Forms.Label labPortNo;
-        private System.Windows.Forms.TextBox txbPortNo;
-        private System.Windows.Forms.SplitContainer splitContainer4;
         private System.Windows.Forms.Label labIPAddress;
-        private System.Windows.Forms.TextBox txbIPAddress;
-        private System.Windows.Forms.GroupBox groupBox15;
-        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel9;
-        private System.Windows.Forms.Label label28;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel10;
-        private System.Windows.Forms.NumericUpDown numericUpDown8;
-        private System.Windows.Forms.GroupBox groupBox16;
-        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel7;
-        private System.Windows.Forms.Label label24;
+        private System.Windows.Forms.NumericUpDown nudIPPort;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel8;
-        private System.Windows.Forms.NumericUpDown numericUpDown4;
+        private System.Windows.Forms.NumericUpDown nudIP04;
         private System.Windows.Forms.Label label27;
-        private System.Windows.Forms.NumericUpDown numericUpDown3;
+        private System.Windows.Forms.NumericUpDown nudIP03;
         private System.Windows.Forms.Label label26;
-        private System.Windows.Forms.NumericUpDown numericUpDown2;
-        private System.Windows.Forms.NumericUpDown numericUpDown1;
+        private System.Windows.Forms.NumericUpDown nudIP02;
+        private System.Windows.Forms.NumericUpDown nudIP01;
         private System.Windows.Forms.Label label25;
-        private System.Windows.Forms.GroupBox groupBox13;
-        private System.Windows.Forms.TextBox textBox15;
-        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel11;
-        private System.Windows.Forms.Button button22;
-        private System.Windows.Forms.Button button23;
+        private System.Windows.Forms.GroupBox gpIPAddressSettingandMaintainNotice;
+        private System.Windows.Forms.TextBox txbSettingandMaintainNotice;
+        private System.Windows.Forms.Button btnRS232C;
+        private System.Windows.Forms.Button btnTCPIP;
+        private System.Windows.Forms.Panel palSettingandMaintain;
+        private System.Windows.Forms.GroupBox gbTCPIPSetting;
+        private System.Windows.Forms.GroupBox gbRS232CSetting;
+        private System.Windows.Forms.TableLayoutPanel tlpTCPIP;
+        private System.Windows.Forms.Label txbConnectionType;
+        private System.Windows.Forms.TextBox txbConnectType;
+        private System.Windows.Forms.TableLayoutPanel tlpRS232C;
+        private System.Windows.Forms.Label labParityBit;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel2;
+        private System.Windows.Forms.NumericUpDown nudBaudRate;
+        private System.Windows.Forms.Label labBaudRate;
+        private System.Windows.Forms.TextBox txbParityBit;
+        private System.Windows.Forms.Label labDataBits;
+        private System.Windows.Forms.Label labConnectTypeCOM;
+        private System.Windows.Forms.Label labStopBit;
+        private System.Windows.Forms.ComboBox cmbPortName;
+        private System.Windows.Forms.TextBox txbStopBit;
+        private System.Windows.Forms.NumericUpDown nudDataBits;
+        private System.Windows.Forms.TextBox txbConnectTypeCOM;
+        private System.Windows.Forms.SplitContainer splitContainer3;
+        private System.Windows.Forms.Button btnRenew;
     }
 }
