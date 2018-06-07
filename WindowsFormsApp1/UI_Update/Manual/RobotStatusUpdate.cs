@@ -50,6 +50,12 @@ namespace Adam.UI_Update.Manual
                         case Transaction.Command.RobotType.GetError:
                             StateUtil.UpdateError(name, msg);
                             break;
+                        case Transaction.Command.RobotType.GetMode:
+                            StateUtil.UpdateMode(name, msg);
+                            break;
+                        case Transaction.Command.RobotType.GetSV:
+                            StateUtil.UpdateSV(name, msg);
+                            break;
                         default:
                             manual.Cursor = Cursors.Default;
                             Control tbcManual = manual.Controls.Find("tbcManual", true).FirstOrDefault() as Control;
@@ -57,52 +63,6 @@ namespace Adam.UI_Update.Manual
                             break;
                     }
                     UpdateStatus(name);
-                    if (method.Equals(Transaction.Command.RobotType.GetRIO))
-                    {
-                        Transaction next_txn = new Transaction();
-                        next_txn = new Transaction();
-                        switch (txn.Value)
-                        {
-                            case "4":
-                                next_txn.Method = Transaction.Command.RobotType.GetRIO;
-                                next_txn.Value = "5";//5 L-Hold Status 回饋 L 軸 Wafer/ Panel 保留狀態
-                                break;
-                            case "5":
-                                next_txn.Method = Transaction.Command.RobotType.GetRIO;
-                                next_txn.Value = "8";//8:回饋 R 軸在席 Sensor 的狀態 
-                                break;
-                            case "8":
-                                next_txn.Method = Transaction.Command.RobotType.GetRIO;
-                                next_txn.Value = "9";//9:回饋 L 軸在席 Sensor 的狀態
-                                break;
-                        }
-                        if (!next_txn.Method.Equals(""))
-                        {
-                            next_txn.FormName = "FormManual";
-                            Node robot = NodeManagement.Get(name);
-                            robot.SendCommand(next_txn);
-                        }
-                        else
-                        {
-                            //do nothing
-                        }
-                    }
-                    if (method.Equals(Transaction.Command.RobotType.RobotServo))
-                    {
-                        Transaction next_txn = new Transaction();
-                        next_txn = new Transaction();
-                        next_txn.Method = Transaction.Command.RobotType.GetStatus;
-                        if (!next_txn.Method.Equals(""))
-                        {
-                            next_txn.FormName = "FormManual";
-                            Node robot = NodeManagement.Get(name);
-                            robot.SendCommand(next_txn);
-                        }
-                        else
-                        {
-                            //do nothing
-                        }
-                    }
                 }
             }
             catch (Exception e)
@@ -240,6 +200,11 @@ namespace Adam.UI_Update.Manual
                 if (tbRError != null)
                 {
                     tbRError.Text = robot.Error;
+                }
+                ComboBox cbRMode = manual.Controls.Find("cbRMode", true).FirstOrDefault() as ComboBox;
+                if (cbRMode != null)
+                {
+                    cbRMode.SelectedIndex = Int32.Parse(robot.Mode);
                 }
             }
                 

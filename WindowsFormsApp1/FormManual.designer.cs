@@ -60,12 +60,12 @@
             this.btnRPut = new System.Windows.Forms.Button();
             this.cbRA2Slot = new System.Windows.Forms.ComboBox();
             this.cbRA2Arm = new System.Windows.Forms.ComboBox();
-            this.panel10 = new System.Windows.Forms.Panel();
+            this.pnlRCmd = new System.Windows.Forms.Panel();
+            this.btnRAreaSwap = new System.Windows.Forms.Button();
             this.btnRPutPut = new System.Windows.Forms.Button();
             this.btnRPutGet = new System.Windows.Forms.Button();
             this.btnRGetGet = new System.Windows.Forms.Button();
             this.btnRGetPut = new System.Windows.Forms.Button();
-            this.label24 = new System.Windows.Forms.Label();
             this.groupBox21 = new System.Windows.Forms.GroupBox();
             this.panel13 = new System.Windows.Forms.Panel();
             this.pnlRobotStatus = new System.Windows.Forms.Panel();
@@ -74,11 +74,12 @@
             this.label26 = new System.Windows.Forms.Label();
             this.tbRServo = new System.Windows.Forms.TextBox();
             this.btnRServoOn = new System.Windows.Forms.Button();
+            this.label24 = new System.Windows.Forms.Label();
             this.btnRServoOff = new System.Windows.Forms.Button();
             this.btnRReset = new System.Windows.Forms.Button();
             this.nudRSpeed = new System.Windows.Forms.NumericUpDown();
             this.btnRChgMode = new System.Windows.Forms.Button();
-            this.cbRNewMode = new System.Windows.Forms.ComboBox();
+            this.cbRMode = new System.Windows.Forms.ComboBox();
             this.btnRHome = new System.Windows.Forms.Button();
             this.btnRDisConn = new System.Windows.Forms.Button();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
@@ -309,9 +310,10 @@
             this.Btn_DoorClose_A = new System.Windows.Forms.Button();
             this.Btn_UnLatchDoor_A = new System.Windows.Forms.Button();
             this.Btn_LatchDoor_A = new System.Windows.Forms.Button();
-            this.btnRStop = new System.Windows.Forms.Button();
-            this.btnRPause = new System.Windows.Forms.Button();
-            this.btnRContinue = new System.Windows.Forms.Button();
+            this.btnContinue = new System.Windows.Forms.Button();
+            this.btnPause = new System.Windows.Forms.Button();
+            this.btnStop = new System.Windows.Forms.Button();
+            this.pnlMotionStop = new System.Windows.Forms.Panel();
             this.tbcManual.SuspendLayout();
             this.tabPage1.SuspendLayout();
             this.groupBox20.SuspendLayout();
@@ -320,7 +322,7 @@
             this.tableLayoutPanel24.SuspendLayout();
             this.pnlRobotCmdA1.SuspendLayout();
             this.pnlRobotCmdA2.SuspendLayout();
-            this.panel10.SuspendLayout();
+            this.pnlRCmd.SuspendLayout();
             this.groupBox21.SuspendLayout();
             this.panel13.SuspendLayout();
             this.pnlRobotStatus.SuspendLayout();
@@ -347,6 +349,7 @@
             this.groupBox9.SuspendLayout();
             this.groupBox25.SuspendLayout();
             this.TblPanel_A.SuspendLayout();
+            this.pnlMotionStop.SuspendLayout();
             this.SuspendLayout();
             // 
             // tbcManual
@@ -403,15 +406,16 @@
             // 
             this.tableLayoutPanel23.ColumnCount = 1;
             this.tableLayoutPanel23.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel23.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 20F));
-            this.tableLayoutPanel23.Controls.Add(this.tableLayoutPanel24, 0, 0);
-            this.tableLayoutPanel23.Controls.Add(this.panel10, 0, 1);
-            this.tableLayoutPanel23.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.tableLayoutPanel23.Controls.Add(this.tableLayoutPanel24, 0, 1);
+            this.tableLayoutPanel23.Controls.Add(this.pnlRCmd, 0, 2);
+            this.tableLayoutPanel23.Controls.Add(this.btnRAreaSwap, 0, 0);
             this.tableLayoutPanel23.Location = new System.Drawing.Point(20, 20);
             this.tableLayoutPanel23.Name = "tableLayoutPanel23";
-            this.tableLayoutPanel23.RowCount = 2;
+            this.tableLayoutPanel23.RowCount = 3;
+            this.tableLayoutPanel23.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 55F));
             this.tableLayoutPanel23.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 70.76923F));
             this.tableLayoutPanel23.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 29.23077F));
+            this.tableLayoutPanel23.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
             this.tableLayoutPanel23.Size = new System.Drawing.Size(756, 715);
             this.tableLayoutPanel23.TabIndex = 52;
             // 
@@ -423,12 +427,12 @@
             this.tableLayoutPanel24.Controls.Add(this.pnlRobotCmdA1, 0, 0);
             this.tableLayoutPanel24.Controls.Add(this.pnlRobotCmdA2, 1, 0);
             this.tableLayoutPanel24.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tableLayoutPanel24.Location = new System.Drawing.Point(3, 3);
+            this.tableLayoutPanel24.Location = new System.Drawing.Point(3, 58);
             this.tableLayoutPanel24.Name = "tableLayoutPanel24";
             this.tableLayoutPanel24.RowCount = 1;
             this.tableLayoutPanel24.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
             this.tableLayoutPanel24.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 500F));
-            this.tableLayoutPanel24.Size = new System.Drawing.Size(750, 500);
+            this.tableLayoutPanel24.Size = new System.Drawing.Size(750, 461);
             this.tableLayoutPanel24.TabIndex = 0;
             // 
             // pnlRobotCmdA1
@@ -449,7 +453,7 @@
             this.pnlRobotCmdA1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.pnlRobotCmdA1.Location = new System.Drawing.Point(3, 3);
             this.pnlRobotCmdA1.Name = "pnlRobotCmdA1";
-            this.pnlRobotCmdA1.Size = new System.Drawing.Size(369, 494);
+            this.pnlRobotCmdA1.Size = new System.Drawing.Size(369, 455);
             this.pnlRobotCmdA1.TabIndex = 50;
             // 
             // label56
@@ -479,16 +483,16 @@
             // 
             this.cbRA1Point.FormattingEnabled = true;
             this.cbRA1Point.Items.AddRange(new object[] {
-            "Port_A",
-            "Port_B",
-            "Port_C",
-            "Port_D",
-            "Port_E",
-            "Port_F",
-            "Port_G",
-            "Port_H",
-            "Aligner1",
-            "Aligner2"});
+            "LoadPort01",
+            "LoadPort02",
+            "LoadPort03",
+            "LoadPort04",
+            "LoadPort05",
+            "LoadPort06",
+            "LoadPort07",
+            "LoadPort08",
+            "Aligner01",
+            "Aligner02"});
             this.cbRA1Point.Location = new System.Drawing.Point(129, 60);
             this.cbRA1Point.Name = "cbRA1Point";
             this.cbRA1Point.Size = new System.Drawing.Size(208, 38);
@@ -590,31 +594,31 @@
             // 
             this.cbRA1Slot.FormattingEnabled = true;
             this.cbRA1Slot.Items.AddRange(new object[] {
-            "1",
-            "2",
-            "3",
-            "4",
-            "5",
-            "6",
-            "7",
-            "8",
-            "9",
-            "10",
-            "11",
-            "12",
-            "13",
-            "14",
-            "15",
-            "16",
-            "17",
-            "18",
-            "19",
-            "20",
-            "21",
-            "22",
-            "23",
+            "25",
             "24",
-            "25"});
+            "23",
+            "22",
+            "21",
+            "20",
+            "19",
+            "18",
+            "17",
+            "16",
+            "15",
+            "14",
+            "13",
+            "12",
+            "11",
+            "10",
+            "9",
+            "8",
+            "7",
+            "6",
+            "5",
+            "4",
+            "3",
+            "2",
+            "1"});
             this.cbRA1Slot.Location = new System.Drawing.Point(129, 130);
             this.cbRA1Slot.Name = "cbRA1Slot";
             this.cbRA1Slot.Size = new System.Drawing.Size(208, 38);
@@ -649,7 +653,7 @@
             this.pnlRobotCmdA2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.pnlRobotCmdA2.Location = new System.Drawing.Point(378, 3);
             this.pnlRobotCmdA2.Name = "pnlRobotCmdA2";
-            this.pnlRobotCmdA2.Size = new System.Drawing.Size(369, 494);
+            this.pnlRobotCmdA2.Size = new System.Drawing.Size(369, 455);
             this.pnlRobotCmdA2.TabIndex = 49;
             // 
             // label7
@@ -679,16 +683,16 @@
             // 
             this.cbRA2Point.FormattingEnabled = true;
             this.cbRA2Point.Items.AddRange(new object[] {
-            "Port_A",
-            "Port_B",
-            "Port_C",
-            "Port_D",
-            "Port_E",
-            "Port_F",
-            "Port_G",
-            "Port_H",
-            "Aligner1",
-            "Aligner2"});
+            "LoadPort01",
+            "LoadPort02",
+            "LoadPort03",
+            "LoadPort04",
+            "LoadPort05",
+            "LoadPort06",
+            "LoadPort07",
+            "LoadPort08",
+            "Aligner01",
+            "Aligner02"});
             this.cbRA2Point.Location = new System.Drawing.Point(130, 60);
             this.cbRA2Point.Name = "cbRA2Point";
             this.cbRA2Point.Size = new System.Drawing.Size(208, 38);
@@ -790,31 +794,31 @@
             // 
             this.cbRA2Slot.FormattingEnabled = true;
             this.cbRA2Slot.Items.AddRange(new object[] {
-            "1",
-            "2",
-            "3",
-            "4",
-            "5",
-            "6",
-            "7",
-            "8",
-            "9",
-            "10",
-            "11",
-            "12",
-            "13",
-            "14",
-            "15",
-            "16",
-            "17",
-            "18",
-            "19",
-            "20",
-            "21",
-            "22",
-            "23",
+            "25",
             "24",
-            "25"});
+            "23",
+            "22",
+            "21",
+            "20",
+            "19",
+            "18",
+            "17",
+            "16",
+            "15",
+            "14",
+            "13",
+            "12",
+            "11",
+            "10",
+            "9",
+            "8",
+            "7",
+            "6",
+            "5",
+            "4",
+            "3",
+            "2",
+            "1"});
             this.cbRA2Slot.Location = new System.Drawing.Point(130, 130);
             this.cbRA2Slot.Name = "cbRA2Slot";
             this.cbRA2Slot.Size = new System.Drawing.Size(208, 38);
@@ -831,32 +835,46 @@
             this.cbRA2Arm.Size = new System.Drawing.Size(208, 38);
             this.cbRA2Arm.TabIndex = 41;
             // 
-            // panel10
+            // pnlRCmd
             // 
-            this.panel10.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.panel10.Controls.Add(this.btnRContinue);
-            this.panel10.Controls.Add(this.btnRPause);
-            this.panel10.Controls.Add(this.btnRStop);
-            this.panel10.Controls.Add(this.btnRPutPut);
-            this.panel10.Controls.Add(this.btnRPutGet);
-            this.panel10.Controls.Add(this.btnRGetGet);
-            this.panel10.Controls.Add(this.btnRGetPut);
-            this.panel10.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel10.Location = new System.Drawing.Point(3, 509);
-            this.panel10.Name = "panel10";
-            this.panel10.Size = new System.Drawing.Size(750, 203);
-            this.panel10.TabIndex = 51;
+            this.pnlRCmd.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.pnlRCmd.Controls.Add(this.btnRPutPut);
+            this.pnlRCmd.Controls.Add(this.btnRPutGet);
+            this.pnlRCmd.Controls.Add(this.btnRGetGet);
+            this.pnlRCmd.Controls.Add(this.btnRGetPut);
+            this.pnlRCmd.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.pnlRCmd.Location = new System.Drawing.Point(3, 525);
+            this.pnlRCmd.Name = "pnlRCmd";
+            this.pnlRCmd.Size = new System.Drawing.Size(750, 187);
+            this.pnlRCmd.TabIndex = 51;
+            // 
+            // btnRAreaSwap
+            // 
+            this.btnRAreaSwap.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
+            this.btnRAreaSwap.BackColor = System.Drawing.Color.DarkGray;
+            this.tableLayoutPanel23.SetColumnSpan(this.btnRAreaSwap, 2);
+            this.btnRAreaSwap.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.btnRAreaSwap.FlatAppearance.BorderSize = 2;
+            this.btnRAreaSwap.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnRAreaSwap.Font = new System.Drawing.Font("微軟正黑體", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
+            this.btnRAreaSwap.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.btnRAreaSwap.Location = new System.Drawing.Point(238, 3);
+            this.btnRAreaSwap.Name = "btnRAreaSwap";
+            this.btnRAreaSwap.Size = new System.Drawing.Size(280, 49);
+            this.btnRAreaSwap.TabIndex = 52;
+            this.btnRAreaSwap.Text = "Area1 <-> Area2";
+            this.btnRAreaSwap.UseVisualStyleBackColor = false;
+            this.btnRAreaSwap.Click += new System.EventHandler(this.btnRAreaSwap_Click);
             // 
             // btnRPutPut
             // 
             this.btnRPutPut.BackColor = System.Drawing.Color.DarkGray;
-            this.btnRPutPut.Enabled = false;
             this.btnRPutPut.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.btnRPutPut.FlatAppearance.BorderSize = 2;
             this.btnRPutPut.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnRPutPut.Font = new System.Drawing.Font("微軟正黑體", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
             this.btnRPutPut.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.btnRPutPut.Location = new System.Drawing.Point(60, 19);
+            this.btnRPutPut.Location = new System.Drawing.Point(60, 32);
             this.btnRPutPut.Name = "btnRPutPut";
             this.btnRPutPut.Size = new System.Drawing.Size(280, 45);
             this.btnRPutPut.TabIndex = 51;
@@ -867,13 +885,12 @@
             // btnRPutGet
             // 
             this.btnRPutGet.BackColor = System.Drawing.Color.DarkGray;
-            this.btnRPutGet.Enabled = false;
             this.btnRPutGet.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.btnRPutGet.FlatAppearance.BorderSize = 2;
             this.btnRPutGet.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnRPutGet.Font = new System.Drawing.Font("微軟正黑體", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
             this.btnRPutGet.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.btnRPutGet.Location = new System.Drawing.Point(436, 77);
+            this.btnRPutGet.Location = new System.Drawing.Point(436, 90);
             this.btnRPutGet.Name = "btnRPutGet";
             this.btnRPutGet.Size = new System.Drawing.Size(280, 45);
             this.btnRPutGet.TabIndex = 50;
@@ -884,13 +901,12 @@
             // btnRGetGet
             // 
             this.btnRGetGet.BackColor = System.Drawing.Color.DarkGray;
-            this.btnRGetGet.Enabled = false;
             this.btnRGetGet.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.btnRGetGet.FlatAppearance.BorderSize = 2;
             this.btnRGetGet.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnRGetGet.Font = new System.Drawing.Font("微軟正黑體", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
             this.btnRGetGet.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.btnRGetGet.Location = new System.Drawing.Point(436, 19);
+            this.btnRGetGet.Location = new System.Drawing.Point(436, 32);
             this.btnRGetGet.Name = "btnRGetGet";
             this.btnRGetGet.Size = new System.Drawing.Size(280, 45);
             this.btnRGetGet.TabIndex = 48;
@@ -901,33 +917,18 @@
             // btnRGetPut
             // 
             this.btnRGetPut.BackColor = System.Drawing.Color.DarkGray;
-            this.btnRGetPut.Enabled = false;
             this.btnRGetPut.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.btnRGetPut.FlatAppearance.BorderSize = 2;
             this.btnRGetPut.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnRGetPut.Font = new System.Drawing.Font("微軟正黑體", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
             this.btnRGetPut.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.btnRGetPut.Location = new System.Drawing.Point(60, 77);
+            this.btnRGetPut.Location = new System.Drawing.Point(60, 90);
             this.btnRGetPut.Name = "btnRGetPut";
             this.btnRGetPut.Size = new System.Drawing.Size(280, 45);
             this.btnRGetPut.TabIndex = 49;
             this.btnRGetPut.Text = "GetPut";
             this.btnRGetPut.UseVisualStyleBackColor = false;
             this.btnRGetPut.Click += new System.EventHandler(this.RobotFunction_Click);
-            // 
-            // label24
-            // 
-            this.label24.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.label24.AutoSize = true;
-            this.label24.Font = new System.Drawing.Font("微軟正黑體", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-            this.label24.Location = new System.Drawing.Point(38, 572);
-            this.label24.Name = "label24";
-            this.label24.Size = new System.Drawing.Size(173, 30);
-            this.label24.TabIndex = 102;
-            this.label24.Text = "Current Mode";
-            this.label24.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
             // groupBox21
             // 
@@ -968,7 +969,7 @@
             this.pnlRobotStatus.Controls.Add(this.btnRReset);
             this.pnlRobotStatus.Controls.Add(this.nudRSpeed);
             this.pnlRobotStatus.Controls.Add(this.btnRChgMode);
-            this.pnlRobotStatus.Controls.Add(this.cbRNewMode);
+            this.pnlRobotStatus.Controls.Add(this.cbRMode);
             this.pnlRobotStatus.Controls.Add(this.btnRHome);
             this.pnlRobotStatus.Controls.Add(this.btnRDisConn);
             this.pnlRobotStatus.Controls.Add(this.groupBox2);
@@ -1054,6 +1055,20 @@
             this.btnRServoOn.UseVisualStyleBackColor = false;
             this.btnRServoOn.Click += new System.EventHandler(this.RobotFunction_Click);
             // 
+            // label24
+            // 
+            this.label24.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.label24.AutoSize = true;
+            this.label24.Font = new System.Drawing.Font("微軟正黑體", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
+            this.label24.Location = new System.Drawing.Point(38, 572);
+            this.label24.Name = "label24";
+            this.label24.Size = new System.Drawing.Size(173, 30);
+            this.label24.TabIndex = 102;
+            this.label24.Text = "Current Mode";
+            this.label24.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            // 
             // btnRServoOff
             // 
             this.btnRServoOff.BackColor = System.Drawing.Color.DarkGray;
@@ -1125,18 +1140,18 @@
             this.btnRChgMode.UseVisualStyleBackColor = false;
             this.btnRChgMode.Click += new System.EventHandler(this.RobotFunction_Click);
             // 
-            // cbRNewMode
+            // cbRMode
             // 
-            this.cbRNewMode.FormattingEnabled = true;
-            this.cbRNewMode.Items.AddRange(new object[] {
+            this.cbRMode.FormattingEnabled = true;
+            this.cbRMode.Items.AddRange(new object[] {
             "Normal",
             "Dry Mode",
             "Test Mode",
             "Step Mode"});
-            this.cbRNewMode.Location = new System.Drawing.Point(224, 569);
-            this.cbRNewMode.Name = "cbRNewMode";
-            this.cbRNewMode.Size = new System.Drawing.Size(248, 38);
-            this.cbRNewMode.TabIndex = 103;
+            this.cbRMode.Location = new System.Drawing.Point(224, 569);
+            this.cbRMode.Name = "cbRMode";
+            this.cbRMode.Size = new System.Drawing.Size(248, 38);
+            this.cbRMode.TabIndex = 103;
             // 
             // btnRHome
             // 
@@ -2656,6 +2671,7 @@
             this.Btn_ReadLED_A.Tag = "01";
             this.Btn_ReadLED_A.Text = "Read LED";
             this.Btn_ReadLED_A.UseVisualStyleBackColor = true;
+            this.Btn_ReadLED_A.Click += new System.EventHandler(this.PortFunction_Click);
             // 
             // groupBox10
             // 
@@ -2735,6 +2751,7 @@
             // Lab_StateCode_06_A
             // 
             this.Lab_StateCode_06_A.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.Lab_StateCode_06_A.Font = new System.Drawing.Font("微軟正黑體", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
             this.Lab_StateCode_06_A.ImeMode = System.Windows.Forms.ImeMode.NoControl;
             this.Lab_StateCode_06_A.Location = new System.Drawing.Point(303, 144);
             this.Lab_StateCode_06_A.Name = "Lab_StateCode_06_A";
@@ -2746,6 +2763,7 @@
             // Lab_StateCode_19_A
             // 
             this.Lab_StateCode_19_A.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.Lab_StateCode_19_A.Font = new System.Drawing.Font("微軟正黑體", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
             this.Lab_StateCode_19_A.ImeMode = System.Windows.Forms.ImeMode.NoControl;
             this.Lab_StateCode_19_A.Location = new System.Drawing.Point(566, 237);
             this.Lab_StateCode_19_A.Name = "Lab_StateCode_19_A";
@@ -2757,6 +2775,7 @@
             // Lab_StateCode_17_A
             // 
             this.Lab_StateCode_17_A.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.Lab_StateCode_17_A.Font = new System.Drawing.Font("微軟正黑體", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
             this.Lab_StateCode_17_A.ImeMode = System.Windows.Forms.ImeMode.NoControl;
             this.Lab_StateCode_17_A.Location = new System.Drawing.Point(566, 191);
             this.Lab_StateCode_17_A.Name = "Lab_StateCode_17_A";
@@ -2768,6 +2787,7 @@
             // Lab_StateCode_18_A
             // 
             this.Lab_StateCode_18_A.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.Lab_StateCode_18_A.Font = new System.Drawing.Font("微軟正黑體", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
             this.Lab_StateCode_18_A.ImeMode = System.Windows.Forms.ImeMode.NoControl;
             this.Lab_StateCode_18_A.Location = new System.Drawing.Point(566, 214);
             this.Lab_StateCode_18_A.Name = "Lab_StateCode_18_A";
@@ -2779,6 +2799,7 @@
             // Lab_StateCode_16_A
             // 
             this.Lab_StateCode_16_A.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.Lab_StateCode_16_A.Font = new System.Drawing.Font("微軟正黑體", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
             this.Lab_StateCode_16_A.ImeMode = System.Windows.Forms.ImeMode.NoControl;
             this.Lab_StateCode_16_A.Location = new System.Drawing.Point(566, 167);
             this.Lab_StateCode_16_A.Name = "Lab_StateCode_16_A";
@@ -2790,6 +2811,7 @@
             // Lab_StateCode_14_A
             // 
             this.Lab_StateCode_14_A.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.Lab_StateCode_14_A.Font = new System.Drawing.Font("微軟正黑體", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
             this.Lab_StateCode_14_A.ImeMode = System.Windows.Forms.ImeMode.NoControl;
             this.Lab_StateCode_14_A.Location = new System.Drawing.Point(566, 121);
             this.Lab_StateCode_14_A.Name = "Lab_StateCode_14_A";
@@ -2801,6 +2823,7 @@
             // Lab_StateCode_15_A
             // 
             this.Lab_StateCode_15_A.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.Lab_StateCode_15_A.Font = new System.Drawing.Font("微軟正黑體", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
             this.Lab_StateCode_15_A.ImeMode = System.Windows.Forms.ImeMode.NoControl;
             this.Lab_StateCode_15_A.Location = new System.Drawing.Point(566, 144);
             this.Lab_StateCode_15_A.Name = "Lab_StateCode_15_A";
@@ -2812,6 +2835,7 @@
             // Lab_StateCode_13_A
             // 
             this.Lab_StateCode_13_A.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.Lab_StateCode_13_A.Font = new System.Drawing.Font("微軟正黑體", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
             this.Lab_StateCode_13_A.ImeMode = System.Windows.Forms.ImeMode.NoControl;
             this.Lab_StateCode_13_A.Location = new System.Drawing.Point(566, 97);
             this.Lab_StateCode_13_A.Name = "Lab_StateCode_13_A";
@@ -2823,6 +2847,7 @@
             // Lab_StateCode_11_A
             // 
             this.Lab_StateCode_11_A.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.Lab_StateCode_11_A.Font = new System.Drawing.Font("微軟正黑體", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
             this.Lab_StateCode_11_A.ImeMode = System.Windows.Forms.ImeMode.NoControl;
             this.Lab_StateCode_11_A.Location = new System.Drawing.Point(566, 51);
             this.Lab_StateCode_11_A.Name = "Lab_StateCode_11_A";
@@ -2834,6 +2859,7 @@
             // Lab_StateCode_12_A
             // 
             this.Lab_StateCode_12_A.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.Lab_StateCode_12_A.Font = new System.Drawing.Font("微軟正黑體", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
             this.Lab_StateCode_12_A.ImeMode = System.Windows.Forms.ImeMode.NoControl;
             this.Lab_StateCode_12_A.Location = new System.Drawing.Point(566, 74);
             this.Lab_StateCode_12_A.Name = "Lab_StateCode_12_A";
@@ -2944,6 +2970,7 @@
             // Lab_StateCode_10_A
             // 
             this.Lab_StateCode_10_A.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.Lab_StateCode_10_A.Font = new System.Drawing.Font("微軟正黑體", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
             this.Lab_StateCode_10_A.ImeMode = System.Windows.Forms.ImeMode.NoControl;
             this.Lab_StateCode_10_A.Location = new System.Drawing.Point(218, 237);
             this.Lab_StateCode_10_A.Name = "Lab_StateCode_10_A";
@@ -2955,6 +2982,7 @@
             // Lab_StateCode_08_A
             // 
             this.Lab_StateCode_08_A.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.Lab_StateCode_08_A.Font = new System.Drawing.Font("微軟正黑體", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
             this.Lab_StateCode_08_A.ImeMode = System.Windows.Forms.ImeMode.NoControl;
             this.Lab_StateCode_08_A.Location = new System.Drawing.Point(218, 191);
             this.Lab_StateCode_08_A.Name = "Lab_StateCode_08_A";
@@ -2966,6 +2994,7 @@
             // Lab_StateCode_09_A
             // 
             this.Lab_StateCode_09_A.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.Lab_StateCode_09_A.Font = new System.Drawing.Font("微軟正黑體", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
             this.Lab_StateCode_09_A.ImeMode = System.Windows.Forms.ImeMode.NoControl;
             this.Lab_StateCode_09_A.Location = new System.Drawing.Point(218, 214);
             this.Lab_StateCode_09_A.Name = "Lab_StateCode_09_A";
@@ -2977,6 +3006,7 @@
             // Lab_StateCode_07_A
             // 
             this.Lab_StateCode_07_A.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.Lab_StateCode_07_A.Font = new System.Drawing.Font("微軟正黑體", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
             this.Lab_StateCode_07_A.ImeMode = System.Windows.Forms.ImeMode.NoControl;
             this.Lab_StateCode_07_A.Location = new System.Drawing.Point(218, 167);
             this.Lab_StateCode_07_A.Name = "Lab_StateCode_07_A";
@@ -2988,6 +3018,7 @@
             // Lab_StateCode_04_A
             // 
             this.Lab_StateCode_04_A.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.Lab_StateCode_04_A.Font = new System.Drawing.Font("微軟正黑體", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
             this.Lab_StateCode_04_A.ImeMode = System.Windows.Forms.ImeMode.NoControl;
             this.Lab_StateCode_04_A.Location = new System.Drawing.Point(218, 121);
             this.Lab_StateCode_04_A.Name = "Lab_StateCode_04_A";
@@ -2999,6 +3030,7 @@
             // Lab_StateCode_05_A
             // 
             this.Lab_StateCode_05_A.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.Lab_StateCode_05_A.Font = new System.Drawing.Font("微軟正黑體", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
             this.Lab_StateCode_05_A.ImeMode = System.Windows.Forms.ImeMode.NoControl;
             this.Lab_StateCode_05_A.Location = new System.Drawing.Point(218, 144);
             this.Lab_StateCode_05_A.Name = "Lab_StateCode_05_A";
@@ -3010,6 +3042,7 @@
             // Lab_StateCode_03_A
             // 
             this.Lab_StateCode_03_A.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.Lab_StateCode_03_A.Font = new System.Drawing.Font("微軟正黑體", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
             this.Lab_StateCode_03_A.ImeMode = System.Windows.Forms.ImeMode.NoControl;
             this.Lab_StateCode_03_A.Location = new System.Drawing.Point(218, 97);
             this.Lab_StateCode_03_A.Name = "Lab_StateCode_03_A";
@@ -3021,6 +3054,7 @@
             // Lab_StateCode_01_A
             // 
             this.Lab_StateCode_01_A.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.Lab_StateCode_01_A.Font = new System.Drawing.Font("微軟正黑體", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
             this.Lab_StateCode_01_A.ImeMode = System.Windows.Forms.ImeMode.NoControl;
             this.Lab_StateCode_01_A.Location = new System.Drawing.Point(218, 51);
             this.Lab_StateCode_01_A.Name = "Lab_StateCode_01_A";
@@ -3032,6 +3066,7 @@
             // Lab_StateCode_02_A
             // 
             this.Lab_StateCode_02_A.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.Lab_StateCode_02_A.Font = new System.Drawing.Font("微軟正黑體", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
             this.Lab_StateCode_02_A.ImeMode = System.Windows.Forms.ImeMode.NoControl;
             this.Lab_StateCode_02_A.Location = new System.Drawing.Point(218, 74);
             this.Lab_StateCode_02_A.Name = "Lab_StateCode_02_A";
@@ -3171,6 +3206,7 @@
             // RTxt_Message_A
             // 
             this.RTxt_Message_A.BackColor = System.Drawing.SystemColors.ControlLight;
+            this.RTxt_Message_A.Font = new System.Drawing.Font("微軟正黑體", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
             this.RTxt_Message_A.Location = new System.Drawing.Point(10, 57);
             this.RTxt_Message_A.Margin = new System.Windows.Forms.Padding(0);
             this.RTxt_Message_A.Name = "RTxt_Message_A";
@@ -4404,53 +4440,63 @@
             this.Btn_LatchDoor_A.UseVisualStyleBackColor = true;
             this.Btn_LatchDoor_A.Click += new System.EventHandler(this.PortFunction_Click);
             // 
-            // btnRStop
+            // btnContinue
             // 
-            this.btnRStop.BackColor = System.Drawing.Color.OrangeRed;
-            this.btnRStop.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.btnRStop.FlatAppearance.BorderSize = 2;
-            this.btnRStop.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.btnRStop.Font = new System.Drawing.Font("微軟正黑體", 14.25F);
-            this.btnRStop.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.btnRStop.Location = new System.Drawing.Point(60, 141);
-            this.btnRStop.Name = "btnRStop";
-            this.btnRStop.Size = new System.Drawing.Size(192, 46);
-            this.btnRStop.TabIndex = 115;
-            this.btnRStop.Text = "STOP";
-            this.btnRStop.UseVisualStyleBackColor = false;
-            this.btnRStop.Click += new System.EventHandler(this.RobotFunction_Click);
+            this.btnContinue.BackColor = System.Drawing.Color.ForestGreen;
+            this.btnContinue.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.btnContinue.FlatAppearance.BorderSize = 2;
+            this.btnContinue.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnContinue.Font = new System.Drawing.Font("微軟正黑體", 14.25F);
+            this.btnContinue.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.btnContinue.Location = new System.Drawing.Point(513, 3);
+            this.btnContinue.Name = "btnContinue";
+            this.btnContinue.Size = new System.Drawing.Size(192, 47);
+            this.btnContinue.TabIndex = 117;
+            this.btnContinue.Text = "CONTINUE";
+            this.btnContinue.UseVisualStyleBackColor = false;
+            this.btnContinue.Click += new System.EventHandler(this.MotionFunction_Click);
             // 
-            // btnRPause
+            // btnPause
             // 
-            this.btnRPause.BackColor = System.Drawing.Color.Orange;
-            this.btnRPause.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.btnRPause.FlatAppearance.BorderSize = 2;
-            this.btnRPause.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.btnRPause.Font = new System.Drawing.Font("微軟正黑體", 14.25F);
-            this.btnRPause.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.btnRPause.Location = new System.Drawing.Point(288, 141);
-            this.btnRPause.Name = "btnRPause";
-            this.btnRPause.Size = new System.Drawing.Size(192, 46);
-            this.btnRPause.TabIndex = 116;
-            this.btnRPause.Text = "PAUSE";
-            this.btnRPause.UseVisualStyleBackColor = false;
-            this.btnRPause.Click += new System.EventHandler(this.RobotFunction_Click);
+            this.btnPause.BackColor = System.Drawing.Color.Orange;
+            this.btnPause.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.btnPause.FlatAppearance.BorderSize = 2;
+            this.btnPause.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnPause.Font = new System.Drawing.Font("微軟正黑體", 14.25F);
+            this.btnPause.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.btnPause.Location = new System.Drawing.Point(277, 3);
+            this.btnPause.Name = "btnPause";
+            this.btnPause.Size = new System.Drawing.Size(192, 47);
+            this.btnPause.TabIndex = 116;
+            this.btnPause.Text = "PAUSE";
+            this.btnPause.UseVisualStyleBackColor = false;
+            this.btnPause.Click += new System.EventHandler(this.MotionFunction_Click);
             // 
-            // btnRContinue
+            // btnStop
             // 
-            this.btnRContinue.BackColor = System.Drawing.Color.ForestGreen;
-            this.btnRContinue.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.btnRContinue.FlatAppearance.BorderSize = 2;
-            this.btnRContinue.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.btnRContinue.Font = new System.Drawing.Font("微軟正黑體", 14.25F);
-            this.btnRContinue.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.btnRContinue.Location = new System.Drawing.Point(524, 141);
-            this.btnRContinue.Name = "btnRContinue";
-            this.btnRContinue.Size = new System.Drawing.Size(192, 46);
-            this.btnRContinue.TabIndex = 117;
-            this.btnRContinue.Text = "CONTINUE";
-            this.btnRContinue.UseVisualStyleBackColor = false;
-            this.btnRContinue.Click += new System.EventHandler(this.RobotFunction_Click);
+            this.btnStop.BackColor = System.Drawing.Color.OrangeRed;
+            this.btnStop.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.btnStop.FlatAppearance.BorderSize = 2;
+            this.btnStop.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnStop.Font = new System.Drawing.Font("微軟正黑體", 14.25F);
+            this.btnStop.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.btnStop.Location = new System.Drawing.Point(49, 3);
+            this.btnStop.Name = "btnStop";
+            this.btnStop.Size = new System.Drawing.Size(192, 47);
+            this.btnStop.TabIndex = 115;
+            this.btnStop.Text = "STOP";
+            this.btnStop.UseVisualStyleBackColor = false;
+            this.btnStop.Click += new System.EventHandler(this.MotionFunction_Click);
+            // 
+            // pnlMotionStop
+            // 
+            this.pnlMotionStop.Controls.Add(this.btnContinue);
+            this.pnlMotionStop.Controls.Add(this.btnPause);
+            this.pnlMotionStop.Controls.Add(this.btnStop);
+            this.pnlMotionStop.Location = new System.Drawing.Point(718, -2);
+            this.pnlMotionStop.Name = "pnlMotionStop";
+            this.pnlMotionStop.Size = new System.Drawing.Size(755, 50);
+            this.pnlMotionStop.TabIndex = 1;
             // 
             // FormManual
             // 
@@ -4458,6 +4504,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.Control;
             this.ClientSize = new System.Drawing.Size(1512, 858);
+            this.Controls.Add(this.pnlMotionStop);
             this.Controls.Add(this.tbcManual);
             this.Font = new System.Drawing.Font("微軟正黑體", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Fixed3D;
@@ -4479,7 +4526,7 @@
             this.pnlRobotCmdA1.PerformLayout();
             this.pnlRobotCmdA2.ResumeLayout(false);
             this.pnlRobotCmdA2.PerformLayout();
-            this.panel10.ResumeLayout(false);
+            this.pnlRCmd.ResumeLayout(false);
             this.groupBox21.ResumeLayout(false);
             this.panel13.ResumeLayout(false);
             this.pnlRobotStatus.ResumeLayout(false);
@@ -4515,6 +4562,7 @@
             this.groupBox25.ResumeLayout(false);
             this.TblPanel_A.ResumeLayout(false);
             this.TblPanel_A.PerformLayout();
+            this.pnlMotionStop.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -4684,7 +4732,7 @@
         private System.Windows.Forms.Button btnRPut;
         private System.Windows.Forms.ComboBox cbRA2Slot;
         private System.Windows.Forms.ComboBox cbRA2Arm;
-        private System.Windows.Forms.Panel panel10;
+        private System.Windows.Forms.Panel pnlRCmd;
         private System.Windows.Forms.Button btnRPutPut;
         private System.Windows.Forms.Button btnRPutGet;
         private System.Windows.Forms.Button btnRGetGet;
@@ -4790,7 +4838,7 @@
         private System.Windows.Forms.ComboBox cbA2Mode;
         private System.Windows.Forms.Label label22;
         private System.Windows.Forms.Button btnRChgMode;
-        private System.Windows.Forms.ComboBox cbRNewMode;
+        private System.Windows.Forms.ComboBox cbRMode;
         private System.Windows.Forms.Label label24;
         private System.Windows.Forms.NumericUpDown nudRSpeed;
         private System.Windows.Forms.NumericUpDown nudA2Speed;
@@ -4802,8 +4850,10 @@
         private System.Windows.Forms.Button btnRServoOn;
         private System.Windows.Forms.Button btnRServoOff;
         private System.Windows.Forms.Button btnRReset;
-        private System.Windows.Forms.Button btnRContinue;
-        private System.Windows.Forms.Button btnRPause;
-        private System.Windows.Forms.Button btnRStop;
+        private System.Windows.Forms.Button btnContinue;
+        private System.Windows.Forms.Button btnPause;
+        private System.Windows.Forms.Button btnStop;
+        private System.Windows.Forms.Panel pnlMotionStop;
+        private System.Windows.Forms.Button btnRAreaSwap;
     }
 }

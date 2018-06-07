@@ -71,7 +71,26 @@ namespace Adam.Util
                     break;
             }
         }
-        
+
+        public static void UpdateMode(string device, string msg)
+        {
+            switch (device)
+            {
+                case "Robot01":
+                    robot1.Mode = msg;
+                    break;
+                case "Robot02":
+                    robot2.Mode = msg;
+                    break;
+                case "Aligner01":
+                    aligner1.Mode = msg;
+                    break;
+                case "Aligner02":
+                    aligner2.Mode = msg;
+                    break;
+            }
+        }
+
         public static void UpdateRIO(string device, string msg)
         {
             RobotState robot = null;
@@ -99,18 +118,53 @@ namespace Adam.Util
             switch (result[0])
             {
                 case "004":
-                    robot.Vacuum_R = result[1];
-                    aligner.Vacuum = result[1];
+                    if (robot != null)
+                        robot.Present_R = result[1];
+                    if (aligner != null)
+                        aligner.Present = result[1];
                     break;
                 case "005":
-                    robot.Vacuum_L = result[1];
+                    if (robot != null)
+                        robot.Present_L = result[1];
                     break;
-                case "008":
-                    robot.Present_R = result[1];
-                    aligner.Present = result[1];
+            }
+        }
+
+        public static void UpdateSV(string device, string msg)
+        {
+            RobotState robot = null;
+            AlignerState aligner = null;
+            switch (device)
+            {
+                case "Robot01":
+                    robot = robot1;
                     break;
-                case "009":
-                    robot.Present_L = result[1];
+                case "Robot02":
+                    robot = robot2;
+                    break;
+                case "Aligner01":
+                    aligner = aligner1;
+                    break;
+                case "Aligner02":
+                    aligner = aligner2;
+                    break;
+                default:
+                    return;
+            }
+            if (msg == null || msg.IndexOf(",") < 0)
+                return;
+            string[] result = msg.Split(',');
+            switch (result[0])
+            {
+                case "01":
+                    if(robot != null)
+                        robot.Vacuum_R = result[1];
+                    if (aligner != null)
+                        aligner.Vacuum = result[1];
+                    break;
+                case "02":
+                    if (robot != null)
+                        robot.Vacuum_L = result[1];
                     break;
             }
         }

@@ -13,21 +13,23 @@ using TransferControl.Management;
 
 namespace Adam
 {
-    public partial class AlarmFrom : Form
+    public partial class FromAlarm : Form
     {
-        public AlarmFrom()
+        public FromAlarm()
         {
             InitializeComponent();
         }
 
         private void ResetAll_bt_Click(object sender, EventArgs e)
         {
-
-            //var NodeList = ((List<AlarmInfo>)AlarmList_gv.DataSource).ToList().GroupBy(t => t.NodeName);
-            //foreach(var group in NodeList)
-            //{
-            //    NodeManagement.Get(group.First().NodeName).SendCommand(new Transaction(new List<Job>(), "", "", Transaction.Command.RobotType.Reset, "", 300000));
-            //}
+            Transaction Txn;
+            var NodeList = ((List<AlarmInfo>)AlarmList_gv.DataSource).ToList().GroupBy(t => t.NodeName);
+            foreach (var group in NodeList)
+            {
+                Txn = new Transaction();
+                Txn.Method = Transaction.Command.RobotType.Reset;
+                NodeManagement.Get(group.First().NodeName).SendCommand(Txn);
+            }
         }
 
         private void AlarmFrom_Load(object sender, EventArgs e)

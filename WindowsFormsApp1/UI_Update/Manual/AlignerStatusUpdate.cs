@@ -50,6 +50,12 @@ namespace Adam.UI_Update.Manual
                         case Transaction.Command.AlignerType.GetError:
                             StateUtil.UpdateError(name, msg);
                             break;
+                        case Transaction.Command.AlignerType.GetMode:
+                            StateUtil.UpdateMode(name, msg);
+                            break;
+                        case Transaction.Command.AlignerType.GetSV:
+                            StateUtil.UpdateSV(name, msg);
+                            break;
                         default:
                             manual.Cursor = Cursors.Default;
                             Control tbcManual = manual.Controls.Find("tbcManual", true).FirstOrDefault() as Control;
@@ -57,44 +63,6 @@ namespace Adam.UI_Update.Manual
                             break;
                     }
                     UpdateStatus(name);
-                    if (method.Equals(Transaction.Command.AlignerType.GetRIO))
-                    {
-                        Transaction next_txn = new Transaction();
-                        next_txn = new Transaction();
-                        switch (txn.Value)
-                        {
-                            case "4":
-                                next_txn.Method = Transaction.Command.AlignerType.GetRIO;
-                                next_txn.Value = "8"; //8 Present ¦^õX¦b®u Sensor ªºª¬ºA
-                                break;
-                        }
-                        if (!next_txn.Method.Equals(""))
-                        {
-                            next_txn.FormName = "FormManual";
-                            Node robot = NodeManagement.Get(name);
-                            robot.SendCommand(next_txn);
-                        }
-                        else
-                        {
-                            //do nothing
-                        }
-                    }
-                    if (method.Equals(Transaction.Command.AlignerType.AlignerServo))
-                    {
-                        Transaction next_txn = new Transaction();
-                        next_txn = new Transaction();
-                        next_txn.Method = Transaction.Command.AlignerType.GetStatus;
-                        if (!next_txn.Method.Equals(""))
-                        {
-                            next_txn.FormName = "FormManual";
-                            Node robot = NodeManagement.Get(name);
-                            robot.SendCommand(next_txn);
-                        }
-                        else
-                        {
-                            //do nothing
-                        }
-                    }
                 }
             }
             catch(Exception e)
@@ -134,8 +102,9 @@ namespace Adam.UI_Update.Manual
                 Control tbServo = null;
                 Control tbWaferSensor = null;
                 Control tbVacSolenoid = null;
-                NumericUpDown nudSpeedNew = null;
+                NumericUpDown nudSpeed = null;
                 Control tbError = null;
+                ComboBox cbMode = null;
 
                 if (device.Equals("Aligner01"))
                 {
@@ -143,8 +112,9 @@ namespace Adam.UI_Update.Manual
                     tbServo = manual.Controls.Find("tbA1Servo", true).FirstOrDefault() as Control;
                     tbWaferSensor = manual.Controls.Find("tbA1WaferSensor", true).FirstOrDefault() as Control;
                     tbVacSolenoid = manual.Controls.Find("tbA1VacSolenoid", true).FirstOrDefault() as Control;
-                    nudSpeedNew = manual.Controls.Find("nudA1SpeedNew", true).FirstOrDefault() as NumericUpDown;
+                    nudSpeed = manual.Controls.Find("nudA1Speed", true).FirstOrDefault() as NumericUpDown;
                     tbError = manual.Controls.Find("tbA1Error", true).FirstOrDefault() as Control;
+                    cbMode = manual.Controls.Find("cbA1Mode", true).FirstOrDefault() as ComboBox;
                 }
                 else if (device.Equals("Aligner02"))
                 {
@@ -152,8 +122,9 @@ namespace Adam.UI_Update.Manual
                     tbServo = manual.Controls.Find("tbA2Servo", true).FirstOrDefault() as Control;
                     tbWaferSensor = manual.Controls.Find("tbA2WaferSensor", true).FirstOrDefault() as Control;
                     tbVacSolenoid = manual.Controls.Find("tbA2VacSolenoid", true).FirstOrDefault() as Control;
-                    nudSpeedNew = manual.Controls.Find("nudA2SpeedNew", true).FirstOrDefault() as NumericUpDown;
+                    nudSpeed = manual.Controls.Find("nudA2Speed", true).FirstOrDefault() as NumericUpDown;
                     tbError = manual.Controls.Find("tbA2Error", true).FirstOrDefault() as Control;
+                    cbMode = manual.Controls.Find("cbA2Mode", true).FirstOrDefault() as ComboBox;
                 }
 
                 
@@ -177,7 +148,8 @@ namespace Adam.UI_Update.Manual
                 }
                 if (tbWaferSensor != null)
                 {
-                    tbWaferSensor.Text = aligner.Present.Equals("1") ? "ON" : "OFF"; Color color = new Color();
+                    tbWaferSensor.Text = aligner.Present.Equals("1") ? "ON" : "OFF";
+                    Color color = new Color();
                     switch (tbWaferSensor.Text)
                     {
                         case "OFF":
@@ -194,7 +166,8 @@ namespace Adam.UI_Update.Manual
                 }
                 if (tbVacSolenoid != null)
                 {
-                    tbVacSolenoid.Text = aligner.Vacuum.Equals("1") ? "ON" : "OFF"; Color color = new Color();
+                    tbVacSolenoid.Text = aligner.Vacuum.Equals("1") ? "ON" : "OFF";
+                    Color color = new Color();
                     switch (tbVacSolenoid.Text)
                     {
                         case "OFF":
@@ -209,13 +182,17 @@ namespace Adam.UI_Update.Manual
                     }
                     tbVacSolenoid.BackColor = color;
                 }
-                if (nudSpeedNew != null)
+                if (nudSpeed != null)
                 {
-                    nudSpeedNew.Text = aligner.Speed.Equals("00") ? "100" : Int32.Parse(aligner.Speed).ToString();
+                    nudSpeed.Text = aligner.Speed.Equals("00") ? "100" : Int32.Parse(aligner.Speed).ToString();
                 }
                 if (tbError != null)
                 {
                     tbError.Text = aligner.Error;
+                }
+                if (cbMode != null)
+                {
+                    cbMode.SelectedIndex = Int32.Parse(aligner.Mode);
                 }
             }
                 
