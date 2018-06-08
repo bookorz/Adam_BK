@@ -84,7 +84,6 @@ C:\Users\ethan_huang\source\repos\Adam\WindowsFormsApp1\obj\Debug\Adam.FormAlarm
 C:\Users\ethan_huang\source\repos\Adam\WindowsFormsApp1\obj\Debug\GUI.FormLogin.resources
 C:\Users\ethan_huang\source\repos\Adam\WindowsFormsApp1\obj\Debug\GUI.FormLogSave.resources
 C:\Users\ethan_huang\source\repos\Adam\WindowsFormsApp1\obj\Debug\GUI.FormManual.resources
-C:\Users\ethan_huang\source\repos\Adam\WindowsFormsApp1\obj\Debug\GUI.FormTerminal.resources
 C:\Users\ethan_huang\source\repos\Adam\WindowsFormsApp1\obj\Debug\GUI.FormVersion.resources
 C:\Users\ethan_huang\source\repos\Adam\WindowsFormsApp1\obj\Debug\UI_TEST.IO.resources
 C:\Users\ethan_huang\source\repos\Adam\WindowsFormsApp1\obj\Debug\UI_TEST.LLSetting.resources
@@ -175,3 +174,4 @@ C:\軟體專案開發\team\adam\WindowsFormsApp1\obj\Debug\ja-JP\Adam.resources.
 C:\軟體專案開發\team\adam\WindowsFormsApp1\obj\Debug\Adam.csproj.CopyComplete
 C:\軟體專案開發\team\adam\WindowsFormsApp1\obj\Debug\Adam.exe
 C:\軟體專案開發\team\adam\WindowsFormsApp1\obj\Debug\Adam.pdb
+C:\Users\ethan_huang\source\repos\Adam\WindowsFormsApp1\obj\Debug\Adam.FormTerminal.resources

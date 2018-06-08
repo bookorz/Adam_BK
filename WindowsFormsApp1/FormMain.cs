@@ -284,21 +284,25 @@ namespace Adam
                     break;
             }
             Transaction txn = new Transaction();
-            if (RouteCtrl.GetMode().Equals("Auto"))
-            {
-                switch (Node.Type)
-                {
-                    case "LoadPort":
-                        switch (Txn.Method)
-                        {
-                            case Transaction.Command.LoadPortType.GetMapping:
-                                WaferAssignUpdate.UpdateLoadPortMapping(Node.Name, Msg.Value);
 
-                                break;
-                        }
-                        break;
-                }
+            switch (Node.Type)
+            {
+                case "LoadPort":
+                    switch (Txn.Method)
+                    {
+                        case Transaction.Command.LoadPortType.GetMapping:
+                            if (RouteCtrl.GetMode().Equals("Auto"))
+                            {
+                                WaferAssignUpdate.UpdateLoadPortMapping(Node.Name, Msg.Value);
+                            }
+                            break;
+                        case Transaction.Command.LoadPortType.ReadStatus:
+                            Node.StatusInfo = Msg.Value;
+                            break;
+                    }
+                    break;
             }
+
             switch (Txn.FormName)
             {
                 case "FormManual":
@@ -782,10 +786,17 @@ namespace Adam
                 {
                     Aligner1.LockByNode = "LoadPort01";
                 }
+                if (AlarmManagement.HasCritical())
+                {
+                    MessageBox.Show("關鍵Alarm尚未解除");
+                }
+                else
+                {
 
-                ThreadPool.QueueUserWorkItem(new WaitCallback(RouteCtrl.Auto), "Normal");
-                Mode_btn.Tag = "Auto";
-                Mode_btn.BackColor = Color.Lime;
+                    ThreadPool.QueueUserWorkItem(new WaitCallback(RouteCtrl.Auto), "Normal");
+                    Mode_btn.Tag = "Auto";
+                    Mode_btn.BackColor = Color.Lime;
+                }
             }
             else
             {
