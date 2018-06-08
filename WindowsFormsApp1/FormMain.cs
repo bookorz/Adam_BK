@@ -214,7 +214,7 @@ namespace Adam
 
         private void terminalToolStripMenuItem_Click_1(object sender, EventArgs e)
         {
-            GUI.FormTerminal formTerminal = new GUI.FormTerminal();
+            FormTerminal formTerminal = new FormTerminal();
             formTerminal.ShowDialog();
         }
 
