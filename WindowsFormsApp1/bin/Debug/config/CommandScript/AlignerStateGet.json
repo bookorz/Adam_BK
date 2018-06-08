@@ -2,24 +2,13 @@
   {
     "ExcuteMethod": "",
     "FinishMethod": "",
-    "Method": "GetStatus",
+    "Method": "GetSpeed",
     "Arm": "",
     "Slot": "",
     "Position": "",
     "Value": "",
     "Index":"1",
     "Flag":"Start"
-  },
-  {
-    "ExcuteMethod": "GetStatus",
-    "FinishMethod": "",
-    "Method": "GetSpeed",
-    "Arm": "",
-    "Slot": "",
-    "Position": "",
-    "Value": "",
-    "Index":"2",
-    "Flag":""
   }
   ,
   {
@@ -30,7 +19,7 @@
     "Slot": "",
     "Position": "",
     "Value": "",
-    "Index":"3",
+    "Index":"2",
     "Flag":""
   },
   {
@@ -41,7 +30,7 @@
     "Slot": "",
     "Position": "",
     "Value": "00",
-    "Index":"4",
+    "Index":"3",
     "Flag":""
   },
   {
@@ -52,7 +41,7 @@
     "Slot": "",
     "Position": "",
     "Value": "4",
-    "Index":"5",
+    "Index":"4",
     "Flag":""
   },
   {
@@ -63,7 +52,18 @@
     "Slot": "",
     "Position": "",
     "Value": "1",
+    "Index":"5",
+    "Flag":""
+  },
+  {
+    "ExcuteMethod": "GetSV",
+    "FinishMethod": "",
+    "Method": "GetStatus",
+    "Arm": "",
+    "Slot": "",
+    "Position": "",
+    "Value": "",
     "Index":"6",
     "Flag":"End"
-  }
+  },
 ]

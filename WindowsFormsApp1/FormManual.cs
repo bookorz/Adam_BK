@@ -458,12 +458,12 @@ namespace GUI
                     isRobotMoveUp = false;//Put option 1
                     break;
                 case "btnROrg":
-                    txns[0].Method = Transaction.Command.RobotType.RobotHome;
+                    txns[0].Method = Transaction.Command.RobotType.RobotOrginSearch;
                     isRobotMoveDown = false;//Get option 1
                     isRobotMoveUp = false;//Put option 1
                     break;
                 case "btnRHome":
-                    txns[0].Method = Transaction.Command.RobotType.RobotHome;
+                    txns[0].Method = Transaction.Command.RobotType.RobotHomeSafety;//20180607 RobotHome => RobotHomeSafety
                     isRobotMoveDown = false;//Get option 1
                     isRobotMoveUp = false;//Put option 1
                     break;
@@ -657,7 +657,7 @@ namespace GUI
 
         private void setRobotStatus()
         {
-            Control[] controls = new Control[] { tbRError, tbRLVacuSolenoid, tbRLwaferSensor, tbRRVacuSolenoid, tbRRwaferSensor, tbRServo, nudRSpeed, tbRStatus };
+            Control[] controls = new Control[] { tbRError, tbRLVacuSolenoid, tbRLwaferSensor, tbRRVacuSolenoid, tbRRwaferSensor, nudRSpeed, tbRStatus };
             foreach (Control control in controls)
             {
                 control.Text = "";
@@ -678,7 +678,7 @@ namespace GUI
 
         private void setAlignerStatus()
         {
-            Control[] controls = new Control[] { tbA1Error, tbA1Servo, tbA1Status, tbA1VacSolenoid, tbA1WaferSensor, tbA1WaferSensor, tbA2Error, tbA2Servo, tbA2Status, tbA2VacSolenoid, tbA2WaferSensor, tbA2WaferSensor, nudA1Speed, nudA2Speed };
+            Control[] controls = new Control[] { tbA1Error, tbA1Status, tbA1VacSolenoid, tbA1WaferSensor, tbA1WaferSensor, tbA2Error, tbA2Status, tbA2VacSolenoid, tbA2WaferSensor, tbA2WaferSensor, nudA1Speed, nudA2Speed };
             foreach (Control control in controls)
             {
                 control.Text = "";

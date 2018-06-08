@@ -333,7 +333,7 @@ namespace Adam
                                 //case Transaction.Command.RobotType.Stop:
                                 //case Transaction.Command.RobotType.Pause:
                                 //case Transaction.Command.RobotType.Continue:
-                                    Thread.Sleep(1000);
+                                    Thread.Sleep(500);
                                     //向Robot 詢問狀態
                                     Node robot = NodeManagement.Get(Node.Name);
                                     robot.ExcuteScript("RobotStateGet", "FormManual");
@@ -356,7 +356,7 @@ namespace Adam
                                 case Transaction.Command.AlignerType.AlignerMode:
                                 case Transaction.Command.AlignerType.Reset:
                                 case Transaction.Command.AlignerType.AlignerServo:
-                                    Thread.Sleep(1000);
+                                    Thread.Sleep(500);
                                     //向Aligner 詢問狀態
                                     Node aligner = NodeManagement.Get(Node.Name);
                                     aligner.ExcuteScript("AlignerStateGet", "FormManual");
