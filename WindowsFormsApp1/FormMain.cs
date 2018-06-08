@@ -1,23 +1,14 @@
 using SANWA.Utility;
 using System;
 using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
 using System.Drawing;
-using System.Globalization;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 using TransferControl.Engine;
 using TransferControl.Management;
 using log4net.Config;
 using Adam.UI_Update.Monitoring;
 using log4net;
-using Newtonsoft.Json;
 using Adam.UI_Update.Manual;
-using System.Collections;
-using System.Diagnostics;
 using Adam.UI_Update.OCR;
 using Adam.UI_Update.WaferMapping;
 using System.Threading;
@@ -353,9 +344,9 @@ namespace Adam
                                 case Transaction.Command.RobotType.RobotMode:
                                 case Transaction.Command.RobotType.Reset:
                                 case Transaction.Command.RobotType.RobotServo:
-                                //case Transaction.Command.RobotType.Stop:
-                                //case Transaction.Command.RobotType.Pause:
-                                //case Transaction.Command.RobotType.Continue:
+                                    //case Transaction.Command.RobotType.Stop:
+                                    //case Transaction.Command.RobotType.Pause:
+                                    //case Transaction.Command.RobotType.Continue:
                                     Thread.Sleep(1000);
                                     //向Robot 詢問狀態
                                     Node robot = NodeManagement.Get(Node.Name);
@@ -434,6 +425,12 @@ namespace Adam
                 CurrentAlarm.SystemAlarmCode = Detail.CodeID;
                 CurrentAlarm.Desc = Detail.Code_Cause;
                 CurrentAlarm.EngDesc = Detail.Code_Cause_English;
+                CurrentAlarm.Type = Detail.Code_Type;
+                CurrentAlarm.IsStop = Detail.IsStop;
+                if (CurrentAlarm.IsStop)
+                {
+                    RouteCtrl.Stop();
+                }
             }
             catch (Exception e)
             {
@@ -447,6 +444,7 @@ namespace Adam
 
             AlarmUpdate.UpdateAlarmList(AlarmManagement.GetAll());
             AlarmUpdate.UpdateAlarmHistory(AlarmManagement.GetHistory());
+
         }
 
         public void On_Command_Finished(Node Node, Transaction Txn, ReturnMessage Msg)
@@ -509,53 +507,37 @@ namespace Adam
         public void On_Event_Trigger(Node Node, ReturnMessage Msg)
         {
             logger.Debug("On_Event_Trigger");
-            if (Msg.Command.Equals("ERROR"))
+
+
+            Transaction txn = new Transaction();
+            switch (Node.Type)
             {
-                Node.InitialComplete = false;
-                logger.Debug("On_Command_Error");
-                AlarmInfo CurrentAlarm = new AlarmInfo();
-                CurrentAlarm.NodeName = Node.Name;
-                CurrentAlarm.AlarmCode = Msg.Value;
-                try
-                {
-
-                    AlarmMessage Detail = AlmMapping.Get(Node.Brand, Node.Type, CurrentAlarm.AlarmCode);
-
-                    CurrentAlarm.SystemAlarmCode = Detail.CodeID;
-                    CurrentAlarm.Desc = Detail.Code_Cause;
-                    CurrentAlarm.EngDesc = Detail.Code_Cause_English;
-                }
-                catch
-                {
-                    CurrentAlarm.Desc = "未定義";
-                }
-                CurrentAlarm.TimeStamp = DateTime.Now.ToString("yyyy/MM/dd HH:mm:ss:fff");
-
-                AlarmManagement.Add(CurrentAlarm);
-                AlarmUpdate.UpdateAlarmList(AlarmManagement.GetAll());
-                AlarmUpdate.UpdateAlarmHistory(AlarmManagement.GetHistory());
+                case "LoadPort":
+                    ManualPortStatusUpdate.UpdateLog(Node.Name, Msg.Command + " Trigger");
+                    switch (Msg.Command)
+                    {
+                        case "MANSW":
+                            if (RouteCtrl.GetMode().Equals("Auto"))
+                            {
+                                Node.ExcuteScript("LoadPortMapping", "MANSW", true);
+                            }
+                            break;
+                        case "PODON":
+                            if (RouteCtrl.GetMode().Equals("Auto"))
+                            {
+                                Node.ExcuteScript("LoadPortFoupIn", "LoadPortFoup", true);
+                            }
+                            break;
+                        case "PODOF":
+                            if (RouteCtrl.GetMode().Equals("Auto"))
+                            {
+                                Node.ExcuteScript("LoadPortFoupOut", "LoadPortFoup", true);
+                            }
+                            break;
+                    }
+                    break;
             }
-            else
-            {
-                Transaction txn = new Transaction();
-                switch (Node.Type)
-                {
-                    case "LoadPort":
 
-                        switch (Msg.Command)
-                        {
-                            case "MANSW":
-                                if (RouteCtrl.GetMode().Equals("Auto"))
-                                {
-                                    ManualPortStatusUpdate.UpdateLog(Node.Name, Msg.Command + " Trigger");
-
-                                    Node.ExcuteScript("LoadPortMapping", "MANSW",true);
-                                }
-                                break;
-                        }
-                        break;
-                }
-            }
         }
 
         public void On_Node_State_Changed(Node Node, string Status)
@@ -586,7 +568,7 @@ namespace Adam
             logger.Debug("On_Port_Finished");
             Transaction txn = new Transaction();
             txn.Method = Transaction.Command.LoadPortType.Unload;
-            NodeManagement.Get(PortName).SendCommand(txn,true);
+            NodeManagement.Get(PortName).SendCommand(txn, true);
         }
 
         public void On_Job_Location_Changed(Job Job)
@@ -598,7 +580,7 @@ namespace Adam
 
         public void On_Script_Finished(Node Node, string ScriptName, string FormName)
         {
-            logger.Debug("On_Script_Finished: " + Node.Name+" Script:"+ ScriptName +" Finished, Form name:"+FormName);
+            logger.Debug("On_Script_Finished: " + Node.Name + " Script:" + ScriptName + " Finished, Form name:" + FormName);
             switch (FormName)
             {
                 case "FormManual-Script":
@@ -768,12 +750,13 @@ namespace Adam
                 RouteCtrl.ConnectAll();
 
                 Connection_btn.Tag = "Online";
+                Connection_btn.Text = "Online";
                 Connection_btn.BackColor = Color.Lime;
             }
             else
             {
                 RouteCtrl.DisconnectAll();
-
+                Connection_btn.Text = "Offline";
                 Connection_btn.Tag = "Offline";
                 Connection_btn.BackColor = Color.Red;
             }

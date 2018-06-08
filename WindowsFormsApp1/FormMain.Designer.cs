@@ -33,7 +33,9 @@ namespace Adam
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             this.splitContainer13 = new System.Windows.Forms.SplitContainer();
             this.groupBox54 = new System.Windows.Forms.GroupBox();
+            this.Mode_btn = new System.Windows.Forms.Button();
             this.groupBox19 = new System.Windows.Forms.GroupBox();
+            this.Connection_btn = new System.Windows.Forms.Button();
             this.button27 = new System.Windows.Forms.Button();
             this.groupBox5 = new System.Windows.Forms.GroupBox();
             this.DifferentialPressureAlarm2_Signal = new System.Windows.Forms.Button();
@@ -46,7 +48,7 @@ namespace Adam
             this.Air_Signal = new System.Windows.Forms.Button();
             this.Vacuum_Signal = new System.Windows.Forms.Button();
             this.DoorSwitch_Signal = new System.Windows.Forms.Button();
-            this.button6 = new System.Windows.Forms.Button();
+            this.CurrentSate_btn = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
             this.groupBox4 = new System.Windows.Forms.GroupBox();
             this.Buzzer2_Signal = new System.Windows.Forms.Button();
@@ -107,8 +109,6 @@ namespace Adam
             this.terminalToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.panel3 = new System.Windows.Forms.Panel();
             this.directorySearcher1 = new System.DirectoryServices.DirectorySearcher();
-            this.Connection_btn = new System.Windows.Forms.Button();
-            this.Mode_btn = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer13)).BeginInit();
             this.splitContainer13.Panel1.SuspendLayout();
             this.splitContainer13.Panel2.SuspendLayout();
@@ -155,6 +155,14 @@ namespace Adam
             this.groupBox54.Name = "groupBox54";
             this.groupBox54.TabStop = false;
             // 
+            // Mode_btn
+            // 
+            this.Mode_btn.BackColor = System.Drawing.Color.Orange;
+            resources.ApplyResources(this.Mode_btn, "Mode_btn");
+            this.Mode_btn.Name = "Mode_btn";
+            this.Mode_btn.UseVisualStyleBackColor = false;
+            this.Mode_btn.Click += new System.EventHandler(this.Mode_btn_Click);
+            // 
             // groupBox19
             // 
             this.groupBox19.Controls.Add(this.Connection_btn);
@@ -162,6 +170,14 @@ namespace Adam
             resources.ApplyResources(this.groupBox19, "groupBox19");
             this.groupBox19.Name = "groupBox19";
             this.groupBox19.TabStop = false;
+            // 
+            // Connection_btn
+            // 
+            this.Connection_btn.BackColor = System.Drawing.Color.Red;
+            resources.ApplyResources(this.Connection_btn, "Connection_btn");
+            this.Connection_btn.Name = "Connection_btn";
+            this.Connection_btn.UseVisualStyleBackColor = false;
+            this.Connection_btn.Click += new System.EventHandler(this.Connection_btn_Click);
             // 
             // button27
             // 
@@ -182,7 +198,7 @@ namespace Adam
             this.groupBox5.Controls.Add(this.Air_Signal);
             this.groupBox5.Controls.Add(this.Vacuum_Signal);
             this.groupBox5.Controls.Add(this.DoorSwitch_Signal);
-            this.groupBox5.Controls.Add(this.button6);
+            this.groupBox5.Controls.Add(this.CurrentSate_btn);
             resources.ApplyResources(this.groupBox5, "groupBox5");
             this.groupBox5.Name = "groupBox5";
             this.groupBox5.TabStop = false;
@@ -257,12 +273,12 @@ namespace Adam
             this.DoorSwitch_Signal.Name = "DoorSwitch_Signal";
             this.DoorSwitch_Signal.UseVisualStyleBackColor = false;
             // 
-            // button6
+            // CurrentSate_btn
             // 
-            resources.ApplyResources(this.button6, "button6");
-            this.button6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
-            this.button6.Name = "button6";
-            this.button6.UseVisualStyleBackColor = false;
+            resources.ApplyResources(this.CurrentSate_btn, "CurrentSate_btn");
+            this.CurrentSate_btn.BackColor = System.Drawing.Color.Orange;
+            this.CurrentSate_btn.Name = "CurrentSate_btn";
+            this.CurrentSate_btn.UseVisualStyleBackColor = false;
             // 
             // panel1
             // 
@@ -759,22 +775,6 @@ namespace Adam
             this.directorySearcher1.ServerPageTimeLimit = System.TimeSpan.Parse("-00:00:01");
             this.directorySearcher1.ServerTimeLimit = System.TimeSpan.Parse("-00:00:01");
             // 
-            // Connection_btn
-            // 
-            this.Connection_btn.BackColor = System.Drawing.Color.Red;
-            resources.ApplyResources(this.Connection_btn, "Connection_btn");
-            this.Connection_btn.Name = "Connection_btn";
-            this.Connection_btn.UseVisualStyleBackColor = false;
-            this.Connection_btn.Click += new System.EventHandler(this.Connection_btn_Click);
-            // 
-            // Mode_btn
-            // 
-            this.Mode_btn.BackColor = System.Drawing.Color.Orange;
-            resources.ApplyResources(this.Mode_btn, "Mode_btn");
-            this.Mode_btn.Name = "Mode_btn";
-            this.Mode_btn.UseVisualStyleBackColor = false;
-            this.Mode_btn.Click += new System.EventHandler(this.Mode_btn_Click);
-            // 
             // FormMain
             // 
             resources.ApplyResources(this, "$this");
@@ -844,7 +844,7 @@ namespace Adam
         private System.Windows.Forms.Button Air_Signal;
         private System.Windows.Forms.Button Vacuum_Signal;
         private System.Windows.Forms.Button DoorSwitch_Signal;
-        private System.Windows.Forms.Button button6;
+        private System.Windows.Forms.Button CurrentSate_btn;
         private System.Windows.Forms.Button DifferentialPressureAlarm1_Signal;
         private System.Windows.Forms.Button LoadPortVacuum_Signal;
         private System.Windows.Forms.Button SafetyRelay_Signal;

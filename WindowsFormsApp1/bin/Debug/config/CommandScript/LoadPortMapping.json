@@ -2,13 +2,23 @@
   {
     "ExcuteMethod": "",
     "FinishMethod": "",
+    "Method": "SetOpAccess",
+    "Arm": "",
+    "Slot": "",
+    "Position": "",
+    "Value": "1",
+    "Index":"1",
+    "Flag":"Start"
+  },{
+    "ExcuteMethod": "",
+    "FinishMethod": "SetOpAccess",
     "Method": "MappingLoad",
     "Arm": "",
     "Slot": "",
     "Position": "",
     "Value": "",
-    "Index":"1",
-    "Flag":"Start"
+    "Index":"2",
+    "Flag":""
   },
   {
     "ExcuteMethod": "",
@@ -18,7 +28,18 @@
     "Slot": "",
     "Position": "",
     "Value": "",
-    "Index":"2",
+    "Index":"3",
+    "Flag":""
+  },
+  {
+    "ExcuteMethod": "GetMapping",
+    "FinishMethod": "",
+    "Method": "SetOpAccess",
+    "Arm": "",
+    "Slot": "",
+    "Position": "",
+    "Value": "0",
+    "Index":"4",
     "Flag":"End"
   }
 ]
