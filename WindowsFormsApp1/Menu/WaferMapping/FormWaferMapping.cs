@@ -314,8 +314,14 @@ namespace Adam.Menu.WaferMapping
             Node port = NodeManagement.Get(PortName);
             if (port != null)
             {
-                port.Available = true;
-
+                if (port.IsMapping)
+                {
+                    port.Available = true;
+                }
+                else
+                {
+                    MessageBox.Show(PortName + " 尚未Mapping");
+                }
             }
             else
             {

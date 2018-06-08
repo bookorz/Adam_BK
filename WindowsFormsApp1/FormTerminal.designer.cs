@@ -1,4 +1,4 @@
-﻿namespace GUI
+﻿namespace Adam
 {
     partial class FormTerminal
     {
@@ -28,669 +28,735 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            this.GPBoxCMDSyntax_01 = new System.Windows.Forms.GroupBox();
-            this.CboRobot_A01 = new System.Windows.Forms.ComboBox();
-            this.CboRobot_A04 = new System.Windows.Forms.ComboBox();
-            this.CboRobot_A03 = new System.Windows.Forms.ComboBox();
-            this.LabParaA_06 = new System.Windows.Forms.Label();
-            this.Button_ADD_SEND_01 = new System.Windows.Forms.Button();
-            this.LabParaA_01 = new System.Windows.Forms.Label();
-            this.CboRobot_A06 = new System.Windows.Forms.ComboBox();
-            this.CboRobot_A02 = new System.Windows.Forms.ComboBox();
-            this.LabParaA_05 = new System.Windows.Forms.Label();
-            this.LabParaA_02 = new System.Windows.Forms.Label();
-            this.CboRobot_A05 = new System.Windows.Forms.ComboBox();
-            this.LabParaA_03 = new System.Windows.Forms.Label();
-            this.Label6 = new System.Windows.Forms.Label();
-            this.cbbCommand_01 = new System.Windows.Forms.ComboBox();
-            this.LabParaA_04 = new System.Windows.Forms.Label();
-            this.GroupBox2 = new System.Windows.Forms.GroupBox();
-            this.BtnRobot_RESET_01 = new System.Windows.Forms.Button();
-            this.BtnRobot_SERVO_01 = new System.Windows.Forms.Button();
-            this.BtnRobot_HOME_01 = new System.Windows.Forms.Button();
-            this.GPBox_MODE_01 = new System.Windows.Forms.GroupBox();
-            this.rBtnSyntaxMode_GET_01 = new System.Windows.Forms.RadioButton();
-            this.rBtnSyntaxMode_SET_01 = new System.Windows.Forms.RadioButton();
-            this.rBtnSyntaxMode_CMD_01 = new System.Windows.Forms.RadioButton();
-            this.BtnRobot_Connect_01 = new System.Windows.Forms.Button();
-            this.Button_Clean_Message = new System.Windows.Forms.Button();
-            this.RichTextBox_MESSAGE_LOG = new System.Windows.Forms.RichTextBox();
-            this.Button_SEND_COMMAND = new System.Windows.Forms.Button();
-            this.cbbCommand_SEND = new System.Windows.Forms.ComboBox();
-            this.DGV_Script_A = new System.Windows.Forms.DataGridView();
-            this.Col_Tag = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Col_ScriptCMD = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.GroupBox_ATUORUN = new System.Windows.Forms.GroupBox();
-            this.Btn_AUTO_RUN_PAUSE_A = new System.Windows.Forms.Button();
-            this.Btn_AUTO_RUN_STOP_A = new System.Windows.Forms.Button();
-            this.Btn_AUTORUN_STEP_A = new System.Windows.Forms.Button();
-            this.Btn_ADD_SCRIPT_A = new System.Windows.Forms.Button();
-            this.Btn_Edit_Mode_A = new System.Windows.Forms.Button();
-            this.Btn_AUTO_RUN_START_A = new System.Windows.Forms.Button();
-            this.tabControl1 = new System.Windows.Forms.TabControl();
-            this.tabPage1 = new System.Windows.Forms.TabPage();
-            this.tabPage2 = new System.Windows.Forms.TabPage();
-            this.tabPage3 = new System.Windows.Forms.TabPage();
-            this.tabPage4 = new System.Windows.Forms.TabPage();
-            this.tabPage5 = new System.Windows.Forms.TabPage();
-            this.tabPage6 = new System.Windows.Forms.TabPage();
-            this.GPBoxCMDSyntax_01.SuspendLayout();
-            this.GroupBox2.SuspendLayout();
-            this.GPBox_MODE_01.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.DGV_Script_A)).BeginInit();
-            this.GroupBox_ATUORUN.SuspendLayout();
-            this.tabControl1.SuspendLayout();
-            this.tabPage1.SuspendLayout();
+            this.components = new System.ComponentModel.Container();
+            this.tlpTerminal = new System.Windows.Forms.TableLayoutPanel();
+            this.tlpCommandSetting = new System.Windows.Forms.TableLayoutPanel();
+            this.spcCommandHistory = new System.Windows.Forms.SplitContainer();
+            this.gbCommandList = new System.Windows.Forms.GroupBox();
+            this.spcCommandList = new System.Windows.Forms.SplitContainer();
+            this.tableLayoutPanel3 = new System.Windows.Forms.TableLayoutPanel();
+            this.btnDelete = new System.Windows.Forms.Button();
+            this.btnDown = new System.Windows.Forms.Button();
+            this.btnUP = new System.Windows.Forms.Button();
+            this.sbtnRun = new System.Controls.SplitButton();
+            this.lsbCommandList = new System.Windows.Forms.ListBox();
+            this.gbHistory = new System.Windows.Forms.GroupBox();
+            this.lsbHistory = new System.Windows.Forms.ListBox();
+            this.gbSetting = new System.Windows.Forms.GroupBox();
+            this.spcSettingandTest = new System.Windows.Forms.SplitContainer();
+            this.tlpAssemblySetting = new System.Windows.Forms.TableLayoutPanel();
+            this.tlpAssemblyUI = new System.Windows.Forms.TableLayoutPanel();
+            this.txbManually = new System.Windows.Forms.TextBox();
+            this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
+            this.btnAppendlist = new System.Windows.Forms.Button();
+            this.btnSend = new System.Windows.Forms.Button();
+            this.tlpButtonList = new System.Windows.Forms.TableLayoutPanel();
+            this.btnRemove = new System.Windows.Forms.Button();
+            this.btnExport = new System.Windows.Forms.Button();
+            this.btnImport = new System.Windows.Forms.Button();
+            this.btnClearHistory = new System.Windows.Forms.Button();
+            this.gbCondition = new System.Windows.Forms.GroupBox();
+            this.tlpOperationSplit = new System.Windows.Forms.TableLayoutPanel();
+            this.lsbCommand = new System.Windows.Forms.ListBox();
+            this.label3 = new System.Windows.Forms.Label();
+            this.txbNotice = new System.Windows.Forms.TextBox();
+            this.label2 = new System.Windows.Forms.Label();
+            this.lsbCommandType = new System.Windows.Forms.ListBox();
+            this.lsbDeviceName = new System.Windows.Forms.ListBox();
+            this.label1 = new System.Windows.Forms.Label();
+            this.splitContainer1 = new System.Windows.Forms.SplitContainer();
+            this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
+            this.toolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolStripTextBox1 = new System.Windows.Forms.ToolStripTextBox();
+            this.toolStripMenuItem2 = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolStripMenuItem3 = new System.Windows.Forms.ToolStripMenuItem();
+            this.btnPause = new System.Windows.Forms.Button();
+            this.btnStop = new System.Windows.Forms.Button();
+            this.btnContinue = new System.Windows.Forms.Button();
+            this.tlpTerminal.SuspendLayout();
+            this.tlpCommandSetting.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.spcCommandHistory)).BeginInit();
+            this.spcCommandHistory.Panel1.SuspendLayout();
+            this.spcCommandHistory.Panel2.SuspendLayout();
+            this.spcCommandHistory.SuspendLayout();
+            this.gbCommandList.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.spcCommandList)).BeginInit();
+            this.spcCommandList.Panel1.SuspendLayout();
+            this.spcCommandList.Panel2.SuspendLayout();
+            this.spcCommandList.SuspendLayout();
+            this.tableLayoutPanel3.SuspendLayout();
+            this.gbHistory.SuspendLayout();
+            this.gbSetting.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.spcSettingandTest)).BeginInit();
+            this.spcSettingandTest.Panel1.SuspendLayout();
+            this.spcSettingandTest.Panel2.SuspendLayout();
+            this.spcSettingandTest.SuspendLayout();
+            this.tlpAssemblySetting.SuspendLayout();
+            this.tableLayoutPanel1.SuspendLayout();
+            this.tlpButtonList.SuspendLayout();
+            this.gbCondition.SuspendLayout();
+            this.tlpOperationSplit.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
+            this.splitContainer1.SuspendLayout();
+            this.contextMenuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
-            // GPBoxCMDSyntax_01
-            // 
-            this.GPBoxCMDSyntax_01.BackColor = System.Drawing.SystemColors.Control;
-            this.GPBoxCMDSyntax_01.Controls.Add(this.CboRobot_A01);
-            this.GPBoxCMDSyntax_01.Controls.Add(this.CboRobot_A04);
-            this.GPBoxCMDSyntax_01.Controls.Add(this.CboRobot_A03);
-            this.GPBoxCMDSyntax_01.Controls.Add(this.LabParaA_06);
-            this.GPBoxCMDSyntax_01.Controls.Add(this.Button_ADD_SEND_01);
-            this.GPBoxCMDSyntax_01.Controls.Add(this.LabParaA_01);
-            this.GPBoxCMDSyntax_01.Controls.Add(this.CboRobot_A06);
-            this.GPBoxCMDSyntax_01.Controls.Add(this.CboRobot_A02);
-            this.GPBoxCMDSyntax_01.Controls.Add(this.LabParaA_05);
-            this.GPBoxCMDSyntax_01.Controls.Add(this.LabParaA_02);
-            this.GPBoxCMDSyntax_01.Controls.Add(this.CboRobot_A05);
-            this.GPBoxCMDSyntax_01.Controls.Add(this.LabParaA_03);
-            this.GPBoxCMDSyntax_01.Controls.Add(this.Label6);
-            this.GPBoxCMDSyntax_01.Controls.Add(this.cbbCommand_01);
-            this.GPBoxCMDSyntax_01.Controls.Add(this.LabParaA_04);
-            this.GPBoxCMDSyntax_01.Font = new System.Drawing.Font("微軟正黑體", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-            this.GPBoxCMDSyntax_01.Location = new System.Drawing.Point(135, 98);
-            this.GPBoxCMDSyntax_01.Name = "GPBoxCMDSyntax_01";
-            this.GPBoxCMDSyntax_01.Size = new System.Drawing.Size(1143, 125);
-            this.GPBoxCMDSyntax_01.TabIndex = 325;
-            this.GPBoxCMDSyntax_01.TabStop = false;
-            this.GPBoxCMDSyntax_01.Tag = "ROBOT";
-            this.GPBoxCMDSyntax_01.Text = "Syntax";
-            // 
-            // CboRobot_A01
-            // 
-            this.CboRobot_A01.FormattingEnabled = true;
-            this.CboRobot_A01.Location = new System.Drawing.Point(154, 72);
-            this.CboRobot_A01.Name = "CboRobot_A01";
-            this.CboRobot_A01.Size = new System.Drawing.Size(121, 35);
-            this.CboRobot_A01.TabIndex = 297;
-            this.CboRobot_A01.Tag = "SubCMD";
-            this.CboRobot_A01.Visible = false;
-            // 
-            // CboRobot_A04
-            // 
-            this.CboRobot_A04.FormattingEnabled = true;
-            this.CboRobot_A04.Location = new System.Drawing.Point(540, 72);
-            this.CboRobot_A04.Name = "CboRobot_A04";
-            this.CboRobot_A04.Size = new System.Drawing.Size(121, 35);
-            this.CboRobot_A04.TabIndex = 300;
-            this.CboRobot_A04.Tag = "SubCMD";
-            this.CboRobot_A04.Visible = false;
-            // 
-            // CboRobot_A03
-            // 
-            this.CboRobot_A03.FormattingEnabled = true;
-            this.CboRobot_A03.Location = new System.Drawing.Point(410, 72);
-            this.CboRobot_A03.Name = "CboRobot_A03";
-            this.CboRobot_A03.Size = new System.Drawing.Size(121, 35);
-            this.CboRobot_A03.TabIndex = 299;
-            this.CboRobot_A03.Tag = "SubCMD";
-            this.CboRobot_A03.Visible = false;
-            // 
-            // LabParaA_06
-            // 
-            this.LabParaA_06.AutoSize = true;
-            this.LabParaA_06.Font = new System.Drawing.Font("微軟正黑體", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-            this.LabParaA_06.Location = new System.Drawing.Point(804, 42);
-            this.LabParaA_06.Name = "LabParaA_06";
-            this.LabParaA_06.Size = new System.Drawing.Size(66, 24);
-            this.LabParaA_06.TabIndex = 308;
-            this.LabParaA_06.Tag = "DESC_Label";
-            this.LabParaA_06.Text = "Param";
-            this.LabParaA_06.Visible = false;
-            // 
-            // Button_ADD_SEND_01
-            // 
-            this.Button_ADD_SEND_01.Font = new System.Drawing.Font("微軟正黑體", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-            this.Button_ADD_SEND_01.Location = new System.Drawing.Point(947, 69);
-            this.Button_ADD_SEND_01.Name = "Button_ADD_SEND_01";
-            this.Button_ADD_SEND_01.Size = new System.Drawing.Size(103, 40);
-            this.Button_ADD_SEND_01.TabIndex = 294;
-            this.Button_ADD_SEND_01.Tag = "01";
-            this.Button_ADD_SEND_01.Text = "Add Send";
-            this.Button_ADD_SEND_01.UseVisualStyleBackColor = true;
-            // 
-            // LabParaA_01
-            // 
-            this.LabParaA_01.AutoSize = true;
-            this.LabParaA_01.Font = new System.Drawing.Font("微軟正黑體", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-            this.LabParaA_01.Location = new System.Drawing.Point(155, 42);
-            this.LabParaA_01.Name = "LabParaA_01";
-            this.LabParaA_01.Size = new System.Drawing.Size(66, 24);
-            this.LabParaA_01.TabIndex = 301;
-            this.LabParaA_01.Tag = "DESC_Label";
-            this.LabParaA_01.Text = "Param";
-            this.LabParaA_01.Visible = false;
-            // 
-            // CboRobot_A06
-            // 
-            this.CboRobot_A06.FormattingEnabled = true;
-            this.CboRobot_A06.Location = new System.Drawing.Point(794, 72);
-            this.CboRobot_A06.Name = "CboRobot_A06";
-            this.CboRobot_A06.Size = new System.Drawing.Size(121, 35);
-            this.CboRobot_A06.TabIndex = 307;
-            this.CboRobot_A06.Tag = "SubCMD";
-            this.CboRobot_A06.Visible = false;
-            // 
-            // CboRobot_A02
-            // 
-            this.CboRobot_A02.FormattingEnabled = true;
-            this.CboRobot_A02.Location = new System.Drawing.Point(283, 72);
-            this.CboRobot_A02.Name = "CboRobot_A02";
-            this.CboRobot_A02.Size = new System.Drawing.Size(121, 35);
-            this.CboRobot_A02.TabIndex = 298;
-            this.CboRobot_A02.Tag = "SubCMD";
-            this.CboRobot_A02.Visible = false;
-            // 
-            // LabParaA_05
-            // 
-            this.LabParaA_05.AutoSize = true;
-            this.LabParaA_05.Font = new System.Drawing.Font("微軟正黑體", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-            this.LabParaA_05.Location = new System.Drawing.Point(670, 42);
-            this.LabParaA_05.Name = "LabParaA_05";
-            this.LabParaA_05.Size = new System.Drawing.Size(66, 24);
-            this.LabParaA_05.TabIndex = 306;
-            this.LabParaA_05.Tag = "DESC_Label";
-            this.LabParaA_05.Text = "Param";
-            this.LabParaA_05.Visible = false;
-            // 
-            // LabParaA_02
-            // 
-            this.LabParaA_02.AutoSize = true;
-            this.LabParaA_02.Font = new System.Drawing.Font("微軟正黑體", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-            this.LabParaA_02.Location = new System.Drawing.Point(289, 42);
-            this.LabParaA_02.Name = "LabParaA_02";
-            this.LabParaA_02.Size = new System.Drawing.Size(66, 24);
-            this.LabParaA_02.TabIndex = 302;
-            this.LabParaA_02.Tag = "DESC_Label";
-            this.LabParaA_02.Text = "Param";
-            this.LabParaA_02.Visible = false;
-            // 
-            // CboRobot_A05
-            // 
-            this.CboRobot_A05.FormattingEnabled = true;
-            this.CboRobot_A05.Location = new System.Drawing.Point(667, 72);
-            this.CboRobot_A05.Name = "CboRobot_A05";
-            this.CboRobot_A05.Size = new System.Drawing.Size(121, 35);
-            this.CboRobot_A05.TabIndex = 305;
-            this.CboRobot_A05.Tag = "SubCMD";
-            this.CboRobot_A05.Visible = false;
-            // 
-            // LabParaA_03
-            // 
-            this.LabParaA_03.AutoSize = true;
-            this.LabParaA_03.Font = new System.Drawing.Font("微軟正黑體", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-            this.LabParaA_03.Location = new System.Drawing.Point(419, 42);
-            this.LabParaA_03.Name = "LabParaA_03";
-            this.LabParaA_03.Size = new System.Drawing.Size(66, 24);
-            this.LabParaA_03.TabIndex = 303;
-            this.LabParaA_03.Tag = "DESC_Label";
-            this.LabParaA_03.Text = "Param";
-            this.LabParaA_03.Visible = false;
-            // 
-            // Label6
-            // 
-            this.Label6.AutoSize = true;
-            this.Label6.Font = new System.Drawing.Font("微軟正黑體", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-            this.Label6.Location = new System.Drawing.Point(18, 42);
-            this.Label6.Name = "Label6";
-            this.Label6.Size = new System.Drawing.Size(116, 24);
-            this.Label6.TabIndex = 296;
-            this.Label6.Text = "COMMAND";
-            // 
-            // cbbCommand_01
-            // 
-            this.cbbCommand_01.FormattingEnabled = true;
-            this.cbbCommand_01.Location = new System.Drawing.Point(23, 72);
-            this.cbbCommand_01.Name = "cbbCommand_01";
-            this.cbbCommand_01.Size = new System.Drawing.Size(105, 35);
-            this.cbbCommand_01.TabIndex = 295;
-            this.cbbCommand_01.Tag = "01";
-            // 
-            // LabParaA_04
-            // 
-            this.LabParaA_04.AutoSize = true;
-            this.LabParaA_04.Font = new System.Drawing.Font("微軟正黑體", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-            this.LabParaA_04.Location = new System.Drawing.Point(548, 42);
-            this.LabParaA_04.Name = "LabParaA_04";
-            this.LabParaA_04.Size = new System.Drawing.Size(66, 24);
-            this.LabParaA_04.TabIndex = 304;
-            this.LabParaA_04.Tag = "DESC_Label";
-            this.LabParaA_04.Text = "Param";
-            this.LabParaA_04.Visible = false;
-            // 
-            // GroupBox2
-            // 
-            this.GroupBox2.BackColor = System.Drawing.SystemColors.Control;
-            this.GroupBox2.Controls.Add(this.BtnRobot_RESET_01);
-            this.GroupBox2.Controls.Add(this.BtnRobot_SERVO_01);
-            this.GroupBox2.Controls.Add(this.BtnRobot_HOME_01);
-            this.GroupBox2.Font = new System.Drawing.Font("微軟正黑體", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-            this.GroupBox2.Location = new System.Drawing.Point(135, 9);
-            this.GroupBox2.Name = "GroupBox2";
-            this.GroupBox2.Size = new System.Drawing.Size(466, 83);
-            this.GroupBox2.TabIndex = 324;
-            this.GroupBox2.TabStop = false;
-            this.GroupBox2.Text = " Immediately Send ";
-            // 
-            // BtnRobot_RESET_01
-            // 
-            this.BtnRobot_RESET_01.Font = new System.Drawing.Font("微軟正黑體", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-            this.BtnRobot_RESET_01.Location = new System.Drawing.Point(293, 34);
-            this.BtnRobot_RESET_01.Name = "BtnRobot_RESET_01";
-            this.BtnRobot_RESET_01.Size = new System.Drawing.Size(133, 40);
-            this.BtnRobot_RESET_01.TabIndex = 227;
-            this.BtnRobot_RESET_01.Tag = "01";
-            this.BtnRobot_RESET_01.Text = "Reset";
-            this.BtnRobot_RESET_01.UseVisualStyleBackColor = true;
-            // 
-            // BtnRobot_SERVO_01
-            // 
-            this.BtnRobot_SERVO_01.Font = new System.Drawing.Font("微軟正黑體", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-            this.BtnRobot_SERVO_01.Location = new System.Drawing.Point(13, 34);
-            this.BtnRobot_SERVO_01.Name = "BtnRobot_SERVO_01";
-            this.BtnRobot_SERVO_01.Size = new System.Drawing.Size(135, 40);
-            this.BtnRobot_SERVO_01.TabIndex = 225;
-            this.BtnRobot_SERVO_01.Tag = "01";
-            this.BtnRobot_SERVO_01.Text = "Servo on";
-            this.BtnRobot_SERVO_01.UseVisualStyleBackColor = true;
-            // 
-            // BtnRobot_HOME_01
-            // 
-            this.BtnRobot_HOME_01.Font = new System.Drawing.Font("微軟正黑體", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-            this.BtnRobot_HOME_01.Location = new System.Drawing.Point(154, 34);
-            this.BtnRobot_HOME_01.Name = "BtnRobot_HOME_01";
-            this.BtnRobot_HOME_01.Size = new System.Drawing.Size(133, 40);
-            this.BtnRobot_HOME_01.TabIndex = 228;
-            this.BtnRobot_HOME_01.Tag = "01";
-            this.BtnRobot_HOME_01.Text = "HOME";
-            this.BtnRobot_HOME_01.UseVisualStyleBackColor = true;
-            // 
-            // GPBox_MODE_01
-            // 
-            this.GPBox_MODE_01.Controls.Add(this.rBtnSyntaxMode_GET_01);
-            this.GPBox_MODE_01.Controls.Add(this.rBtnSyntaxMode_SET_01);
-            this.GPBox_MODE_01.Controls.Add(this.rBtnSyntaxMode_CMD_01);
-            this.GPBox_MODE_01.Font = new System.Drawing.Font("微軟正黑體", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-            this.GPBox_MODE_01.Location = new System.Drawing.Point(7, 98);
-            this.GPBox_MODE_01.Name = "GPBox_MODE_01";
-            this.GPBox_MODE_01.Size = new System.Drawing.Size(119, 125);
-            this.GPBox_MODE_01.TabIndex = 323;
-            this.GPBox_MODE_01.TabStop = false;
-            this.GPBox_MODE_01.Text = "Mode";
-            // 
-            // rBtnSyntaxMode_GET_01
-            // 
-            this.rBtnSyntaxMode_GET_01.AutoSize = true;
-            this.rBtnSyntaxMode_GET_01.Checked = true;
-            this.rBtnSyntaxMode_GET_01.Font = new System.Drawing.Font("微軟正黑體", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-            this.rBtnSyntaxMode_GET_01.Location = new System.Drawing.Point(33, 29);
-            this.rBtnSyntaxMode_GET_01.Name = "rBtnSyntaxMode_GET_01";
-            this.rBtnSyntaxMode_GET_01.Size = new System.Drawing.Size(63, 28);
-            this.rBtnSyntaxMode_GET_01.TabIndex = 287;
-            this.rBtnSyntaxMode_GET_01.TabStop = true;
-            this.rBtnSyntaxMode_GET_01.Tag = "SYNTAX_MODE_01";
-            this.rBtnSyntaxMode_GET_01.Text = "GET";
-            this.rBtnSyntaxMode_GET_01.UseVisualStyleBackColor = true;
-            // 
-            // rBtnSyntaxMode_SET_01
-            // 
-            this.rBtnSyntaxMode_SET_01.AutoSize = true;
-            this.rBtnSyntaxMode_SET_01.Font = new System.Drawing.Font("微軟正黑體", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-            this.rBtnSyntaxMode_SET_01.Location = new System.Drawing.Point(33, 62);
-            this.rBtnSyntaxMode_SET_01.Name = "rBtnSyntaxMode_SET_01";
-            this.rBtnSyntaxMode_SET_01.Size = new System.Drawing.Size(60, 28);
-            this.rBtnSyntaxMode_SET_01.TabIndex = 288;
-            this.rBtnSyntaxMode_SET_01.Tag = "SYNTAX_MODE_01";
-            this.rBtnSyntaxMode_SET_01.Text = "SET";
-            this.rBtnSyntaxMode_SET_01.UseVisualStyleBackColor = true;
-            // 
-            // rBtnSyntaxMode_CMD_01
-            // 
-            this.rBtnSyntaxMode_CMD_01.AutoSize = true;
-            this.rBtnSyntaxMode_CMD_01.Font = new System.Drawing.Font("微軟正黑體", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-            this.rBtnSyntaxMode_CMD_01.Location = new System.Drawing.Point(33, 94);
-            this.rBtnSyntaxMode_CMD_01.Name = "rBtnSyntaxMode_CMD_01";
-            this.rBtnSyntaxMode_CMD_01.Size = new System.Drawing.Size(73, 28);
-            this.rBtnSyntaxMode_CMD_01.TabIndex = 289;
-            this.rBtnSyntaxMode_CMD_01.Tag = "SYNTAX_MODE_01";
-            this.rBtnSyntaxMode_CMD_01.Text = "CMD";
-            this.rBtnSyntaxMode_CMD_01.UseVisualStyleBackColor = true;
-            // 
-            // BtnRobot_Connect_01
-            // 
-            this.BtnRobot_Connect_01.Font = new System.Drawing.Font("微軟正黑體", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-            this.BtnRobot_Connect_01.Location = new System.Drawing.Point(7, 32);
-            this.BtnRobot_Connect_01.Name = "BtnRobot_Connect_01";
-            this.BtnRobot_Connect_01.Size = new System.Drawing.Size(119, 51);
-            this.BtnRobot_Connect_01.TabIndex = 322;
-            this.BtnRobot_Connect_01.Tag = "01";
-            this.BtnRobot_Connect_01.Text = "Connect";
-            this.BtnRobot_Connect_01.UseVisualStyleBackColor = true;
-            // 
-            // Button_Clean_Message
-            // 
-            this.Button_Clean_Message.Font = new System.Drawing.Font("微軟正黑體", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-            this.Button_Clean_Message.Location = new System.Drawing.Point(1134, 314);
-            this.Button_Clean_Message.Name = "Button_Clean_Message";
-            this.Button_Clean_Message.Size = new System.Drawing.Size(121, 40);
-            this.Button_Clean_Message.TabIndex = 321;
-            this.Button_Clean_Message.Text = "Clean Message";
-            this.Button_Clean_Message.UseVisualStyleBackColor = true;
-            // 
-            // RichTextBox_MESSAGE_LOG
-            // 
-            this.RichTextBox_MESSAGE_LOG.Location = new System.Drawing.Point(581, 360);
-            this.RichTextBox_MESSAGE_LOG.Name = "RichTextBox_MESSAGE_LOG";
-            this.RichTextBox_MESSAGE_LOG.ReadOnly = true;
-            this.RichTextBox_MESSAGE_LOG.Size = new System.Drawing.Size(709, 489);
-            this.RichTextBox_MESSAGE_LOG.TabIndex = 320;
-            this.RichTextBox_MESSAGE_LOG.Text = "";
-            // 
-            // Button_SEND_COMMAND
-            // 
-            this.Button_SEND_COMMAND.Font = new System.Drawing.Font("微軟正黑體", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-            this.Button_SEND_COMMAND.Location = new System.Drawing.Point(1010, 314);
-            this.Button_SEND_COMMAND.Name = "Button_SEND_COMMAND";
-            this.Button_SEND_COMMAND.Size = new System.Drawing.Size(118, 40);
-            this.Button_SEND_COMMAND.TabIndex = 319;
-            this.Button_SEND_COMMAND.Text = "Send Command";
-            this.Button_SEND_COMMAND.UseVisualStyleBackColor = true;
-            // 
-            // cbbCommand_SEND
-            // 
-            this.cbbCommand_SEND.Font = new System.Drawing.Font("微軟正黑體", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-            this.cbbCommand_SEND.FormattingEnabled = true;
-            this.cbbCommand_SEND.Location = new System.Drawing.Point(581, 314);
-            this.cbbCommand_SEND.Name = "cbbCommand_SEND";
-            this.cbbCommand_SEND.Size = new System.Drawing.Size(405, 38);
-            this.cbbCommand_SEND.TabIndex = 318;
-            // 
-            // DGV_Script_A
-            // 
-            this.DGV_Script_A.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.DGV_Script_A.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.Col_Tag,
-            this.Col_ScriptCMD});
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = System.Drawing.Color.LightGray;
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("微軟正黑體", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.DGV_Script_A.DefaultCellStyle = dataGridViewCellStyle2;
-            this.DGV_Script_A.Enabled = false;
-            this.DGV_Script_A.Location = new System.Drawing.Point(14, 86);
-            this.DGV_Script_A.Name = "DGV_Script_A";
-            this.DGV_Script_A.RowTemplate.Height = 24;
-            this.DGV_Script_A.Size = new System.Drawing.Size(533, 464);
-            this.DGV_Script_A.TabIndex = 54;
-            // 
-            // Col_Tag
-            // 
-            this.Col_Tag.DataPropertyName = "Col_Tag";
-            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle1.BackColor = System.Drawing.Color.WhiteSmoke;
-            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.Col_Tag.DefaultCellStyle = dataGridViewCellStyle1;
-            this.Col_Tag.HeaderText = "Tag";
-            this.Col_Tag.Name = "Col_Tag";
-            this.Col_Tag.ReadOnly = true;
-            this.Col_Tag.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
-            // 
-            // Col_ScriptCMD
-            // 
-            this.Col_ScriptCMD.DataPropertyName = "Col_ScriptCMD";
-            this.Col_ScriptCMD.HeaderText = "Command";
-            this.Col_ScriptCMD.Name = "Col_ScriptCMD";
-            this.Col_ScriptCMD.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
-            this.Col_ScriptCMD.Width = 300;
-            // 
-            // GroupBox_ATUORUN
-            // 
-            this.GroupBox_ATUORUN.Controls.Add(this.Btn_AUTO_RUN_PAUSE_A);
-            this.GroupBox_ATUORUN.Controls.Add(this.DGV_Script_A);
-            this.GroupBox_ATUORUN.Controls.Add(this.Btn_AUTO_RUN_STOP_A);
-            this.GroupBox_ATUORUN.Controls.Add(this.Btn_AUTORUN_STEP_A);
-            this.GroupBox_ATUORUN.Controls.Add(this.Btn_ADD_SCRIPT_A);
-            this.GroupBox_ATUORUN.Controls.Add(this.Btn_Edit_Mode_A);
-            this.GroupBox_ATUORUN.Controls.Add(this.Btn_AUTO_RUN_START_A);
-            this.GroupBox_ATUORUN.Font = new System.Drawing.Font("微軟正黑體", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-            this.GroupBox_ATUORUN.Location = new System.Drawing.Point(12, 299);
-            this.GroupBox_ATUORUN.Name = "GroupBox_ATUORUN";
-            this.GroupBox_ATUORUN.Size = new System.Drawing.Size(563, 656);
-            this.GroupBox_ATUORUN.TabIndex = 317;
-            this.GroupBox_ATUORUN.TabStop = false;
-            this.GroupBox_ATUORUN.Text = "Auto Run Script";
-            // 
-            // Btn_AUTO_RUN_PAUSE_A
-            // 
-            this.Btn_AUTO_RUN_PAUSE_A.Font = new System.Drawing.Font("微軟正黑體", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-            this.Btn_AUTO_RUN_PAUSE_A.Location = new System.Drawing.Point(378, 40);
-            this.Btn_AUTO_RUN_PAUSE_A.Name = "Btn_AUTO_RUN_PAUSE_A";
-            this.Btn_AUTO_RUN_PAUSE_A.Size = new System.Drawing.Size(80, 40);
-            this.Btn_AUTO_RUN_PAUSE_A.TabIndex = 55;
-            this.Btn_AUTO_RUN_PAUSE_A.Text = "PAUSE";
-            this.Btn_AUTO_RUN_PAUSE_A.UseVisualStyleBackColor = true;
-            // 
-            // Btn_AUTO_RUN_STOP_A
-            // 
-            this.Btn_AUTO_RUN_STOP_A.Font = new System.Drawing.Font("微軟正黑體", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-            this.Btn_AUTO_RUN_STOP_A.Location = new System.Drawing.Point(467, 40);
-            this.Btn_AUTO_RUN_STOP_A.Name = "Btn_AUTO_RUN_STOP_A";
-            this.Btn_AUTO_RUN_STOP_A.Size = new System.Drawing.Size(80, 40);
-            this.Btn_AUTO_RUN_STOP_A.TabIndex = 45;
-            this.Btn_AUTO_RUN_STOP_A.Text = "STOP";
-            this.Btn_AUTO_RUN_STOP_A.UseVisualStyleBackColor = true;
-            // 
-            // Btn_AUTORUN_STEP_A
-            // 
-            this.Btn_AUTORUN_STEP_A.Font = new System.Drawing.Font("微軟正黑體", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-            this.Btn_AUTORUN_STEP_A.Location = new System.Drawing.Point(199, 40);
-            this.Btn_AUTORUN_STEP_A.Name = "Btn_AUTORUN_STEP_A";
-            this.Btn_AUTORUN_STEP_A.Size = new System.Drawing.Size(80, 40);
-            this.Btn_AUTORUN_STEP_A.TabIndex = 42;
-            this.Btn_AUTORUN_STEP_A.Text = "STEP";
-            this.Btn_AUTORUN_STEP_A.UseVisualStyleBackColor = true;
-            // 
-            // Btn_ADD_SCRIPT_A
-            // 
-            this.Btn_ADD_SCRIPT_A.Font = new System.Drawing.Font("微軟正黑體", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-            this.Btn_ADD_SCRIPT_A.Location = new System.Drawing.Point(111, 40);
-            this.Btn_ADD_SCRIPT_A.Name = "Btn_ADD_SCRIPT_A";
-            this.Btn_ADD_SCRIPT_A.Size = new System.Drawing.Size(80, 40);
-            this.Btn_ADD_SCRIPT_A.TabIndex = 41;
-            this.Btn_ADD_SCRIPT_A.Text = "Add";
-            this.Btn_ADD_SCRIPT_A.UseVisualStyleBackColor = true;
-            // 
-            // Btn_Edit_Mode_A
-            // 
-            this.Btn_Edit_Mode_A.Font = new System.Drawing.Font("微軟正黑體", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-            this.Btn_Edit_Mode_A.Location = new System.Drawing.Point(23, 40);
-            this.Btn_Edit_Mode_A.Name = "Btn_Edit_Mode_A";
-            this.Btn_Edit_Mode_A.Size = new System.Drawing.Size(80, 40);
-            this.Btn_Edit_Mode_A.TabIndex = 37;
-            this.Btn_Edit_Mode_A.Text = "EDIT";
-            this.Btn_Edit_Mode_A.UseVisualStyleBackColor = true;
-            // 
-            // Btn_AUTO_RUN_START_A
-            // 
-            this.Btn_AUTO_RUN_START_A.Font = new System.Drawing.Font("微軟正黑體", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-            this.Btn_AUTO_RUN_START_A.Location = new System.Drawing.Point(288, 40);
-            this.Btn_AUTO_RUN_START_A.Name = "Btn_AUTO_RUN_START_A";
-            this.Btn_AUTO_RUN_START_A.Size = new System.Drawing.Size(80, 40);
-            this.Btn_AUTO_RUN_START_A.TabIndex = 38;
-            this.Btn_AUTO_RUN_START_A.Text = "SATRT";
-            this.Btn_AUTO_RUN_START_A.UseVisualStyleBackColor = true;
-            // 
-            // tabControl1
-            // 
-            this.tabControl1.Controls.Add(this.tabPage1);
-            this.tabControl1.Controls.Add(this.tabPage2);
-            this.tabControl1.Controls.Add(this.tabPage3);
-            this.tabControl1.Controls.Add(this.tabPage4);
-            this.tabControl1.Controls.Add(this.tabPage5);
-            this.tabControl1.Controls.Add(this.tabPage6);
-            this.tabControl1.Font = new System.Drawing.Font("微軟正黑體", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-            this.tabControl1.Location = new System.Drawing.Point(12, 12);
-            this.tabControl1.Name = "tabControl1";
-            this.tabControl1.SelectedIndex = 0;
-            this.tabControl1.Size = new System.Drawing.Size(1292, 281);
-            this.tabControl1.TabIndex = 309;
-            // 
-            // tabPage1
-            // 
-            this.tabPage1.BackColor = System.Drawing.SystemColors.Control;
-            this.tabPage1.Controls.Add(this.GroupBox2);
-            this.tabPage1.Controls.Add(this.GPBoxCMDSyntax_01);
-            this.tabPage1.Controls.Add(this.BtnRobot_Connect_01);
-            this.tabPage1.Controls.Add(this.GPBox_MODE_01);
-            this.tabPage1.Font = new System.Drawing.Font("微軟正黑體", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-            this.tabPage1.Location = new System.Drawing.Point(4, 39);
-            this.tabPage1.Name = "tabPage1";
-            this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage1.Size = new System.Drawing.Size(1284, 238);
-            this.tabPage1.TabIndex = 0;
-            this.tabPage1.Text = "Robot1";
-            // 
-            // tabPage2
-            // 
-            this.tabPage2.BackColor = System.Drawing.SystemColors.ControlLight;
-            this.tabPage2.Font = new System.Drawing.Font("微軟正黑體", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-            this.tabPage2.Location = new System.Drawing.Point(4, 39);
-            this.tabPage2.Name = "tabPage2";
-            this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage2.Size = new System.Drawing.Size(1284, 238);
-            this.tabPage2.TabIndex = 1;
-            this.tabPage2.Text = "Aligner1";
-            // 
-            // tabPage3
-            // 
-            this.tabPage3.BackColor = System.Drawing.SystemColors.ControlLight;
-            this.tabPage3.Font = new System.Drawing.Font("微軟正黑體", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-            this.tabPage3.Location = new System.Drawing.Point(4, 39);
-            this.tabPage3.Name = "tabPage3";
-            this.tabPage3.Size = new System.Drawing.Size(1284, 238);
-            this.tabPage3.TabIndex = 2;
-            this.tabPage3.Text = "Aligner2";
-            // 
-            // tabPage4
-            // 
-            this.tabPage4.BackColor = System.Drawing.SystemColors.ControlLight;
-            this.tabPage4.Location = new System.Drawing.Point(4, 39);
-            this.tabPage4.Name = "tabPage4";
-            this.tabPage4.Size = new System.Drawing.Size(1284, 238);
-            this.tabPage4.TabIndex = 3;
-            this.tabPage4.Text = "LoadPort01";
-            // 
-            // tabPage5
-            // 
-            this.tabPage5.BackColor = System.Drawing.SystemColors.ControlLight;
-            this.tabPage5.Location = new System.Drawing.Point(4, 39);
-            this.tabPage5.Name = "tabPage5";
-            this.tabPage5.Size = new System.Drawing.Size(1284, 238);
-            this.tabPage5.TabIndex = 4;
-            this.tabPage5.Text = "LoadPort02";
-            // 
-            // tabPage6
-            // 
-            this.tabPage6.BackColor = System.Drawing.SystemColors.ControlLight;
-            this.tabPage6.Location = new System.Drawing.Point(4, 39);
-            this.tabPage6.Name = "tabPage6";
-            this.tabPage6.Size = new System.Drawing.Size(1284, 238);
-            this.tabPage6.TabIndex = 5;
-            this.tabPage6.Text = "LoadPort03";
+            // tlpTerminal
+            // 
+            this.tlpTerminal.ColumnCount = 2;
+            this.tlpTerminal.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 17.87671F));
+            this.tlpTerminal.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 82.12329F));
+            this.tlpTerminal.Controls.Add(this.tlpCommandSetting, 0, 0);
+            this.tlpTerminal.Controls.Add(this.gbCondition, 0, 0);
+            this.tlpTerminal.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.tlpTerminal.Location = new System.Drawing.Point(0, 0);
+            this.tlpTerminal.Margin = new System.Windows.Forms.Padding(5);
+            this.tlpTerminal.Name = "tlpTerminal";
+            this.tlpTerminal.RowCount = 1;
+            this.tlpTerminal.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.tlpTerminal.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 861F));
+            this.tlpTerminal.Size = new System.Drawing.Size(1484, 861);
+            this.tlpTerminal.TabIndex = 0;
+            // 
+            // tlpCommandSetting
+            // 
+            this.tlpCommandSetting.ColumnCount = 1;
+            this.tlpCommandSetting.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.tlpCommandSetting.Controls.Add(this.spcCommandHistory, 0, 1);
+            this.tlpCommandSetting.Controls.Add(this.gbSetting, 0, 0);
+            this.tlpCommandSetting.Controls.Add(this.tlpButtonList, 0, 2);
+            this.tlpCommandSetting.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.tlpCommandSetting.Location = new System.Drawing.Point(268, 3);
+            this.tlpCommandSetting.Name = "tlpCommandSetting";
+            this.tlpCommandSetting.RowCount = 3;
+            this.tlpCommandSetting.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 23.44371F));
+            this.tlpCommandSetting.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 69.27152F));
+            this.tlpCommandSetting.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 7.152318F));
+            this.tlpCommandSetting.Size = new System.Drawing.Size(1213, 855);
+            this.tlpCommandSetting.TabIndex = 1;
+            // 
+            // spcCommandHistory
+            // 
+            this.spcCommandHistory.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.spcCommandHistory.Location = new System.Drawing.Point(3, 203);
+            this.spcCommandHistory.Name = "spcCommandHistory";
+            // 
+            // spcCommandHistory.Panel1
+            // 
+            this.spcCommandHistory.Panel1.Controls.Add(this.gbCommandList);
+            // 
+            // spcCommandHistory.Panel2
+            // 
+            this.spcCommandHistory.Panel2.Controls.Add(this.gbHistory);
+            this.spcCommandHistory.Size = new System.Drawing.Size(1207, 587);
+            this.spcCommandHistory.SplitterDistance = 743;
+            this.spcCommandHistory.TabIndex = 2;
+            // 
+            // gbCommandList
+            // 
+            this.gbCommandList.Controls.Add(this.spcCommandList);
+            this.gbCommandList.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.gbCommandList.Location = new System.Drawing.Point(0, 0);
+            this.gbCommandList.Name = "gbCommandList";
+            this.gbCommandList.Size = new System.Drawing.Size(743, 587);
+            this.gbCommandList.TabIndex = 1;
+            this.gbCommandList.TabStop = false;
+            this.gbCommandList.Text = "Command List";
+            // 
+            // spcCommandList
+            // 
+            this.spcCommandList.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.spcCommandList.Location = new System.Drawing.Point(3, 25);
+            this.spcCommandList.Name = "spcCommandList";
+            this.spcCommandList.Orientation = System.Windows.Forms.Orientation.Horizontal;
+            // 
+            // spcCommandList.Panel1
+            // 
+            this.spcCommandList.Panel1.Controls.Add(this.tableLayoutPanel3);
+            // 
+            // spcCommandList.Panel2
+            // 
+            this.spcCommandList.Panel2.Controls.Add(this.lsbCommandList);
+            this.spcCommandList.Size = new System.Drawing.Size(737, 559);
+            this.spcCommandList.SplitterDistance = 49;
+            this.spcCommandList.TabIndex = 0;
+            // 
+            // tableLayoutPanel3
+            // 
+            this.tableLayoutPanel3.ColumnCount = 7;
+            this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 14.28571F));
+            this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 14.28571F));
+            this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 14.28571F));
+            this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 14.28571F));
+            this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 14.28571F));
+            this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 14.28571F));
+            this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 14.28571F));
+            this.tableLayoutPanel3.Controls.Add(this.btnDown, 0, 0);
+            this.tableLayoutPanel3.Controls.Add(this.btnUP, 0, 0);
+            this.tableLayoutPanel3.Controls.Add(this.sbtnRun, 3, 0);
+            this.tableLayoutPanel3.Controls.Add(this.btnContinue, 6, 0);
+            this.tableLayoutPanel3.Controls.Add(this.btnDelete, 2, 0);
+            this.tableLayoutPanel3.Controls.Add(this.btnStop, 5, 0);
+            this.tableLayoutPanel3.Controls.Add(this.btnPause, 4, 0);
+            this.tableLayoutPanel3.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.tableLayoutPanel3.Location = new System.Drawing.Point(0, 0);
+            this.tableLayoutPanel3.Name = "tableLayoutPanel3";
+            this.tableLayoutPanel3.RowCount = 1;
+            this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.tableLayoutPanel3.Size = new System.Drawing.Size(737, 49);
+            this.tableLayoutPanel3.TabIndex = 0;
+            // 
+            // btnDelete
+            // 
+            this.btnDelete.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.btnDelete.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnDelete.Location = new System.Drawing.Point(213, 3);
+            this.btnDelete.Name = "btnDelete";
+            this.btnDelete.Size = new System.Drawing.Size(99, 43);
+            this.btnDelete.TabIndex = 4;
+            this.btnDelete.Text = "Delete";
+            this.btnDelete.UseVisualStyleBackColor = true;
+            // 
+            // btnDown
+            // 
+            this.btnDown.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.btnDown.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnDown.Location = new System.Drawing.Point(108, 3);
+            this.btnDown.Name = "btnDown";
+            this.btnDown.Size = new System.Drawing.Size(99, 43);
+            this.btnDown.TabIndex = 3;
+            this.btnDown.Text = "Down";
+            this.btnDown.UseVisualStyleBackColor = true;
+            // 
+            // btnUP
+            // 
+            this.btnUP.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.btnUP.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnUP.Location = new System.Drawing.Point(3, 3);
+            this.btnUP.Name = "btnUP";
+            this.btnUP.Size = new System.Drawing.Size(99, 43);
+            this.btnUP.TabIndex = 2;
+            this.btnUP.Text = "UP";
+            this.btnUP.UseVisualStyleBackColor = true;
+            // 
+            // sbtnRun
+            // 
+            this.sbtnRun.AutoSize = true;
+            this.sbtnRun.ContextMenuStrip = this.contextMenuStrip1;
+            this.sbtnRun.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.sbtnRun.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.sbtnRun.Location = new System.Drawing.Point(318, 3);
+            this.sbtnRun.MenuStripShowShowMode = true;
+            this.sbtnRun.Name = "sbtnRun";
+            this.sbtnRun.Size = new System.Drawing.Size(99, 43);
+            this.sbtnRun.SplitMenuStrip = this.contextMenuStrip1;
+            this.sbtnRun.SplitMenuStripShowUp = true;
+            this.sbtnRun.TabIndex = 5;
+            this.sbtnRun.Text = "Run";
+            this.sbtnRun.UseVisualStyleBackColor = true;
+            // 
+            // lsbCommandList
+            // 
+            this.lsbCommandList.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.lsbCommandList.FormattingEnabled = true;
+            this.lsbCommandList.ItemHeight = 20;
+            this.lsbCommandList.Location = new System.Drawing.Point(0, 0);
+            this.lsbCommandList.Name = "lsbCommandList";
+            this.lsbCommandList.Size = new System.Drawing.Size(737, 506);
+            this.lsbCommandList.TabIndex = 1;
+            // 
+            // gbHistory
+            // 
+            this.gbHistory.Controls.Add(this.lsbHistory);
+            this.gbHistory.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.gbHistory.Location = new System.Drawing.Point(0, 0);
+            this.gbHistory.Name = "gbHistory";
+            this.gbHistory.Size = new System.Drawing.Size(460, 587);
+            this.gbHistory.TabIndex = 0;
+            this.gbHistory.TabStop = false;
+            this.gbHistory.Text = "History";
+            // 
+            // lsbHistory
+            // 
+            this.lsbHistory.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.lsbHistory.FormattingEnabled = true;
+            this.lsbHistory.ItemHeight = 20;
+            this.lsbHistory.Location = new System.Drawing.Point(3, 25);
+            this.lsbHistory.Name = "lsbHistory";
+            this.lsbHistory.Size = new System.Drawing.Size(454, 559);
+            this.lsbHistory.TabIndex = 0;
+            // 
+            // gbSetting
+            // 
+            this.gbSetting.Controls.Add(this.spcSettingandTest);
+            this.gbSetting.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.gbSetting.Location = new System.Drawing.Point(3, 3);
+            this.gbSetting.Name = "gbSetting";
+            this.gbSetting.Size = new System.Drawing.Size(1207, 194);
+            this.gbSetting.TabIndex = 0;
+            this.gbSetting.TabStop = false;
+            this.gbSetting.Text = "Setting and Test Run";
+            // 
+            // spcSettingandTest
+            // 
+            this.spcSettingandTest.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.spcSettingandTest.Location = new System.Drawing.Point(3, 25);
+            this.spcSettingandTest.Name = "spcSettingandTest";
+            // 
+            // spcSettingandTest.Panel1
+            // 
+            this.spcSettingandTest.Panel1.Controls.Add(this.tlpAssemblySetting);
+            // 
+            // spcSettingandTest.Panel2
+            // 
+            this.spcSettingandTest.Panel2.Controls.Add(this.tableLayoutPanel1);
+            this.spcSettingandTest.Size = new System.Drawing.Size(1201, 166);
+            this.spcSettingandTest.SplitterDistance = 1062;
+            this.spcSettingandTest.TabIndex = 0;
+            // 
+            // tlpAssemblySetting
+            // 
+            this.tlpAssemblySetting.ColumnCount = 1;
+            this.tlpAssemblySetting.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.tlpAssemblySetting.Controls.Add(this.tlpAssemblyUI, 0, 0);
+            this.tlpAssemblySetting.Controls.Add(this.txbManually, 0, 1);
+            this.tlpAssemblySetting.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.tlpAssemblySetting.Location = new System.Drawing.Point(0, 0);
+            this.tlpAssemblySetting.Name = "tlpAssemblySetting";
+            this.tlpAssemblySetting.RowCount = 2;
+            this.tlpAssemblySetting.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.tlpAssemblySetting.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 35F));
+            this.tlpAssemblySetting.Size = new System.Drawing.Size(1062, 166);
+            this.tlpAssemblySetting.TabIndex = 1;
+            // 
+            // tlpAssemblyUI
+            // 
+            this.tlpAssemblyUI.ColumnCount = 8;
+            this.tlpAssemblyUI.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 12.5F));
+            this.tlpAssemblyUI.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 12.5F));
+            this.tlpAssemblyUI.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 12.5F));
+            this.tlpAssemblyUI.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 12.5F));
+            this.tlpAssemblyUI.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 12.5F));
+            this.tlpAssemblyUI.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 12.5F));
+            this.tlpAssemblyUI.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 12.5F));
+            this.tlpAssemblyUI.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 12.5F));
+            this.tlpAssemblyUI.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.tlpAssemblyUI.Location = new System.Drawing.Point(3, 3);
+            this.tlpAssemblyUI.Name = "tlpAssemblyUI";
+            this.tlpAssemblyUI.RowCount = 4;
+            this.tlpAssemblyUI.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 25F));
+            this.tlpAssemblyUI.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 25F));
+            this.tlpAssemblyUI.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 25F));
+            this.tlpAssemblyUI.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 25F));
+            this.tlpAssemblyUI.Size = new System.Drawing.Size(1056, 125);
+            this.tlpAssemblyUI.TabIndex = 0;
+            // 
+            // txbManually
+            // 
+            this.txbManually.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.txbManually.Location = new System.Drawing.Point(3, 134);
+            this.txbManually.Name = "txbManually";
+            this.txbManually.Size = new System.Drawing.Size(1056, 29);
+            this.txbManually.TabIndex = 1;
+            // 
+            // tableLayoutPanel1
+            // 
+            this.tableLayoutPanel1.ColumnCount = 1;
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 20F));
+            this.tableLayoutPanel1.Controls.Add(this.btnAppendlist, 0, 1);
+            this.tableLayoutPanel1.Controls.Add(this.btnSend, 0, 0);
+            this.tableLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.tableLayoutPanel1.Location = new System.Drawing.Point(0, 0);
+            this.tableLayoutPanel1.Name = "tableLayoutPanel1";
+            this.tableLayoutPanel1.RowCount = 3;
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
+            this.tableLayoutPanel1.Size = new System.Drawing.Size(135, 166);
+            this.tableLayoutPanel1.TabIndex = 0;
+            // 
+            // btnAppendlist
+            // 
+            this.btnAppendlist.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.btnAppendlist.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnAppendlist.Location = new System.Drawing.Point(3, 58);
+            this.btnAppendlist.Name = "btnAppendlist";
+            this.btnAppendlist.Size = new System.Drawing.Size(129, 49);
+            this.btnAppendlist.TabIndex = 2;
+            this.btnAppendlist.Text = "Append List";
+            this.btnAppendlist.UseVisualStyleBackColor = true;
+            // 
+            // btnSend
+            // 
+            this.btnSend.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.btnSend.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnSend.Location = new System.Drawing.Point(3, 3);
+            this.btnSend.Name = "btnSend";
+            this.btnSend.Size = new System.Drawing.Size(129, 49);
+            this.btnSend.TabIndex = 1;
+            this.btnSend.Text = "Send";
+            this.btnSend.UseVisualStyleBackColor = true;
+            // 
+            // tlpButtonList
+            // 
+            this.tlpButtonList.ColumnCount = 8;
+            this.tlpButtonList.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 12.5F));
+            this.tlpButtonList.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 12.5F));
+            this.tlpButtonList.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 12.5F));
+            this.tlpButtonList.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 12.5F));
+            this.tlpButtonList.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 12.5F));
+            this.tlpButtonList.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 12.5F));
+            this.tlpButtonList.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 12.5F));
+            this.tlpButtonList.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 12.5F));
+            this.tlpButtonList.Controls.Add(this.btnRemove, 0, 0);
+            this.tlpButtonList.Controls.Add(this.btnExport, 0, 0);
+            this.tlpButtonList.Controls.Add(this.btnImport, 0, 0);
+            this.tlpButtonList.Controls.Add(this.btnClearHistory, 7, 0);
+            this.tlpButtonList.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.tlpButtonList.Location = new System.Drawing.Point(3, 796);
+            this.tlpButtonList.Name = "tlpButtonList";
+            this.tlpButtonList.RowCount = 1;
+            this.tlpButtonList.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.tlpButtonList.Size = new System.Drawing.Size(1207, 56);
+            this.tlpButtonList.TabIndex = 1;
+            // 
+            // btnRemove
+            // 
+            this.btnRemove.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.btnRemove.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnRemove.Location = new System.Drawing.Point(303, 3);
+            this.btnRemove.Name = "btnRemove";
+            this.btnRemove.Size = new System.Drawing.Size(144, 50);
+            this.btnRemove.TabIndex = 5;
+            this.btnRemove.Text = "Remove List";
+            this.btnRemove.UseVisualStyleBackColor = true;
+            // 
+            // btnExport
+            // 
+            this.btnExport.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.btnExport.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnExport.Location = new System.Drawing.Point(153, 3);
+            this.btnExport.Name = "btnExport";
+            this.btnExport.Size = new System.Drawing.Size(144, 50);
+            this.btnExport.TabIndex = 4;
+            this.btnExport.Text = "Export List";
+            this.btnExport.UseVisualStyleBackColor = true;
+            // 
+            // btnImport
+            // 
+            this.btnImport.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.btnImport.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnImport.Location = new System.Drawing.Point(3, 3);
+            this.btnImport.Name = "btnImport";
+            this.btnImport.Size = new System.Drawing.Size(144, 50);
+            this.btnImport.TabIndex = 3;
+            this.btnImport.Text = "Import List";
+            this.btnImport.UseVisualStyleBackColor = true;
+            // 
+            // btnClearHistory
+            // 
+            this.btnClearHistory.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.btnClearHistory.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnClearHistory.Location = new System.Drawing.Point(1053, 3);
+            this.btnClearHistory.Name = "btnClearHistory";
+            this.btnClearHistory.Size = new System.Drawing.Size(151, 50);
+            this.btnClearHistory.TabIndex = 2;
+            this.btnClearHistory.Text = "Clear History";
+            this.btnClearHistory.UseVisualStyleBackColor = true;
+            // 
+            // gbCondition
+            // 
+            this.gbCondition.Controls.Add(this.tlpOperationSplit);
+            this.gbCondition.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.gbCondition.Location = new System.Drawing.Point(5, 5);
+            this.gbCondition.Margin = new System.Windows.Forms.Padding(5);
+            this.gbCondition.Name = "gbCondition";
+            this.gbCondition.Padding = new System.Windows.Forms.Padding(5);
+            this.gbCondition.Size = new System.Drawing.Size(255, 851);
+            this.gbCondition.TabIndex = 0;
+            this.gbCondition.TabStop = false;
+            this.gbCondition.Text = "Condition";
+            // 
+            // tlpOperationSplit
+            // 
+            this.tlpOperationSplit.ColumnCount = 1;
+            this.tlpOperationSplit.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.tlpOperationSplit.Controls.Add(this.lsbCommand, 0, 5);
+            this.tlpOperationSplit.Controls.Add(this.label3, 0, 4);
+            this.tlpOperationSplit.Controls.Add(this.txbNotice, 0, 6);
+            this.tlpOperationSplit.Controls.Add(this.label2, 0, 2);
+            this.tlpOperationSplit.Controls.Add(this.lsbCommandType, 0, 3);
+            this.tlpOperationSplit.Controls.Add(this.lsbDeviceName, 0, 1);
+            this.tlpOperationSplit.Controls.Add(this.label1, 0, 0);
+            this.tlpOperationSplit.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.tlpOperationSplit.Location = new System.Drawing.Point(5, 27);
+            this.tlpOperationSplit.Name = "tlpOperationSplit";
+            this.tlpOperationSplit.RowCount = 7;
+            this.tlpOperationSplit.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 30F));
+            this.tlpOperationSplit.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 20F));
+            this.tlpOperationSplit.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 30F));
+            this.tlpOperationSplit.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 20F));
+            this.tlpOperationSplit.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 30F));
+            this.tlpOperationSplit.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 40F));
+            this.tlpOperationSplit.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 20F));
+            this.tlpOperationSplit.Size = new System.Drawing.Size(245, 819);
+            this.tlpOperationSplit.TabIndex = 1;
+            // 
+            // lsbCommand
+            // 
+            this.lsbCommand.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.lsbCommand.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.lsbCommand.FormattingEnabled = true;
+            this.lsbCommand.ItemHeight = 20;
+            this.lsbCommand.Location = new System.Drawing.Point(3, 383);
+            this.lsbCommand.Name = "lsbCommand";
+            this.lsbCommand.Size = new System.Drawing.Size(239, 285);
+            this.lsbCommand.TabIndex = 3;
+            this.lsbCommand.Click += new System.EventHandler(this.lsbCommand_Click);
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.label3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.label3.Location = new System.Drawing.Point(3, 350);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(239, 30);
+            this.label3.TabIndex = 2;
+            this.label3.Text = "Command";
+            this.label3.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // txbNotice
+            // 
+            this.txbNotice.BackColor = System.Drawing.Color.White;
+            this.txbNotice.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txbNotice.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.txbNotice.Location = new System.Drawing.Point(3, 674);
+            this.txbNotice.Multiline = true;
+            this.txbNotice.Name = "txbNotice";
+            this.txbNotice.ReadOnly = true;
+            this.txbNotice.ScrollBars = System.Windows.Forms.ScrollBars.Both;
+            this.txbNotice.Size = new System.Drawing.Size(239, 142);
+            this.txbNotice.TabIndex = 1;
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.label2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.label2.Location = new System.Drawing.Point(3, 175);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(239, 30);
+            this.label2.TabIndex = 2;
+            this.label2.Text = "Command Type";
+            this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // lsbCommandType
+            // 
+            this.lsbCommandType.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.lsbCommandType.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.lsbCommandType.FormattingEnabled = true;
+            this.lsbCommandType.ItemHeight = 20;
+            this.lsbCommandType.Location = new System.Drawing.Point(3, 208);
+            this.lsbCommandType.Name = "lsbCommandType";
+            this.lsbCommandType.Size = new System.Drawing.Size(239, 139);
+            this.lsbCommandType.TabIndex = 2;
+            this.lsbCommandType.Click += new System.EventHandler(this.lsbCommandType_Click);
+            // 
+            // lsbDeviceName
+            // 
+            this.lsbDeviceName.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.lsbDeviceName.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.lsbDeviceName.FormattingEnabled = true;
+            this.lsbDeviceName.ItemHeight = 20;
+            this.lsbDeviceName.Location = new System.Drawing.Point(3, 33);
+            this.lsbDeviceName.Name = "lsbDeviceName";
+            this.lsbDeviceName.Size = new System.Drawing.Size(239, 139);
+            this.lsbDeviceName.TabIndex = 1;
+            this.lsbDeviceName.Click += new System.EventHandler(this.lsbDeviceName_Click);
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.label1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.label1.Location = new System.Drawing.Point(3, 0);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(239, 30);
+            this.label1.TabIndex = 1;
+            this.label1.Text = "Device Name";
+            this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // splitContainer1
+            // 
+            this.splitContainer1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.splitContainer1.Location = new System.Drawing.Point(0, 0);
+            this.splitContainer1.Name = "splitContainer1";
+            this.splitContainer1.Orientation = System.Windows.Forms.Orientation.Horizontal;
+            this.splitContainer1.Size = new System.Drawing.Size(636, 507);
+            this.splitContainer1.SplitterDistance = 465;
+            this.splitContainer1.TabIndex = 0;
+            // 
+            // contextMenuStrip1
+            // 
+            this.contextMenuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.toolStripMenuItem3,
+            this.toolStripMenuItem1});
+            this.contextMenuStrip1.Name = "contextMenuStrip1";
+            this.contextMenuStrip1.ShowCheckMargin = true;
+            this.contextMenuStrip1.Size = new System.Drawing.Size(211, 48);
+            // 
+            // toolStripMenuItem1
+            // 
+            this.toolStripMenuItem1.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.toolStripTextBox1,
+            this.toolStripMenuItem2});
+            this.toolStripMenuItem1.Name = "toolStripMenuItem1";
+            this.toolStripMenuItem1.Size = new System.Drawing.Size(210, 22);
+            this.toolStripMenuItem1.Text = "toolStripMenuItem1";
+            // 
+            // toolStripTextBox1
+            // 
+            this.toolStripTextBox1.Name = "toolStripTextBox1";
+            this.toolStripTextBox1.Size = new System.Drawing.Size(100, 23);
+            // 
+            // toolStripMenuItem2
+            // 
+            this.toolStripMenuItem2.Name = "toolStripMenuItem2";
+            this.toolStripMenuItem2.Size = new System.Drawing.Size(188, 22);
+            this.toolStripMenuItem2.Text = "toolStripMenuItem2";
+            // 
+            // toolStripMenuItem3
+            // 
+            this.toolStripMenuItem3.Name = "toolStripMenuItem3";
+            this.toolStripMenuItem3.Size = new System.Drawing.Size(210, 22);
+            this.toolStripMenuItem3.Text = "toolStripMenuItem3";
+            // 
+            // btnPause
+            // 
+            this.btnPause.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.btnPause.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnPause.Location = new System.Drawing.Point(423, 3);
+            this.btnPause.Name = "btnPause";
+            this.btnPause.Size = new System.Drawing.Size(99, 43);
+            this.btnPause.TabIndex = 6;
+            this.btnPause.Text = "Pause";
+            this.btnPause.UseVisualStyleBackColor = true;
+            // 
+            // btnStop
+            // 
+            this.btnStop.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.btnStop.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnStop.Location = new System.Drawing.Point(528, 3);
+            this.btnStop.Name = "btnStop";
+            this.btnStop.Size = new System.Drawing.Size(99, 43);
+            this.btnStop.TabIndex = 7;
+            this.btnStop.Text = "Stop";
+            this.btnStop.UseVisualStyleBackColor = true;
+            // 
+            // btnContinue
+            // 
+            this.btnContinue.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.btnContinue.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnContinue.Location = new System.Drawing.Point(633, 3);
+            this.btnContinue.Name = "btnContinue";
+            this.btnContinue.Size = new System.Drawing.Size(101, 43);
+            this.btnContinue.TabIndex = 8;
+            this.btnContinue.Text = "Continue";
+            this.btnContinue.UseVisualStyleBackColor = true;
             // 
             // FormTerminal
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ControlLight;
-            this.ClientSize = new System.Drawing.Size(1460, 861);
-            this.Controls.Add(this.tabControl1);
-            this.Controls.Add(this.Button_Clean_Message);
-            this.Controls.Add(this.RichTextBox_MESSAGE_LOG);
-            this.Controls.Add(this.Button_SEND_COMMAND);
-            this.Controls.Add(this.cbbCommand_SEND);
-            this.Controls.Add(this.GroupBox_ATUORUN);
+            this.ClientSize = new System.Drawing.Size(1484, 861);
+            this.Controls.Add(this.tlpTerminal);
+            this.Font = new System.Drawing.Font("微軟正黑體", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
+            this.Margin = new System.Windows.Forms.Padding(5);
             this.Name = "FormTerminal";
             this.Text = "Terminal";
-            this.GPBoxCMDSyntax_01.ResumeLayout(false);
-            this.GPBoxCMDSyntax_01.PerformLayout();
-            this.GroupBox2.ResumeLayout(false);
-            this.GPBox_MODE_01.ResumeLayout(false);
-            this.GPBox_MODE_01.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.DGV_Script_A)).EndInit();
-            this.GroupBox_ATUORUN.ResumeLayout(false);
-            this.tabControl1.ResumeLayout(false);
-            this.tabPage1.ResumeLayout(false);
+            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
+            this.Load += new System.EventHandler(this.FormTerminal_Load);
+            this.tlpTerminal.ResumeLayout(false);
+            this.tlpCommandSetting.ResumeLayout(false);
+            this.spcCommandHistory.Panel1.ResumeLayout(false);
+            this.spcCommandHistory.Panel2.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.spcCommandHistory)).EndInit();
+            this.spcCommandHistory.ResumeLayout(false);
+            this.gbCommandList.ResumeLayout(false);
+            this.spcCommandList.Panel1.ResumeLayout(false);
+            this.spcCommandList.Panel2.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.spcCommandList)).EndInit();
+            this.spcCommandList.ResumeLayout(false);
+            this.tableLayoutPanel3.ResumeLayout(false);
+            this.tableLayoutPanel3.PerformLayout();
+            this.gbHistory.ResumeLayout(false);
+            this.gbSetting.ResumeLayout(false);
+            this.spcSettingandTest.Panel1.ResumeLayout(false);
+            this.spcSettingandTest.Panel2.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.spcSettingandTest)).EndInit();
+            this.spcSettingandTest.ResumeLayout(false);
+            this.tlpAssemblySetting.ResumeLayout(false);
+            this.tlpAssemblySetting.PerformLayout();
+            this.tableLayoutPanel1.ResumeLayout(false);
+            this.tlpButtonList.ResumeLayout(false);
+            this.gbCondition.ResumeLayout(false);
+            this.tlpOperationSplit.ResumeLayout(false);
+            this.tlpOperationSplit.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).EndInit();
+            this.splitContainer1.ResumeLayout(false);
+            this.contextMenuStrip1.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
 
         #endregion
 
-        internal System.Windows.Forms.GroupBox GPBoxCMDSyntax_01;
-        internal System.Windows.Forms.ComboBox CboRobot_A01;
-        internal System.Windows.Forms.ComboBox CboRobot_A04;
-        internal System.Windows.Forms.ComboBox CboRobot_A03;
-        internal System.Windows.Forms.Label LabParaA_06;
-        internal System.Windows.Forms.Button Button_ADD_SEND_01;
-        internal System.Windows.Forms.Label LabParaA_01;
-        internal System.Windows.Forms.ComboBox CboRobot_A06;
-        internal System.Windows.Forms.ComboBox CboRobot_A02;
-        internal System.Windows.Forms.Label LabParaA_05;
-        internal System.Windows.Forms.Label LabParaA_02;
-        internal System.Windows.Forms.ComboBox CboRobot_A05;
-        internal System.Windows.Forms.Label LabParaA_03;
-        internal System.Windows.Forms.Label Label6;
-        internal System.Windows.Forms.ComboBox cbbCommand_01;
-        internal System.Windows.Forms.Label LabParaA_04;
-        internal System.Windows.Forms.GroupBox GroupBox2;
-        internal System.Windows.Forms.Button BtnRobot_RESET_01;
-        internal System.Windows.Forms.Button BtnRobot_SERVO_01;
-        internal System.Windows.Forms.Button BtnRobot_HOME_01;
-        internal System.Windows.Forms.GroupBox GPBox_MODE_01;
-        internal System.Windows.Forms.RadioButton rBtnSyntaxMode_GET_01;
-        internal System.Windows.Forms.RadioButton rBtnSyntaxMode_SET_01;
-        internal System.Windows.Forms.RadioButton rBtnSyntaxMode_CMD_01;
-        internal System.Windows.Forms.Button BtnRobot_Connect_01;
-        internal System.Windows.Forms.Button Button_Clean_Message;
-        internal System.Windows.Forms.RichTextBox RichTextBox_MESSAGE_LOG;
-        internal System.Windows.Forms.Button Button_SEND_COMMAND;
-        internal System.Windows.Forms.ComboBox cbbCommand_SEND;
-        internal System.Windows.Forms.DataGridView DGV_Script_A;
-        internal System.Windows.Forms.DataGridViewTextBoxColumn Col_Tag;
-        internal System.Windows.Forms.DataGridViewTextBoxColumn Col_ScriptCMD;
-        internal System.Windows.Forms.GroupBox GroupBox_ATUORUN;
-        internal System.Windows.Forms.Button Btn_AUTO_RUN_PAUSE_A;
-        internal System.Windows.Forms.Button Btn_AUTO_RUN_STOP_A;
-        internal System.Windows.Forms.Button Btn_AUTORUN_STEP_A;
-        internal System.Windows.Forms.Button Btn_ADD_SCRIPT_A;
-        internal System.Windows.Forms.Button Btn_Edit_Mode_A;
-        internal System.Windows.Forms.Button Btn_AUTO_RUN_START_A;
-        private System.Windows.Forms.TabControl tabControl1;
-        private System.Windows.Forms.TabPage tabPage1;
-        private System.Windows.Forms.TabPage tabPage2;
-        private System.Windows.Forms.TabPage tabPage3;
-        private System.Windows.Forms.TabPage tabPage4;
-        private System.Windows.Forms.TabPage tabPage5;
-        private System.Windows.Forms.TabPage tabPage6;
+        private System.Windows.Forms.TableLayoutPanel tlpTerminal;
+        private System.Windows.Forms.GroupBox gbCondition;
+        private System.Windows.Forms.TableLayoutPanel tlpOperationSplit;
+        private System.Windows.Forms.ListBox lsbCommandType;
+        private System.Windows.Forms.ListBox lsbDeviceName;
+        private System.Windows.Forms.ListBox lsbCommand;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.TextBox txbNotice;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.SplitContainer splitContainer1;
+        private System.Windows.Forms.TableLayoutPanel tlpCommandSetting;
+        private System.Windows.Forms.GroupBox gbCommandList;
+        private System.Windows.Forms.GroupBox gbHistory;
+        private System.Windows.Forms.GroupBox gbSetting;
+        private System.Windows.Forms.TableLayoutPanel tlpButtonList;
+        private System.Windows.Forms.SplitContainer spcSettingandTest;
+        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
+        private System.Windows.Forms.Button btnAppendlist;
+        private System.Windows.Forms.Button btnSend;
+        private System.Windows.Forms.SplitContainer spcCommandHistory;
+        private System.Windows.Forms.Button btnClearHistory;
+        private System.Windows.Forms.TableLayoutPanel tlpAssemblyUI;
+        private System.Windows.Forms.SplitContainer spcCommandList;
+        private System.Windows.Forms.ListBox lsbCommandList;
+        private System.Windows.Forms.ListBox lsbHistory;
+        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel3;
+        private System.Windows.Forms.Button btnDown;
+        private System.Windows.Forms.Button btnUP;
+        private System.Windows.Forms.Button btnExport;
+        private System.Windows.Forms.Button btnImport;
+        private System.Windows.Forms.Button btnRemove;
+        private System.Windows.Forms.Button btnDelete;
+        private System.Windows.Forms.TableLayoutPanel tlpAssemblySetting;
+        private System.Windows.Forms.TextBox txbManually;
+        private System.Controls.SplitButton sbtnRun;
+        private System.Windows.Forms.ContextMenuStrip contextMenuStrip1;
+        private System.Windows.Forms.ToolStripMenuItem toolStripMenuItem3;
+        private System.Windows.Forms.ToolStripMenuItem toolStripMenuItem1;
+        private System.Windows.Forms.ToolStripTextBox toolStripTextBox1;
+        private System.Windows.Forms.ToolStripMenuItem toolStripMenuItem2;
+        private System.Windows.Forms.Button btnContinue;
+        private System.Windows.Forms.Button btnStop;
+        private System.Windows.Forms.Button btnPause;
     }
 }

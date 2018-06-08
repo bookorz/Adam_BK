@@ -21,38 +21,16 @@
     "Index":"2",
     "Flag":""
   }
-  ,
+ ,
   {
     "ExcuteMethod": "AlignerServo",
-    "FinishMethod": "",
-    "Method": "AlignerMode",
-    "Arm": "1",
-    "Slot": "",
-    "Position": "",
-    "Value": "",
-    "Index":"3",
-    "Flag":""
-  },
-  {
-    "ExcuteMethod": "AlignerMode",
-    "FinishMethod": "",
-    "Method": "AlignerSpeed",
-    "Arm": "0",
-    "Slot": "",
-    "Position": "",
-    "Value": "",
-    "Index":"4",
-    "Flag":""
-  },
-  {
-    "ExcuteMethod": "AlignerSpeed",
     "FinishMethod": "",
     "Method": "AlignerOrigin",
     "Arm": "",
     "Slot": "",
     "Position": "",
     "Value": "",
-    "Index":"5",
+    "Index":"3",
     "Flag":""
   },
   {
@@ -63,7 +41,7 @@
     "Slot": "",
     "Position": "",
     "Value": "",
-    "Index":"6",
+    "Index":"4",
     "Flag":""
   },
   {
@@ -74,7 +52,7 @@
     "Slot": "",
     "Position": "",
     "Value": "",
-    "Index":"7",
+    "Index":"5",
     "Flag":"End"
   }
 ]

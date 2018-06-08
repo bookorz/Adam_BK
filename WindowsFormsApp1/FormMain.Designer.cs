@@ -30,18 +30,13 @@ namespace Adam
         {
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormMain));
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             this.splitContainer13 = new System.Windows.Forms.SplitContainer();
             this.groupBox54 = new System.Windows.Forms.GroupBox();
-            this.tgsMode_SW = new JCS.ToggleSwitch();
-            this.label197 = new System.Windows.Forms.Label();
-            this.label198 = new System.Windows.Forms.Label();
-            this.button71 = new System.Windows.Forms.Button();
+            this.Mode_btn = new System.Windows.Forms.Button();
             this.groupBox19 = new System.Windows.Forms.GroupBox();
-            this.tgsConnection = new JCS.ToggleSwitch();
+            this.Connection_btn = new System.Windows.Forms.Button();
             this.button27 = new System.Windows.Forms.Button();
-            this.label194 = new System.Windows.Forms.Label();
-            this.label193 = new System.Windows.Forms.Label();
             this.groupBox5 = new System.Windows.Forms.GroupBox();
             this.DifferentialPressureAlarm2_Signal = new System.Windows.Forms.Button();
             this.DifferentialPressureAlarm1_Signal = new System.Windows.Forms.Button();
@@ -53,7 +48,7 @@ namespace Adam
             this.Air_Signal = new System.Windows.Forms.Button();
             this.Vacuum_Signal = new System.Windows.Forms.Button();
             this.DoorSwitch_Signal = new System.Windows.Forms.Button();
-            this.button6 = new System.Windows.Forms.Button();
+            this.CurrentSate_btn = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
             this.groupBox4 = new System.Windows.Forms.GroupBox();
             this.Buzzer2_Signal = new System.Windows.Forms.Button();
@@ -155,66 +150,34 @@ namespace Adam
             // 
             // groupBox54
             // 
-            this.groupBox54.Controls.Add(this.tgsMode_SW);
-            this.groupBox54.Controls.Add(this.label197);
-            this.groupBox54.Controls.Add(this.label198);
-            this.groupBox54.Controls.Add(this.button71);
+            this.groupBox54.Controls.Add(this.Mode_btn);
             resources.ApplyResources(this.groupBox54, "groupBox54");
             this.groupBox54.Name = "groupBox54";
             this.groupBox54.TabStop = false;
             // 
-            // tgsMode_SW
+            // Mode_btn
             // 
-            resources.ApplyResources(this.tgsMode_SW, "tgsMode_SW");
-            this.tgsMode_SW.Name = "tgsMode_SW";
-            this.tgsMode_SW.OffFont = new System.Drawing.Font("微軟正黑體", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-            this.tgsMode_SW.OffForeColor = System.Drawing.Color.White;
-            this.tgsMode_SW.OffText = "Maint..";
-            this.tgsMode_SW.OnFont = new System.Drawing.Font("微軟正黑體", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-            this.tgsMode_SW.OnForeColor = System.Drawing.Color.White;
-            this.tgsMode_SW.OnText = "Auto";
-            this.tgsMode_SW.Style = JCS.ToggleSwitch.ToggleSwitchStyle.Fancy;
-            this.tgsMode_SW.CheckedChanged += new JCS.ToggleSwitch.CheckedChangedDelegate(this.tgsMode_SW_CheckedChanged);
-            // 
-            // label197
-            // 
-            resources.ApplyResources(this.label197, "label197");
-            this.label197.Name = "label197";
-            // 
-            // label198
-            // 
-            resources.ApplyResources(this.label198, "label198");
-            this.label198.Name = "label198";
-            // 
-            // button71
-            // 
-            resources.ApplyResources(this.button71, "button71");
-            this.button71.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
-            this.button71.Name = "button71";
-            this.button71.UseVisualStyleBackColor = false;
+            this.Mode_btn.BackColor = System.Drawing.Color.Orange;
+            resources.ApplyResources(this.Mode_btn, "Mode_btn");
+            this.Mode_btn.Name = "Mode_btn";
+            this.Mode_btn.UseVisualStyleBackColor = false;
+            this.Mode_btn.Click += new System.EventHandler(this.Mode_btn_Click);
             // 
             // groupBox19
             // 
-            this.groupBox19.Controls.Add(this.tgsConnection);
+            this.groupBox19.Controls.Add(this.Connection_btn);
             this.groupBox19.Controls.Add(this.button27);
-            this.groupBox19.Controls.Add(this.label194);
-            this.groupBox19.Controls.Add(this.label193);
             resources.ApplyResources(this.groupBox19, "groupBox19");
             this.groupBox19.Name = "groupBox19";
             this.groupBox19.TabStop = false;
             // 
-            // tgsConnection
+            // Connection_btn
             // 
-            resources.ApplyResources(this.tgsConnection, "tgsConnection");
-            this.tgsConnection.Name = "tgsConnection";
-            this.tgsConnection.OffFont = new System.Drawing.Font("微軟正黑體", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-            this.tgsConnection.OffForeColor = System.Drawing.Color.White;
-            this.tgsConnection.OffText = "OFF";
-            this.tgsConnection.OnFont = new System.Drawing.Font("微軟正黑體", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-            this.tgsConnection.OnForeColor = System.Drawing.Color.White;
-            this.tgsConnection.OnText = "ON";
-            this.tgsConnection.Style = JCS.ToggleSwitch.ToggleSwitchStyle.Fancy;
-            this.tgsConnection.CheckedChanged += new JCS.ToggleSwitch.CheckedChangedDelegate(this.tgsConnection_CheckedChanged);
+            this.Connection_btn.BackColor = System.Drawing.Color.Red;
+            resources.ApplyResources(this.Connection_btn, "Connection_btn");
+            this.Connection_btn.Name = "Connection_btn";
+            this.Connection_btn.UseVisualStyleBackColor = false;
+            this.Connection_btn.Click += new System.EventHandler(this.Connection_btn_Click);
             // 
             // button27
             // 
@@ -222,16 +185,6 @@ namespace Adam
             this.button27.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
             this.button27.Name = "button27";
             this.button27.UseVisualStyleBackColor = false;
-            // 
-            // label194
-            // 
-            resources.ApplyResources(this.label194, "label194");
-            this.label194.Name = "label194";
-            // 
-            // label193
-            // 
-            resources.ApplyResources(this.label193, "label193");
-            this.label193.Name = "label193";
             // 
             // groupBox5
             // 
@@ -245,7 +198,7 @@ namespace Adam
             this.groupBox5.Controls.Add(this.Air_Signal);
             this.groupBox5.Controls.Add(this.Vacuum_Signal);
             this.groupBox5.Controls.Add(this.DoorSwitch_Signal);
-            this.groupBox5.Controls.Add(this.button6);
+            this.groupBox5.Controls.Add(this.CurrentSate_btn);
             resources.ApplyResources(this.groupBox5, "groupBox5");
             this.groupBox5.Name = "groupBox5";
             this.groupBox5.TabStop = false;
@@ -320,12 +273,12 @@ namespace Adam
             this.DoorSwitch_Signal.Name = "DoorSwitch_Signal";
             this.DoorSwitch_Signal.UseVisualStyleBackColor = false;
             // 
-            // button6
+            // CurrentSate_btn
             // 
-            resources.ApplyResources(this.button6, "button6");
-            this.button6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
-            this.button6.Name = "button6";
-            this.button6.UseVisualStyleBackColor = false;
+            resources.ApplyResources(this.CurrentSate_btn, "CurrentSate_btn");
+            this.CurrentSate_btn.BackColor = System.Drawing.Color.Orange;
+            this.CurrentSate_btn.Name = "CurrentSate_btn";
+            this.CurrentSate_btn.UseVisualStyleBackColor = false;
             // 
             // panel1
             // 
@@ -447,14 +400,14 @@ namespace Adam
             this.Conn_gv.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
             this.Conn_gv.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.Conn_gv.ColumnHeadersVisible = false;
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("微軟正黑體", 12F);
-            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.Conn_gv.DefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("微軟正黑體", 12F);
+            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.Conn_gv.DefaultCellStyle = dataGridViewCellStyle1;
             resources.ApplyResources(this.Conn_gv, "Conn_gv");
             this.Conn_gv.MultiSelect = false;
             this.Conn_gv.Name = "Conn_gv";
@@ -836,9 +789,7 @@ namespace Adam
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer13)).EndInit();
             this.splitContainer13.ResumeLayout(false);
             this.groupBox54.ResumeLayout(false);
-            this.groupBox54.PerformLayout();
             this.groupBox19.ResumeLayout(false);
-            this.groupBox19.PerformLayout();
             this.groupBox5.ResumeLayout(false);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
@@ -893,7 +844,7 @@ namespace Adam
         private System.Windows.Forms.Button Air_Signal;
         private System.Windows.Forms.Button Vacuum_Signal;
         private System.Windows.Forms.Button DoorSwitch_Signal;
-        private System.Windows.Forms.Button button6;
+        private System.Windows.Forms.Button CurrentSate_btn;
         private System.Windows.Forms.Button DifferentialPressureAlarm1_Signal;
         private System.Windows.Forms.Button LoadPortVacuum_Signal;
         private System.Windows.Forms.Button SafetyRelay_Signal;
@@ -926,13 +877,6 @@ namespace Adam
         private System.Windows.Forms.Button btnTeach;
         private System.Windows.Forms.ToolStripMenuItem runingToolStripMenuItem;
         private System.Windows.Forms.GroupBox groupBox54;
-        private System.Windows.Forms.Label label197;
-        private System.Windows.Forms.Label label198;
-        private System.Windows.Forms.Button button71;
-        private System.Windows.Forms.Label label194;
-        private System.Windows.Forms.Label label193;
-        private JCS.ToggleSwitch tgsMode_SW;
-        private JCS.ToggleSwitch tgsConnection;
         private System.DirectoryServices.DirectorySearcher directorySearcher1;
         private System.Windows.Forms.Label lbl_login_date;
         private System.Windows.Forms.Label lbl_login_group;
@@ -948,6 +892,8 @@ namespace Adam
         private System.Windows.Forms.GroupBox groupBox4;
         private System.Windows.Forms.Button Buzzer2_Signal;
         private System.Windows.Forms.Button Buzzer1_Signal;
+        private System.Windows.Forms.Button Mode_btn;
+        private System.Windows.Forms.Button Connection_btn;
     }
 }
 

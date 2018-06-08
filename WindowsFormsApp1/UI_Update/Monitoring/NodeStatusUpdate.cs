@@ -6,6 +6,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using TransferControl.Management;
 
 namespace Adam.UI_Update.Monitoring
 {
@@ -13,6 +14,7 @@ namespace Adam.UI_Update.Monitoring
     {
         static ILog logger = LogManager.GetLogger(typeof(ConnectionStatusUpdate));
         delegate void UpdateNode(string Device_ID, string State);
+        delegate void UpdateState();
 
         public static void UpdateNodeState(string Device_ID, string State)
         {
@@ -44,7 +46,7 @@ namespace Adam.UI_Update.Monitoring
                             State_tb.BackColor = Color.Yellow;
                             break;
                     }
-                    
+                    UpdateCurrentState();
                 }
 
 
@@ -54,5 +56,39 @@ namespace Adam.UI_Update.Monitoring
                 logger.Error("UpdateControllerStatus: Update fail.");
             }
         }
+
+        public static void UpdateCurrentState()
+        {
+            try
+            {
+                Form form = Application.OpenForms["FormMain"];
+
+                if (form == null)
+                    return;
+
+                Button state = form.Controls.Find("CurrentSate_btn", true).FirstOrDefault() as Button;
+
+                if (state == null)
+                    return;
+
+                if (state.InvokeRequired)
+                {
+                    UpdateState ph = new UpdateState(UpdateCurrentState);
+                    state.BeginInvoke(ph);
+                }
+                else
+                {
+                   
+                    state.Text = NodeManagement.GetCurrentState();
+                }
+
+
+            }
+            catch
+            {
+                logger.Error("UpdateDIOStatus: Update fail.");
+            }
+        }
+
     }
 }

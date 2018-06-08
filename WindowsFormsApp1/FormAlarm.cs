@@ -23,7 +23,18 @@ namespace Adam
         private void ResetAll_bt_Click(object sender, EventArgs e)
         {
             Transaction Txn;
-            var NodeList = ((List<AlarmInfo>)AlarmList_gv.DataSource).ToList().GroupBy(t => t.NodeName);
+
+            foreach(AlarmInfo eachA in AlarmManagement.GetAll())
+            {
+                if (!eachA.Type.Equals("Device alert error"))
+                {
+                    AlarmManagement.Remove(eachA);
+                }
+            }
+
+            AlarmUpdate.UpdateAlarmList(AlarmManagement.GetAll());
+
+            var NodeList = AlarmManagement.GetAll().GroupBy(t => t.NodeName);
             foreach (var group in NodeList)
             {
                 Txn = new Transaction();
