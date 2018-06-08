@@ -291,13 +291,26 @@ namespace Adam
                     switch (Txn.Method)
                     {
                         case Transaction.Command.LoadPortType.GetMapping:
-                            if (RouteCtrl.GetMode().Equals("Auto"))
-                            {
-                                WaferAssignUpdate.UpdateLoadPortMapping(Node.Name, Msg.Value);
-                            }
+
+                            WaferAssignUpdate.UpdateLoadPortMapping(Node.Name, Msg.Value);
+
                             break;
-                        case Transaction.Command.LoadPortType.ReadStatus:
-                            Node.StatusInfo = Msg.Value;
+                        case Transaction.Command.LoadPortType.GetLED:
+                            if (RouteCtrl.GetMode().Equals("Start"))
+                            {
+                                if (Msg.Value.Length >= 13)
+                                {
+                                    //When Presence & Placement on
+                                    if(Msg.Value[3] == '1' && Msg.Value[4] == '1')
+                                    {
+                                        Node.ExcuteScript("LoadPortFoupIn", "LoadPortFoup", true);
+                                    }
+                                    else
+                                    {
+                                        Node.ExcuteScript("LoadPortFoupOut", "LoadPortFoup", true);
+                                    }
+                                }
+                            }
                             break;
                     }
                     break;
@@ -521,19 +534,19 @@ namespace Adam
                     switch (Msg.Command)
                     {
                         case "MANSW":
-                            if (RouteCtrl.GetMode().Equals("Auto"))
+                            if (RouteCtrl.GetMode().Equals("Start"))
                             {
                                 Node.ExcuteScript("LoadPortMapping", "MANSW", true);
                             }
                             break;
                         case "PODON":
-                            if (RouteCtrl.GetMode().Equals("Auto"))
+                            if (RouteCtrl.GetMode().Equals("Start"))
                             {
                                 Node.ExcuteScript("LoadPortFoupIn", "LoadPortFoup", true);
                             }
                             break;
                         case "PODOF":
-                            if (RouteCtrl.GetMode().Equals("Auto"))
+                            if (RouteCtrl.GetMode().Equals("Start"))
                             {
                                 Node.ExcuteScript("LoadPortFoupOut", "LoadPortFoup", true);
                             }
@@ -775,7 +788,7 @@ namespace Adam
             }
             if (Mode_btn.Tag.ToString() == "Manual")
             {
-                btnMaintence.Text = "Auto Mode";
+                btnMaintence.Text = "Start Mode";
                 btnMaintence.BackColor = Color.Red;
                 btnMaintence.Enabled = false;
                 btnTeach.Enabled = false;
@@ -793,8 +806,8 @@ namespace Adam
                 else
                 {
 
-                    ThreadPool.QueueUserWorkItem(new WaitCallback(RouteCtrl.Auto), "Normal");
-                    Mode_btn.Tag = "Auto";
+                    ThreadPool.QueueUserWorkItem(new WaitCallback(RouteCtrl.Start), "Normal");
+                    Mode_btn.Tag = "Start";
                     Mode_btn.BackColor = Color.Lime;
                 }
             }

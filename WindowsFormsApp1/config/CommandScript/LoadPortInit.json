@@ -2,7 +2,7 @@
   {
     "ExcuteMethod": "",
     "FinishMethod": "",
-    "Method": "MappingLoad",
+    "Method": "Reset",
     "Arm": "",
     "Slot": "",
     "Position": "",
@@ -11,9 +11,9 @@
     "Flag":"Start"
   },
   {
-    "ExcuteMethod": "",
-    "FinishMethod": "MappingLoad",
-    "Method": "GetMapping",
+    "ExcuteMethod": "Reset",
+    "FinishMethod": "",
+    "Method": "ForceInitialPos",
     "Arm": "",
     "Slot": "",
     "Position": "",
