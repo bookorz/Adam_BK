@@ -2,7 +2,7 @@
   {
     "ExcuteMethod": "",
     "FinishMethod": "",
-    "Method": "GetSpeed",
+    "Method": "GetStatus",
     "Arm": "",
     "Slot": "",
     "Position": "",
@@ -11,6 +11,18 @@
     "Flag":"Start"
   },
   {
+    "ExcuteMethod": "GetStatus",
+    "FinishMethod": "",
+    "Method": "GetSpeed",
+    "Arm": "",
+    "Slot": "",
+    "Position": "",
+    "Value": "",
+    "Index":"2",
+    "Flag":""
+  }
+  ,
+  {
     "ExcuteMethod": "GetSpeed",
     "FinishMethod": "",
     "Method": "GetMode",
@@ -18,7 +30,7 @@
     "Slot": "",
     "Position": "",
     "Value": "",
-    "Index":"2",
+    "Index":"3",
     "Flag":""
   },
   {
@@ -29,7 +41,7 @@
     "Slot": "",
     "Position": "",
     "Value": "00",
-    "Index":"3",
+    "Index":"4",
     "Flag":""
   },
   {
@@ -40,7 +52,7 @@
     "Slot": "",
     "Position": "",
     "Value": "4",
-    "Index":"4",
+    "Index":"5",
     "Flag":""
   },
   {
@@ -51,7 +63,7 @@
     "Slot": "",
     "Position": "",
     "Value": "5",
-    "Index":"5",
+    "Index":"6",
     "Flag":""
   },
   {
@@ -62,7 +74,7 @@
     "Slot": "",
     "Position": "",
     "Value": "1",
-    "Index":"6",
+    "Index":"7",
     "Flag":""
   },
   {
@@ -73,16 +85,6 @@
     "Slot": "",
     "Position": "",
     "Value": "2",
-    "Index":"7",
-    "Flag":""
-  },{
-    "ExcuteMethod": "GetSV",
-    "FinishMethod": "",
-    "Method": "GetStatus",
-    "Arm": "",
-    "Slot": "",
-    "Position": "",
-    "Value": "",
     "Index":"8",
     "Flag":"End"
   }

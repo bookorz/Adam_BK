@@ -80,6 +80,48 @@ namespace Adam.UI_Update.Monitoring
                 {
                    
                     state.Text = NodeManagement.GetCurrentState();
+                    Dictionary<string, string> Params = new Dictionary<string, string>();
+                    switch (state.Text)
+                    {
+                        case "Run":
+                            state.BackColor = Color.Lime;
+                            
+                            Params.Add("Red", "False");
+                            Params.Add("Orange", "False");
+                            Params.Add("Green", "True");
+                            Params.Add("Blue", "False");
+                            Params.Add("Buzzer1", "False");
+                            Params.Add("Buzzer2", "False");
+                            FormMain.DIO.SetIO(Params);
+
+                            break;
+                        case "Idle":
+                            state.BackColor = Color.Yellow;
+                            
+                            Params.Add("Red", "False");
+                            Params.Add("Orange", "False");
+                            Params.Add("Green", "False");
+                            Params.Add("Blue", "True");
+                            Params.Add("Buzzer1", "False");
+                            Params.Add("Buzzer2", "False");
+                            FormMain.DIO.SetIO(Params);
+                            break;
+                        case "Pause":
+                           
+                            Params.Add("Red", "False");
+                            Params.Add("Orange", "True");
+                            Params.Add("Green", "False");
+                            Params.Add("Blue", "False");
+                            Params.Add("Buzzer1", "False");
+                            Params.Add("Buzzer2", "False");
+                            FormMain.DIO.SetIO(Params);
+                            break;
+                        case "Alarm":
+                            state.BackColor = Color.Red;
+                            FormMain.DIO.SetIO("Red", "True");
+                            
+                            break;
+                    }
                 }
 
 

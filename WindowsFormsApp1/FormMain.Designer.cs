@@ -160,6 +160,7 @@ namespace Adam
             this.Mode_btn.BackColor = System.Drawing.Color.Orange;
             resources.ApplyResources(this.Mode_btn, "Mode_btn");
             this.Mode_btn.Name = "Mode_btn";
+            this.Mode_btn.Tag = "Manual";
             this.Mode_btn.UseVisualStyleBackColor = false;
             this.Mode_btn.Click += new System.EventHandler(this.Mode_btn_Click);
             // 
@@ -176,6 +177,7 @@ namespace Adam
             this.Connection_btn.BackColor = System.Drawing.Color.Red;
             resources.ApplyResources(this.Connection_btn, "Connection_btn");
             this.Connection_btn.Name = "Connection_btn";
+            this.Connection_btn.Tag = "Offline";
             this.Connection_btn.UseVisualStyleBackColor = false;
             this.Connection_btn.Click += new System.EventHandler(this.Connection_btn_Click);
             // 

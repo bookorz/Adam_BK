@@ -1,6 +1,7 @@
 ﻿using log4net;
 using System;
 using System.Collections.Generic;
+using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -19,6 +20,56 @@ namespace Adam.UI_Update.Monitoring
         }
 
         delegate void UpdateController(string Device_ID, string Status);
+        delegate void UpdateOnline(string Status);
+
+        public static void UpdateOnlineStatus(string Status)
+        {
+            try
+            {
+                Form form = Application.OpenForms["FormMain"];
+                Button Online;
+                if (form == null)
+                    return;
+
+                Online = form.Controls.Find("Connection_btn", true).FirstOrDefault() as Button;
+                if (Online == null)
+                    return;
+
+                if (Online.InvokeRequired)
+                {
+                    UpdateOnline ph = new UpdateOnline(UpdateOnlineStatus);
+                    Online.BeginInvoke(ph, Status);
+                }
+                else
+                {
+                    switch (Status)
+                    {
+                        case "Online":
+                            Online.Tag = "Online";
+                            Online.Text = "Online";
+                            Online.BackColor = Color.Lime;
+                            break;
+                        case "Connecting":
+                            Online.Tag = "Connecting";
+                            Online.Text = "Connecting";
+                            Online.BackColor = Color.Orange;
+                            break;
+                        case "Offline":
+                            Online.Text = "Offline";
+                            Online.Tag = "Offline";
+                            Online.BackColor = Color.Red;
+                            break;
+                    }
+                    
+                }
+
+
+            }
+            catch
+            {
+                logger.Error("UpdateOnlineStatus: Update fail.");
+            }
+        }
 
         public static void UpdateControllerStatus(string Device_ID, string Status)
         {

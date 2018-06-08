@@ -301,7 +301,7 @@ namespace Adam
                                 if (Msg.Value.Length >= 13)
                                 {
                                     //When Presence & Placement on
-                                    if(Msg.Value[3] == '1' && Msg.Value[4] == '1')
+                                    if (Msg.Value[3] == '1' && Msg.Value[4] == '1')
                                     {
                                         Node.ExcuteScript("LoadPortFoupIn", "LoadPortFoup", true);
                                     }
@@ -457,8 +457,7 @@ namespace Adam
             CurrentAlarm.TimeStamp = DateTime.Now.ToString("yyyy/MM/dd HH:mm:ss:fff");
 
             AlarmManagement.Add(CurrentAlarm);
-            Form form = Application.OpenForms["AlarmFrom"];
-
+           
             AlarmUpdate.UpdateAlarmList(AlarmManagement.GetAll());
             AlarmUpdate.UpdateAlarmHistory(AlarmManagement.GetHistory());
 
@@ -542,7 +541,9 @@ namespace Adam
                         case "PODON":
                             if (RouteCtrl.GetMode().Equals("Start"))
                             {
+
                                 Node.ExcuteScript("LoadPortFoupIn", "LoadPortFoup", true);
+
                             }
                             break;
                         case "PODOF":
@@ -576,7 +577,12 @@ namespace Adam
 
         public void On_Controller_State_Changed(string Device_ID, string Status)
         {
+
             ConnectionStatusUpdate.UpdateControllerStatus(Device_ID, Status);
+            if (ControllerManagement.CheckAllConnection())
+            {
+                ConnectionStatusUpdate.UpdateOnlineStatus("Online");
+            }
             logger.Debug("On_Controller_State_Changed");
         }
 
@@ -758,36 +764,33 @@ namespace Adam
 
         private void Connection_btn_Click(object sender, EventArgs e)
         {
-            if (Connection_btn.Tag == null)
-            {
-                Connection_btn.Tag = "Offline";
-            }
+            
             if (Connection_btn.Tag.ToString() == "Offline")
             {
                 RouteCtrl.ConnectAll();
 
-                Connection_btn.Tag = "Online";
-                Connection_btn.Text = "Online";
-                Connection_btn.BackColor = Color.Lime;
+                ConnectionStatusUpdate.UpdateOnlineStatus("Connecting");
             }
             else
             {
                 RouteCtrl.DisconnectAll();
-                Connection_btn.Text = "Offline";
-                Connection_btn.Tag = "Offline";
-                Connection_btn.BackColor = Color.Red;
+                ConnectionStatusUpdate.UpdateOnlineStatus("Offline");
             }
 
         }
 
         private void Mode_btn_Click(object sender, EventArgs e)
         {
-            if (Mode_btn.Tag == null)
-            {
-                Mode_btn.Tag = "Manual";
-            }
+            
             if (Mode_btn.Tag.ToString() == "Manual")
             {
+               
+                if (Connection_btn.Tag.ToString() == "Offline")
+                {
+                    MessageBox.Show("尚未連線");
+                    return;
+                }
+
                 btnMaintence.Text = "Start Mode";
                 btnMaintence.BackColor = Color.Red;
                 btnMaintence.Enabled = false;
@@ -805,7 +808,7 @@ namespace Adam
                 }
                 else
                 {
-
+                    NodeStatusUpdate.UpdateCurrentState();
                     ThreadPool.QueueUserWorkItem(new WaitCallback(RouteCtrl.Start), "Normal");
                     Mode_btn.Tag = "Start";
                     Mode_btn.BackColor = Color.Lime;
