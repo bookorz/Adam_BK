@@ -87,7 +87,6 @@
     <Compile Include="Menu\SystemSetting\FormSettingFram.Designer.cs">
       <DependentUpon>FormSettingFram.cs</DependentUpon>
     </Compile>
-    <Compile Include="Util\ConfigUtil.cs" />
     <Compile Include="FormAlarm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -268,6 +267,7 @@
     <Compile Include="UI_Update\Monitoring\NodeStatusUpdate.cs" />
     <Compile Include="UI_Update\OCR\OCRUpdate.cs" />
     <Compile Include="UI_Update\WaferMapping\WaferAssignUpdate.cs" />
+    <Compile Include="Util\ConfigUtil.cs" />
     <Compile Include="Util\StateUtil.cs" />
     <EmbeddedResource Include="FormAlarm.resx">
       <DependentUpon>FormAlarm.cs</DependentUpon>
@@ -378,6 +378,7 @@
     <None Include="config\CommandScript\AlignerInit.json">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
+    <None Include="config\CommandScript\AlignerStateGet%28Kawasaki%29.json" />
     <None Include="config\CommandScript\AlignerStateGet.json">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>

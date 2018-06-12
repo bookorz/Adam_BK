@@ -53,6 +53,24 @@ namespace Adam.Util
                     break;
             }
         }
+        public static void UpdateCombineStatus(string device, string msg)
+        {
+            switch (device)
+            {
+                case "Robot01":
+                    robot1.CombineStatus = msg;
+                    break;
+                case "Robot02":
+                    robot2.CombineStatus = msg;
+                    break;
+                case "Aligner01":
+                    aligner1.CombineStatus = msg;
+                    break;
+                case "Aligner02":
+                    aligner2.CombineStatus = msg;
+                    break;
+            }
+        }
         public static void UpdateError(string device, string msg)
         {
             switch (device)
@@ -198,6 +216,7 @@ namespace Adam.Util
     {
         public string Name { get; set; }
         public string Status { get; set; }
+        public string CombineStatus { get; set; }
         public string State { get; set; }
         public string Present_R { get; set; }
         public string Present_L { get; set; }
@@ -229,6 +248,7 @@ namespace Adam.Util
     {
         public string Name { get; set; }
         public string Status { get; set; }
+        public string CombineStatus { get; set; }
         public string State { get; set; }
         public string Present { get; set; }
         public string Vacuum { get; set; }

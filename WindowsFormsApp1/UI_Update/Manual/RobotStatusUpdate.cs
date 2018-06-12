@@ -41,6 +41,9 @@ namespace Adam.UI_Update.Manual
                         case Transaction.Command.RobotType.GetStatus:
                             StateUtil.UpdateSTS(name, msg);
                             break;
+                        case Transaction.Command.RobotType.GetCombineStatus:
+                            StateUtil.UpdateCombineStatus(name, msg);
+                            break;
                         case Transaction.Command.RobotType.GetSpeed:
                             StateUtil.UpdateSP(name, msg);
                             break;
