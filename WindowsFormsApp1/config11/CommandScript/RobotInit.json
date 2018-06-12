@@ -13,19 +13,19 @@
   {
     "ExcuteMethod": "Reset",
     "FinishMethod": "",
-    "Method": "AlignerServo",
-    "Arm": "",
+    "Method": "RobotServo",
+    "Arm": "1",
     "Slot": "",
     "Position": "",
-    "Value": "1",
+    "Value": "",
     "Index":"2",
     "Flag":""
   }
- ,
+  ,
   {
-    "ExcuteMethod": "AlignerServo",
+    "ExcuteMethod": "RobotSpeed",
     "FinishMethod": "",
-    "Method": "AlignerOrigin",
+    "Method": "RobotHome",
     "Arm": "",
     "Slot": "",
     "Position": "",
@@ -35,8 +35,8 @@
   },
   {
     "ExcuteMethod": "",
-    "FinishMethod": "AlignerOrigin",
-    "Method": "Retract",
+    "FinishMethod": "RobotHome",
+    "Method": "WaferRelease",
     "Arm": "1",
     "Slot": "",
     "Position": "",
@@ -46,9 +46,9 @@
   },
   {
     "ExcuteMethod": "",
-    "FinishMethod": "Retract",
+    "FinishMethod": "WaferRelease",
     "Method": "WaferRelease",
-    "Arm": "1",
+    "Arm": "2",
     "Slot": "",
     "Position": "",
     "Value": "",

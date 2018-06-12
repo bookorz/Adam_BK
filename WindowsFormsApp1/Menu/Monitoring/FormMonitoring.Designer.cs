@@ -47,7 +47,7 @@
             this.textBox2 = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
             this.LoadPort03 = new System.Windows.Forms.DataGridView();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.FID = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.LoadPort02 = new System.Windows.Forms.DataGridView();
             this.Robot02_State = new System.Windows.Forms.TextBox();
@@ -86,10 +86,19 @@
             this.label8 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
-            this.LoadPort01_State = new System.Windows.Forms.TextBox();
+            this.LoadPort01_FID = new System.Windows.Forms.TextBox();
             this.label12 = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
             this.LoadPort01 = new System.Windows.Forms.DataGridView();
+            this.LoadPort01_State = new System.Windows.Forms.TextBox();
+            this.LoadPort02_State = new System.Windows.Forms.TextBox();
+            this.LoadPort03_State = new System.Windows.Forms.TextBox();
+            this.LoadPort04_State = new System.Windows.Forms.TextBox();
+            this.LoadPort05_State = new System.Windows.Forms.TextBox();
+            this.LoadPort06_State = new System.Windows.Forms.TextBox();
+            this.LoadPort07_State = new System.Windows.Forms.TextBox();
+            this.LoadPort08_State = new System.Windows.Forms.TextBox();
+            this.label22 = new System.Windows.Forms.Label();
             this.Aligner01_tb.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.LoadPort08)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.LoadPort07)).BeginInit();
@@ -113,6 +122,14 @@
             // 
             // Aligner01_tb
             // 
+            this.Aligner01_tb.Controls.Add(this.LoadPort08_State);
+            this.Aligner01_tb.Controls.Add(this.LoadPort07_State);
+            this.Aligner01_tb.Controls.Add(this.LoadPort06_State);
+            this.Aligner01_tb.Controls.Add(this.LoadPort05_State);
+            this.Aligner01_tb.Controls.Add(this.LoadPort04_State);
+            this.Aligner01_tb.Controls.Add(this.LoadPort03_State);
+            this.Aligner01_tb.Controls.Add(this.LoadPort02_State);
+            this.Aligner01_tb.Controls.Add(this.LoadPort01_State);
             this.Aligner01_tb.Controls.Add(this.textBox13);
             this.Aligner01_tb.Controls.Add(this.label14);
             this.Aligner01_tb.Controls.Add(this.LoadPort08);
@@ -131,7 +148,7 @@
             this.Aligner01_tb.Controls.Add(this.textBox2);
             this.Aligner01_tb.Controls.Add(this.label3);
             this.Aligner01_tb.Controls.Add(this.LoadPort03);
-            this.Aligner01_tb.Controls.Add(this.textBox1);
+            this.Aligner01_tb.Controls.Add(this.FID);
             this.Aligner01_tb.Controls.Add(this.label2);
             this.Aligner01_tb.Controls.Add(this.LoadPort02);
             this.Aligner01_tb.Controls.Add(this.Robot02_State);
@@ -160,7 +177,7 @@
             this.Aligner01_tb.Controls.Add(this.label8);
             this.Aligner01_tb.Controls.Add(this.label6);
             this.Aligner01_tb.Controls.Add(this.label5);
-            this.Aligner01_tb.Controls.Add(this.LoadPort01_State);
+            this.Aligner01_tb.Controls.Add(this.LoadPort01_FID);
             this.Aligner01_tb.Controls.Add(this.label12);
             this.Aligner01_tb.Controls.Add(this.label9);
             this.Aligner01_tb.Controls.Add(this.LoadPort01);
@@ -205,14 +222,14 @@
             this.LoadPort08.AllowUserToDeleteRows = false;
             this.LoadPort08.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.DisplayedCells;
             this.LoadPort08.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.LoadPort08.Location = new System.Drawing.Point(951, 80);
+            this.LoadPort08.Location = new System.Drawing.Point(951, 119);
             this.LoadPort08.MultiSelect = false;
             this.LoadPort08.Name = "LoadPort08";
             this.LoadPort08.ReadOnly = true;
             this.LoadPort08.RowHeadersVisible = false;
             this.LoadPort08.RowTemplate.Height = 10;
             this.LoadPort08.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.CellSelect;
-            this.LoadPort08.Size = new System.Drawing.Size(129, 652);
+            this.LoadPort08.Size = new System.Drawing.Size(129, 613);
             this.LoadPort08.StandardTab = true;
             this.LoadPort08.TabIndex = 124;
             this.LoadPort08.CellFormatting += new System.Windows.Forms.DataGridViewCellFormattingEventHandler(this.LoadPort_CellFormatting);
@@ -250,14 +267,14 @@
             this.LoadPort07.AllowUserToDeleteRows = false;
             this.LoadPort07.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.DisplayedCells;
             this.LoadPort07.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.LoadPort07.Location = new System.Drawing.Point(816, 80);
+            this.LoadPort07.Location = new System.Drawing.Point(816, 119);
             this.LoadPort07.MultiSelect = false;
             this.LoadPort07.Name = "LoadPort07";
             this.LoadPort07.ReadOnly = true;
             this.LoadPort07.RowHeadersVisible = false;
             this.LoadPort07.RowTemplate.Height = 10;
             this.LoadPort07.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.CellSelect;
-            this.LoadPort07.Size = new System.Drawing.Size(129, 652);
+            this.LoadPort07.Size = new System.Drawing.Size(129, 613);
             this.LoadPort07.StandardTab = true;
             this.LoadPort07.TabIndex = 121;
             this.LoadPort07.CellFormatting += new System.Windows.Forms.DataGridViewCellFormattingEventHandler(this.LoadPort_CellFormatting);
@@ -295,14 +312,14 @@
             this.LoadPort06.AllowUserToDeleteRows = false;
             this.LoadPort06.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.DisplayedCells;
             this.LoadPort06.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.LoadPort06.Location = new System.Drawing.Point(681, 80);
+            this.LoadPort06.Location = new System.Drawing.Point(681, 119);
             this.LoadPort06.MultiSelect = false;
             this.LoadPort06.Name = "LoadPort06";
             this.LoadPort06.ReadOnly = true;
             this.LoadPort06.RowHeadersVisible = false;
             this.LoadPort06.RowTemplate.Height = 10;
             this.LoadPort06.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.CellSelect;
-            this.LoadPort06.Size = new System.Drawing.Size(129, 652);
+            this.LoadPort06.Size = new System.Drawing.Size(129, 613);
             this.LoadPort06.StandardTab = true;
             this.LoadPort06.TabIndex = 118;
             this.LoadPort06.CellFormatting += new System.Windows.Forms.DataGridViewCellFormattingEventHandler(this.LoadPort_CellFormatting);
@@ -340,14 +357,14 @@
             this.LoadPort05.AllowUserToDeleteRows = false;
             this.LoadPort05.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.DisplayedCells;
             this.LoadPort05.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.LoadPort05.Location = new System.Drawing.Point(546, 80);
+            this.LoadPort05.Location = new System.Drawing.Point(546, 119);
             this.LoadPort05.MultiSelect = false;
             this.LoadPort05.Name = "LoadPort05";
             this.LoadPort05.ReadOnly = true;
             this.LoadPort05.RowHeadersVisible = false;
             this.LoadPort05.RowTemplate.Height = 10;
             this.LoadPort05.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.CellSelect;
-            this.LoadPort05.Size = new System.Drawing.Size(129, 652);
+            this.LoadPort05.Size = new System.Drawing.Size(129, 613);
             this.LoadPort05.StandardTab = true;
             this.LoadPort05.TabIndex = 115;
             this.LoadPort05.CellFormatting += new System.Windows.Forms.DataGridViewCellFormattingEventHandler(this.LoadPort_CellFormatting);
@@ -385,14 +402,14 @@
             this.LoadPort04.AllowUserToDeleteRows = false;
             this.LoadPort04.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.DisplayedCells;
             this.LoadPort04.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.LoadPort04.Location = new System.Drawing.Point(411, 80);
+            this.LoadPort04.Location = new System.Drawing.Point(411, 119);
             this.LoadPort04.MultiSelect = false;
             this.LoadPort04.Name = "LoadPort04";
             this.LoadPort04.ReadOnly = true;
             this.LoadPort04.RowHeadersVisible = false;
             this.LoadPort04.RowTemplate.Height = 10;
             this.LoadPort04.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.CellSelect;
-            this.LoadPort04.Size = new System.Drawing.Size(129, 652);
+            this.LoadPort04.Size = new System.Drawing.Size(129, 613);
             this.LoadPort04.StandardTab = true;
             this.LoadPort04.TabIndex = 112;
             this.LoadPort04.CellFormatting += new System.Windows.Forms.DataGridViewCellFormattingEventHandler(this.LoadPort_CellFormatting);
@@ -430,30 +447,30 @@
             this.LoadPort03.AllowUserToDeleteRows = false;
             this.LoadPort03.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.DisplayedCells;
             this.LoadPort03.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.LoadPort03.Location = new System.Drawing.Point(276, 80);
+            this.LoadPort03.Location = new System.Drawing.Point(276, 119);
             this.LoadPort03.MultiSelect = false;
             this.LoadPort03.Name = "LoadPort03";
             this.LoadPort03.ReadOnly = true;
             this.LoadPort03.RowHeadersVisible = false;
             this.LoadPort03.RowTemplate.Height = 10;
             this.LoadPort03.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.CellSelect;
-            this.LoadPort03.Size = new System.Drawing.Size(129, 652);
+            this.LoadPort03.Size = new System.Drawing.Size(129, 613);
             this.LoadPort03.StandardTab = true;
             this.LoadPort03.TabIndex = 109;
             this.LoadPort03.CellFormatting += new System.Windows.Forms.DataGridViewCellFormattingEventHandler(this.LoadPort_CellFormatting);
             // 
-            // textBox1
+            // FID
             // 
-            this.textBox1.BackColor = System.Drawing.Color.Green;
-            this.textBox1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.textBox1.Font = new System.Drawing.Font("微軟正黑體", 12F, System.Drawing.FontStyle.Bold);
-            this.textBox1.ForeColor = System.Drawing.Color.Transparent;
-            this.textBox1.Location = new System.Drawing.Point(141, 45);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(129, 29);
-            this.textBox1.TabIndex = 108;
-            this.textBox1.Text = "Foup ID";
-            this.textBox1.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.FID.BackColor = System.Drawing.Color.Green;
+            this.FID.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.FID.Font = new System.Drawing.Font("微軟正黑體", 12F, System.Drawing.FontStyle.Bold);
+            this.FID.ForeColor = System.Drawing.Color.Transparent;
+            this.FID.Location = new System.Drawing.Point(141, 45);
+            this.FID.Name = "FID";
+            this.FID.Size = new System.Drawing.Size(129, 29);
+            this.FID.TabIndex = 108;
+            this.FID.Text = "Foup ID";
+            this.FID.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // label2
             // 
@@ -475,14 +492,14 @@
             this.LoadPort02.AllowUserToDeleteRows = false;
             this.LoadPort02.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.DisplayedCells;
             this.LoadPort02.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.LoadPort02.Location = new System.Drawing.Point(141, 80);
+            this.LoadPort02.Location = new System.Drawing.Point(141, 119);
             this.LoadPort02.MultiSelect = false;
             this.LoadPort02.Name = "LoadPort02";
             this.LoadPort02.ReadOnly = true;
             this.LoadPort02.RowHeadersVisible = false;
             this.LoadPort02.RowTemplate.Height = 10;
             this.LoadPort02.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.CellSelect;
-            this.LoadPort02.Size = new System.Drawing.Size(129, 652);
+            this.LoadPort02.Size = new System.Drawing.Size(129, 613);
             this.LoadPort02.StandardTab = true;
             this.LoadPort02.TabIndex = 106;
             this.LoadPort02.CellFormatting += new System.Windows.Forms.DataGridViewCellFormattingEventHandler(this.LoadPort_CellFormatting);
@@ -497,7 +514,7 @@
             this.Robot02_State.Name = "Robot02_State";
             this.Robot02_State.Size = new System.Drawing.Size(129, 29);
             this.Robot02_State.TabIndex = 105;
-            this.Robot02_State.Text = "Idel";
+            this.Robot02_State.Text = "Idle";
             this.Robot02_State.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // label1
@@ -676,9 +693,10 @@
             // groupBox6
             // 
             this.groupBox6.Controls.Add(this.tableLayoutPanel3);
+            this.groupBox6.Font = new System.Drawing.Font("微軟正黑體", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
             this.groupBox6.Location = new System.Drawing.Point(1086, 22);
             this.groupBox6.Name = "groupBox6";
-            this.groupBox6.Size = new System.Drawing.Size(118, 196);
+            this.groupBox6.Size = new System.Drawing.Size(149, 174);
             this.groupBox6.TabIndex = 2;
             this.groupBox6.TabStop = false;
             this.groupBox6.Text = "Port  Status";
@@ -687,21 +705,23 @@
             // 
             this.tableLayoutPanel3.ColumnCount = 1;
             this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.tableLayoutPanel3.Controls.Add(this.label22, 0, 5);
             this.tableLayoutPanel3.Controls.Add(this.label21, 0, 4);
             this.tableLayoutPanel3.Controls.Add(this.label20, 0, 3);
             this.tableLayoutPanel3.Controls.Add(this.label19, 0, 2);
             this.tableLayoutPanel3.Controls.Add(this.label18, 0, 1);
             this.tableLayoutPanel3.Controls.Add(this.label17, 0, 0);
             this.tableLayoutPanel3.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tableLayoutPanel3.Location = new System.Drawing.Point(3, 25);
+            this.tableLayoutPanel3.Location = new System.Drawing.Point(3, 23);
             this.tableLayoutPanel3.Name = "tableLayoutPanel3";
-            this.tableLayoutPanel3.RowCount = 5;
+            this.tableLayoutPanel3.RowCount = 6;
             this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 20F));
             this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 20F));
             this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 20F));
             this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 20F));
             this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 20F));
-            this.tableLayoutPanel3.Size = new System.Drawing.Size(112, 168);
+            this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
+            this.tableLayoutPanel3.Size = new System.Drawing.Size(143, 148);
             this.tableLayoutPanel3.TabIndex = 0;
             // 
             // label21
@@ -712,9 +732,9 @@
             this.label21.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.label21.ForeColor = System.Drawing.Color.Transparent;
             this.label21.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.label21.Location = new System.Drawing.Point(3, 132);
+            this.label21.Location = new System.Drawing.Point(3, 100);
             this.label21.Name = "label21";
-            this.label21.Size = new System.Drawing.Size(106, 36);
+            this.label21.Size = new System.Drawing.Size(137, 25);
             this.label21.TabIndex = 93;
             this.label21.Text = "ALARM";
             this.label21.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -727,11 +747,11 @@
             this.label20.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.label20.ForeColor = System.Drawing.Color.Transparent;
             this.label20.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.label20.Location = new System.Drawing.Point(3, 99);
+            this.label20.Location = new System.Drawing.Point(3, 75);
             this.label20.Name = "label20";
-            this.label20.Size = new System.Drawing.Size(106, 33);
+            this.label20.Size = new System.Drawing.Size(137, 25);
             this.label20.TabIndex = 92;
-            this.label20.Text = "UDCM";
+            this.label20.Text = "Ready To Unload";
             this.label20.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // label19
@@ -742,11 +762,11 @@
             this.label19.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.label19.ForeColor = System.Drawing.Color.Transparent;
             this.label19.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.label19.Location = new System.Drawing.Point(3, 66);
+            this.label19.Location = new System.Drawing.Point(3, 50);
             this.label19.Name = "label19";
-            this.label19.Size = new System.Drawing.Size(106, 33);
+            this.label19.Size = new System.Drawing.Size(137, 25);
             this.label19.TabIndex = 91;
-            this.label19.Text = "UDRQ";
+            this.label19.Text = "Transfer Blocked";
             this.label19.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // label18
@@ -757,11 +777,11 @@
             this.label18.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.label18.ForeColor = System.Drawing.Color.Transparent;
             this.label18.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.label18.Location = new System.Drawing.Point(3, 33);
+            this.label18.Location = new System.Drawing.Point(3, 25);
             this.label18.Name = "label18";
-            this.label18.Size = new System.Drawing.Size(106, 33);
+            this.label18.Size = new System.Drawing.Size(137, 25);
             this.label18.TabIndex = 90;
-            this.label18.Text = "LDCM";
+            this.label18.Text = "Transfer Ready";
             this.label18.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // label17
@@ -774,9 +794,9 @@
             this.label17.ImeMode = System.Windows.Forms.ImeMode.NoControl;
             this.label17.Location = new System.Drawing.Point(3, 0);
             this.label17.Name = "label17";
-            this.label17.Size = new System.Drawing.Size(106, 33);
+            this.label17.Size = new System.Drawing.Size(137, 25);
             this.label17.TabIndex = 89;
-            this.label17.Text = "LDRQ";
+            this.label17.Text = "Ready To Load";
             this.label17.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // Robot01_State
@@ -789,7 +809,7 @@
             this.Robot01_State.Name = "Robot01_State";
             this.Robot01_State.Size = new System.Drawing.Size(129, 29);
             this.Robot01_State.TabIndex = 94;
-            this.Robot01_State.Text = "Idel";
+            this.Robot01_State.Text = "Idle";
             this.Robot01_State.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // label16
@@ -816,7 +836,7 @@
             this.Aligner02_State.Name = "Aligner02_State";
             this.Aligner02_State.Size = new System.Drawing.Size(129, 29);
             this.Aligner02_State.TabIndex = 92;
-            this.Aligner02_State.Text = "Idel";
+            this.Aligner02_State.Text = "Idle";
             this.Aligner02_State.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // label15
@@ -843,7 +863,7 @@
             this.Aligner01_State.Name = "Aligner01_State";
             this.Aligner01_State.Size = new System.Drawing.Size(128, 29);
             this.Aligner01_State.TabIndex = 88;
-            this.Aligner01_State.Text = "Idel";
+            this.Aligner01_State.Text = "Idle";
             this.Aligner01_State.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // label13
@@ -1006,18 +1026,18 @@
             this.label5.Text = "PM03";
             this.label5.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // LoadPort01_State
+            // LoadPort01_FID
             // 
-            this.LoadPort01_State.BackColor = System.Drawing.Color.Green;
-            this.LoadPort01_State.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.LoadPort01_State.Font = new System.Drawing.Font("微軟正黑體", 12F, System.Drawing.FontStyle.Bold);
-            this.LoadPort01_State.ForeColor = System.Drawing.Color.Transparent;
-            this.LoadPort01_State.Location = new System.Drawing.Point(6, 45);
-            this.LoadPort01_State.Name = "LoadPort01_State";
-            this.LoadPort01_State.Size = new System.Drawing.Size(129, 29);
-            this.LoadPort01_State.TabIndex = 60;
-            this.LoadPort01_State.Text = "Foup ID";
-            this.LoadPort01_State.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.LoadPort01_FID.BackColor = System.Drawing.Color.Green;
+            this.LoadPort01_FID.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.LoadPort01_FID.Font = new System.Drawing.Font("微軟正黑體", 12F, System.Drawing.FontStyle.Bold);
+            this.LoadPort01_FID.ForeColor = System.Drawing.Color.Transparent;
+            this.LoadPort01_FID.Location = new System.Drawing.Point(6, 45);
+            this.LoadPort01_FID.Name = "LoadPort01_FID";
+            this.LoadPort01_FID.Size = new System.Drawing.Size(129, 29);
+            this.LoadPort01_FID.TabIndex = 60;
+            this.LoadPort01_FID.Text = "Foup ID";
+            this.LoadPort01_FID.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // label12
             // 
@@ -1054,17 +1074,145 @@
             this.LoadPort01.AllowUserToDeleteRows = false;
             this.LoadPort01.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.DisplayedCells;
             this.LoadPort01.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.LoadPort01.Location = new System.Drawing.Point(6, 80);
+            this.LoadPort01.ColumnHeadersVisible = false;
+            this.LoadPort01.Location = new System.Drawing.Point(6, 119);
             this.LoadPort01.MultiSelect = false;
             this.LoadPort01.Name = "LoadPort01";
             this.LoadPort01.ReadOnly = true;
             this.LoadPort01.RowHeadersVisible = false;
             this.LoadPort01.RowTemplate.Height = 10;
             this.LoadPort01.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.CellSelect;
-            this.LoadPort01.Size = new System.Drawing.Size(129, 652);
+            this.LoadPort01.Size = new System.Drawing.Size(129, 613);
             this.LoadPort01.StandardTab = true;
             this.LoadPort01.TabIndex = 52;
             this.LoadPort01.CellFormatting += new System.Windows.Forms.DataGridViewCellFormattingEventHandler(this.LoadPort_CellFormatting);
+            // 
+            // LoadPort01_State
+            // 
+            this.LoadPort01_State.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.LoadPort01_State.BackColor = System.Drawing.Color.DarkGray;
+            this.LoadPort01_State.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.LoadPort01_State.Font = new System.Drawing.Font("微軟正黑體", 12F, System.Drawing.FontStyle.Bold);
+            this.LoadPort01_State.ForeColor = System.Drawing.Color.White;
+            this.LoadPort01_State.Location = new System.Drawing.Point(6, 89);
+            this.LoadPort01_State.Name = "LoadPort01_State";
+            this.LoadPort01_State.Size = new System.Drawing.Size(129, 29);
+            this.LoadPort01_State.TabIndex = 127;
+            this.LoadPort01_State.Text = "Ready To Load";
+            this.LoadPort01_State.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // LoadPort02_State
+            // 
+            this.LoadPort02_State.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.LoadPort02_State.BackColor = System.Drawing.Color.DarkGray;
+            this.LoadPort02_State.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.LoadPort02_State.Font = new System.Drawing.Font("微軟正黑體", 12F, System.Drawing.FontStyle.Bold);
+            this.LoadPort02_State.ForeColor = System.Drawing.Color.White;
+            this.LoadPort02_State.Location = new System.Drawing.Point(141, 89);
+            this.LoadPort02_State.Name = "LoadPort02_State";
+            this.LoadPort02_State.Size = new System.Drawing.Size(129, 29);
+            this.LoadPort02_State.TabIndex = 128;
+            this.LoadPort02_State.Text = "Ready To Load";
+            this.LoadPort02_State.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // LoadPort03_State
+            // 
+            this.LoadPort03_State.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.LoadPort03_State.BackColor = System.Drawing.Color.DarkGray;
+            this.LoadPort03_State.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.LoadPort03_State.Font = new System.Drawing.Font("微軟正黑體", 12F, System.Drawing.FontStyle.Bold);
+            this.LoadPort03_State.ForeColor = System.Drawing.Color.White;
+            this.LoadPort03_State.Location = new System.Drawing.Point(276, 89);
+            this.LoadPort03_State.Name = "LoadPort03_State";
+            this.LoadPort03_State.Size = new System.Drawing.Size(129, 29);
+            this.LoadPort03_State.TabIndex = 129;
+            this.LoadPort03_State.Text = "Ready To Load";
+            this.LoadPort03_State.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // LoadPort04_State
+            // 
+            this.LoadPort04_State.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.LoadPort04_State.BackColor = System.Drawing.Color.DarkGray;
+            this.LoadPort04_State.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.LoadPort04_State.Font = new System.Drawing.Font("微軟正黑體", 12F, System.Drawing.FontStyle.Bold);
+            this.LoadPort04_State.ForeColor = System.Drawing.Color.White;
+            this.LoadPort04_State.Location = new System.Drawing.Point(411, 89);
+            this.LoadPort04_State.Name = "LoadPort04_State";
+            this.LoadPort04_State.Size = new System.Drawing.Size(129, 29);
+            this.LoadPort04_State.TabIndex = 130;
+            this.LoadPort04_State.Text = "Ready To Load";
+            this.LoadPort04_State.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // LoadPort05_State
+            // 
+            this.LoadPort05_State.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.LoadPort05_State.BackColor = System.Drawing.Color.DarkGray;
+            this.LoadPort05_State.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.LoadPort05_State.Font = new System.Drawing.Font("微軟正黑體", 12F, System.Drawing.FontStyle.Bold);
+            this.LoadPort05_State.ForeColor = System.Drawing.Color.White;
+            this.LoadPort05_State.Location = new System.Drawing.Point(546, 89);
+            this.LoadPort05_State.Name = "LoadPort05_State";
+            this.LoadPort05_State.Size = new System.Drawing.Size(129, 29);
+            this.LoadPort05_State.TabIndex = 131;
+            this.LoadPort05_State.Text = "Ready To Load";
+            this.LoadPort05_State.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // LoadPort06_State
+            // 
+            this.LoadPort06_State.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.LoadPort06_State.BackColor = System.Drawing.Color.DarkGray;
+            this.LoadPort06_State.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.LoadPort06_State.Font = new System.Drawing.Font("微軟正黑體", 12F, System.Drawing.FontStyle.Bold);
+            this.LoadPort06_State.ForeColor = System.Drawing.Color.White;
+            this.LoadPort06_State.Location = new System.Drawing.Point(681, 89);
+            this.LoadPort06_State.Name = "LoadPort06_State";
+            this.LoadPort06_State.Size = new System.Drawing.Size(129, 29);
+            this.LoadPort06_State.TabIndex = 132;
+            this.LoadPort06_State.Text = "Ready To Load";
+            this.LoadPort06_State.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // LoadPort07_State
+            // 
+            this.LoadPort07_State.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.LoadPort07_State.BackColor = System.Drawing.Color.DarkGray;
+            this.LoadPort07_State.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.LoadPort07_State.Font = new System.Drawing.Font("微軟正黑體", 12F, System.Drawing.FontStyle.Bold);
+            this.LoadPort07_State.ForeColor = System.Drawing.Color.White;
+            this.LoadPort07_State.Location = new System.Drawing.Point(816, 89);
+            this.LoadPort07_State.Name = "LoadPort07_State";
+            this.LoadPort07_State.Size = new System.Drawing.Size(129, 29);
+            this.LoadPort07_State.TabIndex = 133;
+            this.LoadPort07_State.Text = "Ready To Load";
+            this.LoadPort07_State.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // LoadPort08_State
+            // 
+            this.LoadPort08_State.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.LoadPort08_State.BackColor = System.Drawing.Color.DarkGray;
+            this.LoadPort08_State.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.LoadPort08_State.Font = new System.Drawing.Font("微軟正黑體", 12F, System.Drawing.FontStyle.Bold);
+            this.LoadPort08_State.ForeColor = System.Drawing.Color.White;
+            this.LoadPort08_State.Location = new System.Drawing.Point(951, 89);
+            this.LoadPort08_State.Name = "LoadPort08_State";
+            this.LoadPort08_State.Size = new System.Drawing.Size(129, 29);
+            this.LoadPort08_State.TabIndex = 134;
+            this.LoadPort08_State.Text = "Ready To Load";
+            this.LoadPort08_State.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // label22
+            // 
+            this.label22.BackColor = System.Drawing.Color.Black;
+            this.label22.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.label22.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.label22.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.label22.ForeColor = System.Drawing.Color.Transparent;
+            this.label22.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.label22.Location = new System.Drawing.Point(3, 125);
+            this.label22.Name = "label22";
+            this.label22.Size = new System.Drawing.Size(137, 23);
+            this.label22.TabIndex = 94;
+            this.label22.Text = "Empty";
+            this.label22.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // FormMonitoring
             // 
@@ -1131,7 +1279,7 @@
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.TextBox LoadPort01_State;
+        private System.Windows.Forms.TextBox LoadPort01_FID;
         private System.Windows.Forms.Label label12;
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.DataGridView LoadPort01;
@@ -1153,11 +1301,20 @@
         private System.Windows.Forms.TextBox textBox2;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.DataGridView LoadPort03;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox FID;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.DataGridView LoadPort02;
         private System.Windows.Forms.TextBox Robot02_State;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.DataGridView Robot02;
+        private System.Windows.Forms.TextBox LoadPort08_State;
+        private System.Windows.Forms.TextBox LoadPort07_State;
+        private System.Windows.Forms.TextBox LoadPort06_State;
+        private System.Windows.Forms.TextBox LoadPort05_State;
+        private System.Windows.Forms.TextBox LoadPort04_State;
+        private System.Windows.Forms.TextBox LoadPort03_State;
+        private System.Windows.Forms.TextBox LoadPort02_State;
+        private System.Windows.Forms.TextBox LoadPort01_State;
+        private System.Windows.Forms.Label label22;
     }
 }

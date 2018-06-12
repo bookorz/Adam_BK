@@ -14,16 +14,16 @@
     "ExcuteMethod": "Reset",
     "FinishMethod": "",
     "Method": "RobotServo",
-    "Arm": "1",
+    "Arm": "",
     "Slot": "",
     "Position": "",
-    "Value": "",
+    "Value": "1",
     "Index":"2",
     "Flag":""
   }
   ,
   {
-    "ExcuteMethod": "RobotSpeed",
+    "ExcuteMethod": "RobotServo",
     "FinishMethod": "",
     "Method": "RobotHome",
     "Arm": "",

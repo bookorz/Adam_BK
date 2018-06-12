@@ -39,14 +39,31 @@ namespace Adam.UI_Update.Monitoring
                     State_tb.Text = State;
                     switch (State)
                     {
-                        case "RUN":
+                        case "Run":
                             State_tb.BackColor = Color.Lime;
+                            UpdateCurrentState();
                             break;
-                        case "IDLE":
+                        case "Idle":
                             State_tb.BackColor = Color.Yellow;
+                            UpdateCurrentState();
+                            break;
+                        case "Ready To Load":
+                            State_tb.BackColor = Color.DarkGray;                          
+                            break;
+                        case "Transfer Ready":
+                            State_tb.BackColor = Color.Green;
+                            break;
+                        case "Transfer Blocked":
+                            State_tb.BackColor = Color.DarkOrange;
+                            break;
+                        case "Ready To Unload":
+                            State_tb.BackColor = Color.Blue;
+                            break;
+                        case "Alarm":
+                            State_tb.BackColor = Color.Red;
                             break;
                     }
-                    UpdateCurrentState();
+                    
                 }
 
 

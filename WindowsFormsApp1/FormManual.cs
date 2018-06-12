@@ -289,11 +289,11 @@ namespace GUI
                     break;
                 case "btnServoOn":
                     txns[0].Method = Transaction.Command.AlignerType.AlignerServo;
-                    txns[0].Arm = "1";
+                    txns[0].Value = "1";
                     break;
                 case "btnServoOff":
                     txns[0].Method = Transaction.Command.AlignerType.AlignerServo;
-                    txns[0].Arm = "0";
+                    txns[0].Value = "0";
                     break;
                 case "btnVacuOn":
                     txns[0].Method = Transaction.Command.AlignerType.WaferHold;
@@ -305,7 +305,7 @@ namespace GUI
                     break;
                 case "btnChgSpeed":
                     txns[0].Method = Transaction.Command.AlignerType.AlignerSpeed;
-                    txns[0].Arm = speed;
+                    txns[0].Value = speed;
                     break;
                 case "btnReset":
                     txns[0].Method = Transaction.Command.AlignerType.Reset;
@@ -330,7 +330,7 @@ namespace GUI
                         return;
                     }
                     txns[0].Method = Transaction.Command.AlignerType.AlignerMode;
-                    txns[0].Arm = Convert.ToString(mode);
+                    txns[0].Value = Convert.ToString(mode);
                     break;
             }
             if (!txns[0].Method.Equals(""))
@@ -469,7 +469,7 @@ namespace GUI
                     break;
                 case "btnRChgSpeed":
                     txns[0].Method = Transaction.Command.RobotType.RobotSpeed;
-                    txns[0].Arm = nudRSpeed.Text.Equals("100") ? "0" : nudRSpeed.Text;
+                    txns[0].Value = nudRSpeed.Text.Equals("100") ? "0" : nudRSpeed.Text;
                     break;
                 //上臂
                 case "btnRRVacuOn":
@@ -564,7 +564,7 @@ namespace GUI
                         return;
                     }
                     txns[0].Method = Transaction.Command.RobotType.RobotMode;
-                    txns[0].Arm = Convert.ToString(cbRMode.SelectedIndex);
+                    txns[0].Value = Convert.ToString(cbRMode.SelectedIndex);
                     break;
                 case "btnRPutPut":
                     if(GetScriptVar() == null)
@@ -615,11 +615,11 @@ namespace GUI
                     break;
                 case "btnRServoOn":
                     txns[0].Method = Transaction.Command.RobotType.RobotServo;
-                    txns[0].Arm = "1";
+                    txns[0].Value = "1";
                     break;
                 case "btnRServoOff":
                     txns[0].Method = Transaction.Command.RobotType.RobotServo;
-                    txns[0].Arm = "0";
+                    txns[0].Value = "0";
                     break;
             }
             if (!txns[0].Method.Equals(""))
@@ -671,7 +671,7 @@ namespace GUI
             }
             //向Robot 詢問狀態
             Node robot = NodeManagement.Get(nodeName);
-            robot.ExcuteScript("RobotStateGet", "FormManual");
+            //robot.ExcuteScript("RobotStateGet", "FormManual");
 
         }
 
@@ -692,11 +692,11 @@ namespace GUI
             //向Aligner 詢問狀態
             if (!tbA1Status.Text.Equals("N/A") && !tbA1Status.Text.Equals("Disconnected") && !tbA1Status.Text.Equals(""))
             {
-                aligner1.ExcuteScript("AlignerStateGet", "FormManual"); ;//連線狀態下才執行
+                //aligner1.ExcuteScript("AlignerStateGet", "FormManual"); ;//連線狀態下才執行
             }
             if (!tbA2Status.Text.Equals("N/A") && !tbA2Status.Text.Equals("Disconnected") && !tbA2Status.Text.Equals(""))
             {
-                aligner2.ExcuteScript("AlignerStateGet", "FormManual"); ;//連線狀態下才執行
+                //aligner2.ExcuteScript("AlignerStateGet", "FormManual"); ;//連線狀態下才執行
             }
         }
 

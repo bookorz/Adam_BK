@@ -530,29 +530,6 @@ namespace Adam
             {
                 case "LoadPort":
                     ManualPortStatusUpdate.UpdateLog(Node.Name, Msg.Command + " Trigger");
-                    switch (Msg.Command)
-                    {
-                        case "MANSW":
-                            if (RouteCtrl.GetMode().Equals("Start"))
-                            {
-                                Node.ExcuteScript("LoadPortMapping", "MANSW", true);
-                            }
-                            break;
-                        case "PODON":
-                            if (RouteCtrl.GetMode().Equals("Start"))
-                            {
-
-                                Node.ExcuteScript("LoadPortFoupIn", "LoadPortFoup", true);
-
-                            }
-                            break;
-                        case "PODOF":
-                            if (RouteCtrl.GetMode().Equals("Start"))
-                            {
-                                Node.ExcuteScript("LoadPortFoupOut", "LoadPortFoup", true);
-                            }
-                            break;
-                    }
                     break;
             }
 
@@ -825,6 +802,11 @@ namespace Adam
                 Mode_btn.Tag = "Manual";
                 Mode_btn.BackColor = Color.Orange;
             }
+        }
+
+        public void On_InterLock_Report(Node Node, bool InterLock)
+        {
+            throw new NotImplementedException();
         }
     }
 }
