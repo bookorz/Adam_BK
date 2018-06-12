@@ -36,8 +36,8 @@
   {
     "ExcuteMethod": "GetMode",
     "FinishMethod": "",
-    "Method": "GetError",
-    "Arm": "",
+    "Method": "GetMode",
+    "Arm": "GetError",
     "Slot": "",
     "Position": "",
     "Value": "00",

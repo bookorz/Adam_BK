@@ -430,7 +430,7 @@
             this.tableLayoutPanel24.Name = "tableLayoutPanel24";
             this.tableLayoutPanel24.RowCount = 1;
             this.tableLayoutPanel24.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel24.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 461F));
+            this.tableLayoutPanel24.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 475F));
             this.tableLayoutPanel24.Size = new System.Drawing.Size(750, 475);
             this.tableLayoutPanel24.TabIndex = 0;
             // 
@@ -628,7 +628,8 @@
             this.cbRA1Arm.FormattingEnabled = true;
             this.cbRA1Arm.Items.AddRange(new object[] {
             "Upper",
-            "Lower"});
+            "Lower",
+            "Both"});
             this.cbRA1Arm.Location = new System.Drawing.Point(129, 200);
             this.cbRA1Arm.Name = "cbRA1Arm";
             this.cbRA1Arm.Size = new System.Drawing.Size(208, 38);
@@ -828,7 +829,8 @@
             this.cbRA2Arm.FormattingEnabled = true;
             this.cbRA2Arm.Items.AddRange(new object[] {
             "Upper",
-            "Lower"});
+            "Lower",
+            "Both"});
             this.cbRA2Arm.Location = new System.Drawing.Point(130, 200);
             this.cbRA2Arm.Name = "cbRA2Arm";
             this.cbRA2Arm.Size = new System.Drawing.Size(208, 38);
