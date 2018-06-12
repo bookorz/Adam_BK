@@ -14,10 +14,10 @@
     "ExcuteMethod": "Reset",
     "FinishMethod": "",
     "Method": "AlignerServo",
-    "Arm": "",
+    "Arm": "1",
     "Slot": "",
     "Position": "",
-    "Value": "1",
+    "Value": "",
     "Index":"2",
     "Flag":""
   }
