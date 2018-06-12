@@ -61,11 +61,11 @@
             this.cbRA2Slot = new System.Windows.Forms.ComboBox();
             this.cbRA2Arm = new System.Windows.Forms.ComboBox();
             this.pnlRCmd = new System.Windows.Forms.Panel();
-            this.btnRAreaSwap = new System.Windows.Forms.Button();
             this.btnRPutPut = new System.Windows.Forms.Button();
             this.btnRPutGet = new System.Windows.Forms.Button();
             this.btnRGetGet = new System.Windows.Forms.Button();
             this.btnRGetPut = new System.Windows.Forms.Button();
+            this.btnRAreaSwap = new System.Windows.Forms.Button();
             this.groupBox21 = new System.Windows.Forms.GroupBox();
             this.panel13 = new System.Windows.Forms.Panel();
             this.pnlRobotStatus = new System.Windows.Forms.Panel();
@@ -413,9 +413,8 @@
             this.tableLayoutPanel23.Name = "tableLayoutPanel23";
             this.tableLayoutPanel23.RowCount = 3;
             this.tableLayoutPanel23.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 55F));
-            this.tableLayoutPanel23.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 70.76923F));
-            this.tableLayoutPanel23.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 29.23077F));
-            this.tableLayoutPanel23.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
+            this.tableLayoutPanel23.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 73F));
+            this.tableLayoutPanel23.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 27F));
             this.tableLayoutPanel23.Size = new System.Drawing.Size(756, 715);
             this.tableLayoutPanel23.TabIndex = 52;
             // 
@@ -431,8 +430,8 @@
             this.tableLayoutPanel24.Name = "tableLayoutPanel24";
             this.tableLayoutPanel24.RowCount = 1;
             this.tableLayoutPanel24.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel24.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 500F));
-            this.tableLayoutPanel24.Size = new System.Drawing.Size(750, 461);
+            this.tableLayoutPanel24.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 461F));
+            this.tableLayoutPanel24.Size = new System.Drawing.Size(750, 475);
             this.tableLayoutPanel24.TabIndex = 0;
             // 
             // pnlRobotCmdA1
@@ -453,7 +452,7 @@
             this.pnlRobotCmdA1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.pnlRobotCmdA1.Location = new System.Drawing.Point(3, 3);
             this.pnlRobotCmdA1.Name = "pnlRobotCmdA1";
-            this.pnlRobotCmdA1.Size = new System.Drawing.Size(369, 455);
+            this.pnlRobotCmdA1.Size = new System.Drawing.Size(369, 469);
             this.pnlRobotCmdA1.TabIndex = 50;
             // 
             // label56
@@ -653,7 +652,7 @@
             this.pnlRobotCmdA2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.pnlRobotCmdA2.Location = new System.Drawing.Point(378, 3);
             this.pnlRobotCmdA2.Name = "pnlRobotCmdA2";
-            this.pnlRobotCmdA2.Size = new System.Drawing.Size(369, 455);
+            this.pnlRobotCmdA2.Size = new System.Drawing.Size(369, 469);
             this.pnlRobotCmdA2.TabIndex = 49;
             // 
             // label7
@@ -843,28 +842,10 @@
             this.pnlRCmd.Controls.Add(this.btnRGetGet);
             this.pnlRCmd.Controls.Add(this.btnRGetPut);
             this.pnlRCmd.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.pnlRCmd.Location = new System.Drawing.Point(3, 525);
+            this.pnlRCmd.Location = new System.Drawing.Point(3, 539);
             this.pnlRCmd.Name = "pnlRCmd";
-            this.pnlRCmd.Size = new System.Drawing.Size(750, 187);
+            this.pnlRCmd.Size = new System.Drawing.Size(750, 173);
             this.pnlRCmd.TabIndex = 51;
-            // 
-            // btnRAreaSwap
-            // 
-            this.btnRAreaSwap.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
-            this.btnRAreaSwap.BackColor = System.Drawing.Color.DarkGray;
-            this.tableLayoutPanel23.SetColumnSpan(this.btnRAreaSwap, 2);
-            this.btnRAreaSwap.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.btnRAreaSwap.FlatAppearance.BorderSize = 2;
-            this.btnRAreaSwap.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.btnRAreaSwap.Font = new System.Drawing.Font("微軟正黑體", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-            this.btnRAreaSwap.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.btnRAreaSwap.Location = new System.Drawing.Point(238, 3);
-            this.btnRAreaSwap.Name = "btnRAreaSwap";
-            this.btnRAreaSwap.Size = new System.Drawing.Size(280, 49);
-            this.btnRAreaSwap.TabIndex = 52;
-            this.btnRAreaSwap.Text = "Area1 <-> Area2";
-            this.btnRAreaSwap.UseVisualStyleBackColor = false;
-            this.btnRAreaSwap.Click += new System.EventHandler(this.btnRAreaSwap_Click);
             // 
             // btnRPutPut
             // 
@@ -929,6 +910,24 @@
             this.btnRGetPut.Text = "GetPut";
             this.btnRGetPut.UseVisualStyleBackColor = false;
             this.btnRGetPut.Click += new System.EventHandler(this.RobotFunction_Click);
+            // 
+            // btnRAreaSwap
+            // 
+            this.btnRAreaSwap.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
+            this.btnRAreaSwap.BackColor = System.Drawing.Color.DarkGray;
+            this.tableLayoutPanel23.SetColumnSpan(this.btnRAreaSwap, 2);
+            this.btnRAreaSwap.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.btnRAreaSwap.FlatAppearance.BorderSize = 2;
+            this.btnRAreaSwap.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnRAreaSwap.Font = new System.Drawing.Font("微軟正黑體", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
+            this.btnRAreaSwap.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.btnRAreaSwap.Location = new System.Drawing.Point(238, 3);
+            this.btnRAreaSwap.Name = "btnRAreaSwap";
+            this.btnRAreaSwap.Size = new System.Drawing.Size(280, 49);
+            this.btnRAreaSwap.TabIndex = 52;
+            this.btnRAreaSwap.Text = "Area1 <-> Area2";
+            this.btnRAreaSwap.UseVisualStyleBackColor = false;
+            this.btnRAreaSwap.Click += new System.EventHandler(this.btnRAreaSwap_Click);
             // 
             // groupBox21
             // 
