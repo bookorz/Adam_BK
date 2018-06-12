@@ -463,7 +463,10 @@ namespace GUI
                     isRobotMoveUp = false;//Put option 1
                     break;
                 case "btnRHome":
-                    txns[0].Method = Transaction.Command.RobotType.RobotHomeSafety;//20180607 RobotHome => RobotHomeSafety
+                    if(robot.Brand.Equals("SANWA"))
+                        txns[0].Method = Transaction.Command.RobotType.RobotHomeSafety;//20180607 RobotHome => RobotHomeSafety
+                    else 
+                        txns[0].Method = Transaction.Command.RobotType.RobotHome;//20180607 RobotHome => RobotHomeSafety kawasaki
                     isRobotMoveDown = false;//Get option 1
                     isRobotMoveUp = false;//Put option 1
                     break;
@@ -631,7 +634,7 @@ namespace GUI
                 MessageBox.Show("Command is empty!");
             }
             SetFormEnable(false); 
-            Update_Manual_Status(); 
+            //Update_Manual_Status(); steven mark test
         }
 
         private Dictionary<string, string> GetScriptVar()
@@ -672,7 +675,7 @@ namespace GUI
             //向Robot 詢問狀態
             Node robot = NodeManagement.Get(nodeName);
             String script_name = robot.Brand.Equals("SANWA") ? "RobotStateGet" : "RobotStateGet(Kawasaki)";
-            robot.ExcuteScript(script_name, "FormManual");
+            //robot.ExcuteScript(script_name, "FormManual");//steven mark
 
         }
 

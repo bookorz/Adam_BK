@@ -2,7 +2,7 @@
 {
 Name:"Robot01",
 Controller:"RobotController01",
-AdrNo:"1",
+AdrNo:"R1",
 Type:"Robot",
 Brand:"Kawasaki",
 RouteTable:[
@@ -14,7 +14,7 @@ RouteTable:[
 {
 Name:"Aligner01",
 Controller:"RobotController01",
-AdrNo:"1",
+AdrNo:"A1",
 Type:"Aligner",
 Brand:"Kawasaki",
 RouteTable:[

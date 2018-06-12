@@ -63,7 +63,7 @@ namespace Adam.UI_Update.Manual
                             manual.Cursor = Cursors.Default;
                             Control tbcManual = manual.Controls.Find("tbcManual", true).FirstOrDefault() as Control;
                             tbcManual.Enabled = true;
-                            break;
+                            return;
                     }
                     UpdateStatus(name);
                 }
@@ -99,7 +99,15 @@ namespace Adam.UI_Update.Manual
                 Control nudRSpeed = manual.Controls.Find("nudRSpeed", true).FirstOrDefault() as Control;
                 if (nudRSpeed != null)
                 {
-                    nudRSpeed.Text = robot.Speed.Equals("00") ? "100" : Int32.Parse(robot.Speed).ToString(); 
+                    try
+                    {
+                        nudRSpeed.Text = robot.Speed.Equals("00") ? "100" : Int32.Parse(robot.Speed).ToString();
+                    }
+                    catch (Exception)
+                    {
+                        nudRSpeed.Text = robot.Speed;
+                    }
+                   
                 }
                 Control tbRRwaferSensor = manual.Controls.Find("tbRRwaferSensor", true).FirstOrDefault() as Control;
                 if (tbRRwaferSensor != null)
@@ -207,7 +215,22 @@ namespace Adam.UI_Update.Manual
                 ComboBox cbRMode = manual.Controls.Find("cbRMode", true).FirstOrDefault() as ComboBox;
                 if (cbRMode != null)
                 {
-                    cbRMode.SelectedIndex = Int32.Parse(robot.Mode);
+                    switch(robot.Mode.ToUpper())
+                    {
+                        case "REAL":
+                            cbRMode.SelectedIndex = 0;//kawasaki
+                            break;
+                        case "SIMU":
+                            cbRMode.SelectedIndex = 1;//kawasaki
+                            break;
+                        case "":
+                            cbRMode.SelectedIndex = -1;
+                            break;
+                        default:
+                            cbRMode.SelectedIndex = Int32.Parse(robot.Mode);
+                            break;
+                    }
+                    
                 }
             }
                 

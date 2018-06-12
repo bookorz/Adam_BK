@@ -60,7 +60,7 @@ namespace Adam.UI_Update.Manual
                             manual.Cursor = Cursors.Default;
                             Control tbcManual = manual.Controls.Find("tbcManual", true).FirstOrDefault() as Control;
                             tbcManual.Enabled = true;
-                            break;
+                            return;
                     }
                     UpdateStatus(name);
                 }

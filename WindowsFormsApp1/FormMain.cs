@@ -369,7 +369,7 @@ namespace Adam
                                     Node robot = NodeManagement.Get(Node.Name);
                                     String script_name = robot.Brand.Equals("SANWA") ? "RobotStateGet" : "RobotStateGet(Kawasaki)";
                                     robot.ExcuteScript(script_name, "FormManual");
-                                    //ManualRobotStatusUpdate.UpdateGUI(Txn, Node.Name, Msg.Value);//update 手動功能畫面 20180612 mark
+                                    ManualRobotStatusUpdate.UpdateGUI(Txn, Node.Name, Msg.Value);//update 手動功能畫面 
                                     break;
                                 case Transaction.Command.RobotType.GetSpeed:
                                 case Transaction.Command.RobotType.GetRIO:
@@ -393,7 +393,7 @@ namespace Adam
                                     //向Aligner 詢問狀態
                                     Node aligner = NodeManagement.Get(Node.Name);
                                     aligner.ExcuteScript("AlignerStateGet", "FormManual");
-                                    //ManualAlignerStatusUpdate.UpdateGUI(Txn, Node.Name, Msg.Value);//update 手動功能畫面 20180612 mark
+                                    ManualAlignerStatusUpdate.UpdateGUI(Txn, Node.Name, Msg.Value);//update 
                                     break;
                                 case Transaction.Command.AlignerType.GetMode:
                                 case Transaction.Command.AlignerType.GetSV:
