@@ -50,7 +50,7 @@ namespace Adam.UI_Update.Alarm
                 {
 
                     //JobList_gv.DataSource = null;
-                    AlarmList_gv.DataSource = AlarmList;
+                    AlarmList_gv.DataSource = AlarmList.ToList();
 
                     //Conn_gv.Refresh();
                     AlarmList_gv.ClearSelection();

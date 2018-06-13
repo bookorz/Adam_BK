@@ -169,10 +169,10 @@
   {
     "ID": "",
     "Expression": "",
-    "JobStatus": "",
+    "JobStatus": "WAIT_GET",
     "ExcuteMethod": "",
     "FinishMethod": "Get",
-    "ChangeToStatus": "",
+    "ChangeToStatus": "WAIT_UNLOAD",
     "TodoList": [
       {
         "EqpType": "Aligner",
@@ -186,10 +186,10 @@
   {
     "ID": "",
     "Expression": "",
-    "JobStatus": "",
+    "JobStatus": "WAIT_GET",
     "ExcuteMethod": "GetAfterWait",
     "FinishMethod": "",
-    "ChangeToStatus": "",
+    "ChangeToStatus": "WAIT_UNLOAD",
     "TodoList": [
       {
         "EqpType": "Aligner",

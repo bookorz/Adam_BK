@@ -463,7 +463,7 @@ namespace GUI
                     isRobotMoveUp = false;//Put option 1
                     break;
                 case "btnRHome":
-                    if(robot.Brand.Equals("SANWA"))
+                    if(robot.Brand.ToUpper().Equals("SANWA"))
                         txns[0].Method = Transaction.Command.RobotType.RobotHomeSafety;//20180607 RobotHome => RobotHomeSafety
                     else 
                         txns[0].Method = Transaction.Command.RobotType.RobotHome;//20180607 RobotHome => RobotHomeSafety kawasaki
@@ -674,7 +674,7 @@ namespace GUI
             }
             //向Robot 詢問狀態
             Node robot = NodeManagement.Get(nodeName);
-            String script_name = robot.Brand.Equals("SANWA") ? "RobotStateGet" : "RobotStateGet(Kawasaki)";
+            String script_name = robot.Brand.ToUpper().Equals("SANWA") ? "RobotStateGet" : "RobotStateGet(Kawasaki)";
             //robot.ExcuteScript(script_name, "FormManual");//steven mark
 
         }
@@ -696,12 +696,12 @@ namespace GUI
             //向Aligner 詢問狀態
             if (!tbA1Status.Text.Equals("N/A") && !tbA1Status.Text.Equals("Disconnected") && !tbA1Status.Text.Equals(""))
             {
-                String script_name = aligner1.Brand.Equals("SANWA")?"AlignerStateGet":"AlignerStateGet(Kawasaki)";
+                String script_name = aligner1.Brand.ToUpper().Equals("SANWA")?"AlignerStateGet":"AlignerStateGet(Kawasaki)";
                 aligner1.ExcuteScript(script_name, "FormManual"); ;//連線狀態下才執行
             }
             if (!tbA2Status.Text.Equals("N/A") && !tbA2Status.Text.Equals("Disconnected") && !tbA2Status.Text.Equals(""))
             {
-                String script_name = aligner2.Brand.Equals("SANWA") ? "AlignerStateGet" : "AlignerStateGet(Kawasaki)";
+                String script_name = aligner2.Brand.ToUpper().Equals("SANWA") ? "AlignerStateGet" : "AlignerStateGet(Kawasaki)";
                 aligner2.ExcuteScript(script_name, "FormManual"); ;//連線狀態下才執行
             }
         }

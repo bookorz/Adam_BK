@@ -96,7 +96,7 @@ namespace Adam.UI_Update.Layout
 
 
             }
-            catch
+            catch(Exception e)
             {
                 logger.Error("UpdateDIOStatus: Update fail.");
             }

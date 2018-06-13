@@ -12,7 +12,7 @@ namespace Adam.UI_Update.Monitoring
 {
     class NodeStatusUpdate
     {
-        static ILog logger = LogManager.GetLogger(typeof(ConnectionStatusUpdate));
+        static ILog logger = LogManager.GetLogger(typeof(NodeStatusUpdate));
         delegate void UpdateNode(string Device_ID, string State);
         delegate void UpdateState();
 
@@ -83,7 +83,7 @@ namespace Adam.UI_Update.Monitoring
                 if (form == null)
                     return;
 
-                Button state = form.Controls.Find("CurrentSate_btn", true).FirstOrDefault() as Button;
+                Button state = form.Controls.Find("CurrentState_btn", true).FirstOrDefault() as Button;
 
                 if (state == null)
                     return;
@@ -132,10 +132,11 @@ namespace Adam.UI_Update.Monitoring
                             Params.Add("Buzzer1", "False");
                             Params.Add("Buzzer2", "False");
                             FormMain.DIO.SetIO(Params);
+                            FormMain.DIO.SetBlink("Orange", "True");
                             break;
                         case "Alarm":
                             state.BackColor = Color.Red;
-                            FormMain.DIO.SetIO("Red", "True");
+                            FormMain.DIO.SetBlink("Red", "True");
                             
                             break;
                     }
@@ -143,9 +144,9 @@ namespace Adam.UI_Update.Monitoring
 
 
             }
-            catch
+            catch(Exception e)
             {
-                logger.Error("UpdateDIOStatus: Update fail.");
+                logger.Error("UpdateCurrentState: Update fail.:"+e.StackTrace);
             }
         }
 

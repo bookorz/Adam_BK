@@ -22,6 +22,45 @@ namespace Adam.UI_Update.Monitoring
         delegate void UpdateController(string Device_ID, string Status);
         delegate void UpdateOnline(string Status);
 
+        public static void UpdateInitial(string Status)
+        {
+            try
+            {
+                Form form = Application.OpenForms["FormMain"];
+                Button Init;
+                if (form == null)
+                    return;
+
+                Init = form.Controls.Find("Initial_btn", true).FirstOrDefault() as Button;
+                if (Init == null)
+                    return;
+
+                if (Init.InvokeRequired)
+                {
+                    UpdateOnline ph = new UpdateOnline(UpdateInitial);
+                    Init.BeginInvoke(ph, Status);
+                }
+                else
+                {
+                    if (Status.ToUpper().Equals("TRUE"))
+                    {
+                        Init.BackColor = Color.Lime;
+                    }
+                    else
+                    {
+                        Init.BackColor = Color.Red;
+                    }
+
+                }
+
+
+            }
+            catch
+            {
+                logger.Error("UpdateInitial: Update fail.");
+            }
+        }
+
         public static void UpdateOnlineStatus(string Status)
         {
             try

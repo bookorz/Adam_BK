@@ -128,6 +128,37 @@
   <data name="splitContainer13.Orientation" type="System.Windows.Forms.Orientation, System.Windows.Forms">
     <value>Horizontal</value>
   </data>
+  <data name="Pause_btn.FlatStyle" type="System.Windows.Forms.FlatStyle, System.Windows.Forms">
+    <value>Flat</value>
+  </data>
+  <data name="Pause_btn.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="Pause_btn.Location" type="System.Drawing.Point, System.Drawing">
+    <value>22, 75</value>
+  </data>
+  <data name="Pause_btn.Size" type="System.Drawing.Size, System.Drawing">
+    <value>214, 41</value>
+  </data>
+  <assembly alias="mscorlib" name="mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="Pause_btn.TabIndex" type="System.Int32, mscorlib">
+    <value>6</value>
+  </data>
+  <data name="Pause_btn.Text" xml:space="preserve">
+    <value>Pause</value>
+  </data>
+  <data name="&gt;&gt;Pause_btn.Name" xml:space="preserve">
+    <value>Pause_btn</value>
+  </data>
+  <data name="&gt;&gt;Pause_btn.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;Pause_btn.Parent" xml:space="preserve">
+    <value>groupBox54</value>
+  </data>
+  <data name="&gt;&gt;Pause_btn.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
   <data name="Mode_btn.FlatStyle" type="System.Windows.Forms.FlatStyle, System.Windows.Forms">
     <value>Flat</value>
   </data>
@@ -135,12 +166,11 @@
     <value>NoControl</value>
   </data>
   <data name="Mode_btn.Location" type="System.Drawing.Point, System.Drawing">
-    <value>22, 41</value>
+    <value>22, 28</value>
   </data>
   <data name="Mode_btn.Size" type="System.Drawing.Size, System.Drawing">
     <value>214, 41</value>
   </data>
-  <assembly alias="mscorlib" name="mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
   <data name="Mode_btn.TabIndex" type="System.Int32, mscorlib">
     <value>5</value>
   </data>
@@ -157,16 +187,16 @@
     <value>groupBox54</value>
   </data>
   <data name="&gt;&gt;Mode_btn.ZOrder" xml:space="preserve">
-    <value>0</value>
+    <value>1</value>
   </data>
   <data name="groupBox54.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
     <value>Fill</value>
   </data>
   <data name="groupBox54.Location" type="System.Drawing.Point, System.Drawing">
-    <value>0, 106</value>
+    <value>0, 84</value>
   </data>
   <data name="groupBox54.Size" type="System.Drawing.Size, System.Drawing">
-    <value>250, 106</value>
+    <value>250, 128</value>
   </data>
   <data name="groupBox54.TabIndex" type="System.Int32, mscorlib">
     <value>1</value>
@@ -190,7 +220,7 @@
     <value>Flat</value>
   </data>
   <data name="Connection_btn.Location" type="System.Drawing.Point, System.Drawing">
-    <value>22, 44</value>
+    <value>22, 28</value>
   </data>
   <data name="Connection_btn.Size" type="System.Drawing.Size, System.Drawing">
     <value>214, 41</value>
@@ -256,13 +286,13 @@
     <value>0, 0</value>
   </data>
   <data name="groupBox19.Size" type="System.Drawing.Size, System.Drawing">
-    <value>250, 106</value>
+    <value>250, 84</value>
   </data>
   <data name="groupBox19.TabIndex" type="System.Int32, mscorlib">
     <value>0</value>
   </data>
   <data name="groupBox19.Text" xml:space="preserve">
-    <value>Connection</value>
+    <value>Host</value>
   </data>
   <data name="&gt;&gt;groupBox19.Name" xml:space="preserve">
     <value>groupBox19</value>
@@ -288,6 +318,39 @@
   <data name="&gt;&gt;splitContainer13.Panel1.ZOrder" xml:space="preserve">
     <value>0</value>
   </data>
+  <data name="Initial_btn.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Top, Left, Right</value>
+  </data>
+  <data name="Initial_btn.FlatStyle" type="System.Windows.Forms.FlatStyle, System.Windows.Forms">
+    <value>Flat</value>
+  </data>
+  <data name="Initial_btn.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="Initial_btn.Location" type="System.Drawing.Point, System.Drawing">
+    <value>6, 69</value>
+  </data>
+  <data name="Initial_btn.Size" type="System.Drawing.Size, System.Drawing">
+    <value>230, 35</value>
+  </data>
+  <data name="Initial_btn.TabIndex" type="System.Int32, mscorlib">
+    <value>12</value>
+  </data>
+  <data name="Initial_btn.Text" xml:space="preserve">
+    <value>Initial</value>
+  </data>
+  <data name="&gt;&gt;Initial_btn.Name" xml:space="preserve">
+    <value>Initial_btn</value>
+  </data>
+  <data name="&gt;&gt;Initial_btn.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;Initial_btn.Parent" xml:space="preserve">
+    <value>groupBox5</value>
+  </data>
+  <data name="&gt;&gt;Initial_btn.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
   <data name="DifferentialPressureAlarm2_Signal.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>Top, Left, Right</value>
   </data>
@@ -298,7 +361,7 @@
     <value>NoControl</value>
   </data>
   <data name="DifferentialPressureAlarm2_Signal.Location" type="System.Drawing.Point, System.Drawing">
-    <value>6, 454</value>
+    <value>6, 551</value>
   </data>
   <data name="DifferentialPressureAlarm2_Signal.Size" type="System.Drawing.Size, System.Drawing">
     <value>230, 35</value>
@@ -319,7 +382,7 @@
     <value>groupBox5</value>
   </data>
   <data name="&gt;&gt;DifferentialPressureAlarm2_Signal.ZOrder" xml:space="preserve">
-    <value>0</value>
+    <value>1</value>
   </data>
   <data name="DifferentialPressureAlarm1_Signal.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>Top, Left, Right</value>
@@ -331,7 +394,7 @@
     <value>NoControl</value>
   </data>
   <data name="DifferentialPressureAlarm1_Signal.Location" type="System.Drawing.Point, System.Drawing">
-    <value>6, 413</value>
+    <value>6, 510</value>
   </data>
   <data name="DifferentialPressureAlarm1_Signal.Size" type="System.Drawing.Size, System.Drawing">
     <value>230, 35</value>
@@ -352,7 +415,7 @@
     <value>groupBox5</value>
   </data>
   <data name="&gt;&gt;DifferentialPressureAlarm1_Signal.ZOrder" xml:space="preserve">
-    <value>1</value>
+    <value>2</value>
   </data>
   <data name="LoadPortVacuum_Signal.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>Top, Left, Right</value>
@@ -364,7 +427,7 @@
     <value>NoControl</value>
   </data>
   <data name="LoadPortVacuum_Signal.Location" type="System.Drawing.Point, System.Drawing">
-    <value>6, 372</value>
+    <value>6, 469</value>
   </data>
   <data name="LoadPortVacuum_Signal.Size" type="System.Drawing.Size, System.Drawing">
     <value>230, 35</value>
@@ -385,7 +448,7 @@
     <value>groupBox5</value>
   </data>
   <data name="&gt;&gt;LoadPortVacuum_Signal.ZOrder" xml:space="preserve">
-    <value>2</value>
+    <value>3</value>
   </data>
   <data name="SafetyRelay_Signal.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>Top, Left, Right</value>
@@ -397,7 +460,7 @@
     <value>NoControl</value>
   </data>
   <data name="SafetyRelay_Signal.Location" type="System.Drawing.Point, System.Drawing">
-    <value>6, 331</value>
+    <value>6, 428</value>
   </data>
   <data name="SafetyRelay_Signal.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
     <value>0, 0, 0, 0</value>
@@ -421,7 +484,7 @@
     <value>groupBox5</value>
   </data>
   <data name="&gt;&gt;SafetyRelay_Signal.ZOrder" xml:space="preserve">
-    <value>3</value>
+    <value>4</value>
   </data>
   <data name="IonizerAlarm_Signal.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>Top, Left, Right</value>
@@ -433,7 +496,7 @@
     <value>NoControl</value>
   </data>
   <data name="IonizerAlarm_Signal.Location" type="System.Drawing.Point, System.Drawing">
-    <value>6, 291</value>
+    <value>6, 388</value>
   </data>
   <data name="IonizerAlarm_Signal.Size" type="System.Drawing.Size, System.Drawing">
     <value>230, 35</value>
@@ -454,7 +517,7 @@
     <value>groupBox5</value>
   </data>
   <data name="&gt;&gt;IonizerAlarm_Signal.ZOrder" xml:space="preserve">
-    <value>4</value>
+    <value>5</value>
   </data>
   <data name="FFU_Signal.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>Top, Left, Right</value>
@@ -466,7 +529,7 @@
     <value>NoControl</value>
   </data>
   <data name="FFU_Signal.Location" type="System.Drawing.Point, System.Drawing">
-    <value>6, 250</value>
+    <value>6, 347</value>
   </data>
   <data name="FFU_Signal.Size" type="System.Drawing.Size, System.Drawing">
     <value>230, 35</value>
@@ -487,7 +550,7 @@
     <value>groupBox5</value>
   </data>
   <data name="&gt;&gt;FFU_Signal.ZOrder" xml:space="preserve">
-    <value>5</value>
+    <value>6</value>
   </data>
   <data name="IonizerAir_Signal.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>Top, Left, Right</value>
@@ -499,7 +562,7 @@
     <value>NoControl</value>
   </data>
   <data name="IonizerAir_Signal.Location" type="System.Drawing.Point, System.Drawing">
-    <value>6, 209</value>
+    <value>6, 306</value>
   </data>
   <data name="IonizerAir_Signal.Size" type="System.Drawing.Size, System.Drawing">
     <value>230, 35</value>
@@ -520,7 +583,7 @@
     <value>groupBox5</value>
   </data>
   <data name="&gt;&gt;IonizerAir_Signal.ZOrder" xml:space="preserve">
-    <value>6</value>
+    <value>7</value>
   </data>
   <data name="Air_Signal.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>Top, Left, Right</value>
@@ -532,7 +595,7 @@
     <value>NoControl</value>
   </data>
   <data name="Air_Signal.Location" type="System.Drawing.Point, System.Drawing">
-    <value>6, 168</value>
+    <value>6, 265</value>
   </data>
   <data name="Air_Signal.Size" type="System.Drawing.Size, System.Drawing">
     <value>230, 35</value>
@@ -553,7 +616,7 @@
     <value>groupBox5</value>
   </data>
   <data name="&gt;&gt;Air_Signal.ZOrder" xml:space="preserve">
-    <value>7</value>
+    <value>8</value>
   </data>
   <data name="Vacuum_Signal.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>Top, Left, Right</value>
@@ -565,7 +628,7 @@
     <value>NoControl</value>
   </data>
   <data name="Vacuum_Signal.Location" type="System.Drawing.Point, System.Drawing">
-    <value>6, 127</value>
+    <value>6, 224</value>
   </data>
   <data name="Vacuum_Signal.Size" type="System.Drawing.Size, System.Drawing">
     <value>230, 35</value>
@@ -586,7 +649,7 @@
     <value>groupBox5</value>
   </data>
   <data name="&gt;&gt;Vacuum_Signal.ZOrder" xml:space="preserve">
-    <value>8</value>
+    <value>9</value>
   </data>
   <data name="DoorSwitch_Signal.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>Top, Left, Right</value>
@@ -598,7 +661,7 @@
     <value>NoControl</value>
   </data>
   <data name="DoorSwitch_Signal.Location" type="System.Drawing.Point, System.Drawing">
-    <value>6, 86</value>
+    <value>6, 183</value>
   </data>
   <data name="DoorSwitch_Signal.Size" type="System.Drawing.Size, System.Drawing">
     <value>230, 35</value>
@@ -619,43 +682,40 @@
     <value>groupBox5</value>
   </data>
   <data name="&gt;&gt;DoorSwitch_Signal.ZOrder" xml:space="preserve">
-    <value>9</value>
-  </data>
-  <data name="CurrentSate_btn.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
-    <value>Top, Left, Right</value>
-  </data>
-  <data name="CurrentSate_btn.FlatStyle" type="System.Windows.Forms.FlatStyle, System.Windows.Forms">
-    <value>Flat</value>
-  </data>
-  <data name="CurrentSate_btn.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
-  </data>
-  <data name="CurrentSate_btn.Location" type="System.Drawing.Point, System.Drawing">
-    <value>6, 28</value>
-  </data>
-  <data name="CurrentSate_btn.Size" type="System.Drawing.Size, System.Drawing">
-    <value>230, 35</value>
-  </data>
-  <data name="CurrentSate_btn.TabIndex" type="System.Int32, mscorlib">
-    <value>0</value>
-  </data>
-  <data name="CurrentSate_btn.Text" xml:space="preserve">
-    <value>Idle</value>
-  </data>
-  <data name="&gt;&gt;CurrentSate_btn.Name" xml:space="preserve">
-    <value>CurrentSate_btn</value>
-  </data>
-  <data name="&gt;&gt;CurrentSate_btn.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;CurrentSate_btn.Parent" xml:space="preserve">
-    <value>groupBox5</value>
-  </data>
-  <data name="&gt;&gt;CurrentSate_btn.ZOrder" xml:space="preserve">
     <value>10</value>
   </data>
-  <data name="groupBox5.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
-    <value>Fill</value>
+  <data name="CurrentState_btn.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Top, Left, Right</value>
+  </data>
+  <data name="CurrentState_btn.FlatStyle" type="System.Windows.Forms.FlatStyle, System.Windows.Forms">
+    <value>Flat</value>
+  </data>
+  <data name="CurrentState_btn.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="CurrentState_btn.Location" type="System.Drawing.Point, System.Drawing">
+    <value>6, 28</value>
+  </data>
+  <data name="CurrentState_btn.Size" type="System.Drawing.Size, System.Drawing">
+    <value>230, 35</value>
+  </data>
+  <data name="CurrentState_btn.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="CurrentState_btn.Text" xml:space="preserve">
+    <value>Idle</value>
+  </data>
+  <data name="&gt;&gt;CurrentState_btn.Name" xml:space="preserve">
+    <value>CurrentState_btn</value>
+  </data>
+  <data name="&gt;&gt;CurrentState_btn.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;CurrentState_btn.Parent" xml:space="preserve">
+    <value>groupBox5</value>
+  </data>
+  <data name="&gt;&gt;CurrentState_btn.ZOrder" xml:space="preserve">
+    <value>11</value>
   </data>
   <data name="groupBox5.Location" type="System.Drawing.Point, System.Drawing">
     <value>0, 0</value>

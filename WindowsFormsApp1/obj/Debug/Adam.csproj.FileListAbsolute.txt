@@ -195,5 +195,3 @@ C:\Users\ethan_huang\source\repos\Adam\WindowsFormsApp1\bin\Debug\config\DIO\Par
 C:\Users\ethan_huang\source\repos\Adam\WindowsFormsApp1\bin\Debug\config\Node\Nodes.json
 C:\Users\ethan_huang\source\repos\Adam\WindowsFormsApp1\bin\Debug\config\Script\Normal.json
 C:\Users\ethan_huang\source\repos\Adam\WindowsFormsApp1\bin\Debug\config\SystemConfig.json
-C:\Users\ethan_huang\source\repos\Adam\WindowsFormsApp1\bin\Debug\config\CommandScript\AlignerStateGet(Kawasaki).json
-C:\Users\ethan_huang\source\repos\Adam\WindowsFormsApp1\bin\Debug\config\CommandScript\RobotStateGet(Kawasaki).json
