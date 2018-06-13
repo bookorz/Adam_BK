@@ -182,16 +182,11 @@ namespace Adam.UI_Update.Manual
                     }
                     tbRLVacuSolenoid.BackColor = color;
                 }
-                string servo = "";
                 string state = robot.State != null ? robot.State.Trim() : "";
-                if (state.Length == 32)
-                {
-                    servo = state.Substring(10 - 1, 1).Equals("1") ? "ON" : "OFF";// 10 Servo On 0 = Servo off 1 = Servo On
-                }
                 Control tbRServo = manual.Controls.Find("tbRServo", true).FirstOrDefault() as Control;
                 if (tbRServo != null)
                 {
-                    tbRServo.Text = servo;
+                    tbRServo.Text = robot.Servo;
                     Color color = new Color();
                     switch (tbRServo.Text)
                     {

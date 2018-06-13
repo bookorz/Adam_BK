@@ -105,6 +105,7 @@ namespace Adam
             }
 
             DIO.Connect();
+            AuthorityUpdate.UpdateFuncGroupEnable("INIT");//init 權限
             RouteCtrl.ConnectAll();
         }
 
@@ -124,7 +125,7 @@ namespace Adam
                 case "Logout":
                     AuthorityUpdate.UpdateLogoutInfo();
                     //disable authroity function
-                    AuthorityUpdate.UpdateFuncInit("");
+                    AuthorityUpdate.UpdateFuncGroupEnable("INIT");
                     break;
             }
         }
@@ -385,9 +386,11 @@ namespace Adam
                                 case Transaction.Command.RobotType.GetError:
                                 case Transaction.Command.RobotType.GetMode:
                                 case Transaction.Command.RobotType.GetStatus:
-                                case Transaction.Command.RobotType.GetCombineStatus:
                                 case Transaction.Command.RobotType.GetSV:
                                     ManualRobotStatusUpdate.UpdateGUI(Txn, Node.Name, Msg.Value);//update 手動功能畫面
+                                    break;
+                                case Transaction.Command.RobotType.GetCombineStatus:
+                                    ManualRobotStatusUpdate.UpdateGUI(Txn, Node.Name, Msg.Command);//update 手動功能畫面
                                     break;
                             }
                             break;
@@ -401,7 +404,8 @@ namespace Adam
                                     Thread.Sleep(500);
                                     //向Aligner 詢問狀態
                                     Node aligner = NodeManagement.Get(Node.Name);
-                                    aligner.ExcuteScript("AlignerStateGet", "FormManual");
+                                    String script_name = aligner.Brand.ToUpper().Equals("SANWA") ? "AlignerStateGet" : "AlignerStateGet(Kawasaki)";
+                                    aligner.ExcuteScript(script_name, "FormManual");
                                     ManualAlignerStatusUpdate.UpdateGUI(Txn, Node.Name, Msg.Value);//update 
                                     break;
                                 case Transaction.Command.AlignerType.GetMode:
@@ -411,6 +415,9 @@ namespace Adam
                                 case Transaction.Command.AlignerType.GetRIO:
                                 case Transaction.Command.AlignerType.GetError:
                                     ManualAlignerStatusUpdate.UpdateGUI(Txn, Node.Name, Msg.Value);//update 手動功能畫面
+                                    break;
+                                case Transaction.Command.RobotType.GetCombineStatus:
+                                    ManualAlignerStatusUpdate.UpdateGUI(Txn, Node.Name, Msg.Command);//update 手動功能畫面
                                     break;
                             }
                             break;

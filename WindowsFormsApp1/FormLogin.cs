@@ -34,13 +34,10 @@ namespace GUI
             sql.Append("\n   FROM account ");
             sql.Append("\n  WHERE user_id = @user_id ");
             sql.Append("\n    AND password = MD5(@password)");
-            //sql.Append("\n    AND password = MD5('" + tbPassword.Text + "') OR TRUE");
-
-            //sql.Append("\n    AND password = MD5(':password')");
             //set parameter
             Dictionary<string, object> param = new Dictionary<string, object>();
             param.Add("@user_id", tbUserID.Text);
-            param.Add("password", tbPassword.Text);
+            param.Add("@password", tbPassword.Text);
             //Query
             DBUtil dBUtil = new DBUtil();
             DataTableReader rs = dBUtil.GetDataReader(sql.ToString(), param);

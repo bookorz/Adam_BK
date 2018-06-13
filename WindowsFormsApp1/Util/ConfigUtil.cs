@@ -71,6 +71,7 @@ namespace Adam
             Dictionary<string, string> armMap = new Dictionary<string, string>();
             armMap["Upper"] = "1";
             armMap["Lower"] = "2";
+            armMap["Both"] = "3";
             armMap["R"] = "1";
             armMap["L"] = "2";
             return armMap[arm];

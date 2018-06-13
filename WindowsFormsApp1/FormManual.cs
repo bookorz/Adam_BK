@@ -466,7 +466,7 @@ namespace GUI
                     if(robot.Brand.ToUpper().Equals("SANWA"))
                         txns[0].Method = Transaction.Command.RobotType.RobotHomeSafety;//20180607 RobotHome => RobotHomeSafety
                     else 
-                        txns[0].Method = Transaction.Command.RobotType.RobotHome;//20180607 RobotHome => RobotHomeSafety kawasaki
+                        txns[0].Method = Transaction.Command.RobotType.RobotHomeA;//Kawasaki home A
                     isRobotMoveDown = false;//Get option 1
                     isRobotMoveUp = false;//Put option 1
                     break;
@@ -634,7 +634,7 @@ namespace GUI
                 MessageBox.Show("Command is empty!");
             }
             SetFormEnable(false); 
-            //Update_Manual_Status(); steven mark test
+            Update_Manual_Status();// steven mark test
         }
 
         private Dictionary<string, string> GetScriptVar()
@@ -675,7 +675,7 @@ namespace GUI
             //向Robot 詢問狀態
             Node robot = NodeManagement.Get(nodeName);
             String script_name = robot.Brand.ToUpper().Equals("SANWA") ? "RobotStateGet" : "RobotStateGet(Kawasaki)";
-            //robot.ExcuteScript(script_name, "FormManual");//steven mark
+            robot.ExcuteScript(script_name, "FormManual");
 
         }
 
@@ -709,6 +709,8 @@ namespace GUI
         private void SetDeviceStatus(string name)
         {
             Node node = NodeManagement.Get(name);
+            if (node == null)
+                return;
             string status = node.State != "" ? node.State : "N/A";
             if (status.Equals("N/A") && ControllerManagement.Get(node.Controller) != null)
                 status = ControllerManagement.Get(node.Controller).Status;// 如果 NODE 無狀態，改抓 Controller 的狀態     
