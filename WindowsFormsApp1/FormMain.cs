@@ -105,6 +105,7 @@ namespace Adam
             }
 
             DIO.Connect();
+            AuthorityUpdate.UpdateFuncGroupEnable("INIT");//init 權限
         }
 
         private void LoadPort01_DataBindingComplete(object sender, DataGridViewBindingCompleteEventArgs e)
@@ -123,7 +124,7 @@ namespace Adam
                 case "Logout":
                     AuthorityUpdate.UpdateLogoutInfo();
                     //disable authroity function
-                    AuthorityUpdate.UpdateFuncInit("");
+                    AuthorityUpdate.UpdateFuncGroupEnable("INIT");
                     break;
             }
         }

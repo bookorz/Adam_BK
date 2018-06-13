@@ -1,6 +1,8 @@
-﻿using log4net;
+﻿using Adam.Util;
+using log4net;
 using System;
 using System.Collections.Generic;
+using System.Data;
 using System.Drawing;
 using System.Linq;
 using System.Text;
@@ -12,9 +14,9 @@ namespace Adam.UI_Update.Authority
     class AuthorityUpdate
     {
         static ILog logger = LogManager.GetLogger(typeof(AuthorityUpdate));
-        delegate void UpdateFuncEnable(string Group);
         delegate void UpdateLogin(string Id, string Name, string Group);
         delegate void UpdateLogout();
+        delegate void UpdateFuncEnable_D(string Form, string Control, string active);
 
         public static void UpdateLoginInfo(string Id, string Name, string Group)
         {
@@ -47,7 +49,9 @@ namespace Adam.UI_Update.Authority
                         lbl_login_date.Text = System.DateTime.Now.ToString("yyyy-MM-dd HH：mm：ss");
                     Button btn = form.Controls.Find("btnLogInOut", true).FirstOrDefault() as Button;
                     btn.Text = "Logout";
-                    AuthorityUpdate.UpdateFuncAssign(Group);
+                    //AuthorityUpdate.UpdateFuncAssign(Group);
+                    AuthorityUpdate.UpdateFuncGroupEnable(Group);
+                    
                 }
 
 
@@ -90,8 +94,6 @@ namespace Adam.UI_Update.Authority
                     Button btn = form.Controls.Find("btnLogInOut", true).FirstOrDefault() as Button;
                     btn.Text = "Login";
                 }
-
-
             }
             catch
             {
@@ -99,157 +101,62 @@ namespace Adam.UI_Update.Authority
             }
         }
 
-        public static void UpdateFuncInit(string Group)
+        public static void UpdateFuncGroupEnable(string Group)
         {
-            try
+            //set SQL
+            StringBuilder sql = new StringBuilder();
+            sql.Append("\n SELECT ugf.user_group_id, ugf.fun_id, ugf.active, f.fun_form, f.fun_ref");
+            sql.Append("\n   FROM user_group_function ugf");
+            sql.Append("\n   LEFT JOIN function f");
+            sql.Append("\n     ON ugf.fun_id = f.fun_id");
+            sql.Append("\n  WHERE user_group_id = @user_group_id ");
+            //set parameter
+            Dictionary<string, object> param = new Dictionary<string, object>();
+            param.Add("@user_group_id", Group);
+            //Query
+            DBUtil dBUtil = new DBUtil();
+            DataTableReader rs = dBUtil.GetDataReader(sql.ToString(), param);
+            if (rs != null)
             {
-                Form form = Application.OpenForms["FormMain"];
-
-                if (form == null)
-                    return;
-
-
-
-                if (form.InvokeRequired)
+                string fun_form = "";
+                string fun_ref = "";
+                string active = "";
+                while (rs.Read())
                 {
-                    UpdateFuncEnable ph = new UpdateFuncEnable(UpdateFuncInit);
-                    form.BeginInvoke(ph, Group);
+                    fun_form = (string)rs["fun_form"];
+                    fun_ref = (string)rs["fun_ref"];
+                    active = (string)rs["active"];
+                    UpdateFuncAssign(fun_form, fun_ref, active);
                 }
-                else
-                {
-                    Control tabMonitor = form.Controls.Find("tabMonitor", true).FirstOrDefault() as Control;
-                    Control tabComm = form.Controls.Find("tabComm", true).FirstOrDefault() as Control;
-                    Control tabMapping = form.Controls.Find("tabMapping", true).FirstOrDefault() as Control;
-                    Control tabStatus = form.Controls.Find("tabStatus", true).FirstOrDefault() as Control;
-                    Control tabOCR = form.Controls.Find("tabOCR", true).FirstOrDefault() as Control;
-                    Control tabSetting = form.Controls.Find("tabSetting", true).FirstOrDefault() as Control;
-                    Control btnTeach = form.Controls.Find("btnTeach", true).FirstOrDefault() as Control;
-                    Control btnMaintence = form.Controls.Find("btnMaintence", true).FirstOrDefault() as Control;
-                    Control btnAlarm = form.Controls.Find("btnAlarm", true).FirstOrDefault() as Control;
-                    Control btnMessage = form.Controls.Find("btnMessage", true).FirstOrDefault() as Control;
-                    Control btnSysLog = form.Controls.Find("btnSysLog", true).FirstOrDefault() as Control;
-
-                    switch (Group)
-                    {
-                        case "":
-                            //瀏覽功能
-                            if (tabMonitor != null)
-                                tabMonitor.Enabled = false;
-                            if (tabComm != null)
-                                tabComm.Enabled = false;
-                            if (tabMapping != null)
-                                tabMapping.Enabled = false;
-                            if (tabStatus != null)
-                                tabStatus.Enabled = false;
-                            if (tabOCR != null)
-                                tabOCR.Enabled = false;
-                            if (tabSetting != null)
-                                tabSetting.Enabled = false;
-                            //獨立功能
-                            if (btnTeach != null)
-                                btnTeach.Enabled = false;
-                            if (btnMaintence != null)
-                                btnMaintence.Enabled = false;
-                            if (btnAlarm != null)
-                                btnAlarm.Enabled = false;
-                            if (btnMessage != null)
-                                btnMessage.Enabled = false;
-                            if (btnSysLog != null)
-                                btnSysLog.Enabled = false;
-                            break;
-                    }
-                }
-            }
-            catch
-            {
-                logger.Error("UpdateFuncAssign: Update fail.");
+                rs.Close();
             }
         }
 
-        public static void UpdateFuncAssign(string Group)
+        public static void UpdateFuncAssign(string Form, string Control, string active)
         {
             try
             {
-                Form form = Application.OpenForms["FormMain"];
+                Form form = Application.OpenForms[Form];
 
                 if (form == null)
                     return;
-
-
-
+                
                 if (form.InvokeRequired)
                 {
-                    UpdateFuncEnable ph = new UpdateFuncEnable(UpdateFuncAssign);
-                    form.BeginInvoke(ph, Group);
+                    UpdateFuncEnable_D ph = new UpdateFuncEnable_D(UpdateFuncAssign);
+                    form.BeginInvoke(ph, Form, Control, active);
                 }
                 else
                 {
-                    Control tabMonitor = form.Controls.Find("tabMonitor", true).FirstOrDefault() as Control;
-                    Control tabComm = form.Controls.Find("tabComm", true).FirstOrDefault() as Control;
-                    Control tabMapping = form.Controls.Find("tabMapping", true).FirstOrDefault() as Control;
-                    Control tabStatus = form.Controls.Find("tabStatus", true).FirstOrDefault() as Control;
-                    Control tabOCR = form.Controls.Find("tabOCR", true).FirstOrDefault() as Control;
-                    Control tabSetting = form.Controls.Find("tabSetting", true).FirstOrDefault() as Control;
-                    Control btnTeach = form.Controls.Find("btnTeach", true).FirstOrDefault() as Control;
-                    Control btnMaintence = form.Controls.Find("btnMaintence", true).FirstOrDefault() as Control;
-                    Control btnAlarm = form.Controls.Find("btnAlarm", true).FirstOrDefault() as Control;
-                    Control btnMessage = form.Controls.Find("btnMessage", true).FirstOrDefault() as Control;
-                    Control btnSysLog = form.Controls.Find("btnSysLog", true).FirstOrDefault() as Control;
-
-                    switch (Group)
+                    Control control = form.Controls.Find(Control, true).FirstOrDefault() as Control;
+                    switch (active)
                     {
-                        case "OP":
-                            //瀏覽功能
-                            if (tabMonitor != null)
-                                tabMonitor.Enabled = true;
-                            if (tabComm != null)
-                                tabComm.Enabled = false;
-                            if (tabMapping != null)
-                                tabMapping.Enabled = true;
-                            if (tabStatus != null)
-                                tabStatus.Enabled = true;
-                            if (tabOCR != null)
-                                tabOCR.Enabled = true;
-                            if (tabSetting != null)
-                                tabSetting.Enabled = false;
-                            //獨立功能
-                            if (btnTeach != null)
-                                btnTeach.Enabled = false;
-                            if (btnMaintence != null)
-                                btnMaintence.Enabled = false;
-                            if (btnAlarm != null)
-                                btnAlarm.Enabled = true;
-                            if (btnMessage != null)
-                                btnMessage.Enabled = true;
-                            if (btnSysLog != null)
-                                btnSysLog.Enabled = false;
+                        case "Y":
+                            control.Enabled = true;
                             break;
-                        case "ADMIN":
-                        case "ENG":
-                            if (tabMonitor != null)
-                                tabMonitor.Enabled = true;
-                            if (tabComm != null)
-                                tabComm.Enabled = true;
-                            if (tabMapping != null)
-                                tabMapping.Enabled = true;
-                            if (tabStatus != null)
-                                tabStatus.Enabled = true;
-                            if (tabOCR != null)
-                                tabOCR.Enabled = true;
-                            if (tabSetting != null)
-                                tabSetting.Enabled = true;
-                            if (btnTeach != null)
-                                btnTeach.Enabled = true;
-                            if (btnMaintence != null)
-                                btnMaintence.Enabled = true;
-                            if (btnAlarm != null)
-                                btnAlarm.Enabled = true;
-                            if (btnMessage != null)
-                                btnMessage.Enabled = true;
-                            if (btnSysLog != null)
-                                btnSysLog.Enabled = true;
+                        case "N":
+                            control.Enabled = false;
                             break;
-
                     }
                 }
             }
