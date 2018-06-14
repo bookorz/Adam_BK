@@ -378,10 +378,18 @@ namespace GUI
             switch (btn.Name)
             {
                 case "btnStop":
-                    txn.Method = isRobotActive ? Transaction.Command.RobotType.Stop: Transaction.Command.AlignerType.Stop;
-                    //txn.Value = "0";//減速停止
-                    txn.Value = "1";//立即停止
-                    SetFormEnable(true);
+                    if (node.Brand.ToUpper().Equals("KAWASAKI"))
+                    {
+                        SetFormEnable(true);
+                        return;
+                    }
+                    else
+                    {
+                        txn.Method = isRobotActive ? Transaction.Command.RobotType.Stop: Transaction.Command.AlignerType.Stop;
+                        //txn.Value = "0";//減速停止
+                        txn.Value = "1";//立即停止
+                        SetFormEnable(true);
+                    }
                     break;
                 case "btnPause":
                     txn.Method = isRobotActive ? Transaction.Command.RobotType.Pause : Transaction.Command.AlignerType.Pause;

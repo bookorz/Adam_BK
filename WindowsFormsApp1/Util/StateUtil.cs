@@ -115,11 +115,11 @@ namespace Adam.Util
                         break;
                     case "Err":
                         robot.Status = "Error";
-                        robot.Servo = "ON";
+                        robot.Servo = "N/A";
                         break;
                     case "Tch":
                         robot.Status = "Teach";
-                        robot.Servo = "ON";
+                        robot.Servo = "N/A";
                         break;
                 }
                 //H1 ChuckCode
@@ -199,11 +199,11 @@ namespace Adam.Util
                         break;
                     case "Err":
                             aligner.Status = "Error";
-                            aligner.Servo = "ON";
+                            aligner.Servo = "N/A";
                         break;
                     case "Tch":
                             aligner.Status = "Teach";
-                            aligner.Servo = "ON";
+                            aligner.Servo = "N/A";
                         break;
                 }
                 //AL ChuckCode

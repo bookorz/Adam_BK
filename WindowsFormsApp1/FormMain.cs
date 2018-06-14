@@ -16,6 +16,7 @@ using Adam.UI_Update.Authority;
 using DIOControl;
 using Adam.UI_Update.Layout;
 using Adam.UI_Update.Alarm;
+using GUI;
 
 namespace Adam
 {
@@ -816,6 +817,12 @@ namespace Adam
         public void On_InterLock_Report(Node Node, bool InterLock)
         {
             throw new NotImplementedException();
+        }
+
+        private void btnHelp_Click(object sender, EventArgs e)
+        {
+            FormQuery query = new FormQuery();
+            query.Show();
         }
     }
 }
