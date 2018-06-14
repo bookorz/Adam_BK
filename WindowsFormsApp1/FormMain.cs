@@ -16,6 +16,7 @@ using Adam.UI_Update.Authority;
 using DIOControl;
 using Adam.UI_Update.Layout;
 using Adam.UI_Update.Alarm;
+using GUI;
 
 namespace Adam
 {
@@ -884,6 +885,10 @@ namespace Adam
             }
         }
 
-
+        private void btnHelp_Click(object sender, EventArgs e)
+        {
+            FormQuery form = new FormQuery();
+            form.Show();
+        }
     }
 }

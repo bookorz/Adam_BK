@@ -94,12 +94,6 @@ namespace Adam.UI_Update.Manual
                 {
                     return;
                 }
-                string servo = "";
-                string state = aligner.State != null ? aligner.State.Trim() : "";
-                if (state.Length == 32)
-                {
-                    servo = state.Substring(10 - 1, 1).Equals("1") ? "ON" : "OFF";// 10 Servo On 0 = Servo off 1 = Servo On
-                }
 
                 Control tbStatus = null;
                 Control tbServo = null;
@@ -133,7 +127,7 @@ namespace Adam.UI_Update.Manual
                 
                 if (tbServo != null)
                 {
-                    tbServo.Text = servo;
+                    tbServo.Text = aligner.Servo;
                     Color color = new Color();
                     switch (tbServo.Text)
                     {
@@ -187,7 +181,15 @@ namespace Adam.UI_Update.Manual
                 }
                 if (nudSpeed != null)
                 {
-                    nudSpeed.Text = aligner.Speed.Equals("00") ? "100" : Int32.Parse(aligner.Speed).ToString();
+                    try
+                    {
+                        nudSpeed.Text = aligner.Speed.Equals("00") ? "100" : Int32.Parse(aligner.Speed).ToString();
+                    }
+                    catch (Exception)
+                    {
+                        nudSpeed.Text = aligner.Speed;
+                    }
+                    
                 }
                 if (tbError != null)
                 {
@@ -195,7 +197,21 @@ namespace Adam.UI_Update.Manual
                 }
                 if (cbMode != null)
                 {
-                    cbMode.SelectedIndex = Int32.Parse(aligner.Mode);
+                    switch (aligner.Mode.ToUpper())
+                    {
+                        case "REAL":
+                            cbMode.SelectedIndex = 0;//kawasaki
+                            break;
+                        case "SIMU":
+                            cbMode.SelectedIndex = 1;//kawasaki
+                            break;
+                        case "":
+                            cbMode.SelectedIndex = -1;
+                            break;
+                        default:
+                            cbMode.SelectedIndex = Int32.Parse(aligner.Mode);
+                            break;
+                    }
                 }
             }
                 

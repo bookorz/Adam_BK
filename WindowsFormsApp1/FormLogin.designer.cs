@@ -60,6 +60,7 @@
             this.tbPassword.PasswordChar = '*';
             this.tbPassword.Size = new System.Drawing.Size(266, 39);
             this.tbPassword.TabIndex = 69;
+            this.tbPassword.KeyUp += new System.Windows.Forms.KeyEventHandler(this.tbPassword_KeyUp);
             // 
             // tbUserID
             // 
@@ -69,6 +70,7 @@
             this.tbUserID.Name = "tbUserID";
             this.tbUserID.Size = new System.Drawing.Size(266, 39);
             this.tbUserID.TabIndex = 68;
+            this.tbUserID.KeyUp += new System.Windows.Forms.KeyEventHandler(this.tbUserID_KeyUp);
             // 
             // btnCancel
             // 

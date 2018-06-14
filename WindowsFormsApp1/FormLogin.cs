@@ -26,7 +26,7 @@ namespace GUI
 
         private void btnLogin_Click(object sender, EventArgs e)
         {
-            
+
             Boolean result = false;
             //set SQL
             StringBuilder sql = new StringBuilder();
@@ -41,7 +41,7 @@ namespace GUI
             //Query
             DBUtil dBUtil = new DBUtil();
             DataTableReader rs = dBUtil.GetDataReader(sql.ToString(), param);
-            if(rs != null)
+            if (rs != null)
             {
                 //Console.Write("\n ID:" + rs["user_id"] + " Password:" + rs["password"] + " MD5:" + rs["md5"]);
 
@@ -50,7 +50,7 @@ namespace GUI
                 string user_group_id = "";
                 while (rs.Read())
                 {
-                    user_id = (string) rs["user_id"];
+                    user_id = (string)rs["user_id"];
                     user_name = (string)rs["user_name"];
                     user_group_id = (string)rs["user_group_id"];
                     result = true;
@@ -72,6 +72,22 @@ namespace GUI
         private void FormLogin_Activated(object sender, EventArgs e)
         {
             tbUserID.Focus();
+        }
+
+        private void tbPassword_KeyUp(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+            {
+                btnLogin.Focus();
+            }
+        }
+
+        private void tbUserID_KeyUp(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+            {
+                tbPassword.Focus();
+            }
         }
     }
 }
