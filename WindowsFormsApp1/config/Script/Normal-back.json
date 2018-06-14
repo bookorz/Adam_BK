@@ -69,7 +69,14 @@
         "EqpType": "Aligner",
         "Method": "Align",
         "Position": "",
-        "Param": "190",
+        "Param": "30",
+        "Force": false
+      },
+      {
+        "EqpType": "Robot",
+        "Method": "PutBack",
+        "Position": "Job.Position",
+        "Param": null,
         "Force": false
       }
     ]
@@ -110,7 +117,7 @@
   },
   {
     "ID": "",
-    "Expression": "[Job.OCRFlag] == false",
+    "Expression": "[Job.OCRFlag] == true",
     "JobStatus": "WAIT_ALIGN",
     "ExcuteMethod": "",
     "FinishMethod": "Align",
@@ -118,7 +125,7 @@
     "TodoList": [
       {
         "EqpType": "OCR",
-        "Method": "Read",
+        "Method": "OCR",
         "Position": "",
         "Param": null,
         "Force": false
@@ -130,7 +137,7 @@
     "Expression": "",
     "JobStatus": "WAIT_OCR",
     "ExcuteMethod": "",
-    "FinishMethod": "Read",
+    "FinishMethod": "OCR",
     "ChangeToStatus": "WAIT_WRLS",
     "TodoList": [
       {

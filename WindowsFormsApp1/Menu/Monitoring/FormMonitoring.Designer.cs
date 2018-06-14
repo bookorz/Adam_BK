@@ -332,6 +332,7 @@
             this.LoadPort08.AllowUserToDeleteRows = false;
             this.LoadPort08.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.DisplayedCells;
             this.LoadPort08.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.LoadPort08.ColumnHeadersVisible = false;
             this.LoadPort08.Location = new System.Drawing.Point(951, 119);
             this.LoadPort08.MultiSelect = false;
             this.LoadPort08.Name = "LoadPort08";
@@ -377,6 +378,7 @@
             this.LoadPort07.AllowUserToDeleteRows = false;
             this.LoadPort07.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.DisplayedCells;
             this.LoadPort07.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.LoadPort07.ColumnHeadersVisible = false;
             this.LoadPort07.Location = new System.Drawing.Point(816, 119);
             this.LoadPort07.MultiSelect = false;
             this.LoadPort07.Name = "LoadPort07";
@@ -422,6 +424,7 @@
             this.LoadPort06.AllowUserToDeleteRows = false;
             this.LoadPort06.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.DisplayedCells;
             this.LoadPort06.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.LoadPort06.ColumnHeadersVisible = false;
             this.LoadPort06.Location = new System.Drawing.Point(681, 119);
             this.LoadPort06.MultiSelect = false;
             this.LoadPort06.Name = "LoadPort06";
@@ -467,6 +470,7 @@
             this.LoadPort05.AllowUserToDeleteRows = false;
             this.LoadPort05.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.DisplayedCells;
             this.LoadPort05.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.LoadPort05.ColumnHeadersVisible = false;
             this.LoadPort05.Location = new System.Drawing.Point(546, 119);
             this.LoadPort05.MultiSelect = false;
             this.LoadPort05.Name = "LoadPort05";
@@ -512,6 +516,7 @@
             this.LoadPort04.AllowUserToDeleteRows = false;
             this.LoadPort04.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.DisplayedCells;
             this.LoadPort04.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.LoadPort04.ColumnHeadersVisible = false;
             this.LoadPort04.Location = new System.Drawing.Point(411, 119);
             this.LoadPort04.MultiSelect = false;
             this.LoadPort04.Name = "LoadPort04";
@@ -557,6 +562,7 @@
             this.LoadPort03.AllowUserToDeleteRows = false;
             this.LoadPort03.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.DisplayedCells;
             this.LoadPort03.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.LoadPort03.ColumnHeadersVisible = false;
             this.LoadPort03.Location = new System.Drawing.Point(276, 119);
             this.LoadPort03.MultiSelect = false;
             this.LoadPort03.Name = "LoadPort03";
@@ -602,6 +608,7 @@
             this.LoadPort02.AllowUserToDeleteRows = false;
             this.LoadPort02.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.DisplayedCells;
             this.LoadPort02.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.LoadPort02.ColumnHeadersVisible = false;
             this.LoadPort02.Location = new System.Drawing.Point(141, 119);
             this.LoadPort02.MultiSelect = false;
             this.LoadPort02.Name = "LoadPort02";

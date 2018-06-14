@@ -1,18 +1,18 @@
-[
+﻿[
   {
     "ExcuteMethod": "",
     "FinishMethod": "",
-    "Method": "SetOpAccess",
+    "Method": "Unload",
     "Arm": "",
     "Slot": "",
     "Position": "",
-    "Value": "0",
+    "Value": "",
     "Index": "1",
     "Flag": "Start"
   },
   {
-    "ExcuteMethod": "SetOpAccess",
-    "FinishMethod": "",
+    "ExcuteMethod": "",
+    "FinishMethod": "Unload",
     "Method": "SetLoad",
     "Arm": "",
     "Slot": "",
@@ -28,7 +28,7 @@
     "Arm": "",
     "Slot": "",
     "Position": "",
-    "Value": "0",
+    "Value": "1",
     "Index": "3",
     "Flag": "End"
   }

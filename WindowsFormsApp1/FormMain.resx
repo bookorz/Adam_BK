@@ -128,6 +128,10 @@
   <data name="splitContainer13.Orientation" type="System.Windows.Forms.Orientation, System.Windows.Forms">
     <value>Horizontal</value>
   </data>
+  <assembly alias="mscorlib" name="mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="Pause_btn.Enabled" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
   <data name="Pause_btn.FlatStyle" type="System.Windows.Forms.FlatStyle, System.Windows.Forms">
     <value>Flat</value>
   </data>
@@ -140,7 +144,6 @@
   <data name="Pause_btn.Size" type="System.Drawing.Size, System.Drawing">
     <value>214, 41</value>
   </data>
-  <assembly alias="mscorlib" name="mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
   <data name="Pause_btn.TabIndex" type="System.Int32, mscorlib">
     <value>6</value>
   </data>

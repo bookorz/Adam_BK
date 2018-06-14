@@ -8,9 +8,9 @@
     "ChangeToStatus": "WAIT_WHLD",
     "TodoList": [
       {
-        "EqpType": "Aligner",
-        "Method": "WaferHold",
-        "Position": "",
+        "EqpType": "Robot",
+        "Method": "WaitBeforePut",
+        "Position": "Aligner",
         "Param": null,
         "Force": false
       },
@@ -26,9 +26,26 @@
   {
     "ID": "",
     "Expression": "",
-    "JobStatus": "WAIT_WHLD",
+    "JobStatus": "",
     "ExcuteMethod": "",
-    "FinishMethod": "WaferHold",
+    "FinishMethod": "WaitBeforePut",
+    "ChangeToStatus": "",
+    "TodoList": [
+      {
+        "EqpType": "Aligner",
+        "Method": "WaferHold",
+        "Position": "",
+        "Param": null,
+        "Force": false
+      }
+    ]
+  },
+  {
+    "ID": "",
+    "Expression": "",
+    "JobStatus": "WAIT_WHLD",
+    "ExcuteMethod": "WaferHold",
+    "FinishMethod": "",
     "ChangeToStatus": "WAIT_PUT",
     "TodoList": [
       {
@@ -52,14 +69,7 @@
         "EqpType": "Aligner",
         "Method": "Align",
         "Position": "",
-        "Param": "30",
-        "Force": false
-      },
-      {
-        "EqpType": "Robot",
-        "Method": "PutBack",
-        "Position": "Job.Position",
-        "Param": null,
+        "Param": "190",
         "Force": false
       }
     ]
@@ -100,7 +110,7 @@
   },
   {
     "ID": "",
-    "Expression": "[Job.OCRFlag] == true",
+    "Expression": "[Job.OCRFlag] == false",
     "JobStatus": "WAIT_ALIGN",
     "ExcuteMethod": "",
     "FinishMethod": "Align",
@@ -108,7 +118,7 @@
     "TodoList": [
       {
         "EqpType": "OCR",
-        "Method": "OCR",
+        "Method": "Read",
         "Position": "",
         "Param": null,
         "Force": false
@@ -120,7 +130,7 @@
     "Expression": "",
     "JobStatus": "WAIT_OCR",
     "ExcuteMethod": "",
-    "FinishMethod": "OCR",
+    "FinishMethod": "Read",
     "ChangeToStatus": "WAIT_WRLS",
     "TodoList": [
       {
@@ -169,10 +179,10 @@
   {
     "ID": "",
     "Expression": "",
-    "JobStatus": "",
+    "JobStatus": "WAIT_GET",
     "ExcuteMethod": "",
     "FinishMethod": "Get",
-    "ChangeToStatus": "",
+    "ChangeToStatus": "WAIT_UNLOAD",
     "TodoList": [
       {
         "EqpType": "Aligner",
@@ -186,10 +196,10 @@
   {
     "ID": "",
     "Expression": "",
-    "JobStatus": "",
-    "ExcuteMethod": "GetAfterWait",
-    "FinishMethod": "",
-    "ChangeToStatus": "",
+    "JobStatus": "WAIT_GET",
+    "ExcuteMethod": "",
+    "FinishMethod": "GetAfterWait",
+    "ChangeToStatus": "WAIT_UNLOAD",
     "TodoList": [
       {
         "EqpType": "Aligner",

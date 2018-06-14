@@ -393,6 +393,9 @@
     <None Include="config\CommandScript\LoadPortMapping.json">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
+    <None Include="config\CommandScript\LoadPortUnload.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
     <None Include="config\CommandScript\RobotInit.json">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>

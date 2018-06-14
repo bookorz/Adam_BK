@@ -150,7 +150,7 @@ namespace Adam
             if (MessageBox.Show(strMsg, "Initialize", MessageBoxButtons.OKCancel, MessageBoxIcon.Exclamation, MessageBoxDefaultButton.Button1, MessageBoxOptions.ServiceNotification) == DialogResult.OK)
             {
 
-                foreach(Node each in NodeManagement.GetList())
+                foreach (Node each in NodeManagement.GetList())
                 {
                     switch (each.Type)
                     {
@@ -328,6 +328,9 @@ namespace Adam
 
             switch (Txn.FormName)
             {
+                case "PauseProcedure":
+
+                    break;
                 case "FormManual":
                     switch (Node.Type)
                     {
@@ -475,7 +478,7 @@ namespace Adam
             CurrentAlarm.TimeStamp = DateTime.Now.ToString("yyyy/MM/dd HH:mm:ss:fff");
 
             AlarmManagement.Add(CurrentAlarm);
-           
+
             AlarmUpdate.UpdateAlarmList(AlarmManagement.GetAll());
             AlarmUpdate.UpdateAlarmHistory(AlarmManagement.GetHistory());
 
@@ -495,6 +498,21 @@ namespace Adam
 
                             ManualPortStatusUpdate.UpdateLog(Node.Name, Msg.Command + " Finished");
                             ManualPortStatusUpdate.LockUI(false);
+
+                            break;
+                        
+                        case "Robot":
+                            ManualRobotStatusUpdate.UpdateGUI(Txn, Node.Name, Msg.Value);//update 手動功能畫面
+                            break;
+                        case "Aligner":
+                            ManualAlignerStatusUpdate.UpdateGUI(Txn, Node.Name, Msg.Value);//update 手動功能畫面
+                            break;
+                    }
+                    break;
+                default:
+                    switch (Node.Type)
+                    {
+                        case "LoadPort":
                             switch (Txn.Method)
                             {
                                 case Transaction.Command.LoadPortType.Unload:
@@ -511,12 +529,6 @@ namespace Adam
                                     OCRUpdate.UpdateOCRRead(Node.Name, Msg.Value);
                                     break;
                             }
-                            break;
-                        case "Robot":
-                            ManualRobotStatusUpdate.UpdateGUI(Txn, Node.Name, Msg.Value);//update 手動功能畫面
-                            break;
-                        case "Aligner":
-                            ManualAlignerStatusUpdate.UpdateGUI(Txn, Node.Name, Msg.Value);//update 手動功能畫面
                             break;
                     }
                     break;
@@ -574,16 +586,16 @@ namespace Adam
         {
 
             ConnectionStatusUpdate.UpdateControllerStatus(Device_ID, Status);
-            
+
             logger.Debug("On_Controller_State_Changed");
         }
 
         public void On_Port_Finished(string PortName)
         {
             logger.Debug("On_Port_Finished");
-            Transaction txn = new Transaction();
-            txn.Method = Transaction.Command.LoadPortType.Unload;
-            NodeManagement.Get(PortName).SendCommand(txn, true);
+
+            NodeManagement.Get(PortName).ExcuteScript("LoadPortUnload", "Port_Finished");
+            
         }
 
         public void On_Job_Location_Changed(Job Job)
@@ -773,7 +785,7 @@ namespace Adam
 
         private void Connection_btn_Click(object sender, EventArgs e)
         {
-            
+
             //if (Connection_btn.Tag.ToString() == "Offline")
             //{
             //    RouteCtrl.ConnectAll();
@@ -790,23 +802,23 @@ namespace Adam
 
         private void Mode_btn_Click(object sender, EventArgs e)
         {
-            
+
             if (Mode_btn.Tag.ToString() == "Manual")
             {
-               
+
                 //if (Connection_btn.Tag.ToString() == "Offline")
                 //{
                 //    MessageBox.Show("尚未連線");
                 //    return;
                 //}
 
-                
 
-               
+
+
                 if (AlarmManagement.HasCritical())
                 {
                     MessageBox.Show("關鍵Alarm尚未解除");
-                } 
+                }
                 else
                 {
                     if (NodeManagement.IsNeedInitial())
@@ -828,6 +840,7 @@ namespace Adam
                         btnMaintence.Enabled = false;
                         btnTeach.Enabled = false;
                         EnablePage(tbcMian.TabPages[5], false);
+                        Pause_btn.Enabled = true;
 
                     }
                 }
@@ -843,6 +856,7 @@ namespace Adam
                 Mode_btn.Tag = "Manual";
                 Mode_btn.Text = "Manual";
                 Mode_btn.BackColor = Color.Orange;
+                Pause_btn.Enabled = false;
                 ConnectionStatusUpdate.UpdateInitial(false.ToString());
             }
         }
@@ -856,12 +870,13 @@ namespace Adam
         {
             if (RouteCtrl.GetMode().Equals("Start"))
             {
-                
+
                 RouteCtrl.Pause();
                 NodeStatusUpdate.UpdateCurrentState();
                 Pause_btn.Text = "Continue";
+
             }
-            else if(RouteCtrl.GetMode().Equals("Pause"))
+            else if (RouteCtrl.GetMode().Equals("Pause"))
             {
                 RouteCtrl.Continue();
                 NodeStatusUpdate.UpdateCurrentState();
@@ -869,6 +884,6 @@ namespace Adam
             }
         }
 
-        
+
     }
 }

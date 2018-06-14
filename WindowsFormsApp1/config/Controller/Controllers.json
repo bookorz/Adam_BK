@@ -46,9 +46,9 @@ Enable:false
 DeviceName:"OCRController02",
 DeviceType:"HST",
 IPAdress:"127.0.0.1",
-Port:43,
+Port:33,
 ConnectionType:"Socket",
-Enable:false
+Enable:true
 },
 {
 DeviceName:"LoadPortController01",
