@@ -29,20 +29,21 @@
         private void InitializeComponent()
         {
             this.panel40 = new System.Windows.Forms.Panel();
+            this.dgvResult = new System.Windows.Forms.DataGridView();
             this.btnExport = new System.Windows.Forms.Button();
             this.btnQuery = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.radioButton1 = new System.Windows.Forms.RadioButton();
-            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
-            this.dateTimePicker2 = new System.Windows.Forms.DateTimePicker();
-            this.label5 = new System.Windows.Forms.Label();
-            this.label1 = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.dgvResult = new System.Windows.Forms.DataGridView();
+            this.label1 = new System.Windows.Forms.Label();
+            this.label5 = new System.Windows.Forms.Label();
+            this.dateTimePicker2 = new System.Windows.Forms.DateTimePicker();
+            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
+            this.cbQueryType = new System.Windows.Forms.ComboBox();
+            this.label84 = new System.Windows.Forms.Label();
             this.panel40.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvResult)).BeginInit();
             this.panel1.SuspendLayout();
             this.groupBox1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvResult)).BeginInit();
             this.SuspendLayout();
             // 
             // panel40
@@ -53,6 +54,18 @@
             this.panel40.Name = "panel40";
             this.panel40.Size = new System.Drawing.Size(1269, 408);
             this.panel40.TabIndex = 66;
+            // 
+            // dgvResult
+            // 
+            this.dgvResult.AllowUserToDeleteRows = false;
+            this.dgvResult.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.dgvResult.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvResult.Location = new System.Drawing.Point(3, 3);
+            this.dgvResult.Name = "dgvResult";
+            this.dgvResult.ReadOnly = true;
+            this.dgvResult.RowTemplate.Height = 24;
+            this.dgvResult.Size = new System.Drawing.Size(1259, 398);
+            this.dgvResult.TabIndex = 1;
             // 
             // btnExport
             // 
@@ -67,6 +80,7 @@
             this.btnExport.TabIndex = 67;
             this.btnExport.Text = "Export";
             this.btnExport.UseVisualStyleBackColor = false;
+            this.btnExport.Click += new System.EventHandler(this.btnExport_Click);
             // 
             // btnQuery
             // 
@@ -94,30 +108,39 @@
             this.panel1.Size = new System.Drawing.Size(1269, 153);
             this.panel1.TabIndex = 66;
             // 
-            // radioButton1
+            // groupBox1
             // 
-            this.radioButton1.AutoSize = true;
-            this.radioButton1.Checked = true;
-            this.radioButton1.Font = new System.Drawing.Font("微軟正黑體", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-            this.radioButton1.Location = new System.Drawing.Point(6, 21);
-            this.radioButton1.Name = "radioButton1";
-            this.radioButton1.Size = new System.Drawing.Size(119, 31);
-            this.radioButton1.TabIndex = 71;
-            this.radioButton1.TabStop = true;
-            this.radioButton1.Text = "Select All";
-            this.radioButton1.UseVisualStyleBackColor = true;
+            this.groupBox1.Controls.Add(this.label84);
+            this.groupBox1.Controls.Add(this.cbQueryType);
+            this.groupBox1.Controls.Add(this.label1);
+            this.groupBox1.Controls.Add(this.label5);
+            this.groupBox1.Controls.Add(this.dateTimePicker2);
+            this.groupBox1.Controls.Add(this.dateTimePicker1);
+            this.groupBox1.Location = new System.Drawing.Point(3, 3);
+            this.groupBox1.Name = "groupBox1";
+            this.groupBox1.Size = new System.Drawing.Size(989, 140);
+            this.groupBox1.TabIndex = 72;
+            this.groupBox1.TabStop = false;
             // 
-            // dateTimePicker1
+            // label1
             // 
-            this.dateTimePicker1.CalendarFont = new System.Drawing.Font("微軟正黑體", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-            this.dateTimePicker1.CustomFormat = "yyyy-MM-dd";
-            this.dateTimePicker1.Font = new System.Drawing.Font("微軟正黑體", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-            this.dateTimePicker1.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.dateTimePicker1.Location = new System.Drawing.Point(460, 50);
-            this.dateTimePicker1.Name = "dateTimePicker1";
-            this.dateTimePicker1.Size = new System.Drawing.Size(128, 29);
-            this.dateTimePicker1.TabIndex = 73;
-            this.dateTimePicker1.Value = new System.DateTime(2018, 5, 16, 13, 46, 34, 0);
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("微軟正黑體", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
+            this.label1.Location = new System.Drawing.Point(597, 94);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(37, 24);
+            this.label1.TabIndex = 76;
+            this.label1.Text = "To:";
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Font = new System.Drawing.Font("微軟正黑體", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
+            this.label5.Location = new System.Drawing.Point(393, 97);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(61, 24);
+            this.label5.TabIndex = 75;
+            this.label5.Text = "From:";
             // 
             // dateTimePicker2
             // 
@@ -125,56 +148,49 @@
             this.dateTimePicker2.CustomFormat = "yyyy-MM-dd";
             this.dateTimePicker2.Font = new System.Drawing.Font("微軟正黑體", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
             this.dateTimePicker2.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.dateTimePicker2.Location = new System.Drawing.Point(644, 50);
+            this.dateTimePicker2.Location = new System.Drawing.Point(640, 94);
             this.dateTimePicker2.Name = "dateTimePicker2";
             this.dateTimePicker2.Size = new System.Drawing.Size(128, 29);
             this.dateTimePicker2.TabIndex = 74;
             this.dateTimePicker2.Value = new System.DateTime(2018, 5, 16, 13, 46, 34, 0);
             // 
-            // label5
+            // dateTimePicker1
             // 
-            this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("微軟正黑體", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-            this.label5.Location = new System.Drawing.Point(397, 53);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(61, 24);
-            this.label5.TabIndex = 75;
-            this.label5.Text = "From:";
+            this.dateTimePicker1.CalendarFont = new System.Drawing.Font("微軟正黑體", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
+            this.dateTimePicker1.CustomFormat = "yyyy-MM-dd";
+            this.dateTimePicker1.Font = new System.Drawing.Font("微軟正黑體", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
+            this.dateTimePicker1.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
+            this.dateTimePicker1.Location = new System.Drawing.Point(456, 94);
+            this.dateTimePicker1.Name = "dateTimePicker1";
+            this.dateTimePicker1.Size = new System.Drawing.Size(128, 29);
+            this.dateTimePicker1.TabIndex = 73;
+            this.dateTimePicker1.Value = new System.DateTime(2018, 5, 16, 13, 46, 34, 0);
             // 
-            // label1
+            // cbQueryType
             // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("微軟正黑體", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-            this.label1.Location = new System.Drawing.Point(601, 50);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(37, 24);
-            this.label1.TabIndex = 76;
-            this.label1.Text = "To:";
+            this.cbQueryType.Font = new System.Drawing.Font("微軟正黑體", 18F);
+            this.cbQueryType.FormattingEnabled = true;
+            this.cbQueryType.Items.AddRange(new object[] {
+            "Alarm",
+            "Message",
+            "Lot Trace",
+            "Command Log",
+            "Other"});
+            this.cbQueryType.Location = new System.Drawing.Point(155, 28);
+            this.cbQueryType.Name = "cbQueryType";
+            this.cbQueryType.Size = new System.Drawing.Size(235, 38);
+            this.cbQueryType.TabIndex = 77;
             // 
-            // groupBox1
+            // label84
             // 
-            this.groupBox1.Controls.Add(this.label1);
-            this.groupBox1.Controls.Add(this.label5);
-            this.groupBox1.Controls.Add(this.dateTimePicker2);
-            this.groupBox1.Controls.Add(this.dateTimePicker1);
-            this.groupBox1.Controls.Add(this.radioButton1);
-            this.groupBox1.Location = new System.Drawing.Point(3, 3);
-            this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(989, 140);
-            this.groupBox1.TabIndex = 72;
-            this.groupBox1.TabStop = false;
-            // 
-            // dgvResult
-            // 
-            this.dgvResult.AllowUserToDeleteRows = false;
-            this.dgvResult.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.dgvResult.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvResult.Location = new System.Drawing.Point(3, 3);
-            this.dgvResult.Name = "dgvResult";
-            this.dgvResult.ReadOnly = true;
-            this.dgvResult.RowTemplate.Height = 24;
-            this.dgvResult.Size = new System.Drawing.Size(1259, 398);
-            this.dgvResult.TabIndex = 1;
+            this.label84.AutoSize = true;
+            this.label84.Font = new System.Drawing.Font("微軟正黑體", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
+            this.label84.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.label84.Location = new System.Drawing.Point(6, 31);
+            this.label84.Name = "label84";
+            this.label84.Size = new System.Drawing.Size(143, 30);
+            this.label84.TabIndex = 79;
+            this.label84.Text = "Query Type";
             // 
             // FormQuery
             // 
@@ -189,10 +205,10 @@
             this.Name = "FormQuery";
             this.Text = "Information Query";
             this.panel40.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.dgvResult)).EndInit();
             this.panel1.ResumeLayout(false);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvResult)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -208,7 +224,8 @@
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.DateTimePicker dateTimePicker2;
         private System.Windows.Forms.DateTimePicker dateTimePicker1;
-        private System.Windows.Forms.RadioButton radioButton1;
         private System.Windows.Forms.DataGridView dgvResult;
+        private System.Windows.Forms.ComboBox cbQueryType;
+        private System.Windows.Forms.Label label84;
     }
 }

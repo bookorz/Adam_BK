@@ -30,14 +30,16 @@ namespace Adam
         {
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormMain));
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             this.splitContainer13 = new System.Windows.Forms.SplitContainer();
             this.groupBox54 = new System.Windows.Forms.GroupBox();
+            this.Pause_btn = new System.Windows.Forms.Button();
             this.Mode_btn = new System.Windows.Forms.Button();
             this.groupBox19 = new System.Windows.Forms.GroupBox();
             this.Connection_btn = new System.Windows.Forms.Button();
             this.button27 = new System.Windows.Forms.Button();
             this.groupBox5 = new System.Windows.Forms.GroupBox();
+            this.Initial_btn = new System.Windows.Forms.Button();
             this.DifferentialPressureAlarm2_Signal = new System.Windows.Forms.Button();
             this.DifferentialPressureAlarm1_Signal = new System.Windows.Forms.Button();
             this.LoadPortVacuum_Signal = new System.Windows.Forms.Button();
@@ -109,8 +111,6 @@ namespace Adam
             this.terminalToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.panel3 = new System.Windows.Forms.Panel();
             this.directorySearcher1 = new System.DirectoryServices.DirectorySearcher();
-            this.Initial_btn = new System.Windows.Forms.Button();
-            this.Pause_btn = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer13)).BeginInit();
             this.splitContainer13.Panel1.SuspendLayout();
             this.splitContainer13.Panel2.SuspendLayout();
@@ -157,6 +157,15 @@ namespace Adam
             resources.ApplyResources(this.groupBox54, "groupBox54");
             this.groupBox54.Name = "groupBox54";
             this.groupBox54.TabStop = false;
+            // 
+            // Pause_btn
+            // 
+            this.Pause_btn.BackColor = System.Drawing.Color.Orange;
+            resources.ApplyResources(this.Pause_btn, "Pause_btn");
+            this.Pause_btn.Name = "Pause_btn";
+            this.Pause_btn.Tag = "Manual";
+            this.Pause_btn.UseVisualStyleBackColor = false;
+            this.Pause_btn.Click += new System.EventHandler(this.Pause_btn_Click);
             // 
             // Mode_btn
             // 
@@ -208,6 +217,13 @@ namespace Adam
             resources.ApplyResources(this.groupBox5, "groupBox5");
             this.groupBox5.Name = "groupBox5";
             this.groupBox5.TabStop = false;
+            // 
+            // Initial_btn
+            // 
+            resources.ApplyResources(this.Initial_btn, "Initial_btn");
+            this.Initial_btn.BackColor = System.Drawing.Color.Red;
+            this.Initial_btn.Name = "Initial_btn";
+            this.Initial_btn.UseVisualStyleBackColor = false;
             // 
             // DifferentialPressureAlarm2_Signal
             // 
@@ -406,14 +422,14 @@ namespace Adam
             this.Conn_gv.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
             this.Conn_gv.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.Conn_gv.ColumnHeadersVisible = false;
-            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("微軟正黑體", 12F);
-            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.Conn_gv.DefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("微軟正黑體", 12F);
+            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.Conn_gv.DefaultCellStyle = dataGridViewCellStyle2;
             resources.ApplyResources(this.Conn_gv, "Conn_gv");
             this.Conn_gv.MultiSelect = false;
             this.Conn_gv.Name = "Conn_gv";
@@ -567,6 +583,7 @@ namespace Adam
             this.btnHelp.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(128)))));
             this.btnHelp.Name = "btnHelp";
             this.btnHelp.UseVisualStyleBackColor = true;
+            this.btnHelp.Click += new System.EventHandler(this.btnHelp_Click);
             // 
             // btnVersion
             // 
@@ -780,22 +797,6 @@ namespace Adam
             this.directorySearcher1.ClientTimeout = System.TimeSpan.Parse("-00:00:01");
             this.directorySearcher1.ServerPageTimeLimit = System.TimeSpan.Parse("-00:00:01");
             this.directorySearcher1.ServerTimeLimit = System.TimeSpan.Parse("-00:00:01");
-            // 
-            // Initial_btn
-            // 
-            resources.ApplyResources(this.Initial_btn, "Initial_btn");
-            this.Initial_btn.BackColor = System.Drawing.Color.Red;
-            this.Initial_btn.Name = "Initial_btn";
-            this.Initial_btn.UseVisualStyleBackColor = false;
-            // 
-            // Pause_btn
-            // 
-            this.Pause_btn.BackColor = System.Drawing.Color.Orange;
-            resources.ApplyResources(this.Pause_btn, "Pause_btn");
-            this.Pause_btn.Name = "Pause_btn";
-            this.Pause_btn.Tag = "Manual";
-            this.Pause_btn.UseVisualStyleBackColor = false;
-            this.Pause_btn.Click += new System.EventHandler(this.Pause_btn_Click);
             // 
             // FormMain
             // 
