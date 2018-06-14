@@ -48,7 +48,7 @@ namespace Adam
             this.Air_Signal = new System.Windows.Forms.Button();
             this.Vacuum_Signal = new System.Windows.Forms.Button();
             this.DoorSwitch_Signal = new System.Windows.Forms.Button();
-            this.CurrentSate_btn = new System.Windows.Forms.Button();
+            this.CurrentState_btn = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
             this.groupBox4 = new System.Windows.Forms.GroupBox();
             this.Buzzer2_Signal = new System.Windows.Forms.Button();
@@ -109,6 +109,8 @@ namespace Adam
             this.terminalToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.panel3 = new System.Windows.Forms.Panel();
             this.directorySearcher1 = new System.DirectoryServices.DirectorySearcher();
+            this.Initial_btn = new System.Windows.Forms.Button();
+            this.Pause_btn = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer13)).BeginInit();
             this.splitContainer13.Panel1.SuspendLayout();
             this.splitContainer13.Panel2.SuspendLayout();
@@ -150,6 +152,7 @@ namespace Adam
             // 
             // groupBox54
             // 
+            this.groupBox54.Controls.Add(this.Pause_btn);
             this.groupBox54.Controls.Add(this.Mode_btn);
             resources.ApplyResources(this.groupBox54, "groupBox54");
             this.groupBox54.Name = "groupBox54";
@@ -190,6 +193,7 @@ namespace Adam
             // 
             // groupBox5
             // 
+            this.groupBox5.Controls.Add(this.Initial_btn);
             this.groupBox5.Controls.Add(this.DifferentialPressureAlarm2_Signal);
             this.groupBox5.Controls.Add(this.DifferentialPressureAlarm1_Signal);
             this.groupBox5.Controls.Add(this.LoadPortVacuum_Signal);
@@ -200,7 +204,7 @@ namespace Adam
             this.groupBox5.Controls.Add(this.Air_Signal);
             this.groupBox5.Controls.Add(this.Vacuum_Signal);
             this.groupBox5.Controls.Add(this.DoorSwitch_Signal);
-            this.groupBox5.Controls.Add(this.CurrentSate_btn);
+            this.groupBox5.Controls.Add(this.CurrentState_btn);
             resources.ApplyResources(this.groupBox5, "groupBox5");
             this.groupBox5.Name = "groupBox5";
             this.groupBox5.TabStop = false;
@@ -275,12 +279,12 @@ namespace Adam
             this.DoorSwitch_Signal.Name = "DoorSwitch_Signal";
             this.DoorSwitch_Signal.UseVisualStyleBackColor = false;
             // 
-            // CurrentSate_btn
+            // CurrentState_btn
             // 
-            resources.ApplyResources(this.CurrentSate_btn, "CurrentSate_btn");
-            this.CurrentSate_btn.BackColor = System.Drawing.Color.Orange;
-            this.CurrentSate_btn.Name = "CurrentSate_btn";
-            this.CurrentSate_btn.UseVisualStyleBackColor = false;
+            resources.ApplyResources(this.CurrentState_btn, "CurrentState_btn");
+            this.CurrentState_btn.BackColor = System.Drawing.Color.Orange;
+            this.CurrentState_btn.Name = "CurrentState_btn";
+            this.CurrentState_btn.UseVisualStyleBackColor = false;
             // 
             // panel1
             // 
@@ -563,7 +567,6 @@ namespace Adam
             this.btnHelp.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(128)))));
             this.btnHelp.Name = "btnHelp";
             this.btnHelp.UseVisualStyleBackColor = true;
-            this.btnHelp.Click += new System.EventHandler(this.btnHelp_Click);
             // 
             // btnVersion
             // 
@@ -778,6 +781,22 @@ namespace Adam
             this.directorySearcher1.ServerPageTimeLimit = System.TimeSpan.Parse("-00:00:01");
             this.directorySearcher1.ServerTimeLimit = System.TimeSpan.Parse("-00:00:01");
             // 
+            // Initial_btn
+            // 
+            resources.ApplyResources(this.Initial_btn, "Initial_btn");
+            this.Initial_btn.BackColor = System.Drawing.Color.Red;
+            this.Initial_btn.Name = "Initial_btn";
+            this.Initial_btn.UseVisualStyleBackColor = false;
+            // 
+            // Pause_btn
+            // 
+            this.Pause_btn.BackColor = System.Drawing.Color.Orange;
+            resources.ApplyResources(this.Pause_btn, "Pause_btn");
+            this.Pause_btn.Name = "Pause_btn";
+            this.Pause_btn.Tag = "Manual";
+            this.Pause_btn.UseVisualStyleBackColor = false;
+            this.Pause_btn.Click += new System.EventHandler(this.Pause_btn_Click);
+            // 
             // FormMain
             // 
             resources.ApplyResources(this, "$this");
@@ -847,7 +866,7 @@ namespace Adam
         private System.Windows.Forms.Button Air_Signal;
         private System.Windows.Forms.Button Vacuum_Signal;
         private System.Windows.Forms.Button DoorSwitch_Signal;
-        private System.Windows.Forms.Button CurrentSate_btn;
+        private System.Windows.Forms.Button CurrentState_btn;
         private System.Windows.Forms.Button DifferentialPressureAlarm1_Signal;
         private System.Windows.Forms.Button LoadPortVacuum_Signal;
         private System.Windows.Forms.Button SafetyRelay_Signal;
@@ -897,6 +916,8 @@ namespace Adam
         private System.Windows.Forms.Button Buzzer1_Signal;
         private System.Windows.Forms.Button Mode_btn;
         private System.Windows.Forms.Button Connection_btn;
+        private System.Windows.Forms.Button Initial_btn;
+        private System.Windows.Forms.Button Pause_btn;
     }
 }
 

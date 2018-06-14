@@ -29,6 +29,14 @@
         private void InitializeComponent()
         {
             this.Aligner01_tb = new System.Windows.Forms.GroupBox();
+            this.LoadPort08_State = new System.Windows.Forms.TextBox();
+            this.LoadPort07_State = new System.Windows.Forms.TextBox();
+            this.LoadPort06_State = new System.Windows.Forms.TextBox();
+            this.LoadPort05_State = new System.Windows.Forms.TextBox();
+            this.LoadPort04_State = new System.Windows.Forms.TextBox();
+            this.LoadPort03_State = new System.Windows.Forms.TextBox();
+            this.LoadPort02_State = new System.Windows.Forms.TextBox();
+            this.LoadPort01_State = new System.Windows.Forms.TextBox();
             this.textBox13 = new System.Windows.Forms.TextBox();
             this.label14 = new System.Windows.Forms.Label();
             this.LoadPort08 = new System.Windows.Forms.DataGridView();
@@ -66,10 +74,8 @@
             this.groupBox6 = new System.Windows.Forms.GroupBox();
             this.tableLayoutPanel3 = new System.Windows.Forms.TableLayoutPanel();
             this.label21 = new System.Windows.Forms.Label();
-            this.label20 = new System.Windows.Forms.Label();
             this.label19 = new System.Windows.Forms.Label();
             this.label18 = new System.Windows.Forms.Label();
-            this.label17 = new System.Windows.Forms.Label();
             this.Robot01_State = new System.Windows.Forms.TextBox();
             this.label16 = new System.Windows.Forms.Label();
             this.Aligner02_State = new System.Windows.Forms.TextBox();
@@ -90,15 +96,6 @@
             this.label12 = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
             this.LoadPort01 = new System.Windows.Forms.DataGridView();
-            this.LoadPort01_State = new System.Windows.Forms.TextBox();
-            this.LoadPort02_State = new System.Windows.Forms.TextBox();
-            this.LoadPort03_State = new System.Windows.Forms.TextBox();
-            this.LoadPort04_State = new System.Windows.Forms.TextBox();
-            this.LoadPort05_State = new System.Windows.Forms.TextBox();
-            this.LoadPort06_State = new System.Windows.Forms.TextBox();
-            this.LoadPort07_State = new System.Windows.Forms.TextBox();
-            this.LoadPort08_State = new System.Windows.Forms.TextBox();
-            this.label22 = new System.Windows.Forms.Label();
             this.Aligner01_tb.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.LoadPort08)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.LoadPort07)).BeginInit();
@@ -188,6 +185,119 @@
             this.Aligner01_tb.TabIndex = 1;
             this.Aligner01_tb.TabStop = false;
             this.Aligner01_tb.Text = "Device Information";
+            // 
+            // LoadPort08_State
+            // 
+            this.LoadPort08_State.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.LoadPort08_State.BackColor = System.Drawing.Color.Black;
+            this.LoadPort08_State.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.LoadPort08_State.Font = new System.Drawing.Font("微軟正黑體", 12F, System.Drawing.FontStyle.Bold);
+            this.LoadPort08_State.ForeColor = System.Drawing.Color.White;
+            this.LoadPort08_State.Location = new System.Drawing.Point(951, 89);
+            this.LoadPort08_State.Name = "LoadPort08_State";
+            this.LoadPort08_State.Size = new System.Drawing.Size(129, 29);
+            this.LoadPort08_State.TabIndex = 134;
+            this.LoadPort08_State.Text = "Disabled";
+            this.LoadPort08_State.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // LoadPort07_State
+            // 
+            this.LoadPort07_State.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.LoadPort07_State.BackColor = System.Drawing.Color.Black;
+            this.LoadPort07_State.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.LoadPort07_State.Font = new System.Drawing.Font("微軟正黑體", 12F, System.Drawing.FontStyle.Bold);
+            this.LoadPort07_State.ForeColor = System.Drawing.Color.White;
+            this.LoadPort07_State.Location = new System.Drawing.Point(816, 89);
+            this.LoadPort07_State.Name = "LoadPort07_State";
+            this.LoadPort07_State.Size = new System.Drawing.Size(129, 29);
+            this.LoadPort07_State.TabIndex = 133;
+            this.LoadPort07_State.Text = "Disabled";
+            this.LoadPort07_State.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // LoadPort06_State
+            // 
+            this.LoadPort06_State.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.LoadPort06_State.BackColor = System.Drawing.Color.Black;
+            this.LoadPort06_State.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.LoadPort06_State.Font = new System.Drawing.Font("微軟正黑體", 12F, System.Drawing.FontStyle.Bold);
+            this.LoadPort06_State.ForeColor = System.Drawing.Color.White;
+            this.LoadPort06_State.Location = new System.Drawing.Point(681, 89);
+            this.LoadPort06_State.Name = "LoadPort06_State";
+            this.LoadPort06_State.Size = new System.Drawing.Size(129, 29);
+            this.LoadPort06_State.TabIndex = 132;
+            this.LoadPort06_State.Text = "Disabled";
+            this.LoadPort06_State.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // LoadPort05_State
+            // 
+            this.LoadPort05_State.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.LoadPort05_State.BackColor = System.Drawing.Color.Black;
+            this.LoadPort05_State.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.LoadPort05_State.Font = new System.Drawing.Font("微軟正黑體", 12F, System.Drawing.FontStyle.Bold);
+            this.LoadPort05_State.ForeColor = System.Drawing.Color.White;
+            this.LoadPort05_State.Location = new System.Drawing.Point(546, 89);
+            this.LoadPort05_State.Name = "LoadPort05_State";
+            this.LoadPort05_State.Size = new System.Drawing.Size(129, 29);
+            this.LoadPort05_State.TabIndex = 131;
+            this.LoadPort05_State.Text = "Disabled";
+            this.LoadPort05_State.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // LoadPort04_State
+            // 
+            this.LoadPort04_State.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.LoadPort04_State.BackColor = System.Drawing.Color.Green;
+            this.LoadPort04_State.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.LoadPort04_State.Font = new System.Drawing.Font("微軟正黑體", 12F, System.Drawing.FontStyle.Bold);
+            this.LoadPort04_State.ForeColor = System.Drawing.Color.White;
+            this.LoadPort04_State.Location = new System.Drawing.Point(411, 89);
+            this.LoadPort04_State.Name = "LoadPort04_State";
+            this.LoadPort04_State.Size = new System.Drawing.Size(129, 29);
+            this.LoadPort04_State.TabIndex = 130;
+            this.LoadPort04_State.Text = "Transfer Ready";
+            this.LoadPort04_State.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // LoadPort03_State
+            // 
+            this.LoadPort03_State.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.LoadPort03_State.BackColor = System.Drawing.Color.Green;
+            this.LoadPort03_State.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.LoadPort03_State.Font = new System.Drawing.Font("微軟正黑體", 12F, System.Drawing.FontStyle.Bold);
+            this.LoadPort03_State.ForeColor = System.Drawing.Color.White;
+            this.LoadPort03_State.Location = new System.Drawing.Point(276, 89);
+            this.LoadPort03_State.Name = "LoadPort03_State";
+            this.LoadPort03_State.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.LoadPort03_State.Size = new System.Drawing.Size(129, 29);
+            this.LoadPort03_State.TabIndex = 129;
+            this.LoadPort03_State.Text = "Transfer Ready";
+            this.LoadPort03_State.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // LoadPort02_State
+            // 
+            this.LoadPort02_State.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.LoadPort02_State.BackColor = System.Drawing.Color.Green;
+            this.LoadPort02_State.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.LoadPort02_State.Font = new System.Drawing.Font("微軟正黑體", 12F, System.Drawing.FontStyle.Bold);
+            this.LoadPort02_State.ForeColor = System.Drawing.Color.White;
+            this.LoadPort02_State.Location = new System.Drawing.Point(141, 89);
+            this.LoadPort02_State.Name = "LoadPort02_State";
+            this.LoadPort02_State.Size = new System.Drawing.Size(129, 29);
+            this.LoadPort02_State.TabIndex = 128;
+            this.LoadPort02_State.Text = "Transfer Ready";
+            this.LoadPort02_State.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // LoadPort01_State
+            // 
+            this.LoadPort01_State.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.LoadPort01_State.BackColor = System.Drawing.Color.Green;
+            this.LoadPort01_State.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.LoadPort01_State.Font = new System.Drawing.Font("微軟正黑體", 12F, System.Drawing.FontStyle.Bold);
+            this.LoadPort01_State.ForeColor = System.Drawing.Color.White;
+            this.LoadPort01_State.Location = new System.Drawing.Point(6, 89);
+            this.LoadPort01_State.Name = "LoadPort01_State";
+            this.LoadPort01_State.Size = new System.Drawing.Size(129, 29);
+            this.LoadPort01_State.TabIndex = 127;
+            this.LoadPort01_State.Text = "Transfer Ready";
+            this.LoadPort01_State.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // textBox13
             // 
@@ -696,7 +806,7 @@
             this.groupBox6.Font = new System.Drawing.Font("微軟正黑體", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
             this.groupBox6.Location = new System.Drawing.Point(1086, 22);
             this.groupBox6.Name = "groupBox6";
-            this.groupBox6.Size = new System.Drawing.Size(149, 174);
+            this.groupBox6.Size = new System.Drawing.Size(149, 117);
             this.groupBox6.TabIndex = 2;
             this.groupBox6.TabStop = false;
             this.groupBox6.Text = "Port  Status";
@@ -705,23 +815,18 @@
             // 
             this.tableLayoutPanel3.ColumnCount = 1;
             this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel3.Controls.Add(this.label22, 0, 5);
-            this.tableLayoutPanel3.Controls.Add(this.label21, 0, 4);
-            this.tableLayoutPanel3.Controls.Add(this.label20, 0, 3);
-            this.tableLayoutPanel3.Controls.Add(this.label19, 0, 2);
-            this.tableLayoutPanel3.Controls.Add(this.label18, 0, 1);
-            this.tableLayoutPanel3.Controls.Add(this.label17, 0, 0);
+            this.tableLayoutPanel3.Controls.Add(this.label21, 0, 2);
+            this.tableLayoutPanel3.Controls.Add(this.label19, 0, 1);
+            this.tableLayoutPanel3.Controls.Add(this.label18, 0, 0);
             this.tableLayoutPanel3.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanel3.Location = new System.Drawing.Point(3, 23);
             this.tableLayoutPanel3.Name = "tableLayoutPanel3";
-            this.tableLayoutPanel3.RowCount = 6;
-            this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 20F));
-            this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 20F));
-            this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 20F));
-            this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 20F));
-            this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 20F));
+            this.tableLayoutPanel3.RowCount = 3;
+            this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
+            this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
+            this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
             this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
-            this.tableLayoutPanel3.Size = new System.Drawing.Size(143, 148);
+            this.tableLayoutPanel3.Size = new System.Drawing.Size(143, 91);
             this.tableLayoutPanel3.TabIndex = 0;
             // 
             // label21
@@ -732,27 +837,12 @@
             this.label21.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.label21.ForeColor = System.Drawing.Color.Transparent;
             this.label21.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.label21.Location = new System.Drawing.Point(3, 100);
+            this.label21.Location = new System.Drawing.Point(3, 60);
             this.label21.Name = "label21";
-            this.label21.Size = new System.Drawing.Size(137, 25);
+            this.label21.Size = new System.Drawing.Size(137, 31);
             this.label21.TabIndex = 93;
             this.label21.Text = "ALARM";
             this.label21.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // label20
-            // 
-            this.label20.BackColor = System.Drawing.Color.Blue;
-            this.label20.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.label20.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.label20.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.label20.ForeColor = System.Drawing.Color.Transparent;
-            this.label20.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.label20.Location = new System.Drawing.Point(3, 75);
-            this.label20.Name = "label20";
-            this.label20.Size = new System.Drawing.Size(137, 25);
-            this.label20.TabIndex = 92;
-            this.label20.Text = "Ready To Unload";
-            this.label20.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // label19
             // 
@@ -762,9 +852,9 @@
             this.label19.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.label19.ForeColor = System.Drawing.Color.Transparent;
             this.label19.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.label19.Location = new System.Drawing.Point(3, 50);
+            this.label19.Location = new System.Drawing.Point(3, 30);
             this.label19.Name = "label19";
-            this.label19.Size = new System.Drawing.Size(137, 25);
+            this.label19.Size = new System.Drawing.Size(137, 30);
             this.label19.TabIndex = 91;
             this.label19.Text = "Transfer Blocked";
             this.label19.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -777,27 +867,12 @@
             this.label18.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.label18.ForeColor = System.Drawing.Color.Transparent;
             this.label18.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.label18.Location = new System.Drawing.Point(3, 25);
+            this.label18.Location = new System.Drawing.Point(3, 0);
             this.label18.Name = "label18";
-            this.label18.Size = new System.Drawing.Size(137, 25);
+            this.label18.Size = new System.Drawing.Size(137, 30);
             this.label18.TabIndex = 90;
             this.label18.Text = "Transfer Ready";
             this.label18.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // label17
-            // 
-            this.label17.BackColor = System.Drawing.Color.DarkGray;
-            this.label17.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.label17.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.label17.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.label17.ForeColor = System.Drawing.Color.Transparent;
-            this.label17.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.label17.Location = new System.Drawing.Point(3, 0);
-            this.label17.Name = "label17";
-            this.label17.Size = new System.Drawing.Size(137, 25);
-            this.label17.TabIndex = 89;
-            this.label17.Text = "Ready To Load";
-            this.label17.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // Robot01_State
             // 
@@ -1087,133 +1162,6 @@
             this.LoadPort01.TabIndex = 52;
             this.LoadPort01.CellFormatting += new System.Windows.Forms.DataGridViewCellFormattingEventHandler(this.LoadPort_CellFormatting);
             // 
-            // LoadPort01_State
-            // 
-            this.LoadPort01_State.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.LoadPort01_State.BackColor = System.Drawing.Color.DarkGray;
-            this.LoadPort01_State.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.LoadPort01_State.Font = new System.Drawing.Font("微軟正黑體", 12F, System.Drawing.FontStyle.Bold);
-            this.LoadPort01_State.ForeColor = System.Drawing.Color.White;
-            this.LoadPort01_State.Location = new System.Drawing.Point(6, 89);
-            this.LoadPort01_State.Name = "LoadPort01_State";
-            this.LoadPort01_State.Size = new System.Drawing.Size(129, 29);
-            this.LoadPort01_State.TabIndex = 127;
-            this.LoadPort01_State.Text = "Ready To Load";
-            this.LoadPort01_State.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            // 
-            // LoadPort02_State
-            // 
-            this.LoadPort02_State.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.LoadPort02_State.BackColor = System.Drawing.Color.DarkGray;
-            this.LoadPort02_State.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.LoadPort02_State.Font = new System.Drawing.Font("微軟正黑體", 12F, System.Drawing.FontStyle.Bold);
-            this.LoadPort02_State.ForeColor = System.Drawing.Color.White;
-            this.LoadPort02_State.Location = new System.Drawing.Point(141, 89);
-            this.LoadPort02_State.Name = "LoadPort02_State";
-            this.LoadPort02_State.Size = new System.Drawing.Size(129, 29);
-            this.LoadPort02_State.TabIndex = 128;
-            this.LoadPort02_State.Text = "Ready To Load";
-            this.LoadPort02_State.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            // 
-            // LoadPort03_State
-            // 
-            this.LoadPort03_State.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.LoadPort03_State.BackColor = System.Drawing.Color.DarkGray;
-            this.LoadPort03_State.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.LoadPort03_State.Font = new System.Drawing.Font("微軟正黑體", 12F, System.Drawing.FontStyle.Bold);
-            this.LoadPort03_State.ForeColor = System.Drawing.Color.White;
-            this.LoadPort03_State.Location = new System.Drawing.Point(276, 89);
-            this.LoadPort03_State.Name = "LoadPort03_State";
-            this.LoadPort03_State.Size = new System.Drawing.Size(129, 29);
-            this.LoadPort03_State.TabIndex = 129;
-            this.LoadPort03_State.Text = "Ready To Load";
-            this.LoadPort03_State.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            // 
-            // LoadPort04_State
-            // 
-            this.LoadPort04_State.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.LoadPort04_State.BackColor = System.Drawing.Color.DarkGray;
-            this.LoadPort04_State.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.LoadPort04_State.Font = new System.Drawing.Font("微軟正黑體", 12F, System.Drawing.FontStyle.Bold);
-            this.LoadPort04_State.ForeColor = System.Drawing.Color.White;
-            this.LoadPort04_State.Location = new System.Drawing.Point(411, 89);
-            this.LoadPort04_State.Name = "LoadPort04_State";
-            this.LoadPort04_State.Size = new System.Drawing.Size(129, 29);
-            this.LoadPort04_State.TabIndex = 130;
-            this.LoadPort04_State.Text = "Ready To Load";
-            this.LoadPort04_State.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            // 
-            // LoadPort05_State
-            // 
-            this.LoadPort05_State.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.LoadPort05_State.BackColor = System.Drawing.Color.DarkGray;
-            this.LoadPort05_State.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.LoadPort05_State.Font = new System.Drawing.Font("微軟正黑體", 12F, System.Drawing.FontStyle.Bold);
-            this.LoadPort05_State.ForeColor = System.Drawing.Color.White;
-            this.LoadPort05_State.Location = new System.Drawing.Point(546, 89);
-            this.LoadPort05_State.Name = "LoadPort05_State";
-            this.LoadPort05_State.Size = new System.Drawing.Size(129, 29);
-            this.LoadPort05_State.TabIndex = 131;
-            this.LoadPort05_State.Text = "Ready To Load";
-            this.LoadPort05_State.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            // 
-            // LoadPort06_State
-            // 
-            this.LoadPort06_State.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.LoadPort06_State.BackColor = System.Drawing.Color.DarkGray;
-            this.LoadPort06_State.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.LoadPort06_State.Font = new System.Drawing.Font("微軟正黑體", 12F, System.Drawing.FontStyle.Bold);
-            this.LoadPort06_State.ForeColor = System.Drawing.Color.White;
-            this.LoadPort06_State.Location = new System.Drawing.Point(681, 89);
-            this.LoadPort06_State.Name = "LoadPort06_State";
-            this.LoadPort06_State.Size = new System.Drawing.Size(129, 29);
-            this.LoadPort06_State.TabIndex = 132;
-            this.LoadPort06_State.Text = "Ready To Load";
-            this.LoadPort06_State.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            // 
-            // LoadPort07_State
-            // 
-            this.LoadPort07_State.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.LoadPort07_State.BackColor = System.Drawing.Color.DarkGray;
-            this.LoadPort07_State.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.LoadPort07_State.Font = new System.Drawing.Font("微軟正黑體", 12F, System.Drawing.FontStyle.Bold);
-            this.LoadPort07_State.ForeColor = System.Drawing.Color.White;
-            this.LoadPort07_State.Location = new System.Drawing.Point(816, 89);
-            this.LoadPort07_State.Name = "LoadPort07_State";
-            this.LoadPort07_State.Size = new System.Drawing.Size(129, 29);
-            this.LoadPort07_State.TabIndex = 133;
-            this.LoadPort07_State.Text = "Ready To Load";
-            this.LoadPort07_State.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            // 
-            // LoadPort08_State
-            // 
-            this.LoadPort08_State.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.LoadPort08_State.BackColor = System.Drawing.Color.DarkGray;
-            this.LoadPort08_State.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.LoadPort08_State.Font = new System.Drawing.Font("微軟正黑體", 12F, System.Drawing.FontStyle.Bold);
-            this.LoadPort08_State.ForeColor = System.Drawing.Color.White;
-            this.LoadPort08_State.Location = new System.Drawing.Point(951, 89);
-            this.LoadPort08_State.Name = "LoadPort08_State";
-            this.LoadPort08_State.Size = new System.Drawing.Size(129, 29);
-            this.LoadPort08_State.TabIndex = 134;
-            this.LoadPort08_State.Text = "Ready To Load";
-            this.LoadPort08_State.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            // 
-            // label22
-            // 
-            this.label22.BackColor = System.Drawing.Color.Black;
-            this.label22.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.label22.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.label22.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.label22.ForeColor = System.Drawing.Color.Transparent;
-            this.label22.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.label22.Location = new System.Drawing.Point(3, 125);
-            this.label22.Name = "label22";
-            this.label22.Size = new System.Drawing.Size(137, 23);
-            this.label22.TabIndex = 94;
-            this.label22.Text = "Empty";
-            this.label22.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
             // FormMonitoring
             // 
             this.ClientSize = new System.Drawing.Size(1620, 760);
@@ -1259,10 +1207,8 @@
         private System.Windows.Forms.GroupBox groupBox6;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel3;
         private System.Windows.Forms.Label label21;
-        private System.Windows.Forms.Label label20;
         private System.Windows.Forms.Label label19;
         private System.Windows.Forms.Label label18;
-        private System.Windows.Forms.Label label17;
         private System.Windows.Forms.TextBox Robot01_State;
         private System.Windows.Forms.Label label16;
         private System.Windows.Forms.TextBox Aligner02_State;
@@ -1315,6 +1261,5 @@
         private System.Windows.Forms.TextBox LoadPort03_State;
         private System.Windows.Forms.TextBox LoadPort02_State;
         private System.Windows.Forms.TextBox LoadPort01_State;
-        private System.Windows.Forms.Label label22;
     }
 }

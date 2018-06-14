@@ -16,7 +16,6 @@ using Adam.UI_Update.Authority;
 using DIOControl;
 using Adam.UI_Update.Layout;
 using Adam.UI_Update.Alarm;
-using GUI;
 
 namespace Adam
 {
@@ -97,7 +96,7 @@ namespace Adam
             {
                 throw new Exception(ex.ToString());
             }
-            Thread.Sleep(2000);
+            //Thread.Sleep(2000);
 
             if (SplashScreen.Instance != null)
             {
@@ -107,6 +106,7 @@ namespace Adam
 
             DIO.Connect();
             AuthorityUpdate.UpdateFuncGroupEnable("INIT");//init 權限
+            RouteCtrl.ConnectAll();
         }
 
         private void LoadPort01_DataBindingComplete(object sender, DataGridViewBindingCompleteEventArgs e)
@@ -149,14 +149,22 @@ namespace Adam
             string strMsg = "This equipment performs the initialization and origin search OK?\r\n" + "This equipment will be initalized, each axis will return to home position.\r\n" + "Check the condition of the wafer.";
             if (MessageBox.Show(strMsg, "Initialize", MessageBoxButtons.OKCancel, MessageBoxIcon.Exclamation, MessageBoxDefaultButton.Button1, MessageBoxOptions.ServiceNotification) == DialogResult.OK)
             {
-                NodeManagement.Get("Robot01").ExcuteScript("RobotInit", "Initialize");
-                NodeManagement.Get("Robot02").ExcuteScript("RobotInit", "Initialize");
-                NodeManagement.Get("Aligner01").ExcuteScript("AlignerInit", "Initialize");
-                NodeManagement.Get("Aligner02").ExcuteScript("AlignerInit", "Initialize");
-                NodeManagement.Get("LoadPort01").ExcuteScript("LoadPortInit", "Initialize");
-                NodeManagement.Get("LoadPort02").ExcuteScript("LoadPortInit", "Initialize");
-                NodeManagement.Get("LoadPort03").ExcuteScript("LoadPortInit", "Initialize");
-                NodeManagement.Get("LoadPort04").ExcuteScript("LoadPortInit", "Initialize");
+
+                foreach(Node each in NodeManagement.GetList())
+                {
+                    switch (each.Type)
+                    {
+                        case "Robot":
+                            each.ExcuteScript("RobotInit", "Initialize");
+                            break;
+                        case "Aligner":
+                            each.ExcuteScript("AlignerInit", "Initialize");
+                            break;
+                        case "LoadPort":
+                            each.ExcuteScript("LoadPortInit", "Initialize");
+                            break;
+                    }
+                }
             }
         }
 
@@ -566,10 +574,7 @@ namespace Adam
         {
 
             ConnectionStatusUpdate.UpdateControllerStatus(Device_ID, Status);
-            if (ControllerManagement.CheckAllConnection())
-            {
-                ConnectionStatusUpdate.UpdateOnlineStatus("Online");
-            }
+            
             logger.Debug("On_Controller_State_Changed");
         }
 
@@ -593,6 +598,23 @@ namespace Adam
             logger.Debug("On_Script_Finished: " + Node.Name + " Script:" + ScriptName + " Finished, Form name:" + FormName);
             switch (FormName)
             {
+                case "Initialize":
+                    Node.InitialComplete = true;
+                    switch (Node.Type)
+                    {
+                        case "Robot":
+                        case "Aligner":
+                            Node.State = "Idle";
+                            break;
+                        case "LoadPort":
+                            Node.State = "Transfer Ready";
+                            break;
+                    }
+                    if (!NodeManagement.IsNeedInitial())
+                    {
+                        ConnectionStatusUpdate.UpdateInitial(true.ToString());
+                    }
+                    break;
                 case "FormManual-Script":
 
                     switch (Node.Type)
@@ -752,17 +774,17 @@ namespace Adam
         private void Connection_btn_Click(object sender, EventArgs e)
         {
             
-            if (Connection_btn.Tag.ToString() == "Offline")
-            {
-                RouteCtrl.ConnectAll();
+            //if (Connection_btn.Tag.ToString() == "Offline")
+            //{
+            //    RouteCtrl.ConnectAll();
 
-                ConnectionStatusUpdate.UpdateOnlineStatus("Connecting");
-            }
-            else
-            {
-                RouteCtrl.DisconnectAll();
-                ConnectionStatusUpdate.UpdateOnlineStatus("Offline");
-            }
+            //    ConnectionStatusUpdate.UpdateOnlineStatus("Connecting");
+            //}
+            //else
+            //{
+            //    RouteCtrl.DisconnectAll();
+            //    ConnectionStatusUpdate.UpdateOnlineStatus("Offline");
+            //}
 
         }
 
@@ -772,33 +794,42 @@ namespace Adam
             if (Mode_btn.Tag.ToString() == "Manual")
             {
                
-                if (Connection_btn.Tag.ToString() == "Offline")
-                {
-                    MessageBox.Show("尚未連線");
-                    return;
-                }
+                //if (Connection_btn.Tag.ToString() == "Offline")
+                //{
+                //    MessageBox.Show("尚未連線");
+                //    return;
+                //}
 
-                btnMaintence.Text = "Start Mode";
-                btnMaintence.BackColor = Color.Red;
-                btnMaintence.Enabled = false;
-                btnTeach.Enabled = false;
-                EnablePage(tbcMian.TabPages[5], false);
+                
 
-                Node Aligner1 = NodeManagement.Get("Aligner01");
-                if (Aligner1 != null)
-                {
-                    Aligner1.LockByNode = "LoadPort01";
-                }
+               
                 if (AlarmManagement.HasCritical())
                 {
                     MessageBox.Show("關鍵Alarm尚未解除");
-                }
+                } 
                 else
                 {
-                    NodeStatusUpdate.UpdateCurrentState();
-                    ThreadPool.QueueUserWorkItem(new WaitCallback(RouteCtrl.Start), "Normal");
-                    Mode_btn.Tag = "Start";
-                    Mode_btn.BackColor = Color.Lime;
+                    if (NodeManagement.IsNeedInitial())
+                    {
+                        ConnectionStatusUpdate.UpdateInitial(false.ToString());
+                        MessageBox.Show("請先執行Initial");
+                    }
+                    else
+                    {
+
+                        ConnectionStatusUpdate.UpdateInitial(false.ToString());
+                        NodeStatusUpdate.UpdateCurrentState();
+                        ThreadPool.QueueUserWorkItem(new WaitCallback(RouteCtrl.Start), "Normal");
+                        Mode_btn.Tag = "Start";
+                        Mode_btn.Text = "Start";
+                        Mode_btn.BackColor = Color.Lime;
+                        btnMaintence.Text = "Start Mode";
+                        btnMaintence.BackColor = Color.Red;
+                        btnMaintence.Enabled = false;
+                        btnTeach.Enabled = false;
+                        EnablePage(tbcMian.TabPages[5], false);
+
+                    }
                 }
             }
             else
@@ -810,19 +841,34 @@ namespace Adam
                 EnablePage(hiddenPages[0], true);
                 RouteCtrl.Stop();
                 Mode_btn.Tag = "Manual";
+                Mode_btn.Text = "Manual";
                 Mode_btn.BackColor = Color.Orange;
+                ConnectionStatusUpdate.UpdateInitial(false.ToString());
             }
         }
 
         public void On_InterLock_Report(Node Node, bool InterLock)
         {
-            throw new NotImplementedException();
+            //throw new NotImplementedException();
         }
 
-        private void btnHelp_Click(object sender, EventArgs e)
+        private void Pause_btn_Click(object sender, EventArgs e)
         {
-            FormQuery query = new FormQuery();
-            query.Show();
+            if (RouteCtrl.GetMode().Equals("Start"))
+            {
+                
+                RouteCtrl.Pause();
+                NodeStatusUpdate.UpdateCurrentState();
+                Pause_btn.Text = "Continue";
+            }
+            else if(RouteCtrl.GetMode().Equals("Pause"))
+            {
+                RouteCtrl.Continue();
+                NodeStatusUpdate.UpdateCurrentState();
+                Pause_btn.Text = "Pause";
+            }
         }
+
+        
     }
 }

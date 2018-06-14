@@ -100,7 +100,7 @@ namespace Adam.UI_Update.WaferMapping
 
                     Node port = NodeManagement.Get(PortName);
                     //List<Job> MappingData = new List<Job>();
-
+                    port.IsMapping = true;
                     if (Mapping.Equals(""))
                     {
                         foreach(Job eachJob in port.JobList.Values)

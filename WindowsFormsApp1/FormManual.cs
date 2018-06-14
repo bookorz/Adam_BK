@@ -471,7 +471,7 @@ namespace GUI
                     isRobotMoveUp = false;//Put option 1
                     break;
                 case "btnRHome":
-                    if(robot.Brand.ToUpper().ToUpper().Equals("SANWA"))
+                    if(robot.Brand.ToUpper().Equals("SANWA"))
                         txns[0].Method = Transaction.Command.RobotType.RobotHomeSafety;//20180607 RobotHome => RobotHomeSafety
                     else 
                         txns[0].Method = Transaction.Command.RobotType.RobotHomeA;//Kawasaki home A

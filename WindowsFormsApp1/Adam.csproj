@@ -387,9 +387,6 @@
     <None Include="config\CommandScript\AlignerInit.json">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
-    <None Include="config\CommandScript\AlignerStateGet%28Kawasaki%29.json">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </None>
     <None Include="config\CommandScript\AlignerStateGet.json">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
@@ -418,9 +415,6 @@
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
     <None Include="config\CommandScript\RobotManualPutPut.json">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </None>
-    <None Include="config\CommandScript\RobotStateGet%28Kawasaki%29.json">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
     <None Include="config\CommandScript\RobotStateGet.json">
