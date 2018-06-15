@@ -1787,7 +1787,7 @@
     <value>9</value>
   </data>
   <data name="btnHelp.Text" xml:space="preserve">
-    <value>Help</value>
+    <value>Query</value>
   </data>
   <data name="&gt;&gt;btnHelp.Name" xml:space="preserve">
     <value>btnHelp</value>

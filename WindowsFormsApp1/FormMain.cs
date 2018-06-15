@@ -877,10 +877,5 @@ namespace Adam
             form.Show();
         }
 
-        private void btnHelp_Click_1(object sender, EventArgs e)
-        {
-            FormQuery form = new FormQuery();
-            form.Show();
-        }
     }
 }
