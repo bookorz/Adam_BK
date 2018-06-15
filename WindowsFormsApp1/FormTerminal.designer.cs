@@ -35,11 +35,22 @@
             this.gbCommandList = new System.Windows.Forms.GroupBox();
             this.spcCommandList = new System.Windows.Forms.SplitContainer();
             this.tableLayoutPanel3 = new System.Windows.Forms.TableLayoutPanel();
-            this.btnDelete = new System.Windows.Forms.Button();
             this.btnDown = new System.Windows.Forms.Button();
             this.btnUP = new System.Windows.Forms.Button();
             this.sbtnRun = new System.Controls.SplitButton();
-            this.lsbCommandList = new System.Windows.Forms.ListBox();
+            this.cmsRunMode = new System.Windows.Forms.ContextMenuStrip(this.components);
+            this.tsmtRunList = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
+            this.tstbfrequency = new System.Windows.Forms.ToolStripTextBox();
+            this.tsmtExcute = new System.Windows.Forms.ToolStripMenuItem();
+            this.btnContinue = new System.Windows.Forms.Button();
+            this.btnDelete = new System.Windows.Forms.Button();
+            this.btnStop = new System.Windows.Forms.Button();
+            this.btnPause = new System.Windows.Forms.Button();
+            this.dgvCommandList = new System.Windows.Forms.DataGridView();
+            this.No = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.DeviceName = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Command = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.gbHistory = new System.Windows.Forms.GroupBox();
             this.lsbHistory = new System.Windows.Forms.ListBox();
             this.gbSetting = new System.Windows.Forms.GroupBox();
@@ -65,14 +76,8 @@
             this.lsbDeviceName = new System.Windows.Forms.ListBox();
             this.label1 = new System.Windows.Forms.Label();
             this.splitContainer1 = new System.Windows.Forms.SplitContainer();
-            this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
-            this.toolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
-            this.toolStripTextBox1 = new System.Windows.Forms.ToolStripTextBox();
-            this.toolStripMenuItem2 = new System.Windows.Forms.ToolStripMenuItem();
-            this.toolStripMenuItem3 = new System.Windows.Forms.ToolStripMenuItem();
-            this.btnPause = new System.Windows.Forms.Button();
-            this.btnStop = new System.Windows.Forms.Button();
-            this.btnContinue = new System.Windows.Forms.Button();
+            this.lbQueue = new System.Windows.Forms.Label();
+            this.tsmtRunStep = new System.Windows.Forms.ToolStripMenuItem();
             this.tlpTerminal.SuspendLayout();
             this.tlpCommandSetting.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.spcCommandHistory)).BeginInit();
@@ -85,6 +90,8 @@
             this.spcCommandList.Panel2.SuspendLayout();
             this.spcCommandList.SuspendLayout();
             this.tableLayoutPanel3.SuspendLayout();
+            this.cmsRunMode.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvCommandList)).BeginInit();
             this.gbHistory.SuspendLayout();
             this.gbSetting.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.spcSettingandTest)).BeginInit();
@@ -98,7 +105,6 @@
             this.tlpOperationSplit.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
             this.splitContainer1.SuspendLayout();
-            this.contextMenuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
             // tlpTerminal
@@ -176,7 +182,7 @@
             // 
             // spcCommandList.Panel2
             // 
-            this.spcCommandList.Panel2.Controls.Add(this.lsbCommandList);
+            this.spcCommandList.Panel2.Controls.Add(this.dgvCommandList);
             this.spcCommandList.Size = new System.Drawing.Size(737, 559);
             this.spcCommandList.SplitterDistance = 49;
             this.spcCommandList.TabIndex = 0;
@@ -206,6 +212,104 @@
             this.tableLayoutPanel3.Size = new System.Drawing.Size(737, 49);
             this.tableLayoutPanel3.TabIndex = 0;
             // 
+            // btnDown
+            // 
+            this.btnDown.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.btnDown.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnDown.Location = new System.Drawing.Point(108, 3);
+            this.btnDown.Name = "btnDown";
+            this.btnDown.Size = new System.Drawing.Size(99, 43);
+            this.btnDown.TabIndex = 3;
+            this.btnDown.Tag = "Down";
+            this.btnDown.Text = "Down";
+            this.btnDown.UseVisualStyleBackColor = true;
+            this.btnDown.Click += new System.EventHandler(this.btnUP_Click);
+            // 
+            // btnUP
+            // 
+            this.btnUP.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.btnUP.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnUP.Location = new System.Drawing.Point(3, 3);
+            this.btnUP.Name = "btnUP";
+            this.btnUP.Size = new System.Drawing.Size(99, 43);
+            this.btnUP.TabIndex = 2;
+            this.btnUP.Tag = "UP";
+            this.btnUP.Text = "UP";
+            this.btnUP.UseVisualStyleBackColor = true;
+            this.btnUP.Click += new System.EventHandler(this.btnUP_Click);
+            // 
+            // sbtnRun
+            // 
+            this.sbtnRun.AutoSize = true;
+            this.sbtnRun.ContextMenuStrip = this.cmsRunMode;
+            this.sbtnRun.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.sbtnRun.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.sbtnRun.Location = new System.Drawing.Point(318, 3);
+            this.sbtnRun.MenuStripShowShowMode = true;
+            this.sbtnRun.Name = "sbtnRun";
+            this.sbtnRun.Size = new System.Drawing.Size(99, 43);
+            this.sbtnRun.SplitMenuStrip = this.cmsRunMode;
+            this.sbtnRun.SplitMenuStripShowUp = true;
+            this.sbtnRun.TabIndex = 5;
+            this.sbtnRun.Text = "Run";
+            this.sbtnRun.UseVisualStyleBackColor = true;
+            // 
+            // cmsRunMode
+            // 
+            this.cmsRunMode.Font = new System.Drawing.Font("微軟正黑體", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
+            this.cmsRunMode.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.tsmtRunStep,
+            this.tsmtRunList,
+            this.toolStripMenuItem1});
+            this.cmsRunMode.Name = "contextMenuStrip1";
+            this.cmsRunMode.ShowCheckMargin = true;
+            this.cmsRunMode.Size = new System.Drawing.Size(257, 76);
+            // 
+            // tsmtRunList
+            // 
+            this.tsmtRunList.Name = "tsmtRunList";
+            this.tsmtRunList.Size = new System.Drawing.Size(256, 24);
+            this.tsmtRunList.Text = "Run list";
+            this.tsmtRunList.Click += new System.EventHandler(this.tsmtRunList_Click);
+            // 
+            // toolStripMenuItem1
+            // 
+            this.toolStripMenuItem1.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.tstbfrequency,
+            this.tsmtExcute});
+            this.toolStripMenuItem1.Name = "toolStripMenuItem1";
+            this.toolStripMenuItem1.Size = new System.Drawing.Size(256, 24);
+            this.toolStripMenuItem1.Text = "Run list by frequency";
+            // 
+            // tstbfrequency
+            // 
+            this.tstbfrequency.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.tstbfrequency.ForeColor = System.Drawing.Color.Black;
+            this.tstbfrequency.MaxLength = 10000;
+            this.tstbfrequency.Name = "tstbfrequency";
+            this.tstbfrequency.Size = new System.Drawing.Size(100, 23);
+            this.tstbfrequency.Text = "1";
+            this.tstbfrequency.TextBoxTextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            // 
+            // tsmtExcute
+            // 
+            this.tsmtExcute.Name = "tsmtExcute";
+            this.tsmtExcute.Size = new System.Drawing.Size(180, 24);
+            this.tsmtExcute.Text = "Excute";
+            this.tsmtExcute.Click += new System.EventHandler(this.tsmtExcute_Click);
+            // 
+            // btnContinue
+            // 
+            this.btnContinue.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.btnContinue.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnContinue.Location = new System.Drawing.Point(633, 3);
+            this.btnContinue.Name = "btnContinue";
+            this.btnContinue.Size = new System.Drawing.Size(101, 43);
+            this.btnContinue.TabIndex = 8;
+            this.btnContinue.Text = "Continue";
+            this.btnContinue.UseVisualStyleBackColor = true;
+            this.btnContinue.Visible = false;
+            // 
             // btnDelete
             // 
             this.btnDelete.Dock = System.Windows.Forms.DockStyle.Fill;
@@ -216,54 +320,74 @@
             this.btnDelete.TabIndex = 4;
             this.btnDelete.Text = "Delete";
             this.btnDelete.UseVisualStyleBackColor = true;
+            this.btnDelete.Click += new System.EventHandler(this.btnDelete_Click);
             // 
-            // btnDown
+            // btnStop
             // 
-            this.btnDown.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.btnDown.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnDown.Location = new System.Drawing.Point(108, 3);
-            this.btnDown.Name = "btnDown";
-            this.btnDown.Size = new System.Drawing.Size(99, 43);
-            this.btnDown.TabIndex = 3;
-            this.btnDown.Text = "Down";
-            this.btnDown.UseVisualStyleBackColor = true;
+            this.btnStop.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.btnStop.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnStop.Location = new System.Drawing.Point(528, 3);
+            this.btnStop.Name = "btnStop";
+            this.btnStop.Size = new System.Drawing.Size(99, 43);
+            this.btnStop.TabIndex = 7;
+            this.btnStop.Text = "Stop";
+            this.btnStop.UseVisualStyleBackColor = true;
+            this.btnStop.Visible = false;
             // 
-            // btnUP
+            // btnPause
             // 
-            this.btnUP.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.btnUP.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnUP.Location = new System.Drawing.Point(3, 3);
-            this.btnUP.Name = "btnUP";
-            this.btnUP.Size = new System.Drawing.Size(99, 43);
-            this.btnUP.TabIndex = 2;
-            this.btnUP.Text = "UP";
-            this.btnUP.UseVisualStyleBackColor = true;
+            this.btnPause.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.btnPause.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnPause.Location = new System.Drawing.Point(423, 3);
+            this.btnPause.Name = "btnPause";
+            this.btnPause.Size = new System.Drawing.Size(99, 43);
+            this.btnPause.TabIndex = 6;
+            this.btnPause.Text = "Pause";
+            this.btnPause.UseVisualStyleBackColor = true;
             // 
-            // sbtnRun
+            // dgvCommandList
             // 
-            this.sbtnRun.AutoSize = true;
-            this.sbtnRun.ContextMenuStrip = this.contextMenuStrip1;
-            this.sbtnRun.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.sbtnRun.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.sbtnRun.Location = new System.Drawing.Point(318, 3);
-            this.sbtnRun.MenuStripShowShowMode = true;
-            this.sbtnRun.Name = "sbtnRun";
-            this.sbtnRun.Size = new System.Drawing.Size(99, 43);
-            this.sbtnRun.SplitMenuStrip = this.contextMenuStrip1;
-            this.sbtnRun.SplitMenuStripShowUp = true;
-            this.sbtnRun.TabIndex = 5;
-            this.sbtnRun.Text = "Run";
-            this.sbtnRun.UseVisualStyleBackColor = true;
+            this.dgvCommandList.AllowUserToAddRows = false;
+            this.dgvCommandList.AllowUserToDeleteRows = false;
+            this.dgvCommandList.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCells;
+            this.dgvCommandList.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
+            this.dgvCommandList.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvCommandList.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.No,
+            this.DeviceName,
+            this.Command});
+            this.dgvCommandList.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.dgvCommandList.Location = new System.Drawing.Point(0, 0);
+            this.dgvCommandList.Name = "dgvCommandList";
+            this.dgvCommandList.ReadOnly = true;
+            this.dgvCommandList.RowTemplate.Height = 24;
+            this.dgvCommandList.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.dgvCommandList.Size = new System.Drawing.Size(737, 506);
+            this.dgvCommandList.TabIndex = 0;
             // 
-            // lsbCommandList
+            // No
             // 
-            this.lsbCommandList.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.lsbCommandList.FormattingEnabled = true;
-            this.lsbCommandList.ItemHeight = 20;
-            this.lsbCommandList.Location = new System.Drawing.Point(0, 0);
-            this.lsbCommandList.Name = "lsbCommandList";
-            this.lsbCommandList.Size = new System.Drawing.Size(737, 506);
-            this.lsbCommandList.TabIndex = 1;
+            this.No.DataPropertyName = "No";
+            this.No.HeaderText = "No.";
+            this.No.Name = "No";
+            this.No.ReadOnly = true;
+            this.No.Width = 61;
+            // 
+            // DeviceName
+            // 
+            this.DeviceName.DataPropertyName = "Device_Name";
+            this.DeviceName.HeaderText = "Device Name";
+            this.DeviceName.Name = "DeviceName";
+            this.DeviceName.ReadOnly = true;
+            this.DeviceName.Width = 134;
+            // 
+            // Command
+            // 
+            this.Command.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.Command.DataPropertyName = "Command";
+            this.Command.HeaderText = "Command";
+            this.Command.Name = "Command";
+            this.Command.ReadOnly = true;
             // 
             // gbHistory
             // 
@@ -331,15 +455,17 @@
             // 
             // tlpAssemblyUI
             // 
-            this.tlpAssemblyUI.ColumnCount = 8;
-            this.tlpAssemblyUI.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 12.5F));
-            this.tlpAssemblyUI.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 12.5F));
-            this.tlpAssemblyUI.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 12.5F));
-            this.tlpAssemblyUI.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 12.5F));
-            this.tlpAssemblyUI.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 12.5F));
-            this.tlpAssemblyUI.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 12.5F));
-            this.tlpAssemblyUI.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 12.5F));
-            this.tlpAssemblyUI.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 12.5F));
+            this.tlpAssemblyUI.ColumnCount = 10;
+            this.tlpAssemblyUI.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 10F));
+            this.tlpAssemblyUI.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 10F));
+            this.tlpAssemblyUI.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 10F));
+            this.tlpAssemblyUI.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 10F));
+            this.tlpAssemblyUI.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 10F));
+            this.tlpAssemblyUI.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 10F));
+            this.tlpAssemblyUI.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 10F));
+            this.tlpAssemblyUI.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 10F));
+            this.tlpAssemblyUI.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 10F));
+            this.tlpAssemblyUI.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 10F));
             this.tlpAssemblyUI.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tlpAssemblyUI.Location = new System.Drawing.Point(3, 3);
             this.tlpAssemblyUI.Name = "tlpAssemblyUI";
@@ -353,6 +479,7 @@
             // 
             // txbManually
             // 
+            this.txbManually.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.txbManually.Dock = System.Windows.Forms.DockStyle.Fill;
             this.txbManually.Location = new System.Drawing.Point(3, 134);
             this.txbManually.Name = "txbManually";
@@ -386,6 +513,7 @@
             this.btnAppendlist.TabIndex = 2;
             this.btnAppendlist.Text = "Append List";
             this.btnAppendlist.UseVisualStyleBackColor = true;
+            this.btnAppendlist.Click += new System.EventHandler(this.btnAppendlist_Click);
             // 
             // btnSend
             // 
@@ -397,6 +525,7 @@
             this.btnSend.TabIndex = 1;
             this.btnSend.Text = "Send";
             this.btnSend.UseVisualStyleBackColor = true;
+            this.btnSend.Click += new System.EventHandler(this.btnSend_Click);
             // 
             // tlpButtonList
             // 
@@ -413,6 +542,7 @@
             this.tlpButtonList.Controls.Add(this.btnExport, 0, 0);
             this.tlpButtonList.Controls.Add(this.btnImport, 0, 0);
             this.tlpButtonList.Controls.Add(this.btnClearHistory, 7, 0);
+            this.tlpButtonList.Controls.Add(this.lbQueue, 5, 0);
             this.tlpButtonList.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tlpButtonList.Location = new System.Drawing.Point(3, 796);
             this.tlpButtonList.Name = "tlpButtonList";
@@ -431,6 +561,7 @@
             this.btnRemove.TabIndex = 5;
             this.btnRemove.Text = "Remove List";
             this.btnRemove.UseVisualStyleBackColor = true;
+            this.btnRemove.Click += new System.EventHandler(this.btnRemove_Click);
             // 
             // btnExport
             // 
@@ -442,6 +573,7 @@
             this.btnExport.TabIndex = 4;
             this.btnExport.Text = "Export List";
             this.btnExport.UseVisualStyleBackColor = true;
+            this.btnExport.Click += new System.EventHandler(this.btnExport_Click);
             // 
             // btnImport
             // 
@@ -464,6 +596,7 @@
             this.btnClearHistory.TabIndex = 2;
             this.btnClearHistory.Text = "Clear History";
             this.btnClearHistory.UseVisualStyleBackColor = true;
+            this.btnClearHistory.Click += new System.EventHandler(this.btnClearHistory_Click);
             // 
             // gbCondition
             // 
@@ -505,10 +638,13 @@
             // 
             // lsbCommand
             // 
+            this.lsbCommand.BackColor = System.Drawing.Color.White;
             this.lsbCommand.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.lsbCommand.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.lsbCommand.Font = new System.Drawing.Font("微軟正黑體", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
+            this.lsbCommand.ForeColor = System.Drawing.Color.Black;
             this.lsbCommand.FormattingEnabled = true;
-            this.lsbCommand.ItemHeight = 20;
+            this.lsbCommand.ItemHeight = 27;
             this.lsbCommand.Location = new System.Drawing.Point(3, 383);
             this.lsbCommand.Name = "lsbCommand";
             this.lsbCommand.Size = new System.Drawing.Size(239, 285);
@@ -529,9 +665,11 @@
             // 
             // txbNotice
             // 
-            this.txbNotice.BackColor = System.Drawing.Color.White;
+            this.txbNotice.BackColor = System.Drawing.Color.Black;
             this.txbNotice.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txbNotice.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.txbNotice.Font = new System.Drawing.Font("微軟正黑體", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
+            this.txbNotice.ForeColor = System.Drawing.Color.White;
             this.txbNotice.Location = new System.Drawing.Point(3, 674);
             this.txbNotice.Multiline = true;
             this.txbNotice.Name = "txbNotice";
@@ -554,10 +692,13 @@
             // 
             // lsbCommandType
             // 
+            this.lsbCommandType.BackColor = System.Drawing.Color.White;
             this.lsbCommandType.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.lsbCommandType.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.lsbCommandType.Font = new System.Drawing.Font("微軟正黑體", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
+            this.lsbCommandType.ForeColor = System.Drawing.Color.Black;
             this.lsbCommandType.FormattingEnabled = true;
-            this.lsbCommandType.ItemHeight = 20;
+            this.lsbCommandType.ItemHeight = 27;
             this.lsbCommandType.Location = new System.Drawing.Point(3, 208);
             this.lsbCommandType.Name = "lsbCommandType";
             this.lsbCommandType.Size = new System.Drawing.Size(239, 139);
@@ -566,10 +707,13 @@
             // 
             // lsbDeviceName
             // 
+            this.lsbDeviceName.BackColor = System.Drawing.Color.White;
             this.lsbDeviceName.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.lsbDeviceName.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.lsbDeviceName.Font = new System.Drawing.Font("微軟正黑體", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
+            this.lsbDeviceName.ForeColor = System.Drawing.Color.Black;
             this.lsbDeviceName.FormattingEnabled = true;
-            this.lsbDeviceName.ItemHeight = 20;
+            this.lsbDeviceName.ItemHeight = 27;
             this.lsbDeviceName.Location = new System.Drawing.Point(3, 33);
             this.lsbDeviceName.Name = "lsbDeviceName";
             this.lsbDeviceName.Size = new System.Drawing.Size(239, 139);
@@ -598,73 +742,23 @@
             this.splitContainer1.SplitterDistance = 465;
             this.splitContainer1.TabIndex = 0;
             // 
-            // contextMenuStrip1
+            // lbQueue
             // 
-            this.contextMenuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.toolStripMenuItem3,
-            this.toolStripMenuItem1});
-            this.contextMenuStrip1.Name = "contextMenuStrip1";
-            this.contextMenuStrip1.ShowCheckMargin = true;
-            this.contextMenuStrip1.Size = new System.Drawing.Size(211, 48);
+            this.lbQueue.AutoSize = true;
+            this.lbQueue.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.lbQueue.Location = new System.Drawing.Point(753, 0);
+            this.lbQueue.Name = "lbQueue";
+            this.lbQueue.Size = new System.Drawing.Size(144, 56);
+            this.lbQueue.TabIndex = 6;
+            this.lbQueue.Text = "Queue:";
+            this.lbQueue.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
-            // toolStripMenuItem1
+            // tsmtRunStep
             // 
-            this.toolStripMenuItem1.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.toolStripTextBox1,
-            this.toolStripMenuItem2});
-            this.toolStripMenuItem1.Name = "toolStripMenuItem1";
-            this.toolStripMenuItem1.Size = new System.Drawing.Size(210, 22);
-            this.toolStripMenuItem1.Text = "toolStripMenuItem1";
-            // 
-            // toolStripTextBox1
-            // 
-            this.toolStripTextBox1.Name = "toolStripTextBox1";
-            this.toolStripTextBox1.Size = new System.Drawing.Size(100, 23);
-            // 
-            // toolStripMenuItem2
-            // 
-            this.toolStripMenuItem2.Name = "toolStripMenuItem2";
-            this.toolStripMenuItem2.Size = new System.Drawing.Size(188, 22);
-            this.toolStripMenuItem2.Text = "toolStripMenuItem2";
-            // 
-            // toolStripMenuItem3
-            // 
-            this.toolStripMenuItem3.Name = "toolStripMenuItem3";
-            this.toolStripMenuItem3.Size = new System.Drawing.Size(210, 22);
-            this.toolStripMenuItem3.Text = "toolStripMenuItem3";
-            // 
-            // btnPause
-            // 
-            this.btnPause.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.btnPause.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnPause.Location = new System.Drawing.Point(423, 3);
-            this.btnPause.Name = "btnPause";
-            this.btnPause.Size = new System.Drawing.Size(99, 43);
-            this.btnPause.TabIndex = 6;
-            this.btnPause.Text = "Pause";
-            this.btnPause.UseVisualStyleBackColor = true;
-            // 
-            // btnStop
-            // 
-            this.btnStop.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.btnStop.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnStop.Location = new System.Drawing.Point(528, 3);
-            this.btnStop.Name = "btnStop";
-            this.btnStop.Size = new System.Drawing.Size(99, 43);
-            this.btnStop.TabIndex = 7;
-            this.btnStop.Text = "Stop";
-            this.btnStop.UseVisualStyleBackColor = true;
-            // 
-            // btnContinue
-            // 
-            this.btnContinue.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.btnContinue.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnContinue.Location = new System.Drawing.Point(633, 3);
-            this.btnContinue.Name = "btnContinue";
-            this.btnContinue.Size = new System.Drawing.Size(101, 43);
-            this.btnContinue.TabIndex = 8;
-            this.btnContinue.Text = "Continue";
-            this.btnContinue.UseVisualStyleBackColor = true;
+            this.tsmtRunStep.Name = "tsmtRunStep";
+            this.tsmtRunStep.Size = new System.Drawing.Size(256, 24);
+            this.tsmtRunStep.Text = "Run Step";
+            this.tsmtRunStep.Click += new System.EventHandler(this.tsmtRunStep_Click);
             // 
             // FormTerminal
             // 
@@ -692,6 +786,8 @@
             this.spcCommandList.ResumeLayout(false);
             this.tableLayoutPanel3.ResumeLayout(false);
             this.tableLayoutPanel3.PerformLayout();
+            this.cmsRunMode.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.dgvCommandList)).EndInit();
             this.gbHistory.ResumeLayout(false);
             this.gbSetting.ResumeLayout(false);
             this.spcSettingandTest.Panel1.ResumeLayout(false);
@@ -702,12 +798,12 @@
             this.tlpAssemblySetting.PerformLayout();
             this.tableLayoutPanel1.ResumeLayout(false);
             this.tlpButtonList.ResumeLayout(false);
+            this.tlpButtonList.PerformLayout();
             this.gbCondition.ResumeLayout(false);
             this.tlpOperationSplit.ResumeLayout(false);
             this.tlpOperationSplit.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).EndInit();
             this.splitContainer1.ResumeLayout(false);
-            this.contextMenuStrip1.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -738,7 +834,6 @@
         private System.Windows.Forms.Button btnClearHistory;
         private System.Windows.Forms.TableLayoutPanel tlpAssemblyUI;
         private System.Windows.Forms.SplitContainer spcCommandList;
-        private System.Windows.Forms.ListBox lsbCommandList;
         private System.Windows.Forms.ListBox lsbHistory;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel3;
         private System.Windows.Forms.Button btnDown;
@@ -750,13 +845,19 @@
         private System.Windows.Forms.TableLayoutPanel tlpAssemblySetting;
         private System.Windows.Forms.TextBox txbManually;
         private System.Controls.SplitButton sbtnRun;
-        private System.Windows.Forms.ContextMenuStrip contextMenuStrip1;
-        private System.Windows.Forms.ToolStripMenuItem toolStripMenuItem3;
+        private System.Windows.Forms.ContextMenuStrip cmsRunMode;
+        private System.Windows.Forms.ToolStripMenuItem tsmtRunList;
         private System.Windows.Forms.ToolStripMenuItem toolStripMenuItem1;
-        private System.Windows.Forms.ToolStripTextBox toolStripTextBox1;
-        private System.Windows.Forms.ToolStripMenuItem toolStripMenuItem2;
+        private System.Windows.Forms.ToolStripTextBox tstbfrequency;
+        private System.Windows.Forms.ToolStripMenuItem tsmtExcute;
         private System.Windows.Forms.Button btnContinue;
         private System.Windows.Forms.Button btnStop;
         private System.Windows.Forms.Button btnPause;
+        private System.Windows.Forms.DataGridView dgvCommandList;
+        private System.Windows.Forms.DataGridViewTextBoxColumn No;
+        private System.Windows.Forms.DataGridViewTextBoxColumn DeviceName;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Command;
+        private System.Windows.Forms.Label lbQueue;
+        private System.Windows.Forms.ToolStripMenuItem tsmtRunStep;
     }
 }

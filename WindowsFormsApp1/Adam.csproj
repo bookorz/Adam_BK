@@ -278,6 +278,7 @@
     <Compile Include="UI_Update\Monitoring\JobMoveUpdate.cs" />
     <Compile Include="UI_Update\Monitoring\NodeStatusUpdate.cs" />
     <Compile Include="UI_Update\OCR\OCRUpdate.cs" />
+    <Compile Include="UI_Update\Terminal\TerminalUpdate.cs" />
     <Compile Include="UI_Update\WaferMapping\WaferAssignUpdate.cs" />
     <Compile Include="Util\ConfigUtil.cs" />
     <Compile Include="Util\StateUtil.cs" />
