@@ -1787,7 +1787,7 @@
     <value>9</value>
   </data>
   <data name="btnHelp.Text" xml:space="preserve">
-    <value>Help</value>
+    <value>Query</value>
   </data>
   <data name="&gt;&gt;btnHelp.Name" xml:space="preserve">
     <value>btnHelp</value>
@@ -2032,10 +2032,10 @@
   <data name="btnMaintence.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
   </data>
-  <metadata name="contextMenuStrip4.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+  <metadata name="menuMaintenance.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>667, 17</value>
   </metadata>
-  <data name="contextMenuStrip4.Font" type="System.Drawing.Font, System.Drawing">
+  <data name="menuMaintenance.Font" type="System.Drawing.Font, System.Drawing">
     <value>微軟正黑體, 15.75pt</value>
   </data>
   <data name="runingToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
@@ -2098,13 +2098,13 @@
   <data name="terminalToolStripMenuItem.Text" xml:space="preserve">
     <value>Terminal</value>
   </data>
-  <data name="contextMenuStrip4.Size" type="System.Drawing.Size, System.Drawing">
+  <data name="menuMaintenance.Size" type="System.Drawing.Size, System.Drawing">
     <value>306, 324</value>
   </data>
-  <data name="&gt;&gt;contextMenuStrip4.Name" xml:space="preserve">
-    <value>contextMenuStrip4</value>
+  <data name="&gt;&gt;menuMaintenance.Name" xml:space="preserve">
+    <value>menuMaintenance</value>
   </data>
-  <data name="&gt;&gt;contextMenuStrip4.Type" xml:space="preserve">
+  <data name="&gt;&gt;menuMaintenance.Type" xml:space="preserve">
     <value>System.Windows.Forms.ContextMenuStrip, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="btnMaintence.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
