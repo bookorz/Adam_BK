@@ -98,7 +98,7 @@ namespace Adam
             this.aAAToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.bBBToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.btnMaintence = new System.Controls.SplitButton();
-            this.contextMenuStrip4 = new System.Windows.Forms.ContextMenuStrip(this.components);
+            this.menuMaintenace = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.runingToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.initToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.orgToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -132,7 +132,7 @@ namespace Adam
             this.contextMenuStrip3.SuspendLayout();
             this.contextMenuStrip2.SuspendLayout();
             this.contextMenuStrip1.SuspendLayout();
-            this.contextMenuStrip4.SuspendLayout();
+            this.menuMaintenace.SuspendLayout();
             this.panel3.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -697,20 +697,20 @@ namespace Adam
             // 
             resources.ApplyResources(this.btnMaintence, "btnMaintence");
             this.btnMaintence.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.btnMaintence.ContextMenuStrip = this.contextMenuStrip4;
+            this.btnMaintence.ContextMenuStrip = this.menuMaintenace;
             this.btnMaintence.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
             this.btnMaintence.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
             this.btnMaintence.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(128)))));
             this.btnMaintence.MenuStripShowShowMode = true;
             this.btnMaintence.Name = "btnMaintence";
-            this.btnMaintence.SplitMenuStrip = this.contextMenuStrip4;
+            this.btnMaintence.SplitMenuStrip = this.menuMaintenace;
             this.btnMaintence.SplitMenuStripShowUp = false;
             this.btnMaintence.UseVisualStyleBackColor = false;
             // 
-            // contextMenuStrip4
+            // menuMaintenace
             // 
-            resources.ApplyResources(this.contextMenuStrip4, "contextMenuStrip4");
-            this.contextMenuStrip4.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            resources.ApplyResources(this.menuMaintenace, "menuMaintenace");
+            this.menuMaintenace.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.runingToolStripMenuItem,
             this.initToolStripMenuItem,
             this.orgToolStripMenuItem,
@@ -721,13 +721,13 @@ namespace Adam
             this.unitdatatoolStripMenuItem,
             this.transTestToolStripMenuItem,
             this.terminalToolStripMenuItem});
-            this.contextMenuStrip4.Name = "contextMenuStrip1";
-            this.contextMenuStrip4.ShowCheckMargin = true;
+            this.menuMaintenace.Name = "contextMenuStrip1";
+            this.menuMaintenace.ShowCheckMargin = true;
             // 
             // runingToolStripMenuItem
             // 
-            this.runingToolStripMenuItem.Name = "runingToolStripMenuItem";
             resources.ApplyResources(this.runingToolStripMenuItem, "runingToolStripMenuItem");
+            this.runingToolStripMenuItem.Name = "runingToolStripMenuItem";
             this.runingToolStripMenuItem.Click += new System.EventHandler(this.runingToolStripMenuItem_Click);
             // 
             // initToolStripMenuItem
@@ -750,32 +750,32 @@ namespace Adam
             // 
             // ioToolStripMenuItem
             // 
-            this.ioToolStripMenuItem.Name = "ioToolStripMenuItem";
             resources.ApplyResources(this.ioToolStripMenuItem, "ioToolStripMenuItem");
+            this.ioToolStripMenuItem.Name = "ioToolStripMenuItem";
             this.ioToolStripMenuItem.Click += new System.EventHandler(this.toolStripMenuItem7_Click);
             // 
             // settingToolStripMenuItem
             // 
-            this.settingToolStripMenuItem.Name = "settingToolStripMenuItem";
             resources.ApplyResources(this.settingToolStripMenuItem, "settingToolStripMenuItem");
+            this.settingToolStripMenuItem.Name = "settingToolStripMenuItem";
             this.settingToolStripMenuItem.Click += new System.EventHandler(this.settingToolStripMenuItem_Click);
             // 
             // llSetToolStripMenuItem
             // 
-            this.llSetToolStripMenuItem.Name = "llSetToolStripMenuItem";
             resources.ApplyResources(this.llSetToolStripMenuItem, "llSetToolStripMenuItem");
+            this.llSetToolStripMenuItem.Name = "llSetToolStripMenuItem";
             this.llSetToolStripMenuItem.Click += new System.EventHandler(this.toolStripMenuItem8_Click);
             // 
             // unitdatatoolStripMenuItem
             // 
-            this.unitdatatoolStripMenuItem.Name = "unitdatatoolStripMenuItem";
             resources.ApplyResources(this.unitdatatoolStripMenuItem, "unitdatatoolStripMenuItem");
+            this.unitdatatoolStripMenuItem.Name = "unitdatatoolStripMenuItem";
             this.unitdatatoolStripMenuItem.Click += new System.EventHandler(this.toolStripMenuItem9_Click);
             // 
             // transTestToolStripMenuItem
             // 
-            this.transTestToolStripMenuItem.Name = "transTestToolStripMenuItem";
             resources.ApplyResources(this.transTestToolStripMenuItem, "transTestToolStripMenuItem");
+            this.transTestToolStripMenuItem.Name = "transTestToolStripMenuItem";
             this.transTestToolStripMenuItem.Click += new System.EventHandler(this.toolStripMenuItem10_Click);
             // 
             // terminalToolStripMenuItem
@@ -830,7 +830,7 @@ namespace Adam
             this.contextMenuStrip3.ResumeLayout(false);
             this.contextMenuStrip2.ResumeLayout(false);
             this.contextMenuStrip1.ResumeLayout(false);
-            this.contextMenuStrip4.ResumeLayout(false);
+            this.menuMaintenace.ResumeLayout(false);
             this.panel3.ResumeLayout(false);
             this.ResumeLayout(false);
 
@@ -886,7 +886,7 @@ namespace Adam
         private System.Windows.Forms.ContextMenuStrip contextMenuStrip3;
         private System.Windows.Forms.ToolStripMenuItem toolStripMenuItem3;
         private System.Controls.SplitButton btnMaintence;
-        private System.Windows.Forms.ContextMenuStrip contextMenuStrip4;
+        private System.Windows.Forms.ContextMenuStrip menuMaintenace;
         private System.Windows.Forms.ToolStripMenuItem initToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem orgToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem manualToolStripMenuItem;

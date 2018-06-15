@@ -102,6 +102,7 @@ namespace Adam.UI_Update.Monitoring
                     tmp.Sort((x, y) => { return -Convert.ToInt16(x.Slot).CompareTo(Convert.ToInt16(y.Slot)); });
                     CurrNode.DataSource = tmp;
                     //CurrNode.DataSource = NodeManagement.Get(CurrNode.Name).JobList.Values.ToList();
+                    CurrNode.Columns["Job_Id"].Visible = false;
                     CurrNode.Columns["Destination"].Visible = false;
                     CurrNode.Columns["ProcessFlag"].Visible = false;
                     CurrNode.Columns["Piority"].Visible = false;
@@ -122,6 +123,7 @@ namespace Adam.UI_Update.Monitoring
                     tmp.Sort((x, y) => { return -Convert.ToInt16(x.Slot).CompareTo(Convert.ToInt16(y.Slot)); });
                     LastNode.DataSource = tmp;
                     //LastNode.DataSource = NodeManagement.Get(LastNode.Name).JobList.Values.ToList();
+                    LastNode.Columns["Job_Id"].Visible = false;
                     LastNode.Columns["Destination"].Visible = false;
                     LastNode.Columns["ProcessFlag"].Visible = false;
                     LastNode.Columns["Piority"].Visible = false;

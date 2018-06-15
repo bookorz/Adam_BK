@@ -1,6 +1,7 @@
 {
-OCR1ImgSourcePath:"C:/ProgramData/e-Reader0/e-Reader/AllImage",
-OCR1ImgToJpgPath:"C:/ProgramData/e-Reader0/e-Reader/JPG",
-OCR2ImgSourcePath:"C:/ProgramData/e-Reader1/e-Reader/AllImage",
-OCR2ImgToJpgPath:"C:/ProgramData/e-Reader1/e-Reader/JPG"
+  "DBConnectionString":"server=192.168.5.126;port=3307;user id=sanwa;password=sanwa_adam;database=adam",
+  "OCR2ImgSourcePath": "C:/ProgramData/e-Reader0/e-Reader/AllImage",
+  "OCR2ImgToJpgPath": "C:/ProgramData/e-Reader0/e-Reader/JPG",
+  "OCR1ImgSourcePath": "C:/ProgramData/e-Reader1/e-Reader/AllImage",
+  "OCR1ImgToJpgPath": "C:/ProgramData/e-Reader1/e-Reader/JPG"
 }

@@ -1,4 +1,5 @@
 ﻿using log4net;
+using SANWA.Utility.Config;
 using System;
 using System.Collections.Generic;
 using System.Drawing;
@@ -47,12 +48,12 @@ namespace Adam.UI_Update.OCR
                     switch (OCRName)
                     {
                         case "OCR01":
-                            save = RouteControl.SysConfig.OCR1ImgToJpgPath;
-                            src = RouteControl.SysConfig.OCR1ImgSourcePath;
+                            save = SystemConfig.Get().OCR1ImgToJpgPath;
+                            src = SystemConfig.Get().OCR1ImgSourcePath;
                             break;
                         case "OCR02":
-                            save = RouteControl.SysConfig.OCR2ImgToJpgPath;
-                            src = RouteControl.SysConfig.OCR2ImgSourcePath;
+                            save = SystemConfig.Get().OCR2ImgToJpgPath;
+                            src = SystemConfig.Get().OCR2ImgSourcePath;
                             break;
                     }
                     Thread.Sleep(500);

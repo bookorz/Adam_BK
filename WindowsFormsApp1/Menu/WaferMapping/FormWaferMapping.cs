@@ -93,10 +93,24 @@ namespace Adam.Menu.WaferMapping
                         for (int i = 1; i <= 25; i++)
                         {
                             MenuItem tmp;
-                            if (!eachPort.ReserveList.ContainsKey(i.ToString()))
+                            if (!eachPort.ReserveList.ContainsKey(i.ToString()) )
                             {
-                                tmp = new MenuItem(eachPort.Name + "-" + i.ToString(), AssignPort);
-
+                                if (eachPort.JobList.ContainsKey(i.ToString()))
+                                {
+                                    if (eachPort.JobList[i.ToString()].MapFlag)
+                                    {
+                                        tmp = new MenuItem(eachPort.Name + "-" + i.ToString(), AssignPort);
+                                        tmp.Enabled = false;
+                                    }
+                                    else
+                                    {
+                                        tmp = new MenuItem(eachPort.Name + "-" + i.ToString(), AssignPort);
+                                    }
+                                }
+                                else
+                                {
+                                    tmp = new MenuItem(eachPort.Name + "-" + i.ToString(), AssignPort);
+                                }
                             }
                             else
                             {

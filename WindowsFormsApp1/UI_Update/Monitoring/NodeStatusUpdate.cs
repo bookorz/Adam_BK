@@ -50,17 +50,18 @@ namespace Adam.UI_Update.Monitoring
                         case "Ready To Load":
                             State_tb.BackColor = Color.DarkGray;                          
                             break;
-                        case "Transfer Ready":
+                        case "Load Complete":
                             State_tb.BackColor = Color.Green;
                             break;
-                        case "Transfer Blocked":
+                        case "Ready To UnLoad":
                             State_tb.BackColor = Color.DarkOrange;
                             break;
-                        case "Ready To Unload":
+                        case "UnLoad Complete":
                             State_tb.BackColor = Color.Blue;
                             break;
                         case "Alarm":
                             State_tb.BackColor = Color.Red;
+                            UpdateCurrentState();
                             break;
                     }
                     
@@ -136,6 +137,9 @@ namespace Adam.UI_Update.Monitoring
                             break;
                         case "Alarm":
                             state.BackColor = Color.Red;
+                            Params.Add("Red", "True");
+                            Params.Add("Buzzer2", "True");
+                            FormMain.DIO.SetIO(Params);
                             FormMain.DIO.SetBlink("Red", "True");
                             
                             break;

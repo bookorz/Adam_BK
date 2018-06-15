@@ -80,7 +80,6 @@
     <Compile Include="FormQuery.designer.cs">
       <DependentUpon>FormQuery.cs</DependentUpon>
     </Compile>
-    <Compile Include="IWorkbook.cs" />
     <Compile Include="SplashScreen.cs">
       <SubType>Form</SubType>
     </Compile>

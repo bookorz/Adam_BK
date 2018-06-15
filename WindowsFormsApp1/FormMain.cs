@@ -49,7 +49,7 @@ namespace Adam
 
         private void Initialize()
         {
-
+            
             //檢查OCR程式有沒有開
             //Process[] pc = Process.GetProcessesByName("VB9BReaderForm");
             //if (pc.Count() == 0)
@@ -247,21 +247,9 @@ namespace Adam
             formVersion.ShowDialog();
         }
 
-        private List<TabPage> hiddenPages = new List<TabPage>();
+       
 
-        private void EnablePage(TabPage page, bool enable)
-        {
-            if (enable)
-            {
-                tbcMian.TabPages.Add(page);
-                hiddenPages.Remove(page);
-            }
-            else
-            {
-                tbcMian.TabPages.Remove(page);
-                hiddenPages.Add(page);
-            }
-        }
+        
 
         private void toolStripMenuItem3_Click(object sender, EventArgs e)
         {
@@ -289,10 +277,12 @@ namespace Adam
             logger.Debug("On_Command_Excuted");
             switch (Txn.Method)
             {
-                case Transaction.Command.RobotType.Reset:
-                    AlarmManagement.Remove(Node.Name);
-                    AlarmUpdate.UpdateAlarmList(AlarmManagement.GetAll());
-                    break;
+                //case Transaction.Command.RobotType.Reset:
+                //    Node.State = Node.LastState;
+                //    AlarmManagement.Remove(Node.Name);
+                //    AlarmUpdate.UpdateAlarmList(AlarmManagement.GetAll());
+
+                //    break;
             }
             Transaction txn = new Transaction();
 
@@ -519,6 +509,8 @@ namespace Adam
                                 case Transaction.Command.LoadPortType.Unload:
                                 case Transaction.Command.LoadPortType.MappingUnload:
                                 case Transaction.Command.LoadPortType.UnDock:
+                                case Transaction.Command.LoadPortType.InitialPos:
+                                case Transaction.Command.LoadPortType.ForceInitialPos:
                                     WaferAssignUpdate.UpdateLoadPortMapping(Node.Name, "");
                                     break;
                             }
@@ -587,7 +579,7 @@ namespace Adam
         {
 
             ConnectionStatusUpdate.UpdateControllerStatus(Device_ID, Status);
-
+            
             logger.Debug("On_Controller_State_Changed");
         }
 
@@ -597,6 +589,14 @@ namespace Adam
 
             NodeManagement.Get(PortName).ExcuteScript("LoadPortUnload", "Port_Finished");
             
+        }
+
+        public void On_Mode_Changed(string Mode)
+        {
+            logger.Debug("On_Mode_Changed");
+
+            ConnectionStatusUpdate.UpdateModeStatus(Mode);
+
         }
 
         public void On_Job_Location_Changed(Job Job)
@@ -620,7 +620,7 @@ namespace Adam
                             Node.State = "Idle";
                             break;
                         case "LoadPort":
-                            Node.State = "Transfer Ready";
+                            Node.State = "Ready To Load";
                             break;
                     }
                     if (!NodeManagement.IsNeedInitial())
@@ -833,31 +833,17 @@ namespace Adam
                         ConnectionStatusUpdate.UpdateInitial(false.ToString());
                         NodeStatusUpdate.UpdateCurrentState();
                         ThreadPool.QueueUserWorkItem(new WaitCallback(RouteCtrl.Start), "Normal");
-                        Mode_btn.Tag = "Start";
-                        Mode_btn.Text = "Start";
-                        Mode_btn.BackColor = Color.Lime;
-                        btnMaintence.Text = "Start Mode";
-                        btnMaintence.BackColor = Color.Red;
-                        btnMaintence.Enabled = false;
-                        btnTeach.Enabled = false;
-                        EnablePage(tbcMian.TabPages[5], false);
-                        Pause_btn.Enabled = true;
+                        //ConnectionStatusUpdate.UpdateModeStatus("Start");
+                        
 
                     }
                 }
             }
             else
             {
-                btnMaintence.Text = "Maintenance Mode";
-                btnMaintence.BackColor = Color.WhiteSmoke;
-                btnMaintence.Enabled = true;
-                btnTeach.Enabled = true;
-                EnablePage(hiddenPages[0], true);
                 RouteCtrl.Stop();
-                Mode_btn.Tag = "Manual";
-                Mode_btn.Text = "Manual";
-                Mode_btn.BackColor = Color.Orange;
-                Pause_btn.Enabled = false;
+                //ConnectionStatusUpdate.UpdateModeStatus("Manual");
+               
                 ConnectionStatusUpdate.UpdateInitial(false.ToString());
             }
         }

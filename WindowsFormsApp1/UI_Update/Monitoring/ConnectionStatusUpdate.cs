@@ -12,9 +12,10 @@ namespace Adam.UI_Update.Monitoring
     class ConnectionStatusUpdate
     {
         static ILog logger = LogManager.GetLogger(typeof(ConnectionStatusUpdate));
+        static List<TabPage> hiddenPages = new List<TabPage>();
         class ConnectState
         {
-            
+
             public string Device_ID { get; set; }
             public string Connection_Status { get; set; }
         }
@@ -61,6 +62,108 @@ namespace Adam.UI_Update.Monitoring
             }
         }
 
+        public static void UpdateModeStatus(string Status)
+        {
+            try
+            {
+                Form form = Application.OpenForms["FormMain"];
+                Button Mode;
+                if (form == null)
+                    return;
+
+                Mode = form.Controls.Find("Mode_btn", true).FirstOrDefault() as Button;
+                if (Mode == null)
+                    return;
+
+                if (Mode.InvokeRequired)
+                {
+                    UpdateOnline ph = new UpdateOnline(UpdateModeStatus);
+                    Mode.BeginInvoke(ph, Status);
+                }
+                else
+                {
+                    switch (Status)
+                    {
+                        case "Start":
+                            Mode.Tag = "Start";
+                            Mode.Text = "Start";
+                            Mode.BackColor = Color.Lime;
+                            Button btnMaintence = form.Controls.Find("btnMaintence", true).FirstOrDefault() as Button;
+                            if (btnMaintence != null)
+                            {
+                                btnMaintence.Text = "Start Mode";
+                                btnMaintence.BackColor = Color.Red;
+                                btnMaintence.Enabled = false;
+                            }
+                            Button btnTeach = form.Controls.Find("btnTeach", true).FirstOrDefault() as Button;
+                            if (btnTeach != null)
+                            {
+                                btnTeach.Enabled = false;
+                            }
+                            TabControl tbcMian = form.Controls.Find("tbcMian", true).FirstOrDefault() as TabControl;
+                            if (tbcMian != null)
+                            {
+                                EnablePage(tbcMian.TabPages[5], false, form);
+                            }
+                            Button Pause_btn = form.Controls.Find("Pause_btn", true).FirstOrDefault() as Button;
+                            if (Pause_btn != null)
+                            {
+                                Pause_btn.Enabled = true;
+                            }
+                            break;
+                        case "Stop":
+                            btnMaintence = form.Controls.Find("btnMaintence", true).FirstOrDefault() as Button;
+                            if (btnMaintence != null)
+                            {
+                                btnMaintence.Text = "Maintenance Mode";
+                                btnMaintence.BackColor = Color.WhiteSmoke;
+                                btnMaintence.Enabled = true;
+                            }
+                            btnTeach = form.Controls.Find("btnTeach", true).FirstOrDefault() as Button;
+                            if (btnTeach != null)
+                            {
+                                btnTeach.Enabled = true;
+                            }
+                            
+                            EnablePage(hiddenPages[0], true, form);
+                            
+                            Mode.Tag = "Manual";
+                            Mode.Text = "Manual";
+                            Mode.BackColor = Color.Orange;
+                            //Mode.Enabled = false;
+                            break;
+
+                    }
+
+                }
+
+
+            }
+            catch
+            {
+                logger.Error("UpdateOnlineStatus: Update fail.");
+            }
+        }
+
+        private static void EnablePage(TabPage page, bool enable,Form form)
+        {
+            TabControl tbcMian = form.Controls.Find("tbcMian", true).FirstOrDefault() as TabControl;
+            if (tbcMian != null)
+            {
+                if (enable)
+                {
+
+                    tbcMian.TabPages.Add(page);
+                    hiddenPages.Remove(page);
+                }
+                else
+                {
+                    tbcMian.TabPages.Remove(page);
+                    hiddenPages.Add(page);
+                }
+            }
+        }
+
         public static void UpdateOnlineStatus(string Status)
         {
             try
@@ -99,7 +202,7 @@ namespace Adam.UI_Update.Monitoring
                             Online.BackColor = Color.Red;
                             break;
                     }
-                    
+
                 }
 
 
@@ -130,7 +233,7 @@ namespace Adam.UI_Update.Monitoring
                 }
                 else
                 {
-                    if(Conn_gv.DataSource == null)
+                    if (Conn_gv.DataSource == null)
                     {
                         Conn_gv.DataSource = new List<ConnectState>();
                     }

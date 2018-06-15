@@ -1,5 +1,6 @@
 ﻿//using SorterControl.Management;
 using Adam.UI_Update.Alarm;
+using Adam.UI_Update.Monitoring;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -24,7 +25,7 @@ namespace Adam
         {
             Transaction Txn;
 
-            foreach(AlarmInfo eachA in AlarmManagement.GetAll())
+            foreach (AlarmInfo eachA in AlarmManagement.GetAll())
             {
                 if (!eachA.Type.Equals("Device alert error"))
                 {
@@ -34,13 +35,21 @@ namespace Adam
 
             AlarmUpdate.UpdateAlarmList(AlarmManagement.GetAll());
 
+            foreach (Node node in NodeManagement.GetList())
+            {
+                node.State = node.LastState;
+            }
+
             var NodeList = AlarmManagement.GetAll().GroupBy(t => t.NodeName);
             foreach (var group in NodeList)
             {
                 Txn = new Transaction();
                 Txn.Method = Transaction.Command.RobotType.Reset;
+                //NodeManagement.Get(group.First().NodeName).State = "Alarm";
                 NodeManagement.Get(group.First().NodeName).SendCommand(Txn);
+                AlarmManagement.Remove(group.First().NodeName);
             }
+            NodeStatusUpdate.UpdateCurrentState();
         }
 
         private void AlarmFrom_Load(object sender, EventArgs e)

@@ -108,6 +108,7 @@ namespace Adam.UI_Update.WaferMapping
                             JobManagement.Remove(eachJob.Job_Id);
                         }
                         port.JobList.Clear();
+                        port.ReserveList.Clear();
                     }                   
                     else
                     {
@@ -123,12 +124,14 @@ namespace Adam.UI_Update.WaferMapping
                             {
                                 case '0':
                                     wafer.Job_Id = "No wafer";
+                                    wafer.Host_Job_Id = wafer.Job_Id;
                                     //MappingData.Add(wafer);
                                     break;
                                 case '1':
                                     while (true)
                                     {
                                         wafer.Job_Id = "Wafer" + currentIdx.ToString("00");
+                                        wafer.Host_Job_Id = wafer.Job_Id;
                                         wafer.MapFlag = true;
                                         if (JobManagement.Add(wafer.Job_Id, wafer))
                                         {
@@ -142,14 +145,17 @@ namespace Adam.UI_Update.WaferMapping
                                     break;
                                 case '2':
                                     wafer.Job_Id = "Crossed";
+                                    wafer.Host_Job_Id = wafer.Job_Id;
                                     //MappingData.Add(wafer);
                                     break;
                                 case '?':
                                     wafer.Job_Id = "Undefined";
+                                    wafer.Host_Job_Id = wafer.Job_Id;
                                     //MappingData.Add(wafer);
                                     break;
                                 case 'W':
                                     wafer.Job_Id = "Double";
+                                    wafer.Host_Job_Id = wafer.Job_Id;
                                     //MappingData.Add(wafer);
                                     break;
                             }
@@ -167,9 +173,10 @@ namespace Adam.UI_Update.WaferMapping
                     Port_gv.DataSource = tmp;
                     Port_gv.Columns["Slot"].Width = 25;
                     Port_gv.Columns["Slot"].HeaderText = "S";
-                    Port_gv.Columns["Job_Id"].Width = 75;
+                    Port_gv.Columns["Host_Job_Id"].Width = 75;
                     Port_gv.Columns["DisplayDestination"].Width = 55;
                     Port_gv.Columns["DestinationSlot"].Width = 30;
+                    Port_gv.Columns["Job_Id"].Visible = false;
                     Port_gv.Columns["Destination"].Visible = false;
                     Port_gv.Columns["ProcessFlag"].Visible = false;
                     Port_gv.Columns["Piority"].Visible = false;
@@ -187,6 +194,7 @@ namespace Adam.UI_Update.WaferMapping
                     Port_gv.Columns["MapFlag"].Visible = false;
                     Port_gv.Columns["DisplayDestination"].HeaderText = "Dest";
                     Port_gv.Columns["DestinationSlot"].HeaderText = "DS";
+                    Port_gv.Columns["Host_Job_Id"].HeaderText = "ID";
                     Port_gv.ColumnHeadersDefaultCellStyle.Font = new Font("Arial", 10);
 
 
