@@ -39,6 +39,7 @@
             this.btnUP = new System.Windows.Forms.Button();
             this.sbtnRun = new System.Controls.SplitButton();
             this.cmsRunMode = new System.Windows.Forms.ContextMenuStrip(this.components);
+            this.tsmtRunStep = new System.Windows.Forms.ToolStripMenuItem();
             this.tsmtRunList = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.tstbfrequency = new System.Windows.Forms.ToolStripTextBox();
@@ -66,6 +67,7 @@
             this.btnExport = new System.Windows.Forms.Button();
             this.btnImport = new System.Windows.Forms.Button();
             this.btnClearHistory = new System.Windows.Forms.Button();
+            this.lbQueue = new System.Windows.Forms.Label();
             this.gbCondition = new System.Windows.Forms.GroupBox();
             this.tlpOperationSplit = new System.Windows.Forms.TableLayoutPanel();
             this.lsbCommand = new System.Windows.Forms.ListBox();
@@ -76,8 +78,6 @@
             this.lsbDeviceName = new System.Windows.Forms.ListBox();
             this.label1 = new System.Windows.Forms.Label();
             this.splitContainer1 = new System.Windows.Forms.SplitContainer();
-            this.lbQueue = new System.Windows.Forms.Label();
-            this.tsmtRunStep = new System.Windows.Forms.ToolStripMenuItem();
             this.tlpTerminal.SuspendLayout();
             this.tlpCommandSetting.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.spcCommandHistory)).BeginInit();
@@ -265,6 +265,13 @@
             this.cmsRunMode.ShowCheckMargin = true;
             this.cmsRunMode.Size = new System.Drawing.Size(257, 76);
             // 
+            // tsmtRunStep
+            // 
+            this.tsmtRunStep.Name = "tsmtRunStep";
+            this.tsmtRunStep.Size = new System.Drawing.Size(256, 24);
+            this.tsmtRunStep.Text = "Run Step";
+            this.tsmtRunStep.Click += new System.EventHandler(this.tsmtRunStep_Click);
+            // 
             // tsmtRunList
             // 
             this.tsmtRunList.Name = "tsmtRunList";
@@ -294,7 +301,7 @@
             // tsmtExcute
             // 
             this.tsmtExcute.Name = "tsmtExcute";
-            this.tsmtExcute.Size = new System.Drawing.Size(180, 24);
+            this.tsmtExcute.Size = new System.Drawing.Size(160, 24);
             this.tsmtExcute.Text = "Excute";
             this.tsmtExcute.Click += new System.EventHandler(this.tsmtExcute_Click);
             // 
@@ -344,6 +351,7 @@
             this.btnPause.TabIndex = 6;
             this.btnPause.Text = "Pause";
             this.btnPause.UseVisualStyleBackColor = true;
+            this.btnPause.Visible = false;
             // 
             // dgvCommandList
             // 
@@ -598,6 +606,17 @@
             this.btnClearHistory.UseVisualStyleBackColor = true;
             this.btnClearHistory.Click += new System.EventHandler(this.btnClearHistory_Click);
             // 
+            // lbQueue
+            // 
+            this.lbQueue.AutoSize = true;
+            this.lbQueue.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.lbQueue.Location = new System.Drawing.Point(753, 0);
+            this.lbQueue.Name = "lbQueue";
+            this.lbQueue.Size = new System.Drawing.Size(144, 56);
+            this.lbQueue.TabIndex = 6;
+            this.lbQueue.Text = "Queue:";
+            this.lbQueue.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
             // gbCondition
             // 
             this.gbCondition.Controls.Add(this.tlpOperationSplit);
@@ -741,24 +760,6 @@
             this.splitContainer1.Size = new System.Drawing.Size(636, 507);
             this.splitContainer1.SplitterDistance = 465;
             this.splitContainer1.TabIndex = 0;
-            // 
-            // lbQueue
-            // 
-            this.lbQueue.AutoSize = true;
-            this.lbQueue.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.lbQueue.Location = new System.Drawing.Point(753, 0);
-            this.lbQueue.Name = "lbQueue";
-            this.lbQueue.Size = new System.Drawing.Size(144, 56);
-            this.lbQueue.TabIndex = 6;
-            this.lbQueue.Text = "Queue:";
-            this.lbQueue.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            // 
-            // tsmtRunStep
-            // 
-            this.tsmtRunStep.Name = "tsmtRunStep";
-            this.tsmtRunStep.Size = new System.Drawing.Size(256, 24);
-            this.tsmtRunStep.Text = "Run Step";
-            this.tsmtRunStep.Click += new System.EventHandler(this.tsmtRunStep_Click);
             // 
             // FormTerminal
             // 

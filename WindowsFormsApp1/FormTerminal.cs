@@ -42,7 +42,7 @@ namespace Adam
 
             try
             {
-                strSql = "SELECT CONCAT(node_id, ',', conn_address) as node_id , node_name, node_type, sn_no, CONCAT(vendor, ',' ,node_type) as vendor, model_no, firmware_ver, conn_address, controller_id " +
+                strSql = "SELECT CONCAT(node_id, ',', conn_address) as node_id , node_name, node_type, sn_no, CONCAT(vendor, ',' ,node_type, ',', controller_id) as vendor, model_no, firmware_ver, conn_address, controller_id " +
                             "FROM node " +
                             "WHERE enable_flg = 'Y' AND node_type IN('ALIGNER', 'LOADPORT', 'ROBOT') " +
                             "ORDER BY node_id, sn_no";
@@ -64,6 +64,7 @@ namespace Adam
 
                 dtCommandAssembly.Columns.Add("No");
                 dtCommandAssembly.Columns.Add("Device_Name");
+                dtCommandAssembly.Columns.Add("Controller_ID");
                 dtCommandAssembly.Columns.Add("Vendor");
                 dtCommandAssembly.Columns.Add("CommandShow");
                 dtCommandAssembly.Columns.Add("Command");
@@ -411,7 +412,7 @@ namespace Adam
             {
                 //strDevice = lsbDeviceName.Text.Split(',')[0].ToString();
 
-                strDevice = "RobotController02";
+                strDevice = lsbDeviceName.SelectedValue.ToString().Split(',')[2].ToString();
 
                 encoder = new SANWA.Utility.Encoder(lsbDeviceName.SelectedValue.ToString().Split(',')[0].ToString());
 
@@ -424,7 +425,7 @@ namespace Adam
                         //Adam.UI_Update.Terminal.TerminalUpdate.UpdateReturnList("lsbHistory", DateTime.Now.ToLongTimeString() + strDevice + " <<  " + txbManually.Text, false);
                         //strReturnMsg = ControllerManagement.Get(strDevice).DoWorkSync(txbManually.Text + "\r");
 
-                        alRun.Add(txbManually.Text + "\r");
+                        alRun.Add(strDevice + "&" + txbManually.Text + "\r");
 
                         break;
 
@@ -433,7 +434,7 @@ namespace Adam
                         //Adam.UI_Update.Terminal.TerminalUpdate.UpdateReturnList("lsbHistory", DateTime.Now.ToLongTimeString() + strDevice + " <<  " + txbManually.Text + encoder.Robot.KawasakiCheckSum(txbManually.Text.Substring(1, txbManually.Text.IndexOf('>') + 1)), false);
                         //strReturnMsg = ControllerManagement.Get(strDevice).DoWorkSync(txbManually.Text + encoder.Robot.KawasakiCheckSum(txbManually.Text.Substring(1, txbManually.Text.IndexOf('>')+1)));
 
-                        alRun.Add(txbManually.Text + encoder.Robot.KawasakiCheckSum(txbManually.Text.Substring(1, txbManually.Text.IndexOf('>') + 1)) + "\r\n");
+                        alRun.Add(strDevice + "&" + txbManually.Text + encoder.Robot.KawasakiCheckSum(txbManually.Text.Substring(1, txbManually.Text.IndexOf('>') + 1)) + "\r\n");
 
                         break;
 
@@ -442,7 +443,7 @@ namespace Adam
                         //Adam.UI_Update.Terminal.TerminalUpdate.UpdateReturnList("lsbHistory", DateTime.Now.ToLongTimeString() + strDevice + " <<  " + encoder.LoadPort.TDK_A(txbManually.Text), false);
                         //strReturnMsg = ControllerManagement.Get(strDevice).DoWorkSync(encoder.LoadPort.TDK_A(txbManually.Text));
 
-                        alRun.Add(encoder.LoadPort.TDK_A(txbManually.Text));
+                        alRun.Add(strDevice + "&" + encoder.LoadPort.TDK_A(txbManually.Text));
 
                         break;
                 }
@@ -485,7 +486,7 @@ namespace Adam
                 drTemp["Device_Name"] = lsbDeviceName.Text.Split(',')[0].ToString();
                 drTemp["Vendor"] = lsbDeviceName.SelectedValue.ToString();
                 drTemp["CommandShow"] = txbManually.Text;
-                
+                drTemp["Controller_ID"] = lsbDeviceName.SelectedValue.ToString().Split(',')[2].ToString();
 
                 switch (lsbDeviceName.SelectedValue.ToString().Split(',')[0].ToString())
                 {
@@ -627,6 +628,7 @@ namespace Adam
         private void CommandRun()
         {
             string strDevice = string.Empty;
+            string strCommand = string.Empty;
             string strReturnMsg = string.Empty;
 
             strDevice = "RobotController02";
@@ -637,10 +639,13 @@ namespace Adam
                 {
                     if (alRun.Count > 0)
                     {
+                        strDevice = alRun[0].ToString().Split('&')[0];
+                        strCommand = alRun[0].ToString().Split('&')[1];
+
                         Adam.UI_Update.Terminal.TerminalUpdate.UpdateLabelText("lbQueue", "Queue:" + alRun.Count.ToString());
-                        Adam.UI_Update.Terminal.TerminalUpdate.UpdateReturnList("lsbHistory", DateTime.Now.ToLongTimeString() + strDevice + " <<  " + alRun[0].ToString(), false);
-                        strReturnMsg = ControllerManagement.Get(strDevice).DoWorkSync(alRun[0].ToString(), alRun[0].ToString().IndexOf("CMD") > 0 ? "CMD" : string.Empty);                  
-                        Adam.UI_Update.Terminal.TerminalUpdate.UpdateReturnList("lsbHistory", strDevice + " >>  " + strReturnMsg, false);
+                        Adam.UI_Update.Terminal.TerminalUpdate.UpdateReturnList("lsbHistory", DateTime.Now.ToString("yyyy-MM-dd hh:mm:ss ffffff") + "    " + strDevice + " <<  " + strCommand, false);
+                        strReturnMsg = ControllerManagement.Get(strDevice).DoWorkSync(strCommand, strCommand.IndexOf("CMD") > 0 ? "CMD" : string.Empty);                  
+                        Adam.UI_Update.Terminal.TerminalUpdate.UpdateReturnList("lsbHistory", DateTime.Now.ToString("yyyy-MM-dd hh:mm:ss ffffff") + "   " + strDevice + " >>  " + strReturnMsg, false);
                         alRun.RemoveAt(0);
 
                         if (alRun.Count > 0)
@@ -654,9 +659,6 @@ namespace Adam
             {
                 throw new Exception(ex.ToString());
             }
-
-
-
         }
 
         private void tsmtRunList_Click(object sender, EventArgs e)
@@ -671,7 +673,7 @@ namespace Adam
 
                 foreach (DataRow dr in dtCommandAssembly.Rows)
                 {
-                    alRun.Add(dr["Command"].ToString());
+                    alRun.Add(dr["Controller_ID"].ToString() + "&" + dr["Command"].ToString());
                 }
 
                 MessageBox.Show("Send to queue.", "tsmtRunList_Click");
@@ -699,7 +701,7 @@ namespace Adam
                     {
                         foreach (DataRow dr in dtCommandAssembly.Rows)
                         {
-                            alRun.Add(dr["Command"].ToString());
+                            alRun.Add(dr["Controller_ID"].ToString() + "&" + dr["Command"].ToString());
                         }
                     }
                 }
@@ -724,7 +726,9 @@ namespace Adam
 
                     if (ii >= 0)
                     {
-                        alRun.Add(dtCommandAssembly.Rows[ii]["Command"].ToString());
+                        dgvCommandList.ClearSelection();
+
+                        alRun.Add(dtCommandAssembly.Rows[ii]["Controller_ID"].ToString() +"&" + dtCommandAssembly.Rows[ii]["Command"].ToString());
 
                         if (ii + 1 < dgvCommandList.Rows.Count)
                         {
@@ -756,7 +760,7 @@ namespace Adam
             StreamWriter sw;
 
             try
-            {
+            { 
                 saveFileDialog1 = new SaveFileDialog();
                 saveFileDialog1.Title = "Save file";
                 saveFileDialog1.InitialDirectory = ".\\";
