@@ -26,7 +26,7 @@ namespace Adam
         public static DIO DIO;
         public static AlarmMapping AlmMapping;
         private static readonly ILog logger = LogManager.GetLogger(typeof(FormMain));
-        object CurrentSelected = null;
+        
         FromAlarm alarmFrom = new FromAlarm();
         private Menu.Monitoring.FormMonitoring formMonitoring = new Menu.Monitoring.FormMonitoring();
         private Menu.Communications.FormCommunications formCommunications = new Menu.Communications.FormCommunications();
@@ -50,17 +50,7 @@ namespace Adam
         private void Initialize()
         {
             
-            //檢查OCR程式有沒有開
-            //Process[] pc = Process.GetProcessesByName("VB9BReaderForm");
-            //if (pc.Count() == 0)
-            //{
-            //    Process OCRProg = new Process();
-            //    // FileName 是要執行的檔案
-            //    OCRProg.StartInfo.FileName = "C:/Program Files (x86)/HST Vision/e-Reader8000/VB9BReaderForm.exe";
-            //    OCRProg.Start();
-
-
-            //}
+           
         }
 
         private void Form1_Load(object sender, EventArgs e)
@@ -83,14 +73,10 @@ namespace Adam
                 tbcMian.SelectTab(0);
                 alarmFrom.Hide();
                 alarmFrom.Show();
-                //alarmFrom.Visible = false;
+     
                 alarmFrom.Hide();
 
 
-                //this.FormBorderStyle = FormBorderStyle.FixedToolWindow;
-                //this.WindowState = FormWindowState.Minimized;
-                //this.WindowState = FormWindowState.Maximized;
-                //this.TopLevel = true;
 
             }
             catch (Exception ex)

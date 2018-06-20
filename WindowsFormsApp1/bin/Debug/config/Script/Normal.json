@@ -97,20 +97,20 @@
     "JobStatus": "WAIT_PUT",
     "ExcuteMethod": "",
     "FinishMethod": "PutWithoutBack",
-    "ChangeToStatus": "WAIT_WRLS",
+    "ChangeToStatus": "WAIT_OFFSET",
     "TodoList": [
       {
         "EqpType": "Aligner",
-        "Method": "WaferRelease",
+        "Method": "Align",
         "Position": "",
-        "Param": null,
+        "Param": "BySetting",
         "Force": false
       }
     ]
   },
   {
     "ID": "",
-    "Expression": "[Job.OCRFlag] == false",
+    "Expression": "[Job.OCRFlag] == true",
     "JobStatus": "WAIT_ALIGN",
     "ExcuteMethod": "",
     "FinishMethod": "Align",
@@ -131,11 +131,11 @@
     "JobStatus": "WAIT_OCR",
     "ExcuteMethod": "",
     "FinishMethod": "Read",
-    "ChangeToStatus": "WAIT_WRLS",
+    "ChangeToStatus": "WAIT_RET",
     "TodoList": [
       {
         "EqpType": "Aligner",
-        "Method": "WaferRelease",
+        "Method": "Retract",
         "Position": "",
         "Param": null,
         "Force": false
@@ -146,6 +146,40 @@
     "ID": "",
     "Expression": "[Job.OCRFlag] == false",
     "JobStatus": "WAIT_ALIGN",
+    "ExcuteMethod": "",
+    "FinishMethod": "Align",
+    "ChangeToStatus": "WAIT_RET",
+    "TodoList": [
+      {
+        "EqpType": "Aligner",
+        "Method": "Retract",
+        "Position": "",
+        "Param": null,
+        "Force": false
+      }
+    ]
+  },
+  {
+    "ID": "",
+    "Expression": "",
+    "JobStatus": "WAIT_RET",
+    "ExcuteMethod": "",
+    "FinishMethod": "Retract",
+    "ChangeToStatus": "WAIT_OFFSET",
+    "TodoList": [
+      {
+        "EqpType": "Aligner",
+        "Method": "Align",
+        "Position": "",
+        "Param": "BySetting",
+        "Force": false
+      }
+    ]
+  },
+  {
+    "ID": "",
+    "Expression": "",
+    "JobStatus": "WAIT_OFFSET",
     "ExcuteMethod": "",
     "FinishMethod": "Align",
     "ChangeToStatus": "WAIT_WRLS",
@@ -159,6 +193,9 @@
       }
     ]
   },
+
+
+
   {
     "ID": "",
     "Expression": "",

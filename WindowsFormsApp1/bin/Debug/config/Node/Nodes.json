@@ -9,32 +9,38 @@
       {
         "NodeName": "LoadPort01",
         "NodeType": "Port",
-        "Point": "1201"
+        "Point": "1201",
+        "Offset": 23
       },
       {
         "NodeName": "LoadPort02",
         "NodeType": "Port",
-        "Point": "1202"
+        "Point": "1202",
+        "Offset": -23
       },
       {
         "NodeName": "LoadPort03",
         "NodeType": "Port",
-        "Point": "1203"
+        "Point": "1203",
+        "Offset": -23
       },
       {
         "NodeName": "LoadPort04",
         "NodeType": "Port",
-        "Point": "1204"
+        "Point": "1204",
+        "Offset": 23
       },
       {
         "NodeName": "Aligner01",
         "NodeType": "Aligner",
-        "Point": "0121"
+        "Point": "0121",
+        "Offset": -16
       },
       {
         "NodeName": "Aligner02",
         "NodeType": "Aligner",
-        "Point": "0122"
+        "Point": "0122",
+        "Offset": 16
       }
     ]
   },
