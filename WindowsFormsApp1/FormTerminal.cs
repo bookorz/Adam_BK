@@ -755,8 +755,6 @@ namespace Adam
             }
 
             SaveFileDialog saveFileDialog1;
-            DataTable dt;
-            object[] cellValues;
             StreamWriter sw;
 
             try
@@ -764,37 +762,47 @@ namespace Adam
                 saveFileDialog1 = new SaveFileDialog();
                 saveFileDialog1.Title = "Save file";
                 saveFileDialog1.InitialDirectory = ".\\";
-                saveFileDialog1.Filter = "Normal text files (*.*)|*.txt";
+                saveFileDialog1.Filter = "json files (*.json)|*.json";
                 if (saveFileDialog1.ShowDialog() == DialogResult.OK)
                 {
-                    dt = new DataTable();
-                    dt.TableName = "Table";
-                    foreach (DataGridViewColumn column in dgvCommandList.Columns)
-                    {
-                        if (column.Visible)
-                        {
-                            // You could potentially name the column based on the DGV column name (beware of dupes)
-                            // or assign a type based on the data type of the data bound to this DGV column.
-                            dt.Columns.Add(column.Name);
-                        }
-                    }
-
-                    cellValues = new object[dgvCommandList.Columns.Count];
-                    foreach (DataGridViewRow row in dgvCommandList.Rows)
-                    {
-                        for (int i = 0; i < row.Cells.Count; i++)
-                        {
-                            cellValues[i] = row.Cells[i].Value;
-                        }
-
-                        dt.Rows.Add(cellValues);
-                    }
-
                     sw = new StreamWriter(saveFileDialog1.FileName.ToString());
 
-                    sw.WriteLine(JsonConvert.SerializeObject(dt, Formatting.Indented));
+                    sw.WriteLine(JsonConvert.SerializeObject(dtCommandAssembly, Formatting.Indented));
 
                     sw.Close();
+
+                    MessageBox.Show("Done it.", "Message", MessageBoxButtons.OK, MessageBoxIcon.Warning, MessageBoxDefaultButton.Button1);
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.ToString(), "Exception Message", MessageBoxButtons.OK, MessageBoxIcon.Warning, MessageBoxDefaultButton.Button1, MessageBoxOptions.DefaultDesktopOnly);
+            }
+        }
+
+        private void btnImport_Click(object sender, EventArgs e)
+        {
+            OpenFileDialog openFileDialog1;
+            StreamReader myStream = null;
+
+            try
+            {
+                openFileDialog1 = new OpenFileDialog();
+                openFileDialog1.Filter = "json files (*.json)|*.json";
+                openFileDialog1.FilterIndex = 2;
+                openFileDialog1.RestoreDirectory = true;
+
+                if (openFileDialog1.ShowDialog() == DialogResult.OK)
+                {
+                    string line = string.Empty;
+
+                    using (myStream = new StreamReader(openFileDialog1.FileName))
+                    {
+                        line = myStream.ReadToEnd();
+                    }
+
+                    dtCommandAssembly = (DataTable)Newtonsoft.Json.JsonConvert.DeserializeObject(line, (typeof(DataTable)));
+                    dgvCommandList.DataSource = dtCommandAssembly;
 
                     MessageBox.Show("Done it.", "Message", MessageBoxButtons.OK, MessageBoxIcon.Warning, MessageBoxDefaultButton.Button1);
                 }
