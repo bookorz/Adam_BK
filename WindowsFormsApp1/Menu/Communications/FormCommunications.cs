@@ -224,12 +224,7 @@ namespace Adam.Menu.Communications
 
         private void nudIP01_Click(object sender, EventArgs e)
         {
-            //Process[] MyProcess1 = Process.GetProcessesByName("osk.exe");
 
-            //if (MyProcess1.Length == 0)
-            //{
-            //    Process.Start(AppDomain.CurrentDomain.BaseDirectory + "\\osk.exe");
-            //}
         }
 
         private void libDeviceList_Click(object sender, EventArgs e)
@@ -292,6 +287,11 @@ namespace Adam.Menu.Communications
             txbConnectType.Text = "Socket";
             txbCommunicatoyTypeNotice.Text = string.Empty;
             txbSettingandMaintainNotice.Text = string.Empty;
+        }
+
+        private void btnSave_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
