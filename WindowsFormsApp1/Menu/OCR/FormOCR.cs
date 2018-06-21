@@ -95,6 +95,8 @@ namespace Adam.Menu.OCR
             appWin2 = p2.MainWindowHandle;
             SetParent(p2.MainWindowHandle, this.tabPage1.Handle);
             MoveWindow(p2.MainWindowHandle, 0, -30, this.tabPage1.Width, this.tabPage1.Height + 30, true);
+
+            ControllerManagement.Get("OCRController02").Connect();
         }
 
         private void AssignCOGNEXUI(object param)

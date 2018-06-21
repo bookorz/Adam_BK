@@ -138,7 +138,14 @@ namespace Adam.UI_Update.Monitoring
                         case "Alarm":
                             state.BackColor = Color.Red;
                             Params.Add("Red", "True");
-                            Params.Add("Buzzer2", "True");
+                            CheckBox mute = form.Controls.Find("Mute_chk", true).FirstOrDefault() as CheckBox;
+                            if (mute != null)
+                            {
+                                if (!mute.Checked)
+                                {
+                                    Params.Add("Buzzer2", "True");
+                                }
+                            }
                             FormMain.DIO.SetIO(Params);
                             FormMain.DIO.SetBlink("Red", "True");
                             

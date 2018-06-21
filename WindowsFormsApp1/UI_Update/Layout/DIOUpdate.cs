@@ -13,8 +13,9 @@ namespace Adam.UI_Update.Layout
     {
         static ILog logger = LogManager.GetLogger(typeof(DIOUpdate));
         delegate void UpdateDIO(string Parameter, string Value);
-        
+        delegate void GetBool();
 
+      
         
         public static void UpdateDIOStatus(string Parameter, string Value)
         {

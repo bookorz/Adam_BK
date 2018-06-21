@@ -432,6 +432,7 @@ namespace Adam
             AlarmInfo CurrentAlarm = new AlarmInfo();
             CurrentAlarm.NodeName = Node.Name;
             CurrentAlarm.AlarmCode = Msg.Value;
+            CurrentAlarm.NeedReset = true;
             try
             {
 
@@ -523,7 +524,7 @@ namespace Adam
             CurrentAlarm.SystemAlarmCode = "FF00000001";
             CurrentAlarm.Desc = "命令逾時,連線異常";
             CurrentAlarm.TimeStamp = DateTime.Now.ToString("yyyy/MM/dd HH:mm:ss:fff");
-
+            CurrentAlarm.NeedReset = false;
             AlarmManagement.Add(CurrentAlarm);
             AlarmUpdate.UpdateAlarmList(AlarmManagement.GetAll());
             AlarmUpdate.UpdateAlarmHistory(AlarmManagement.GetHistory());
@@ -668,6 +669,7 @@ namespace Adam
             CurrentAlarm.Desc = "連線異常";
             CurrentAlarm.TimeStamp = DateTime.Now.ToString("yyyy/MM/dd HH:mm:ss:fff");
             CurrentAlarm.AlarmType = "System";
+            CurrentAlarm.NeedReset = false;
             AlarmManagement.Add(CurrentAlarm);
             AlarmUpdate.UpdateAlarmList(AlarmManagement.GetAll());
             AlarmUpdate.UpdateAlarmHistory(AlarmManagement.GetHistory());
@@ -862,6 +864,5 @@ namespace Adam
             FormQuery form = new FormQuery();
             form.Show();
         }
-
     }
 }

@@ -780,6 +780,33 @@
   <data name="groupBox4.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>Top, Bottom, Right</value>
   </data>
+  <data name="Mute_chk.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="Mute_chk.Location" type="System.Drawing.Point, System.Drawing">
+    <value>6, 125</value>
+  </data>
+  <data name="Mute_chk.Size" type="System.Drawing.Size, System.Drawing">
+    <value>68, 24</value>
+  </data>
+  <data name="Mute_chk.TabIndex" type="System.Int32, mscorlib">
+    <value>5</value>
+  </data>
+  <data name="Mute_chk.Text" xml:space="preserve">
+    <value>Mute</value>
+  </data>
+  <data name="&gt;&gt;Mute_chk.Name" xml:space="preserve">
+    <value>Mute_chk</value>
+  </data>
+  <data name="&gt;&gt;Mute_chk.Type" xml:space="preserve">
+    <value>System.Windows.Forms.CheckBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;Mute_chk.Parent" xml:space="preserve">
+    <value>groupBox4</value>
+  </data>
+  <data name="&gt;&gt;Mute_chk.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
   <data name="Buzzer2_Signal.FlatStyle" type="System.Windows.Forms.FlatStyle, System.Windows.Forms">
     <value>Flat</value>
   </data>
@@ -787,10 +814,10 @@
     <value>NoControl</value>
   </data>
   <data name="Buzzer2_Signal.Location" type="System.Drawing.Point, System.Drawing">
-    <value>6, 88</value>
+    <value>6, 74</value>
   </data>
   <data name="Buzzer2_Signal.Size" type="System.Drawing.Size, System.Drawing">
-    <value>70, 58</value>
+    <value>70, 45</value>
   </data>
   <data name="Buzzer2_Signal.TabIndex" type="System.Int32, mscorlib">
     <value>4</value>
@@ -805,7 +832,7 @@
     <value>groupBox4</value>
   </data>
   <data name="&gt;&gt;Buzzer2_Signal.ZOrder" xml:space="preserve">
-    <value>0</value>
+    <value>1</value>
   </data>
   <data name="Buzzer1_Signal.FlatStyle" type="System.Windows.Forms.FlatStyle, System.Windows.Forms">
     <value>Flat</value>
@@ -817,7 +844,7 @@
     <value>6, 26</value>
   </data>
   <data name="Buzzer1_Signal.Size" type="System.Drawing.Size, System.Drawing">
-    <value>70, 53</value>
+    <value>70, 45</value>
   </data>
   <data name="Buzzer1_Signal.TabIndex" type="System.Int32, mscorlib">
     <value>1</value>
@@ -832,7 +859,7 @@
     <value>groupBox4</value>
   </data>
   <data name="&gt;&gt;Buzzer1_Signal.ZOrder" xml:space="preserve">
-    <value>1</value>
+    <value>2</value>
   </data>
   <data name="groupBox4.Location" type="System.Drawing.Point, System.Drawing">
     <value>1663, 3</value>

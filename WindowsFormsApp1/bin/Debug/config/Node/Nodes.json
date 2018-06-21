@@ -34,20 +34,20 @@
         "NodeName": "Aligner01",
         "NodeType": "Aligner",
         "Point": "0121",
-        "Offset": -16
+        "Offset": 16
       },
       {
         "NodeName": "Aligner02",
         "NodeType": "Aligner",
         "Point": "0122",
-        "Offset": 16
+        "Offset": -16
       }
     ]
   },
   {
-    "Name": "Aligner02",
-    "Controller": "AlignerController02",
-    "AdrNo": "4",
+    "Name": "Aligner01",
+    "Controller": "AlignerController01",
+    "AdrNo": "3",
     "Type": "Aligner",
     "Brand": "Sanwa",
     "RouteTable": [
@@ -84,7 +84,7 @@
         "NodeType": "Port"
       },
       {
-        "NodeName": "OCR02",
+        "NodeName": "OCR01",
         "NodeType": "OCR"
       },
       {
@@ -94,6 +94,19 @@
       {
         "NodeName": "Robot02",
         "NodeType": "Robot"
+      }
+    ]
+  },
+  {
+    "Name": "OCR01",
+    "Controller": "OCRController01",
+    "AdrNo": "1",
+    "Type": "OCR",
+    "Brand": "COGNEX",
+    "RouteTable": [
+      {
+        "NodeName": "Aligner01",
+        "NodeType": "Aligner"
       }
     ]
   },

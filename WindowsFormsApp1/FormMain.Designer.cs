@@ -111,6 +111,7 @@ namespace Adam
             this.terminalToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.panel3 = new System.Windows.Forms.Panel();
             this.directorySearcher1 = new System.DirectoryServices.DirectorySearcher();
+            this.Mute_chk = new System.Windows.Forms.CheckBox();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer13)).BeginInit();
             this.splitContainer13.Panel1.SuspendLayout();
             this.splitContainer13.Panel2.SuspendLayout();
@@ -317,6 +318,7 @@ namespace Adam
             // groupBox4
             // 
             resources.ApplyResources(this.groupBox4, "groupBox4");
+            this.groupBox4.Controls.Add(this.Mute_chk);
             this.groupBox4.Controls.Add(this.Buzzer2_Signal);
             this.groupBox4.Controls.Add(this.Buzzer1_Signal);
             this.groupBox4.Name = "groupBox4";
@@ -798,6 +800,14 @@ namespace Adam
             this.directorySearcher1.ServerPageTimeLimit = System.TimeSpan.Parse("-00:00:01");
             this.directorySearcher1.ServerTimeLimit = System.TimeSpan.Parse("-00:00:01");
             // 
+            // Mute_chk
+            // 
+            resources.ApplyResources(this.Mute_chk, "Mute_chk");
+            this.Mute_chk.Checked = true;
+            this.Mute_chk.CheckState = System.Windows.Forms.CheckState.Checked;
+            this.Mute_chk.Name = "Mute_chk";
+            this.Mute_chk.UseVisualStyleBackColor = true;
+            // 
             // FormMain
             // 
             resources.ApplyResources(this, "$this");
@@ -817,6 +827,7 @@ namespace Adam
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             this.groupBox4.ResumeLayout(false);
+            this.groupBox4.PerformLayout();
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
@@ -919,6 +930,7 @@ namespace Adam
         private System.Windows.Forms.Button Connection_btn;
         private System.Windows.Forms.Button Initial_btn;
         private System.Windows.Forms.Button Pause_btn;
+        private System.Windows.Forms.CheckBox Mute_chk;
     }
 }
 

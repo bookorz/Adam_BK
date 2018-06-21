@@ -27,7 +27,7 @@ namespace Adam
 
             foreach (AlarmInfo eachA in AlarmManagement.GetAll())
             {
-                if (!eachA.Type.Equals("Device alert error"))
+                if (!eachA.NeedReset)
                 {
                     AlarmManagement.Remove(eachA);
                 }
