@@ -1,11 +1,13 @@
 ﻿using Adam.UI_Update.Authority;
 using Adam.Util;
+using log4net;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.Linq;
+using System.Reflection;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -14,6 +16,8 @@ namespace GUI
 {
     public partial class FormLogin : Form
     {
+        //ILog log = LogManager.GetLogger(MethodBase.GetCurrentMethod().DeclaringType);
+        ILog log = LogManager.GetLogger("Database");
         public FormLogin()
         {
             InitializeComponent();
@@ -59,6 +63,8 @@ namespace GUI
                 if (result)
                 {
                     AuthorityUpdate.UpdateLoginInfo(user_id, user_name, user_group_id);
+                    log.Info(user_id + "," + user_name + "," + user_group_id);
+                    log.Debug(user_id + "," + user_name + "," + user_group_id);
                     this.Close();
                 }
                 else
