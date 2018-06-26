@@ -43,7 +43,7 @@ namespace Adam
             try
             {
                 strSql = "SELECT CONCAT(node_id, ',', conn_address) as node_id , node_name, node_type, sn_no, CONCAT(vendor, ',' ,node_type, ',', controller_id) as vendor, model_no, firmware_ver, conn_address, controller_id " +
-                            "FROM node " +
+                            "FROM config_node " +
                             "WHERE enable_flg = 'Y' AND node_type IN('ALIGNER', 'LOADPORT', 'ROBOT', 'OCR') " +
                             "ORDER BY node_id, sn_no";
 
