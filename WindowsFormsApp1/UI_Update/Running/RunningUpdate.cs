@@ -162,6 +162,7 @@ namespace Adam.UI_Update.Running
                     if (present != null)
                     {
                         Job tmp;
+                        present.ForeColor = Color.White;
                         if (node.JobList.TryGetValue(i.ToString(), out tmp))
                         {
                             present.Text = tmp.Host_Job_Id;

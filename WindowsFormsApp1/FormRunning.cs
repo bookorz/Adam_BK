@@ -142,6 +142,13 @@ namespace UI_TEST
                         Port.Mode = "LD";
                         DestPort.Mode = "UD";
                     }
+                    if (Start_btn.Tag != null)
+                    {
+                        if (Start_btn.Tag.Equals("Start"))
+                        {
+                            Port.Available = true;
+                        }
+                    }
                 }
             }
             catch (Exception e1)
@@ -242,7 +249,7 @@ namespace UI_TEST
             {
 
                 case "Fake Data(Full)":
-                    RunningUpdate.UpdateLoadPortMapping(((MenuItem)sender).Tag.ToString(), "1111111111111111111111111");
+                    RunningUpdate.UpdateLoadPortMapping(((MenuItem)sender).Tag.ToString(), "1111000000000000000000000");
                     break;
                 case "Fake Data(Empty)":
                     RunningUpdate.UpdateLoadPortMapping(((MenuItem)sender).Tag.ToString(), "0000000000000000000000000");

@@ -681,6 +681,7 @@ namespace Adam
             {
                 case "Initialize":
                     Node.InitialComplete = true;
+                    Node.InitialObject();
                     switch (Node.Type)
                     {
                         case "Robot":
