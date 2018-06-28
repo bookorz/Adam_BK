@@ -52,5 +52,10 @@ namespace Adam.Menu.Monitoring
 
             }
         }
+
+        private void Aligner01_tb_Enter(object sender, EventArgs e)
+        {
+
+        }
     }
 }

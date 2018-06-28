@@ -293,6 +293,7 @@ namespace Adam.Menu.WaferMapping
                 ContextMenu m = new ContextMenu();
                 m.MenuItems.Add(new MenuItem("Change to LD", PortModeChange));
                 m.MenuItems.Add(new MenuItem("Change to UD", PortModeChange));
+                m.MenuItems.Add(new MenuItem("Change to LU", PortModeChange));
                 m.MenuItems.Add(new MenuItem("Fake Data(Full)", PortModeChange));
                 m.MenuItems.Add(new MenuItem("Fake Data(Empty)", PortModeChange));
                 m.Show((Label)sender, new Point(e.X, e.Y));
@@ -312,6 +313,10 @@ namespace Adam.Menu.WaferMapping
                     NodeManagement.Get(Name).Mode = "UD";
                     WaferAssignUpdate.UpdateLoadPortMode(Name, "UD");
                     break;
+                case "Change to LU":
+                    NodeManagement.Get(Name).Mode = "LU";
+                    WaferAssignUpdate.UpdateLoadPortMode(Name, "LU");
+                    break;
                 case "Fake Data(Full)":
                     WaferAssignUpdate.UpdateLoadPortMapping(Name, "111211111?111110111W11111");
                     break;
@@ -328,7 +333,7 @@ namespace Adam.Menu.WaferMapping
             Node port = NodeManagement.Get(PortName);
             if (port != null)
             {
-                if (port.IsMapping)
+                if (port.IsMapping || port.ByPass)
                 {
                     port.Available = true;
                 }

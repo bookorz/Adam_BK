@@ -2065,9 +2065,6 @@
   <data name="menuMaintenace.Font" type="System.Drawing.Font, System.Drawing">
     <value>微軟正黑體, 15.75pt</value>
   </data>
-  <data name="runingToolStripMenuItem.Enabled" type="System.Boolean, mscorlib">
-    <value>False</value>
-  </data>
   <data name="runingToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
     <value>305, 32</value>
   </data>
@@ -2144,7 +2141,7 @@
     <value>Terminal</value>
   </data>
   <data name="menuMaintenace.Size" type="System.Drawing.Size, System.Drawing">
-    <value>306, 324</value>
+    <value>306, 346</value>
   </data>
   <data name="&gt;&gt;menuMaintenace.Name" xml:space="preserve">
     <value>menuMaintenace</value>

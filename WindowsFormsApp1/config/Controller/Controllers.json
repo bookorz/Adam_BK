@@ -16,7 +16,7 @@
     IPAdress: "192.168.0.128",
     Port: 23,
     ConnectionType: "Socket",
-    Enable: false
+    Enable: true
   },
   {
     "DeviceName": "AlignerController01",

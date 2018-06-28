@@ -48,6 +48,8 @@ namespace Adam.UI_Update.WaferMapping
                     Port_gv.Columns["Job_Id"].Width = 75;
                     Port_gv.Columns["DisplayDestination"].Width = 55;
                     Port_gv.Columns["DestinationSlot"].Width = 30;
+                    Port_gv.Columns["Offset"].Visible = false;
+                    Port_gv.Columns["Angle"].Visible = false;
                     Port_gv.Columns["Destination"].Visible = false;
                     Port_gv.Columns["ProcessFlag"].Visible = false;
                     Port_gv.Columns["Piority"].Visible = false;
@@ -109,17 +111,18 @@ namespace Adam.UI_Update.WaferMapping
                         }
                         port.JobList.Clear();
                         port.ReserveList.Clear();
+                        JobManagement.ClearAssignJobByPort(port.Name);
                     }                   
                     else
                     {
                         int currentIdx = 1;
-                        for (int i = Mapping.Length - 1; i >= 0; i--)
+                        for (int i =  0; i < Mapping.Length; i++)
                         {
                             Job wafer = new Job();
-                            wafer.Slot = (i + 1).ToString();
+                            wafer.Slot = (i+1).ToString();
                             wafer.FromPort = PortName;
                             wafer.Position = PortName;
-                            string Slot = (i + 1).ToString("00");
+                            string Slot = (i+1).ToString("00");
                             switch (Mapping[i])
                             {
                                 case '0':
@@ -176,6 +179,8 @@ namespace Adam.UI_Update.WaferMapping
                     Port_gv.Columns["Host_Job_Id"].Width = 75;
                     Port_gv.Columns["DisplayDestination"].Width = 55;
                     Port_gv.Columns["DestinationSlot"].Width = 30;
+                    Port_gv.Columns["Offset"].Visible = false;
+                    Port_gv.Columns["Angle"].Visible = false;
                     Port_gv.Columns["Job_Id"].Visible = false;
                     Port_gv.Columns["Destination"].Visible = false;
                     Port_gv.Columns["ProcessFlag"].Visible = false;

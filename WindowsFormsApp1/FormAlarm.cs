@@ -49,7 +49,7 @@ namespace Adam
                 NodeManagement.Get(group.First().NodeName).SendCommand(Txn);
                 AlarmManagement.Remove(group.First().NodeName);
             }
-            NodeStatusUpdate.UpdateCurrentState();
+            NodeStatusUpdate.UpdateCurrentState(NodeManagement.GetCurrentState());
         }
 
         private void AlarmFrom_Load(object sender, EventArgs e)

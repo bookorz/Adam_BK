@@ -14,7 +14,7 @@ namespace Adam.UI_Update.Monitoring
     {
         static ILog logger = LogManager.GetLogger(typeof(NodeStatusUpdate));
         delegate void UpdateNode(string Device_ID, string State);
-        delegate void UpdateState();
+        delegate void UpdateState(string State);
 
         public static void UpdateNodeState(string Device_ID, string State)
         {
@@ -41,11 +41,11 @@ namespace Adam.UI_Update.Monitoring
                     {
                         case "Run":
                             State_tb.BackColor = Color.Lime;
-                            UpdateCurrentState();
+                            //UpdateCurrentState();
                             break;
                         case "Idle":
-                            State_tb.BackColor = Color.Yellow;
-                            UpdateCurrentState();
+                            State_tb.BackColor = Color.Orange;
+                            //UpdateCurrentState();
                             break;
                         case "Ready To Load":
                             State_tb.BackColor = Color.DarkGray;                          
@@ -61,7 +61,7 @@ namespace Adam.UI_Update.Monitoring
                             break;
                         case "Alarm":
                             State_tb.BackColor = Color.Red;
-                            UpdateCurrentState();
+                            //UpdateCurrentState();
                             break;
                     }
                     
@@ -75,7 +75,7 @@ namespace Adam.UI_Update.Monitoring
             }
         }
 
-        public static void UpdateCurrentState()
+        public static void UpdateCurrentState(string State)
         {
             try
             {
@@ -84,25 +84,25 @@ namespace Adam.UI_Update.Monitoring
                 if (form == null)
                     return;
 
-                Button state = form.Controls.Find("CurrentState_btn", true).FirstOrDefault() as Button;
+                Button state_btn = form.Controls.Find("CurrentState_btn", true).FirstOrDefault() as Button;
 
-                if (state == null)
+                if (state_btn == null)
                     return;
 
-                if (state.InvokeRequired)
+                if (state_btn.InvokeRequired)
                 {
                     UpdateState ph = new UpdateState(UpdateCurrentState);
-                    state.BeginInvoke(ph);
+                    state_btn.BeginInvoke(ph,State);
                 }
                 else
                 {
-                   
-                    state.Text = NodeManagement.GetCurrentState();
+
+                    state_btn.Text = State;
                     Dictionary<string, string> Params = new Dictionary<string, string>();
-                    switch (state.Text)
+                    switch (State)
                     {
                         case "Run":
-                            state.BackColor = Color.Lime;
+                            state_btn.BackColor = Color.Green;
                             
                             Params.Add("Red", "False");
                             Params.Add("Orange", "False");
@@ -114,7 +114,7 @@ namespace Adam.UI_Update.Monitoring
 
                             break;
                         case "Idle":
-                            state.BackColor = Color.Yellow;
+                            state_btn.BackColor = Color.Orange;
                             
                             Params.Add("Red", "False");
                             Params.Add("Orange", "False");
@@ -136,7 +136,7 @@ namespace Adam.UI_Update.Monitoring
                             FormMain.DIO.SetBlink("Orange", "True");
                             break;
                         case "Alarm":
-                            state.BackColor = Color.Red;
+                            state_btn.BackColor = Color.Red;
                             Params.Add("Red", "True");
                             CheckBox mute = form.Controls.Find("Mute_chk", true).FirstOrDefault() as CheckBox;
                             if (mute != null)
