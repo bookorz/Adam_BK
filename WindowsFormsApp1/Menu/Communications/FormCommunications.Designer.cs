@@ -60,6 +60,8 @@
             this.label25 = new System.Windows.Forms.Label();
             this.labPortNo = new System.Windows.Forms.Label();
             this.txbConnectType = new System.Windows.Forms.TextBox();
+            this.chbTCPIPActive = new System.Windows.Forms.CheckBox();
+            this.txbInformation = new System.Windows.Forms.TextBox();
             this.gbRS232CSetting = new System.Windows.Forms.GroupBox();
             this.tlpRS232C = new System.Windows.Forms.TableLayoutPanel();
             this.txbConnectTypeCOM = new System.Windows.Forms.TextBox();
@@ -77,6 +79,7 @@
             this.splitContainer3 = new System.Windows.Forms.SplitContainer();
             this.cmbPortName = new System.Windows.Forms.ComboBox();
             this.btnRenew = new System.Windows.Forms.Button();
+            this.chbRS232CActive = new System.Windows.Forms.CheckBox();
             this.gpIPAddressSettingandMaintainNotice = new System.Windows.Forms.GroupBox();
             this.txbSettingandMaintainNotice = new System.Windows.Forms.TextBox();
             this.gbDeviceList.SuspendLayout();
@@ -235,6 +238,7 @@
             this.btnRS232C.Name = "btnRS232C";
             this.btnRS232C.Size = new System.Drawing.Size(319, 64);
             this.btnRS232C.TabIndex = 2;
+            this.btnRS232C.Tag = "ComPort";
             this.btnRS232C.Text = "RS-232C";
             this.btnRS232C.UseVisualStyleBackColor = false;
             this.btnRS232C.UseWaitCursor = true;
@@ -253,6 +257,7 @@
             this.btnTCPIP.Name = "btnTCPIP";
             this.btnTCPIP.Size = new System.Drawing.Size(319, 64);
             this.btnTCPIP.TabIndex = 0;
+            this.btnTCPIP.Tag = "Socket";
             this.btnTCPIP.Text = "TCP/IP";
             this.btnTCPIP.UseVisualStyleBackColor = false;
             this.btnTCPIP.UseWaitCursor = true;
@@ -318,7 +323,6 @@
             this.btnSave.TabIndex = 1;
             this.btnSave.Text = "Save";
             this.btnSave.UseVisualStyleBackColor = false;
-            this.btnSave.Visible = false;
             this.btnSave.Click += new System.EventHandler(this.btnSave_Click);
             // 
             // palSettingandMaintain
@@ -381,6 +385,8 @@
             this.tlpTCPIP.Controls.Add(this.tableLayoutPanel8, 1, 0);
             this.tlpTCPIP.Controls.Add(this.labPortNo, 0, 1);
             this.tlpTCPIP.Controls.Add(this.txbConnectType, 1, 2);
+            this.tlpTCPIP.Controls.Add(this.chbTCPIPActive, 1, 7);
+            this.tlpTCPIP.Controls.Add(this.txbInformation, 1, 6);
             this.tlpTCPIP.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tlpTCPIP.Location = new System.Drawing.Point(3, 25);
             this.tlpTCPIP.Name = "tlpTCPIP";
@@ -462,6 +468,7 @@
             0,
             0,
             0});
+            this.nudIPPort.Enter += new System.EventHandler(this.nudIP01_Enter);
             // 
             // tableLayoutPanel8
             // 
@@ -512,6 +519,7 @@
             0,
             0,
             0});
+            this.nudIP04.Enter += new System.EventHandler(this.nudIP01_Enter);
             // 
             // label27
             // 
@@ -541,6 +549,7 @@
             this.nudIP03.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.nudIP03.Size = new System.Drawing.Size(140, 35);
             this.nudIP03.TabIndex = 4;
+            this.nudIP03.Enter += new System.EventHandler(this.nudIP01_Enter);
             // 
             // label26
             // 
@@ -575,6 +584,7 @@
             0,
             0,
             0});
+            this.nudIP02.Enter += new System.EventHandler(this.nudIP01_Enter);
             // 
             // nudIP01
             // 
@@ -597,6 +607,7 @@
             0,
             0});
             this.nudIP01.Click += new System.EventHandler(this.nudIP01_Click);
+            this.nudIP01.Enter += new System.EventHandler(this.nudIP01_Enter);
             // 
             // label25
             // 
@@ -634,10 +645,33 @@
             this.txbConnectType.TabIndex = 4;
             this.txbConnectType.Text = "Socket";
             // 
+            // chbTCPIPActive
+            // 
+            this.chbTCPIPActive.AutoSize = true;
+            this.chbTCPIPActive.Location = new System.Drawing.Point(158, 416);
+            this.chbTCPIPActive.Name = "chbTCPIPActive";
+            this.chbTCPIPActive.Size = new System.Drawing.Size(74, 24);
+            this.chbTCPIPActive.TabIndex = 5;
+            this.chbTCPIPActive.Text = "Active";
+            this.chbTCPIPActive.UseVisualStyleBackColor = true;
+            // 
+            // txbInformation
+            // 
+            this.txbInformation.BackColor = System.Drawing.Color.White;
+            this.txbInformation.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.txbInformation.Font = new System.Drawing.Font("微軟正黑體", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
+            this.txbInformation.Location = new System.Drawing.Point(158, 357);
+            this.txbInformation.Name = "txbInformation";
+            this.txbInformation.ReadOnly = true;
+            this.txbInformation.Size = new System.Drawing.Size(646, 35);
+            this.txbInformation.TabIndex = 6;
+            this.txbInformation.Visible = false;
+            // 
             // gbRS232CSetting
             // 
             this.gbRS232CSetting.Controls.Add(this.tlpRS232C);
-            this.gbRS232CSetting.Location = new System.Drawing.Point(77, 148);
+            this.gbRS232CSetting.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.gbRS232CSetting.Location = new System.Drawing.Point(0, 0);
             this.gbRS232CSetting.Name = "gbRS232CSetting";
             this.gbRS232CSetting.Size = new System.Drawing.Size(813, 503);
             this.gbRS232CSetting.TabIndex = 1;
@@ -661,6 +695,7 @@
             this.tlpRS232C.Controls.Add(this.labConnectTypeCOM, 0, 5);
             this.tlpRS232C.Controls.Add(this.txbStopBit, 1, 4);
             this.tlpRS232C.Controls.Add(this.splitContainer3, 1, 0);
+            this.tlpRS232C.Controls.Add(this.chbRS232CActive, 1, 7);
             this.tlpRS232C.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tlpRS232C.Location = new System.Drawing.Point(3, 25);
             this.tlpRS232C.Name = "tlpRS232C";
@@ -704,6 +739,7 @@
             this.nudDataBits.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.nudDataBits.Size = new System.Drawing.Size(140, 36);
             this.nudDataBits.TabIndex = 1;
+            this.nudDataBits.Enter += new System.EventHandler(this.nudIP01_Enter);
             // 
             // labParityBit
             // 
@@ -767,6 +803,7 @@
             this.nudBaudRate.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.nudBaudRate.Size = new System.Drawing.Size(140, 36);
             this.nudBaudRate.TabIndex = 0;
+            this.nudBaudRate.Enter += new System.EventHandler(this.nudIP01_Enter);
             // 
             // labBaudRate
             // 
@@ -872,6 +909,16 @@
             this.btnRenew.Text = "Renew";
             this.btnRenew.UseVisualStyleBackColor = true;
             this.btnRenew.Click += new System.EventHandler(this.btnRenew_Click);
+            // 
+            // chbRS232CActive
+            // 
+            this.chbRS232CActive.AutoSize = true;
+            this.chbRS232CActive.Location = new System.Drawing.Point(158, 416);
+            this.chbRS232CActive.Name = "chbRS232CActive";
+            this.chbRS232CActive.Size = new System.Drawing.Size(74, 24);
+            this.chbRS232CActive.TabIndex = 13;
+            this.chbRS232CActive.Text = "Active";
+            this.chbRS232CActive.UseVisualStyleBackColor = true;
             // 
             // gpIPAddressSettingandMaintainNotice
             // 
@@ -999,5 +1046,8 @@
         private System.Windows.Forms.TextBox txbConnectTypeCOM;
         private System.Windows.Forms.SplitContainer splitContainer3;
         private System.Windows.Forms.Button btnRenew;
+        private System.Windows.Forms.TextBox txbInformation;
+        private System.Windows.Forms.CheckBox chbRS232CActive;
+        private System.Windows.Forms.CheckBox chbTCPIPActive;
     }
 }
