@@ -392,14 +392,12 @@ namespace Adam.Menu.Communications
                     strReplaceSql = strReplaceSql.Replace("@create_timestamp,", "NOW(),");
                 }
 
-
                 keyValues.Add("@modify_user", Signal.Text);
 
                 dBUtil.ExecuteNonQuery(strReplaceSql, keyValues);
 
                 MessageBox.Show("Done it.", "Save", MessageBoxButtons.OKCancel, MessageBoxIcon.Exclamation, MessageBoxDefaultButton.Button1);
                 FormCommunications_Load(sender, e);
-
             }
             catch (Exception ex)
             {
