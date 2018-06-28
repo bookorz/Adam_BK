@@ -103,7 +103,6 @@ C:\Users\ethan_huang\source\repos\Adam\WindowsFormsApp1\obj\Debug\Adam.Menu.Syst
 C:\Users\ethan_huang\source\repos\Adam\WindowsFormsApp1\obj\Debug\Adam.Menu.SystemSetting.FormSystemSetting.resources
 C:\Users\ethan_huang\source\repos\Adam\WindowsFormsApp1\obj\Debug\Adam.Menu.WaferMapping.FormWaferMapping.resources
 C:\Users\ethan_huang\source\repos\Adam\WindowsFormsApp1\obj\Debug\Adam.Properties.Resources.resources
-C:\Users\ethan_huang\source\repos\Adam\WindowsFormsApp1\obj\Debug\UI_TEST.RunningScreen.resources
 C:\Users\ethan_huang\source\repos\Adam\WindowsFormsApp1\obj\Debug\UI_TEST.Setting.resources
 C:\Users\ethan_huang\source\repos\Adam\WindowsFormsApp1\obj\Debug\UI_TEST.Teaching.resources
 C:\Users\ethan_huang\source\repos\Adam\WindowsFormsApp1\obj\Debug\Adam.SplashScreen.resources
@@ -199,3 +198,4 @@ C:\Users\ethan_huang\source\repos\Adam\WindowsFormsApp1\bin\Debug\config\Command
 C:\Users\ethan_huang\source\repos\Adam\WindowsFormsApp1\obj\Debug\GUI.FormQuery.resources
 C:\Users\ethan_huang\source\repos\Adam\WindowsFormsApp1\bin\Debug\Ionic.Zip.dll
 C:\Users\ethan_huang\source\repos\Adam\WindowsFormsApp1\bin\Debug\NPOI.dll
+C:\Users\ethan_huang\source\repos\Adam\WindowsFormsApp1\obj\Debug\UI_TEST.FormRunning.resources

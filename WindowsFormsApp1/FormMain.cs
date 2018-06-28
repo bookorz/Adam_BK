@@ -17,6 +17,7 @@ using DIOControl;
 using Adam.UI_Update.Layout;
 using Adam.UI_Update.Alarm;
 using GUI;
+using Adam.UI_Update.Running;
 
 namespace Adam
 {
@@ -26,7 +27,7 @@ namespace Adam
         public static DIO DIO;
         public static AlarmMapping AlmMapping;
         private static readonly ILog logger = LogManager.GetLogger(typeof(FormMain));
-        
+
         FromAlarm alarmFrom = new FromAlarm();
         private Menu.Monitoring.FormMonitoring formMonitoring = new Menu.Monitoring.FormMonitoring();
         private Menu.Communications.FormCommunications formCommunications = new Menu.Communications.FormCommunications();
@@ -47,10 +48,20 @@ namespace Adam
 
         }
 
+        protected override CreateParams CreateParams
+        {
+            get
+            {
+                CreateParams cp = base.CreateParams;
+                cp.ExStyle |= 0x02000000;
+                return cp;
+            }
+        }
+
         private void Initialize()
         {
-            
-           
+
+
         }
 
         private void Form1_Load(object sender, EventArgs e)
@@ -73,7 +84,7 @@ namespace Adam
                 tbcMian.SelectTab(0);
                 alarmFrom.Hide();
                 alarmFrom.Show();
-     
+
                 alarmFrom.Hide();
 
 
@@ -223,7 +234,13 @@ namespace Adam
 
         private void runingToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            UI_TEST.RunningScreen runningScreen = new UI_TEST.RunningScreen();
+            if (NodeManagement.IsNeedInitial())
+            {
+                ConnectionStatusUpdate.UpdateInitial(false.ToString());
+                MessageBox.Show("請先執行Initial");
+                return;
+            }
+            UI_TEST.FormRunning runningScreen = new UI_TEST.FormRunning();
             runningScreen.ShowDialog();
         }
 
@@ -233,9 +250,9 @@ namespace Adam
             formVersion.ShowDialog();
         }
 
-       
 
-        
+
+
 
         private void toolStripMenuItem3_Click(object sender, EventArgs e)
         {
@@ -280,6 +297,7 @@ namespace Adam
                         case Transaction.Command.LoadPortType.GetMapping:
 
                             WaferAssignUpdate.UpdateLoadPortMapping(Node.Name, Msg.Value);
+                            RunningUpdate.UpdateNodesJob(Node.Name);
 
                             break;
                         case Transaction.Command.LoadPortType.GetLED:
@@ -305,6 +323,7 @@ namespace Adam
 
             switch (Txn.FormName)
             {
+
                 case "PauseProcedure":
 
                     break;
@@ -468,6 +487,7 @@ namespace Adam
             //Transaction txn = new Transaction();
             switch (Txn.FormName)
             {
+
                 case "FormManual":
 
                     switch (Node.Type)
@@ -478,7 +498,7 @@ namespace Adam
                             ManualPortStatusUpdate.LockUI(false);
 
                             break;
-                        
+
                         case "Robot":
                             ManualRobotStatusUpdate.UpdateGUI(Txn, Node.Name, Msg.Value);//update 手動功能畫面
                             break;
@@ -499,6 +519,7 @@ namespace Adam
                                 case Transaction.Command.LoadPortType.InitialPos:
                                 case Transaction.Command.LoadPortType.ForceInitialPos:
                                     WaferAssignUpdate.UpdateLoadPortMapping(Node.Name, "");
+
                                     break;
                             }
                             break;
@@ -566,16 +587,71 @@ namespace Adam
         {
 
             ConnectionStatusUpdate.UpdateControllerStatus(Device_ID, Status);
-            
+
             logger.Debug("On_Controller_State_Changed");
         }
 
-        public void On_Port_Finished(string PortName)
+        public void On_Port_Begin(string PortName, string FormName)
+        {
+            logger.Debug("On_Port_Begin");
+            NodeStatusUpdate.UpdateCurrentState("Run");
+            try
+            {
+                switch (FormName)
+                {
+                    case "FormRunning":
+                        RunningUpdate.UpdateUseState(PortName, true);
+                        break;
+
+                }
+            }
+            catch (Exception e)
+            {
+                logger.Error(e.StackTrace);
+            }
+        }
+
+        public void On_Port_Finished(string PortName, string FormName)
         {
             logger.Debug("On_Port_Finished");
+            try
+            {
+                Node Port = NodeManagement.Get(PortName);
+                switch (FormName)
+                {
+                    case "FormRunning":
+                        //RunningUpdate.UpdateUseState(PortName, false);
+                        RunningUpdate.UpdateUseState(PortName, false);
+                        RunningUpdate.ReverseRunning(PortName);
 
-            NodeManagement.Get(PortName).ExcuteScript("LoadPortUnload", "Port_Finished");
-            
+                        break;
+                    default:
+                        Port.ExcuteScript("LoadPortUnload", "Port_Finished");
+                        break;
+                }
+            }
+            catch (Exception e)
+            {
+                logger.Error(e.StackTrace);
+            }
+        }
+
+        public void On_Task_Finished(string FormName, string LapsedTime, int LapsedWfCount, int LapsedLotCount)
+        {
+            logger.Debug("On_Task_Finished");
+            NodeStatusUpdate.UpdateCurrentState("Idle");
+            try
+            {
+                RunningUpdate.UpdateRunningInfo("LapsedTime", LapsedTime);
+                RunningUpdate.UpdateRunningInfo("TransCount", "-1");
+                RunningUpdate.UpdateRunningInfo("LapsedWfCount", LapsedWfCount.ToString());
+                RunningUpdate.UpdateRunningInfo("LapsedLotCount", LapsedLotCount.ToString());
+            }
+            catch (Exception e)
+            {
+                logger.Error(e.StackTrace);
+            }
+
         }
 
         public void On_Mode_Changed(string Mode)
@@ -583,14 +659,19 @@ namespace Adam
             logger.Debug("On_Mode_Changed");
 
             ConnectionStatusUpdate.UpdateModeStatus(Mode);
-
+            foreach (Node port in NodeManagement.GetLoadPortList())
+            {
+                WaferAssignUpdate.RefreshMapping(port.Name);
+            }
         }
 
         public void On_Job_Location_Changed(Job Job)
         {
+            logger.Debug("On_Job_Location_Changed");
             JobMoveUpdate.UpdateJobMove(Job.Job_Id);
             WaferAssignUpdate.RefreshMapping(Job.LastNode);
             WaferAssignUpdate.RefreshMapping(Job.Position);
+            RunningUpdate.UpdateJobMove(Job.Job_Id);
         }
 
         public void On_Script_Finished(Node Node, string ScriptName, string FormName)
@@ -622,6 +703,23 @@ namespace Adam
                         case "Robot":
                             ManualRobotStatusUpdate.UpdateGUI(new Transaction(), Node.Name, "");//update 手動功能畫面
                             break;
+                    }
+                    break;
+
+                case "FormRunning":
+                    if (ScriptName.Equals("LoadPortUnload"))
+                    {
+                        Node.ExcuteScript("LoadPortload", "FormRunning");
+                    }
+                    else if (ScriptName.Equals("LoadPortload"))
+                    {//Reverse
+
+                        Node Port = Node;
+                        Node DestPort = NodeManagement.Get(Port.DestPort);
+                        foreach (Job j in DestPort.JobList.Values)
+                        {
+                            j.Destination = Port.Name;
+                        }
                     }
                     break;
             }
@@ -819,10 +917,10 @@ namespace Adam
                     {
 
                         ConnectionStatusUpdate.UpdateInitial(false.ToString());
-                        NodeStatusUpdate.UpdateCurrentState();
-                        ThreadPool.QueueUserWorkItem(new WaitCallback(RouteCtrl.Start), "Normal");
+                        NodeStatusUpdate.UpdateCurrentState(NodeManagement.GetCurrentState());
+                        RouteCtrl.Start("FormMain");
                         //ConnectionStatusUpdate.UpdateModeStatus("Start");
-                        
+
 
                     }
                 }
@@ -831,7 +929,7 @@ namespace Adam
             {
                 RouteCtrl.Stop();
                 //ConnectionStatusUpdate.UpdateModeStatus("Manual");
-               
+
                 ConnectionStatusUpdate.UpdateInitial(false.ToString());
             }
         }
@@ -847,14 +945,14 @@ namespace Adam
             {
 
                 RouteCtrl.Pause();
-                NodeStatusUpdate.UpdateCurrentState();
+                NodeStatusUpdate.UpdateCurrentState("Run");
                 Pause_btn.Text = "Continue";
 
             }
             else if (RouteCtrl.GetMode().Equals("Pause"))
             {
                 RouteCtrl.Continue();
-                NodeStatusUpdate.UpdateCurrentState();
+                NodeStatusUpdate.UpdateCurrentState("Idle");
                 Pause_btn.Text = "Pause";
             }
         }

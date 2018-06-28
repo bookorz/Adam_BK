@@ -5,6 +5,10 @@
     "AdrNo": "1",
     "Type": "Robot",
     "Brand": "Sanwa",
+    "ByPass": false,
+    "Enable": true,
+    "DefaultAligner": "Aligner01",
+    "AlternativeAligner": "Aligner02",
     "RouteTable": [
       {
         "NodeName": "LoadPort01",
@@ -45,11 +49,62 @@
     ]
   },
   {
+    "Name": "Robot02",
+    "Controller": "RobotController02",
+    "AdrNo": "2",
+    "Type": "Robot",
+    "Brand": "Sanwa",
+    "ByPass": false,
+    "Enable": true,
+    "DefaultAligner": "Aligner02",
+    "AlternativeAligner": "Aligner01",
+    "RouteTable": [
+      {
+        "NodeName": "LoadPort05",
+        "NodeType": "Port",
+        "Point": "1205",
+        "Offset": 23
+      },
+      {
+        "NodeName": "LoadPort06",
+        "NodeType": "Port",
+        "Point": "1206",
+        "Offset": -23
+      },
+      {
+        "NodeName": "LoadPort07",
+        "NodeType": "Port",
+        "Point": "1207",
+        "Offset": -23
+      },
+      {
+        "NodeName": "LoadPort08",
+        "NodeType": "Port",
+        "Point": "1208",
+        "Offset": 23
+      },
+      {
+        "NodeName": "Aligner01",
+        "NodeType": "Aligner",
+        "Point": "0121",
+        "Offset": 16
+      },
+      {
+        "NodeName": "Aligner02",
+        "NodeType": "Aligner",
+        "Point": "0122",
+        "Offset": -16
+      }
+    ]
+  },
+  {
     "Name": "Aligner01",
     "Controller": "AlignerController01",
     "AdrNo": "3",
     "Type": "Aligner",
     "Brand": "Sanwa",
+    "ByPass": false,
+    "Enable": true,
     "RouteTable": [
       {
         "NodeName": "LoadPort01",
@@ -98,11 +153,68 @@
     ]
   },
   {
+    "Name": "Aligner02",
+    "Controller": "AlignerController02",
+    "AdrNo": "4",
+    "Type": "Aligner",
+    "Brand": "Sanwa",
+    "ByPass": false,
+    "Enable": true,
+    "RouteTable": [
+      {
+        "NodeName": "LoadPort01",
+        "NodeType": "Port"
+      },
+      {
+        "NodeName": "LoadPort02",
+        "NodeType": "Port"
+      },
+      {
+        "NodeName": "LoadPort03",
+        "NodeType": "Port"
+      },
+      {
+        "NodeName": "LoadPort04",
+        "NodeType": "Port"
+      },
+      {
+        "NodeName": "LoadPort05",
+        "NodeType": "Port"
+      },
+      {
+        "NodeName": "LoadPort06",
+        "NodeType": "Port"
+      },
+      {
+        "NodeName": "LoadPort07",
+        "NodeType": "Port"
+      },
+      {
+        "NodeName": "LoadPort08",
+        "NodeType": "Port"
+      },
+      {
+        "NodeName": "OCR02",
+        "NodeType": "OCR"
+      },
+      {
+        "NodeName": "Robot01",
+        "NodeType": "Robot"
+      },
+      {
+        "NodeName": "Robot02",
+        "NodeType": "Robot"
+      }
+    ]
+  },
+  {
     "Name": "OCR01",
     "Controller": "OCRController01",
     "AdrNo": "1",
     "Type": "OCR",
     "Brand": "COGNEX",
+    "ByPass": false,
+    "Enable": true,
     "RouteTable": [
       {
         "NodeName": "Aligner01",
@@ -116,6 +228,8 @@
     "AdrNo": "1",
     "Type": "OCR",
     "Brand": "HST",
+    "ByPass": false,
+    "Enable": true,
     "RouteTable": [
       {
         "NodeName": "Aligner02",
@@ -130,6 +244,8 @@
     "Type": "LoadPort",
     "Brand": "TDK",
     "Mode": "LD",
+    "ByPass": true,
+    "Enable": true,
     "RouteTable": [
       {
         "NodeName": "Robot01",
@@ -152,6 +268,8 @@
     "Type": "LoadPort",
     "Brand": "TDK",
     "Mode": "LD",
+    "ByPass": true,
+    "Enable": true,
     "RouteTable": [
       {
         "NodeName": "Robot01",
@@ -174,6 +292,8 @@
     "Type": "LoadPort",
     "Brand": "TDK",
     "Mode": "LD",
+    "ByPass": true,
+    "Enable": true,
     "RouteTable": [
       {
         "NodeName": "Robot01",
@@ -196,9 +316,107 @@
     "Type": "LoadPort",
     "Brand": "TDK",
     "Mode": "LD",
+    "ByPass": true,
+    "Enable": true,
     "RouteTable": [
       {
         "NodeName": "Robot01",
+        "NodeType": "Robot"
+      },
+      {
+        "NodeName": "Aligner01",
+        "NodeType": "Aligner"
+      },
+      {
+        "NodeName": "Aligner02",
+        "NodeType": "Aligner"
+      }
+    ]
+  },
+  {
+    "Name": "LoadPort05",
+    "Controller": "LoadPortController04",
+    "AdrNo": "00",
+    "Type": "LoadPort",
+    "Brand": "TDK",
+    "Mode": "LD",
+    "ByPass": true,
+    "Enable": true,
+    "RouteTable": [
+      {
+        "NodeName": "Robot02",
+        "NodeType": "Robot"
+      },
+      {
+        "NodeName": "Aligner01",
+        "NodeType": "Aligner"
+      },
+      {
+        "NodeName": "Aligner02",
+        "NodeType": "Aligner"
+      }
+    ]
+  },
+  {
+    "Name": "LoadPort06",
+    "Controller": "LoadPortController04",
+    "AdrNo": "00",
+    "Type": "LoadPort",
+    "Brand": "TDK",
+    "Mode": "LD",
+    "ByPass": true,
+    "Enable": true,
+    "RouteTable": [
+      {
+        "NodeName": "Robot02",
+        "NodeType": "Robot"
+      },
+      {
+        "NodeName": "Aligner01",
+        "NodeType": "Aligner"
+      },
+      {
+        "NodeName": "Aligner02",
+        "NodeType": "Aligner"
+      }
+    ]
+  },
+  {
+    "Name": "LoadPort07",
+    "Controller": "LoadPortController04",
+    "AdrNo": "00",
+    "Type": "LoadPort",
+    "Brand": "TDK",
+    "Mode": "LD",
+    "ByPass": true,
+    "Enable": true,
+    "RouteTable": [
+      {
+        "NodeName": "Robot02",
+        "NodeType": "Robot"
+      },
+      {
+        "NodeName": "Aligner01",
+        "NodeType": "Aligner"
+      },
+      {
+        "NodeName": "Aligner02",
+        "NodeType": "Aligner"
+      }
+    ]
+  },
+  {
+    "Name": "LoadPort08",
+    "Controller": "LoadPortController04",
+    "AdrNo": "00",
+    "Type": "LoadPort",
+    "Brand": "TDK",
+    "Mode": "LD",
+    "ByPass": true,
+    "Enable": true,
+    "RouteTable": [
+      {
+        "NodeName": "Robot02",
         "NodeType": "Robot"
       },
       {

@@ -53,6 +53,7 @@ namespace Adam
             this.CurrentState_btn = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
             this.groupBox4 = new System.Windows.Forms.GroupBox();
+            this.Mute_chk = new System.Windows.Forms.CheckBox();
             this.Buzzer2_Signal = new System.Windows.Forms.Button();
             this.Buzzer1_Signal = new System.Windows.Forms.Button();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
@@ -111,7 +112,6 @@ namespace Adam
             this.terminalToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.panel3 = new System.Windows.Forms.Panel();
             this.directorySearcher1 = new System.DirectoryServices.DirectorySearcher();
-            this.Mute_chk = new System.Windows.Forms.CheckBox();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer13)).BeginInit();
             this.splitContainer13.Panel1.SuspendLayout();
             this.splitContainer13.Panel2.SuspendLayout();
@@ -323,6 +323,14 @@ namespace Adam
             this.groupBox4.Controls.Add(this.Buzzer1_Signal);
             this.groupBox4.Name = "groupBox4";
             this.groupBox4.TabStop = false;
+            // 
+            // Mute_chk
+            // 
+            resources.ApplyResources(this.Mute_chk, "Mute_chk");
+            this.Mute_chk.Checked = true;
+            this.Mute_chk.CheckState = System.Windows.Forms.CheckState.Checked;
+            this.Mute_chk.Name = "Mute_chk";
+            this.Mute_chk.UseVisualStyleBackColor = true;
             // 
             // Buzzer2_Signal
             // 
@@ -729,8 +737,8 @@ namespace Adam
             // 
             // runingToolStripMenuItem
             // 
-            resources.ApplyResources(this.runingToolStripMenuItem, "runingToolStripMenuItem");
             this.runingToolStripMenuItem.Name = "runingToolStripMenuItem";
+            resources.ApplyResources(this.runingToolStripMenuItem, "runingToolStripMenuItem");
             this.runingToolStripMenuItem.Click += new System.EventHandler(this.runingToolStripMenuItem_Click);
             // 
             // initToolStripMenuItem
@@ -799,14 +807,6 @@ namespace Adam
             this.directorySearcher1.ClientTimeout = System.TimeSpan.Parse("-00:00:01");
             this.directorySearcher1.ServerPageTimeLimit = System.TimeSpan.Parse("-00:00:01");
             this.directorySearcher1.ServerTimeLimit = System.TimeSpan.Parse("-00:00:01");
-            // 
-            // Mute_chk
-            // 
-            resources.ApplyResources(this.Mute_chk, "Mute_chk");
-            this.Mute_chk.Checked = true;
-            this.Mute_chk.CheckState = System.Windows.Forms.CheckState.Checked;
-            this.Mute_chk.Name = "Mute_chk";
-            this.Mute_chk.UseVisualStyleBackColor = true;
             // 
             // FormMain
             // 
