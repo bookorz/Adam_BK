@@ -38,7 +38,7 @@ namespace Adam
 
         private void FormTerminal_Load(object sender, EventArgs e)
         {
-            Util.DBUtil dBUtil = new Util.DBUtil();
+            DBUtil dBUtil = new DBUtil();
 
             try
             {
@@ -101,7 +101,7 @@ namespace Adam
             txbNotice.Text = string.Empty;
 
             Dictionary<string, object> keyValues = new Dictionary<string, object>();
-            Util.DBUtil dBUtil = new Util.DBUtil();
+            DBUtil dBUtil = new DBUtil();
 
             try
             {
@@ -148,7 +148,7 @@ namespace Adam
             }
 
             Dictionary<string, object> keyValues = new Dictionary<string, object>();
-            Util.DBUtil dBUtil = new Util.DBUtil();
+            DBUtil dBUtil = new DBUtil();
 
             try
             {
@@ -194,7 +194,7 @@ namespace Adam
             }
 
             Dictionary<string, object> keyValues = new Dictionary<string, object>();
-            Util.DBUtil dBUtil = new Util.DBUtil();
+            DBUtil dBUtil = new DBUtil();
 
             try
             {
