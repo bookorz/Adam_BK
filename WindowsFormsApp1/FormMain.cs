@@ -5,6 +5,7 @@ using System.Drawing;
 using System.Windows.Forms;
 using TransferControl.Engine;
 using TransferControl.Management;
+using TransferControl.Parser;
 using log4net.Config;
 using Adam.UI_Update.Monitoring;
 using log4net;
@@ -18,6 +19,7 @@ using Adam.UI_Update.Layout;
 using Adam.UI_Update.Alarm;
 using GUI;
 using Adam.UI_Update.Running;
+using System.Linq;
 
 namespace Adam
 {
@@ -35,6 +37,7 @@ namespace Adam
         private Menu.Status.FormStatus formStatus = new Menu.Status.FormStatus();
         private Menu.OCR.FormOCR formOCR = new Menu.OCR.FormOCR();
         private Menu.SystemSetting.FormSystemSetting formSystem = new Menu.SystemSetting.FormSystemSetting();
+        private Menu.RunningScreen.FormRunningScreen formTestMode = new Menu.RunningScreen.FormRunningScreen();
 
         public FormMain()
         {
@@ -69,7 +72,7 @@ namespace Adam
 
 
 
-            Control[] ctrlForm = new Control[] { formMonitoring, formCommunications, formWafer, formStatus, formOCR, formSystem };
+            Control[] ctrlForm = new Control[] { formMonitoring, formCommunications, formWafer, formStatus, formOCR, formTestMode, formSystem };
 
             try
             {
@@ -231,28 +234,12 @@ namespace Adam
             UI_TEST.Teaching teaching = new UI_TEST.Teaching();
             teaching.ShowDialog();
         }
-
-        private void runingToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            if (NodeManagement.IsNeedInitial())
-            {
-                ConnectionStatusUpdate.UpdateInitial(false.ToString());
-                MessageBox.Show("請先執行Initial");
-                return;
-            }
-            UI_TEST.FormRunning runningScreen = new UI_TEST.FormRunning();
-            runningScreen.ShowDialog();
-        }
-
+      
         private void btnVersion_Click(object sender, EventArgs e)
         {
             GUI.FormVersion formVersion = new GUI.FormVersion();
             formVersion.ShowDialog();
         }
-
-
-
-
 
         private void toolStripMenuItem3_Click(object sender, EventArgs e)
         {
@@ -278,15 +265,7 @@ namespace Adam
         public void On_Command_Excuted(Node Node, Transaction Txn, ReturnMessage Msg)
         {
             logger.Debug("On_Command_Excuted");
-            switch (Txn.Method)
-            {
-                //case Transaction.Command.RobotType.Reset:
-                //    Node.State = Node.LastState;
-                //    AlarmManagement.Remove(Node.Name);
-                //    AlarmUpdate.UpdateAlarmList(AlarmManagement.GetAll());
-
-                //    break;
-            }
+          
             Transaction txn = new Transaction();
 
             switch (Node.Type)
@@ -297,24 +276,60 @@ namespace Adam
                         case Transaction.Command.LoadPortType.GetMapping:
 
                             WaferAssignUpdate.UpdateLoadPortMapping(Node.Name, Msg.Value);
-                            RunningUpdate.UpdateNodesJob(Node.Name);
+                            
 
-                            break;
-                        case Transaction.Command.LoadPortType.GetLED:
-                            if (RouteCtrl.GetMode().Equals("Start"))
+                            break;                       
+                        case Transaction.Command.LoadPortType.ReadStatus:
+                            MessageParser parser = new MessageParser(Node.Brand);
+                            Dictionary<string, string> content = parser.ParseMessage(Txn.Method, Msg.Value);
+                            bool CheckResult = true;
+                            foreach (KeyValuePair<string, string> each in content)
                             {
-                                if (Msg.Value.Length >= 13)
+                                switch (each.Key)
                                 {
-                                    //When Presence & Placement on
-                                    if (Msg.Value[3] == '1' && Msg.Value[4] == '1')
-                                    {
-                                        Node.ExcuteScript("LoadPortFoupIn", "LoadPortFoup", true);
-                                    }
-                                    else
-                                    {
-                                        Node.ExcuteScript("LoadPortFoupOut", "LoadPortFoup", true);
-                                    }
+                                    case "FOUP Clamp Status":
+                                        if (!each.Value.Equals("Open"))
+                                        {
+                                            CheckResult = false;
+                                        }
+                                        break;
+                                    case "Latch Key Status":
+                                        if (!each.Value.Equals("Close"))
+                                        {
+                                            CheckResult = false;
+                                        }
+                                        break;
+                                    case "Cassette Presence":
+                                        if (!each.Value.Equals("Normal position"))
+                                        {
+                                            CheckResult = false;
+                                        }
+                                        break;
+                                    case "Door Position":
+                                        if (!each.Value.Equals("Close position"))
+                                        {
+                                            CheckResult = false;
+                                        }
+                                        break;
+                                    case "Equipment Status":
+                                        if (each.Value.Equals("Fatal error"))
+                                        {
+                                            CheckResult = false;
+                                        }
+                                        break;
                                 }
+                            }
+                            if (CheckResult)
+                            {
+                                Node.FoupReady = true;
+                                Node.ExcuteScript("LoadPortFoupIn", "LoadPortFoup", true);
+
+                            }
+                            else
+                            {
+                                Node.FoupReady = false;
+                                Node.ExcuteScript("LoadPortFoupOut", "LoadPortFoup", true);
+                                On_Node_State_Changed(Node, "Ready To Load");
                             }
                             break;
                     }
@@ -420,11 +435,7 @@ namespace Adam
                                     break;
                             }
                             break;
-                        default:
-                            AlarmManagement.Remove(Node.Name);
-                            AlarmUpdate.UpdateAlarmList(AlarmManagement.GetAll());
-
-                            break;
+                       
                     }
                     break;
                 default:
@@ -561,6 +572,27 @@ namespace Adam
             {
                 case "LoadPort":
                     ManualPortStatusUpdate.UpdateLog(Node.Name, Msg.Command + " Trigger");
+                    switch (Msg.Command)
+                    {
+                        case "MANSW":
+                            if (Node.FoupReady)
+                            {
+                                Node.ExcuteScript("LoadPortMapping", "MANSW", true);
+                            }
+                            break;
+                        case "PODON":
+                            //檢查LoadPort狀態
+                            txn.Method = Transaction.Command.LoadPortType.ReadStatus;
+                            txn.FormName = "";
+                            Node.SendCommand(txn);
+
+                            break;
+                        case "PODOF":
+                            Node.FoupReady = false;
+                            Node.ExcuteScript("LoadPortFoupOut", "LoadPortFoup", true);
+                            On_Node_State_Changed(Node, "Ready To Load");
+                            break;
+                    }
                     break;
             }
 
@@ -588,6 +620,21 @@ namespace Adam
 
             ConnectionStatusUpdate.UpdateControllerStatus(Device_ID, Status);
 
+            if (Status.Equals("Connected"))
+            {
+                //當Loadport連線成功，檢查狀態，進行燈號顯示
+                var findPort = from port in NodeManagement.GetLoadPortList()
+                               where port.Controller.Equals(Device_ID) && !port.ByPass && port.Type.Equals("LoadPort")
+                               select port;
+
+                foreach (Node port in findPort)
+                {
+                    port.ExcuteScript("LoadPortFoupOut", "LoadPortFoup", true);
+                }
+
+            }
+
+
             logger.Debug("On_Controller_State_Changed");
         }
 
@@ -595,12 +642,15 @@ namespace Adam
         {
             logger.Debug("On_Port_Begin");
             NodeStatusUpdate.UpdateCurrentState("Run");
+            WaferAssignUpdate.RefreshMapping(PortName);
+            WaferAssignUpdate.RefreshMapping(NodeManagement.Get(PortName).DestPort);
             try
             {
                 switch (FormName)
                 {
-                    case "FormRunning":
-                        RunningUpdate.UpdateUseState(PortName, true);
+                    case "Running":
+                        MonitoringUpdate.UpdateUseState(PortName, true);
+                        WaferAssignUpdate.UpdateUseState(PortName, true);
                         break;
 
                 }
@@ -616,12 +666,15 @@ namespace Adam
             logger.Debug("On_Port_Finished");
             try
             {
+                WaferAssignUpdate.RefreshMapping(PortName);
+                WaferAssignUpdate.RefreshMapping(NodeManagement.Get(PortName).DestPort);
                 Node Port = NodeManagement.Get(PortName);
                 switch (FormName)
                 {
-                    case "FormRunning":
+                    case "Running":
                         //RunningUpdate.UpdateUseState(PortName, false);
-                        RunningUpdate.UpdateUseState(PortName, false);
+                        MonitoringUpdate.UpdateUseState(PortName, false);
+                        WaferAssignUpdate.UpdateUseState(PortName, false);
                         RunningUpdate.ReverseRunning(PortName);
 
                         break;
@@ -669,9 +722,8 @@ namespace Adam
         {
             logger.Debug("On_Job_Location_Changed");
             JobMoveUpdate.UpdateJobMove(Job.Job_Id);
-            WaferAssignUpdate.RefreshMapping(Job.LastNode);
-            WaferAssignUpdate.RefreshMapping(Job.Position);
-            RunningUpdate.UpdateJobMove(Job.Job_Id);
+            
+            
         }
 
         public void On_Script_Finished(Node Node, string ScriptName, string FormName)
@@ -695,6 +747,16 @@ namespace Adam
                     if (!NodeManagement.IsNeedInitial())
                     {
                         ConnectionStatusUpdate.UpdateInitial(true.ToString());
+                        foreach (Node port in NodeManagement.GetLoadPortList())
+                        {
+                            if (!port.ByPass)
+                            {
+                                Transaction txn = new Transaction();
+                                txn.Method = Transaction.Command.LoadPortType.ReadStatus;
+                                txn.FormName = "";
+                                port.SendCommand(txn);
+                            }
+                        }
                     }
                     break;
                 case "FormManual-Script":
@@ -707,10 +769,10 @@ namespace Adam
                     }
                     break;
 
-                case "FormRunning":
+                case "Running":
                     if (ScriptName.Equals("LoadPortUnload"))
                     {
-                        Node.ExcuteScript("LoadPortload", "FormRunning");
+                        Node.ExcuteScript("LoadPortload", "Running");
                     }
                     else if (ScriptName.Equals("LoadPortload"))
                     {//Reverse

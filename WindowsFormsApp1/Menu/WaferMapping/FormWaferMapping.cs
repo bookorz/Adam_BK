@@ -5,6 +5,7 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.Linq;
 using System.Text;
 using System.Threading;
 using System.Windows.Forms;
@@ -59,7 +60,7 @@ namespace Adam.Menu.WaferMapping
                             e.CellStyle.ForeColor = Color.White;
                             break;
                         case "Crossed":
-                        case "Undefined":                           
+                        case "Undefined":
                         case "Double":
                             e.CellStyle.BackColor = Color.Red;
                             e.CellStyle.ForeColor = Color.White;
@@ -83,29 +84,32 @@ namespace Adam.Menu.WaferMapping
 
 
                 string PortName = (sender as DataGridView).Name.Replace("Assign_Gv", "");
-                if (NodeManagement.Get(PortName).Mode.Equals("LD"))
+                //if (NodeManagement.Get(PortName).Mode.Equals("LD"))
+                // {
+                if (!NodeManagement.Get(PortName).IsMapping)
                 {
+                    return;
+                }
 
-                    CurrentSelected = sender;
-                    foreach (Node eachPort in NodeManagement.GetLoadPortList("UD"))
+                CurrentSelected = sender;
+                foreach (Node eachPort in NodeManagement.GetLoadPortList())
+                {
+                    if (eachPort.Name.Equals(PortName) || !eachPort.IsMapping)
                     {
-                        List<MenuItem> tmpAry = new List<MenuItem>();
-                        for (int i = 1; i <= 25; i++)
+                        continue;
+                    }
+                    List<MenuItem> tmpAry = new List<MenuItem>();
+                    for (int i = 1; i <= 25; i++)
+                    {
+                        MenuItem tmp;
+                        if (!eachPort.ReserveList.ContainsKey(i.ToString()))
                         {
-                            MenuItem tmp;
-                            if (!eachPort.ReserveList.ContainsKey(i.ToString()) )
+                            if (eachPort.JobList.ContainsKey(i.ToString()))
                             {
-                                if (eachPort.JobList.ContainsKey(i.ToString()))
+                                if (eachPort.JobList[i.ToString()].MapFlag)
                                 {
-                                    if (eachPort.JobList[i.ToString()].MapFlag)
-                                    {
-                                        tmp = new MenuItem(eachPort.Name + "-" + i.ToString(), AssignPort);
-                                        tmp.Enabled = false;
-                                    }
-                                    else
-                                    {
-                                        tmp = new MenuItem(eachPort.Name + "-" + i.ToString(), AssignPort);
-                                    }
+                                    tmp = new MenuItem(eachPort.Name + "-" + i.ToString(), AssignPort);
+                                    tmp.Enabled = false;
                                 }
                                 else
                                 {
@@ -115,15 +119,20 @@ namespace Adam.Menu.WaferMapping
                             else
                             {
                                 tmp = new MenuItem(eachPort.Name + "-" + i.ToString(), AssignPort);
-                                tmp.Enabled = false;
                             }
-                            tmpAry.Add(tmp);
                         }
-                        m.MenuItems.Add(eachPort.Name, tmpAry.ToArray());
+                        else
+                        {
+                            tmp = new MenuItem(eachPort.Name + "-" + i.ToString(), AssignPort);
+                            tmp.Enabled = false;
+                        }
+                        tmpAry.Add(tmp);
                     }
-                    m.MenuItems.Add(new MenuItem("取消", UnAssignPort));
-
+                    m.MenuItems.Add(eachPort.Name, tmpAry.ToArray());
                 }
+                m.MenuItems.Add(new MenuItem("取消", UnAssignPort));
+
+                //}
 
                 m.Show((DataGridView)sender, new Point(e.X, e.Y));
 
@@ -192,6 +201,14 @@ namespace Adam.Menu.WaferMapping
         private void AssignPort(object sender, EventArgs e)
         {
             string PortName = (sender as MenuItem).Text.Split('-')[0];
+           string LDPort = (CurrentSelected as DataGridView).Name.Replace("Assign_Gv", "");
+            Node UD = NodeManagement.Get(PortName);
+            Node LD = NodeManagement.Get(LDPort);
+            UD.Mode = "UD";
+            LD.Mode = "LD";
+            LD.DestPort = UD.Name;
+            WaferAssignUpdate.UpdateLoadPortMode(UD.Name, UD.Mode);
+            WaferAssignUpdate.UpdateLoadPortMode(LD.Name, LD.Mode);
             string Slot = (sender as MenuItem).Text.Split('-')[1];
             if ((CurrentSelected as DataGridView).SelectedRows.Count == 0)
             {
@@ -202,11 +219,11 @@ namespace Adam.Menu.WaferMapping
                 string waferId = (CurrentSelected as DataGridView).SelectedRows[0].Cells["Job_Id"].Value.ToString();
                 string OrgDest = (CurrentSelected as DataGridView).SelectedRows[0].Cells["Destination"].Value.ToString();
                 string OrgDestSlot = (CurrentSelected as DataGridView).SelectedRows[0].Cells["DestinationSlot"].Value.ToString();
-
-                Job UDSlot = NodeManagement.Get(PortName).GetJob(Slot);
-                    if(UDSlot == null)
+                
+                Job UDSlot = UD.GetJob(Slot);
+                if (UDSlot == null)
                 {
-                    MessageBox.Show(PortName+"沒有FOUP或是尚未進行Mapping");
+                    MessageBox.Show(PortName + "沒有FOUP或是尚未進行Mapping");
                     return;
                 }
                 if (UDSlot.MapFlag == false)
@@ -214,6 +231,7 @@ namespace Adam.Menu.WaferMapping
                     Job wafer = JobManagement.Get(waferId);
                     if (wafer != null)
                     {
+                       
                         wafer.Destination = PortName;
                         wafer.DisplayDestination = PortName.Replace("Load", "");
                         wafer.DestinationSlot = Slot;
@@ -279,7 +297,7 @@ namespace Adam.Menu.WaferMapping
                 }
                  (CurrentSelected as DataGridView).Refresh();
                 JobMoveUpdate.UpdateNodesJob((CurrentSelected as DataGridView).Name.Replace("Assign_Gv", ""));
-                
+
             }
 
 
@@ -291,9 +309,9 @@ namespace Adam.Menu.WaferMapping
             {
                 CurrentSelected = sender;
                 ContextMenu m = new ContextMenu();
-                m.MenuItems.Add(new MenuItem("Change to LD", PortModeChange));
-                m.MenuItems.Add(new MenuItem("Change to UD", PortModeChange));
-                m.MenuItems.Add(new MenuItem("Change to LU", PortModeChange));
+                //m.MenuItems.Add(new MenuItem("Change to LD", PortModeChange));
+                //m.MenuItems.Add(new MenuItem("Change to UD", PortModeChange));
+                //m.MenuItems.Add(new MenuItem("Change to LU", PortModeChange));
                 m.MenuItems.Add(new MenuItem("Fake Data(Full)", PortModeChange));
                 m.MenuItems.Add(new MenuItem("Fake Data(Empty)", PortModeChange));
                 m.Show((Label)sender, new Point(e.X, e.Y));
@@ -305,18 +323,18 @@ namespace Adam.Menu.WaferMapping
             string Name = (CurrentSelected as Label).Name.Replace("State_lb", "");
             switch (((MenuItem)sender).Text)
             {
-                case "Change to LD":
-                    NodeManagement.Get(Name).Mode = "LD";
-                    WaferAssignUpdate.UpdateLoadPortMode(Name, "LD");
-                    break;
-                case "Change to UD":
-                    NodeManagement.Get(Name).Mode = "UD";
-                    WaferAssignUpdate.UpdateLoadPortMode(Name, "UD");
-                    break;
-                case "Change to LU":
-                    NodeManagement.Get(Name).Mode = "LU";
-                    WaferAssignUpdate.UpdateLoadPortMode(Name, "LU");
-                    break;
+                //case "Change to LD":
+                //    NodeManagement.Get(Name).Mode = "LD";
+                //    WaferAssignUpdate.UpdateLoadPortMode(Name, "LD");
+                //    break;
+                //case "Change to UD":
+                //    NodeManagement.Get(Name).Mode = "UD";
+                //    WaferAssignUpdate.UpdateLoadPortMode(Name, "UD");
+                //    break;
+                //case "Change to LU":
+                //    NodeManagement.Get(Name).Mode = "LU";
+                //    WaferAssignUpdate.UpdateLoadPortMode(Name, "LU");
+                //    break;
                 case "Fake Data(Full)":
                     WaferAssignUpdate.UpdateLoadPortMapping(Name, "111211111?111110111W11111");
                     break;
@@ -327,24 +345,29 @@ namespace Adam.Menu.WaferMapping
 
         }
 
-        private void PortStart_Btn_Click(object sender, EventArgs e)
+        private void LoadPort_ASCM_Click(object sender, EventArgs e)
         {
-            string PortName = (sender as Button).Name.Replace("_Start_Btn", "");
+            string PortName = (sender as Button).Name.Replace("_ASCM", "");
+            string AssignStatus = (sender as Button).Text;
             Node port = NodeManagement.Get(PortName);
             if (port != null)
             {
-                if (port.IsMapping || port.ByPass)
+                if (AssignStatus.Equals("Assign Cancel"))
+                {
+                    port.Available = false;
+                    (sender as Button).Text = "Assign Complete";
+                    (sender as Button).BackColor = Color.DimGray;
+                }
+                else if (AssignStatus.Equals("Assign Complete"))
                 {
                     port.Available = true;
-                }
-                else
-                {
-                    MessageBox.Show(PortName + " 尚未Mapping");
+                    (sender as Button).Text = "Assign Cancel";
+                    (sender as Button).BackColor = Color.Green;
                 }
             }
             else
             {
-                MessageBox.Show(PortName + " 不存在");
+                MessageBox.Show(PortName + "不存在!");
             }
         }
     }

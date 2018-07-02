@@ -24,7 +24,7 @@
     "IPAdress": "192.168.0.1",
     "Port": 23,
     "ConnectionType": "Socket",
-    "Enable": true
+    "Enable": false
   },
   {
     DeviceName: "AlignerController02",
@@ -32,7 +32,7 @@
     IPAdress: "192.168.0.2",
     Port: 23,
     ConnectionType: "Socket",
-    Enable: true
+    Enable: false
   },
   {
     DeviceName: "OCRController01",

@@ -222,6 +222,9 @@
   <data name="Connection_btn.FlatStyle" type="System.Windows.Forms.FlatStyle, System.Windows.Forms">
     <value>Flat</value>
   </data>
+  <data name="Connection_btn.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
   <data name="Connection_btn.Location" type="System.Drawing.Point, System.Drawing">
     <value>22, 28</value>
   </data>
@@ -783,6 +786,9 @@
   <data name="Mute_chk.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
   </data>
+  <data name="Mute_chk.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
   <data name="Mute_chk.Location" type="System.Drawing.Point, System.Drawing">
     <value>6, 125</value>
   </data>
@@ -888,6 +894,9 @@
   <data name="lbl_login_date.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
   </data>
+  <data name="lbl_login_date.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
   <data name="lbl_login_date.Location" type="System.Drawing.Point, System.Drawing">
     <value>121, 86</value>
   </data>
@@ -914,6 +923,9 @@
   </data>
   <data name="lbl_login_group.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
+  </data>
+  <data name="lbl_login_group.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
   </data>
   <data name="lbl_login_group.Location" type="System.Drawing.Point, System.Drawing">
     <value>121, 59</value>
@@ -971,6 +983,9 @@
   </data>
   <data name="lbl_login_id.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
+  </data>
+  <data name="lbl_login_id.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
   </data>
   <data name="lbl_login_id.Location" type="System.Drawing.Point, System.Drawing">
     <value>121, 35</value>
@@ -1696,6 +1711,30 @@
   <data name="&gt;&gt;tabOCR.ZOrder" xml:space="preserve">
     <value>4</value>
   </data>
+  <data name="TestMode.Location" type="System.Drawing.Point, System.Drawing">
+    <value>4, 44</value>
+  </data>
+  <data name="TestMode.Size" type="System.Drawing.Size, System.Drawing">
+    <value>1626, 764</value>
+  </data>
+  <data name="TestMode.TabIndex" type="System.Int32, mscorlib">
+    <value>10</value>
+  </data>
+  <data name="TestMode.Text" xml:space="preserve">
+    <value>Running Screen</value>
+  </data>
+  <data name="&gt;&gt;TestMode.Name" xml:space="preserve">
+    <value>TestMode</value>
+  </data>
+  <data name="&gt;&gt;TestMode.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TabPage, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;TestMode.Parent" xml:space="preserve">
+    <value>tbcMian</value>
+  </data>
+  <data name="&gt;&gt;TestMode.ZOrder" xml:space="preserve">
+    <value>5</value>
+  </data>
   <data name="tabSetting.Location" type="System.Drawing.Point, System.Drawing">
     <value>4, 44</value>
   </data>
@@ -1721,7 +1760,7 @@
     <value>tbcMian</value>
   </data>
   <data name="&gt;&gt;tabSetting.ZOrder" xml:space="preserve">
-    <value>5</value>
+    <value>6</value>
   </data>
   <data name="tbcMian.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
     <value>Left</value>
@@ -2065,12 +2104,6 @@
   <data name="menuMaintenace.Font" type="System.Drawing.Font, System.Drawing">
     <value>微軟正黑體, 15.75pt</value>
   </data>
-  <data name="runingToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>305, 32</value>
-  </data>
-  <data name="runingToolStripMenuItem.Text" xml:space="preserve">
-    <value>Runing</value>
-  </data>
   <data name="initToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
     <value>305, 32</value>
   </data>
@@ -2141,7 +2174,7 @@
     <value>Terminal</value>
   </data>
   <data name="menuMaintenace.Size" type="System.Drawing.Size, System.Drawing">
-    <value>306, 346</value>
+    <value>306, 314</value>
   </data>
   <data name="&gt;&gt;menuMaintenace.Name" xml:space="preserve">
     <value>menuMaintenace</value>
@@ -2351,12 +2384,6 @@
     <value>bBBToolStripMenuItem</value>
   </data>
   <data name="&gt;&gt;bBBToolStripMenuItem.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;runingToolStripMenuItem.Name" xml:space="preserve">
-    <value>runingToolStripMenuItem</value>
-  </data>
-  <data name="&gt;&gt;runingToolStripMenuItem.Type" xml:space="preserve">
     <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;initToolStripMenuItem.Name" xml:space="preserve">

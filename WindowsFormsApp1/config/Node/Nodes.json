@@ -104,7 +104,7 @@
     "Type": "Aligner",
     "Brand": "Sanwa",
     "ByPass": false,
-    "Enable": true,
+    "Enable": false,
     "RouteTable": [
       {
         "NodeName": "LoadPort01",
@@ -159,7 +159,7 @@
     "Type": "Aligner",
     "Brand": "Sanwa",
     "ByPass": false,
-    "Enable": true,
+    "Enable": false,
     "RouteTable": [
       {
         "NodeName": "LoadPort01",
@@ -268,7 +268,7 @@
     "Type": "LoadPort",
     "Brand": "TDK",
     "Mode": "LD",
-    "ByPass": false,
+    "ByPass": true,
     "Enable": true,
     "RouteTable": [
       {
@@ -292,7 +292,7 @@
     "Type": "LoadPort",
     "Brand": "TDK",
     "Mode": "LD",
-    "ByPass": false,
+    "ByPass": true,
     "Enable": true,
     "RouteTable": [
       {

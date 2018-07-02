@@ -31,7 +31,7 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormVersion));
             this.label1 = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.label2 = new System.Windows.Forms.Label();
+            this.Ver_lb = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -54,15 +54,15 @@
             this.pictureBox1.TabIndex = 2;
             this.pictureBox1.TabStop = false;
             // 
-            // label2
+            // Ver_lb
             // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("微軟正黑體", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-            this.label2.Location = new System.Drawing.Point(166, 98);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(237, 30);
-            this.label2.TabIndex = 3;
-            this.label2.Text = "Version 1.0.3 (2017)";
+            this.Ver_lb.AutoSize = true;
+            this.Ver_lb.Font = new System.Drawing.Font("微軟正黑體", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
+            this.Ver_lb.Location = new System.Drawing.Point(166, 98);
+            this.Ver_lb.Name = "Ver_lb";
+            this.Ver_lb.Size = new System.Drawing.Size(237, 30);
+            this.Ver_lb.TabIndex = 3;
+            this.Ver_lb.Text = "Version 1.0.3 (2017)";
             // 
             // FormVersion
             // 
@@ -70,13 +70,14 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ControlLight;
             this.ClientSize = new System.Drawing.Size(577, 197);
-            this.Controls.Add(this.label2);
+            this.Controls.Add(this.Ver_lb);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.label1);
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "FormVersion";
             this.Text = "Version";
+            this.Load += new System.EventHandler(this.FormVersion_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -87,6 +88,6 @@
 
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.PictureBox pictureBox1;
-        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label Ver_lb;
     }
 }

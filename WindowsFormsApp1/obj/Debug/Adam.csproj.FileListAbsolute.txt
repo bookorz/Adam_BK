@@ -198,7 +198,7 @@ C:\Users\ethan_huang\source\repos\Adam\WindowsFormsApp1\bin\Debug\config\Command
 C:\Users\ethan_huang\source\repos\Adam\WindowsFormsApp1\obj\Debug\GUI.FormQuery.resources
 C:\Users\ethan_huang\source\repos\Adam\WindowsFormsApp1\bin\Debug\Ionic.Zip.dll
 C:\Users\ethan_huang\source\repos\Adam\WindowsFormsApp1\bin\Debug\NPOI.dll
-C:\Users\ethan_huang\source\repos\Adam\WindowsFormsApp1\obj\Debug\UI_TEST.FormRunning.resources
 C:\Users\ethan_huang\source\repos\Adam\WindowsFormsApp1\bin\Debug\Dapper.dll
 C:\Users\ethan_huang\source\repos\Adam\WindowsFormsApp1\bin\Debug\Dapper.xml
 C:\Users\ethan_huang\source\repos\Adam\WindowsFormsApp1\obj\Debug\Adam.exe.config
+C:\Users\ethan_huang\source\repos\Adam\WindowsFormsApp1\obj\Debug\Adam.Menu.RunningScreen.FormRunningScreen.resources

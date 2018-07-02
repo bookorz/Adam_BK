@@ -58,11 +58,11 @@ namespace Adam.UI_Update.Alarm
                     if (AlarmList.Count() != 0)
                     {
                         form.Visible = true;
-                        //FormMain.DIO.SetBlink("Red","True");
+                        FormMain.DIO.SetBlink("Red","True");
                     }
                     else
                     {
-                        //FormMain.DIO.SetIO("Red", "False");
+                        FormMain.DIO.SetIO("Red", "False");
                         form.Visible = false;
                     }
                 }
