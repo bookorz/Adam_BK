@@ -35,7 +35,7 @@ namespace Adam.Menu.Communications
             {
                 strSql = "SELECT A.* " +
                             "FROM config_node A " +
-                            "INNER JOIN equipment_model B ON A.equipment_model_id = B.equipment_model_id " +
+                            "INNER JOIN config_equipment_model B ON A.equipment_model_id = B.equipment_model_id " +
                             "WHERE B.enable_flg = @enable_flg " +
                             "AND B.equipment_model_id = @equipment_model_id ";
 
