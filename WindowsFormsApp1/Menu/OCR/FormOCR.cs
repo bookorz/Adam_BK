@@ -1,5 +1,6 @@
 ﻿using log4net;
 using Newtonsoft.Json;
+using SANWA.Utility.Config;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -57,11 +58,10 @@ namespace Adam.Menu.OCR
             {
 
                 SpinWait.SpinUntil(() => false, 1000);
-                ProcessStartInfo ps2 = new ProcessStartInfo(@"C:\Program Files (x86)\HST Vision\e-Reader8000\VB9BReaderForm.exe", "0");
+                ProcessStartInfo ps2 = new ProcessStartInfo(SystemConfig.Get().OCR2ExePath, "0");
                 Process p1 = Process.Start(ps2);
                 SpinWait.SpinUntil(() => false, 1000);
                 SpinWait.SpinUntil(() => !Process.GetProcessesByName("VB9BReaderForm")[0].MainWindowTitle.Equals("e-Reader8000Splash"), 60000);
-
 
                 logger.Debug(Process.GetProcessesByName("VB9BReaderForm")[0].MainWindowTitle);
                 logger.Debug("1");
@@ -112,7 +112,7 @@ namespace Adam.Menu.OCR
             try
             {
                 SpinWait.SpinUntil(() => false, 1000);
-                ProcessStartInfo ps2 = new ProcessStartInfo(@"C:\Program Files (x86)\Cognex\In-Sight\In-Sight Explorer Wafer 4.5.0\WaferID.exe");
+                ProcessStartInfo ps2 = new ProcessStartInfo(SystemConfig.Get().OCR1ExePath);
                 Process p2 = Process.Start(ps2);
                 //Cognex Wafer ID - 4.5.0
                 SpinWait.SpinUntil(() => Process.GetProcessesByName("WaferID")[0].MainWindowTitle.Equals("Cognex Wafer ID - 4.5.0"), 60000);

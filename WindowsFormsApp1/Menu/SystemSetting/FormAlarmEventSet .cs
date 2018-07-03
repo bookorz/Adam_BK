@@ -6,6 +6,7 @@ using System.Drawing;
 using System.Text;
 using System.Windows.Forms;
 using Adam.Util;
+using SANWA.Utility;
 
 namespace Adam.Menu.SystemSetting
 {

@@ -7,8 +7,8 @@
     "Brand": "Sanwa",
     "ByPass": false,
     "Enable": true,
-    "DefaultAligner": "Aligner01",
-    "AlternativeAligner": "Aligner02",
+    "DefaultAligner": "Aligner02",
+    "AlternativeAligner": "Aligner01",
     "RouteTable": [
       {
         "NodeName": "LoadPort01",
@@ -56,8 +56,8 @@
     "Brand": "Sanwa",
     "ByPass": false,
     "Enable": true,
-    "DefaultAligner": "Aligner02",
-    "AlternativeAligner": "Aligner01",
+    "DefaultAligner": "Aligner01",
+    "AlternativeAligner": "Aligner02",
     "RouteTable": [
       {
         "NodeName": "LoadPort05",
@@ -104,7 +104,7 @@
     "Type": "Aligner",
     "Brand": "Sanwa",
     "ByPass": false,
-    "Enable": true,
+    "Enable": false,
     "RouteTable": [
       {
         "NodeName": "LoadPort01",
@@ -159,7 +159,7 @@
     "Type": "Aligner",
     "Brand": "Sanwa",
     "ByPass": false,
-    "Enable": true,
+    "Enable": false,
     "RouteTable": [
       {
         "NodeName": "LoadPort01",

@@ -8,6 +8,7 @@ using System.Linq;
 using System.Windows.Forms;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Linq;
+using SANWA.Utility;
 
 namespace Adam.Menu.SystemSetting
 {
@@ -26,7 +27,7 @@ namespace Adam.Menu.SystemSetting
         {
             string strSql = string.Empty;
             Dictionary<string, object> keyValues = new Dictionary<string, object>();
-            Util.DBUtil dBUtil = new Util.DBUtil();
+            DBUtil dBUtil = new DBUtil();
             DataTable dtTemp = new DataTable();
 
             try
@@ -62,7 +63,7 @@ namespace Adam.Menu.SystemSetting
         {
             string strSql = string.Empty;
             Dictionary<string, object> keyValues = new Dictionary<string, object>();
-            Util.DBUtil dBUtil = new Util.DBUtil();
+            DBUtil dBUtil = new DBUtil();
             DataTable dtTemp = new DataTable();
 
             try
@@ -118,7 +119,7 @@ namespace Adam.Menu.SystemSetting
         {
             string strSql = string.Empty;
             Dictionary<string, object> keyValues = new Dictionary<string, object>();
-            Util.DBUtil dBUtil = new Util.DBUtil();
+            DBUtil dBUtil = new DBUtil();
 
             try
             {
@@ -194,7 +195,7 @@ namespace Adam.Menu.SystemSetting
             string strSql = string.Empty;
             StringBuilder sbErrorMessage = new StringBuilder();
             Dictionary<string, object> keyValues = new Dictionary<string, object>();
-            Util.DBUtil dBUtil = new Util.DBUtil();
+            DBUtil dBUtil = new DBUtil();
             DataTable dtTemp = new DataTable();
             DataRow[] drsTemp;
 

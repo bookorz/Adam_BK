@@ -23,7 +23,7 @@ namespace Adam.UI_Update.OCR
         {
             try
             {
-                Form form = Application.OpenForms["FormOCR"];
+                Form form = Application.OpenForms["FormMonitoring"];
                 TextBox Tb_OCRRead;
                 if (form == null)
                     return;

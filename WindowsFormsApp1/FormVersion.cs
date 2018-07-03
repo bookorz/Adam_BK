@@ -16,5 +16,18 @@ namespace GUI
         {
             InitializeComponent();
         }
+
+        private void FormVersion_Load(object sender, EventArgs e)
+        {
+            try
+            {
+                Ver_lb.Text = "Version " + System.Deployment.Application.ApplicationDeployment.CurrentDeployment.CurrentVersion.ToString() + " (2018)";
+            }
+            catch
+            {
+                Ver_lb.Text = "Version 開發程式階段 (2018)";
+            }
+        }
+    
     }
 }

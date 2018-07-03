@@ -11,6 +11,21 @@
     <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <PublishUrl>C:\Users\ethan_huang\Desktop\test\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <PlatformTarget>AnyCPU</PlatformTarget>
@@ -33,6 +48,12 @@
   </PropertyGroup>
   <PropertyGroup>
     <StartupObject>Adam.Program</StartupObject>
+  </PropertyGroup>
+  <PropertyGroup>
+    <SignManifests>true</SignManifests>
+  </PropertyGroup>
+  <PropertyGroup>
+    <SignAssembly>false</SignAssembly>
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="Ionic.Zip">
@@ -79,6 +100,12 @@
     </Compile>
     <Compile Include="FormQuery.designer.cs">
       <DependentUpon>FormQuery.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Menu\RunningScreen\RunningScreen.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Menu\RunningScreen\RunningScreen.Designer.cs">
+      <DependentUpon>RunningScreen.cs</DependentUpon>
     </Compile>
     <Compile Include="SplashScreen.cs">
       <SubType>Form</SubType>
@@ -251,12 +278,6 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="FormRunning.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="FormRunning.designer.cs">
-      <DependentUpon>FormRunning.cs</DependentUpon>
-    </Compile>
     <Compile Include="FormSetting.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -276,6 +297,7 @@
     <Compile Include="UI_Update\Manual\RobotStatusUpdate.cs" />
     <Compile Include="UI_Update\Monitoring\ConnectionStatusUpdate.cs" />
     <Compile Include="UI_Update\Monitoring\JobMoveUpdate.cs" />
+    <Compile Include="UI_Update\Monitoring\MonitoringUpdate.cs" />
     <Compile Include="UI_Update\Monitoring\NodeStatusUpdate.cs" />
     <Compile Include="UI_Update\OCR\OCRUpdate.cs" />
     <Compile Include="UI_Update\Running\RunningUpdate.cs" />
@@ -368,6 +390,9 @@
     <EmbeddedResource Include="Menu\SystemSetting\FormSystemSetting.resx">
       <DependentUpon>FormSystemSetting.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Menu\RunningScreen\RunningScreen.resx">
+      <DependentUpon>RunningScreen.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Menu\WaferMapping\FormWaferMapping.resx">
       <DependentUpon>FormWaferMapping.cs</DependentUpon>
     </EmbeddedResource>
@@ -381,9 +406,6 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
-    <EmbeddedResource Include="FormRunning.resx">
-      <DependentUpon>FormRunning.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="FormSetting.resx">
       <DependentUpon>FormSetting.cs</DependentUpon>
     </EmbeddedResource>
@@ -505,6 +527,17 @@
     <None Include="Resources\index.jpg" />
     <Content Include="Resources\sanwa_aligner_status.png" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.6.1">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4.6.1 %28x86 與 x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

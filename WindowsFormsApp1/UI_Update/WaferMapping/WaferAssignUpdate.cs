@@ -16,6 +16,48 @@ namespace Adam.UI_Update.WaferMapping
         static ILog logger = LogManager.GetLogger(typeof(WaferAssignUpdate));
         delegate void UpdatePort(string PortName, string Mapping);
         delegate void UpdatePortMapping(string PortName);
+        delegate void UpdatePortUsed(string PortName, bool Used);
+
+        public static void UpdateUseState(string PortName, bool used)
+        {
+            try
+            {
+                Form form = Application.OpenForms["FormWaferMapping"];
+                Label Used;
+                if (form == null)
+                    return;
+
+                Used = form.Controls.Find(PortName + "_Use", true).FirstOrDefault() as Label;
+                if (Used == null)
+                    return;
+
+                if (Used.InvokeRequired)
+                {
+                    UpdatePortUsed ph = new UpdatePortUsed(UpdateUseState);
+                    Used.BeginInvoke(ph, PortName, used);
+                }
+                else
+                {
+                    if (used)
+                    {
+                        Used.Text = "Used";
+                        Used.BackColor = Color.Green;
+                        Used.ForeColor = Color.White;
+                    }
+                    else
+                    {
+                        Used.Text = "Not Used";
+                        Used.BackColor = Color.DimGray;
+                        Used.ForeColor = Color.White;
+                    }
+
+                }
+            }
+            catch
+            {
+                logger.Error("UpdateUseState: Update fail.");
+            }
+        }
 
         public static void RefreshMapping(string PortName)
         {
@@ -122,6 +164,7 @@ namespace Adam.UI_Update.WaferMapping
                             wafer.Slot = (i+1).ToString();
                             wafer.FromPort = PortName;
                             wafer.Position = PortName;
+                            wafer.AlignerFlag = false;
                             string Slot = (i+1).ToString("00");
                             switch (Mapping[i])
                             {
@@ -149,16 +192,19 @@ namespace Adam.UI_Update.WaferMapping
                                 case '2':
                                     wafer.Job_Id = "Crossed";
                                     wafer.Host_Job_Id = wafer.Job_Id;
+                                    wafer.MapFlag = true;
                                     //MappingData.Add(wafer);
                                     break;
                                 case '?':
                                     wafer.Job_Id = "Undefined";
                                     wafer.Host_Job_Id = wafer.Job_Id;
+                                    wafer.MapFlag = true;
                                     //MappingData.Add(wafer);
                                     break;
                                 case 'W':
                                     wafer.Job_Id = "Double";
                                     wafer.Host_Job_Id = wafer.Job_Id;
+                                    wafer.MapFlag = true;
                                     //MappingData.Add(wafer);
                                     break;
                             }

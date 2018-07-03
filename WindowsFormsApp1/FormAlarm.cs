@@ -33,7 +33,7 @@ namespace Adam
                 }
             }
 
-            AlarmUpdate.UpdateAlarmList(AlarmManagement.GetAll());
+            
 
             foreach (Node node in NodeManagement.GetList())
             {
@@ -45,11 +45,13 @@ namespace Adam
             {
                 Txn = new Transaction();
                 Txn.Method = Transaction.Command.RobotType.Reset;
+                Txn.FormName = "";
                 //NodeManagement.Get(group.First().NodeName).State = "Alarm";
                 NodeManagement.Get(group.First().NodeName).SendCommand(Txn);
                 AlarmManagement.Remove(group.First().NodeName);
             }
-            NodeStatusUpdate.UpdateCurrentState(NodeManagement.GetCurrentState());
+            NodeStatusUpdate.UpdateCurrentState("Idle");
+            AlarmUpdate.UpdateAlarmList(AlarmManagement.GetAll());
         }
 
         private void AlarmFrom_Load(object sender, EventArgs e)

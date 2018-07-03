@@ -84,14 +84,15 @@ namespace Adam.UI_Update.Monitoring
                 {
                     switch (Status)
                     {
+                        case "Running":
                         case "Start":
-                            Mode.Tag = "Start";
-                            Mode.Text = "Start";
+                            Mode.Tag = Status;
+                            Mode.Text = Status;
                             Mode.BackColor = Color.Lime;
                             Button btnMaintence = form.Controls.Find("btnMaintence", true).FirstOrDefault() as Button;
                             if (btnMaintence != null)
                             {
-                                btnMaintence.Text = "Start Mode";
+                                btnMaintence.Text = Status+" Mode";
                                 btnMaintence.BackColor = Color.Red;
                                 btnMaintence.Enabled = false;
                             }
@@ -103,13 +104,16 @@ namespace Adam.UI_Update.Monitoring
                             TabControl tbcMian = form.Controls.Find("tbcMian", true).FirstOrDefault() as TabControl;
                             if (tbcMian != null)
                             {
-                                EnablePage(tbcMian.TabPages[5], false, form);
+                                EnablePage(tbcMian.TabPages[6], false, form);
                             }
                             Button Pause_btn = form.Controls.Find("Pause_btn", true).FirstOrDefault() as Button;
                             if (Pause_btn != null)
                             {
                                 Pause_btn.Enabled = true;
                             }
+
+                           
+
                             break;
                         case "Stop":
                             btnMaintence = form.Controls.Find("btnMaintence", true).FirstOrDefault() as Button;
@@ -131,8 +135,12 @@ namespace Adam.UI_Update.Monitoring
                             Mode.Text = "Manual";
                             Mode.BackColor = Color.Orange;
                             //Mode.Enabled = false;
-                            break;
 
+                            
+                            break;
+                        
+
+                         
                     }
 
                 }

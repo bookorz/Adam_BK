@@ -80,6 +80,7 @@ namespace Adam
             this.tabMapping = new System.Windows.Forms.TabPage();
             this.tabStatus = new System.Windows.Forms.TabPage();
             this.tabOCR = new System.Windows.Forms.TabPage();
+            this.TestMode = new System.Windows.Forms.TabPage();
             this.tabSetting = new System.Windows.Forms.TabPage();
             this.panel2 = new System.Windows.Forms.Panel();
             this.panel4 = new System.Windows.Forms.Panel();
@@ -100,7 +101,6 @@ namespace Adam
             this.bBBToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.btnMaintence = new System.Controls.SplitButton();
             this.menuMaintenace = new System.Windows.Forms.ContextMenuStrip(this.components);
-            this.runingToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.initToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.orgToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.manualToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -498,6 +498,7 @@ namespace Adam
             this.tbcMian.Controls.Add(this.tabMapping);
             this.tbcMian.Controls.Add(this.tabStatus);
             this.tbcMian.Controls.Add(this.tabOCR);
+            this.tbcMian.Controls.Add(this.TestMode);
             this.tbcMian.Controls.Add(this.tabSetting);
             resources.ApplyResources(this.tbcMian, "tbcMian");
             this.tbcMian.Name = "tbcMian";
@@ -539,6 +540,12 @@ namespace Adam
             this.tabOCR.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             resources.ApplyResources(this.tabOCR, "tabOCR");
             this.tabOCR.Name = "tabOCR";
+            // 
+            // TestMode
+            // 
+            resources.ApplyResources(this.TestMode, "TestMode");
+            this.TestMode.Name = "TestMode";
+            this.TestMode.UseVisualStyleBackColor = true;
             // 
             // tabSetting
             // 
@@ -722,7 +729,6 @@ namespace Adam
             // 
             resources.ApplyResources(this.menuMaintenace, "menuMaintenace");
             this.menuMaintenace.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.runingToolStripMenuItem,
             this.initToolStripMenuItem,
             this.orgToolStripMenuItem,
             this.manualToolStripMenuItem,
@@ -734,12 +740,6 @@ namespace Adam
             this.terminalToolStripMenuItem});
             this.menuMaintenace.Name = "contextMenuStrip1";
             this.menuMaintenace.ShowCheckMargin = true;
-            // 
-            // runingToolStripMenuItem
-            // 
-            this.runingToolStripMenuItem.Name = "runingToolStripMenuItem";
-            resources.ApplyResources(this.runingToolStripMenuItem, "runingToolStripMenuItem");
-            this.runingToolStripMenuItem.Click += new System.EventHandler(this.runingToolStripMenuItem_Click);
             // 
             // initToolStripMenuItem
             // 
@@ -909,7 +909,6 @@ namespace Adam
         private System.Windows.Forms.ToolStripMenuItem settingToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem terminalToolStripMenuItem;
         private System.Windows.Forms.Button btnTeach;
-        private System.Windows.Forms.ToolStripMenuItem runingToolStripMenuItem;
         private System.Windows.Forms.GroupBox groupBox54;
         private System.DirectoryServices.DirectorySearcher directorySearcher1;
         private System.Windows.Forms.Label lbl_login_date;
@@ -931,6 +930,7 @@ namespace Adam
         private System.Windows.Forms.Button Initial_btn;
         private System.Windows.Forms.Button Pause_btn;
         private System.Windows.Forms.CheckBox Mute_chk;
+        private System.Windows.Forms.TabPage TestMode;
     }
 }
 

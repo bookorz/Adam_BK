@@ -9,6 +9,7 @@ using Adam.Util;
 using System.Linq;
 using System.IO.Ports;
 using System.Diagnostics;
+using SANWA.Utility;
 
 namespace Adam.Menu.Communications
 {
