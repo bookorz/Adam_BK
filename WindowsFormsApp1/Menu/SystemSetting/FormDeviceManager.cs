@@ -6,6 +6,8 @@ using System.Drawing;
 using System.Text;
 using System.Linq;
 using System.Windows.Forms;
+using Newtonsoft.Json;
+using Newtonsoft.Json.Linq;
 using SANWA.Utility;
 
 namespace Adam.Menu.SystemSetting
@@ -19,6 +21,7 @@ namespace Adam.Menu.SystemSetting
 
         private SANWA.Utility.config_equipment_model equipment_Model = new SANWA.Utility.config_equipment_model();
         private DataTable dtConfigNode = new DataTable();
+        private DataTable dtRouteTable = new DataTable();
 
         private void FormDeviceManager_Load(object sender, EventArgs e)
         {
@@ -34,7 +37,7 @@ namespace Adam.Menu.SystemSetting
                 txbEquipmentModel.Text = equipment_Model.EquipmentModel.equipment_model_type;
 
                 dtTemp = new DataTable();
-                strSql = "select * from config_list_item where list_type = 'DEVICE_TYPE'";
+                strSql = "select * from config_list_item where list_type = 'DEVICE_TYPE' ";
                 dtTemp = dBUtil.GetDataTable(strSql, null);
 
                 if (dtTemp.Rows.Count > 0)
@@ -48,6 +51,7 @@ namespace Adam.Menu.SystemSetting
                 {
                     cmbDeviceNodeType.DataSource = null;
                 }
+
             }
             catch (Exception ex)
             {
@@ -153,6 +157,7 @@ namespace Adam.Menu.SystemSetting
 
                 if (query.Count == 0)
                 {
+                    dgvRouteTable.DataSource = null;
                     throw new RowNotInTableException();
                 }
                 else
@@ -170,6 +175,13 @@ namespace Adam.Menu.SystemSetting
                     txbAddress.Text = dtTemp.Rows[0]["conn_address"].ToString();
                     txbControllerID.Text = dtTemp.Rows[0]["controller_id"].ToString();
                     chbActive.Checked = dtTemp.Rows[0]["enable_flg"].ToString() == "Y" ? true : false;
+                    txbDefaultAligner.Text = dtTemp.Rows[0]["default_aligner"].ToString();
+                    txbAlternativeAligner.Text = dtTemp.Rows[0]["alternative_aligner"].ToString();
+                    //txbRoute.Text = dtTemp.Rows[0]["route_table"].ToString();
+                    dtRouteTable = (DataTable)Newtonsoft.Json.JsonConvert.DeserializeObject(dtTemp.Rows[0]["route_table"].ToString(), (typeof(DataTable)));
+                    dgvRouteTable.DataSource = dtRouteTable;
+
+                    chbByPass.Checked = dtTemp.Rows[0]["bypass"].ToString() == "1" ? true : false;
                 }
             }
             catch (Exception ex)
@@ -210,19 +222,19 @@ namespace Adam.Menu.SystemSetting
 
                 if (dtTemp.Rows.Count > 0)
                 {
-                    if (dtTemp.Select("node_id in ('" + txbDeviceNodeName.Tag + "','" + cmbDeviceNodeType.Text + nudSerialNo.Value.ToString("D2") + "')").Length > 0)
+                    if (dtTemp.Select("node_id in ('" + txbDeviceNodeName.Tag + "','" + cmbDeviceNodeType.Text + Convert.ToInt32(nudSerialNo.Value).ToString("D2") + "')").Length > 0)
                     {
                         sbErrorMessage.Append("Node ID exist.");
                         sbErrorMessage.AppendLine();
                     }
 
-                    if (dtTemp.Select("sn_no = " + nudSerialNo.Value.ToString()).Length > 0)
+                    if (dtTemp.Select("sn_no = " + Convert.ToInt32(nudSerialNo.Value).ToString()).Length > 0)
                     {
                         sbErrorMessage.Append("Serial No exist.");
                         sbErrorMessage.AppendLine();
                     }
 
-                    if (dtTemp.Select("controller_id = " + txbControllerID.Text + "'").Length > 0)
+                    if (dtTemp.Select("controller_id = '" + txbControllerID.Text + "'").Length > 0)
                     {
                         sbErrorMessage.Append("Controller ID exist.");
                         sbErrorMessage.AppendLine();
@@ -240,12 +252,12 @@ namespace Adam.Menu.SystemSetting
                 keyValues.Clear();
 
                 strSql = "REPLACE INTO config_node " +
-                    "(equipment_model_id, node_id, node_name, node_type, sn_no, vendor, model_no, firmware_ver, conn_address, controller_id, enable_flg, create_user, create_timestamp, modify_user, modify_timestamp) " +
+                    "(equipment_model_id, node_id, node_name, node_type, sn_no, vendor, model_no, firmware_ver, conn_address, controller_id, bypass, default_aligner, alternative_aligner, route_table, enable_flg, create_user, create_timestamp, modify_user, modify_timestamp) " +
                     "VALUES " +
-                    "(@equipment_model_id, @node_id, @node_name, @node_type, @sn_no, @vendor, @model_no, @firmware_ver, @conn_address, @controller_id, @enable_flg, @create_user, @create_timestamp, @modify_user, NOW())";
+                    "(@equipment_model_id, @node_id, @node_name, @node_type, @sn_no, @vendor, @model_no, @firmware_ver, @conn_address, @controller_id, @bypass, @default_aligner, @alternative_aligner, @route_table, @enable_flg, @create_user, @create_timestamp, @modify_user, NOW())";
 
                 keyValues.Add("@equipment_model_id", equipment_Model.EquipmentModel.equipment_model_id);
-                keyValues.Add("@node_id", cmbDeviceNodeType.Text.Trim() + nudSerialNo.Value.ToString("D2"));
+                keyValues.Add("@node_id", cmbDeviceNodeType.Text.Trim() + Convert.ToInt32(nudSerialNo.Value).ToString("D2"));
                 keyValues.Add("@node_name", txbDeviceNodeName.Text.Trim());
                 keyValues.Add("@node_type", cmbDeviceNodeType.SelectedValue.ToString());
                 keyValues.Add("@sn_no", nudSerialNo.Value);
@@ -255,8 +267,12 @@ namespace Adam.Menu.SystemSetting
                 keyValues.Add("@conn_address", txbAddress.Text.Trim());
                 keyValues.Add("@controller_id", txbControllerID.Text.Trim());
                 keyValues.Add("@enable_flg", chbActive.Checked ? "Y" : "N");
+                keyValues.Add("@default_aligner", txbDefaultAligner.Text.Trim());
+                keyValues.Add("@alternative_aligner", txbAlternativeAligner.Text.Trim());
+                keyValues.Add("@route_table", JsonConvert.SerializeObject(dtRouteTable, Formatting.Indented));
+                keyValues.Add("@bypass", chbByPass.Checked ? "1" : "0");
 
-                drsTemp = dtTemp.Select("node_id = '" + cmbDeviceNodeType.Text + nudSerialNo.Value.ToString("D2") + "'");
+                drsTemp = dtTemp.Select("node_id = '" + cmbDeviceNodeType.Text + Convert.ToInt32(nudSerialNo.Value).ToString("D2") + "'");
                 Form form = Application.OpenForms["FormMain"];
                 Label Signal = form.Controls.Find("lbl_login_id", true).FirstOrDefault() as Label;
 

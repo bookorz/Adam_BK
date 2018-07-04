@@ -46,16 +46,23 @@
             this.lbFirmwareVersion = new System.Windows.Forms.Label();
             this.lbAddress = new System.Windows.Forms.Label();
             this.lbControllerID = new System.Windows.Forms.Label();
-            this.chbActive = new System.Windows.Forms.CheckBox();
+            this.cmbDeviceNodeType = new System.Windows.Forms.ComboBox();
+            this.cmbVendor = new System.Windows.Forms.ComboBox();
             this.nudSerialNo = new System.Windows.Forms.NumericUpDown();
             this.txbAddress = new System.Windows.Forms.TextBox();
             this.txbDeviceNodeName = new System.Windows.Forms.TextBox();
             this.txbEquipmentModel = new System.Windows.Forms.TextBox();
+            this.txbControllerID = new System.Windows.Forms.TextBox();
+            this.lbDefaultAligner = new System.Windows.Forms.Label();
+            this.lbAlternativeAligner = new System.Windows.Forms.Label();
+            this.chbByPass = new System.Windows.Forms.CheckBox();
+            this.lbRoute = new System.Windows.Forms.Label();
+            this.chbActive = new System.Windows.Forms.CheckBox();
+            this.txbDefaultAligner = new System.Windows.Forms.TextBox();
+            this.txbAlternativeAligner = new System.Windows.Forms.TextBox();
+            this.dgvRouteTable = new System.Windows.Forms.DataGridView();
             this.tlpButton = new System.Windows.Forms.TableLayoutPanel();
             this.btnSave = new System.Windows.Forms.Button();
-            this.cmbDeviceNodeType = new System.Windows.Forms.ComboBox();
-            this.cmbVendor = new System.Windows.Forms.ComboBox();
-            this.txbControllerID = new System.Windows.Forms.TextBox();
             this.gbNodeManager.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainerNode)).BeginInit();
             this.splitContainerNode.Panel1.SuspendLayout();
@@ -69,6 +76,7 @@
             this.lbDeviceNodeManager.SuspendLayout();
             this.tableLayoutPanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.nudSerialNo)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvRouteTable)).BeginInit();
             this.tlpButton.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -167,7 +175,6 @@
             this.tableLayoutPanel1.Controls.Add(this.lbFirmwareVersion, 0, 6);
             this.tableLayoutPanel1.Controls.Add(this.lbAddress, 0, 7);
             this.tableLayoutPanel1.Controls.Add(this.lbControllerID, 0, 8);
-            this.tableLayoutPanel1.Controls.Add(this.chbActive, 1, 9);
             this.tableLayoutPanel1.Controls.Add(this.cmbDeviceNodeType, 1, 2);
             this.tableLayoutPanel1.Controls.Add(this.cmbVendor, 1, 4);
             this.tableLayoutPanel1.Controls.Add(this.nudSerialNo, 1, 3);
@@ -175,10 +182,18 @@
             this.tableLayoutPanel1.Controls.Add(this.txbDeviceNodeName, 1, 1);
             this.tableLayoutPanel1.Controls.Add(this.txbEquipmentModel, 1, 0);
             this.tableLayoutPanel1.Controls.Add(this.txbControllerID, 1, 8);
+            this.tableLayoutPanel1.Controls.Add(this.lbDefaultAligner, 0, 10);
+            this.tableLayoutPanel1.Controls.Add(this.lbAlternativeAligner, 0, 11);
+            this.tableLayoutPanel1.Controls.Add(this.chbByPass, 1, 9);
+            this.tableLayoutPanel1.Controls.Add(this.lbRoute, 0, 12);
+            this.tableLayoutPanel1.Controls.Add(this.chbActive, 1, 13);
+            this.tableLayoutPanel1.Controls.Add(this.txbDefaultAligner, 1, 10);
+            this.tableLayoutPanel1.Controls.Add(this.txbAlternativeAligner, 1, 11);
+            this.tableLayoutPanel1.Controls.Add(this.dgvRouteTable, 1, 12);
             this.tableLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanel1.Location = new System.Drawing.Point(3, 25);
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
-            this.tableLayoutPanel1.RowCount = 11;
+            this.tableLayoutPanel1.RowCount = 14;
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 40F));
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 40F));
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 40F));
@@ -190,6 +205,9 @@
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 40F));
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 40F));
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 40F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 40F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 100F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 10F));
             this.tableLayoutPanel1.Size = new System.Drawing.Size(1073, 616);
             this.tableLayoutPanel1.TabIndex = 0;
             // 
@@ -299,16 +317,28 @@
             this.lbControllerID.Text = "Controller ID";
             this.lbControllerID.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
-            // chbActive
+            // cmbDeviceNodeType
             // 
-            this.chbActive.AutoSize = true;
-            this.chbActive.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.chbActive.Location = new System.Drawing.Point(200, 363);
-            this.chbActive.Name = "chbActive";
-            this.chbActive.Size = new System.Drawing.Size(870, 34);
-            this.chbActive.TabIndex = 9;
-            this.chbActive.Text = "Active";
-            this.chbActive.UseVisualStyleBackColor = true;
+            this.cmbDeviceNodeType.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
+            this.cmbDeviceNodeType.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
+            this.cmbDeviceNodeType.Dock = System.Windows.Forms.DockStyle.Left;
+            this.cmbDeviceNodeType.FormattingEnabled = true;
+            this.cmbDeviceNodeType.Location = new System.Drawing.Point(200, 83);
+            this.cmbDeviceNodeType.Name = "cmbDeviceNodeType";
+            this.cmbDeviceNodeType.Size = new System.Drawing.Size(470, 28);
+            this.cmbDeviceNodeType.TabIndex = 11;
+            this.cmbDeviceNodeType.SelectionChangeCommitted += new System.EventHandler(this.cmbDeviceNodeType_SelectionChangeCommitted);
+            // 
+            // cmbVendor
+            // 
+            this.cmbVendor.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
+            this.cmbVendor.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
+            this.cmbVendor.Dock = System.Windows.Forms.DockStyle.Left;
+            this.cmbVendor.FormattingEnabled = true;
+            this.cmbVendor.Location = new System.Drawing.Point(200, 163);
+            this.cmbVendor.Name = "cmbVendor";
+            this.cmbVendor.Size = new System.Drawing.Size(470, 28);
+            this.cmbVendor.TabIndex = 12;
             // 
             // nudSerialNo
             // 
@@ -346,6 +376,96 @@
             this.txbEquipmentModel.Size = new System.Drawing.Size(470, 29);
             this.txbEquipmentModel.TabIndex = 21;
             // 
+            // txbControllerID
+            // 
+            this.txbControllerID.BackColor = System.Drawing.Color.White;
+            this.txbControllerID.Dock = System.Windows.Forms.DockStyle.Left;
+            this.txbControllerID.Location = new System.Drawing.Point(200, 323);
+            this.txbControllerID.Name = "txbControllerID";
+            this.txbControllerID.ReadOnly = true;
+            this.txbControllerID.Size = new System.Drawing.Size(470, 29);
+            this.txbControllerID.TabIndex = 22;
+            // 
+            // lbDefaultAligner
+            // 
+            this.lbDefaultAligner.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.lbDefaultAligner.Location = new System.Drawing.Point(3, 400);
+            this.lbDefaultAligner.Name = "lbDefaultAligner";
+            this.lbDefaultAligner.Size = new System.Drawing.Size(191, 40);
+            this.lbDefaultAligner.TabIndex = 24;
+            this.lbDefaultAligner.Text = "Default aligner";
+            this.lbDefaultAligner.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            // 
+            // lbAlternativeAligner
+            // 
+            this.lbAlternativeAligner.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.lbAlternativeAligner.Location = new System.Drawing.Point(3, 440);
+            this.lbAlternativeAligner.Name = "lbAlternativeAligner";
+            this.lbAlternativeAligner.Size = new System.Drawing.Size(191, 40);
+            this.lbAlternativeAligner.TabIndex = 25;
+            this.lbAlternativeAligner.Text = "Alternative aligner";
+            this.lbAlternativeAligner.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            // 
+            // chbByPass
+            // 
+            this.chbByPass.AutoSize = true;
+            this.chbByPass.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.chbByPass.Location = new System.Drawing.Point(200, 363);
+            this.chbByPass.Name = "chbByPass";
+            this.chbByPass.Size = new System.Drawing.Size(870, 34);
+            this.chbByPass.TabIndex = 27;
+            this.chbByPass.Text = "By pass";
+            this.chbByPass.UseVisualStyleBackColor = true;
+            // 
+            // lbRoute
+            // 
+            this.lbRoute.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.lbRoute.Location = new System.Drawing.Point(3, 480);
+            this.lbRoute.Name = "lbRoute";
+            this.lbRoute.Size = new System.Drawing.Size(191, 100);
+            this.lbRoute.TabIndex = 26;
+            this.lbRoute.Text = "Route";
+            this.lbRoute.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            // 
+            // chbActive
+            // 
+            this.chbActive.AutoSize = true;
+            this.chbActive.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.chbActive.Location = new System.Drawing.Point(200, 583);
+            this.chbActive.Name = "chbActive";
+            this.chbActive.Size = new System.Drawing.Size(870, 30);
+            this.chbActive.TabIndex = 9;
+            this.chbActive.Text = "Active";
+            this.chbActive.UseVisualStyleBackColor = true;
+            // 
+            // txbDefaultAligner
+            // 
+            this.txbDefaultAligner.BackColor = System.Drawing.Color.White;
+            this.txbDefaultAligner.Location = new System.Drawing.Point(200, 403);
+            this.txbDefaultAligner.Name = "txbDefaultAligner";
+            this.txbDefaultAligner.ReadOnly = true;
+            this.txbDefaultAligner.Size = new System.Drawing.Size(470, 29);
+            this.txbDefaultAligner.TabIndex = 28;
+            // 
+            // txbAlternativeAligner
+            // 
+            this.txbAlternativeAligner.BackColor = System.Drawing.Color.White;
+            this.txbAlternativeAligner.Location = new System.Drawing.Point(200, 443);
+            this.txbAlternativeAligner.Name = "txbAlternativeAligner";
+            this.txbAlternativeAligner.ReadOnly = true;
+            this.txbAlternativeAligner.Size = new System.Drawing.Size(470, 29);
+            this.txbAlternativeAligner.TabIndex = 29;
+            // 
+            // dgvRouteTable
+            // 
+            this.dgvRouteTable.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvRouteTable.Dock = System.Windows.Forms.DockStyle.Left;
+            this.dgvRouteTable.Location = new System.Drawing.Point(200, 483);
+            this.dgvRouteTable.Name = "dgvRouteTable";
+            this.dgvRouteTable.RowTemplate.Height = 24;
+            this.dgvRouteTable.Size = new System.Drawing.Size(470, 94);
+            this.dgvRouteTable.TabIndex = 30;
+            // 
             // tlpButton
             // 
             this.tlpButton.ColumnCount = 5;
@@ -376,39 +496,6 @@
             this.btnSave.UseVisualStyleBackColor = true;
             this.btnSave.Click += new System.EventHandler(this.btnSave_Click);
             // 
-            // cmbDeviceNodeType
-            // 
-            this.cmbDeviceNodeType.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
-            this.cmbDeviceNodeType.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
-            this.cmbDeviceNodeType.Dock = System.Windows.Forms.DockStyle.Left;
-            this.cmbDeviceNodeType.FormattingEnabled = true;
-            this.cmbDeviceNodeType.Location = new System.Drawing.Point(200, 83);
-            this.cmbDeviceNodeType.Name = "cmbDeviceNodeType";
-            this.cmbDeviceNodeType.Size = new System.Drawing.Size(470, 28);
-            this.cmbDeviceNodeType.TabIndex = 11;
-            this.cmbDeviceNodeType.SelectionChangeCommitted += new System.EventHandler(this.cmbDeviceNodeType_SelectionChangeCommitted);
-            // 
-            // cmbVendor
-            // 
-            this.cmbVendor.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
-            this.cmbVendor.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
-            this.cmbVendor.Dock = System.Windows.Forms.DockStyle.Left;
-            this.cmbVendor.FormattingEnabled = true;
-            this.cmbVendor.Location = new System.Drawing.Point(200, 163);
-            this.cmbVendor.Name = "cmbVendor";
-            this.cmbVendor.Size = new System.Drawing.Size(470, 28);
-            this.cmbVendor.TabIndex = 12;
-            // 
-            // txbControllerID
-            // 
-            this.txbControllerID.BackColor = System.Drawing.Color.White;
-            this.txbControllerID.Dock = System.Windows.Forms.DockStyle.Left;
-            this.txbControllerID.Location = new System.Drawing.Point(200, 323);
-            this.txbControllerID.Name = "txbControllerID";
-            this.txbControllerID.ReadOnly = true;
-            this.txbControllerID.Size = new System.Drawing.Size(470, 29);
-            this.txbControllerID.TabIndex = 22;
-            // 
             // FormDeviceManager
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Inherit;
@@ -433,6 +520,7 @@
             this.tableLayoutPanel1.ResumeLayout(false);
             this.tableLayoutPanel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.nudSerialNo)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvRouteTable)).EndInit();
             this.tlpButton.ResumeLayout(false);
             this.ResumeLayout(false);
 
@@ -456,7 +544,6 @@
         private System.Windows.Forms.Label lbModel;
         private System.Windows.Forms.Label lbFirmwareVersion;
         private System.Windows.Forms.Label lbAddress;
-        private System.Windows.Forms.CheckBox chbActive;
         private System.Windows.Forms.TextBox txbFirmwareVersion;
         private System.Windows.Forms.TextBox txbModel;
         private System.Windows.Forms.TextBox txbDeviceNodeName;
@@ -468,5 +555,13 @@
         private System.Windows.Forms.ComboBox cmbVendor;
         private System.Windows.Forms.TextBox txbControllerID;
         private System.Windows.Forms.TextBox txbAddress;
+        private System.Windows.Forms.Label lbDefaultAligner;
+        private System.Windows.Forms.Label lbAlternativeAligner;
+        private System.Windows.Forms.CheckBox chbByPass;
+        private System.Windows.Forms.CheckBox chbActive;
+        private System.Windows.Forms.TextBox txbDefaultAligner;
+        private System.Windows.Forms.TextBox txbAlternativeAligner;
+        private System.Windows.Forms.Label lbRoute;
+        private System.Windows.Forms.DataGridView dgvRouteTable;
     }
 }
