@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Adam.UI_Update.Monitoring;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -29,36 +30,39 @@ namespace Adam.Menu.RunningScreen
                 FormMain.RouteCtrl.Stop();
                 //FormMain.RouteCtrl.Stop();
 
-                Start_btn.BackColor = Color.DimGray;
-                Start_btn.Text = "Start Running";
-                Start_btn.Tag = "Stop";
-                
+
+
             }
             else
             {
-                var findByPass = from node in NodeManagement.GetList()
-                                 where node.ByPass
-                                 select node;
-
-                if (findByPass.Count() != 0)
+                if (NodeManagement.IsNeedInitial())
                 {
-                    string msg = "";
-                    foreach (Node node in findByPass)
-                    {
-                        msg += node.Name + "\n";
-                    }
-                    msg += "\n為By pass 模式，確定要繼續?";
-
-                    if (MessageBox.Show(msg, "警告", MessageBoxButtons.OKCancel) == DialogResult.Cancel)
-                    {
-                        return;
-                    }
+                    ConnectionStatusUpdate.UpdateInitial(false.ToString());
+                    MessageBox.Show("請先執行Initial");
                 }
+                else
+                {
+                    var findByPass = from node in NodeManagement.GetList()
+                                     where node.ByPass
+                                     select node;
 
-                FormMain.RouteCtrl.Start("Running");
-                Start_btn.BackColor = Color.Red;
-                Start_btn.Text = "Stop";
-                Start_btn.Tag = "Start";
+                    if (findByPass.Count() != 0)
+                    {
+                        string msg = "";
+                        foreach (Node node in findByPass)
+                        {
+                            msg += node.Name + "\n";
+                        }
+                        msg += "\n為By pass 模式，確定要繼續?";
+
+                        if (MessageBox.Show(msg, "警告", MessageBoxButtons.OKCancel) == DialogResult.Cancel)
+                        {
+                            return;
+                        }
+                    }
+
+                    FormMain.RouteCtrl.Start("Running");
+                }
 
             }
 

@@ -53,6 +53,74 @@ namespace Adam.Menu.Monitoring
             }
         }
 
-     
+        private void label142_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label140_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label138_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label136_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label134_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label132_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label130_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label128_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label126_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label124_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label122_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label120_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void tableLayoutPanel2_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void label118_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

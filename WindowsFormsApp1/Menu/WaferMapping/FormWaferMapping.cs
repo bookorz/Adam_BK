@@ -194,14 +194,14 @@ namespace Adam.Menu.WaferMapping
                     }
                 }
                  (CurrentSelected as DataGridView).Refresh();
-                JobMoveUpdate.UpdateNodesJob((CurrentSelected as DataGridView).Name.Replace("Assign_Gv", ""));
+                MonitoringUpdate.UpdateNodesJob((CurrentSelected as DataGridView).Name.Replace("Assign_Gv", ""));
             }
         }
 
         private void AssignPort(object sender, EventArgs e)
         {
             string PortName = (sender as MenuItem).Text.Split('-')[0];
-           string LDPort = (CurrentSelected as DataGridView).Name.Replace("Assign_Gv", "");
+            string LDPort = (CurrentSelected as DataGridView).Name.Replace("Assign_Gv", "");
             Node UD = NodeManagement.Get(PortName);
             Node LD = NodeManagement.Get(LDPort);
             UD.Mode = "UD";
@@ -219,7 +219,7 @@ namespace Adam.Menu.WaferMapping
                 string waferId = (CurrentSelected as DataGridView).SelectedRows[0].Cells["Job_Id"].Value.ToString();
                 string OrgDest = (CurrentSelected as DataGridView).SelectedRows[0].Cells["Destination"].Value.ToString();
                 string OrgDestSlot = (CurrentSelected as DataGridView).SelectedRows[0].Cells["DestinationSlot"].Value.ToString();
-                
+
                 Job UDSlot = UD.GetJob(Slot);
                 if (UDSlot == null)
                 {
@@ -231,7 +231,7 @@ namespace Adam.Menu.WaferMapping
                     Job wafer = JobManagement.Get(waferId);
                     if (wafer != null)
                     {
-                       
+
                         wafer.Destination = PortName;
                         wafer.DisplayDestination = PortName.Replace("Load", "");
                         wafer.DestinationSlot = Slot;
@@ -243,7 +243,7 @@ namespace Adam.Menu.WaferMapping
                         }
                         NodeManagement.Get(PortName).AddReserve(Slot, wafer);
                         (CurrentSelected as DataGridView).Refresh();
-                        JobMoveUpdate.UpdateNodesJob((CurrentSelected as DataGridView).Name.Replace("Assign_Gv", ""));
+                        MonitoringUpdate.UpdateNodesJob((CurrentSelected as DataGridView).Name.Replace("Assign_Gv", ""));
                     }
                     else
                     {
@@ -296,7 +296,7 @@ namespace Adam.Menu.WaferMapping
                     }
                 }
                  (CurrentSelected as DataGridView).Refresh();
-                JobMoveUpdate.UpdateNodesJob((CurrentSelected as DataGridView).Name.Replace("Assign_Gv", ""));
+                MonitoringUpdate.UpdateNodesJob((CurrentSelected as DataGridView).Name.Replace("Assign_Gv", ""));
 
             }
 
@@ -350,19 +350,35 @@ namespace Adam.Menu.WaferMapping
             string PortName = (sender as Button).Name.Replace("_ASCM", "");
             string AssignStatus = (sender as Button).Text;
             Node port = NodeManagement.Get(PortName);
+
+            DataGridView Port_gv = this.Controls.Find(PortName + "Assign_Gv", true).FirstOrDefault() as DataGridView;
+            DataGridView DestPort_gv = this.Controls.Find(port.DestPort + "Assign_Gv", true).FirstOrDefault() as DataGridView;
+            Button DestPort_btn = this.Controls.Find(port.DestPort + "_ASCM", true).FirstOrDefault() as Button;
             if (port != null)
             {
                 if (AssignStatus.Equals("Assign Cancel"))
                 {
                     port.Available = false;
                     (sender as Button).Text = "Assign Complete";
-                    (sender as Button).BackColor = Color.DimGray;
+                    (sender as Button).BackColor = Color.Gainsboro;
+                    (sender as Button).ForeColor = Color.Black;
+
+                    Port_gv.Enabled = true;
+                    DestPort_gv.Enabled = true;
+                    DestPort_btn.Enabled = true;
                 }
                 else if (AssignStatus.Equals("Assign Complete"))
                 {
+                   
                     port.Available = true;
+
                     (sender as Button).Text = "Assign Cancel";
                     (sender as Button).BackColor = Color.Green;
+                    (sender as Button).ForeColor = Color.White;
+
+                    Port_gv.Enabled = false;
+                    DestPort_gv.Enabled = false;
+                    DestPort_btn.Enabled = false;
                 }
             }
             else

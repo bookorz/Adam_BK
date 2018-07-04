@@ -958,13 +958,14 @@
             // 
             // LoadPort01_ASCM
             // 
+            this.LoadPort01_ASCM.BackColor = System.Drawing.Color.Gainsboro;
             this.LoadPort01_ASCM.Dock = System.Windows.Forms.DockStyle.Fill;
             this.LoadPort01_ASCM.Location = new System.Drawing.Point(3, 687);
             this.LoadPort01_ASCM.Name = "LoadPort01_ASCM";
             this.LoadPort01_ASCM.Size = new System.Drawing.Size(189, 36);
             this.LoadPort01_ASCM.TabIndex = 63;
             this.LoadPort01_ASCM.Text = "Assign Complete";
-            this.LoadPort01_ASCM.UseVisualStyleBackColor = true;
+            this.LoadPort01_ASCM.UseVisualStyleBackColor = false;
             this.LoadPort01_ASCM.Click += new System.EventHandler(this.LoadPort_ASCM_Click);
             // 
             // tableLayoutPanel16

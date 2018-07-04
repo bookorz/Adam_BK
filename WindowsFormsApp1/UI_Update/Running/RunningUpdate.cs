@@ -21,6 +21,59 @@ namespace Adam.UI_Update.Running
         delegate void UpdatePresent(string JobId);
         delegate void UpdatePortUsed(string PortName, bool Used);
 
+        public static void UpdateModeStatus(string Status)
+        {
+            try
+            {
+                Form form = Application.OpenForms["FormRunningScreen"];
+                Button Start_btn;
+                if (form == null)
+                    return;
+
+                Start_btn = form.Controls.Find("Start_btn", true).FirstOrDefault() as Button;
+                if (Start_btn == null)
+                    return;
+
+                if (Start_btn.InvokeRequired)
+                {
+                    UpdatePresent ph = new UpdatePresent(UpdateModeStatus);
+                    Start_btn.BeginInvoke(ph, Status);
+                }
+                else
+                {
+                    switch (Status)
+                    {
+                        case "Running":
+                        case "Start":
+                            Start_btn.BackColor = Color.Red;
+                            Start_btn.Text = "Stop";
+                            Start_btn.Tag = "Start";
+
+
+
+                            break;
+                        case "Stop":
+                            Start_btn.BackColor = Color.Silver;
+                            Start_btn.Text = "Start Running";
+                            Start_btn.Tag = "Stop";
+
+
+                            break;
+
+
+
+                    }
+
+                }
+
+
+            }
+            catch
+            {
+                logger.Error("UpdateOnlineStatus: Update fail.");
+            }
+        }
+
         public static void UpdateRunningInfo(string Param, string Value)
         {
             Form form = Application.OpenForms["FormRunningScreen"];
@@ -69,7 +122,7 @@ namespace Adam.UI_Update.Running
             if (Start_btn.InvokeRequired)
             {
                 UpdatePresent ph = new UpdatePresent(ReverseRunning);
-                Start_btn.BeginInvoke(ph, FinishPort);
+                Start_btn.Invoke(ph, FinishPort);
             }
             else
             {
@@ -118,6 +171,7 @@ namespace Adam.UI_Update.Running
                             WaferAssignUpdate.UpdateLoadPortMode(FinPort.Name, FinPort.Mode);
                             WaferAssignUpdate.UpdateLoadPortMode(DestPort.Name, DestPort.Mode);
                         }
+                        FinPort.DestPort = "";
                         DestPort.DestPort = FinPort.Name;
                         DestPort.ReserveList.Clear();
                         TextBox tb = form.Controls.Find("TransCount_tb", true).FirstOrDefault() as TextBox;

@@ -144,7 +144,7 @@ namespace Adam.UI_Update.WaferMapping
 
                     Node port = NodeManagement.Get(PortName);
                     //List<Job> MappingData = new List<Job>();
-                    port.IsMapping = true;
+                    //port.IsMapping = true;
                     if (Mapping.Equals(""))
                     {
                         foreach(Job eachJob in port.JobList.Values)
@@ -249,7 +249,7 @@ namespace Adam.UI_Update.WaferMapping
                     Port_gv.ColumnHeadersDefaultCellStyle.Font = new Font("Arial", 10);
 
 
-                    JobMoveUpdate.UpdateNodesJob(PortName);
+                    MonitoringUpdate.UpdateNodesJob(PortName);
 
                 }
 

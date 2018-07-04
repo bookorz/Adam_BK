@@ -20,6 +20,7 @@ using Adam.UI_Update.Alarm;
 using GUI;
 using Adam.UI_Update.Running;
 using System.Linq;
+using System.Collections.Concurrent;
 
 namespace Adam
 {
@@ -38,6 +39,8 @@ namespace Adam
         private Menu.OCR.FormOCR formOCR = new Menu.OCR.FormOCR();
         private Menu.SystemSetting.FormSystemSetting formSystem = new Menu.SystemSetting.FormSystemSetting();
         private Menu.RunningScreen.FormRunningScreen formTestMode = new Menu.RunningScreen.FormRunningScreen();
+
+       
 
         public FormMain()
         {
@@ -69,7 +72,12 @@ namespace Adam
 
         private void Form1_Load(object sender, EventArgs e)
         {
+            Int32 oldWidth = this.Width;
+            Int32 oldHeight = this.Height;
 
+            this.WindowState = FormWindowState.Normal;
+            this.Width = 1;
+            this.Height = 1;
 
 
             Control[] ctrlForm = new Control[] { formMonitoring, formCommunications, formWafer, formStatus, formOCR, formTestMode, formSystem };
@@ -104,7 +112,9 @@ namespace Adam
                 SplashScreen.Instance.BeginInvoke(new MethodInvoker(SplashScreen.Instance.Dispose));
                 SplashScreen.Instance = null;
             }
-
+            this.Width = oldWidth;
+            this.Height = oldHeight;
+            this.WindowState = FormWindowState.Maximized;
             DIO.Connect();
             AuthorityUpdate.UpdateFuncGroupEnable("INIT");//init 權限
             RouteCtrl.ConnectAll();
@@ -275,8 +285,8 @@ namespace Adam
                     {
                         case Transaction.Command.LoadPortType.GetMapping:
 
-                            WaferAssignUpdate.UpdateLoadPortMapping(Node.Name, Msg.Value);
-                            
+                            //WaferAssignUpdate.UpdateLoadPortMapping(Node.Name, Msg.Value);
+                            WaferAssignUpdate.UpdateLoadPortMapping(Node.Name, "1111000000000000000000000");
 
                             break;                       
                         case Transaction.Command.LoadPortType.ReadStatus:
@@ -669,13 +679,17 @@ namespace Adam
                 WaferAssignUpdate.RefreshMapping(PortName);
                 WaferAssignUpdate.RefreshMapping(NodeManagement.Get(PortName).DestPort);
                 Node Port = NodeManagement.Get(PortName);
+                Node DestPort = NodeManagement.Get(Port.DestPort);
                 switch (FormName)
                 {
                     case "Running":
                         //RunningUpdate.UpdateUseState(PortName, false);
                         MonitoringUpdate.UpdateUseState(PortName, false);
                         WaferAssignUpdate.UpdateUseState(PortName, false);
-                        RunningUpdate.ReverseRunning(PortName);
+                       
+                        Port.ExcuteScript("LoadPortUnloadAndLoad", "Running_Port_Finished");
+                        DestPort.ExcuteScript("LoadPortUnloadAndLoad", "Running_Port_Finished");
+                        //RunningUpdate.ReverseRunning(PortName);
 
                         break;
                     default:
@@ -712,6 +726,7 @@ namespace Adam
             logger.Debug("On_Mode_Changed");
 
             ConnectionStatusUpdate.UpdateModeStatus(Mode);
+            RunningUpdate.UpdateModeStatus(Mode);
             foreach (Node port in NodeManagement.GetLoadPortList())
             {
                 WaferAssignUpdate.RefreshMapping(port.Name);
@@ -721,7 +736,7 @@ namespace Adam
         public void On_Job_Location_Changed(Job Job)
         {
             logger.Debug("On_Job_Location_Changed");
-            JobMoveUpdate.UpdateJobMove(Job.Job_Id);
+            MonitoringUpdate.UpdateJobMove(Job.Job_Id);
             
             
         }
@@ -769,21 +784,39 @@ namespace Adam
                     }
                     break;
 
-                case "Running":
-                    if (ScriptName.Equals("LoadPortUnload"))
+                case "Running_Port_Finished":
+                    if (ScriptName.Equals("LoadPortUnloadAndLoad"))
                     {
-                        Node.ExcuteScript("LoadPortload", "Running");
-                    }
-                    else if (ScriptName.Equals("LoadPortload"))
-                    {//Reverse
-
-                        Node Port = Node;
-                        Node DestPort = NodeManagement.Get(Port.DestPort);
-                        foreach (Job j in DestPort.JobList.Values)
+                        Node Port;
+                        Node DestPort;
+                        if (!Node.DestPort.Equals(""))
                         {
-                            j.Destination = Port.Name;
+                            Port = Node;
+                            DestPort = NodeManagement.Get(Node.DestPort);
+                            if (DestPort.IsMapping)
+                            {
+                                RunningUpdate.ReverseRunning(Port.Name);
+                            }
+                        }
+                        else
+                        {
+                            var findPort = from port in NodeManagement.GetLoadPortList()
+                                           where port.DestPort.Equals(Node.Name)
+                                           select port;
+
+                            if (findPort.Count() != 0)
+                            {
+                                Port = findPort.First();
+                                DestPort = Node;
+                                if (Port.IsMapping)
+                                {
+                                    RunningUpdate.ReverseRunning(Port.Name);
+                                }
+
+                            }
                         }
                     }
+                   
                     break;
             }
         }

@@ -1,6 +1,55 @@
 [
   {
     "Name": "Robot01",
+    "Controller": "RobotController01",
+    "AdrNo": "1",
+    "Type": "Robot",
+    "Brand": "Sanwa",
+    "ByPass": false,
+    "Enable": false,
+    "DefaultAligner": "Aligner02",
+    "AlternativeAligner": "Aligner01",
+    "RouteTable": [
+      {
+        "NodeName": "LoadPort01",
+        "NodeType": "LoadPort",
+        "Point": "1201",
+        "Offset": 23
+      },
+      {
+        "NodeName": "LoadPort02",
+        "NodeType": "LoadPort",
+        "Point": "1202",
+        "Offset": -23
+      },
+      {
+        "NodeName": "LoadPort03",
+        "NodeType": "LoadPort",
+        "Point": "1203",
+        "Offset": -23
+      },
+      {
+        "NodeName": "LoadPort04",
+        "NodeType": "LoadPort",
+        "Point": "1204",
+        "Offset": 23
+      },
+      {
+        "NodeName": "Aligner01",
+        "NodeType": "Aligner",
+        "Point": "0121",
+        "Offset": 16
+      },
+      {
+        "NodeName": "Aligner02",
+        "NodeType": "Aligner",
+        "Point": "0122",
+        "Offset": -16
+      }
+    ]
+  },
+  {
+    "Name": "Robot02",
     "Controller": "RobotController02",
     "AdrNo": "2",
     "Type": "Robot",
@@ -11,25 +60,25 @@
     "AlternativeAligner": "Aligner02",
     "RouteTable": [
       {
-        "NodeName": "LoadPort03",
+        "NodeName": "LoadPort01",
         "NodeType": "LoadPort",
         "Point": "1205",
         "Offset": 23
       },
       {
-        "NodeName": "LoadPort04",
+        "NodeName": "LoadPort02",
         "NodeType": "LoadPort",
         "Point": "1206",
         "Offset": -23
       },
       {
-        "NodeName": "LoadPort02",
+        "NodeName": "LoadPort03",
         "NodeType": "LoadPort",
         "Point": "1207",
         "Offset": -23
       },
       {
-        "NodeName": "LoadPort01",
+        "NodeName": "LoadPort04",
         "NodeType": "LoadPort",
         "Point": "1208",
         "Offset": 23
