@@ -30,7 +30,7 @@
         {
             this.tbcSystemSetting = new System.Windows.Forms.TabControl();
             this.tbpDeviceManager = new System.Windows.Forms.TabPage();
-            this.tbpConfiguration = new System.Windows.Forms.TabPage();
+            this.tbpCommandScript = new System.Windows.Forms.TabPage();
             this.tbpOnlineSettings = new System.Windows.Forms.TabPage();
             this.tbpAccountSetting = new System.Windows.Forms.TabPage();
             this.tbpSECSSetting = new System.Windows.Forms.TabPage();
@@ -43,7 +43,7 @@
             // 
             this.tbcSystemSetting.Alignment = System.Windows.Forms.TabAlignment.Right;
             this.tbcSystemSetting.Controls.Add(this.tbpDeviceManager);
-            this.tbcSystemSetting.Controls.Add(this.tbpConfiguration);
+            this.tbcSystemSetting.Controls.Add(this.tbpCommandScript);
             this.tbcSystemSetting.Controls.Add(this.tbpOnlineSettings);
             this.tbcSystemSetting.Controls.Add(this.tbpAccountSetting);
             this.tbcSystemSetting.Controls.Add(this.tbpSECSSetting);
@@ -71,16 +71,16 @@
             this.tbpDeviceManager.TabIndex = 0;
             this.tbpDeviceManager.Text = "Device Manager";
             // 
-            // tbpConfiguration
+            // tbpCommandScript
             // 
-            this.tbpConfiguration.BackColor = System.Drawing.SystemColors.Control;
-            this.tbpConfiguration.Location = new System.Drawing.Point(4, 4);
-            this.tbpConfiguration.Name = "tbpConfiguration";
-            this.tbpConfiguration.Padding = new System.Windows.Forms.Padding(3);
-            this.tbpConfiguration.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.tbpConfiguration.Size = new System.Drawing.Size(1432, 752);
-            this.tbpConfiguration.TabIndex = 1;
-            this.tbpConfiguration.Text = "Configuration";
+            this.tbpCommandScript.BackColor = System.Drawing.SystemColors.Control;
+            this.tbpCommandScript.Location = new System.Drawing.Point(4, 4);
+            this.tbpCommandScript.Name = "tbpCommandScript";
+            this.tbpCommandScript.Padding = new System.Windows.Forms.Padding(3);
+            this.tbpCommandScript.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.tbpCommandScript.Size = new System.Drawing.Size(1432, 752);
+            this.tbpCommandScript.TabIndex = 1;
+            this.tbpCommandScript.Text = "Command Script";
             // 
             // tbpOnlineSettings
             // 
@@ -147,7 +147,7 @@
 
         private System.Windows.Forms.TabControl tbcSystemSetting;
         private System.Windows.Forms.TabPage tbpDeviceManager;
-        private System.Windows.Forms.TabPage tbpConfiguration;
+        private System.Windows.Forms.TabPage tbpCommandScript;
         private System.Windows.Forms.TabPage tbpOnlineSettings;
         private System.Windows.Forms.TabPage tbpAccountSetting;
         private System.Windows.Forms.TabPage tbpSECSSetting;

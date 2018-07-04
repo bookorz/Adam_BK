@@ -10,6 +10,7 @@ using System.Linq;
 using System.IO.Ports;
 using System.Diagnostics;
 using SANWA.Utility;
+using Newtonsoft.Json;
 
 namespace Adam.Menu.Communications
 {
@@ -22,6 +23,8 @@ namespace Adam.Menu.Communications
 
         private DataTable dtController = new DataTable();
         private DataTable dtNode = new DataTable();
+        private DataTable dtControlSetting = new DataTable();
+        private DataTable dtParameterSetting = new DataTable();
         private string Vendor = string.Empty;
         private string ControllerID = string.Empty;
 
@@ -125,6 +128,16 @@ namespace Adam.Menu.Communications
                     nudIP03.Value = 0;
                     nudIP04.Value = 0;
                     nudIPPort.Value = 0;
+                    chbTCPIPActive.Checked = true;
+                    txbSlaveID.Text = string.Empty;
+                    txbDigitalInputQuantity.Text = string.Empty;
+                    txbDelay.Text = string.Empty;
+                    txbReadTimeout.Text = string.Empty;
+                    txbInformation.Text = string.Empty;
+                    dgvAttribute01.DataSource = null;
+                    dgvAttribute02.DataSource = null;
+                    dtControlSetting = null;
+                    dtParameterSetting = null;
                 }
                 else
                 {
@@ -143,7 +156,33 @@ namespace Adam.Menu.Communications
                         nudIP04.Value = Convert.ToInt32(dtTemp.Rows[0]["conn_address"].ToString().Split('.')[3].ToString());
                         nudIPPort.Value = Convert.ToInt32(dtTemp.Rows[0]["conn_prot"].ToString());
                         chbTCPIPActive.Checked = dtTemp.Rows[0]["enable_flg"].ToString() == "Y" ? true : false;
+                        txbSlaveID.Text = dtTemp.Rows[0]["slave_id"].ToString();
+                        txbDigitalInputQuantity.Text = dtTemp.Rows[0]["digital_input_quantity"].ToString();
+                        txbDelay.Text = dtTemp.Rows[0]["delay"].ToString();
+                        txbReadTimeout.Text = dtTemp.Rows[0]["read_timeout"].ToString();
                         txbInformation.Text = dtTemp.Rows[0]["create_user"].ToString() + "," + Convert.ToDateTime(dtTemp.Rows[0]["create_timestamp"].ToString()).ToString("yyyy-MM-dd HH:mm:ss");
+
+                        if (dtTemp.Rows[0]["control_setting"].ToString().Equals(string.Empty))
+                        {
+                            dtControlSetting = (DataTable)Newtonsoft.Json.JsonConvert.DeserializeObject(dtTemp.Rows[0]["control_setting"].ToString(), (typeof(DataTable)));
+                            dgvAttribute01.DataSource = dtControlSetting;
+                        }
+                        else
+                        {
+                            dgvAttribute01.DataSource = null;
+                            dtControlSetting = null;
+                        }
+
+                        if (dtTemp.Rows[0]["parameter_setting"].ToString().Equals(string.Empty))
+                        {
+                            dtParameterSetting = (DataTable)Newtonsoft.Json.JsonConvert.DeserializeObject(dtTemp.Rows[0]["parameter_setting"].ToString(), (typeof(DataTable)));
+                            dgvAttribute02.DataSource = dtParameterSetting;
+                        }
+                        else
+                        {
+                            dgvAttribute02.DataSource = null;
+                            dtParameterSetting = null;
+                        }
                     }
                     else
                     {
@@ -153,11 +192,19 @@ namespace Adam.Menu.Communications
                         nudIP04.Value = 0;
                         nudIPPort.Value = 0;
                         chbTCPIPActive.Checked = true;
+                        txbSlaveID.Text = string.Empty;
+                        txbDigitalInputQuantity.Text = string.Empty;
+                        txbDelay.Text = string.Empty;
+                        txbReadTimeout.Text = string.Empty;
                         txbInformation.Text = string.Empty;
+                        dgvAttribute01.DataSource = null;
+                        dgvAttribute02.DataSource = null;
+                        dtControlSetting = null;
+                        dtParameterSetting = null;
                     }
                 }
 
-                txbConnectType.Text = btnTCPIP.Tag.ToString();
+                txbConnectionType.Text = btnTCPIP.Tag.ToString();
             }
             catch (Exception ex)
             {
@@ -219,7 +266,7 @@ namespace Adam.Menu.Communications
                     txbParityBit.Text = dtTemp.Rows[0]["com_parity_bit"].ToString();
                     txbStopBit.Text = dtTemp.Rows[0]["com_stop_bit"].ToString();
                     chbRS232CActive.Checked = dtTemp.Rows[0]["enable_flg"].ToString() == "Y" ? true : false;
-                    txbInformation.Text = dtTemp.Rows[0]["create_user"].ToString() + "," + Convert.ToDateTime(dtTemp.Rows[0]["create_timestamp"].ToString()).ToString("yyyy-MM-dd HH:mm:ss");
+                    txbReadTimeout.Text = dtTemp.Rows[0]["create_user"].ToString() + "," + Convert.ToDateTime(dtTemp.Rows[0]["create_timestamp"].ToString()).ToString("yyyy-MM-dd HH:mm:ss");
                 }
                 else
                 {
@@ -229,7 +276,7 @@ namespace Adam.Menu.Communications
                     txbParityBit.Text = "None";
                     txbStopBit.Text = "One";
                     chbRS232CActive.Checked = true;
-                    txbInformation.Text = string.Empty;
+                    txbReadTimeout.Text = string.Empty;
                 }
 
                 txbConnectTypeCOM.Text = btnRS232C.Tag.ToString();
@@ -318,9 +365,8 @@ namespace Adam.Menu.Communications
             nudIP03.Value = 0;
             nudIP04.Value = 0;
             nudIPPort.Value = 0;
-            txbConnectType.Text = "Socket";
+            txbConnectionType.Text = "Socket";
             txbCommunicatoyTypeNotice.Text = string.Empty;
-            txbSettingandMaintainNotice.Text = string.Empty;
         }
 
         private void btnSave_Click(object sender, EventArgs e)
@@ -335,6 +381,7 @@ namespace Adam.Menu.Communications
                 strReplaceSql = "REPLACE INTO controller " +
                     "(node_id, node_function_name, node_function_type, conn_address, conn_type, conn_prot, " +
                     "com_parity_bit, com_data_bits, com_stop_bit, enable_flg, " +
+                    "slave_id, digital_input_quantity, delay, read_timeout, control_setting, parameter_setting, " +
                     "create_user, create_timestamp, modify_user, modify_timestamp) " +
                     "VALUES (" +
                     "@node_id, " +
@@ -347,6 +394,12 @@ namespace Adam.Menu.Communications
                     "@com_data_bits, " +
                     "@com_stop_bit, " +
                     "@enable_flg, " +
+                    "@slave_id, " +
+                    "@digital_input_quantity, " +
+                    "@delay, " +
+                    "@read_timeout, " +
+                    "@control_setting, " +
+                    "@parameter_setting, " +
                     "@create_user, " +
                     "@create_timestamp, " +
                     "@modify_user, " +
@@ -366,6 +419,29 @@ namespace Adam.Menu.Communications
                     keyValues.Add("@com_data_bits", string.Empty);
                     keyValues.Add("@com_stop_bit", string.Empty);
                     keyValues.Add("@enable_flg", chbTCPIPActive.Checked ? "Y" : "N");
+
+                    keyValues.Add("@slave_id", txbSlaveID.Text.Trim());
+                    keyValues.Add("@digital_input_quantity", txbDigitalInputQuantity.Text.Trim());
+                    keyValues.Add("@delay", txbDelay.Text.Trim());
+                    keyValues.Add("@read_timeout", txbReadTimeout.Text.Trim());
+
+                    if (dtControlSetting != null || dtControlSetting.Rows.Count > 0)
+                    {
+                        keyValues.Add("@control_setting", JsonConvert.SerializeObject(dtControlSetting, Formatting.Indented));
+                    }
+                    else
+                    {
+                        keyValues.Add("@control_setting", string.Empty);
+                    }
+
+                    if (dtParameterSetting != null || dtParameterSetting.Rows.Count > 0)
+                    {
+                        keyValues.Add("@parameter_setting", JsonConvert.SerializeObject(dtParameterSetting, Formatting.Indented));
+                    }
+                    else
+                    {
+                        keyValues.Add("@parameter_setting", string.Empty);
+                    }
                 }
 
                 if (btnRS232C.BackColor == Color.DodgerBlue)
@@ -377,15 +453,22 @@ namespace Adam.Menu.Communications
                     keyValues.Add("@com_data_bits", nudDataBits.Value.ToString());
                     keyValues.Add("@com_stop_bit", txbStopBit.Text.Trim());
                     keyValues.Add("@enable_flg", chbRS232CActive.Checked ? "Y" : "N");
+
+                    keyValues.Add("@slave_id", string.Empty);
+                    keyValues.Add("@digital_input_quantity", string.Empty);
+                    keyValues.Add("@delay", string.Empty);
+                    keyValues.Add("@read_timeout", string.Empty);
+                    keyValues.Add("@control_setting", string.Empty);
+                    keyValues.Add("@parameter_setting", string.Empty);
                 }
 
                 Form form = Application.OpenForms["FormMain"];
                 Label Signal = form.Controls.Find("lbl_login_id", true).FirstOrDefault() as Label;
 
-                if (txbInformation.Text.Split(',').Length > 1)
+                if (txbReadTimeout.Text.Split(',').Length > 1)
                 {
-                    keyValues.Add("@create_user", txbInformation.Text.Split(',')[0].ToString().Equals(string.Empty) ? string.Empty : txbInformation.Text.Split(',')[0].ToString());
-                    keyValues.Add("@create_timestamp", txbInformation.Text.Split(',')[1].ToString().Equals(string.Empty) ? string.Empty : txbInformation.Text.Split(',')[1].ToString());
+                    keyValues.Add("@create_user", txbReadTimeout.Text.Split(',')[0].ToString().Equals(string.Empty) ? string.Empty : txbReadTimeout.Text.Split(',')[0].ToString());
+                    keyValues.Add("@create_timestamp", txbReadTimeout.Text.Split(',')[1].ToString().Equals(string.Empty) ? string.Empty : txbReadTimeout.Text.Split(',')[1].ToString());
                 }
                 else
                 {

@@ -49,6 +49,8 @@ namespace Adam
 
             AlmMapping = new AlarmMapping();
 
+            this.StartPosition = System.Windows.Forms.FormStartPosition.Manual;
+            this.Location = new System.Drawing.Point(-200, 0);
         }
 
         protected override CreateParams CreateParams
@@ -69,9 +71,13 @@ namespace Adam
 
         private void Form1_Load(object sender, EventArgs e)
         {
+            Int32 oldWidth = this.Width;
+            Int32 oldHeight = this.Height;
 
-
-
+            this.WindowState = FormWindowState.Normal;
+            this.Width = 1;
+            this.Height = 1;
+            
             Control[] ctrlForm = new Control[] { formMonitoring, formCommunications, formWafer, formStatus, formOCR, formTestMode, formSystem };
 
             try
@@ -108,6 +114,10 @@ namespace Adam
             DIO.Connect();
             AuthorityUpdate.UpdateFuncGroupEnable("INIT");//init 權限
             RouteCtrl.ConnectAll();
+
+            this.Width = oldWidth;
+            this.Height = oldHeight;
+            this.WindowState = FormWindowState.Maximized;
         }
 
         private void LoadPort01_DataBindingComplete(object sender, DataGridViewBindingCompleteEventArgs e)
@@ -148,7 +158,7 @@ namespace Adam
         private void toolStripMenuItem4_Click(object sender, EventArgs e)
         {
             string strMsg = "This equipment performs the initialization and origin search OK?\r\n" + "This equipment will be initalized, each axis will return to home position.\r\n" + "Check the condition of the wafer.";
-            if (MessageBox.Show(strMsg, "Initialize", MessageBoxButtons.OKCancel, MessageBoxIcon.Exclamation, MessageBoxDefaultButton.Button1, MessageBoxOptions.ServiceNotification) == DialogResult.OK)
+            if (MessageBox.Show(strMsg, "Initialize", MessageBoxButtons.OKCancel, MessageBoxIcon.Exclamation, MessageBoxDefaultButton.Button1) == DialogResult.OK)
             {
 
                 foreach (Node each in NodeManagement.GetList())
@@ -172,7 +182,7 @@ namespace Adam
         private void toolStripMenuItem5_Click(object sender, EventArgs e)
         {
             string strMsg = "Move to Home position. OK?";
-            if (MessageBox.Show(strMsg, "Org.Back", MessageBoxButtons.OKCancel, MessageBoxIcon.Exclamation, MessageBoxDefaultButton.Button1, MessageBoxOptions.ServiceNotification) == DialogResult.OK)
+            if (MessageBox.Show(strMsg, "Org.Back", MessageBoxButtons.OKCancel, MessageBoxIcon.Exclamation, MessageBoxDefaultButton.Button1) == DialogResult.OK)
             {
                 Transaction txn = new Transaction();
                 txn.Method = Transaction.Command.RobotType.RobotHome;

@@ -12,7 +12,7 @@ namespace Adam.Menu.SystemSetting
     {
         private FormAccountSetting accountSetting = new FormAccountSetting();
         private FormAlarmEventSet formAlarm = new FormAlarmEventSet();
-        private FormConfiguration configuration = new FormConfiguration();
+        private FormCpmmandScript configuration = new FormCpmmandScript();
         private FormDeviceManager deviceManager = new FormDeviceManager();
         private FormOnlineSettings onlineSettings = new FormOnlineSettings();
         private FormSECSSet sECSSet = new FormSECSSet();
@@ -75,7 +75,7 @@ namespace Adam.Menu.SystemSetting
 
                 tbpAccountSetting.Controls.Add(accountSetting);
                 tbpAlarmEventSet.Controls.Add(formAlarm);
-                tbpConfiguration.Controls.Add(configuration);
+                tbpCommandScript.Controls.Add(configuration);
                 tbpDeviceManager.Controls.Add(deviceManager);
                 tbpOnlineSettings.Controls.Add(onlineSettings);
                 tbpSECSSetting.Controls.Add(sECSSet);
