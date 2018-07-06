@@ -40,7 +40,7 @@ namespace Adam
         private Menu.SystemSetting.FormSystemSetting formSystem = new Menu.SystemSetting.FormSystemSetting();
         private Menu.RunningScreen.FormRunningScreen formTestMode = new Menu.RunningScreen.FormRunningScreen();
 
-       
+
 
         public FormMain()
         {
@@ -80,7 +80,7 @@ namespace Adam
             this.WindowState = FormWindowState.Normal;
             this.Width = 1;
             this.Height = 1;
-            
+
             Control[] ctrlForm = new Control[] { formMonitoring, formCommunications, formWafer, formStatus, formOCR, formTestMode, formSystem };
 
             try
@@ -249,7 +249,7 @@ namespace Adam
             UI_TEST.Teaching teaching = new UI_TEST.Teaching();
             teaching.ShowDialog();
         }
-      
+
         private void btnVersion_Click(object sender, EventArgs e)
         {
             GUI.FormVersion formVersion = new GUI.FormVersion();
@@ -280,7 +280,7 @@ namespace Adam
         public void On_Command_Excuted(Node Node, Transaction Txn, ReturnMessage Msg)
         {
             logger.Debug("On_Command_Excuted");
-          
+
             Transaction txn = new Transaction();
 
             switch (Node.Type)
@@ -290,62 +290,13 @@ namespace Adam
                     {
                         case Transaction.Command.LoadPortType.GetMapping:
 
-                            //WaferAssignUpdate.UpdateLoadPortMapping(Node.Name, Msg.Value);
-                            WaferAssignUpdate.UpdateLoadPortMapping(Node.Name, "1111000000000000000000000");
-
-                            break;                       
-                        case Transaction.Command.LoadPortType.ReadStatus:
-                            MessageParser parser = new MessageParser(Node.Brand);
-                            Dictionary<string, string> content = parser.ParseMessage(Txn.Method, Msg.Value);
-                            bool CheckResult = true;
-                            foreach (KeyValuePair<string, string> each in content)
-                            {
-                                switch (each.Key)
-                                {
-                                    case "FOUP Clamp Status":
-                                        if (!each.Value.Equals("Open"))
-                                        {
-                                            CheckResult = false;
-                                        }
-                                        break;
-                                    case "Latch Key Status":
-                                        if (!each.Value.Equals("Close"))
-                                        {
-                                            CheckResult = false;
-                                        }
-                                        break;
-                                    case "Cassette Presence":
-                                        if (!each.Value.Equals("Normal position"))
-                                        {
-                                            CheckResult = false;
-                                        }
-                                        break;
-                                    case "Door Position":
-                                        if (!each.Value.Equals("Close position"))
-                                        {
-                                            CheckResult = false;
-                                        }
-                                        break;
-                                    case "Equipment Status":
-                                        if (each.Value.Equals("Fatal error"))
-                                        {
-                                            CheckResult = false;
-                                        }
-                                        break;
-                                }
-                            }
-                            if (CheckResult)
-                            {
-                                Node.FoupReady = true;
-                                Node.ExcuteScript("LoadPortFoupIn", "LoadPortFoup", true);
-
-                            }
-                            else
-                            {
-                                Node.FoupReady = false;
-                                Node.ExcuteScript("LoadPortFoupOut", "LoadPortFoup", true);
-                                On_Node_State_Changed(Node, "Ready To Load");
-                            }
+                        case Transaction.Command.LoadPortType.Unload:
+                        case Transaction.Command.LoadPortType.MappingUnload:
+                        case Transaction.Command.LoadPortType.DoorUp:
+                        case Transaction.Command.LoadPortType.InitialPos:
+                        case Transaction.Command.LoadPortType.ForceInitialPos:
+                            WaferAssignUpdate.RefreshMapping(Node.Name);
+                            MonitoringUpdate.UpdateNodesJob(Node.Name);
                             break;
                     }
                     break;
@@ -450,11 +401,75 @@ namespace Adam
                                     break;
                             }
                             break;
-                       
+
+                    }
+                    break;
+                case "InitialFinish":
+                    switch (Node.Type)
+                    {
+                        case "LoadPort":
+                            switch (Txn.Method)
+                            {
+
+                                case Transaction.Command.LoadPortType.ReadStatus:
+                                    MessageParser parser = new MessageParser(Node.Brand);
+                                    Dictionary<string, string> content = parser.ParseMessage(Txn.Method, Msg.Value);
+                                    bool CheckResult = true;
+                                    foreach (KeyValuePair<string, string> each in content)
+                                    {
+                                        switch (each.Key)
+                                        {
+                                            case "FOUP Clamp Status":
+                                                if (!each.Value.Equals("Open"))
+                                                {
+                                                    CheckResult = false;
+                                                }
+                                                break;
+                                            case "Latch Key Status":
+                                                if (!each.Value.Equals("Close"))
+                                                {
+                                                    CheckResult = false;
+                                                }
+                                                break;
+                                            case "Cassette Presence":
+                                                if (!each.Value.Equals("Normal position"))
+                                                {
+                                                    CheckResult = false;
+                                                }
+                                                break;
+                                            case "Door Position":
+                                                if (!each.Value.Equals("Close position"))
+                                                {
+                                                    CheckResult = false;
+                                                }
+                                                break;
+                                            case "Equipment Status":
+                                                if (each.Value.Equals("Fatal error"))
+                                                {
+                                                    CheckResult = false;
+                                                }
+                                                break;
+                                        }
+                                    }
+                                    if (CheckResult)
+                                    {
+                                        Node.FoupReady = true;
+                                        Node.ExcuteScript("LoadPortFoupIn", "LoadPortFoup", true);
+
+                                    }
+                                    else
+                                    {
+                                        Node.FoupReady = false;
+                                        Node.ExcuteScript("LoadPortFoupOut", "LoadPortFoup", true);
+                                        On_Node_State_Changed(Node, "Ready To Load");
+                                    }
+                                    break;
+                            }
+                            break;
                     }
                     break;
                 default:
-
+                    
                     break;
             }
         }
@@ -539,14 +554,7 @@ namespace Adam
                         case "LoadPort":
                             switch (Txn.Method)
                             {
-                                case Transaction.Command.LoadPortType.Unload:
-                                case Transaction.Command.LoadPortType.MappingUnload:
-                                case Transaction.Command.LoadPortType.UnDock:
-                                case Transaction.Command.LoadPortType.InitialPos:
-                                case Transaction.Command.LoadPortType.ForceInitialPos:
-                                    WaferAssignUpdate.UpdateLoadPortMapping(Node.Name, "");
-
-                                    break;
+                                
                             }
                             break;
                         case "OCR":
@@ -691,7 +699,7 @@ namespace Adam
                         //RunningUpdate.UpdateUseState(PortName, false);
                         MonitoringUpdate.UpdateUseState(PortName, false);
                         WaferAssignUpdate.UpdateUseState(PortName, false);
-                       
+
                         Port.ExcuteScript("LoadPortUnloadAndLoad", "Running_Port_Finished");
                         DestPort.ExcuteScript("LoadPortUnloadAndLoad", "Running_Port_Finished");
                         //RunningUpdate.ReverseRunning(PortName);
@@ -742,8 +750,8 @@ namespace Adam
         {
             logger.Debug("On_Job_Location_Changed");
             MonitoringUpdate.UpdateJobMove(Job.Job_Id);
-            
-            
+
+
         }
 
         public void On_Script_Finished(Node Node, string ScriptName, string FormName)
@@ -773,7 +781,7 @@ namespace Adam
                             {
                                 Transaction txn = new Transaction();
                                 txn.Method = Transaction.Command.LoadPortType.ReadStatus;
-                                txn.FormName = "";
+                                txn.FormName = "InitialFinish";
                                 port.SendCommand(txn);
                             }
                         }
@@ -798,7 +806,11 @@ namespace Adam
                         {
                             Port = Node;
                             DestPort = NodeManagement.Get(Node.DestPort);
-                            if (DestPort.IsMapping)
+                            // SpinWait.SpinUntil(() => (Port.IsMapping && Port.JobList.Count!=0 && DestPort.IsMapping && DestPort.JobList.Count != 0) || RouteCtrl.GetMode().Equals("Stop") , 99999999);
+                            
+                            //SpinWait.SpinUntil(() => (Port.IsMapping  && DestPort.IsMapping ) || RouteCtrl.GetMode().Equals("Stop"), 99999999);
+                            
+                            if (!RouteCtrl.GetMode().Equals("Stop")&& Port.IsMapping && DestPort.IsMapping)
                             {
                                 RunningUpdate.ReverseRunning(Port.Name);
                             }
@@ -813,7 +825,10 @@ namespace Adam
                             {
                                 Port = findPort.First();
                                 DestPort = Node;
-                                if (Port.IsMapping)
+                                //SpinWait.SpinUntil(() => (Port.IsMapping && Port.JobList.Count != 0 && DestPort.IsMapping && DestPort.JobList.Count != 0) || RouteCtrl.GetMode().Equals("Stop"), 99999999);
+                                
+                                //SpinWait.SpinUntil(() => (Port.IsMapping && DestPort.IsMapping) || RouteCtrl.GetMode().Equals("Stop"), 99999999);
+                                if (!RouteCtrl.GetMode().Equals("Stop")&& Port.IsMapping && DestPort.IsMapping)
                                 {
                                     RunningUpdate.ReverseRunning(Port.Name);
                                 }
@@ -821,7 +836,7 @@ namespace Adam
                             }
                         }
                     }
-                   
+
                     break;
             }
         }

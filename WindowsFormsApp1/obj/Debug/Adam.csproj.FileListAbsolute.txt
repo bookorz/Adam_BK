@@ -95,7 +95,6 @@ C:\Users\ethan_huang\source\repos\Adam\WindowsFormsApp1\obj\Debug\Adam.Menu.Stat
 C:\Users\ethan_huang\source\repos\Adam\WindowsFormsApp1\obj\Debug\Adam.Menu.SystemSetting.FormAccountSetting.resources
 C:\Users\ethan_huang\source\repos\Adam\WindowsFormsApp1\obj\Debug\Adam.Menu.SystemSetting.FormAlarmEventSet.resources
 C:\Users\ethan_huang\source\repos\Adam\WindowsFormsApp1\obj\Debug\Adam.Menu.SystemSetting.FormCodeSetting.resources
-C:\Users\ethan_huang\source\repos\Adam\WindowsFormsApp1\obj\Debug\Adam.Menu.SystemSetting.FormConfiguration.resources
 C:\Users\ethan_huang\source\repos\Adam\WindowsFormsApp1\obj\Debug\Adam.Menu.SystemSetting.FormDeviceManager.resources
 C:\Users\ethan_huang\source\repos\Adam\WindowsFormsApp1\obj\Debug\Adam.Menu.SystemSetting.FormOnlineSettings.resources
 C:\Users\ethan_huang\source\repos\Adam\WindowsFormsApp1\obj\Debug\Adam.Menu.SystemSetting.FormSECSSet.resources
@@ -203,3 +202,4 @@ C:\Users\ethan_huang\source\repos\Adam\WindowsFormsApp1\bin\Debug\Dapper.xml
 C:\Users\ethan_huang\source\repos\Adam\WindowsFormsApp1\obj\Debug\Adam.exe.config
 C:\Users\ethan_huang\source\repos\Adam\WindowsFormsApp1\obj\Debug\Adam.Menu.RunningScreen.FormRunningScreen.resources
 C:\Users\ethan_huang\source\repos\Adam\WindowsFormsApp1\bin\Debug\config\CommandScript\LoadPortUnloadAndLoad.json
+C:\Users\ethan_huang\source\repos\Adam\WindowsFormsApp1\obj\Debug\Adam.Menu.SystemSetting.FormCpmmandScript.resources
