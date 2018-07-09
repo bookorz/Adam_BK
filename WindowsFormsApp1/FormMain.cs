@@ -826,20 +826,20 @@ namespace Adam
             }
         }
 
-        private void vSBRobotStatus_Scroll(object sender, ScrollEventArgs e)
-        {
-            //pbRobotState.Top = -vSBRobotStatus.Value;
-        }
+        //private void vSBRobotStatus_Scroll(object sender, ScrollEventArgs e)
+        //{
+        //    //pbRobotState.Top = -vSBRobotStatus.Value;
+        //}
 
-        private void vSBAlignerStatus_Scroll(object sender, ScrollEventArgs e)
-        {
-            //pbAlignerState.Top = -vSBAlignerStatus.Value;
-        }
+        //private void vSBAlignerStatus_Scroll(object sender, ScrollEventArgs e)
+        //{
+        //    //pbAlignerState.Top = -vSBAlignerStatus.Value;
+        //}
 
-        private void vSBPortStatus_Scroll(object sender, ScrollEventArgs e)
-        {
-            //pbPortState.Top = -vSBPortStatus.Value;
-        }
+        //private void vSBPortStatus_Scroll(object sender, ScrollEventArgs e)
+        //{
+        //    //pbPortState.Top = -vSBPortStatus.Value;
+        //}
 
 
 
@@ -1062,6 +1062,14 @@ namespace Adam
         {
             FormQuery form = new FormQuery();
             form.Show();
+        }
+
+        private void tbcMian_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (tbcMian.SelectedTab.Text.Equals("Status"))
+            {
+                formStatus.Focus();
+            }
         }
     }
 }
