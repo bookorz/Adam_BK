@@ -146,6 +146,7 @@ namespace Adam.UI_Update.Running
                                     {
                                         job.ProcessFlag = false;
                                         job.Destination = FinPort.Name;
+                                        job.DisplayDestination = FinPort.Name.Replace("Load","");
                                         job.DestinationSlot = StartSlot.ToString();
                                         FinPort.ReserveList.TryAdd(job.Slot, job);
                                         StartSlot++;
@@ -159,7 +160,7 @@ namespace Adam.UI_Update.Running
                                 break;
                             }
                         }
-                        FinPort.DestPort = "Assign";
+                        //FinPort.DestPort = "Assign";
                         if (FinPort.Name.Equals(DestPort.Name))
                         {
                             DestPort.Mode = "LU";

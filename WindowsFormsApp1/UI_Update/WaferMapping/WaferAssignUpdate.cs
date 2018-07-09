@@ -87,11 +87,12 @@ namespace Adam.UI_Update.WaferMapping
                     Port_gv.DataSource = tmp;
                     Port_gv.Columns["Slot"].Width = 25;
                     Port_gv.Columns["Slot"].HeaderText = "S";
-                    Port_gv.Columns["Job_Id"].Width = 75;
+                    Port_gv.Columns["Host_Job_Id"].Width = 75;
                     Port_gv.Columns["DisplayDestination"].Width = 55;
                     Port_gv.Columns["DestinationSlot"].Width = 30;
                     Port_gv.Columns["Offset"].Visible = false;
                     Port_gv.Columns["Angle"].Visible = false;
+                    Port_gv.Columns["Job_Id"].Visible = false;
                     Port_gv.Columns["Destination"].Visible = false;
                     Port_gv.Columns["ProcessFlag"].Visible = false;
                     Port_gv.Columns["Piority"].Visible = false;
@@ -109,7 +110,11 @@ namespace Adam.UI_Update.WaferMapping
                     Port_gv.Columns["MapFlag"].Visible = false;
                     Port_gv.Columns["DisplayDestination"].HeaderText = "Dest";
                     Port_gv.Columns["DestinationSlot"].HeaderText = "DS";
+                    Port_gv.Columns["Host_Job_Id"].HeaderText = "ID";
                     Port_gv.ColumnHeadersDefaultCellStyle.Font = new Font("Arial", 10);
+
+
+                    //MonitoringUpdate.UpdateNodesJob(PortName);
 
                 }
 
@@ -250,7 +255,7 @@ namespace Adam.UI_Update.WaferMapping
 
 
                     MonitoringUpdate.UpdateNodesJob(PortName);
-
+                    port.IsMapping = true;
                 }
 
 

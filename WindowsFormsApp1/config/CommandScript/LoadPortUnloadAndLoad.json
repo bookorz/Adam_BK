@@ -24,23 +24,12 @@
   {
     "ExcuteMethod": "SetLoad",
     "FinishMethod": "",
-    "Method": "SetUnLoad",
-    "Arm": "",
-    "Slot": "",
-    "Position": "",
-    "Value": "1",
-    "Index": "3",
-    "Flag": ""
-  },
-  {
-    "ExcuteMethod": "SetUnLoad",
-    "FinishMethod": "",
     "Method": "MappingLoad",
     "Arm": "",
     "Slot": "",
     "Position": "",
     "Value": "",
-    "Index": "4",
+    "Index": "3",
     "Flag": ""
   },
   {
@@ -51,7 +40,7 @@
     "Slot": "",
     "Position": "",
     "Value": "",
-    "Index": "5",
+    "Index": "4",
     "Flag": ""
   },
   {
@@ -62,7 +51,7 @@
     "Slot": "",
     "Position": "",
     "Value": "1",
-    "Index": "6",
+    "Index": "5",
     "Flag": "End"
   }
 ]
