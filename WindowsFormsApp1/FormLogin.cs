@@ -84,19 +84,22 @@ namespace GUI
             tbUserID.Focus();
         }
 
-        private void tbPassword_KeyUp(object sender, KeyEventArgs e)
-        {
-            if (e.KeyCode == Keys.Enter)
-            {
-                btnLogin.Focus();
-            }
-        }
-
         private void tbUserID_KeyUp(object sender, KeyEventArgs e)
         {
             if (e.KeyCode == Keys.Enter)
             {
-                tbPassword.Focus();
+                if (tbUserID.Text.Trim().Equals(string.Empty))
+                {
+                    tbUserID.Focus();
+                }
+
+                if (tbUserID.Text.Trim().Equals(string.Empty))
+                {
+                    tbPassword.Focus();
+                }
+
+                btnLogin.Focus();
+                btnLogin_Click(this, e);
             }
         }
     }
