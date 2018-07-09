@@ -50,7 +50,7 @@ namespace Adam
                 NodeManagement.Get(group.First().NodeName).SendCommand(Txn);
                 AlarmManagement.Remove(group.First().NodeName);
             }
-            NodeStatusUpdate.UpdateCurrentState("Idle");
+            //NodeStatusUpdate.UpdateCurrentState("Idle");
             AlarmUpdate.UpdateAlarmList(AlarmManagement.GetAll());
         }
 

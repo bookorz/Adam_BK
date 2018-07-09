@@ -638,6 +638,12 @@ namespace Adam
             }
         }
 
+        public void On_Eqp_State_Changed(string OldStatus,string NewStatus)
+        {
+            NodeStatusUpdate.UpdateCurrentState(NewStatus);
+            StateRecord.EqpStateUpdate("Sorter",OldStatus, NewStatus);
+        }
+
         public void On_Controller_State_Changed(string Device_ID, string Status)
         {
 
@@ -664,7 +670,7 @@ namespace Adam
         public void On_Port_Begin(string PortName, string FormName)
         {
             logger.Debug("On_Port_Begin");
-            NodeStatusUpdate.UpdateCurrentState("Run");
+            
             WaferAssignUpdate.RefreshMapping(PortName);
             WaferAssignUpdate.RefreshMapping(NodeManagement.Get(PortName).DestPort);
             try
@@ -689,9 +695,10 @@ namespace Adam
             logger.Debug("On_Port_Finished");
             try
             {
+
                 WaferAssignUpdate.RefreshMapping(PortName);
                 WaferAssignUpdate.RefreshMapping(NodeManagement.Get(PortName).DestPort);
-                Node Port = NodeManagement.Get(PortName);
+                Node Port = NodeManagement.Get(PortName);              
                 Node DestPort = NodeManagement.Get(Port.DestPort);
                 switch (FormName)
                 {
@@ -719,7 +726,7 @@ namespace Adam
         public void On_Task_Finished(string FormName, string LapsedTime, int LapsedWfCount, int LapsedLotCount)
         {
             logger.Debug("On_Task_Finished");
-            NodeStatusUpdate.UpdateCurrentState("Idle");
+            //NodeStatusUpdate.UpdateCurrentState("Idle");
             try
             {
                 RunningUpdate.UpdateRunningInfo("LapsedTime", LapsedTime);
@@ -1078,5 +1085,7 @@ namespace Adam
             FormQuery form = new FormQuery();
             form.Show();
         }
+
+       
     }
 }

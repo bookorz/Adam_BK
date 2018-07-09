@@ -95,7 +95,7 @@ namespace Adam.UI_Update.WaferMapping
                     Port_gv.Columns["Job_Id"].Visible = false;
                     Port_gv.Columns["Destination"].Visible = false;
                     Port_gv.Columns["ProcessFlag"].Visible = false;
-                    Port_gv.Columns["Piority"].Visible = false;
+                    //Port_gv.Columns["Piority"].Visible = false;
                     Port_gv.Columns["AlignerFlag"].Visible = false;
                     Port_gv.Columns["OCRFlag"].Visible = false;
                     Port_gv.Columns["AlignerFinished"].Visible = false;
@@ -105,7 +105,7 @@ namespace Adam.UI_Update.WaferMapping
                     Port_gv.Columns["LastNode"].Visible = false;
                     Port_gv.Columns["CurrentState"].Visible = false;
                     Port_gv.Columns["WaitToDo"].Visible = false;
-                    Port_gv.Columns["FetchRobot"].Visible = false;
+                    //Port_gv.Columns["FetchRobot"].Visible = false;
                     Port_gv.Columns["ProcessNode"].Visible = false;
                     Port_gv.Columns["MapFlag"].Visible = false;
                     Port_gv.Columns["DisplayDestination"].HeaderText = "Dest";
@@ -235,7 +235,7 @@ namespace Adam.UI_Update.WaferMapping
                     Port_gv.Columns["Job_Id"].Visible = false;
                     Port_gv.Columns["Destination"].Visible = false;
                     Port_gv.Columns["ProcessFlag"].Visible = false;
-                    Port_gv.Columns["Piority"].Visible = false;
+                   // Port_gv.Columns["Piority"].Visible = false;
                     Port_gv.Columns["AlignerFlag"].Visible = false;
                     Port_gv.Columns["OCRFlag"].Visible = false;
                     Port_gv.Columns["AlignerFinished"].Visible = false;
@@ -245,7 +245,7 @@ namespace Adam.UI_Update.WaferMapping
                     Port_gv.Columns["LastNode"].Visible = false;
                     Port_gv.Columns["CurrentState"].Visible = false;
                     Port_gv.Columns["WaitToDo"].Visible = false;
-                    Port_gv.Columns["FetchRobot"].Visible = false;
+                    //Port_gv.Columns["FetchRobot"].Visible = false;
                     Port_gv.Columns["ProcessNode"].Visible = false;
                     Port_gv.Columns["MapFlag"].Visible = false;
                     Port_gv.Columns["DisplayDestination"].HeaderText = "Dest";
