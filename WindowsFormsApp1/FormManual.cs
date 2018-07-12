@@ -720,8 +720,13 @@ namespace GUI
             if (node == null)
                 return;
             string status = node.State != "" ? node.State : "N/A";
-            if (status.Equals("N/A") && ControllerManagement.Get(node.Controller) != null)
-                status = ControllerManagement.Get(node.Controller).Status;// 如果 NODE 無狀態，改抓 Controller 的狀態     
+            string ctrl_status = ControllerManagement.Get(node.Controller).Status;
+            if (!ctrl_status.Equals("Connected"))
+            {
+                status = ctrl_status;// 如果 Controller 非已連線狀態，NODE 狀態改抓 Controller 的狀態   
+            }
+            //if (status.Equals("N/A") && ControllerManagement.Get(node.Controller) != null)
+            //    status = ctrl_status // 如果 NODE 無狀態，改抓 Controller 的狀態     
             TextBox tbStatus = null;
             switch (name)
             {

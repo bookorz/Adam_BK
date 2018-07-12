@@ -504,6 +504,7 @@ namespace Adam
             this.tbcMian.Name = "tbcMian";
             this.tbcMian.SelectedIndex = 0;
             this.tbcMian.SizeMode = System.Windows.Forms.TabSizeMode.Fixed;
+            this.tbcMian.SelectedIndexChanged += new System.EventHandler(this.tbcMian_SelectedIndexChanged);
             // 
             // tabMonitor
             // 
@@ -740,6 +741,7 @@ namespace Adam
             this.terminalToolStripMenuItem});
             this.menuMaintenace.Name = "contextMenuStrip1";
             this.menuMaintenace.ShowCheckMargin = true;
+            this.menuMaintenace.Opening += new System.ComponentModel.CancelEventHandler(this.menuMaintenace_Opening);
             // 
             // initToolStripMenuItem
             // 

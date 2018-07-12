@@ -94,5 +94,26 @@ namespace Adam.Menu.SystemSetting
                 throw new Exception(ex.ToString());
             }
         }
+
+        private void tbcSystemSetting_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            try
+            {
+                if (tbcSystemSetting.SelectedTab == tbcSystemSetting.TabPages["tbpAccountSetting"])
+                {
+                    tbpAccountSetting.Controls.Clear();
+                    accountSetting.Close();
+                    accountSetting.Dispose();
+                    accountSetting = new FormAccountSetting();
+                    accountSetting.TopLevel = false;
+                    tbpAccountSetting.Controls.Add(accountSetting);
+                    accountSetting.Show();
+                }
+            }
+            catch (Exception ex)
+            {
+                throw new Exception(ex.ToString());
+            }
+        }
     }
 }

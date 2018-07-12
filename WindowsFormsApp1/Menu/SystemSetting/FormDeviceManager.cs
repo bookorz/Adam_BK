@@ -174,7 +174,7 @@ namespace Adam.Menu.SystemSetting
                     txbFirmwareVersion.Text = dtTemp.Rows[0]["firmware_ver"].ToString();
                     txbAddress.Text = dtTemp.Rows[0]["conn_address"].ToString();
                     txbControllerID.Text = dtTemp.Rows[0]["controller_id"].ToString();
-                    chbActive.Checked = dtTemp.Rows[0]["enable_flg"].ToString() == "Y" ? true : false;
+                    chbActive.Checked = dtTemp.Rows[0]["enable_flg"].ToString() == "1" ? true : false;
                     txbDefaultAligner.Text = dtTemp.Rows[0]["default_aligner"].ToString();
                     txbAlternativeAligner.Text = dtTemp.Rows[0]["alternative_aligner"].ToString();
                     //txbRoute.Text = dtTemp.Rows[0]["route_table"].ToString();
@@ -215,7 +215,7 @@ namespace Adam.Menu.SystemSetting
                     return;
                 }
 
-                strSql = "select * from config_node where equipment_model_id = @equipment_model_id and enable_flg = 'Y' and node_type = @node_type order by node_id, sn_no";
+                strSql = "select * from config_node where equipment_model_id = @equipment_model_id and enable_flg = '1' and node_type = @node_type order by node_id, sn_no";
                 keyValues.Add("@equipment_model_id", SANWA.Utility.Config.SystemConfig.Get().SystemMode);
                 keyValues.Add("@node_type", cmbDeviceNodeType.SelectedValue.ToString());
                 dtTemp = dBUtil.GetDataTable(strSql, keyValues);
