@@ -304,7 +304,9 @@ namespace Adam
 
             switch (Txn.FormName)
             {
-
+                case "FormStatus":
+                    Util.StateUtil.UpdateSTS(Node.Name, Msg.Value);
+                    break;
                 case "PauseProcedure":
 
                     break;
@@ -1084,6 +1086,18 @@ namespace Adam
             if (tbcMian.SelectedTab.Text.Equals("Status"))
             {
                 formStatus.Focus();
+            }
+        }
+
+        private void menuMaintenace_Opening(object sender, System.ComponentModel.CancelEventArgs e)
+        {
+            foreach (ToolStripMenuItem item in menuMaintenace.Items)
+            {
+                string user_group = lbl_login_group.Text;
+                string fun_form = "FormMain";
+                string fun_ref = item.Name;
+                Boolean enable = AuthorityUpdate.getFuncEnable(user_group, fun_form,fun_ref);
+                item.Enabled = enable;
             }
         }
     }

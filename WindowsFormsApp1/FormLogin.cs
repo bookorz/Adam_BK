@@ -64,11 +64,9 @@ namespace GUI
                 if (result)
                 {
                     AuthorityUpdate.UpdateLoginInfo(user_id, user_name, user_group_id);
-                    string msg = "{\"id\": 1, \"name\": \"lnmp.cn\"}";
-                    //log.Info(user_id + "," + user_name + "," + user_group_id);
-                    //log.Debug(user_id + "," + user_name + "," + user_group_id);
+                    string msg = "{\"user_id\": " + user_id + ", \"name\": \"" + user_name + "\", \"action\": \"Login\"}";
                     log.Info(msg);
-                    log.Debug(msg);
+                    //log.Debug(msg);
                     this.Close();
                 }
                 else

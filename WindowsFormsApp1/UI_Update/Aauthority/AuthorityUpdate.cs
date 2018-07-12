@@ -15,6 +15,7 @@ namespace Adam.UI_Update.Authority
     class AuthorityUpdate
     {
         static ILog logger = LogManager.GetLogger(typeof(AuthorityUpdate));
+        static DataTable dtAuthority;
         delegate void UpdateLogin(string Id, string Name, string Group);
         delegate void UpdateLogout();
         delegate void UpdateFuncEnable_D(string Form, string Control, string active);
@@ -79,11 +80,14 @@ namespace Adam.UI_Update.Authority
                 }
                 else
                 {
+                    ILog log = LogManager.GetLogger("Database");
                     //lbl_login_name
                     Label lbl_login_id = form.Controls.Find("lbl_login_id", true).FirstOrDefault() as Label;
                     Label lbl_login_name = form.Controls.Find("lbl_login_name", true).FirstOrDefault() as Label;
                     Label lbl_login_group = form.Controls.Find("lbl_login_group", true).FirstOrDefault() as Label;
                     Label lbl_login_date = form.Controls.Find("lbl_login_date", true).FirstOrDefault() as Label;
+                    string user_id = lbl_login_id.Text;
+                    string user_name = lbl_login_name.Text;
                     if (lbl_login_id != null)
                         lbl_login_id.Text = "ID";
                     if (lbl_login_name != null)
@@ -94,6 +98,8 @@ namespace Adam.UI_Update.Authority
                         lbl_login_date.Text = "";
                     Button btn = form.Controls.Find("btnLogInOut", true).FirstOrDefault() as Button;
                     btn.Text = "Login";
+                    string msg = "{\"user_id\": " + user_id + ", \"name\": \"" + user_name + "\", \"action\": \"Logout\"}";
+                    log.Info(msg);
                 }
             }
             catch
@@ -102,7 +108,67 @@ namespace Adam.UI_Update.Authority
             }
         }
 
+        //public static void UpdateFuncGroupEnable(string Group)
+        //{
+        //    //set SQL
+        //    StringBuilder sql = new StringBuilder();
+        //    sql.Append("\n SELECT ugf.user_group_id, ugf.fun_id, ugf.active, f.fun_form, f.fun_ref");
+        //    sql.Append("\n   FROM user_group_function ugf");
+        //    sql.Append("\n   LEFT JOIN function f");
+        //    sql.Append("\n     ON ugf.fun_id = f.fun_id");
+        //    sql.Append("\n  WHERE user_group_id = @user_group_id ");
+        //    //set parameter
+        //    Dictionary<string, object> param = new Dictionary<string, object>();
+        //    param.Add("@user_group_id", Group);
+        //    //Query
+        //    DBUtil dBUtil = new DBUtil();
+        //    DataTableReader rs = dBUtil.GetDataReader(sql.ToString(), param);
+        //    if (rs != null)
+        //    {
+        //        string fun_form = "";
+        //        string fun_ref = "";
+        //        string active = "";
+        //        while (rs.Read())
+        //        {
+        //            fun_form = (string)rs["fun_form"];
+        //            fun_ref = (string)rs["fun_ref"];
+        //            active = (string)rs["active"];
+        //            UpdateFuncAssign(fun_form, fun_ref, active);
+        //        }
+        //        rs.Close();
+        //    }
+        //}
+
         public static void UpdateFuncGroupEnable(string Group)
+        {
+            if(dtAuthority == null)
+            {
+                setDtAuthority();
+            }
+            DataTable dtTemp;
+            DataView dvTemp;
+            var query = (from t in dtAuthority.AsEnumerable()
+                         where t.Field<string>("user_group_id") == Group
+                         select t).ToList();
+            if (query.Count > 0)
+            {
+                dtTemp = query.CopyToDataTable();
+                dvTemp = dtTemp.DefaultView;
+
+                string fun_form = "";
+                string fun_ref = "";
+                string active = "";
+                for (int i = 0; i < dvTemp.Table.Rows.Count; i++)
+                {
+                    fun_form = (string)dvTemp.Table.Rows[i]["fun_form"];
+                    fun_ref = (string)dvTemp.Table.Rows[i]["fun_ref"];
+                    active = (string)dvTemp.Table.Rows[i]["active"];
+                    UpdateFuncAssign(fun_form, fun_ref, active);
+                }
+            }
+        }
+
+        private static void setDtAuthority()
         {
             //set SQL
             StringBuilder sql = new StringBuilder();
@@ -110,27 +176,15 @@ namespace Adam.UI_Update.Authority
             sql.Append("\n   FROM user_group_function ugf");
             sql.Append("\n   LEFT JOIN function f");
             sql.Append("\n     ON ugf.fun_id = f.fun_id");
-            sql.Append("\n  WHERE user_group_id = @user_group_id ");
+            //sql.Append("\n  WHERE user_group_id = @user_group_id ");
+
             //set parameter
             Dictionary<string, object> param = new Dictionary<string, object>();
-            param.Add("@user_group_id", Group);
+            //param.Add("@user_group_id", Group);
+
             //Query
             DBUtil dBUtil = new DBUtil();
-            DataTableReader rs = dBUtil.GetDataReader(sql.ToString(), param);
-            if (rs != null)
-            {
-                string fun_form = "";
-                string fun_ref = "";
-                string active = "";
-                while (rs.Read())
-                {
-                    fun_form = (string)rs["fun_form"];
-                    fun_ref = (string)rs["fun_ref"];
-                    active = (string)rs["active"];
-                    UpdateFuncAssign(fun_form, fun_ref, active);
-                }
-                rs.Close();
-            }
+            dtAuthority = dBUtil.GetDataTable(sql.ToString(), param);
         }
 
         public static void UpdateFuncAssign(string Form, string Control, string active)
@@ -150,14 +204,17 @@ namespace Adam.UI_Update.Authority
                 else
                 {
                     Control control = form.Controls.Find(Control, true).FirstOrDefault() as Control;
-                    switch (active)
+                    if(control != null)
                     {
-                        case "Y":
-                            control.Enabled = true;
-                            break;
-                        case "N":
-                            control.Enabled = false;
-                            break;
+                        switch (active)
+                        {
+                            case "Y":
+                                control.Enabled = true;
+                                break;
+                            case "N":
+                                control.Enabled = false;
+                                break;
+                        }
                     }
                 }
             }
@@ -165,6 +222,22 @@ namespace Adam.UI_Update.Authority
             {
                 logger.Error("UpdateFuncAssign: Update fail.");
             }
+        }
+
+        public static bool getFuncEnable(string group_name, string fun_form, string fun_ref)
+        {
+            bool result = false;
+            var query = (from t in dtAuthority.AsEnumerable()
+                         where t.Field<string>("user_group_id") == group_name
+                         && t.Field<string>("fun_form") == fun_form
+                         && t.Field<string>("fun_ref") == fun_ref
+                         && t.Field<string>("active") == "Y"
+                         select t).ToList();
+            if (query.Count > 0)
+            {
+                result = true;
+            }
+            return result;
         }
     }
 }
