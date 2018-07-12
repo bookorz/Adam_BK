@@ -36,6 +36,7 @@
             this.tbpSECSSetting = new System.Windows.Forms.TabPage();
             this.tbpAlarmEventSet = new System.Windows.Forms.TabPage();
             this.tbpCodeSetting = new System.Windows.Forms.TabPage();
+            this.tbpSignalTtower = new System.Windows.Forms.TabPage();
             this.tbcSystemSetting.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -46,6 +47,7 @@
             this.tbcSystemSetting.Controls.Add(this.tbpCommandScript);
             this.tbcSystemSetting.Controls.Add(this.tbpOnlineSettings);
             this.tbcSystemSetting.Controls.Add(this.tbpAccountSetting);
+            this.tbcSystemSetting.Controls.Add(this.tbpSignalTtower);
             this.tbcSystemSetting.Controls.Add(this.tbpSECSSetting);
             this.tbcSystemSetting.Controls.Add(this.tbpAlarmEventSet);
             this.tbcSystemSetting.Controls.Add(this.tbpCodeSetting);
@@ -70,7 +72,7 @@
             this.tbpDeviceManager.Padding = new System.Windows.Forms.Padding(3);
             this.tbpDeviceManager.Size = new System.Drawing.Size(1432, 752);
             this.tbpDeviceManager.TabIndex = 0;
-            this.tbpDeviceManager.Text = "Device Manager";
+            this.tbpDeviceManager.Text = "Device manager";
             // 
             // tbpCommandScript
             // 
@@ -81,7 +83,7 @@
             this.tbpCommandScript.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.tbpCommandScript.Size = new System.Drawing.Size(1432, 752);
             this.tbpCommandScript.TabIndex = 1;
-            this.tbpCommandScript.Text = "Command Script";
+            this.tbpCommandScript.Text = "Command script";
             // 
             // tbpOnlineSettings
             // 
@@ -90,7 +92,7 @@
             this.tbpOnlineSettings.Name = "tbpOnlineSettings";
             this.tbpOnlineSettings.Size = new System.Drawing.Size(1432, 752);
             this.tbpOnlineSettings.TabIndex = 3;
-            this.tbpOnlineSettings.Text = "Online Settings";
+            this.tbpOnlineSettings.Text = "Online settings";
             // 
             // tbpAccountSetting
             // 
@@ -99,7 +101,7 @@
             this.tbpAccountSetting.Name = "tbpAccountSetting";
             this.tbpAccountSetting.Size = new System.Drawing.Size(1432, 752);
             this.tbpAccountSetting.TabIndex = 4;
-            this.tbpAccountSetting.Text = "Account Setting";
+            this.tbpAccountSetting.Text = "Account setting";
             // 
             // tbpSECSSetting
             // 
@@ -109,7 +111,7 @@
             this.tbpSECSSetting.Padding = new System.Windows.Forms.Padding(3);
             this.tbpSECSSetting.Size = new System.Drawing.Size(1432, 752);
             this.tbpSECSSetting.TabIndex = 5;
-            this.tbpSECSSetting.Text = "SECS Setting";
+            this.tbpSECSSetting.Text = "SECS setting";
             // 
             // tbpAlarmEventSet
             // 
@@ -118,7 +120,7 @@
             this.tbpAlarmEventSet.Name = "tbpAlarmEventSet";
             this.tbpAlarmEventSet.Size = new System.Drawing.Size(1432, 752);
             this.tbpAlarmEventSet.TabIndex = 6;
-            this.tbpAlarmEventSet.Text = "Alarm Event Set ";
+            this.tbpAlarmEventSet.Text = "Alarm event";
             // 
             // tbpCodeSetting
             // 
@@ -128,7 +130,17 @@
             this.tbpCodeSetting.Padding = new System.Windows.Forms.Padding(3);
             this.tbpCodeSetting.Size = new System.Drawing.Size(1432, 752);
             this.tbpCodeSetting.TabIndex = 7;
-            this.tbpCodeSetting.Text = "Code Setting";
+            this.tbpCodeSetting.Text = "Code setting";
+            // 
+            // tbpSignalTtower
+            // 
+            this.tbpSignalTtower.Location = new System.Drawing.Point(4, 4);
+            this.tbpSignalTtower.Name = "tbpSignalTtower";
+            this.tbpSignalTtower.Padding = new System.Windows.Forms.Padding(3);
+            this.tbpSignalTtower.Size = new System.Drawing.Size(1432, 752);
+            this.tbpSignalTtower.TabIndex = 8;
+            this.tbpSignalTtower.Text = "Signal tower set";
+            this.tbpSignalTtower.UseVisualStyleBackColor = true;
             // 
             // FormSystemSetting
             // 
@@ -154,5 +166,6 @@
         private System.Windows.Forms.TabPage tbpSECSSetting;
         private System.Windows.Forms.TabPage tbpAlarmEventSet;
         private System.Windows.Forms.TabPage tbpCodeSetting;
+        private System.Windows.Forms.TabPage tbpSignalTtower;
     }
 }

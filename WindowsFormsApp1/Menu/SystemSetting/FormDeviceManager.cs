@@ -215,7 +215,7 @@ namespace Adam.Menu.SystemSetting
                     return;
                 }
 
-                strSql = "select * from config_node where equipment_model_id = @equipment_model_id and enable_flg = 'Y' and node_type = @node_type order by node_id, sn_no";
+                strSql = "select * from config_node where equipment_model_id = @equipment_model_id and enable_flg = '1' and node_type = @node_type order by node_id, sn_no";
                 keyValues.Add("@equipment_model_id", SANWA.Utility.Config.SystemConfig.Get().SystemMode);
                 keyValues.Add("@node_type", cmbDeviceNodeType.SelectedValue.ToString());
                 dtTemp = dBUtil.GetDataTable(strSql, keyValues);
