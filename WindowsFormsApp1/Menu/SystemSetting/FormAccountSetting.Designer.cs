@@ -36,15 +36,6 @@
             this.button68 = new System.Windows.Forms.Button();
             this.tlpAccount = new System.Windows.Forms.TableLayoutPanel();
             this.palContainer = new System.Windows.Forms.Panel();
-            this.gbGroup = new System.Windows.Forms.GroupBox();
-            this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
-            this.gbGroupCondition = new System.Windows.Forms.GroupBox();
-            this.trvGroupCondition = new System.Windows.Forms.TreeView();
-            this.gbGroupSetting = new System.Windows.Forms.GroupBox();
-            this.button1 = new System.Windows.Forms.Button();
-            this.tlpGroupConditionSetting = new System.Windows.Forms.TableLayoutPanel();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.dataGridView2 = new System.Windows.Forms.DataGridView();
             this.gbAccount = new System.Windows.Forms.GroupBox();
             this.tlpAccountCreate = new System.Windows.Forms.TableLayoutPanel();
             this.gbAccountCondition = new System.Windows.Forms.GroupBox();
@@ -65,10 +56,24 @@
             this.txbPasswordNew = new System.Windows.Forms.TextBox();
             this.txbPasswordNewAgain = new System.Windows.Forms.TextBox();
             this.btnSave = new System.Windows.Forms.Button();
+            this.gbGroup = new System.Windows.Forms.GroupBox();
+            this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
+            this.gbGroupCondition = new System.Windows.Forms.GroupBox();
+            this.trvGroupCondition = new System.Windows.Forms.TreeView();
+            this.gbGroupSetting = new System.Windows.Forms.GroupBox();
+            this.button1 = new System.Windows.Forms.Button();
+            this.tlpGroupConditionSetting = new System.Windows.Forms.TableLayoutPanel();
+            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.dataGridView2 = new System.Windows.Forms.DataGridView();
             this.palMenu.SuspendLayout();
             this.tlpAccountMenu.SuspendLayout();
             this.tlpAccount.SuspendLayout();
             this.palContainer.SuspendLayout();
+            this.gbAccount.SuspendLayout();
+            this.tlpAccountCreate.SuspendLayout();
+            this.gbAccountCondition.SuspendLayout();
+            this.gbAccountSetting.SuspendLayout();
+            this.tlpAccountSetting.SuspendLayout();
             this.gbGroup.SuspendLayout();
             this.tableLayoutPanel1.SuspendLayout();
             this.gbGroupCondition.SuspendLayout();
@@ -76,11 +81,6 @@
             this.tlpGroupConditionSetting.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).BeginInit();
-            this.gbAccount.SuspendLayout();
-            this.tlpAccountCreate.SuspendLayout();
-            this.gbAccountCondition.SuspendLayout();
-            this.gbAccountSetting.SuspendLayout();
-            this.tlpAccountSetting.SuspendLayout();
             this.SuspendLayout();
             // 
             // palMenu
@@ -175,6 +175,7 @@
             this.button68.TabIndex = 61;
             this.button68.Text = "Change User Group";
             this.button68.UseVisualStyleBackColor = false;
+            this.button68.Visible = false;
             // 
             // tlpAccount
             // 
@@ -194,115 +195,13 @@
             // 
             // palContainer
             // 
-            this.palContainer.Controls.Add(this.gbGroup);
             this.palContainer.Controls.Add(this.gbAccount);
+            this.palContainer.Controls.Add(this.gbGroup);
             this.palContainer.Dock = System.Windows.Forms.DockStyle.Fill;
             this.palContainer.Location = new System.Drawing.Point(3, 91);
             this.palContainer.Name = "palContainer";
             this.palContainer.Size = new System.Drawing.Size(1394, 606);
             this.palContainer.TabIndex = 21;
-            // 
-            // gbGroup
-            // 
-            this.gbGroup.Controls.Add(this.tableLayoutPanel1);
-            this.gbGroup.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.gbGroup.Location = new System.Drawing.Point(0, 0);
-            this.gbGroup.Name = "gbGroup";
-            this.gbGroup.Size = new System.Drawing.Size(1394, 606);
-            this.gbGroup.TabIndex = 66;
-            this.gbGroup.TabStop = false;
-            this.gbGroup.Text = "Group setting";
-            // 
-            // tableLayoutPanel1
-            // 
-            this.tableLayoutPanel1.ColumnCount = 2;
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 25F));
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 75F));
-            this.tableLayoutPanel1.Controls.Add(this.gbGroupCondition, 0, 0);
-            this.tableLayoutPanel1.Controls.Add(this.gbGroupSetting, 1, 0);
-            this.tableLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tableLayoutPanel1.Location = new System.Drawing.Point(3, 25);
-            this.tableLayoutPanel1.Name = "tableLayoutPanel1";
-            this.tableLayoutPanel1.RowCount = 1;
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel1.Size = new System.Drawing.Size(1388, 578);
-            this.tableLayoutPanel1.TabIndex = 1;
-            // 
-            // gbGroupCondition
-            // 
-            this.gbGroupCondition.Controls.Add(this.trvGroupCondition);
-            this.gbGroupCondition.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.gbGroupCondition.Location = new System.Drawing.Point(3, 3);
-            this.gbGroupCondition.Name = "gbGroupCondition";
-            this.gbGroupCondition.Size = new System.Drawing.Size(341, 572);
-            this.gbGroupCondition.TabIndex = 0;
-            this.gbGroupCondition.TabStop = false;
-            this.gbGroupCondition.Text = "Condition";
-            // 
-            // trvGroupCondition
-            // 
-            this.trvGroupCondition.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.trvGroupCondition.Location = new System.Drawing.Point(3, 25);
-            this.trvGroupCondition.Name = "trvGroupCondition";
-            this.trvGroupCondition.Size = new System.Drawing.Size(335, 544);
-            this.trvGroupCondition.TabIndex = 0;
-            // 
-            // gbGroupSetting
-            // 
-            this.gbGroupSetting.Controls.Add(this.button1);
-            this.gbGroupSetting.Controls.Add(this.tlpGroupConditionSetting);
-            this.gbGroupSetting.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.gbGroupSetting.Location = new System.Drawing.Point(350, 3);
-            this.gbGroupSetting.Name = "gbGroupSetting";
-            this.gbGroupSetting.Size = new System.Drawing.Size(1035, 572);
-            this.gbGroupSetting.TabIndex = 1;
-            this.gbGroupSetting.TabStop = false;
-            this.gbGroupSetting.Text = "Setting";
-            // 
-            // button1
-            // 
-            this.button1.Location = new System.Drawing.Point(861, 508);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(168, 58);
-            this.button1.TabIndex = 1;
-            this.button1.Text = "button1";
-            this.button1.UseVisualStyleBackColor = true;
-            // 
-            // tlpGroupConditionSetting
-            // 
-            this.tlpGroupConditionSetting.ColumnCount = 3;
-            this.tlpGroupConditionSetting.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 45F));
-            this.tlpGroupConditionSetting.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 10F));
-            this.tlpGroupConditionSetting.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 45F));
-            this.tlpGroupConditionSetting.Controls.Add(this.dataGridView1, 0, 0);
-            this.tlpGroupConditionSetting.Controls.Add(this.dataGridView2, 2, 0);
-            this.tlpGroupConditionSetting.Dock = System.Windows.Forms.DockStyle.Top;
-            this.tlpGroupConditionSetting.Location = new System.Drawing.Point(3, 25);
-            this.tlpGroupConditionSetting.Name = "tlpGroupConditionSetting";
-            this.tlpGroupConditionSetting.RowCount = 1;
-            this.tlpGroupConditionSetting.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tlpGroupConditionSetting.Size = new System.Drawing.Size(1029, 477);
-            this.tlpGroupConditionSetting.TabIndex = 0;
-            // 
-            // dataGridView1
-            // 
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.dataGridView1.Location = new System.Drawing.Point(3, 3);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.RowTemplate.Height = 24;
-            this.dataGridView1.Size = new System.Drawing.Size(457, 471);
-            this.dataGridView1.TabIndex = 0;
-            // 
-            // dataGridView2
-            // 
-            this.dataGridView2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.dataGridView2.Location = new System.Drawing.Point(568, 3);
-            this.dataGridView2.Name = "dataGridView2";
-            this.dataGridView2.RowTemplate.Height = 24;
-            this.dataGridView2.Size = new System.Drawing.Size(458, 471);
-            this.dataGridView2.TabIndex = 1;
             // 
             // gbAccount
             // 
@@ -479,6 +378,8 @@
             // 
             // cmbGroup
             // 
+            this.cmbGroup.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
+            this.cmbGroup.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
             this.cmbGroup.Dock = System.Windows.Forms.DockStyle.Left;
             this.cmbGroup.FormattingEnabled = true;
             this.cmbGroup.Location = new System.Drawing.Point(280, 83);
@@ -537,6 +438,108 @@
             this.btnSave.Text = "Save";
             this.btnSave.UseVisualStyleBackColor = true;
             // 
+            // gbGroup
+            // 
+            this.gbGroup.Controls.Add(this.tableLayoutPanel1);
+            this.gbGroup.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.gbGroup.Location = new System.Drawing.Point(0, 0);
+            this.gbGroup.Name = "gbGroup";
+            this.gbGroup.Size = new System.Drawing.Size(1394, 606);
+            this.gbGroup.TabIndex = 66;
+            this.gbGroup.TabStop = false;
+            this.gbGroup.Text = "Group setting";
+            // 
+            // tableLayoutPanel1
+            // 
+            this.tableLayoutPanel1.ColumnCount = 2;
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 25F));
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 75F));
+            this.tableLayoutPanel1.Controls.Add(this.gbGroupCondition, 0, 0);
+            this.tableLayoutPanel1.Controls.Add(this.gbGroupSetting, 1, 0);
+            this.tableLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.tableLayoutPanel1.Location = new System.Drawing.Point(3, 25);
+            this.tableLayoutPanel1.Name = "tableLayoutPanel1";
+            this.tableLayoutPanel1.RowCount = 1;
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.tableLayoutPanel1.Size = new System.Drawing.Size(1388, 578);
+            this.tableLayoutPanel1.TabIndex = 1;
+            // 
+            // gbGroupCondition
+            // 
+            this.gbGroupCondition.Controls.Add(this.trvGroupCondition);
+            this.gbGroupCondition.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.gbGroupCondition.Location = new System.Drawing.Point(3, 3);
+            this.gbGroupCondition.Name = "gbGroupCondition";
+            this.gbGroupCondition.Size = new System.Drawing.Size(341, 572);
+            this.gbGroupCondition.TabIndex = 0;
+            this.gbGroupCondition.TabStop = false;
+            this.gbGroupCondition.Text = "Condition";
+            // 
+            // trvGroupCondition
+            // 
+            this.trvGroupCondition.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.trvGroupCondition.Location = new System.Drawing.Point(3, 25);
+            this.trvGroupCondition.Name = "trvGroupCondition";
+            this.trvGroupCondition.Size = new System.Drawing.Size(335, 544);
+            this.trvGroupCondition.TabIndex = 0;
+            // 
+            // gbGroupSetting
+            // 
+            this.gbGroupSetting.Controls.Add(this.button1);
+            this.gbGroupSetting.Controls.Add(this.tlpGroupConditionSetting);
+            this.gbGroupSetting.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.gbGroupSetting.Location = new System.Drawing.Point(350, 3);
+            this.gbGroupSetting.Name = "gbGroupSetting";
+            this.gbGroupSetting.Size = new System.Drawing.Size(1035, 572);
+            this.gbGroupSetting.TabIndex = 1;
+            this.gbGroupSetting.TabStop = false;
+            this.gbGroupSetting.Text = "Setting";
+            // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(861, 508);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(168, 58);
+            this.button1.TabIndex = 1;
+            this.button1.Text = "button1";
+            this.button1.UseVisualStyleBackColor = true;
+            // 
+            // tlpGroupConditionSetting
+            // 
+            this.tlpGroupConditionSetting.ColumnCount = 3;
+            this.tlpGroupConditionSetting.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 45F));
+            this.tlpGroupConditionSetting.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 10F));
+            this.tlpGroupConditionSetting.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 45F));
+            this.tlpGroupConditionSetting.Controls.Add(this.dataGridView1, 0, 0);
+            this.tlpGroupConditionSetting.Controls.Add(this.dataGridView2, 2, 0);
+            this.tlpGroupConditionSetting.Dock = System.Windows.Forms.DockStyle.Top;
+            this.tlpGroupConditionSetting.Location = new System.Drawing.Point(3, 25);
+            this.tlpGroupConditionSetting.Name = "tlpGroupConditionSetting";
+            this.tlpGroupConditionSetting.RowCount = 1;
+            this.tlpGroupConditionSetting.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.tlpGroupConditionSetting.Size = new System.Drawing.Size(1029, 477);
+            this.tlpGroupConditionSetting.TabIndex = 0;
+            // 
+            // dataGridView1
+            // 
+            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.dataGridView1.Location = new System.Drawing.Point(3, 3);
+            this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.RowTemplate.Height = 24;
+            this.dataGridView1.Size = new System.Drawing.Size(457, 471);
+            this.dataGridView1.TabIndex = 0;
+            // 
+            // dataGridView2
+            // 
+            this.dataGridView2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView2.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.dataGridView2.Location = new System.Drawing.Point(568, 3);
+            this.dataGridView2.Name = "dataGridView2";
+            this.dataGridView2.RowTemplate.Height = 24;
+            this.dataGridView2.Size = new System.Drawing.Size(458, 471);
+            this.dataGridView2.TabIndex = 1;
+            // 
             // FormAccountSetting
             // 
             this.ClientSize = new System.Drawing.Size(1420, 720);
@@ -551,6 +554,12 @@
             this.tlpAccountMenu.ResumeLayout(false);
             this.tlpAccount.ResumeLayout(false);
             this.palContainer.ResumeLayout(false);
+            this.gbAccount.ResumeLayout(false);
+            this.tlpAccountCreate.ResumeLayout(false);
+            this.gbAccountCondition.ResumeLayout(false);
+            this.gbAccountSetting.ResumeLayout(false);
+            this.tlpAccountSetting.ResumeLayout(false);
+            this.tlpAccountSetting.PerformLayout();
             this.gbGroup.ResumeLayout(false);
             this.tableLayoutPanel1.ResumeLayout(false);
             this.gbGroupCondition.ResumeLayout(false);
@@ -558,12 +567,6 @@
             this.tlpGroupConditionSetting.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).EndInit();
-            this.gbAccount.ResumeLayout(false);
-            this.tlpAccountCreate.ResumeLayout(false);
-            this.gbAccountCondition.ResumeLayout(false);
-            this.gbAccountSetting.ResumeLayout(false);
-            this.tlpAccountSetting.ResumeLayout(false);
-            this.tlpAccountSetting.PerformLayout();
             this.ResumeLayout(false);
 
         }
