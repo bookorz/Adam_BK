@@ -60,6 +60,7 @@
             this.tbcSystemSetting.SizeMode = System.Windows.Forms.TabSizeMode.Fixed;
             this.tbcSystemSetting.TabIndex = 92;
             this.tbcSystemSetting.DrawItem += new System.Windows.Forms.DrawItemEventHandler(this.tbcSystemSetting_DrawItem);
+            this.tbcSystemSetting.SelectedIndexChanged += new System.EventHandler(this.tbcSystemSetting_SelectedIndexChanged);
             // 
             // tbpDeviceManager
             // 

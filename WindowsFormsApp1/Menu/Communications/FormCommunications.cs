@@ -155,7 +155,7 @@ namespace Adam.Menu.Communications
                         nudIP03.Value = Convert.ToInt32(dtTemp.Rows[0]["conn_address"].ToString().Split('.')[2].ToString());
                         nudIP04.Value = Convert.ToInt32(dtTemp.Rows[0]["conn_address"].ToString().Split('.')[3].ToString());
                         nudIPPort.Value = Convert.ToInt32(dtTemp.Rows[0]["conn_prot"].ToString());
-                        chbTCPIPActive.Checked = dtTemp.Rows[0]["enable_flg"].ToString() == "Y" ? true : false;
+                        chbTCPIPActive.Checked = dtTemp.Rows[0]["enable_flg"].ToString() == "1" ? true : false;
                         txbSlaveID.Text = dtTemp.Rows[0]["slave_id"].ToString();
                         txbDigitalInputQuantity.Text = dtTemp.Rows[0]["digital_input_quantity"].ToString();
                         txbDelay.Text = dtTemp.Rows[0]["delay"].ToString();
@@ -265,7 +265,7 @@ namespace Adam.Menu.Communications
                     nudDataBits.Value = Convert.ToInt32(dtTemp.Rows[0]["com_data_bits"].ToString());
                     txbParityBit.Text = dtTemp.Rows[0]["com_parity_bit"].ToString();
                     txbStopBit.Text = dtTemp.Rows[0]["com_stop_bit"].ToString();
-                    chbRS232CActive.Checked = dtTemp.Rows[0]["enable_flg"].ToString() == "Y" ? true : false;
+                    chbRS232CActive.Checked = dtTemp.Rows[0]["enable_flg"].ToString() == "1" ? true : false;
                     txbReadTimeout.Text = dtTemp.Rows[0]["create_user"].ToString() + "," + Convert.ToDateTime(dtTemp.Rows[0]["create_timestamp"].ToString()).ToString("yyyy-MM-dd HH:mm:ss");
                 }
                 else
@@ -418,7 +418,7 @@ namespace Adam.Menu.Communications
                     keyValues.Add("@com_parity_bit", string.Empty);
                     keyValues.Add("@com_data_bits", string.Empty);
                     keyValues.Add("@com_stop_bit", string.Empty);
-                    keyValues.Add("@enable_flg", chbTCPIPActive.Checked ? "Y" : "N");
+                    keyValues.Add("@enable_flg", chbTCPIPActive.Checked ? "1" : "0");
 
                     keyValues.Add("@slave_id", txbSlaveID.Text.Trim());
                     keyValues.Add("@digital_input_quantity", txbDigitalInputQuantity.Text.Trim());
@@ -452,7 +452,7 @@ namespace Adam.Menu.Communications
                     keyValues.Add("@com_parity_bit", txbParityBit.Text.Trim());
                     keyValues.Add("@com_data_bits", nudDataBits.Value.ToString());
                     keyValues.Add("@com_stop_bit", txbStopBit.Text.Trim());
-                    keyValues.Add("@enable_flg", chbRS232CActive.Checked ? "Y" : "N");
+                    keyValues.Add("@enable_flg", chbRS232CActive.Checked ? "1" : "0");
 
                     keyValues.Add("@slave_id", string.Empty);
                     keyValues.Add("@digital_input_quantity", string.Empty);

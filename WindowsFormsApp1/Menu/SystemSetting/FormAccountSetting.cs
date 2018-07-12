@@ -24,23 +24,77 @@ namespace Adam.Menu.SystemSetting
 
         private void FormAccountSetting_Load(object sender, EventArgs e)
         {
+            string strUserID = string.Empty;
+            string strUserName = string.Empty;
+            string strUserGroup = string.Empty;
+            StringBuilder sbAllGroup = new StringBuilder();
+            StringBuilder sbLowerGroup = new StringBuilder();
+            Form form = null;
+            Label Signal = null;
+
             try
             {
-                UpdateUser();
+                form = Application.OpenForms["FormMain"];
+                Signal = form.Controls.Find("lbl_login_id", true).FirstOrDefault() as Label;
+                strUserID = Signal.Text;
+                Signal = form.Controls.Find("lbl_login_name", true).FirstOrDefault() as Label;
+                strUserName = Signal.Text;
+                Signal = form.Controls.Find("lbl_login_group", true).FirstOrDefault() as Label;
+                strUserGroup = Signal.Text;
+
+                UpdateUser(strUserID, null);
                 UpdateGroup();
 
                 if (dtAccountGroup.Rows.Count > 0)
                 {
                     foreach (DataRow item in dtAccountGroup.Rows)
                     {
-                        trvAccount.Nodes.Add(item["user_group_id"].ToString(), item["user_group_id"].ToString());
-                        trvAccount.Nodes[item["user_group_id"].ToString()].Tag = 0;
+                        if (!trvAccount.Nodes.ContainsKey(item["user_group_id"].ToString()) && item["user_group_id"].ToString().Length > 0)
+                        {
+                            if (dtAccountUser.Rows[0]["user_group_id"].ToString().Equals(item["user_group_id"].ToString()))
+                            {
+                                trvAccount.Nodes.Add(item["user_group_id"].ToString(), item["user_group_id"].ToString());
+                                trvAccount.Nodes[item["user_group_id"].ToString()].Tag = 0;
+
+                                trvGroupCondition.Nodes.Add(item["user_group_id"].ToString(), item["user_group_id"].ToString());
+                                trvGroupCondition.Nodes[item["user_group_id"].ToString()].Tag = 0;
+                            }
+                        }
+
+                        if (!trvAccount.Nodes.ContainsKey(item["lower_level_group_id"].ToString()) && item["lower_level_group_id"].ToString().Length > 0)
+                        {
+                            if (strUserGroup.Equals(item["user_group_id"].ToString()))
+                            {
+                                trvAccount.Nodes.Add(item["lower_level_group_id"].ToString(), item["lower_level_group_id"].ToString());
+                                trvAccount.Nodes[item["lower_level_group_id"].ToString()].Tag = 0;
+
+                                trvGroupCondition.Nodes.Add(item["lower_level_group_id"].ToString(), item["lower_level_group_id"].ToString());
+                                trvGroupCondition.Nodes[item["lower_level_group_id"].ToString()].Tag = 0;
+
+                                sbAllGroup.Append(item["user_group_id"].ToString());
+                                sbAllGroup.Append(",");
+                                sbAllGroup.Append(item["lower_level_group_id"].ToString());
+                                sbAllGroup.Append(",");
+
+                                sbLowerGroup.Append(item["lower_level_group_id"].ToString());
+                                sbLowerGroup.Append(",");
+                            }
+                        }
                     }
 
-                    foreach (DataRow item in dtAccountGroup.Rows)
+                    if (strUserGroup.Equals("ADMIN"))
                     {
-                        trvGroupCondition.Nodes.Add(item["user_group_id"].ToString(), item["user_group_id"].ToString());
-                        trvGroupCondition.Nodes[item["user_group_id"].ToString()].Tag = 0;
+                        UpdateUser();
+                        trvAccount.Nodes.Add("CreateUser", "Create User");
+                    }
+                    else
+                    {
+                        UpdateUser(strUserID, "'" + sbLowerGroup.ToString().TrimEnd(',').Replace(",", "','") + "'");
+
+                        if (!strUserGroup.Equals("OP"))
+                        {
+                            trvAccount.Nodes.Add("CreateUser", "Create User");
+                        }
                     }
 
                     if (dtAccountUser.Rows.Count > 0)
@@ -55,10 +109,28 @@ namespace Adam.Menu.SystemSetting
                         }
                     }
 
-                    cmbGroup.DataSource = dtAccountGroup;
-                    cmbGroup.DisplayMember = "user_group_id";
-                    cmbGroup.ValueMember = "user_group_id";
-                    cmbGroup.SelectedIndex = -1;
+
+                    if (strUserGroup.Equals("ADMIN"))
+                    {
+                        cmbGroup.DataSource = dtAccountGroup.DefaultView.ToTable(true, new string[] { "user_group_id" });
+                        cmbGroup.DisplayMember = "user_group_id";
+                        cmbGroup.ValueMember = "user_group_id";
+                        cmbGroup.SelectedIndex = -1;
+                    }
+                    else if (strUserGroup.Equals("OP"))
+                    {
+                        cmbGroup.DataSource = dtAccountGroup.Select("user_group_id = 'OP'").CopyToDataTable().DefaultView.ToTable(true, new string[] { "user_group_id" });
+                        cmbGroup.DisplayMember = "user_group_id";
+                        cmbGroup.ValueMember = "user_group_id";
+                        cmbGroup.SelectedIndex = -1;
+                    }
+                    else
+                    {
+                        cmbGroup.DataSource = dtAccountGroup.Select("user_group_id in ('" + sbAllGroup.ToString().Replace(",", "','") + "')").CopyToDataTable().DefaultView.ToTable(true, new string[] { "user_group_id" });
+                        cmbGroup.DisplayMember = "user_group_id";
+                        cmbGroup.ValueMember = "user_group_id";
+                        cmbGroup.SelectedIndex = -1;
+                    }
                 }
             }
             catch (Exception ex)
@@ -114,9 +186,39 @@ namespace Adam.Menu.SystemSetting
             }
         }
 
+        private void UpdateUser(string UserID, string Group)
+        {
+            string strSqlAccount = string.Empty;
+            Dictionary<string, object> keyValues = new Dictionary<string, object>();
+
+            try
+            {
+                if (UserID == null)
+                    return;
+
+                if (Group != null)
+                {
+                    strSqlAccount = "select * from account where active = 'Y' and user_id = @user_id " +
+                        "UNION " +
+                        "select * from account where active = 'Y' and user_group_id IN (" + Group + ")";
+                    keyValues.Add("@user_id", UserID);
+                }
+                else
+                {
+                    strSqlAccount = "select * from account where active = 'Y' and user_id = @user_id";
+                    keyValues.Add("@user_id", UserID);
+                }
+
+                dtAccountUser = dBUtil.GetDataTable(strSqlAccount, keyValues);
+            }
+            catch (Exception ex)
+            {
+                throw new Exception(ex.ToString());
+            }
+        }
+
         private void UpdateUser()
         {
-
             string strSqlAccount = string.Empty;
 
             try
@@ -136,8 +238,26 @@ namespace Adam.Menu.SystemSetting
 
             try
             {
-                strSqlGroup = "select * from user_group where active = 'Y'";
+                strSqlGroup = "SELECT a.user_group_id, a.user_group_name, b.lower_level_group_id " +
+                    "FROM user_group a " +
+                    "LEFT JOIN user_group_level b ON a.user_group_id = b.user_group_id " +
+                    "WHERE a.active = 'Y'";
                 dtAccountGroup = dBUtil.GetDataTable(strSqlGroup, null);
+            }
+            catch (Exception ex)
+            {
+                throw new Exception(ex.ToString());
+            }
+        }
+
+        private void UIChange(string Mode)
+        {
+            try
+            {
+                //switch (Mode)
+                //{
+                //    default:
+                //}
             }
             catch (Exception ex)
             {

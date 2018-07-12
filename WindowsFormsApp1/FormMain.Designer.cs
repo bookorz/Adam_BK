@@ -420,6 +420,7 @@ namespace Adam
             // groupBox3
             // 
             resources.ApplyResources(this.groupBox3, "groupBox3");
+            this.groupBox3.BackColor = System.Drawing.SystemColors.Control;
             this.groupBox3.Controls.Add(this.Conn_gv);
             this.groupBox3.Name = "groupBox3";
             this.groupBox3.TabStop = false;
@@ -543,9 +544,9 @@ namespace Adam
             // 
             // TestMode
             // 
+            this.TestMode.BackColor = System.Drawing.SystemColors.Control;
             resources.ApplyResources(this.TestMode, "TestMode");
             this.TestMode.Name = "TestMode";
-            this.TestMode.UseVisualStyleBackColor = true;
             // 
             // tabSetting
             // 

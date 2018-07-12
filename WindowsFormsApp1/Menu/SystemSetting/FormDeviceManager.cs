@@ -174,7 +174,7 @@ namespace Adam.Menu.SystemSetting
                     txbFirmwareVersion.Text = dtTemp.Rows[0]["firmware_ver"].ToString();
                     txbAddress.Text = dtTemp.Rows[0]["conn_address"].ToString();
                     txbControllerID.Text = dtTemp.Rows[0]["controller_id"].ToString();
-                    chbActive.Checked = dtTemp.Rows[0]["enable_flg"].ToString() == "Y" ? true : false;
+                    chbActive.Checked = dtTemp.Rows[0]["enable_flg"].ToString() == "1" ? true : false;
                     txbDefaultAligner.Text = dtTemp.Rows[0]["default_aligner"].ToString();
                     txbAlternativeAligner.Text = dtTemp.Rows[0]["alternative_aligner"].ToString();
                     //txbRoute.Text = dtTemp.Rows[0]["route_table"].ToString();

@@ -299,7 +299,7 @@
             this.Event_AlarmNo.HeaderText = "Alarm No";
             this.Event_AlarmNo.Name = "Event_AlarmNo";
             this.Event_AlarmNo.ReadOnly = true;
-            this.Event_AlarmNo.Width = 97;
+            this.Event_AlarmNo.Width = 106;
             // 
             // Event_AlarmDescription
             // 
@@ -342,6 +342,7 @@
             "Nornal",
             "Low"});
             this.Event_AlarmLevel.Name = "Event_AlarmLevel";
+            this.Event_AlarmLevel.Visible = false;
             this.Event_AlarmLevel.Width = 92;
             // 
             // Event_AlarmLED_Red
@@ -358,6 +359,7 @@
             "N",
             "F"});
             this.Event_AlarmLED_Red.Name = "Event_AlarmLED_Red";
+            this.Event_AlarmLED_Red.Visible = false;
             this.Event_AlarmLED_Red.Width = 44;
             // 
             // Event_AlarmLED_Yellow
@@ -373,6 +375,7 @@
             "N",
             "F"});
             this.Event_AlarmLED_Yellow.Name = "Event_AlarmLED_Yellow";
+            this.Event_AlarmLED_Yellow.Visible = false;
             this.Event_AlarmLED_Yellow.Width = 64;
             // 
             // Event_AlarmLED_Green
@@ -388,6 +391,7 @@
             "N",
             "F"});
             this.Event_AlarmLED_Green.Name = "Event_AlarmLED_Green";
+            this.Event_AlarmLED_Green.Visible = false;
             this.Event_AlarmLED_Green.Width = 61;
             // 
             // Event_AlarmLED_Bule
@@ -405,6 +409,7 @@
             "N",
             "F"});
             this.Event_AlarmLED_Bule.Name = "Event_AlarmLED_Bule";
+            this.Event_AlarmLED_Bule.Visible = false;
             this.Event_AlarmLED_Bule.Width = 48;
             // 
             // Event_AlarmBuzzer_A
@@ -419,6 +424,7 @@
             "N",
             "F"});
             this.Event_AlarmBuzzer_A.Name = "Event_AlarmBuzzer_A";
+            this.Event_AlarmBuzzer_A.Visible = false;
             this.Event_AlarmBuzzer_A.Width = 73;
             // 
             // Event_AlarmBuzzer_B
@@ -433,6 +439,7 @@
             "N",
             "F"});
             this.Event_AlarmBuzzer_B.Name = "Event_AlarmBuzzer_B";
+            this.Event_AlarmBuzzer_B.Visible = false;
             this.Event_AlarmBuzzer_B.Width = 72;
             // 
             // Event_AlarmIS_Stop
@@ -448,6 +455,7 @@
             "Y",
             "N"});
             this.Event_AlarmIS_Stop.Name = "Event_AlarmIS_Stop";
+            this.Event_AlarmIS_Stop.Visible = false;
             this.Event_AlarmIS_Stop.Width = 61;
             // 
             // FormAlarmEventSet

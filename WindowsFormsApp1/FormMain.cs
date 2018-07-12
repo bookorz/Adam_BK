@@ -142,6 +142,7 @@ namespace Adam
                     AuthorityUpdate.UpdateLogoutInfo();
                     //disable authroity function
                     AuthorityUpdate.UpdateFuncGroupEnable("INIT");
+                    ((TabControl)formSystem.Controls["tbcSystemSetting"]).SelectTab(0);
                     break;
             }
         }
