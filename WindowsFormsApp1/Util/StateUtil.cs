@@ -26,6 +26,14 @@ namespace Adam.Util
         static private RobotState robot2 = new RobotState("Robot02");
         static private AlignerState aligner1 = new AlignerState("Aligner01");
         static private AlignerState aligner2 = new AlignerState("Aligner02");
+        static private LoadPortState loadPort1 = new LoadPortState("LoadPort01");
+        static private LoadPortState loadPort2 = new LoadPortState("LoadPort02");
+        static private LoadPortState loadPort3 = new LoadPortState("LoadPort03");
+        static private LoadPortState loadPort4 = new LoadPortState("LoadPort04");
+        static private LoadPortState loadPort5 = new LoadPortState("LoadPort05");
+        static private LoadPortState loadPort6 = new LoadPortState("LoadPort06");
+        static private LoadPortState loadPort7 = new LoadPortState("LoadPort07");
+        static private LoadPortState loadPort8 = new LoadPortState("LoadPort08");
 
         public static void Init()
         {
@@ -34,6 +42,15 @@ namespace Adam.Util
             device.Add("Robot02", robot2);
             device.Add("Aligner01", aligner1);
             device.Add("Aligner02", aligner2);
+            device.Add("LoadPort01", loadPort1);
+            device.Add("LoadPort02", loadPort2);
+            device.Add("LoadPort03", loadPort3);
+            device.Add("LoadPort04", loadPort4);
+            device.Add("LoadPort05", loadPort5);
+            device.Add("LoadPort06", loadPort6);
+            device.Add("LoadPort07", loadPort7);
+            device.Add("LoadPort08", loadPort8);
+
         }
         public static void UpdateSTS(string device, string msg)
         {
@@ -66,6 +83,30 @@ namespace Adam.Util
                     {
                         aligner2.Servo = msg.Substring(10 - 1, 1).Equals("1") ? "ON" : "OFF";// 10 Servo On 0 = Servo off 1 = Servo On
                     }
+                    break;
+                case "LoadPort01":
+                    loadPort1.State = msg;
+                    break;
+                case "LoadPort02":
+                    loadPort2.State = msg;
+                    break;
+                case "LoadPort03":
+                    loadPort3.State = msg;
+                    break;
+                case "LoadPort04":
+                    loadPort4.State = msg;
+                    break;
+                case "LoadPort05":
+                    loadPort5.State = msg;
+                    break;
+                case "LoadPort06":
+                    loadPort6.State = msg;
+                    break;
+                case "LoadPort07":
+                    loadPort8.State = msg;
+                    break;
+                case "LoadPort08":
+                    loadPort8.State = msg;
                     break;
             }
         }
@@ -380,6 +421,20 @@ namespace Adam.Util
         }
 
     }
+
+    class LoadPortState
+    {
+        public string Name { get; set; }
+        public string State { get; set; }
+
+        public LoadPortState(string name)
+        {
+            Node robot = NodeManagement.Get(name);
+            this.Name = name;
+            this.State = "".PadLeft(20);
+        }
+
+    }
     class RobotState
     {
         public string Name { get; set; }
@@ -436,16 +491,6 @@ namespace Adam.Util
             this.Speed = "";
             this.Mode = "";
             this.Error = "";
-        }
-    }
-    class LoadPortState
-    {
-        string _name;
-        string _status;
-        string _state;
-        public LoadPortState(string name)
-        {
-            _name = name;
         }
     }
 }
