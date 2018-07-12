@@ -66,6 +66,7 @@ namespace GUI
                     AuthorityUpdate.UpdateLoginInfo(user_id, user_name, user_group_id);
                     string msg = "{\"user_id\": " + user_id + ", \"name\": \"" + user_name + "\", \"action\": \"Login\"}";
                     log.Info(msg);
+                    SanwaUtil.addActionLog("Authority", "Login", user_id);// add record to log_system_action
                     //log.Debug(msg);
                     this.Close();
                 }
