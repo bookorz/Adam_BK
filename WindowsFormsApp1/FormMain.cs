@@ -574,12 +574,30 @@ namespace Adam
         {
             logger.Debug("On_Command_TimeOut");
             AlarmInfo CurrentAlarm = new AlarmInfo();
-            CurrentAlarm.NodeName = Node.Name.Replace("Status", "");
-            CurrentAlarm.AlarmCode = "00000001";
-            CurrentAlarm.SystemAlarmCode = "FF00000001";
-            CurrentAlarm.Desc = "命令逾時,連線異常";
-            CurrentAlarm.TimeStamp = DateTime.Now.ToString("yyyy/MM/dd HH:mm:ss:fff");
+            CurrentAlarm.NodeName = Node.Name;
+            CurrentAlarm.AlarmCode = "00200002";
             CurrentAlarm.NeedReset = false;
+            try
+            {
+
+                AlarmMessage Detail = AlmMapping.Get("SANWA", Node.Type, CurrentAlarm.AlarmCode);
+
+                CurrentAlarm.SystemAlarmCode = Detail.CodeID;
+                CurrentAlarm.Desc = Detail.Code_Cause;
+                CurrentAlarm.EngDesc = Detail.Code_Cause_English;
+                CurrentAlarm.Type = Detail.Code_Type;
+                CurrentAlarm.IsStop = Detail.IsStop;
+                if (CurrentAlarm.IsStop)
+                {
+                    RouteCtrl.Stop();
+                }
+            }
+            catch (Exception e)
+            {
+                CurrentAlarm.Desc = "未定義";
+                logger.Error(Node.Controller + "-" + Node.AdrNo + "(GetAlarmMessage)" + e.Message + "\n" + e.StackTrace);
+            }
+            CurrentAlarm.TimeStamp = DateTime.Now.ToString("yyyy/MM/dd HH:mm:ss:fff");
             AlarmManagement.Add(CurrentAlarm);
             AlarmUpdate.UpdateAlarmList(AlarmManagement.GetAll());
             AlarmUpdate.UpdateAlarmHistory(AlarmManagement.GetHistory());
@@ -884,13 +902,30 @@ namespace Adam
             //斷線 發ALARM
             logger.Debug("On_Error_Occurred");
             AlarmInfo CurrentAlarm = new AlarmInfo();
-            CurrentAlarm.NodeName = "DIO";
-            CurrentAlarm.AlarmCode = "00000002";
-            CurrentAlarm.SystemAlarmCode = "FF00000002";
-            CurrentAlarm.Desc = "連線異常";
-            CurrentAlarm.TimeStamp = DateTime.Now.ToString("yyyy/MM/dd HH:mm:ss:fff");
-            CurrentAlarm.AlarmType = "System";
+            CurrentAlarm.NodeName = DIOName;
+            CurrentAlarm.AlarmCode = "00200001";
             CurrentAlarm.NeedReset = false;
+            try
+            {
+
+                AlarmMessage Detail = AlmMapping.Get("SANWA", "DIO", CurrentAlarm.AlarmCode);
+
+                CurrentAlarm.SystemAlarmCode = Detail.CodeID;
+                CurrentAlarm.Desc = Detail.Code_Cause;
+                CurrentAlarm.EngDesc = Detail.Code_Cause_English;
+                CurrentAlarm.Type = Detail.Code_Type;
+                CurrentAlarm.IsStop = Detail.IsStop;
+                if (CurrentAlarm.IsStop)
+                {
+                    RouteCtrl.Stop();
+                }
+            }
+            catch (Exception e)
+            {
+                CurrentAlarm.Desc = "未定義";
+                logger.Error(DIOName + "(GetAlarmMessage)" + e.Message + "\n" + e.StackTrace);
+            }
+            CurrentAlarm.TimeStamp = DateTime.Now.ToString("yyyy/MM/dd HH:mm:ss:fff");
             AlarmManagement.Add(CurrentAlarm);
             AlarmUpdate.UpdateAlarmList(AlarmManagement.GetAll());
             AlarmUpdate.UpdateAlarmHistory(AlarmManagement.GetHistory());
