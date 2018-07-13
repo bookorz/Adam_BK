@@ -18,6 +18,7 @@ namespace Adam.Menu.SystemSetting
         private FormSECSSet sECSSet = new FormSECSSet();
         private FormCodeSetting codeSetting = new FormCodeSetting();
         private FormSignalTower formSignalTower = new FormSignalTower();
+        private FormDIOSetting formDIOSetting = new FormDIOSetting();
 
         public FormSystemSetting()
         {
@@ -74,6 +75,7 @@ namespace Adam.Menu.SystemSetting
                 sECSSet.TopLevel = false;
                 codeSetting.TopLevel = false;
                 formSignalTower.TopLevel = false;
+                formDIOSetting.TopLevel = false;
 
                 tbpAccountSetting.Controls.Add(accountSetting);
                 tbpAlarmEventSet.Controls.Add(formAlarm);
@@ -83,6 +85,7 @@ namespace Adam.Menu.SystemSetting
                 tbpSECSSetting.Controls.Add(sECSSet);
                 tbpCodeSetting.Controls.Add(codeSetting);
                 tbpSignalTtower.Controls.Add(formSignalTower);
+                tbpDIOSetting.Controls.Add(formDIOSetting);
 
                 accountSetting.Show();
                 formAlarm.Show();
@@ -92,6 +95,7 @@ namespace Adam.Menu.SystemSetting
                 sECSSet.Show();
                 codeSetting.Show();
                 formSignalTower.Show();
+                formDIOSetting.Show();
             }
             catch (Exception ex)
             {

@@ -33,10 +33,11 @@
             this.tbpCommandScript = new System.Windows.Forms.TabPage();
             this.tbpOnlineSettings = new System.Windows.Forms.TabPage();
             this.tbpAccountSetting = new System.Windows.Forms.TabPage();
+            this.tbpSignalTtower = new System.Windows.Forms.TabPage();
             this.tbpSECSSetting = new System.Windows.Forms.TabPage();
             this.tbpAlarmEventSet = new System.Windows.Forms.TabPage();
             this.tbpCodeSetting = new System.Windows.Forms.TabPage();
-            this.tbpSignalTtower = new System.Windows.Forms.TabPage();
+            this.tbpDIOSetting = new System.Windows.Forms.TabPage();
             this.tbcSystemSetting.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -51,6 +52,7 @@
             this.tbcSystemSetting.Controls.Add(this.tbpSECSSetting);
             this.tbcSystemSetting.Controls.Add(this.tbpAlarmEventSet);
             this.tbcSystemSetting.Controls.Add(this.tbpCodeSetting);
+            this.tbcSystemSetting.Controls.Add(this.tbpDIOSetting);
             this.tbcSystemSetting.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tbcSystemSetting.DrawMode = System.Windows.Forms.TabDrawMode.OwnerDrawFixed;
             this.tbcSystemSetting.ItemSize = new System.Drawing.Size(40, 180);
@@ -103,6 +105,16 @@
             this.tbpAccountSetting.TabIndex = 4;
             this.tbpAccountSetting.Text = "Account setting";
             // 
+            // tbpSignalTtower
+            // 
+            this.tbpSignalTtower.Location = new System.Drawing.Point(4, 4);
+            this.tbpSignalTtower.Name = "tbpSignalTtower";
+            this.tbpSignalTtower.Padding = new System.Windows.Forms.Padding(3);
+            this.tbpSignalTtower.Size = new System.Drawing.Size(1432, 752);
+            this.tbpSignalTtower.TabIndex = 8;
+            this.tbpSignalTtower.Text = "Signal tower set";
+            this.tbpSignalTtower.UseVisualStyleBackColor = true;
+            // 
             // tbpSECSSetting
             // 
             this.tbpSECSSetting.BackColor = System.Drawing.SystemColors.Control;
@@ -132,15 +144,15 @@
             this.tbpCodeSetting.TabIndex = 7;
             this.tbpCodeSetting.Text = "Code setting";
             // 
-            // tbpSignalTtower
+            // tbpDIOSetting
             // 
-            this.tbpSignalTtower.Location = new System.Drawing.Point(4, 4);
-            this.tbpSignalTtower.Name = "tbpSignalTtower";
-            this.tbpSignalTtower.Padding = new System.Windows.Forms.Padding(3);
-            this.tbpSignalTtower.Size = new System.Drawing.Size(1432, 752);
-            this.tbpSignalTtower.TabIndex = 8;
-            this.tbpSignalTtower.Text = "Signal tower set";
-            this.tbpSignalTtower.UseVisualStyleBackColor = true;
+            this.tbpDIOSetting.BackColor = System.Drawing.SystemColors.Control;
+            this.tbpDIOSetting.Location = new System.Drawing.Point(4, 4);
+            this.tbpDIOSetting.Name = "tbpDIOSetting";
+            this.tbpDIOSetting.Padding = new System.Windows.Forms.Padding(3);
+            this.tbpDIOSetting.Size = new System.Drawing.Size(1432, 752);
+            this.tbpDIOSetting.TabIndex = 9;
+            this.tbpDIOSetting.Text = "DIO Setting";
             // 
             // FormSystemSetting
             // 
@@ -167,5 +179,6 @@
         private System.Windows.Forms.TabPage tbpAlarmEventSet;
         private System.Windows.Forms.TabPage tbpCodeSetting;
         private System.Windows.Forms.TabPage tbpSignalTtower;
+        private System.Windows.Forms.TabPage tbpDIOSetting;
     }
 }

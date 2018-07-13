@@ -163,6 +163,7 @@
             // txbIsAlarm
             // 
             this.txbIsAlarm.BackColor = System.Drawing.Color.White;
+            this.txbIsAlarm.Dock = System.Windows.Forms.DockStyle.Left;
             this.txbIsAlarm.Location = new System.Drawing.Point(281, 43);
             this.txbIsAlarm.Name = "txbIsAlarm";
             this.txbIsAlarm.ReadOnly = true;
@@ -261,6 +262,8 @@
             // 
             this.cmbYellow.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
             this.cmbYellow.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
+            this.cmbYellow.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.cmbYellow.Dock = System.Windows.Forms.DockStyle.Left;
             this.cmbYellow.FormattingEnabled = true;
             this.cmbYellow.Location = new System.Drawing.Point(281, 123);
             this.cmbYellow.Name = "cmbYellow";
@@ -271,6 +274,8 @@
             // 
             this.cmbRad.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
             this.cmbRad.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
+            this.cmbRad.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.cmbRad.Dock = System.Windows.Forms.DockStyle.Left;
             this.cmbRad.FormattingEnabled = true;
             this.cmbRad.Location = new System.Drawing.Point(281, 83);
             this.cmbRad.Name = "cmbRad";
@@ -281,6 +286,8 @@
             // 
             this.cmbGreen.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
             this.cmbGreen.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
+            this.cmbGreen.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.cmbGreen.Dock = System.Windows.Forms.DockStyle.Left;
             this.cmbGreen.FormattingEnabled = true;
             this.cmbGreen.Location = new System.Drawing.Point(281, 163);
             this.cmbGreen.Name = "cmbGreen";
@@ -291,6 +298,8 @@
             // 
             this.cmbBlue.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
             this.cmbBlue.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
+            this.cmbBlue.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.cmbBlue.Dock = System.Windows.Forms.DockStyle.Left;
             this.cmbBlue.FormattingEnabled = true;
             this.cmbBlue.Location = new System.Drawing.Point(281, 203);
             this.cmbBlue.Name = "cmbBlue";
@@ -301,6 +310,8 @@
             // 
             this.cmbBuzzer1.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
             this.cmbBuzzer1.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
+            this.cmbBuzzer1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.cmbBuzzer1.Dock = System.Windows.Forms.DockStyle.Left;
             this.cmbBuzzer1.FormattingEnabled = true;
             this.cmbBuzzer1.Location = new System.Drawing.Point(281, 243);
             this.cmbBuzzer1.Name = "cmbBuzzer1";
@@ -311,6 +322,8 @@
             // 
             this.cmbBuzzer2.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
             this.cmbBuzzer2.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
+            this.cmbBuzzer2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.cmbBuzzer2.Dock = System.Windows.Forms.DockStyle.Left;
             this.cmbBuzzer2.FormattingEnabled = true;
             this.cmbBuzzer2.Location = new System.Drawing.Point(281, 283);
             this.cmbBuzzer2.Name = "cmbBuzzer2";
@@ -320,6 +333,7 @@
             // txbEqpStatus
             // 
             this.txbEqpStatus.BackColor = System.Drawing.Color.White;
+            this.txbEqpStatus.Dock = System.Windows.Forms.DockStyle.Left;
             this.txbEqpStatus.Location = new System.Drawing.Point(281, 3);
             this.txbEqpStatus.Name = "txbEqpStatus";
             this.txbEqpStatus.ReadOnly = true;

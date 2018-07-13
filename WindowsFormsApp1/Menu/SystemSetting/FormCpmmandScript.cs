@@ -182,6 +182,11 @@ namespace Adam.Menu.SystemSetting
 
                 dBUtil.ExecuteNonQuery(strSql, keyValues);
                 MessageBox.Show("Done it.", "Save", MessageBoxButtons.OKCancel, MessageBoxIcon.Exclamation, MessageBoxDefaultButton.Button1);
+
+                Form form = Application.OpenForms["FormMain"];
+                Label Signal = form.Controls.Find("lbl_login_id", true).FirstOrDefault() as Label;
+                Adam.Util.SanwaUtil.addActionLog("Adam.Menu.SystemSetting", "FormCpmmandScript", Signal.Text);
+
                 UpdateNodeList();
             }
             catch (Exception ex)
