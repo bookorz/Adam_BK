@@ -21,6 +21,7 @@ using GUI;
 using Adam.UI_Update.Running;
 using System.Linq;
 using System.Collections.Concurrent;
+using Adam.Util;
 
 namespace Adam
 {
@@ -54,6 +55,10 @@ namespace Adam
 
             this.StartPosition = System.Windows.Forms.FormStartPosition.Manual;
             this.Location = new System.Drawing.Point(-200, 0);
+
+            SanwaUtil.addPartition();
+            SanwaUtil.dropPartition();
+
         }
 
         protected override CreateParams CreateParams
