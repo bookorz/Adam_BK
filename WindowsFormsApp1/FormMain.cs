@@ -759,6 +759,7 @@ namespace Adam
                 RunningUpdate.UpdateRunningInfo("TransCount", "-1");
                 RunningUpdate.UpdateRunningInfo("LapsedWfCount", LapsedWfCount.ToString());
                 RunningUpdate.UpdateRunningInfo("LapsedLotCount", LapsedLotCount.ToString());
+                RunningUpdate.UpdateRunningInfo("WPH", (LapsedWfCount/Convert.ToDouble(LapsedTime)*3600).ToString() );
             }
             catch (Exception e)
             {
