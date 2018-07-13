@@ -107,11 +107,11 @@
     <Compile Include="Menu\RunningScreen\RunningScreen.Designer.cs">
       <DependentUpon>RunningScreen.cs</DependentUpon>
     </Compile>
-    <Compile Include="Menu\SystemSetting\FormSignalTtower.cs">
+    <Compile Include="Menu\SystemSetting\FormSignalTower.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Menu\SystemSetting\FormSignalTtower.Designer.cs">
-      <DependentUpon>FormSignalTtower.cs</DependentUpon>
+    <Compile Include="Menu\SystemSetting\FormSignalTower.Designer.cs">
+      <DependentUpon>FormSignalTower.cs</DependentUpon>
     </Compile>
     <Compile Include="SplashScreen.cs">
       <SubType>Form</SubType>
@@ -308,7 +308,7 @@
     <Compile Include="UI_Update\Running\RunningUpdate.cs" />
     <Compile Include="UI_Update\Terminal\TerminalUpdate.cs" />
     <Compile Include="UI_Update\WaferMapping\WaferAssignUpdate.cs" />
-    <Compile Include="Util\ConfigUtil.cs" />
+    <Compile Include="Util\SanwaUtil.cs" />
     <Compile Include="Util\StateUtil.cs" />
     <Compile Include="Util\Tools.cs" />
     <EmbeddedResource Include="FormAlarm.resx">
@@ -392,8 +392,8 @@
     <EmbeddedResource Include="Menu\SystemSetting\FormSettingFram.resx">
       <DependentUpon>FormSettingFram.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Menu\SystemSetting\FormSignalTtower.resx">
-      <DependentUpon>FormSignalTtower.cs</DependentUpon>
+    <EmbeddedResource Include="Menu\SystemSetting\FormSignalTower.resx">
+      <DependentUpon>FormSignalTower.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Menu\SystemSetting\FormSystemSetting.resx">
       <DependentUpon>FormSystemSetting.cs</DependentUpon>
