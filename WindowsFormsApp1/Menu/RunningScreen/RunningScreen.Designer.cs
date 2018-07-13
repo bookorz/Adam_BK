@@ -41,6 +41,8 @@
             this.label3 = new System.Windows.Forms.Label();
             this.TransCount_tb = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
+            this.WPH_tb = new System.Windows.Forms.TextBox();
+            this.label6 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.SuspendLayout();
@@ -48,6 +50,8 @@
             // panel1
             // 
             this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel1.Controls.Add(this.WPH_tb);
+            this.panel1.Controls.Add(this.label6);
             this.panel1.Controls.Add(this.Start_btn);
             this.panel1.Controls.Add(this.label5);
             this.panel1.Controls.Add(this.panel2);
@@ -79,7 +83,7 @@
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("微軟正黑體", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-            this.label5.Location = new System.Drawing.Point(146, 399);
+            this.label5.Location = new System.Drawing.Point(146, 419);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(74, 27);
             this.label5.TabIndex = 12;
@@ -90,7 +94,7 @@
             this.panel2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.panel2.Controls.Add(this.RunningSpeed_cb);
             this.panel2.Font = new System.Drawing.Font("微軟正黑體", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-            this.panel2.Location = new System.Drawing.Point(134, 415);
+            this.panel2.Location = new System.Drawing.Point(134, 435);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(150, 87);
             this.panel2.TabIndex = 11;
@@ -192,6 +196,25 @@
             this.label1.TabIndex = 0;
             this.label1.Text = "Trans. Count";
             // 
+            // WPH_tb
+            // 
+            this.WPH_tb.Font = new System.Drawing.Font("微軟正黑體", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
+            this.WPH_tb.Location = new System.Drawing.Point(134, 374);
+            this.WPH_tb.Name = "WPH_tb";
+            this.WPH_tb.Size = new System.Drawing.Size(151, 35);
+            this.WPH_tb.TabIndex = 17;
+            this.WPH_tb.Text = "0";
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Font = new System.Drawing.Font("微軟正黑體", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
+            this.label6.Location = new System.Drawing.Point(129, 341);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(62, 27);
+            this.label6.TabIndex = 16;
+            this.label6.Text = "WPH";
+            // 
             // FormRunningScreen
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 20F);
@@ -222,5 +245,7 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.TextBox TransCount_tb;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.TextBox WPH_tb;
+        private System.Windows.Forms.Label label6;
     }
 }
