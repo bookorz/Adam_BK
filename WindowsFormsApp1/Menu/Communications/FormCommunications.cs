@@ -506,6 +506,9 @@ namespace Adam.Menu.Communications
                 dBUtil.ExecuteNonQuery(strReplaceSql, keyValues);
 
                 MessageBox.Show("Done it.", "Save", MessageBoxButtons.OKCancel, MessageBoxIcon.Exclamation, MessageBoxDefaultButton.Button1);
+
+                Adam.Util.SanwaUtil.addActionLog("Adam.Menu.SystemSetting", "FormCpmmandScript", Signal.Text);
+
                 FormCommunications_Load(sender, e);
             }
             catch (Exception ex)

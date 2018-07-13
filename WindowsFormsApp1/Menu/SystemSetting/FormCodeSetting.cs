@@ -100,5 +100,10 @@ namespace Adam.Menu.SystemSetting
                 throw new Exception(ex.ToString());
             }
         }
+
+        private void btnSave_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

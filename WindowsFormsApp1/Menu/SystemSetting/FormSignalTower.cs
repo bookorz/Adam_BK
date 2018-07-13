@@ -119,7 +119,7 @@ namespace Adam.Menu.SystemSetting
             {
                 var query = (from a in dtSignalTower.AsEnumerable()
                              where a.Field<string>("eqp_status") == lsbCondition.Text.Split('-')[0].ToString()
-                             where a.Field<UInt64>("is_alarm") == Convert.ToUInt64(lsbCondition.SelectedValue.ToString())
+                             && a.Field<UInt64>("is_alarm") == Convert.ToUInt64(lsbCondition.SelectedValue.ToString())
                              select a).ToList();
 
                 if (query.Count > 0)
@@ -175,6 +175,8 @@ namespace Adam.Menu.SystemSetting
                 dBUtil.ExecuteNonQuery(strSql, keyValues);
 
                 MessageBox.Show("Done it.", "Save", MessageBoxButtons.OKCancel, MessageBoxIcon.Exclamation, MessageBoxDefaultButton.Button1);
+
+                Adam.Util.SanwaUtil.addActionLog("Adam.Menu.SystemSetting", "FormSignalTower", Signal.Text);
 
                 UpdateList();
 
