@@ -60,11 +60,23 @@
             this.label25 = new System.Windows.Forms.Label();
             this.labPortNo = new System.Windows.Forms.Label();
             this.txbConnectionType = new System.Windows.Forms.TextBox();
-            this.chbTCPIPActive = new System.Windows.Forms.CheckBox();
             this.txbReadTimeout = new System.Windows.Forms.TextBox();
+            this.labSlaveID = new System.Windows.Forms.Label();
+            this.labDigitalInputQuantity = new System.Windows.Forms.Label();
+            this.labReadTimeout = new System.Windows.Forms.Label();
+            this.chbTCPIPActive = new System.Windows.Forms.CheckBox();
+            this.labDelay = new System.Windows.Forms.Label();
+            this.txbSlaveID = new System.Windows.Forms.TextBox();
+            this.txbDigitalInputQuantity = new System.Windows.Forms.TextBox();
+            this.txbDelay = new System.Windows.Forms.TextBox();
+            this.txbInformation = new System.Windows.Forms.TextBox();
+            this.labSocketControllerType = new System.Windows.Forms.Label();
+            this.cmbSocketControllerType = new System.Windows.Forms.ComboBox();
             this.gbRS232CSetting = new System.Windows.Forms.GroupBox();
             this.tlpRS232C = new System.Windows.Forms.TableLayoutPanel();
+            this.cmbComControllerType = new System.Windows.Forms.ComboBox();
             this.txbConnectTypeCOM = new System.Windows.Forms.TextBox();
+            this.labComControllerType = new System.Windows.Forms.Label();
             this.nudDataBits = new System.Windows.Forms.NumericUpDown();
             this.labParityBit = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
@@ -80,18 +92,6 @@
             this.cmbPortName = new System.Windows.Forms.ComboBox();
             this.btnRenew = new System.Windows.Forms.Button();
             this.chbRS232CActive = new System.Windows.Forms.CheckBox();
-            this.gpIPAddressSettingandMaintainNotice = new System.Windows.Forms.GroupBox();
-            this.labSlaveID = new System.Windows.Forms.Label();
-            this.labDigitalInputQuantity = new System.Windows.Forms.Label();
-            this.labDelay = new System.Windows.Forms.Label();
-            this.labReadTimeout = new System.Windows.Forms.Label();
-            this.txbSlaveID = new System.Windows.Forms.TextBox();
-            this.txbDigitalInputQuantity = new System.Windows.Forms.TextBox();
-            this.txbDelay = new System.Windows.Forms.TextBox();
-            this.txbInformation = new System.Windows.Forms.TextBox();
-            this.spcAttributes = new System.Windows.Forms.SplitContainer();
-            this.dgvAttribute01 = new System.Windows.Forms.DataGridView();
-            this.dgvAttribute02 = new System.Windows.Forms.DataGridView();
             this.gbDeviceList.SuspendLayout();
             this.gbDeviceCommunications.SuspendLayout();
             this.tlpDeviceCommunications.SuspendLayout();
@@ -107,7 +107,6 @@
             this.gbIPAddressSettingandMaintain.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer2)).BeginInit();
             this.splitContainer2.Panel1.SuspendLayout();
-            this.splitContainer2.Panel2.SuspendLayout();
             this.splitContainer2.SuspendLayout();
             this.gbTCPIPSetting.SuspendLayout();
             this.tlpTCPIP.SuspendLayout();
@@ -127,13 +126,6 @@
             this.splitContainer3.Panel1.SuspendLayout();
             this.splitContainer3.Panel2.SuspendLayout();
             this.splitContainer3.SuspendLayout();
-            this.gpIPAddressSettingandMaintainNotice.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.spcAttributes)).BeginInit();
-            this.spcAttributes.Panel1.SuspendLayout();
-            this.spcAttributes.Panel2.SuspendLayout();
-            this.spcAttributes.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvAttribute01)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvAttribute02)).BeginInit();
             this.SuspendLayout();
             // 
             // gbDeviceList
@@ -371,10 +363,6 @@
             // 
             this.splitContainer2.Panel1.Controls.Add(this.gbTCPIPSetting);
             this.splitContainer2.Panel1.Controls.Add(this.gbRS232CSetting);
-            // 
-            // splitContainer2.Panel2
-            // 
-            this.splitContainer2.Panel2.Controls.Add(this.gpIPAddressSettingandMaintainNotice);
             this.splitContainer2.Size = new System.Drawing.Size(1297, 503);
             this.splitContainer2.SplitterDistance = 813;
             this.splitContainer2.TabIndex = 1;
@@ -411,6 +399,8 @@
             this.tlpTCPIP.Controls.Add(this.txbDigitalInputQuantity, 1, 4);
             this.tlpTCPIP.Controls.Add(this.txbDelay, 1, 5);
             this.tlpTCPIP.Controls.Add(this.txbInformation, 1, 8);
+            this.tlpTCPIP.Controls.Add(this.labSocketControllerType, 0, 7);
+            this.tlpTCPIP.Controls.Add(this.cmbSocketControllerType, 1, 7);
             this.tlpTCPIP.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tlpTCPIP.Location = new System.Drawing.Point(3, 25);
             this.tlpTCPIP.Name = "tlpTCPIP";
@@ -671,16 +661,6 @@
             this.txbConnectionType.TabIndex = 4;
             this.txbConnectionType.Text = "Socket";
             // 
-            // chbTCPIPActive
-            // 
-            this.chbTCPIPActive.AutoSize = true;
-            this.chbTCPIPActive.Location = new System.Drawing.Point(158, 426);
-            this.chbTCPIPActive.Name = "chbTCPIPActive";
-            this.chbTCPIPActive.Size = new System.Drawing.Size(74, 24);
-            this.chbTCPIPActive.TabIndex = 5;
-            this.chbTCPIPActive.Text = "Active";
-            this.chbTCPIPActive.UseVisualStyleBackColor = true;
-            // 
             // txbReadTimeout
             // 
             this.txbReadTimeout.BackColor = System.Drawing.Color.White;
@@ -691,6 +671,126 @@
             this.txbReadTimeout.ReadOnly = true;
             this.txbReadTimeout.Size = new System.Drawing.Size(309, 35);
             this.txbReadTimeout.TabIndex = 6;
+            // 
+            // labSlaveID
+            // 
+            this.labSlaveID.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.labSlaveID.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.labSlaveID.Location = new System.Drawing.Point(3, 141);
+            this.labSlaveID.Name = "labSlaveID";
+            this.labSlaveID.Size = new System.Drawing.Size(149, 47);
+            this.labSlaveID.TabIndex = 7;
+            this.labSlaveID.Text = "Slave ID";
+            this.labSlaveID.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            // 
+            // labDigitalInputQuantity
+            // 
+            this.labDigitalInputQuantity.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.labDigitalInputQuantity.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.labDigitalInputQuantity.Location = new System.Drawing.Point(3, 188);
+            this.labDigitalInputQuantity.Name = "labDigitalInputQuantity";
+            this.labDigitalInputQuantity.Size = new System.Drawing.Size(149, 47);
+            this.labDigitalInputQuantity.TabIndex = 8;
+            this.labDigitalInputQuantity.Text = "Digital Input Quantity";
+            this.labDigitalInputQuantity.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            // 
+            // labReadTimeout
+            // 
+            this.labReadTimeout.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.labReadTimeout.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.labReadTimeout.Location = new System.Drawing.Point(3, 282);
+            this.labReadTimeout.Name = "labReadTimeout";
+            this.labReadTimeout.Size = new System.Drawing.Size(149, 47);
+            this.labReadTimeout.TabIndex = 10;
+            this.labReadTimeout.Text = "Read Timeout";
+            this.labReadTimeout.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            // 
+            // chbTCPIPActive
+            // 
+            this.chbTCPIPActive.AutoSize = true;
+            this.chbTCPIPActive.Location = new System.Drawing.Point(158, 426);
+            this.chbTCPIPActive.Name = "chbTCPIPActive";
+            this.chbTCPIPActive.Size = new System.Drawing.Size(74, 24);
+            this.chbTCPIPActive.TabIndex = 5;
+            this.chbTCPIPActive.Text = "Active";
+            this.chbTCPIPActive.UseVisualStyleBackColor = true;
+            // 
+            // labDelay
+            // 
+            this.labDelay.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.labDelay.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.labDelay.Location = new System.Drawing.Point(3, 235);
+            this.labDelay.Name = "labDelay";
+            this.labDelay.Size = new System.Drawing.Size(149, 47);
+            this.labDelay.TabIndex = 9;
+            this.labDelay.Text = "Delay";
+            this.labDelay.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            // 
+            // txbSlaveID
+            // 
+            this.txbSlaveID.BackColor = System.Drawing.Color.White;
+            this.txbSlaveID.Dock = System.Windows.Forms.DockStyle.Left;
+            this.txbSlaveID.Font = new System.Drawing.Font("微軟正黑體", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
+            this.txbSlaveID.Location = new System.Drawing.Point(158, 144);
+            this.txbSlaveID.Name = "txbSlaveID";
+            this.txbSlaveID.ReadOnly = true;
+            this.txbSlaveID.Size = new System.Drawing.Size(309, 35);
+            this.txbSlaveID.TabIndex = 11;
+            // 
+            // txbDigitalInputQuantity
+            // 
+            this.txbDigitalInputQuantity.BackColor = System.Drawing.Color.White;
+            this.txbDigitalInputQuantity.Dock = System.Windows.Forms.DockStyle.Left;
+            this.txbDigitalInputQuantity.Font = new System.Drawing.Font("微軟正黑體", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
+            this.txbDigitalInputQuantity.Location = new System.Drawing.Point(158, 191);
+            this.txbDigitalInputQuantity.Name = "txbDigitalInputQuantity";
+            this.txbDigitalInputQuantity.ReadOnly = true;
+            this.txbDigitalInputQuantity.Size = new System.Drawing.Size(309, 35);
+            this.txbDigitalInputQuantity.TabIndex = 12;
+            // 
+            // txbDelay
+            // 
+            this.txbDelay.BackColor = System.Drawing.Color.White;
+            this.txbDelay.Dock = System.Windows.Forms.DockStyle.Left;
+            this.txbDelay.Font = new System.Drawing.Font("微軟正黑體", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
+            this.txbDelay.Location = new System.Drawing.Point(158, 238);
+            this.txbDelay.Name = "txbDelay";
+            this.txbDelay.ReadOnly = true;
+            this.txbDelay.Size = new System.Drawing.Size(309, 35);
+            this.txbDelay.TabIndex = 13;
+            // 
+            // txbInformation
+            // 
+            this.txbInformation.BackColor = System.Drawing.Color.White;
+            this.txbInformation.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.txbInformation.Font = new System.Drawing.Font("微軟正黑體", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
+            this.txbInformation.Location = new System.Drawing.Point(158, 379);
+            this.txbInformation.Name = "txbInformation";
+            this.txbInformation.ReadOnly = true;
+            this.txbInformation.Size = new System.Drawing.Size(646, 35);
+            this.txbInformation.TabIndex = 16;
+            this.txbInformation.Visible = false;
+            // 
+            // labSocketControllerType
+            // 
+            this.labSocketControllerType.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.labSocketControllerType.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.labSocketControllerType.Location = new System.Drawing.Point(3, 329);
+            this.labSocketControllerType.Name = "labSocketControllerType";
+            this.labSocketControllerType.Size = new System.Drawing.Size(149, 47);
+            this.labSocketControllerType.TabIndex = 17;
+            this.labSocketControllerType.Text = "Controller Type";
+            this.labSocketControllerType.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            // 
+            // cmbSocketControllerType
+            // 
+            this.cmbSocketControllerType.Dock = System.Windows.Forms.DockStyle.Left;
+            this.cmbSocketControllerType.Font = new System.Drawing.Font("微軟正黑體", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
+            this.cmbSocketControllerType.FormattingEnabled = true;
+            this.cmbSocketControllerType.Location = new System.Drawing.Point(158, 332);
+            this.cmbSocketControllerType.Name = "cmbSocketControllerType";
+            this.cmbSocketControllerType.Size = new System.Drawing.Size(309, 38);
+            this.cmbSocketControllerType.TabIndex = 18;
             // 
             // gbRS232CSetting
             // 
@@ -708,7 +808,9 @@
             this.tlpRS232C.ColumnCount = 2;
             this.tlpRS232C.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 19.33085F));
             this.tlpRS232C.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 80.66914F));
+            this.tlpRS232C.Controls.Add(this.cmbComControllerType, 1, 6);
             this.tlpRS232C.Controls.Add(this.txbConnectTypeCOM, 1, 5);
+            this.tlpRS232C.Controls.Add(this.labComControllerType, 0, 6);
             this.tlpRS232C.Controls.Add(this.nudDataBits, 1, 3);
             this.tlpRS232C.Controls.Add(this.labParityBit, 0, 2);
             this.tlpRS232C.Controls.Add(this.label2, 0, 0);
@@ -733,8 +835,18 @@
             this.tlpRS232C.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 12.5F));
             this.tlpRS232C.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 12.5F));
             this.tlpRS232C.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 12.5F));
+            this.tlpRS232C.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
             this.tlpRS232C.Size = new System.Drawing.Size(807, 475);
             this.tlpRS232C.TabIndex = 4;
+            // 
+            // cmbComControllerType
+            // 
+            this.cmbComControllerType.Font = new System.Drawing.Font("微軟正黑體", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
+            this.cmbComControllerType.FormattingEnabled = true;
+            this.cmbComControllerType.Location = new System.Drawing.Point(158, 357);
+            this.cmbComControllerType.Name = "cmbComControllerType";
+            this.cmbComControllerType.Size = new System.Drawing.Size(334, 38);
+            this.cmbComControllerType.TabIndex = 20;
             // 
             // txbConnectTypeCOM
             // 
@@ -747,6 +859,16 @@
             this.txbConnectTypeCOM.Size = new System.Drawing.Size(334, 35);
             this.txbConnectTypeCOM.TabIndex = 10;
             this.txbConnectTypeCOM.Text = "ComPort";
+            // 
+            // labComControllerType
+            // 
+            this.labComControllerType.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.labComControllerType.Location = new System.Drawing.Point(3, 354);
+            this.labComControllerType.Name = "labComControllerType";
+            this.labComControllerType.Size = new System.Drawing.Size(149, 47);
+            this.labComControllerType.TabIndex = 19;
+            this.labComControllerType.Text = "Controller Type";
+            this.labComControllerType.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
             // nudDataBits
             // 
@@ -945,150 +1067,6 @@
             this.chbRS232CActive.Text = "Active";
             this.chbRS232CActive.UseVisualStyleBackColor = true;
             // 
-            // gpIPAddressSettingandMaintainNotice
-            // 
-            this.gpIPAddressSettingandMaintainNotice.Controls.Add(this.spcAttributes);
-            this.gpIPAddressSettingandMaintainNotice.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.gpIPAddressSettingandMaintainNotice.Location = new System.Drawing.Point(0, 0);
-            this.gpIPAddressSettingandMaintainNotice.Name = "gpIPAddressSettingandMaintainNotice";
-            this.gpIPAddressSettingandMaintainNotice.Size = new System.Drawing.Size(480, 503);
-            this.gpIPAddressSettingandMaintainNotice.TabIndex = 1;
-            this.gpIPAddressSettingandMaintainNotice.TabStop = false;
-            this.gpIPAddressSettingandMaintainNotice.Text = "Attributes";
-            // 
-            // labSlaveID
-            // 
-            this.labSlaveID.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.labSlaveID.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.labSlaveID.Location = new System.Drawing.Point(3, 141);
-            this.labSlaveID.Name = "labSlaveID";
-            this.labSlaveID.Size = new System.Drawing.Size(149, 47);
-            this.labSlaveID.TabIndex = 7;
-            this.labSlaveID.Text = "Slave ID";
-            this.labSlaveID.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            // 
-            // labDigitalInputQuantity
-            // 
-            this.labDigitalInputQuantity.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.labDigitalInputQuantity.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.labDigitalInputQuantity.Location = new System.Drawing.Point(3, 188);
-            this.labDigitalInputQuantity.Name = "labDigitalInputQuantity";
-            this.labDigitalInputQuantity.Size = new System.Drawing.Size(149, 47);
-            this.labDigitalInputQuantity.TabIndex = 8;
-            this.labDigitalInputQuantity.Text = "Digital Input Quantity";
-            this.labDigitalInputQuantity.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            // 
-            // labDelay
-            // 
-            this.labDelay.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.labDelay.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.labDelay.Location = new System.Drawing.Point(3, 235);
-            this.labDelay.Name = "labDelay";
-            this.labDelay.Size = new System.Drawing.Size(149, 47);
-            this.labDelay.TabIndex = 9;
-            this.labDelay.Text = "Delay";
-            this.labDelay.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            // 
-            // labReadTimeout
-            // 
-            this.labReadTimeout.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.labReadTimeout.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.labReadTimeout.Location = new System.Drawing.Point(3, 282);
-            this.labReadTimeout.Name = "labReadTimeout";
-            this.labReadTimeout.Size = new System.Drawing.Size(149, 47);
-            this.labReadTimeout.TabIndex = 10;
-            this.labReadTimeout.Text = "Read Timeout";
-            this.labReadTimeout.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            // 
-            // txbSlaveID
-            // 
-            this.txbSlaveID.BackColor = System.Drawing.Color.White;
-            this.txbSlaveID.Dock = System.Windows.Forms.DockStyle.Left;
-            this.txbSlaveID.Font = new System.Drawing.Font("微軟正黑體", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-            this.txbSlaveID.Location = new System.Drawing.Point(158, 144);
-            this.txbSlaveID.Name = "txbSlaveID";
-            this.txbSlaveID.ReadOnly = true;
-            this.txbSlaveID.Size = new System.Drawing.Size(309, 35);
-            this.txbSlaveID.TabIndex = 11;
-            // 
-            // txbDigitalInputQuantity
-            // 
-            this.txbDigitalInputQuantity.BackColor = System.Drawing.Color.White;
-            this.txbDigitalInputQuantity.Dock = System.Windows.Forms.DockStyle.Left;
-            this.txbDigitalInputQuantity.Font = new System.Drawing.Font("微軟正黑體", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-            this.txbDigitalInputQuantity.Location = new System.Drawing.Point(158, 191);
-            this.txbDigitalInputQuantity.Name = "txbDigitalInputQuantity";
-            this.txbDigitalInputQuantity.ReadOnly = true;
-            this.txbDigitalInputQuantity.Size = new System.Drawing.Size(309, 35);
-            this.txbDigitalInputQuantity.TabIndex = 12;
-            // 
-            // txbDelay
-            // 
-            this.txbDelay.BackColor = System.Drawing.Color.White;
-            this.txbDelay.Dock = System.Windows.Forms.DockStyle.Left;
-            this.txbDelay.Font = new System.Drawing.Font("微軟正黑體", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-            this.txbDelay.Location = new System.Drawing.Point(158, 238);
-            this.txbDelay.Name = "txbDelay";
-            this.txbDelay.ReadOnly = true;
-            this.txbDelay.Size = new System.Drawing.Size(309, 35);
-            this.txbDelay.TabIndex = 13;
-            // 
-            // txbInformation
-            // 
-            this.txbInformation.BackColor = System.Drawing.Color.White;
-            this.txbInformation.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.txbInformation.Font = new System.Drawing.Font("微軟正黑體", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-            this.txbInformation.Location = new System.Drawing.Point(158, 379);
-            this.txbInformation.Name = "txbInformation";
-            this.txbInformation.ReadOnly = true;
-            this.txbInformation.Size = new System.Drawing.Size(646, 35);
-            this.txbInformation.TabIndex = 16;
-            this.txbInformation.Visible = false;
-            // 
-            // spcAttributes
-            // 
-            this.spcAttributes.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.spcAttributes.Location = new System.Drawing.Point(3, 25);
-            this.spcAttributes.Name = "spcAttributes";
-            this.spcAttributes.Orientation = System.Windows.Forms.Orientation.Horizontal;
-            // 
-            // spcAttributes.Panel1
-            // 
-            this.spcAttributes.Panel1.Controls.Add(this.dgvAttribute01);
-            // 
-            // spcAttributes.Panel2
-            // 
-            this.spcAttributes.Panel2.Controls.Add(this.dgvAttribute02);
-            this.spcAttributes.Size = new System.Drawing.Size(474, 475);
-            this.spcAttributes.SplitterDistance = 254;
-            this.spcAttributes.TabIndex = 0;
-            // 
-            // dgvAttribute01
-            // 
-            this.dgvAttribute01.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCells;
-            this.dgvAttribute01.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
-            this.dgvAttribute01.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvAttribute01.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.dgvAttribute01.Location = new System.Drawing.Point(0, 0);
-            this.dgvAttribute01.Name = "dgvAttribute01";
-            this.dgvAttribute01.RowTemplate.Height = 24;
-            this.dgvAttribute01.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvAttribute01.Size = new System.Drawing.Size(474, 254);
-            this.dgvAttribute01.TabIndex = 0;
-            // 
-            // dgvAttribute02
-            // 
-            this.dgvAttribute02.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCells;
-            this.dgvAttribute02.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
-            this.dgvAttribute02.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvAttribute02.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.dgvAttribute02.Location = new System.Drawing.Point(0, 0);
-            this.dgvAttribute02.Name = "dgvAttribute02";
-            this.dgvAttribute02.RowTemplate.Height = 24;
-            this.dgvAttribute02.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvAttribute02.Size = new System.Drawing.Size(474, 217);
-            this.dgvAttribute02.TabIndex = 1;
-            // 
             // FormCommunications
             // 
             this.ClientSize = new System.Drawing.Size(1620, 760);
@@ -1111,7 +1089,6 @@
             this.palSettingandMaintain.ResumeLayout(false);
             this.gbIPAddressSettingandMaintain.ResumeLayout(false);
             this.splitContainer2.Panel1.ResumeLayout(false);
-            this.splitContainer2.Panel2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer2)).EndInit();
             this.splitContainer2.ResumeLayout(false);
             this.gbTCPIPSetting.ResumeLayout(false);
@@ -1135,13 +1112,6 @@
             this.splitContainer3.Panel2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer3)).EndInit();
             this.splitContainer3.ResumeLayout(false);
-            this.gpIPAddressSettingandMaintainNotice.ResumeLayout(false);
-            this.spcAttributes.Panel1.ResumeLayout(false);
-            this.spcAttributes.Panel2.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.spcAttributes)).EndInit();
-            this.spcAttributes.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.dgvAttribute01)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvAttribute02)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -1173,7 +1143,6 @@
         private System.Windows.Forms.NumericUpDown nudIP02;
         private System.Windows.Forms.NumericUpDown nudIP01;
         private System.Windows.Forms.Label label25;
-        private System.Windows.Forms.GroupBox gpIPAddressSettingandMaintainNotice;
         private System.Windows.Forms.Button btnRS232C;
         private System.Windows.Forms.Button btnTCPIP;
         private System.Windows.Forms.Panel palSettingandMaintain;
@@ -1209,8 +1178,9 @@
         private System.Windows.Forms.TextBox txbDigitalInputQuantity;
         private System.Windows.Forms.TextBox txbDelay;
         private System.Windows.Forms.TextBox txbInformation;
-        private System.Windows.Forms.SplitContainer spcAttributes;
-        private System.Windows.Forms.DataGridView dgvAttribute01;
-        private System.Windows.Forms.DataGridView dgvAttribute02;
+        private System.Windows.Forms.Label labSocketControllerType;
+        private System.Windows.Forms.ComboBox cmbSocketControllerType;
+        private System.Windows.Forms.ComboBox cmbComControllerType;
+        private System.Windows.Forms.Label labComControllerType;
     }
 }

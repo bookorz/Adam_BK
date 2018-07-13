@@ -34,6 +34,7 @@ namespace Adam.Menu.Communications
             DBUtil dBUtil = new DBUtil();
             //DataTable dtList = new DataTable();
             Dictionary<string, object> keyValues = new Dictionary<string, object>();
+            DataTable dtTemp = new DataTable();
 
             try
             {
@@ -58,6 +59,28 @@ namespace Adam.Menu.Communications
 
                 strSql = "SELECT* FROM config_controller ";
                 dtController = dBUtil.GetDataTable(strSql, null);
+
+                strSql = "select * from list_item where list_type = 'NODE_CONTROLLER_TYPE' ";
+
+                dtTemp = dBUtil.GetDataTable(strSql, null);
+
+                if (dtTemp.Rows.Count > 0)
+                {
+                    cmbComControllerType.DataSource = dtTemp.Copy();
+                    cmbComControllerType.DisplayMember = "list_value";
+                    cmbComControllerType.ValueMember = "list_value";
+                    cmbComControllerType.SelectedIndex = -1;
+
+                    cmbSocketControllerType.DataSource = dtTemp.Copy();
+                    cmbSocketControllerType.DisplayMember = "list_value";
+                    cmbSocketControllerType.ValueMember = "list_value";
+                    cmbSocketControllerType.SelectedIndex = -1;
+                }
+                else
+                {
+                    cmbComControllerType.DataSource = null;
+                    cmbSocketControllerType.DataSource = null;
+                }
 
                 CleanConnectMode();
             }
@@ -134,10 +157,9 @@ namespace Adam.Menu.Communications
                     txbDelay.Text = string.Empty;
                     txbReadTimeout.Text = string.Empty;
                     txbInformation.Text = string.Empty;
-                    dgvAttribute01.DataSource = null;
-                    dgvAttribute02.DataSource = null;
                     dtControlSetting = null;
                     dtParameterSetting = null;
+                    cmbSocketControllerType.SelectedIndex = -1;
                 }
                 else
                 {
@@ -156,33 +178,34 @@ namespace Adam.Menu.Communications
                         nudIP04.Value = Convert.ToInt32(dtTemp.Rows[0]["conn_address"].ToString().Split('.')[3].ToString());
                         nudIPPort.Value = Convert.ToInt32(dtTemp.Rows[0]["conn_prot"].ToString());
                         chbTCPIPActive.Checked = dtTemp.Rows[0]["enable_flg"].ToString() == "1" ? true : false;
-                        txbSlaveID.Text = dtTemp.Rows[0]["slave_id"].ToString();
-                        txbDigitalInputQuantity.Text = dtTemp.Rows[0]["digital_input_quantity"].ToString();
+                        txbSlaveID.Text = dtTemp.Rows[0]["slaveid"].ToString();
+                        txbDigitalInputQuantity.Text = dtTemp.Rows[0]["digitalinputquantity"].ToString();
                         txbDelay.Text = dtTemp.Rows[0]["delay"].ToString();
-                        txbReadTimeout.Text = dtTemp.Rows[0]["read_timeout"].ToString();
+                        txbReadTimeout.Text = dtTemp.Rows[0]["readtimeout"].ToString();
                         txbInformation.Text = dtTemp.Rows[0]["create_user"].ToString() + "," + Convert.ToDateTime(dtTemp.Rows[0]["create_timestamp"].ToString()).ToString("yyyy-MM-dd HH:mm:ss");
+                        cmbSocketControllerType.SelectedValue = dtTemp.Rows[0]["controller_type"].ToString();
 
-                        if (dtTemp.Rows[0]["control_setting"].ToString().Equals(string.Empty))
-                        {
-                            dtControlSetting = (DataTable)Newtonsoft.Json.JsonConvert.DeserializeObject(dtTemp.Rows[0]["control_setting"].ToString(), (typeof(DataTable)));
-                            dgvAttribute01.DataSource = dtControlSetting;
-                        }
-                        else
-                        {
-                            dgvAttribute01.DataSource = null;
-                            dtControlSetting = null;
-                        }
+                        //if (dtTemp.Rows[0]["control_setting"].ToString().Equals(string.Empty))
+                        //{
+                        //    dtControlSetting = (DataTable)Newtonsoft.Json.JsonConvert.DeserializeObject(dtTemp.Rows[0]["control_setting"].ToString(), (typeof(DataTable)));
+                        //    dgvAttribute01.DataSource = dtControlSetting;
+                        //}
+                        //else
+                        //{
+                        //    dgvAttribute01.DataSource = null;
+                        //    dtControlSetting = null;
+                        //}
 
-                        if (dtTemp.Rows[0]["parameter_setting"].ToString().Equals(string.Empty))
-                        {
-                            dtParameterSetting = (DataTable)Newtonsoft.Json.JsonConvert.DeserializeObject(dtTemp.Rows[0]["parameter_setting"].ToString(), (typeof(DataTable)));
-                            dgvAttribute02.DataSource = dtParameterSetting;
-                        }
-                        else
-                        {
-                            dgvAttribute02.DataSource = null;
-                            dtParameterSetting = null;
-                        }
+                        //if (dtTemp.Rows[0]["parameter_setting"].ToString().Equals(string.Empty))
+                        //{
+                        //    dtParameterSetting = (DataTable)Newtonsoft.Json.JsonConvert.DeserializeObject(dtTemp.Rows[0]["parameter_setting"].ToString(), (typeof(DataTable)));
+                        //    dgvAttribute02.DataSource = dtParameterSetting;
+                        //}
+                        //else
+                        //{
+                        //    dgvAttribute02.DataSource = null;
+                        //    dtParameterSetting = null;
+                        //}
                     }
                     else
                     {
@@ -197,10 +220,9 @@ namespace Adam.Menu.Communications
                         txbDelay.Text = string.Empty;
                         txbReadTimeout.Text = string.Empty;
                         txbInformation.Text = string.Empty;
-                        dgvAttribute01.DataSource = null;
-                        dgvAttribute02.DataSource = null;
                         dtControlSetting = null;
                         dtParameterSetting = null;
+                        cmbSocketControllerType.SelectedIndex = -1;
                     }
                 }
 
@@ -248,6 +270,7 @@ namespace Adam.Menu.Communications
                 txbParityBit.Text = "None";
                 txbStopBit.Text = "One";
                 txbConnectTypeCOM.Text = "ComPort";
+                cmbComControllerType.SelectedIndex = -1;
             }
             else
             {
@@ -267,6 +290,7 @@ namespace Adam.Menu.Communications
                     txbStopBit.Text = dtTemp.Rows[0]["com_stop_bit"].ToString();
                     chbRS232CActive.Checked = dtTemp.Rows[0]["enable_flg"].ToString() == "1" ? true : false;
                     txbReadTimeout.Text = dtTemp.Rows[0]["create_user"].ToString() + "," + Convert.ToDateTime(dtTemp.Rows[0]["create_timestamp"].ToString()).ToString("yyyy-MM-dd HH:mm:ss");
+                    cmbComControllerType.SelectedValue = dtTemp.Rows[0]["controller_type"].ToString();
                 }
                 else
                 {
@@ -277,6 +301,7 @@ namespace Adam.Menu.Communications
                     txbStopBit.Text = "One";
                     chbRS232CActive.Checked = true;
                     txbReadTimeout.Text = string.Empty;
+                    cmbComControllerType.SelectedIndex = -1;
                 }
 
                 txbConnectTypeCOM.Text = btnRS232C.Tag.ToString();
@@ -381,7 +406,7 @@ namespace Adam.Menu.Communications
                 strReplaceSql = "REPLACE INTO controller " +
                     "(node_id, node_function_name, node_function_type, conn_address, conn_type, conn_prot, " +
                     "com_parity_bit, com_data_bits, com_stop_bit, enable_flg, " +
-                    "slave_id, digital_input_quantity, delay, read_timeout, control_setting, parameter_setting, " +
+                    "slaveid, digitalinputquantity, delay, readtimeout, " +
                     "create_user, create_timestamp, modify_user, modify_timestamp) " +
                     "VALUES (" +
                     "@node_id, " +
@@ -425,23 +450,23 @@ namespace Adam.Menu.Communications
                     keyValues.Add("@delay", txbDelay.Text.Trim());
                     keyValues.Add("@read_timeout", txbReadTimeout.Text.Trim());
 
-                    if (dtControlSetting != null || dtControlSetting.Rows.Count > 0)
-                    {
-                        keyValues.Add("@control_setting", JsonConvert.SerializeObject(dtControlSetting, Formatting.Indented));
-                    }
-                    else
-                    {
-                        keyValues.Add("@control_setting", string.Empty);
-                    }
+                    //if (dtControlSetting != null || dtControlSetting.Rows.Count > 0)
+                    //{
+                    //    keyValues.Add("@control_setting", JsonConvert.SerializeObject(dtControlSetting, Formatting.Indented));
+                    //}
+                    //else
+                    //{
+                    //    keyValues.Add("@control_setting", string.Empty);
+                    //}
 
-                    if (dtParameterSetting != null || dtParameterSetting.Rows.Count > 0)
-                    {
-                        keyValues.Add("@parameter_setting", JsonConvert.SerializeObject(dtParameterSetting, Formatting.Indented));
-                    }
-                    else
-                    {
-                        keyValues.Add("@parameter_setting", string.Empty);
-                    }
+                    //if (dtParameterSetting != null || dtParameterSetting.Rows.Count > 0)
+                    //{
+                    //    keyValues.Add("@parameter_setting", JsonConvert.SerializeObject(dtParameterSetting, Formatting.Indented));
+                    //}
+                    //else
+                    //{
+                    //    keyValues.Add("@parameter_setting", string.Empty);
+                    //}
                 }
 
                 if (btnRS232C.BackColor == Color.DodgerBlue)
