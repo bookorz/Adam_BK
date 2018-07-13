@@ -168,6 +168,7 @@ namespace Adam.UI_Update.WaferMapping
                             Job wafer = new Job();
                             wafer.Slot = (i+1).ToString();
                             wafer.FromPort = PortName;
+                            wafer.FromPortSlot = wafer.Slot;
                             wafer.Position = PortName;
                             wafer.AlignerFlag = false;
                             string Slot = (i+1).ToString("00");

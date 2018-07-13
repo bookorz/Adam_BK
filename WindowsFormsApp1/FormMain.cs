@@ -472,7 +472,7 @@ namespace Adam
                     }
                     break;
                 default:
-                    
+
                     break;
             }
         }
@@ -557,7 +557,7 @@ namespace Adam
                         case "LoadPort":
                             switch (Txn.Method)
                             {
-                                
+
                             }
                             break;
                         case "OCR":
@@ -659,10 +659,10 @@ namespace Adam
             }
         }
 
-        public void On_Eqp_State_Changed(string OldStatus,string NewStatus)
+        public void On_Eqp_State_Changed(string OldStatus, string NewStatus)
         {
             NodeStatusUpdate.UpdateCurrentState(NewStatus);
-            StateRecord.EqpStateUpdate("Sorter",OldStatus, NewStatus);
+            StateRecord.EqpStateUpdate("Sorter", OldStatus, NewStatus);
         }
 
         public void On_Controller_State_Changed(string Device_ID, string Status)
@@ -691,7 +691,7 @@ namespace Adam
         public void On_Port_Begin(string PortName, string FormName)
         {
             logger.Debug("On_Port_Begin");
-            
+
             WaferAssignUpdate.RefreshMapping(PortName);
             WaferAssignUpdate.RefreshMapping(NodeManagement.Get(PortName).DestPort);
             try
@@ -719,7 +719,7 @@ namespace Adam
 
                 WaferAssignUpdate.RefreshMapping(PortName);
                 WaferAssignUpdate.RefreshMapping(NodeManagement.Get(PortName).DestPort);
-                Node Port = NodeManagement.Get(PortName);              
+                Node Port = NodeManagement.Get(PortName);
                 Node DestPort = NodeManagement.Get(Port.DestPort);
                 switch (FormName)
                 {
@@ -835,10 +835,10 @@ namespace Adam
                             Port = Node;
                             DestPort = NodeManagement.Get(Node.DestPort);
                             // SpinWait.SpinUntil(() => (Port.IsMapping && Port.JobList.Count!=0 && DestPort.IsMapping && DestPort.JobList.Count != 0) || RouteCtrl.GetMode().Equals("Stop") , 99999999);
-                            
+
                             //SpinWait.SpinUntil(() => (Port.IsMapping  && DestPort.IsMapping ) || RouteCtrl.GetMode().Equals("Stop"), 99999999);
-                            
-                            if (!RouteCtrl.GetMode().Equals("Stop")&& Port.IsMapping && DestPort.IsMapping)
+
+                            if (!RouteCtrl.GetMode().Equals("Stop") && Port.IsMapping && DestPort.IsMapping)
                             {
                                 RunningUpdate.ReverseRunning(Port.Name);
                             }
@@ -854,9 +854,9 @@ namespace Adam
                                 Port = findPort.First();
                                 DestPort = Node;
                                 //SpinWait.SpinUntil(() => (Port.IsMapping && Port.JobList.Count != 0 && DestPort.IsMapping && DestPort.JobList.Count != 0) || RouteCtrl.GetMode().Equals("Stop"), 99999999);
-                                
+
                                 //SpinWait.SpinUntil(() => (Port.IsMapping && DestPort.IsMapping) || RouteCtrl.GetMode().Equals("Stop"), 99999999);
-                                if (!RouteCtrl.GetMode().Equals("Stop")&& Port.IsMapping && DestPort.IsMapping)
+                                if (!RouteCtrl.GetMode().Equals("Stop") && Port.IsMapping && DestPort.IsMapping)
                                 {
                                     RunningUpdate.ReverseRunning(Port.Name);
                                 }
@@ -900,7 +900,39 @@ namespace Adam
             DIOUpdate.UpdateDIOStatus(Parameter, Value);
         }
 
-        public void On_Error_Occurred(string DIOName, string ErrorMsg)
+        public void On_Alarm_Happen(string DIOName, string ErrorCode)
+        {
+            AlarmInfo CurrentAlarm = new AlarmInfo();
+            CurrentAlarm.NodeName = DIOName;
+            CurrentAlarm.AlarmCode = ErrorCode;
+            CurrentAlarm.NeedReset = false;
+            try
+            {
+
+                AlarmMessage Detail = AlmMapping.Get("SANWA", "DIO", CurrentAlarm.AlarmCode);
+
+                CurrentAlarm.SystemAlarmCode = Detail.CodeID;
+                CurrentAlarm.Desc = Detail.Code_Cause;
+                CurrentAlarm.EngDesc = Detail.Code_Cause_English;
+                CurrentAlarm.Type = Detail.Code_Type;
+                CurrentAlarm.IsStop = Detail.IsStop;
+                if (CurrentAlarm.IsStop)
+                {
+                    RouteCtrl.Stop();
+                }
+            }
+            catch (Exception e)
+            {
+                CurrentAlarm.Desc = "未定義";
+                logger.Error(DIOName + "(GetAlarmMessage)" + e.Message + "\n" + e.StackTrace);
+            }
+            CurrentAlarm.TimeStamp = DateTime.Now.ToString("yyyy/MM/dd HH:mm:ss:fff");
+            AlarmManagement.Add(CurrentAlarm);
+            AlarmUpdate.UpdateAlarmList(AlarmManagement.GetAll());
+            AlarmUpdate.UpdateAlarmHistory(AlarmManagement.GetHistory());
+        }
+
+        public void On_Connection_Error(string DIOName, string ErrorMsg)
         {
             //斷線 發ALARM
             logger.Debug("On_Error_Occurred");
@@ -1140,7 +1172,7 @@ namespace Adam
                 string user_group = lbl_login_group.Text;
                 string fun_form = "FormMain";
                 string fun_ref = item.Name;
-                Boolean enable = AuthorityUpdate.getFuncEnable(user_group, fun_form,fun_ref);
+                Boolean enable = AuthorityUpdate.getFuncEnable(user_group, fun_form, fun_ref);
                 item.Enabled = enable;
             }
         }

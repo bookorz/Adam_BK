@@ -1,6 +1,9 @@
 ﻿using log4net;
+using Newtonsoft.Json;
+using SANWA.Utility;
 using System;
 using System.Collections.Generic;
+using System.Data;
 using System.Drawing;
 using System.Linq;
 using System.Text;
@@ -15,6 +18,30 @@ namespace Adam.UI_Update.Monitoring
         static ILog logger = LogManager.GetLogger(typeof(NodeStatusUpdate));
         delegate void UpdateNode(string Device_ID, string State);
         delegate void UpdateState(string State);
+        static List<Setting> SignalSetting;
+        class Setting
+        {
+            public string Eqp_Status { get; set; }
+            public bool Is_Alarm { get; set; }
+            public string Red { get; set; }
+            public string Yellow { get; set; }
+            public string Blue { get; set; }
+            public string Green { get; set; }
+            public string Buzzer1 { get; set; }
+            public string Buzzer2 { get; set; }
+        }
+
+        private static void InitialSetting()
+        {
+            DBUtil dBUtil = new DBUtil();
+
+            string Sql = @"select * from config_signal_tower";
+            DataTable dt = dBUtil.GetDataTable(Sql, null);
+
+            string str_json = JsonConvert.SerializeObject(dt, Formatting.Indented);
+            SignalSetting = JsonConvert.DeserializeObject<List<Setting>>(str_json);
+
+        }
 
         public static void UpdateNodeState(string Device_ID, string State)
         {
@@ -25,7 +52,7 @@ namespace Adam.UI_Update.Monitoring
                 if (form == null)
                     return;
 
-                State_tb = form.Controls.Find(Device_ID+"_State", true).FirstOrDefault() as TextBox;
+                State_tb = form.Controls.Find(Device_ID + "_State", true).FirstOrDefault() as TextBox;
                 if (State_tb == null)
                     return;
 
@@ -48,7 +75,7 @@ namespace Adam.UI_Update.Monitoring
                             //UpdateCurrentState();
                             break;
                         case "Ready To Load":
-                            State_tb.BackColor = Color.DarkGray;                          
+                            State_tb.BackColor = Color.DarkGray;
                             break;
                         case "Load Complete":
                             State_tb.BackColor = Color.Green;
@@ -64,7 +91,7 @@ namespace Adam.UI_Update.Monitoring
                             //UpdateCurrentState();
                             break;
                     }
-                    
+
                 }
 
 
@@ -92,72 +119,67 @@ namespace Adam.UI_Update.Monitoring
                 if (state_btn.InvokeRequired)
                 {
                     UpdateState ph = new UpdateState(UpdateCurrentState);
-                    state_btn.BeginInvoke(ph,State);
+                    state_btn.BeginInvoke(ph, State);
                 }
                 else
                 {
-
+                    if (SignalSetting == null)
+                    {
+                        InitialSetting();
+                    }
                     state_btn.Text = State;
                     Dictionary<string, string> Params = new Dictionary<string, string>();
-                    switch (State)
-                    {
-                        case "Run":
-                            state_btn.BackColor = Color.Lime;
-                            
-                            Params.Add("Red", "False");
-                            Params.Add("Orange", "False");
-                            Params.Add("Green", "True");
-                            Params.Add("Blue", "False");
-                            Params.Add("Buzzer1", "False");
-                            Params.Add("Buzzer2", "False");
-                            FormMain.DIO.SetIO(Params);
 
-                            break;
-                        case "Idle":
-                            state_btn.BackColor = Color.Orange;
-                            
-                            Params.Add("Red", "False");
-                            Params.Add("Orange", "False");
-                            Params.Add("Green", "False");
-                            Params.Add("Blue", "True");
-                            Params.Add("Buzzer1", "False");
-                            Params.Add("Buzzer2", "False");
-                            FormMain.DIO.SetIO(Params);
-                            break;
-                        case "Pause":
-                           
-                            Params.Add("Red", "False");
-                            Params.Add("Orange", "True");
-                            Params.Add("Green", "False");
-                            Params.Add("Blue", "False");
-                            Params.Add("Buzzer1", "False");
-                            Params.Add("Buzzer2", "False");
-                            FormMain.DIO.SetIO(Params);
-                            FormMain.DIO.SetBlink("Orange", "True");
-                            break;
-                        case "Alarm":
-                            state_btn.BackColor = Color.Red;
-                            Params.Add("Red", "True");
-                            CheckBox mute = form.Controls.Find("Mute_chk", true).FirstOrDefault() as CheckBox;
-                            if (mute != null)
-                            {
-                                if (!mute.Checked)
-                                {
-                                    Params.Add("Buzzer2", "True");
-                                }
-                            }
-                            FormMain.DIO.SetIO(Params);
+                    var findSetting = from Setting in SignalSetting
+                                      where Setting.Eqp_Status.Equals(State.ToUpper()) && Setting.Is_Alarm == (NodeManagement.GetCurrentState().ToUpper().Equals("ALARM"))
+                                      select Setting;
+
+                    if (findSetting.Count() != 0)
+                    {
+                        Setting each = findSetting.First();
+                        if (!each.Blue.Equals("BLINK"))
+                        {
+                            Params.Add("Blue", each.Blue);
+                        }
+                        else
+                        {
+                            FormMain.DIO.SetBlink("Blue", "True");
+                        }
+                        if (!each.Green.Equals("BLINK"))
+                        {
+                            Params.Add("Green", each.Green);
+                        }
+                        else
+                        {
+                            FormMain.DIO.SetBlink("Green", "True");
+                        }
+                        if (!each.Red.Equals("BLINK"))
+                        {
+                            Params.Add("Red", each.Red);
+                        }
+                        else
+                        {
                             FormMain.DIO.SetBlink("Red", "True");
-                            
-                            break;
+                        }
+                        if (!each.Yellow.Equals("BLINK"))
+                        {
+                            Params.Add("Yellow", each.Yellow);
+                        }
+                        else
+                        {
+                            FormMain.DIO.SetBlink("Yellow", "True");
+                        }
+
+                        FormMain.DIO.SetIO(Params);
                     }
+
                 }
 
 
             }
-            catch(Exception e)
+            catch (Exception e)
             {
-                logger.Error("UpdateCurrentState: Update fail.:"+e.StackTrace);
+                logger.Error("UpdateCurrentState: Update fail.:" + e.StackTrace);
             }
         }
 

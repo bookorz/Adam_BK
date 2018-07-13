@@ -24,9 +24,9 @@ namespace Adam.Menu.Monitoring
                 case 1:
                     List<Job> JobList = (sender as DataGridView).DataSource as List<Job>;
                     
-                    switch (JobList[e.RowIndex].ProcessFlag)
+                    switch (JobList[e.RowIndex].NeedProcess)
                     {
-                        case false:  
+                        case true:  
                             e.CellStyle.BackColor = Color.Green;
                             e.CellStyle.ForeColor = Color.White;
                             break;

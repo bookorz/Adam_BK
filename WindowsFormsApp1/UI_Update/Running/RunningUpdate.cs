@@ -144,10 +144,10 @@ namespace Adam.UI_Update.Running
                                 {
                                     if (FinPort.GetJob(StartSlot.ToString()).MapFlag == false)
                                     {
+                                        job.NeedProcess = true;
                                         job.ProcessFlag = false;
-                                        job.Destination = FinPort.Name;
-                                        job.DisplayDestination = FinPort.Name.Replace("Load","");
-                                        job.DestinationSlot = StartSlot.ToString();
+                                        job.AssignPort(FinPort.Name, StartSlot.ToString());
+                                       
                                         FinPort.ReserveList.TryAdd(job.Slot, job);
                                         StartSlot++;
                                         break;

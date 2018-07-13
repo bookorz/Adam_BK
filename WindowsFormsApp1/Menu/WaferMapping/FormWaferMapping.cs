@@ -153,10 +153,8 @@ namespace Adam.Menu.WaferMapping
                 Job wafer = JobManagement.Get(waferId);
                 if (wafer != null)
                 {
-                    wafer.Destination = "";
-                    wafer.DisplayDestination = "";
-                    wafer.DestinationSlot = "";
-                    wafer.ProcessFlag = true;
+                    wafer.UnAssignPort();
+                    wafer.NeedProcess = false ;
                     //wafer.Position = PortName;
                     if (!OrgDest.Equals(""))
                     {
@@ -182,10 +180,8 @@ namespace Adam.Menu.WaferMapping
                     Job wafer = JobManagement.Get(waferId);
                     if (wafer != null)
                     {
-                        wafer.Destination = "";
-                        wafer.DisplayDestination = "";
-                        wafer.DestinationSlot = "";
-                        wafer.ProcessFlag = true;
+                        wafer.UnAssignPort();
+                        wafer.NeedProcess = false;
                         if (!OrgDest.Equals(""))
                         {
                             NodeManagement.Get(OrgDest).RemoveReserve(OrgDestSlot);
@@ -231,10 +227,9 @@ namespace Adam.Menu.WaferMapping
                     Job wafer = JobManagement.Get(waferId);
                     if (wafer != null)
                     {
-
-                        wafer.Destination = PortName;
-                        wafer.DisplayDestination = PortName.Replace("Load", "");
-                        wafer.DestinationSlot = Slot;
+                        wafer.AssignPort(PortName, Slot);
+                        
+                        wafer.NeedProcess = true;
                         wafer.ProcessFlag = false;
                         //wafer.Position = PortName;
                         if (!OrgDest.Equals(""))
@@ -266,10 +261,10 @@ namespace Adam.Menu.WaferMapping
                         {
                             if (NodeManagement.Get(PortName).GetJob(StartSlot.ToString()).MapFlag == false)
                             {
-                                wafer.Destination = PortName;
-                                wafer.DisplayDestination = PortName.Replace("Load", "");
-                                wafer.DestinationSlot = StartSlot.ToString();
+                                wafer.AssignPort(PortName, StartSlot.ToString());
+
                                 //wafer.Position = PortName;
+                                wafer.NeedProcess = true;
                                 wafer.ProcessFlag = false;
                                 if (!OrgDest.Equals(""))
                                 {
@@ -359,6 +354,10 @@ namespace Adam.Menu.WaferMapping
                 if (AssignStatus.Equals("Assign Cancel"))
                 {
                     port.Available = false;
+                    ProcessRecord.CreatePr(port);
+                    
+                    
+
                     (sender as Button).Text = "Assign Complete";
                     (sender as Button).BackColor = Color.Gainsboro;
                     (sender as Button).ForeColor = Color.Black;
@@ -371,6 +370,8 @@ namespace Adam.Menu.WaferMapping
                 {
                    
                     port.Available = true;
+                    ProcessRecord.CancelPr(port);
+                    
 
                     (sender as Button).Text = "Assign Cancel";
                     (sender as Button).BackColor = Color.Green;

@@ -28,14 +28,14 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle10 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle11 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle12 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle13 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle14 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle9 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle15 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle16 = new System.Windows.Forms.DataGridViewCellStyle();
             this.groupBox11 = new System.Windows.Forms.GroupBox();
             this.tableLayoutPanel12 = new System.Windows.Forms.TableLayoutPanel();
             this.tableLayoutPanel22 = new System.Windows.Forms.TableLayoutPanel();
@@ -235,8 +235,8 @@
             this.LoadPort06Assign_Gv.Name = "LoadPort06Assign_Gv";
             this.LoadPort06Assign_Gv.ReadOnly = true;
             this.LoadPort06Assign_Gv.RowHeadersVisible = false;
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("微軟正黑體", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-            this.LoadPort06Assign_Gv.RowsDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle10.Font = new System.Drawing.Font("微軟正黑體", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
+            this.LoadPort06Assign_Gv.RowsDefaultCellStyle = dataGridViewCellStyle10;
             this.LoadPort06Assign_Gv.RowTemplate.Height = 21;
             this.LoadPort06Assign_Gv.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.LoadPort06Assign_Gv.Size = new System.Drawing.Size(189, 555);
@@ -364,8 +364,8 @@
             this.LoadPort05Assign_Gv.Name = "LoadPort05Assign_Gv";
             this.LoadPort05Assign_Gv.ReadOnly = true;
             this.LoadPort05Assign_Gv.RowHeadersVisible = false;
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("微軟正黑體", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-            this.LoadPort05Assign_Gv.RowsDefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle11.Font = new System.Drawing.Font("微軟正黑體", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
+            this.LoadPort05Assign_Gv.RowsDefaultCellStyle = dataGridViewCellStyle11;
             this.LoadPort05Assign_Gv.RowTemplate.Height = 21;
             this.LoadPort05Assign_Gv.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.LoadPort05Assign_Gv.Size = new System.Drawing.Size(189, 555);
@@ -493,8 +493,8 @@
             this.LoadPort08Assign_Gv.Name = "LoadPort08Assign_Gv";
             this.LoadPort08Assign_Gv.ReadOnly = true;
             this.LoadPort08Assign_Gv.RowHeadersVisible = false;
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("微軟正黑體", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-            this.LoadPort08Assign_Gv.RowsDefaultCellStyle = dataGridViewCellStyle3;
+            dataGridViewCellStyle12.Font = new System.Drawing.Font("微軟正黑體", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
+            this.LoadPort08Assign_Gv.RowsDefaultCellStyle = dataGridViewCellStyle12;
             this.LoadPort08Assign_Gv.RowTemplate.Height = 21;
             this.LoadPort08Assign_Gv.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.LoadPort08Assign_Gv.Size = new System.Drawing.Size(195, 555);
@@ -622,8 +622,8 @@
             this.LoadPort07Assign_Gv.Name = "LoadPort07Assign_Gv";
             this.LoadPort07Assign_Gv.ReadOnly = true;
             this.LoadPort07Assign_Gv.RowHeadersVisible = false;
-            dataGridViewCellStyle4.Font = new System.Drawing.Font("微軟正黑體", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-            this.LoadPort07Assign_Gv.RowsDefaultCellStyle = dataGridViewCellStyle4;
+            dataGridViewCellStyle13.Font = new System.Drawing.Font("微軟正黑體", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
+            this.LoadPort07Assign_Gv.RowsDefaultCellStyle = dataGridViewCellStyle13;
             this.LoadPort07Assign_Gv.RowTemplate.Height = 21;
             this.LoadPort07Assign_Gv.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.LoadPort07Assign_Gv.Size = new System.Drawing.Size(189, 555);
@@ -751,8 +751,8 @@
             this.LoadPort02Assign_Gv.Name = "LoadPort02Assign_Gv";
             this.LoadPort02Assign_Gv.ReadOnly = true;
             this.LoadPort02Assign_Gv.RowHeadersVisible = false;
-            dataGridViewCellStyle5.Font = new System.Drawing.Font("微軟正黑體", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-            this.LoadPort02Assign_Gv.RowsDefaultCellStyle = dataGridViewCellStyle5;
+            dataGridViewCellStyle14.Font = new System.Drawing.Font("微軟正黑體", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
+            this.LoadPort02Assign_Gv.RowsDefaultCellStyle = dataGridViewCellStyle14;
             this.LoadPort02Assign_Gv.RowTemplate.Height = 21;
             this.LoadPort02Assign_Gv.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.LoadPort02Assign_Gv.Size = new System.Drawing.Size(189, 555);
@@ -870,8 +870,8 @@
             this.LoadPort01Assign_Gv.Name = "LoadPort01Assign_Gv";
             this.LoadPort01Assign_Gv.ReadOnly = true;
             this.LoadPort01Assign_Gv.RowHeadersVisible = false;
-            dataGridViewCellStyle6.Font = new System.Drawing.Font("微軟正黑體", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-            this.LoadPort01Assign_Gv.RowsDefaultCellStyle = dataGridViewCellStyle6;
+            dataGridViewCellStyle9.Font = new System.Drawing.Font("微軟正黑體", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
+            this.LoadPort01Assign_Gv.RowsDefaultCellStyle = dataGridViewCellStyle9;
             this.LoadPort01Assign_Gv.RowTemplate.Height = 21;
             this.LoadPort01Assign_Gv.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.LoadPort01Assign_Gv.Size = new System.Drawing.Size(188, 552);
@@ -1011,8 +1011,8 @@
             this.LoadPort04Assign_Gv.Name = "LoadPort04Assign_Gv";
             this.LoadPort04Assign_Gv.ReadOnly = true;
             this.LoadPort04Assign_Gv.RowHeadersVisible = false;
-            dataGridViewCellStyle7.Font = new System.Drawing.Font("微軟正黑體", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-            this.LoadPort04Assign_Gv.RowsDefaultCellStyle = dataGridViewCellStyle7;
+            dataGridViewCellStyle15.Font = new System.Drawing.Font("微軟正黑體", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
+            this.LoadPort04Assign_Gv.RowsDefaultCellStyle = dataGridViewCellStyle15;
             this.LoadPort04Assign_Gv.RowTemplate.Height = 21;
             this.LoadPort04Assign_Gv.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.LoadPort04Assign_Gv.Size = new System.Drawing.Size(189, 555);
@@ -1141,8 +1141,8 @@
             this.LoadPort03Assign_Gv.Name = "LoadPort03Assign_Gv";
             this.LoadPort03Assign_Gv.ReadOnly = true;
             this.LoadPort03Assign_Gv.RowHeadersVisible = false;
-            dataGridViewCellStyle8.Font = new System.Drawing.Font("微軟正黑體", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-            this.LoadPort03Assign_Gv.RowsDefaultCellStyle = dataGridViewCellStyle8;
+            dataGridViewCellStyle16.Font = new System.Drawing.Font("微軟正黑體", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
+            this.LoadPort03Assign_Gv.RowsDefaultCellStyle = dataGridViewCellStyle16;
             this.LoadPort03Assign_Gv.RowTemplate.Height = 21;
             this.LoadPort03Assign_Gv.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.LoadPort03Assign_Gv.Size = new System.Drawing.Size(189, 555);
