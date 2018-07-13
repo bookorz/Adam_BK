@@ -305,7 +305,9 @@ namespace Adam
 
             switch (Txn.FormName)
             {
-
+                case "FormStatus":
+                    Util.StateUtil.UpdateSTS(Node.Name, Msg.Value);
+                    break;
                 case "PauseProcedure":
 
                     break;
@@ -575,12 +577,30 @@ namespace Adam
         {
             logger.Debug("On_Command_TimeOut");
             AlarmInfo CurrentAlarm = new AlarmInfo();
-            CurrentAlarm.NodeName = Node.Name.Replace("Status", "");
-            CurrentAlarm.AlarmCode = "00000001";
-            CurrentAlarm.SystemAlarmCode = "FF00000001";
-            CurrentAlarm.Desc = "命令逾時,連線異常";
-            CurrentAlarm.TimeStamp = DateTime.Now.ToString("yyyy/MM/dd HH:mm:ss:fff");
+            CurrentAlarm.NodeName = Node.Name;
+            CurrentAlarm.AlarmCode = "00200002";
             CurrentAlarm.NeedReset = false;
+            try
+            {
+
+                AlarmMessage Detail = AlmMapping.Get("SANWA", Node.Type, CurrentAlarm.AlarmCode);
+
+                CurrentAlarm.SystemAlarmCode = Detail.CodeID;
+                CurrentAlarm.Desc = Detail.Code_Cause;
+                CurrentAlarm.EngDesc = Detail.Code_Cause_English;
+                CurrentAlarm.Type = Detail.Code_Type;
+                CurrentAlarm.IsStop = Detail.IsStop;
+                if (CurrentAlarm.IsStop)
+                {
+                    RouteCtrl.Stop();
+                }
+            }
+            catch (Exception e)
+            {
+                CurrentAlarm.Desc = "未定義";
+                logger.Error(Node.Controller + "-" + Node.AdrNo + "(GetAlarmMessage)" + e.Message + "\n" + e.StackTrace);
+            }
+            CurrentAlarm.TimeStamp = DateTime.Now.ToString("yyyy/MM/dd HH:mm:ss:fff");
             AlarmManagement.Add(CurrentAlarm);
             AlarmUpdate.UpdateAlarmList(AlarmManagement.GetAll());
             AlarmUpdate.UpdateAlarmHistory(AlarmManagement.GetHistory());
@@ -639,6 +659,12 @@ namespace Adam
             }
         }
 
+        public void On_Eqp_State_Changed(string OldStatus,string NewStatus)
+        {
+            NodeStatusUpdate.UpdateCurrentState(NewStatus);
+            StateRecord.EqpStateUpdate("Sorter",OldStatus, NewStatus);
+        }
+
         public void On_Controller_State_Changed(string Device_ID, string Status)
         {
 
@@ -665,7 +691,7 @@ namespace Adam
         public void On_Port_Begin(string PortName, string FormName)
         {
             logger.Debug("On_Port_Begin");
-            NodeStatusUpdate.UpdateCurrentState("Run");
+            
             WaferAssignUpdate.RefreshMapping(PortName);
             WaferAssignUpdate.RefreshMapping(NodeManagement.Get(PortName).DestPort);
             try
@@ -690,9 +716,10 @@ namespace Adam
             logger.Debug("On_Port_Finished");
             try
             {
+
                 WaferAssignUpdate.RefreshMapping(PortName);
                 WaferAssignUpdate.RefreshMapping(NodeManagement.Get(PortName).DestPort);
-                Node Port = NodeManagement.Get(PortName);
+                Node Port = NodeManagement.Get(PortName);              
                 Node DestPort = NodeManagement.Get(Port.DestPort);
                 switch (FormName)
                 {
@@ -720,7 +747,7 @@ namespace Adam
         public void On_Task_Finished(string FormName, string LapsedTime, int LapsedWfCount, int LapsedLotCount)
         {
             logger.Debug("On_Task_Finished");
-            NodeStatusUpdate.UpdateCurrentState("Idle");
+            //NodeStatusUpdate.UpdateCurrentState("Idle");
             try
             {
                 RunningUpdate.UpdateRunningInfo("LapsedTime", LapsedTime);
@@ -878,13 +905,30 @@ namespace Adam
             //斷線 發ALARM
             logger.Debug("On_Error_Occurred");
             AlarmInfo CurrentAlarm = new AlarmInfo();
-            CurrentAlarm.NodeName = "DIO";
-            CurrentAlarm.AlarmCode = "00000002";
-            CurrentAlarm.SystemAlarmCode = "FF00000002";
-            CurrentAlarm.Desc = "連線異常";
-            CurrentAlarm.TimeStamp = DateTime.Now.ToString("yyyy/MM/dd HH:mm:ss:fff");
-            CurrentAlarm.AlarmType = "System";
+            CurrentAlarm.NodeName = DIOName;
+            CurrentAlarm.AlarmCode = "00200001";
             CurrentAlarm.NeedReset = false;
+            try
+            {
+
+                AlarmMessage Detail = AlmMapping.Get("SANWA", "DIO", CurrentAlarm.AlarmCode);
+
+                CurrentAlarm.SystemAlarmCode = Detail.CodeID;
+                CurrentAlarm.Desc = Detail.Code_Cause;
+                CurrentAlarm.EngDesc = Detail.Code_Cause_English;
+                CurrentAlarm.Type = Detail.Code_Type;
+                CurrentAlarm.IsStop = Detail.IsStop;
+                if (CurrentAlarm.IsStop)
+                {
+                    RouteCtrl.Stop();
+                }
+            }
+            catch (Exception e)
+            {
+                CurrentAlarm.Desc = "未定義";
+                logger.Error(DIOName + "(GetAlarmMessage)" + e.Message + "\n" + e.StackTrace);
+            }
+            CurrentAlarm.TimeStamp = DateTime.Now.ToString("yyyy/MM/dd HH:mm:ss:fff");
             AlarmManagement.Add(CurrentAlarm);
             AlarmUpdate.UpdateAlarmList(AlarmManagement.GetAll());
             AlarmUpdate.UpdateAlarmHistory(AlarmManagement.GetHistory());
@@ -1080,6 +1124,7 @@ namespace Adam
             form.Show();
         }
 
+
         private void tbcMian_SelectedIndexChanged(object sender, EventArgs e)
         {
             if (tbcMian.SelectedTab.Text.Equals("Status"))
@@ -1087,5 +1132,18 @@ namespace Adam
                 formStatus.Focus();
             }
         }
+
+        private void menuMaintenace_Opening(object sender, System.ComponentModel.CancelEventArgs e)
+        {
+            foreach (ToolStripMenuItem item in menuMaintenace.Items)
+            {
+                string user_group = lbl_login_group.Text;
+                string fun_form = "FormMain";
+                string fun_ref = item.Name;
+                Boolean enable = AuthorityUpdate.getFuncEnable(user_group, fun_form,fun_ref);
+                item.Enabled = enable;
+            }
+        }
+
     }
 }

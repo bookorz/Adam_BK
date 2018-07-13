@@ -102,7 +102,7 @@ namespace Adam.UI_Update.Monitoring
                     switch (State)
                     {
                         case "Run":
-                            state_btn.BackColor = Color.Green;
+                            state_btn.BackColor = Color.Lime;
                             
                             Params.Add("Red", "False");
                             Params.Add("Orange", "False");

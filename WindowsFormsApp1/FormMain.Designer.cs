@@ -420,7 +420,6 @@ namespace Adam
             // groupBox3
             // 
             resources.ApplyResources(this.groupBox3, "groupBox3");
-            this.groupBox3.BackColor = System.Drawing.SystemColors.Control;
             this.groupBox3.Controls.Add(this.Conn_gv);
             this.groupBox3.Name = "groupBox3";
             this.groupBox3.TabStop = false;
@@ -505,6 +504,7 @@ namespace Adam
             this.tbcMian.Name = "tbcMian";
             this.tbcMian.SelectedIndex = 0;
             this.tbcMian.SizeMode = System.Windows.Forms.TabSizeMode.Fixed;
+            this.tbcMian.SelectedIndexChanged += new System.EventHandler(this.tbcMian_SelectedIndexChanged);
             // 
             // tabMonitor
             // 
@@ -544,9 +544,9 @@ namespace Adam
             // 
             // TestMode
             // 
-            this.TestMode.BackColor = System.Drawing.SystemColors.Control;
             resources.ApplyResources(this.TestMode, "TestMode");
             this.TestMode.Name = "TestMode";
+            this.TestMode.UseVisualStyleBackColor = true;
             // 
             // tabSetting
             // 
@@ -741,6 +741,7 @@ namespace Adam
             this.terminalToolStripMenuItem});
             this.menuMaintenace.Name = "contextMenuStrip1";
             this.menuMaintenace.ShowCheckMargin = true;
+            this.menuMaintenace.Opening += new System.ComponentModel.CancelEventHandler(this.menuMaintenace_Opening);
             // 
             // initToolStripMenuItem
             // 

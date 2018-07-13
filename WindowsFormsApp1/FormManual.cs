@@ -1,5 +1,6 @@
 ﻿using Adam;
 using Adam.UI_Update.Manual;
+using Adam.Util;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -511,7 +512,7 @@ namespace GUI
                     else
                         txns[0].Method = Transaction.Command.RobotType.Get;
                     txns[0].Position = cbRA1Point.Text;
-                    txns[0].Arm = ConfigUtil.GetArmID(cbRA1Arm.Text);
+                    txns[0].Arm = SanwaUtil.GetArmID(cbRA1Arm.Text);
                     txns[0].Slot = cbRA1Slot.Text;
                     isRobotMoveDown = false;//Get option 1
                     isRobotMoveUp = false;//Put option 1
@@ -527,7 +528,7 @@ namespace GUI
                     else
                         txns[0].Method = Transaction.Command.RobotType.Put;
                     txns[0].Position = cbRA2Point.Text;
-                    txns[0].Arm = ConfigUtil.GetArmID(cbRA2Arm.Text);
+                    txns[0].Arm = SanwaUtil.GetArmID(cbRA2Arm.Text);
                     txns[0].Slot = cbRA2Slot.Text;
                     isRobotMoveDown = false;//Get option 1
                     isRobotMoveUp = false;//Put option 1
@@ -540,7 +541,7 @@ namespace GUI
                     }
                     txns[0].Method = Transaction.Command.RobotType.GetWait;
                     txns[0].Position = cbRA1Point.Text;
-                    txns[0].Arm = ConfigUtil.GetArmID(cbRA1Arm.Text);
+                    txns[0].Arm = SanwaUtil.GetArmID(cbRA1Arm.Text);
                     txns[0].Slot = cbRA1Slot.Text;
                     break;
                 case "btnRPutWait":
@@ -551,21 +552,21 @@ namespace GUI
                     }
                     txns[0].Method = Transaction.Command.RobotType.PutWait;
                     txns[0].Position = cbRA2Point.Text;
-                    txns[0].Arm = ConfigUtil.GetArmID(cbRA2Arm.Text);
+                    txns[0].Arm = SanwaUtil.GetArmID(cbRA2Arm.Text);
                     txns[0].Slot = cbRA2Slot.Text;
                     break;
                 case "btnRMoveDown":
                     isRobotMoveDown = true;
                     txns[0].Method = Transaction.Command.RobotType.WaitBeforeGet;//GET option 1
                     txns[0].Position = cbRA1Point.Text;
-                    txns[0].Arm = ConfigUtil.GetArmID(cbRA1Arm.Text);
+                    txns[0].Arm = SanwaUtil.GetArmID(cbRA1Arm.Text);
                     txns[0].Slot = cbRA1Slot.Text;
                     break;
                 case "btnRMoveUp":
                     isRobotMoveUp = true;
                     txns[0].Method = Transaction.Command.RobotType.WaitBeforePut;//Put option 1
                     txns[0].Position = cbRA2Point.Text;
-                    txns[0].Arm = ConfigUtil.GetArmID(cbRA2Arm.Text);
+                    txns[0].Arm = SanwaUtil.GetArmID(cbRA2Arm.Text);
                     txns[0].Slot = cbRA2Slot.Text;
                     break;
                 case "btnRChgMode":
@@ -657,10 +658,10 @@ namespace GUI
                 return null;
             }
             vars.Clear();
-            vars.Add("@cbRA1Arm", ConfigUtil.GetArmID(cbRA1Arm.Text));
+            vars.Add("@cbRA1Arm", SanwaUtil.GetArmID(cbRA1Arm.Text));
             vars.Add("@cbRA1Slot", cbRA1Slot.Text);
             vars.Add("@cbRA1Point", cbRA1Point.Text);
-            vars.Add("@cbRA2Arm", ConfigUtil.GetArmID(cbRA2Arm.Text));
+            vars.Add("@cbRA2Arm", SanwaUtil.GetArmID(cbRA2Arm.Text));
             vars.Add("@cbRA2Slot", cbRA2Slot.Text);
             vars.Add("@cbRA2Point", cbRA2Point.Text);
             return vars;
