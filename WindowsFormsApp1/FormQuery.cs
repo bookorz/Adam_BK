@@ -25,6 +25,8 @@ namespace GUI
             InitializeComponent();
         }
 
+        private DataTable dtCondition = new DataTable();
+
         private void btnQuery_Click(object sender, EventArgs e)
         {
             DBUtil dBUtil = new DBUtil();
@@ -38,7 +40,7 @@ namespace GUI
             MySqlDataAdapter adapter  = dBUtil.GetDataAdapter(sql.ToString());
             dataTable = new DataTable();
             adapter.Fill(dataTable);
-            dgvResult.DataSource = dataTable;
+            gdvData.DataSource = dataTable;
         }
 
         private void DataTableToExcelFile(DataTable dt)
@@ -94,6 +96,43 @@ namespace GUI
         private void btnExport_Click(object sender, EventArgs e)
         {
             DataTableToExcelFile(dataTable);
+        }
+
+        private void FormQuery_Load(object sender, EventArgs e)
+        {
+            try
+            {
+                ClearUI();
+            }
+            catch (Exception ex)
+            {
+                throw new Exception(ex.ToString());
+            }
+        }
+
+        private void ClearUI()
+        {
+            cbQueryType.Text = string.Empty;
+            dtpFromDate.Value = DateTime.Now;
+            dtpToDate.Value = DateTime.Now;
+
+            txbCondition1.Text = string.Empty;
+            txbCondition2.Text = string.Empty;
+            txbCondition3.Text = string.Empty;
+
+            gdvData.DataSource = null;
+        }
+
+        private void ConditionTable()
+        {
+            try
+            {
+
+            }
+            catch (Exception ex)
+            {
+                throw new Exception(ex.ToString());
+            }
         }
     }
 }

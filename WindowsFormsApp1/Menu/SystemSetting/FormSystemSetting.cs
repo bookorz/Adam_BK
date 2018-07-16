@@ -12,7 +12,7 @@ namespace Adam.Menu.SystemSetting
     {
         private FormAccountSetting accountSetting = new FormAccountSetting();
         private FormAlarmEventSet formAlarm = new FormAlarmEventSet();
-        private FormCpmmandScript configuration = new FormCpmmandScript();
+        private FormCommandScript configuration = new FormCommandScript();
         private FormDeviceManager deviceManager = new FormDeviceManager();
         private FormOnlineSettings onlineSettings = new FormOnlineSettings();
         private FormSECSSet sECSSet = new FormSECSSet();

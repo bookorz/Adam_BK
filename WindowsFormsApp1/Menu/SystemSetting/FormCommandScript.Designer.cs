@@ -1,6 +1,6 @@
 ﻿namespace Adam.Menu.SystemSetting
 {
-    partial class FormCpmmandScript
+    partial class FormCommandScript
     {
         /// <summary>
         /// 設計工具所需的變數。
@@ -382,13 +382,13 @@
             this.btnSave.UseVisualStyleBackColor = true;
             this.btnSave.Click += new System.EventHandler(this.btnSave_Click);
             // 
-            // FormCpmmandScript
+            // FormCommandScript
             // 
             this.ClientSize = new System.Drawing.Size(1420, 720);
             this.Controls.Add(this.gbCommandScript);
             this.Font = new System.Drawing.Font("微軟正黑體", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Name = "FormCpmmandScript";
+            this.Name = "FormCommandScript";
             this.Text = "Configuration";
             this.Load += new System.EventHandler(this.FormConfiguration_Load);
             this.gbCommandScript.ResumeLayout(false);

@@ -10,9 +10,9 @@ using SANWA.Utility;
 
 namespace Adam.Menu.SystemSetting
 {
-    public partial class FormCpmmandScript : Form
+    public partial class FormCommandScript : Form
     {
-        public FormCpmmandScript()
+        public FormCommandScript()
         {
             InitializeComponent();
         }
