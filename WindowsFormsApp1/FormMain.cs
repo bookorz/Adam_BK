@@ -521,7 +521,7 @@ namespace Adam
                 CurrentAlarm.Desc = "未定義";
                 logger.Error(Node.Controller + "-" + Node.AdrNo + "(GetAlarmMessage)" + e.Message + "\n" + e.StackTrace);
             }
-            CurrentAlarm.TimeStamp = DateTime.Now.ToString("yyyy/MM/dd HH:mm:ss:fff");
+            CurrentAlarm.TimeStamp = DateTime.Now;
 
             AlarmManagement.Add(CurrentAlarm);
 
@@ -605,7 +605,7 @@ namespace Adam
                 CurrentAlarm.Desc = "未定義";
                 logger.Error(Node.Controller + "-" + Node.AdrNo + "(GetAlarmMessage)" + e.Message + "\n" + e.StackTrace);
             }
-            CurrentAlarm.TimeStamp = DateTime.Now.ToString("yyyy/MM/dd HH:mm:ss:fff");
+            CurrentAlarm.TimeStamp = DateTime.Now;
             AlarmManagement.Add(CurrentAlarm);
             AlarmUpdate.UpdateAlarmList(AlarmManagement.GetAll());
             AlarmUpdate.UpdateAlarmHistory(AlarmManagement.GetHistory());
@@ -932,7 +932,7 @@ namespace Adam
                 CurrentAlarm.Desc = "未定義";
                 logger.Error(DIOName + "(GetAlarmMessage)" + e.Message + "\n" + e.StackTrace);
             }
-            CurrentAlarm.TimeStamp = DateTime.Now.ToString("yyyy/MM/dd HH:mm:ss:fff");
+            CurrentAlarm.TimeStamp = DateTime.Now;
             AlarmManagement.Add(CurrentAlarm);
             AlarmUpdate.UpdateAlarmList(AlarmManagement.GetAll());
             AlarmUpdate.UpdateAlarmHistory(AlarmManagement.GetHistory());
@@ -966,7 +966,7 @@ namespace Adam
                 CurrentAlarm.Desc = "未定義";
                 logger.Error(DIOName + "(GetAlarmMessage)" + e.Message + "\n" + e.StackTrace);
             }
-            CurrentAlarm.TimeStamp = DateTime.Now.ToString("yyyy/MM/dd HH:mm:ss:fff");
+            CurrentAlarm.TimeStamp = DateTime.Now;
             AlarmManagement.Add(CurrentAlarm);
             AlarmUpdate.UpdateAlarmList(AlarmManagement.GetAll());
             AlarmUpdate.UpdateAlarmHistory(AlarmManagement.GetHistory());

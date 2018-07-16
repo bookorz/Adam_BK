@@ -33,6 +33,10 @@
             this.dg1 = new System.Windows.Forms.DataGridView();
             this.panel12 = new System.Windows.Forms.Panel();
             this.label21 = new System.Windows.Forms.Label();
+            this.From = new System.Windows.Forms.DateTimePicker();
+            this.To = new System.Windows.Forms.DateTimePicker();
+            this.label1 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
             this.panel10.SuspendLayout();
             this.panel11.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dg1)).BeginInit();
@@ -78,6 +82,10 @@
             // panel12
             // 
             this.panel12.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.panel12.Controls.Add(this.label2);
+            this.panel12.Controls.Add(this.label1);
+            this.panel12.Controls.Add(this.To);
+            this.panel12.Controls.Add(this.From);
             this.panel12.Controls.Add(this.label21);
             this.panel12.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel12.Location = new System.Drawing.Point(0, 0);
@@ -90,11 +98,44 @@
             this.label21.AutoSize = true;
             this.label21.Font = new System.Drawing.Font("微軟正黑體", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
             this.label21.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.label21.Location = new System.Drawing.Point(418, 17);
+            this.label21.Location = new System.Drawing.Point(8, 19);
             this.label21.Name = "label21";
             this.label21.Size = new System.Drawing.Size(230, 40);
             this.label21.TabIndex = 24;
             this.label21.Text = "Alarm History";
+            // 
+            // From
+            // 
+            this.From.Location = new System.Drawing.Point(390, 29);
+            this.From.Name = "From";
+            this.From.Size = new System.Drawing.Size(200, 29);
+            this.From.TabIndex = 25;
+            this.From.Value = new System.DateTime(2018, 7, 16, 10, 17, 55, 0);
+            // 
+            // To
+            // 
+            this.To.Location = new System.Drawing.Point(739, 29);
+            this.To.Name = "To";
+            this.To.Size = new System.Drawing.Size(200, 29);
+            this.To.TabIndex = 26;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(295, 35);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(48, 20);
+            this.label1.TabIndex = 27;
+            this.label1.Text = "From";
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(669, 35);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(28, 20);
+            this.label2.TabIndex = 28;
+            this.label2.Text = "To";
             // 
             // FormAlarmHis
             // 
@@ -123,5 +164,9 @@
         private System.Windows.Forms.DataGridView dg1;
         private System.Windows.Forms.Panel panel12;
         public System.Windows.Forms.Label label21;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.DateTimePicker To;
+        private System.Windows.Forms.DateTimePicker From;
     }
 }
