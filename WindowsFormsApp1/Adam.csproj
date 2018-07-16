@@ -252,11 +252,11 @@
     <Compile Include="Menu\SystemSetting\FormAlarmEventSet .Designer.cs">
       <DependentUpon>FormAlarmEventSet .cs</DependentUpon>
     </Compile>
-    <Compile Include="Menu\SystemSetting\FormCpmmandScript.cs">
+    <Compile Include="Menu\SystemSetting\FormCommandScript.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Menu\SystemSetting\FormCpmmandScript.Designer.cs">
-      <DependentUpon>FormCpmmandScript.cs</DependentUpon>
+    <Compile Include="Menu\SystemSetting\FormCommandScript.Designer.cs">
+      <DependentUpon>FormCommandScript.cs</DependentUpon>
     </Compile>
     <Compile Include="Menu\SystemSetting\FormDeviceManager.cs">
       <SubType>Form</SubType>
@@ -383,8 +383,8 @@
     <EmbeddedResource Include="Menu\SystemSetting\FormCodeSetting.resx">
       <DependentUpon>FormCodeSetting.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Menu\SystemSetting\FormCpmmandScript.resx">
-      <DependentUpon>FormCpmmandScript.cs</DependentUpon>
+    <EmbeddedResource Include="Menu\SystemSetting\FormCommandScript.resx">
+      <DependentUpon>FormCommandScript.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Menu\SystemSetting\FormDeviceManager.resx">
       <DependentUpon>FormDeviceManager.cs</DependentUpon>
