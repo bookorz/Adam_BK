@@ -30,10 +30,8 @@
         {
             this.palMenu = new System.Windows.Forms.Panel();
             this.tlpAccountMenu = new System.Windows.Forms.TableLayoutPanel();
-            this.button2 = new System.Windows.Forms.Button();
-            this.button69 = new System.Windows.Forms.Button();
-            this.button67 = new System.Windows.Forms.Button();
-            this.button68 = new System.Windows.Forms.Button();
+            this.btnModifyUser = new System.Windows.Forms.Button();
+            this.btnCreateUser = new System.Windows.Forms.Button();
             this.tlpAccount = new System.Windows.Forms.TableLayoutPanel();
             this.palContainer = new System.Windows.Forms.Panel();
             this.gbAccount = new System.Windows.Forms.GroupBox();
@@ -56,15 +54,7 @@
             this.txbPasswordNew = new System.Windows.Forms.TextBox();
             this.txbPasswordNewAgain = new System.Windows.Forms.TextBox();
             this.btnSave = new System.Windows.Forms.Button();
-            this.gbGroup = new System.Windows.Forms.GroupBox();
-            this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
-            this.gbGroupCondition = new System.Windows.Forms.GroupBox();
-            this.trvGroupCondition = new System.Windows.Forms.TreeView();
-            this.gbGroupSetting = new System.Windows.Forms.GroupBox();
-            this.button1 = new System.Windows.Forms.Button();
-            this.tlpGroupConditionSetting = new System.Windows.Forms.TableLayoutPanel();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.dataGridView2 = new System.Windows.Forms.DataGridView();
+            this.btnChangePassword = new System.Windows.Forms.Button();
             this.palMenu.SuspendLayout();
             this.tlpAccountMenu.SuspendLayout();
             this.tlpAccount.SuspendLayout();
@@ -74,13 +64,6 @@
             this.gbAccountCondition.SuspendLayout();
             this.gbAccountSetting.SuspendLayout();
             this.tlpAccountSetting.SuspendLayout();
-            this.gbGroup.SuspendLayout();
-            this.tableLayoutPanel1.SuspendLayout();
-            this.gbGroupCondition.SuspendLayout();
-            this.gbGroupSetting.SuspendLayout();
-            this.tlpGroupConditionSetting.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).BeginInit();
             this.SuspendLayout();
             // 
             // palMenu
@@ -104,10 +87,9 @@
             this.tlpAccountMenu.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 14.28571F));
             this.tlpAccountMenu.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 14.28571F));
             this.tlpAccountMenu.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 14.28571F));
-            this.tlpAccountMenu.Controls.Add(this.button2, 0, 0);
-            this.tlpAccountMenu.Controls.Add(this.button69, 0, 0);
-            this.tlpAccountMenu.Controls.Add(this.button67, 1, 0);
-            this.tlpAccountMenu.Controls.Add(this.button68, 3, 0);
+            this.tlpAccountMenu.Controls.Add(this.btnModifyUser, 0, 0);
+            this.tlpAccountMenu.Controls.Add(this.btnCreateUser, 0, 0);
+            this.tlpAccountMenu.Controls.Add(this.btnChangePassword, 2, 0);
             this.tlpAccountMenu.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tlpAccountMenu.Location = new System.Drawing.Point(5, 5);
             this.tlpAccountMenu.Name = "tlpAccountMenu";
@@ -116,66 +98,39 @@
             this.tlpAccountMenu.Size = new System.Drawing.Size(1380, 68);
             this.tlpAccountMenu.TabIndex = 64;
             // 
-            // button2
+            // btnModifyUser
             // 
-            this.button2.BackColor = System.Drawing.Color.Silver;
-            this.button2.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.button2.FlatAppearance.BorderSize = 2;
-            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.button2.Font = new System.Drawing.Font("微軟正黑體", 14.25F);
-            this.button2.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.button2.Location = new System.Drawing.Point(200, 3);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(191, 59);
-            this.button2.TabIndex = 65;
-            this.button2.Text = "Modify User Account";
-            this.button2.UseVisualStyleBackColor = false;
+            this.btnModifyUser.BackColor = System.Drawing.Color.Silver;
+            this.btnModifyUser.Enabled = false;
+            this.btnModifyUser.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.btnModifyUser.FlatAppearance.BorderSize = 2;
+            this.btnModifyUser.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnModifyUser.Font = new System.Drawing.Font("微軟正黑體", 14.25F);
+            this.btnModifyUser.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.btnModifyUser.Location = new System.Drawing.Point(200, 3);
+            this.btnModifyUser.Name = "btnModifyUser";
+            this.btnModifyUser.Size = new System.Drawing.Size(191, 59);
+            this.btnModifyUser.TabIndex = 65;
+            this.btnModifyUser.Text = "Modify User Account";
+            this.btnModifyUser.UseVisualStyleBackColor = false;
+            this.btnModifyUser.Click += new System.EventHandler(this.btnModifyUser_Click);
             // 
-            // button69
+            // btnCreateUser
             // 
-            this.button69.BackColor = System.Drawing.Color.Silver;
-            this.button69.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.button69.FlatAppearance.BorderSize = 2;
-            this.button69.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.button69.Font = new System.Drawing.Font("微軟正黑體", 14.25F);
-            this.button69.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.button69.Location = new System.Drawing.Point(3, 3);
-            this.button69.Name = "button69";
-            this.button69.Size = new System.Drawing.Size(191, 59);
-            this.button69.TabIndex = 50;
-            this.button69.Text = "Create User Account";
-            this.button69.UseVisualStyleBackColor = false;
-            // 
-            // button67
-            // 
-            this.button67.BackColor = System.Drawing.Color.Silver;
-            this.button67.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.button67.FlatAppearance.BorderSize = 2;
-            this.button67.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.button67.Font = new System.Drawing.Font("微軟正黑體", 14.25F);
-            this.button67.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.button67.Location = new System.Drawing.Point(397, 3);
-            this.button67.Name = "button67";
-            this.button67.Size = new System.Drawing.Size(191, 59);
-            this.button67.TabIndex = 62;
-            this.button67.Text = "Disable User Account";
-            this.button67.UseVisualStyleBackColor = false;
-            // 
-            // button68
-            // 
-            this.button68.BackColor = System.Drawing.Color.Silver;
-            this.button68.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.button68.FlatAppearance.BorderSize = 2;
-            this.button68.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.button68.Font = new System.Drawing.Font("微軟正黑體", 14.25F);
-            this.button68.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.button68.Location = new System.Drawing.Point(594, 3);
-            this.button68.Name = "button68";
-            this.button68.Size = new System.Drawing.Size(191, 59);
-            this.button68.TabIndex = 61;
-            this.button68.Text = "Change User Group";
-            this.button68.UseVisualStyleBackColor = false;
-            this.button68.Visible = false;
+            this.btnCreateUser.BackColor = System.Drawing.Color.Silver;
+            this.btnCreateUser.Enabled = false;
+            this.btnCreateUser.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.btnCreateUser.FlatAppearance.BorderSize = 2;
+            this.btnCreateUser.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnCreateUser.Font = new System.Drawing.Font("微軟正黑體", 14.25F);
+            this.btnCreateUser.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.btnCreateUser.Location = new System.Drawing.Point(3, 3);
+            this.btnCreateUser.Name = "btnCreateUser";
+            this.btnCreateUser.Size = new System.Drawing.Size(191, 59);
+            this.btnCreateUser.TabIndex = 50;
+            this.btnCreateUser.Text = "Create User Account";
+            this.btnCreateUser.UseVisualStyleBackColor = false;
+            this.btnCreateUser.Click += new System.EventHandler(this.btnCreateUser_Click);
             // 
             // tlpAccount
             // 
@@ -196,7 +151,6 @@
             // palContainer
             // 
             this.palContainer.Controls.Add(this.gbAccount);
-            this.palContainer.Controls.Add(this.gbGroup);
             this.palContainer.Dock = System.Windows.Forms.DockStyle.Fill;
             this.palContainer.Location = new System.Drawing.Point(3, 91);
             this.palContainer.Name = "palContainer";
@@ -207,6 +161,7 @@
             // 
             this.gbAccount.Controls.Add(this.tlpAccountCreate);
             this.gbAccount.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.gbAccount.Enabled = false;
             this.gbAccount.Location = new System.Drawing.Point(0, 0);
             this.gbAccount.Name = "gbAccount";
             this.gbAccount.Size = new System.Drawing.Size(1394, 606);
@@ -298,6 +253,7 @@
             // 
             // txbPassword
             // 
+            this.txbPassword.BackColor = System.Drawing.Color.White;
             this.txbPassword.Dock = System.Windows.Forms.DockStyle.Left;
             this.txbPassword.Location = new System.Drawing.Point(280, 123);
             this.txbPassword.MaxLength = 100;
@@ -308,6 +264,7 @@
             // 
             // txbUserName
             // 
+            this.txbUserName.BackColor = System.Drawing.Color.White;
             this.txbUserName.Dock = System.Windows.Forms.DockStyle.Left;
             this.txbUserName.Location = new System.Drawing.Point(280, 43);
             this.txbUserName.Name = "txbUserName";
@@ -370,6 +327,7 @@
             // 
             // txbUserID
             // 
+            this.txbUserID.BackColor = System.Drawing.Color.White;
             this.txbUserID.Dock = System.Windows.Forms.DockStyle.Left;
             this.txbUserID.Location = new System.Drawing.Point(280, 3);
             this.txbUserID.Name = "txbUserID";
@@ -380,6 +338,7 @@
             // 
             this.cmbGroup.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
             this.cmbGroup.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
+            this.cmbGroup.BackColor = System.Drawing.Color.White;
             this.cmbGroup.Dock = System.Windows.Forms.DockStyle.Left;
             this.cmbGroup.FormattingEnabled = true;
             this.cmbGroup.Location = new System.Drawing.Point(280, 83);
@@ -411,6 +370,7 @@
             // 
             // txbPasswordNew
             // 
+            this.txbPasswordNew.BackColor = System.Drawing.Color.White;
             this.txbPasswordNew.Location = new System.Drawing.Point(280, 203);
             this.txbPasswordNew.MaxLength = 100;
             this.txbPasswordNew.Name = "txbPasswordNew";
@@ -420,6 +380,7 @@
             // 
             // txbPasswordNewAgain
             // 
+            this.txbPasswordNewAgain.BackColor = System.Drawing.Color.White;
             this.txbPasswordNewAgain.Location = new System.Drawing.Point(280, 243);
             this.txbPasswordNewAgain.MaxLength = 100;
             this.txbPasswordNewAgain.Name = "txbPasswordNewAgain";
@@ -439,107 +400,21 @@
             this.btnSave.UseVisualStyleBackColor = true;
             this.btnSave.Click += new System.EventHandler(this.btnSave_Click);
             // 
-            // gbGroup
+            // btnChangePassword
             // 
-            this.gbGroup.Controls.Add(this.tableLayoutPanel1);
-            this.gbGroup.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.gbGroup.Location = new System.Drawing.Point(0, 0);
-            this.gbGroup.Name = "gbGroup";
-            this.gbGroup.Size = new System.Drawing.Size(1394, 606);
-            this.gbGroup.TabIndex = 66;
-            this.gbGroup.TabStop = false;
-            this.gbGroup.Text = "Group setting";
-            // 
-            // tableLayoutPanel1
-            // 
-            this.tableLayoutPanel1.ColumnCount = 2;
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 25F));
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 75F));
-            this.tableLayoutPanel1.Controls.Add(this.gbGroupCondition, 0, 0);
-            this.tableLayoutPanel1.Controls.Add(this.gbGroupSetting, 1, 0);
-            this.tableLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tableLayoutPanel1.Location = new System.Drawing.Point(3, 25);
-            this.tableLayoutPanel1.Name = "tableLayoutPanel1";
-            this.tableLayoutPanel1.RowCount = 1;
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel1.Size = new System.Drawing.Size(1388, 578);
-            this.tableLayoutPanel1.TabIndex = 1;
-            // 
-            // gbGroupCondition
-            // 
-            this.gbGroupCondition.Controls.Add(this.trvGroupCondition);
-            this.gbGroupCondition.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.gbGroupCondition.Location = new System.Drawing.Point(3, 3);
-            this.gbGroupCondition.Name = "gbGroupCondition";
-            this.gbGroupCondition.Size = new System.Drawing.Size(341, 572);
-            this.gbGroupCondition.TabIndex = 0;
-            this.gbGroupCondition.TabStop = false;
-            this.gbGroupCondition.Text = "Condition";
-            // 
-            // trvGroupCondition
-            // 
-            this.trvGroupCondition.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.trvGroupCondition.Location = new System.Drawing.Point(3, 25);
-            this.trvGroupCondition.Name = "trvGroupCondition";
-            this.trvGroupCondition.Size = new System.Drawing.Size(335, 544);
-            this.trvGroupCondition.TabIndex = 0;
-            // 
-            // gbGroupSetting
-            // 
-            this.gbGroupSetting.Controls.Add(this.button1);
-            this.gbGroupSetting.Controls.Add(this.tlpGroupConditionSetting);
-            this.gbGroupSetting.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.gbGroupSetting.Location = new System.Drawing.Point(350, 3);
-            this.gbGroupSetting.Name = "gbGroupSetting";
-            this.gbGroupSetting.Size = new System.Drawing.Size(1035, 572);
-            this.gbGroupSetting.TabIndex = 1;
-            this.gbGroupSetting.TabStop = false;
-            this.gbGroupSetting.Text = "Setting";
-            // 
-            // button1
-            // 
-            this.button1.Location = new System.Drawing.Point(861, 508);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(168, 58);
-            this.button1.TabIndex = 1;
-            this.button1.Text = "button1";
-            this.button1.UseVisualStyleBackColor = true;
-            // 
-            // tlpGroupConditionSetting
-            // 
-            this.tlpGroupConditionSetting.ColumnCount = 3;
-            this.tlpGroupConditionSetting.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 45F));
-            this.tlpGroupConditionSetting.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 10F));
-            this.tlpGroupConditionSetting.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 45F));
-            this.tlpGroupConditionSetting.Controls.Add(this.dataGridView1, 0, 0);
-            this.tlpGroupConditionSetting.Controls.Add(this.dataGridView2, 2, 0);
-            this.tlpGroupConditionSetting.Dock = System.Windows.Forms.DockStyle.Top;
-            this.tlpGroupConditionSetting.Location = new System.Drawing.Point(3, 25);
-            this.tlpGroupConditionSetting.Name = "tlpGroupConditionSetting";
-            this.tlpGroupConditionSetting.RowCount = 1;
-            this.tlpGroupConditionSetting.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tlpGroupConditionSetting.Size = new System.Drawing.Size(1029, 477);
-            this.tlpGroupConditionSetting.TabIndex = 0;
-            // 
-            // dataGridView1
-            // 
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.dataGridView1.Location = new System.Drawing.Point(3, 3);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.RowTemplate.Height = 24;
-            this.dataGridView1.Size = new System.Drawing.Size(457, 471);
-            this.dataGridView1.TabIndex = 0;
-            // 
-            // dataGridView2
-            // 
-            this.dataGridView2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.dataGridView2.Location = new System.Drawing.Point(568, 3);
-            this.dataGridView2.Name = "dataGridView2";
-            this.dataGridView2.RowTemplate.Height = 24;
-            this.dataGridView2.Size = new System.Drawing.Size(458, 471);
-            this.dataGridView2.TabIndex = 1;
+            this.btnChangePassword.BackColor = System.Drawing.Color.Silver;
+            this.btnChangePassword.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.btnChangePassword.FlatAppearance.BorderSize = 2;
+            this.btnChangePassword.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnChangePassword.Font = new System.Drawing.Font("微軟正黑體", 14.25F);
+            this.btnChangePassword.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.btnChangePassword.Location = new System.Drawing.Point(397, 3);
+            this.btnChangePassword.Name = "btnChangePassword";
+            this.btnChangePassword.Size = new System.Drawing.Size(191, 59);
+            this.btnChangePassword.TabIndex = 66;
+            this.btnChangePassword.Text = "Change User Password";
+            this.btnChangePassword.UseVisualStyleBackColor = false;
+            this.btnChangePassword.Click += new System.EventHandler(this.btnChangePassword_Click);
             // 
             // FormAccountSetting
             // 
@@ -561,13 +436,6 @@
             this.gbAccountSetting.ResumeLayout(false);
             this.tlpAccountSetting.ResumeLayout(false);
             this.tlpAccountSetting.PerformLayout();
-            this.gbGroup.ResumeLayout(false);
-            this.tableLayoutPanel1.ResumeLayout(false);
-            this.gbGroupCondition.ResumeLayout(false);
-            this.gbGroupSetting.ResumeLayout(false);
-            this.tlpGroupConditionSetting.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -575,9 +443,7 @@
         #endregion
         private System.Windows.Forms.Panel palMenu;
         private System.Windows.Forms.TableLayoutPanel tlpAccountMenu;
-        private System.Windows.Forms.Button button69;
-        private System.Windows.Forms.Button button68;
-        private System.Windows.Forms.Button button67;
+        private System.Windows.Forms.Button btnCreateUser;
         private System.Windows.Forms.TableLayoutPanel tlpAccount;
         private System.Windows.Forms.Panel palContainer;
         private System.Windows.Forms.GroupBox gbAccount;
@@ -600,15 +466,7 @@
         private System.Windows.Forms.Label labUserPasswordNew;
         private System.Windows.Forms.TextBox txbPasswordNew;
         private System.Windows.Forms.TextBox txbPasswordNewAgain;
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.GroupBox gbGroup;
-        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
-        private System.Windows.Forms.GroupBox gbGroupCondition;
-        private System.Windows.Forms.GroupBox gbGroupSetting;
-        private System.Windows.Forms.TreeView trvGroupCondition;
-        private System.Windows.Forms.TableLayoutPanel tlpGroupConditionSetting;
-        private System.Windows.Forms.DataGridView dataGridView1;
-        private System.Windows.Forms.DataGridView dataGridView2;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button btnModifyUser;
+        private System.Windows.Forms.Button btnChangePassword;
     }
 }

@@ -17,16 +17,16 @@ namespace Adam.Menu.SystemSetting
             InitializeComponent();
         }
 
-        private string strUserGroup = string.Empty;
         private DataTable dtAccountGroup = new DataTable();
         private DataTable dtAccountUser = new DataTable();
         private DBUtil dBUtil = new DBUtil();
 
+        private string strUserID = string.Empty;
+        private string strUserName = string.Empty;
+        private string strUserGroup = string.Empty;
+
         private void FormAccountSetting_Load(object sender, EventArgs e)
         {
-            string strUserID = string.Empty;
-            string strUserName = string.Empty;
-            string strUserGroup = string.Empty;
             StringBuilder sbAllGroup = new StringBuilder();
             StringBuilder sbLowerGroup = new StringBuilder();
             Form form = null;
@@ -42,6 +42,8 @@ namespace Adam.Menu.SystemSetting
                 Signal = form.Controls.Find("lbl_login_group", true).FirstOrDefault() as Label;
                 strUserGroup = Signal.Text;
 
+                trvAccount.Nodes.Clear();
+
                 UpdateUser(strUserID, null);
                 UpdateGroup();
 
@@ -55,9 +57,6 @@ namespace Adam.Menu.SystemSetting
                             {
                                 trvAccount.Nodes.Add(item["user_group_id"].ToString(), item["user_group_id"].ToString());
                                 trvAccount.Nodes[item["user_group_id"].ToString()].Tag = 0;
-
-                                trvGroupCondition.Nodes.Add(item["user_group_id"].ToString(), item["user_group_id"].ToString());
-                                trvGroupCondition.Nodes[item["user_group_id"].ToString()].Tag = 0;
                             }
                         }
 
@@ -67,9 +66,6 @@ namespace Adam.Menu.SystemSetting
                             {
                                 trvAccount.Nodes.Add(item["lower_level_group_id"].ToString(), item["lower_level_group_id"].ToString());
                                 trvAccount.Nodes[item["lower_level_group_id"].ToString()].Tag = 0;
-
-                                trvGroupCondition.Nodes.Add(item["lower_level_group_id"].ToString(), item["lower_level_group_id"].ToString());
-                                trvGroupCondition.Nodes[item["lower_level_group_id"].ToString()].Tag = 0;
 
                                 sbAllGroup.Append(item["user_group_id"].ToString());
                                 sbAllGroup.Append(",");
@@ -85,16 +81,16 @@ namespace Adam.Menu.SystemSetting
                     if (strUserGroup.Equals("ADMIN"))
                     {
                         UpdateUser();
-                        trvAccount.Nodes.Add("CreateUser", "Create User");
+                        //trvAccount.Nodes.Add("CreateUser", "Create User");
                     }
                     else
                     {
                         UpdateUser(strUserID, "'" + sbLowerGroup.ToString().TrimEnd(',').Replace(",", "','") + "'");
 
-                        if (!strUserGroup.Equals("OP"))
-                        {
-                            trvAccount.Nodes.Add("CreateUser", "Create User");
-                        }
+                        //if (!strUserGroup.Equals("OP"))
+                        //{
+                        //    trvAccount.Nodes.Add("CreateUser", "Create User");
+                        //}
                     }
 
                     if (dtAccountUser.Rows.Count > 0)
@@ -117,20 +113,29 @@ namespace Adam.Menu.SystemSetting
                         cmbGroup.ValueMember = "user_group_id";
                         cmbGroup.SelectedIndex = -1;
                     }
-                    else if (strUserGroup.Equals("OP"))
+                    else
                     {
                         cmbGroup.DataSource = dtAccountGroup.Select("user_group_id = 'OP'").CopyToDataTable().DefaultView.ToTable(true, new string[] { "user_group_id" });
                         cmbGroup.DisplayMember = "user_group_id";
                         cmbGroup.ValueMember = "user_group_id";
                         cmbGroup.SelectedIndex = -1;
                     }
-                    else
-                    {
-                        cmbGroup.DataSource = dtAccountGroup.Select("user_group_id in ('" + sbAllGroup.ToString().Replace(",", "','") + "')").CopyToDataTable().DefaultView.ToTable(true, new string[] { "user_group_id" });
-                        cmbGroup.DisplayMember = "user_group_id";
-                        cmbGroup.ValueMember = "user_group_id";
-                        cmbGroup.SelectedIndex = -1;
-                    }
+
+                    UIChange(strUserGroup);
+                    //else if (strUserGroup.Equals("OP"))
+                    //{
+                    //    cmbGroup.DataSource = dtAccountGroup.Select("user_group_id = 'OP'").CopyToDataTable().DefaultView.ToTable(true, new string[] { "user_group_id" });
+                    //    cmbGroup.DisplayMember = "user_group_id";
+                    //    cmbGroup.ValueMember = "user_group_id";
+                    //    cmbGroup.SelectedIndex = -1;
+                    //}
+                    //else
+                    //{
+                    //    cmbGroup.DataSource = dtAccountGroup.Select("user_group_id in ('" + sbAllGroup.ToString().Replace(",", "','") + "')").CopyToDataTable().DefaultView.ToTable(true, new string[] { "user_group_id" });
+                    //    cmbGroup.DisplayMember = "user_group_id";
+                    //    cmbGroup.ValueMember = "user_group_id";
+                    //    cmbGroup.SelectedIndex = -1;
+                    //}
                 }
             }
             catch (Exception ex)
@@ -254,10 +259,20 @@ namespace Adam.Menu.SystemSetting
         {
             try
             {
-                //switch (Mode)
-                //{
-                //    default:
-                //}
+                switch (Mode)
+                {
+                    case "ADMIN":
+                        btnCreateUser.Enabled = true;
+                        btnModifyUser.Enabled = true;
+                        btnChangePassword.Enabled = true;
+                        break;
+
+                    default:
+                        btnCreateUser.Enabled = false;
+                        btnModifyUser.Enabled = false;
+                        btnChangePassword.Enabled = true;
+                        break;
+                }
             }
             catch (Exception ex)
             {
@@ -267,7 +282,192 @@ namespace Adam.Menu.SystemSetting
 
         private void btnSave_Click(object sender, EventArgs e)
         {
+            string strSql = string.Empty;
+            Dictionary<string, object> keyValues = new Dictionary<string, object>();
 
+            try
+            {
+                if (btnCreateUser.BackColor == Color.RoyalBlue)
+                {
+                    if (txbUserID.Text.Trim().Equals(string.Empty) || txbUserName.Text.Trim().Equals(string.Empty) ||
+                        txbPassword.Text.Trim().Equals(string.Empty) || cmbGroup.SelectedIndex == -1)
+                    {
+                        MessageBox.Show("Missing the data.", "Account Setting", MessageBoxButtons.OK, MessageBoxIcon.Warning, MessageBoxDefaultButton.Button1);
+                        return;
+                    }
+
+                    strSql = "INSERT INTO account " +
+                        "(user_id, user_name, password, user_group_id, active, create_user, create_timestamp, modify_user, modify_timestamp) " +
+                        "VALUES(@user_id, @user_name, MD5(@password), @user_group_id, @active, @create_user, NOW(), @modify_user, NOW())";
+
+                    keyValues.Add("@user_id", txbUserID.Text.Trim());
+                    keyValues.Add("@user_name", txbUserName.Text.Trim());
+                    keyValues.Add("@password", txbPassword.Text.Trim());
+                    keyValues.Add("@user_group_id", cmbGroup.SelectedValue.ToString());
+                    keyValues.Add("@active", chbActive.Checked == true ? "Y" : "N");
+                    keyValues.Add("@create_user", strUserID);
+                    keyValues.Add("@modify_user", strUserID);
+                }
+                else if (btnModifyUser.BackColor == Color.RoyalBlue)
+                {
+                    strSql = "UPDATE account SET user_name = @user_name, " +
+                                "user_group_id = @user_group_id," +
+                                "active = @active, " +
+                                "modify_user = @modify_user, " +
+                                "modify_timestamp = NOW() " +
+                                "WHERE user_id = @user_id ";
+
+                    keyValues.Add("@user_id", txbUserID.Text.Trim());
+                    keyValues.Add("@user_name", txbUserName.Text.Trim());
+                    keyValues.Add("@user_group_id", cmbGroup.SelectedValue.ToString());
+                    keyValues.Add("@active", chbActive.Checked == true ? "Y" : "N");
+                    keyValues.Add("@modify_user", strUserID);
+                }
+                else if (btnChangePassword.BackColor == Color.RoyalBlue)
+                {
+                    if (txbPasswordNew.Text.Trim().Equals(string.Empty) || txbPasswordNewAgain.Text.Trim().Equals(string.Empty))
+                    {
+                        MessageBox.Show("Missing the data.", "Account Setting", MessageBoxButtons.OK, MessageBoxIcon.Warning, MessageBoxDefaultButton.Button1);
+                        return;
+                    }
+
+                    if (!txbPasswordNew.Text.Trim().Equals(txbPasswordNewAgain.Text.Trim()))
+                    {
+                        MessageBox.Show("New password are different.", "Account Setting", MessageBoxButtons.OK, MessageBoxIcon.Warning, MessageBoxDefaultButton.Button1);
+                        return;
+                    }
+
+                    strSql = "UPDATE account SET PASSWORD = MD5(@password), " +
+                                "modify_user = @modify_user, " +
+                                "modify_timestamp = NOW() " +
+                                "WHERE user_id = @user_id ";
+
+                    keyValues.Add("@user_id", txbUserID.Text.Trim());
+                    keyValues.Add("@password", txbPasswordNew.Text.Trim());
+                    keyValues.Add("@modify_user", strUserID);
+                }
+
+                dBUtil.ExecuteNonQuery(strSql, keyValues);
+                Adam.Util.SanwaUtil.addActionLog("Adam.Menu.SystemSetting", "FormAccountSetting", strUserID);
+                MessageBox.Show("Done it.", "Save", MessageBoxButtons.OKCancel, MessageBoxIcon.Exclamation, MessageBoxDefaultButton.Button1);
+                FormAccountSetting_Load(sender, e);
+
+                gbAccount.Enabled = false;
+                txbUserID.Text = string.Empty;
+                txbUserName.Text = string.Empty;
+                cmbGroup.SelectedIndex = -1;
+                txbPassword.Text = string.Empty;
+                txbPasswordNew.Text = string.Empty;
+                txbPasswordNewAgain.Text = string.Empty;
+                chbActive.Checked = false;
+                btnCreateUser.BackColor = Color.Silver;
+                btnModifyUser.BackColor = Color.Silver;
+                btnChangePassword.BackColor = Color.Silver;
+            }
+            catch (Exception ex)
+            {
+                throw new Exception(ex.ToString());
+            }
+        }
+
+        private void btnCreateUser_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                gbAccount.Enabled = true;
+                trvAccount.Enabled = false;
+                trvAccount.Refresh();
+                trvAccount.SelectedNode = trvAccount.Nodes[0];
+
+                txbUserID.Text = string.Empty;
+                txbUserID.Enabled = true;
+                txbUserName.Text = string.Empty;
+                txbUserName.Enabled = true;
+                cmbGroup.SelectedIndex = -1;
+                cmbGroup.Enabled = true;
+                txbPassword.Text = string.Empty;
+                txbPassword.Enabled = true;
+                labUserPasswordNew.Enabled = false;
+                labUserPasswordNewAgain.Enabled = false;
+                txbPasswordNew.Enabled = false;
+                txbPasswordNewAgain.Enabled = false;
+                chbActive.Checked = false;
+                chbActive.Enabled = true;
+
+                btnCreateUser.BackColor = Color.RoyalBlue;
+                btnModifyUser.BackColor = Color.Silver;
+                btnChangePassword.BackColor = Color.Silver;
+            }
+            catch (Exception ex)
+            {
+                throw new Exception(ex.ToString());
+            }
+        }
+
+        private void btnModifyUser_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                gbAccount.Enabled = true;
+                trvAccount.Enabled = true;
+                trvAccount.SelectedNode = trvAccount.Nodes[0];
+
+                txbUserID.Text = string.Empty;
+                txbUserID.Enabled = false;
+                txbUserName.Text = string.Empty;
+                txbUserName.Enabled = true;
+                cmbGroup.SelectedIndex = -1;
+                cmbGroup.Enabled = true;
+                txbPassword.Text = string.Empty;
+                txbPassword.Enabled = false;
+                labUserPasswordNew.Enabled = false;
+                labUserPasswordNewAgain.Enabled = false;
+                txbPasswordNew.Enabled = false;
+                txbPasswordNewAgain.Enabled = false;
+                chbActive.Checked = false;
+                chbActive.Enabled = true;
+
+                btnCreateUser.BackColor = Color.Silver;
+                btnModifyUser.BackColor = Color.RoyalBlue;
+                btnChangePassword.BackColor = Color.Silver;
+            }
+            catch (Exception ex)
+            {
+                throw new Exception(ex.ToString());
+            }
+        }
+
+        private void btnChangePassword_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                gbAccount.Enabled = true;
+                trvAccount.Enabled = true;
+                trvAccount.SelectedNode = trvAccount.Nodes[0];
+
+                txbUserID.Text = string.Empty;
+                txbUserID.Enabled = false;
+                txbUserName.Text = string.Empty;
+                txbUserName.Enabled = false;
+                cmbGroup.SelectedIndex = -1;
+                cmbGroup.Enabled = false;
+                txbPassword.Text = string.Empty;
+                txbPassword.Enabled = false;
+                labUserPasswordNew.Enabled = true;
+                labUserPasswordNewAgain.Enabled = true;
+                txbPasswordNew.Enabled = true;
+                txbPasswordNewAgain.Enabled = true;
+                chbActive.Checked = false;
+                chbActive.Enabled = false;
+
+                btnCreateUser.BackColor = Color.Silver;
+                btnModifyUser.BackColor = Color.Silver;
+                btnChangePassword.BackColor = Color.RoyalBlue;
+            }
+            catch (Exception ex)
+            {
+                throw new Exception(ex.ToString());
+            }
         }
     }
 }
