@@ -270,7 +270,7 @@ namespace Adam.Menu.SystemSetting
                 keyValues.Add("@enable_flg", chbActive.Checked ? 1 : 0);
                 keyValues.Add("@default_aligner", txbDefaultAligner.Text.Trim());
                 keyValues.Add("@alternative_aligner", txbAlternativeAligner.Text.Trim());
-                keyValues.Add("@route_table", JsonConvert.SerializeObject(dtRouteTable, Formatting.Indented));
+                keyValues.Add("@route_table", JsonConvert.SerializeObject(dtRouteTable, Formatting.Indented).Replace("\r\n", string.Empty));
                 keyValues.Add("@bypass", chbByPass.Checked ? 1 : 0);
 
                 drsTemp = dtTemp.Select("node_id = '" + cmbDeviceNodeType.Text + Convert.ToInt32(nudSerialNo.Value).ToString("D2") + "'");
