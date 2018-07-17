@@ -548,6 +548,9 @@
     <Content Include="sql\Process Job Log.sql">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
+    <Content Include="sql\Process Wafer Log.sql">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
     <Content Include="sql\User Action Log.sql">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>

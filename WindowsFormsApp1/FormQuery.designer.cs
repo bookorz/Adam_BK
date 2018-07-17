@@ -135,6 +135,7 @@
             "Alarm Log",
             "User Action Log",
             "Process Job Log",
+            "Process Wafer Log",
             "Command Log",
             "DIO Setting Log"});
             this.cbQueryType.Location = new System.Drawing.Point(177, 3);

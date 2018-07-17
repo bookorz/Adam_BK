@@ -110,12 +110,18 @@ namespace GUI
                 }
             }
 
+            string dirPath = @"d:\sanwa\export\";
+            if (!Directory.Exists(dirPath))
+            {
+                Directory.CreateDirectory(dirPath);
+            }
+
             string fileName =  cbQueryType.Text + "_" + DateTime.Now.ToString("yyyyMMddHHmmss") + "_result.xls";
-            FileStream file = new FileStream(@"d:\sanwa\export\" + fileName, FileMode.Create);//產生檔案
+            FileStream file = new FileStream(dirPath + fileName, FileMode.Create);//產生檔案
             wb.Write(file);
             file.Close();
 
-            Process.Start(@"d:\sanwa\export\" + fileName);
+            Process.Start(dirPath + fileName);
             //OpenFileDialog dialog = new OpenFileDialog();
             //dialog.Title = "Open file";
             //dialog.InitialDirectory = "D:\\";
@@ -146,12 +152,21 @@ namespace GUI
         private void ClearUI()
         {
             cbQueryType.Text = string.Empty;
-            dtpFromDate.Value = DateTime.Now;
+            dtpFromDate.Value = DateTime.Now.AddDays(-1);
             dtpToDate.Value = DateTime.Now;
 
             txbCondition1.Text = string.Empty;
             txbCondition2.Text = string.Empty;
             txbCondition3.Text = string.Empty;
+
+            btnExport.Enabled = false;
+            btnQuery.Enabled = false;
+            this.labCondition1.Visible = false;
+            this.labCondition2.Visible = false;
+            this.labCondition3.Visible = false;
+            this.txbCondition1.Visible = false;
+            this.txbCondition2.Visible = false;
+            this.txbCondition3.Visible = false;
 
             gdvData.DataSource = null;
         }
@@ -185,22 +200,16 @@ namespace GUI
             //ToolTipTitle：設定提示視窗的標題。
             toolTip.ToolTipTitle = "Hint";
         }
+
         private void cbQueryType_SelectedValueChanged(object sender, EventArgs e)
         {
             //init
-            btnExport.Enabled = false;
-            this.labCondition1.Visible = false;
-            this.labCondition2.Visible = false;
-            this.labCondition3.Visible = false;
-            this.txbCondition1.Visible = false;
-            this.txbCondition2.Visible = false;
-            this.txbCondition3.Visible = false;
+            ClearUI();
             switch (cbQueryType.SelectedItem)
             {
                 case "Alarm Log":
                     sqlScript = "Alarm Log";
                     //this.labCondition1.Text = "User ID";
-                    //this.txbCondition1.Text = "";
                     //setToolTip(toolTip1, txbCondition1, "Logged user id.");
                     //this.labCondition1.Visible = true;
                     //this.txbCondition1.Visible = true;
@@ -208,17 +217,31 @@ namespace GUI
                     break;
                 case "Process Job Log":
                     sqlScript = "Process Job Log";
-                    //this.labCondition1.Text = "User ID";
-                    //this.txbCondition1.Text = "";
-                    //setToolTip(toolTip1, txbCondition1, "Logged user id.");
-                    //this.labCondition1.Visible = true;
-                    //this.txbCondition1.Visible = true;
+                    this.labCondition1.Text = "Foup ID";
+                    setToolTip(toolTip1, txbCondition1, "Foup id.");
+                    this.labCondition1.Visible = true;
+                    this.txbCondition1.Visible = true;
+                    btnQuery.Enabled = true;
+                    break;
+                case "Process Wafer Log":
+                    sqlScript = "Process Wafer Log";
+                    this.labCondition1.Text = "Wafer ID";
+                    setToolTip(toolTip1, txbCondition1, "Wafer ID");
+                    this.labCondition2.Text = "From Foup ID";
+                    setToolTip(toolTip2, txbCondition2, "Foup、SMIF、Cassette、Carrier ID");
+                    this.labCondition3.Text = "To Foup ID";
+                    setToolTip(toolTip3, txbCondition3, "Foup、SMIF、Cassette、Carrier ID");
+                    this.labCondition1.Visible = true;
+                    this.txbCondition1.Visible = true;
+                    this.labCondition2.Visible = true;
+                    this.txbCondition2.Visible = true;
+                    this.labCondition3.Visible = true;
+                    this.txbCondition3.Visible = true;
                     btnQuery.Enabled = true;
                     break;
                 case "User Action Log":
                     sqlScript = "User Action Log";
                     this.labCondition1.Text = "User ID";
-                    this.txbCondition1.Text = "";
                     setToolTip(toolTip1,txbCondition1, "Logged user id.");
                     this.labCondition1.Visible = true;
                     this.txbCondition1.Visible = true;
@@ -227,11 +250,9 @@ namespace GUI
                 case "Command Log":
                     sqlScript = "Command Log";
                     this.labCondition1.Text = "Device Type";
-                    this.txbCondition1.Text = "";
                     setToolTip(toolTip1, txbCondition1, "LoadPort,Robot,Aligner.");
                     this.labCondition2.Text = "Device Name";
-                    this.txbCondition2.Text = "";
-                    setToolTip(toolTip2, txbCondition2, "LoadPort1~8,Robot1~2,Aligner1~2.");
+                    setToolTip(toolTip2, txbCondition2, "LoadPort01~08,Robot01~02,Aligner01~02.");
                     this.labCondition1.Visible = true;
                     this.txbCondition1.Visible = true;
                     this.labCondition2.Visible = true;
@@ -247,7 +268,6 @@ namespace GUI
                     break;
                 default:
                     MessageBox.Show("不支援的報表查詢!", "Info");
-                    btnQuery.Enabled = false;
                     break;
             }
            
