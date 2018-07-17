@@ -42,7 +42,7 @@
             this.tlpCondition = new System.Windows.Forms.TableLayoutPanel();
             this.plButtonList = new System.Windows.Forms.Panel();
             this.tlpConditionList = new System.Windows.Forms.TableLayoutPanel();
-            this.label2 = new System.Windows.Forms.Label();
+            this.labCondition1 = new System.Windows.Forms.Label();
             this.labCondition2 = new System.Windows.Forms.Label();
             this.labCondition3 = new System.Windows.Forms.Label();
             this.txbCondition1 = new System.Windows.Forms.TextBox();
@@ -83,11 +83,12 @@
             // 
             this.btnExport.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.btnExport.BackColor = System.Drawing.Color.DarkGray;
+            this.btnExport.Enabled = false;
             this.btnExport.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.btnExport.FlatAppearance.BorderSize = 2;
             this.btnExport.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnExport.Font = new System.Drawing.Font("微軟正黑體", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-            this.btnExport.Location = new System.Drawing.Point(3, 55);
+            this.btnExport.Location = new System.Drawing.Point(2, 55);
             this.btnExport.Name = "btnExport";
             this.btnExport.Size = new System.Drawing.Size(149, 46);
             this.btnExport.TabIndex = 67;
@@ -99,11 +100,12 @@
             // 
             this.btnQuery.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.btnQuery.BackColor = System.Drawing.Color.DarkGray;
+            this.btnQuery.Enabled = false;
             this.btnQuery.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.btnQuery.FlatAppearance.BorderSize = 2;
             this.btnQuery.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnQuery.Font = new System.Drawing.Font("微軟正黑體", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-            this.btnQuery.Location = new System.Drawing.Point(3, 3);
+            this.btnQuery.Location = new System.Drawing.Point(2, 3);
             this.btnQuery.Name = "btnQuery";
             this.btnQuery.Size = new System.Drawing.Size(149, 46);
             this.btnQuery.TabIndex = 68;
@@ -130,15 +132,17 @@
             this.cbQueryType.Font = new System.Drawing.Font("微軟正黑體", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
             this.cbQueryType.FormattingEnabled = true;
             this.cbQueryType.Items.AddRange(new object[] {
-            "Alarm",
-            "Message",
-            "Lot Trace",
+            "Alarm Log",
+            "User Action Log",
+            "Process Job Log",
+            "Process Wafer Log",
             "Command Log",
-            "Other"});
+            "DIO Setting Log"});
             this.cbQueryType.Location = new System.Drawing.Point(177, 3);
             this.cbQueryType.Name = "cbQueryType";
             this.cbQueryType.Size = new System.Drawing.Size(400, 35);
             this.cbQueryType.TabIndex = 77;
+            this.cbQueryType.SelectedValueChanged += new System.EventHandler(this.cbQueryType_SelectedValueChanged);
             // 
             // labTo
             // 
@@ -173,7 +177,7 @@
             this.dtpToDate.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
             this.dtpToDate.Location = new System.Drawing.Point(757, 48);
             this.dtpToDate.Name = "dtpToDate";
-            this.dtpToDate.Size = new System.Drawing.Size(400, 35);
+            this.dtpToDate.Size = new System.Drawing.Size(401, 35);
             this.dtpToDate.TabIndex = 74;
             this.dtpToDate.Value = new System.DateTime(2018, 5, 16, 13, 46, 34, 0);
             // 
@@ -214,7 +218,7 @@
             this.tlpCondition.Name = "tlpCondition";
             this.tlpCondition.RowCount = 1;
             this.tlpCondition.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tlpCondition.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
+            this.tlpCondition.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 186F));
             this.tlpCondition.Size = new System.Drawing.Size(1327, 186);
             this.tlpCondition.TabIndex = 0;
             // 
@@ -223,9 +227,9 @@
             this.plButtonList.Controls.Add(this.btnExport);
             this.plButtonList.Controls.Add(this.btnQuery);
             this.plButtonList.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.plButtonList.Location = new System.Drawing.Point(1169, 3);
+            this.plButtonList.Location = new System.Drawing.Point(1170, 3);
             this.plButtonList.Name = "plButtonList";
-            this.plButtonList.Size = new System.Drawing.Size(155, 180);
+            this.plButtonList.Size = new System.Drawing.Size(154, 180);
             this.plButtonList.TabIndex = 0;
             // 
             // tlpConditionList
@@ -241,7 +245,7 @@
             this.tlpConditionList.Controls.Add(this.labFrom, 0, 1);
             this.tlpConditionList.Controls.Add(this.dtpFromDate, 1, 1);
             this.tlpConditionList.Controls.Add(this.label84, 0, 0);
-            this.tlpConditionList.Controls.Add(this.label2, 0, 2);
+            this.tlpConditionList.Controls.Add(this.labCondition1, 0, 2);
             this.tlpConditionList.Controls.Add(this.labCondition2, 2, 2);
             this.tlpConditionList.Controls.Add(this.labCondition3, 0, 3);
             this.tlpConditionList.Controls.Add(this.txbCondition1, 1, 2);
@@ -255,21 +259,21 @@
             this.tlpConditionList.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 25F));
             this.tlpConditionList.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 25F));
             this.tlpConditionList.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 25F));
-            this.tlpConditionList.Size = new System.Drawing.Size(1160, 180);
+            this.tlpConditionList.Size = new System.Drawing.Size(1161, 180);
             this.tlpConditionList.TabIndex = 1;
             // 
-            // label2
+            // labCondition1
             // 
-            this.label2.AutoSize = true;
-            this.label2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.label2.Font = new System.Drawing.Font("微軟正黑體", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-            this.label2.Location = new System.Drawing.Point(3, 90);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(168, 45);
-            this.label2.TabIndex = 80;
-            this.label2.Text = "Condition 1";
-            this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.label2.Visible = false;
+            this.labCondition1.AutoSize = true;
+            this.labCondition1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.labCondition1.Font = new System.Drawing.Font("微軟正黑體", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
+            this.labCondition1.Location = new System.Drawing.Point(3, 90);
+            this.labCondition1.Name = "labCondition1";
+            this.labCondition1.Size = new System.Drawing.Size(168, 45);
+            this.labCondition1.TabIndex = 80;
+            this.labCondition1.Text = "Condition 1";
+            this.labCondition1.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.labCondition1.Visible = false;
             // 
             // labCondition2
             // 
@@ -313,7 +317,7 @@
             this.txbCondition2.Font = new System.Drawing.Font("微軟正黑體", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
             this.txbCondition2.Location = new System.Drawing.Point(757, 93);
             this.txbCondition2.Name = "txbCondition2";
-            this.txbCondition2.Size = new System.Drawing.Size(400, 35);
+            this.txbCondition2.Size = new System.Drawing.Size(401, 35);
             this.txbCondition2.TabIndex = 84;
             this.txbCondition2.Visible = false;
             // 
@@ -367,7 +371,7 @@
         private System.Windows.Forms.TableLayoutPanel tlpCondition;
         private System.Windows.Forms.Panel plButtonList;
         private System.Windows.Forms.TableLayoutPanel tlpConditionList;
-        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label labCondition1;
         private System.Windows.Forms.Label labCondition2;
         private System.Windows.Forms.Label labCondition3;
         private System.Windows.Forms.TextBox txbCondition1;

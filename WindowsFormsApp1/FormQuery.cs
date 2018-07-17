@@ -20,6 +20,23 @@ namespace GUI
     public partial class FormQuery : Form
     {
         DataTable dataTable;
+        string sqlScript = "";
+        ToolTip toolTip1 = new ToolTip();
+        ToolTip toolTip2 = new ToolTip();
+        ToolTip toolTip3 = new ToolTip();
+
+        public string getSqlContent(string scriptName)
+        {
+            StringBuilder sql = new StringBuilder();
+            string[] lines = System.IO.File.ReadAllLines(@".\sql\" + scriptName + ".sql");
+            foreach (string line in lines)
+            {
+                sql.Append(line);
+            }
+
+            return sql.ToString();
+        }
+
         public FormQuery()
         {
             InitializeComponent();
@@ -30,17 +47,33 @@ namespace GUI
         private void btnQuery_Click(object sender, EventArgs e)
         {
             DBUtil dBUtil = new DBUtil();
-            StringBuilder sql = new StringBuilder();
-            sql.Append("\n SELECT *");
-            sql.Append("\n   FROM device_code_params ");
+            //StringBuilder sql = new StringBuilder();
+            //sql.Append("\n SELECT *");
+            //sql.Append("\n   FROM device_code_params ");
+
+
             //set parameter
             Dictionary<string, object> param = new Dictionary<string, object>();
             //Query
-            DataTableReader rs = dBUtil.GetDataReader(sql.ToString(), param);
-            MySqlDataAdapter adapter  = dBUtil.GetDataAdapter(sql.ToString());
-            dataTable = new DataTable();
-            adapter.Fill(dataTable);
+            //DataTableReader rs = dBUtil.GetDataReader(sql.ToString(), param);
+            //MySqlDataAdapter adapter  = dBUtil.GetDataAdapter(sql.ToString());
+            //MySqlDataAdapter adapter = dBUtil.GetDataAdapter(this.getSqlContent(sqlScript));
+            //dataTable = new DataTable();
+            //adapter.Fill(dataTable);
+            DateTime fromDt = this.dtpFromDate.Value;
+            DateTime toDt = this.dtpToDate.Value;
+
+            string cond_1 = txbCondition1.Text.Equals("") ? "%" : txbCondition1.Text;
+            string cond_2 = txbCondition2.Text.Equals("") ? "%" : txbCondition2.Text;
+            string cond_3 = txbCondition3.Text.Equals("") ? "%" : txbCondition3.Text;
+            param.Add("@from_dt", fromDt.ToString("yyyy-MM-dd 00:00:00.000000"));
+            param.Add("@to_dt", toDt.ToString("yyyy-MM-dd 23:59:59.999999"));
+            param.Add("@cond_1", cond_1);
+            param.Add("@cond_2", cond_2);
+            param.Add("@cond_3", cond_3);
+            dataTable = dBUtil.GetDataTable(getSqlContent(sqlScript), param);
             gdvData.DataSource = dataTable;
+            btnExport.Enabled = true;
         }
 
         private void DataTableToExcelFile(DataTable dt)
@@ -77,12 +110,18 @@ namespace GUI
                 }
             }
 
+            string dirPath = @"d:\sanwa\export\";
+            if (!Directory.Exists(dirPath))
+            {
+                Directory.CreateDirectory(dirPath);
+            }
+
             string fileName =  cbQueryType.Text + "_" + DateTime.Now.ToString("yyyyMMddHHmmss") + "_result.xls";
-            FileStream file = new FileStream(@"d:\" + fileName, FileMode.Create);//產生檔案
+            FileStream file = new FileStream(dirPath + fileName, FileMode.Create);//產生檔案
             wb.Write(file);
             file.Close();
 
-            Process.Start(@"d:\" + fileName);
+            Process.Start(dirPath + fileName);
             //OpenFileDialog dialog = new OpenFileDialog();
             //dialog.Title = "Open file";
             //dialog.InitialDirectory = "D:\\";
@@ -113,12 +152,21 @@ namespace GUI
         private void ClearUI()
         {
             cbQueryType.Text = string.Empty;
-            dtpFromDate.Value = DateTime.Now;
+            dtpFromDate.Value = DateTime.Now.AddDays(-1);
             dtpToDate.Value = DateTime.Now;
 
             txbCondition1.Text = string.Empty;
             txbCondition2.Text = string.Empty;
             txbCondition3.Text = string.Empty;
+
+            btnExport.Enabled = false;
+            btnQuery.Enabled = false;
+            this.labCondition1.Visible = false;
+            this.labCondition2.Visible = false;
+            this.labCondition3.Visible = false;
+            this.txbCondition1.Visible = false;
+            this.txbCondition2.Visible = false;
+            this.txbCondition3.Visible = false;
 
             gdvData.DataSource = null;
         }
@@ -134,5 +182,96 @@ namespace GUI
                 throw new Exception(ex.ToString());
             }
         }
+
+        private void setToolTip(ToolTip toolTip, Control control, string tip)
+        {
+            toolTip.SetToolTip(control, tip);
+            //以下為提示視窗的設定(通常會設定的部分)
+            //停滯多久顯示 Hint
+            toolTip.AutomaticDelay = 100;
+            //ToolTipIcon：設定顯示在提示視窗的圖示類型。
+            toolTip.ToolTipIcon = ToolTipIcon.Info;
+            //ForeColor：顧名思義就是前景顏色，你懂的!!XD
+            toolTip.ForeColor = Color.Blue;
+            //BackColor：顧名思義就是背景顏色，你也懂的!!XD
+            toolTip.BackColor = Color.Gray;
+            //AutoPopDelay：當游標停滯在控制項，顯示提示視窗的時間。(以毫秒為單位)
+            toolTip.AutoPopDelay = 10000;
+            //ToolTipTitle：設定提示視窗的標題。
+            toolTip.ToolTipTitle = "Hint";
+        }
+
+        private void cbQueryType_SelectedValueChanged(object sender, EventArgs e)
+        {
+            //init
+            ClearUI();
+            switch (cbQueryType.SelectedItem)
+            {
+                case "Alarm Log":
+                    sqlScript = "Alarm Log";
+                    //this.labCondition1.Text = "User ID";
+                    //setToolTip(toolTip1, txbCondition1, "Logged user id.");
+                    //this.labCondition1.Visible = true;
+                    //this.txbCondition1.Visible = true;
+                    btnQuery.Enabled = true;
+                    break;
+                case "Process Job Log":
+                    sqlScript = "Process Job Log";
+                    this.labCondition1.Text = "Foup ID";
+                    setToolTip(toolTip1, txbCondition1, "Foup id.");
+                    this.labCondition1.Visible = true;
+                    this.txbCondition1.Visible = true;
+                    btnQuery.Enabled = true;
+                    break;
+                case "Process Wafer Log":
+                    sqlScript = "Process Wafer Log";
+                    this.labCondition1.Text = "Wafer ID";
+                    setToolTip(toolTip1, txbCondition1, "Wafer ID");
+                    this.labCondition2.Text = "From Foup ID";
+                    setToolTip(toolTip2, txbCondition2, "Foup、SMIF、Cassette、Carrier ID");
+                    this.labCondition3.Text = "To Foup ID";
+                    setToolTip(toolTip3, txbCondition3, "Foup、SMIF、Cassette、Carrier ID");
+                    this.labCondition1.Visible = true;
+                    this.txbCondition1.Visible = true;
+                    this.labCondition2.Visible = true;
+                    this.txbCondition2.Visible = true;
+                    this.labCondition3.Visible = true;
+                    this.txbCondition3.Visible = true;
+                    btnQuery.Enabled = true;
+                    break;
+                case "User Action Log":
+                    sqlScript = "User Action Log";
+                    this.labCondition1.Text = "User ID";
+                    setToolTip(toolTip1,txbCondition1, "Logged user id.");
+                    this.labCondition1.Visible = true;
+                    this.txbCondition1.Visible = true;
+                    btnQuery.Enabled = true;
+                    break;
+                case "Command Log":
+                    sqlScript = "Command Log";
+                    this.labCondition1.Text = "Device Type";
+                    setToolTip(toolTip1, txbCondition1, "LoadPort,Robot,Aligner.");
+                    this.labCondition2.Text = "Device Name";
+                    setToolTip(toolTip2, txbCondition2, "LoadPort01~08,Robot01~02,Aligner01~02.");
+                    this.labCondition1.Visible = true;
+                    this.txbCondition1.Visible = true;
+                    this.labCondition2.Visible = true;
+                    this.txbCondition2.Visible = true;
+                    btnQuery.Enabled = true;
+                    break;
+                case "DIO Setting Log":
+                    sqlScript = "DIO Setting Log";
+                    setToolTip(toolTip1, txbCondition1, "Logged user id.");
+                    this.labCondition1.Visible = true;
+                    this.txbCondition1.Visible = true;
+                    btnQuery.Enabled = true;
+                    break;
+                default:
+                    MessageBox.Show("不支援的報表查詢!", "Info");
+                    break;
+            }
+           
+        }
+
     }
 }

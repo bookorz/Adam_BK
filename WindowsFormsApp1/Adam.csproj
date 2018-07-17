@@ -536,6 +536,24 @@
     <None Include="Resources\sanwa_robot_status.png" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="sql\Alarm Log.sql">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="sql\Command Log.sql">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="sql\DIO Setting Log.sql">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="sql\Process Job Log.sql">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="sql\Process Wafer Log.sql">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="sql\User Action Log.sql">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
     <None Include="Resources\SplashScreen.JPG" />
     <None Include="Resources\SplashScreen.bmp" />
     <None Include="Resources\arrowleft.png" />
