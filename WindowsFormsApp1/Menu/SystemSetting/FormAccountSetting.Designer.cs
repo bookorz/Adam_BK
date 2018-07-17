@@ -32,6 +32,7 @@
             this.tlpAccountMenu = new System.Windows.Forms.TableLayoutPanel();
             this.btnModifyUser = new System.Windows.Forms.Button();
             this.btnCreateUser = new System.Windows.Forms.Button();
+            this.btnChangePassword = new System.Windows.Forms.Button();
             this.tlpAccount = new System.Windows.Forms.TableLayoutPanel();
             this.palContainer = new System.Windows.Forms.Panel();
             this.gbAccount = new System.Windows.Forms.GroupBox();
@@ -54,7 +55,6 @@
             this.txbPasswordNew = new System.Windows.Forms.TextBox();
             this.txbPasswordNewAgain = new System.Windows.Forms.TextBox();
             this.btnSave = new System.Windows.Forms.Button();
-            this.btnChangePassword = new System.Windows.Forms.Button();
             this.palMenu.SuspendLayout();
             this.tlpAccountMenu.SuspendLayout();
             this.tlpAccount.SuspendLayout();
@@ -131,6 +131,22 @@
             this.btnCreateUser.Text = "Create User Account";
             this.btnCreateUser.UseVisualStyleBackColor = false;
             this.btnCreateUser.Click += new System.EventHandler(this.btnCreateUser_Click);
+            // 
+            // btnChangePassword
+            // 
+            this.btnChangePassword.BackColor = System.Drawing.Color.Silver;
+            this.btnChangePassword.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.btnChangePassword.FlatAppearance.BorderSize = 2;
+            this.btnChangePassword.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnChangePassword.Font = new System.Drawing.Font("微軟正黑體", 14.25F);
+            this.btnChangePassword.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.btnChangePassword.Location = new System.Drawing.Point(397, 3);
+            this.btnChangePassword.Name = "btnChangePassword";
+            this.btnChangePassword.Size = new System.Drawing.Size(191, 59);
+            this.btnChangePassword.TabIndex = 66;
+            this.btnChangePassword.Text = "Change User Password";
+            this.btnChangePassword.UseVisualStyleBackColor = false;
+            this.btnChangePassword.Click += new System.EventHandler(this.btnChangePassword_Click);
             // 
             // tlpAccount
             // 
@@ -399,22 +415,6 @@
             this.btnSave.Text = "Save";
             this.btnSave.UseVisualStyleBackColor = true;
             this.btnSave.Click += new System.EventHandler(this.btnSave_Click);
-            // 
-            // btnChangePassword
-            // 
-            this.btnChangePassword.BackColor = System.Drawing.Color.Silver;
-            this.btnChangePassword.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.btnChangePassword.FlatAppearance.BorderSize = 2;
-            this.btnChangePassword.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.btnChangePassword.Font = new System.Drawing.Font("微軟正黑體", 14.25F);
-            this.btnChangePassword.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.btnChangePassword.Location = new System.Drawing.Point(397, 3);
-            this.btnChangePassword.Name = "btnChangePassword";
-            this.btnChangePassword.Size = new System.Drawing.Size(191, 59);
-            this.btnChangePassword.TabIndex = 66;
-            this.btnChangePassword.Text = "Change User Password";
-            this.btnChangePassword.UseVisualStyleBackColor = false;
-            this.btnChangePassword.Click += new System.EventHandler(this.btnChangePassword_Click);
             // 
             // FormAccountSetting
             // 

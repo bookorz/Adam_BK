@@ -41,7 +41,7 @@
             this.spcAlarmSetting = new System.Windows.Forms.SplitContainer();
             this.gbAlarmSettingCondition = new System.Windows.Forms.GroupBox();
             this.tlpAlarmCondition = new System.Windows.Forms.TableLayoutPanel();
-            this.tableLayoutPanel17 = new System.Windows.Forms.TableLayoutPanel();
+            this.tlpAlarmCondition_2 = new System.Windows.Forms.TableLayoutPanel();
             this.txbAlarmConditionDeviceType = new System.Windows.Forms.TextBox();
             this.lbAlarmConditionDeviceType = new System.Windows.Forms.Label();
             this.lsbAlarmConditionDeviceType = new System.Windows.Forms.ListBox();
@@ -54,6 +54,7 @@
             this.dgvlsbAlarmData = new System.Windows.Forms.DataGridView();
             this.Event_AlarmNo = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Event_AlarmDescription = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Event_AlarmDescriptionEnglish = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Event_AlarmType = new System.Windows.Forms.DataGridViewComboBoxColumn();
             this.Event_AlarmLevel = new System.Windows.Forms.DataGridViewComboBoxColumn();
             this.Event_AlarmLED_Red = new System.Windows.Forms.DataGridViewComboBoxColumn();
@@ -70,7 +71,7 @@
             this.spcAlarmSetting.SuspendLayout();
             this.gbAlarmSettingCondition.SuspendLayout();
             this.tlpAlarmCondition.SuspendLayout();
-            this.tableLayoutPanel17.SuspendLayout();
+            this.tlpAlarmCondition_2.SuspendLayout();
             this.tlpAlarmCondition_1.SuspendLayout();
             this.gbAlarmSettingData.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvlsbAlarmData)).BeginInit();
@@ -120,7 +121,7 @@
             this.tlpAlarmCondition.ColumnCount = 1;
             this.tlpAlarmCondition.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
             this.tlpAlarmCondition.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 20F));
-            this.tlpAlarmCondition.Controls.Add(this.tableLayoutPanel17, 0, 1);
+            this.tlpAlarmCondition.Controls.Add(this.tlpAlarmCondition_2, 0, 1);
             this.tlpAlarmCondition.Controls.Add(this.tlpAlarmCondition_1, 0, 0);
             this.tlpAlarmCondition.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tlpAlarmCondition.Location = new System.Drawing.Point(3, 25);
@@ -132,24 +133,23 @@
             this.tlpAlarmCondition.Size = new System.Drawing.Size(327, 684);
             this.tlpAlarmCondition.TabIndex = 0;
             // 
-            // tableLayoutPanel17
+            // tlpAlarmCondition_2
             // 
-            this.tableLayoutPanel17.ColumnCount = 1;
-            this.tableLayoutPanel17.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel17.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 20F));
-            this.tableLayoutPanel17.Controls.Add(this.txbAlarmConditionDeviceType, 0, 2);
-            this.tableLayoutPanel17.Controls.Add(this.lbAlarmConditionDeviceType, 0, 0);
-            this.tableLayoutPanel17.Controls.Add(this.lsbAlarmConditionDeviceType, 0, 1);
-            this.tableLayoutPanel17.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tableLayoutPanel17.Location = new System.Drawing.Point(3, 231);
-            this.tableLayoutPanel17.Name = "tableLayoutPanel17";
-            this.tableLayoutPanel17.RowCount = 3;
-            this.tableLayoutPanel17.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 12.55605F));
-            this.tableLayoutPanel17.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 58.7444F));
-            this.tableLayoutPanel17.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 28.69955F));
-            this.tableLayoutPanel17.Size = new System.Drawing.Size(321, 222);
-            this.tableLayoutPanel17.TabIndex = 1;
-            this.tableLayoutPanel17.Visible = false;
+            this.tlpAlarmCondition_2.ColumnCount = 1;
+            this.tlpAlarmCondition_2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.tlpAlarmCondition_2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 20F));
+            this.tlpAlarmCondition_2.Controls.Add(this.txbAlarmConditionDeviceType, 0, 2);
+            this.tlpAlarmCondition_2.Controls.Add(this.lbAlarmConditionDeviceType, 0, 0);
+            this.tlpAlarmCondition_2.Controls.Add(this.lsbAlarmConditionDeviceType, 0, 1);
+            this.tlpAlarmCondition_2.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.tlpAlarmCondition_2.Location = new System.Drawing.Point(3, 231);
+            this.tlpAlarmCondition_2.Name = "tlpAlarmCondition_2";
+            this.tlpAlarmCondition_2.RowCount = 3;
+            this.tlpAlarmCondition_2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 12.55605F));
+            this.tlpAlarmCondition_2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 58.7444F));
+            this.tlpAlarmCondition_2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 28.69955F));
+            this.tlpAlarmCondition_2.Size = new System.Drawing.Size(321, 222);
+            this.tlpAlarmCondition_2.TabIndex = 1;
             // 
             // txbAlarmConditionDeviceType
             // 
@@ -164,6 +164,7 @@
             this.txbAlarmConditionDeviceType.ScrollBars = System.Windows.Forms.ScrollBars.Both;
             this.txbAlarmConditionDeviceType.Size = new System.Drawing.Size(315, 50);
             this.txbAlarmConditionDeviceType.TabIndex = 5;
+            this.txbAlarmConditionDeviceType.Visible = false;
             // 
             // lbAlarmConditionDeviceType
             // 
@@ -185,6 +186,7 @@
             this.lsbAlarmConditionDeviceType.Name = "lsbAlarmConditionDeviceType";
             this.lsbAlarmConditionDeviceType.Size = new System.Drawing.Size(315, 124);
             this.lsbAlarmConditionDeviceType.TabIndex = 4;
+            this.lsbAlarmConditionDeviceType.Click += new System.EventHandler(this.lsbAlarmConditionVendorCode_Click);
             // 
             // tlpAlarmCondition_1
             // 
@@ -217,6 +219,7 @@
             this.txbAlarmConditionVendorCode.ScrollBars = System.Windows.Forms.ScrollBars.Both;
             this.txbAlarmConditionVendorCode.Size = new System.Drawing.Size(315, 50);
             this.txbAlarmConditionVendorCode.TabIndex = 5;
+            this.txbAlarmConditionVendorCode.Visible = false;
             // 
             // lbAlarmConditionVendorCode
             // 
@@ -262,7 +265,6 @@
             this.btnSave.TabIndex = 6;
             this.btnSave.Text = "Save";
             this.btnSave.UseVisualStyleBackColor = true;
-            this.btnSave.Visible = false;
             this.btnSave.Click += new System.EventHandler(this.btnSave_Click);
             // 
             // dgvlsbAlarmData
@@ -275,6 +277,7 @@
             this.dgvlsbAlarmData.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.Event_AlarmNo,
             this.Event_AlarmDescription,
+            this.Event_AlarmDescriptionEnglish,
             this.Event_AlarmType,
             this.Event_AlarmLevel,
             this.Event_AlarmLED_Red,
@@ -284,7 +287,6 @@
             this.Event_AlarmBuzzer_A,
             this.Event_AlarmBuzzer_B,
             this.Event_AlarmIS_Stop});
-            this.dgvlsbAlarmData.Dock = System.Windows.Forms.DockStyle.Top;
             this.dgvlsbAlarmData.Location = new System.Drawing.Point(3, 25);
             this.dgvlsbAlarmData.Name = "dgvlsbAlarmData";
             this.dgvlsbAlarmData.RowHeadersVisible = false;
@@ -294,7 +296,7 @@
             // 
             // Event_AlarmNo
             // 
-            this.Event_AlarmNo.DataPropertyName = "alarm_no";
+            this.Event_AlarmNo.DataPropertyName = "code_id";
             this.Event_AlarmNo.Frozen = true;
             this.Event_AlarmNo.HeaderText = "Alarm No";
             this.Event_AlarmNo.Name = "Event_AlarmNo";
@@ -303,11 +305,19 @@
             // 
             // Event_AlarmDescription
             // 
-            this.Event_AlarmDescription.DataPropertyName = "alarm_item";
-            this.Event_AlarmDescription.HeaderText = "Alarm Description";
+            this.Event_AlarmDescription.DataPropertyName = "code_desc";
+            this.Event_AlarmDescription.HeaderText = "Alarm description";
             this.Event_AlarmDescription.Name = "Event_AlarmDescription";
             this.Event_AlarmDescription.ReadOnly = true;
-            this.Event_AlarmDescription.Width = 154;
+            this.Event_AlarmDescription.Width = 152;
+            // 
+            // Event_AlarmDescriptionEnglish
+            // 
+            this.Event_AlarmDescriptionEnglish.DataPropertyName = "code_desc_en";
+            this.Event_AlarmDescriptionEnglish.HeaderText = "Alarm description english";
+            this.Event_AlarmDescriptionEnglish.Name = "Event_AlarmDescriptionEnglish";
+            this.Event_AlarmDescriptionEnglish.ReadOnly = true;
+            this.Event_AlarmDescriptionEnglish.Width = 204;
             // 
             // Event_AlarmType
             // 
@@ -328,6 +338,7 @@
             "Software function fails or exception",
             "Communication fails"});
             this.Event_AlarmType.Name = "Event_AlarmType";
+            this.Event_AlarmType.Visible = false;
             this.Event_AlarmType.Width = 90;
             // 
             // Event_AlarmLevel
@@ -455,7 +466,6 @@
             "Y",
             "N"});
             this.Event_AlarmIS_Stop.Name = "Event_AlarmIS_Stop";
-            this.Event_AlarmIS_Stop.Visible = false;
             this.Event_AlarmIS_Stop.Width = 61;
             // 
             // FormAlarmEventSet
@@ -474,8 +484,8 @@
             this.spcAlarmSetting.ResumeLayout(false);
             this.gbAlarmSettingCondition.ResumeLayout(false);
             this.tlpAlarmCondition.ResumeLayout(false);
-            this.tableLayoutPanel17.ResumeLayout(false);
-            this.tableLayoutPanel17.PerformLayout();
+            this.tlpAlarmCondition_2.ResumeLayout(false);
+            this.tlpAlarmCondition_2.PerformLayout();
             this.tlpAlarmCondition_1.ResumeLayout(false);
             this.tlpAlarmCondition_1.PerformLayout();
             this.gbAlarmSettingData.ResumeLayout(false);
@@ -490,7 +500,7 @@
         private System.Windows.Forms.SplitContainer spcAlarmSetting;
         private System.Windows.Forms.GroupBox gbAlarmSettingCondition;
         private System.Windows.Forms.TableLayoutPanel tlpAlarmCondition;
-        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel17;
+        private System.Windows.Forms.TableLayoutPanel tlpAlarmCondition_2;
         private System.Windows.Forms.TextBox txbAlarmConditionDeviceType;
         private System.Windows.Forms.Label lbAlarmConditionDeviceType;
         private System.Windows.Forms.ListBox lsbAlarmConditionDeviceType;
@@ -503,6 +513,7 @@
         private System.Windows.Forms.DataGridView dgvlsbAlarmData;
         private System.Windows.Forms.DataGridViewTextBoxColumn Event_AlarmNo;
         private System.Windows.Forms.DataGridViewTextBoxColumn Event_AlarmDescription;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Event_AlarmDescriptionEnglish;
         private System.Windows.Forms.DataGridViewComboBoxColumn Event_AlarmType;
         private System.Windows.Forms.DataGridViewComboBoxColumn Event_AlarmLevel;
         private System.Windows.Forms.DataGridViewComboBoxColumn Event_AlarmLED_Red;

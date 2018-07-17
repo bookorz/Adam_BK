@@ -37,7 +37,9 @@ namespace Adam.Menu.SystemSetting
                 txbEquipmentModel.Text = equipment_Model.EquipmentModel.equipment_model_type;
 
                 dtTemp = new DataTable();
-                strSql = "select * from config_list_item where list_type = 'DEVICE_TYPE' ";
+                strSql = "SELECT list_type, list_id, list_name, list_name_en, CASE WHEN list_value = 'DIO' THEN 'SYSTEM' ELSE list_value END list_value, sort_sequence " +
+                            "FROM config_list_item " +
+                            "WHERE list_type = 'DEVICE_TYPE'";
                 dtTemp = dBUtil.GetDataTable(strSql, null);
 
                 if (dtTemp.Rows.Count > 0)
@@ -123,7 +125,7 @@ namespace Adam.Menu.SystemSetting
 
             try
             {
-                strSql = "select * from config_node where equipment_model_id = @equipment_model_id and enable_flg ='Y' order by node_id, sn_no";
+                strSql = "select * from config_node where equipment_model_id = @equipment_model_id and enable_flg ='1' order by node_id, sn_no";
                 keyValues.Add("@equipment_model_id", SANWA.Utility.Config.SystemConfig.Get().SystemMode);
                 dtConfigNode = dBUtil.GetDataTable(strSql, keyValues);
 
@@ -177,7 +179,6 @@ namespace Adam.Menu.SystemSetting
                     chbActive.Checked = dtTemp.Rows[0]["enable_flg"].ToString() == "1" ? true : false;
                     txbDefaultAligner.Text = dtTemp.Rows[0]["default_aligner"].ToString();
                     txbAlternativeAligner.Text = dtTemp.Rows[0]["alternative_aligner"].ToString();
-                    //txbRoute.Text = dtTemp.Rows[0]["route_table"].ToString();
                     dtRouteTable = (DataTable)Newtonsoft.Json.JsonConvert.DeserializeObject(dtTemp.Rows[0]["route_table"].ToString(), (typeof(DataTable)));
                     dgvRouteTable.DataSource = dtRouteTable;
 
@@ -211,7 +212,7 @@ namespace Adam.Menu.SystemSetting
                     txbControllerID.Text.Trim().Equals(string.Empty)
                     )
                 {
-                    MessageBox.Show("Miss input data in the form.", "Warning");
+                    MessageBox.Show("Miss input data in the form.", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Warning, MessageBoxDefaultButton.Button1);
                     return;
                 }
 
@@ -266,11 +267,11 @@ namespace Adam.Menu.SystemSetting
                 keyValues.Add("@firmware_ver", txbFirmwareVersion.Text.Trim());
                 keyValues.Add("@conn_address", txbAddress.Text.Trim());
                 keyValues.Add("@controller_id", txbControllerID.Text.Trim());
-                keyValues.Add("@enable_flg", chbActive.Checked ? "Y" : "N");
+                keyValues.Add("@enable_flg", chbActive.Checked ? 1 : 0);
                 keyValues.Add("@default_aligner", txbDefaultAligner.Text.Trim());
                 keyValues.Add("@alternative_aligner", txbAlternativeAligner.Text.Trim());
                 keyValues.Add("@route_table", JsonConvert.SerializeObject(dtRouteTable, Formatting.Indented));
-                keyValues.Add("@bypass", chbByPass.Checked ? "1" : "0");
+                keyValues.Add("@bypass", chbByPass.Checked ? 1 : 0);
 
                 drsTemp = dtTemp.Select("node_id = '" + cmbDeviceNodeType.Text + Convert.ToInt32(nudSerialNo.Value).ToString("D2") + "'");
                 Form form = Application.OpenForms["FormMain"];
@@ -290,16 +291,35 @@ namespace Adam.Menu.SystemSetting
                 keyValues.Add("@modify_user", Signal.Text);
 
                 dBUtil.ExecuteNonQuery(strSql, keyValues);
-                MessageBox.Show("Done it.", "Save", MessageBoxButtons.OKCancel, MessageBoxIcon.Exclamation, MessageBoxDefaultButton.Button1);
+                MessageBox.Show("Done it.", "Save", MessageBoxButtons.OK, MessageBoxIcon.Exclamation, MessageBoxDefaultButton.Button1);
 
                 Adam.Util.SanwaUtil.addActionLog("Adam.Menu.SystemSetting", "FormCpmmandScript", Signal.Text);
 
                 UpdateNodeList();
+                ClearUI();
             }
             catch (Exception ex)
             {
                 throw new Exception(ex.ToString());
             }
+        }
+
+        private void ClearUI()
+        {
+            txbDeviceNodeName.Text = string.Empty;
+            txbDeviceNodeName.Tag = null;
+            cmbDeviceNodeType.SelectedIndex = -1;
+            nudSerialNo.Value = 0;
+            cmbVendor.SelectedIndex = -1;
+            txbModel.Text = string.Empty;
+            txbFirmwareVersion.Text = string.Empty;
+            txbAddress.Text = string.Empty;
+            txbControllerID.Text = string.Empty;
+            chbActive.Checked = false;
+            txbDefaultAligner.Text = string.Empty;
+            txbAlternativeAligner.Text = string.Empty;
+            dgvRouteTable.DataSource = null;
+            chbByPass.Checked = false;
         }
     }
 }

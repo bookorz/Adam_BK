@@ -60,7 +60,7 @@ namespace Adam.Menu.Communications
                 strSql = "SELECT* FROM config_controller ";
                 dtController = dBUtil.GetDataTable(strSql, null);
 
-                strSql = "select * from list_item where list_type = 'NODE_CONTROLLER_TYPE' ";
+                strSql = "select * from config_list_item where list_type = 'NODE_CONTROLLER_TYPE' ";
 
                 dtTemp = dBUtil.GetDataTable(strSql, null);
 
@@ -396,6 +396,18 @@ namespace Adam.Menu.Communications
 
         private void btnSave_Click(object sender, EventArgs e)
         {
+            if ((DataTable)libDeviceList.DataSource == null || ((DataTable)libDeviceList.DataSource).Rows.Count == 0)
+            {
+                MessageBox.Show("The grid data does not exist.", this.Name, MessageBoxButtons.OK, MessageBoxIcon.Error, MessageBoxDefaultButton.Button1);
+                return;
+            }
+
+            if (libDeviceList.SelectedIndex < 0)
+            {
+                MessageBox.Show("Choose the condition.", this.Name, MessageBoxButtons.OK, MessageBoxIcon.Error, MessageBoxDefaultButton.Button1);
+                return;
+            }
+
             string strReplaceSql = string.Empty;
 
             DBUtil dBUtil = new DBUtil();
@@ -403,10 +415,10 @@ namespace Adam.Menu.Communications
 
             try
             {
-                strReplaceSql = "REPLACE INTO controller " +
+                strReplaceSql = "REPLACE INTO config_controller " +
                     "(node_id, node_function_name, node_function_type, conn_address, conn_type, conn_prot, " +
                     "com_parity_bit, com_data_bits, com_stop_bit, enable_flg, " +
-                    "slaveid, digitalinputquantity, delay, readtimeout, " +
+                    "slaveid, digitalinputquantity, delay, readtimeout, controller_type, " +
                     "create_user, create_timestamp, modify_user, modify_timestamp) " +
                     "VALUES (" +
                     "@node_id, " +
@@ -419,12 +431,11 @@ namespace Adam.Menu.Communications
                     "@com_data_bits, " +
                     "@com_stop_bit, " +
                     "@enable_flg, " +
-                    "@slave_id, " +
-                    "@digital_input_quantity, " +
+                    "@slaveid, " +
+                    "@digitalinputquantity, " +
                     "@delay, " +
-                    "@read_timeout, " +
-                    "@control_setting, " +
-                    "@parameter_setting, " +
+                    "@readtimeout, " +
+                    "@controller_type, " +
                     "@create_user, " +
                     "@create_timestamp, " +
                     "@modify_user, " +
@@ -443,12 +454,12 @@ namespace Adam.Menu.Communications
                     keyValues.Add("@com_parity_bit", string.Empty);
                     keyValues.Add("@com_data_bits", string.Empty);
                     keyValues.Add("@com_stop_bit", string.Empty);
-                    keyValues.Add("@enable_flg", chbTCPIPActive.Checked ? "1" : "0");
-
-                    keyValues.Add("@slave_id", txbSlaveID.Text.Trim());
-                    keyValues.Add("@digital_input_quantity", txbDigitalInputQuantity.Text.Trim());
-                    keyValues.Add("@delay", txbDelay.Text.Trim());
-                    keyValues.Add("@read_timeout", txbReadTimeout.Text.Trim());
+                    keyValues.Add("@enable_flg", chbTCPIPActive.Checked ? 1 : 0);
+                    keyValues.Add("@slaveid", txbSlaveID.Text.Trim().Equals(string.Empty) ? 0 : Convert.ToInt32(txbSlaveID.Text.Trim()));
+                    keyValues.Add("@digitalinputquantity", txbDigitalInputQuantity.Text.Trim().Equals(string.Empty) ? 0 : Convert.ToInt32(txbDigitalInputQuantity.Text.Trim()));
+                    keyValues.Add("@delay", txbDelay.Text.Trim().Equals(string.Empty) ? 0 : Convert.ToInt32(txbDelay.Text.Trim()));
+                    keyValues.Add("@readtimeout", txbReadTimeout.Text.Trim().Equals(string.Empty) ? 0 : Convert.ToInt32(txbReadTimeout.Text.Trim()));
+                    keyValues.Add("@controller_type", cmbSocketControllerType.SelectedValue.ToString());
 
                     //if (dtControlSetting != null || dtControlSetting.Rows.Count > 0)
                     //{
@@ -477,14 +488,14 @@ namespace Adam.Menu.Communications
                     keyValues.Add("@com_parity_bit", txbParityBit.Text.Trim());
                     keyValues.Add("@com_data_bits", nudDataBits.Value.ToString());
                     keyValues.Add("@com_stop_bit", txbStopBit.Text.Trim());
-                    keyValues.Add("@enable_flg", chbRS232CActive.Checked ? "1" : "0");
+                    keyValues.Add("@enable_flg", chbRS232CActive.Checked ? 1 : 0);
 
-                    keyValues.Add("@slave_id", string.Empty);
-                    keyValues.Add("@digital_input_quantity", string.Empty);
-                    keyValues.Add("@delay", string.Empty);
-                    keyValues.Add("@read_timeout", string.Empty);
-                    keyValues.Add("@control_setting", string.Empty);
-                    keyValues.Add("@parameter_setting", string.Empty);
+                    keyValues.Add("@slaveid", 0);
+                    keyValues.Add("@digitalinputquantity", 0);
+                    keyValues.Add("@delay", 0);
+                    keyValues.Add("@readtimeout", 0);
+
+                    keyValues.Add("@controller_type", cmbComControllerType.SelectedValue);
                 }
 
                 Form form = Application.OpenForms["FormMain"];
@@ -505,7 +516,7 @@ namespace Adam.Menu.Communications
 
                 dBUtil.ExecuteNonQuery(strReplaceSql, keyValues);
 
-                MessageBox.Show("Done it.", "Save", MessageBoxButtons.OKCancel, MessageBoxIcon.Exclamation, MessageBoxDefaultButton.Button1);
+                MessageBox.Show("Done it.", "Save", MessageBoxButtons.OK, MessageBoxIcon.Exclamation, MessageBoxDefaultButton.Button1);
 
                 Adam.Util.SanwaUtil.addActionLog("Adam.Menu.SystemSetting", "FormCpmmandScript", Signal.Text);
 

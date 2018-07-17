@@ -32,7 +32,7 @@ namespace Adam.Menu.SystemSetting
                 dtTemp = new DataTable();
 
                 strSql = "SELECT list_type, list_id, CONCAT(list_name, ' - ', list_name_en) name, list_name, list_name_en, list_value, sort_sequence, active " +
-                         "FROM list_item " +
+                         "FROM config_list_item  " +
                          "WHERE list_type in ('VENDOR_CODE', 'DEVICE_TYPE') " +
                          "AND active = @active " +
                          "AND list_id <> @list_id " +
