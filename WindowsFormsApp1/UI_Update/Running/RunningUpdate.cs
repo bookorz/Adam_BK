@@ -182,6 +182,7 @@ namespace Adam.UI_Update.Running
                         }
                         else
                         {
+                            ProcessRecord.CreatePr(DestPort);
                             DestPort.Available = true;
                         }
                         FinPort.Used = false;

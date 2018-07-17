@@ -202,6 +202,6 @@ C:\Users\ethan_huang\source\repos\Adam\WindowsFormsApp1\bin\Debug\Dapper.xml
 C:\Users\ethan_huang\source\repos\Adam\WindowsFormsApp1\obj\Debug\Adam.exe.config
 C:\Users\ethan_huang\source\repos\Adam\WindowsFormsApp1\obj\Debug\Adam.Menu.RunningScreen.FormRunningScreen.resources
 C:\Users\ethan_huang\source\repos\Adam\WindowsFormsApp1\bin\Debug\config\CommandScript\LoadPortUnloadAndLoad.json
-C:\Users\ethan_huang\source\repos\Adam\WindowsFormsApp1\obj\Debug\Adam.Menu.SystemSetting.FormCpmmandScript.resources
 C:\Users\ethan_huang\source\repos\Adam\WindowsFormsApp1\obj\Debug\Adam.Menu.SystemSetting.FormDIOSetting.resources
 C:\Users\ethan_huang\source\repos\Adam\WindowsFormsApp1\obj\Debug\Adam.Menu.SystemSetting.FormSignalTower.resources
+C:\Users\ethan_huang\source\repos\Adam\WindowsFormsApp1\obj\Debug\Adam.Menu.SystemSetting.FormCommandScript.resources

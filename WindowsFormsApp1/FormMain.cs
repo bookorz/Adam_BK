@@ -174,15 +174,15 @@ namespace Adam
 
                 foreach (Node each in NodeManagement.GetList())
                 {
-                    switch (each.Type)
+                    switch (each.Type.ToUpper())
                     {
-                        case "Robot":
+                        case "ROBOT":
                             each.ExcuteScript("RobotInit", "Initialize");
                             break;
-                        case "Aligner":
+                        case "ALIGNER":
                             each.ExcuteScript("AlignerInit", "Initialize");
                             break;
-                        case "LoadPort":
+                        case "LOADPORT":
                             each.ExcuteScript("LoadPortInit", "Initialize");
                             break;
                     }
@@ -904,10 +904,12 @@ namespace Adam
         public void On_Data_Chnaged(string Parameter, string Value)
         {
             DIOUpdate.UpdateDIOStatus(Parameter, Value);
+            
         }
 
         public void On_Alarm_Happen(string DIOName, string ErrorCode)
         {
+            
             AlarmInfo CurrentAlarm = new AlarmInfo();
             CurrentAlarm.NodeName = DIOName;
             CurrentAlarm.AlarmCode = ErrorCode;
@@ -915,7 +917,7 @@ namespace Adam
             try
             {
 
-                AlarmMessage Detail = AlmMapping.Get("SANWA", "DIO", CurrentAlarm.AlarmCode);
+                AlarmMessage Detail = AlmMapping.Get("SANWA", "SYSTEM", CurrentAlarm.AlarmCode);
 
                 CurrentAlarm.SystemAlarmCode = Detail.CodeID;
                 CurrentAlarm.Desc = Detail.Code_Cause;

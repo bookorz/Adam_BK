@@ -88,6 +88,16 @@ namespace Adam.UI_Update.Layout
                                 case "FALSE":
                                     Signal.BackColor = Color.Red;
                                     break;
+                                case "BLINK":
+                                    if(Signal.BackColor == Color.Red)
+                                    {
+                                        Signal.BackColor = Color.DimGray;
+                                    }
+                                    else
+                                    {
+                                        Signal.BackColor = Color.Red;
+                                    }
+                                    break;
                             }
                             break;
                     }
