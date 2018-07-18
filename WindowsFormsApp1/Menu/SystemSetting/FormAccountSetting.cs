@@ -115,7 +115,7 @@ namespace Adam.Menu.SystemSetting
                     }
                     else
                     {
-                        cmbGroup.DataSource = dtAccountGroup.Select("user_group_id = 'OP'").CopyToDataTable().DefaultView.ToTable(true, new string[] { "user_group_id" });
+                        cmbGroup.DataSource = dtAccountGroup.Select("user_group_id = '" + strUserGroup + "'").CopyToDataTable().DefaultView.ToTable(true, new string[] { "user_group_id" });
                         cmbGroup.DisplayMember = "user_group_id";
                         cmbGroup.ValueMember = "user_group_id";
                         cmbGroup.SelectedIndex = -1;
