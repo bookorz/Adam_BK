@@ -354,9 +354,9 @@ namespace Adam.Menu.WaferMapping
                 if (AssignStatus.Equals("Assign Cancel"))
                 {
                     port.Available = false;
-                    ProcessRecord.CreatePr(port);
-                    
-                    
+                    ProcessRecord.CancelPr(port);
+
+
 
                     (sender as Button).Text = "Assign Complete";
                     (sender as Button).BackColor = Color.Gainsboro;
@@ -368,10 +368,15 @@ namespace Adam.Menu.WaferMapping
                 }
                 else if (AssignStatus.Equals("Assign Complete"))
                 {
-                   
+                    TextBox fp = this.Controls.Find(PortName + "_FoupID", true).FirstOrDefault() as TextBox;
+                    port.FoupID = fp.Text;
+                    Node desport = NodeManagement.Get(port.DestPort);
+                    fp = this.Controls.Find(desport.Name + "_FoupID", true).FirstOrDefault() as TextBox;
+                    desport.FoupID = fp.Text;
+
                     port.Available = true;
-                    ProcessRecord.CancelPr(port);
                     
+                    ProcessRecord.CreatePr(port);
 
                     (sender as Button).Text = "Assign Cancel";
                     (sender as Button).BackColor = Color.Green;
@@ -385,6 +390,54 @@ namespace Adam.Menu.WaferMapping
             else
             {
                 MessageBox.Show(PortName + "不存在!");
+            }
+        }
+
+        private void LoadPort_Align_ck_CheckedChanged(object sender, EventArgs e)
+        {
+            string PortName = (sender as CheckBox).Name.Replace("_Align_ck", "");
+            Node port = NodeManagement.Get(PortName);
+            if (port != null)
+            {
+                foreach(Job j in port.JobList.Values.ToList())
+                {
+                    j.AlignerFlag = (sender as CheckBox).Checked;
+                }
+            }
+            else
+            {
+                MessageBox.Show("Port "+ PortName +" not found.");
+            }
+        }
+
+        private void LoadPort_OCR_ck_CheckedChanged(object sender, EventArgs e)
+        {
+            string PortName = (sender as CheckBox).Name.Replace("_OCR_ck", "");
+            Node port = NodeManagement.Get(PortName);
+            if (port != null)
+            {
+                foreach (Job j in port.JobList.Values.ToList())
+                {
+                    j.OCRFlag = (sender as CheckBox).Checked;
+                }
+            }
+            else
+            {
+                MessageBox.Show("Port " + PortName + " not found.");
+            }
+        }
+
+        private void LoadPort_FoupID_TextChanged(object sender, EventArgs e)
+        {
+            string PortName = (sender as TextBox).Name.Replace("_FoupID", "");
+            Node port = NodeManagement.Get(PortName);
+            if (port != null)
+            {
+                port.FoupID = (sender as TextBox).Text;
+            }
+            else
+            {
+                MessageBox.Show("Port " + PortName + " not found.");
             }
         }
     }

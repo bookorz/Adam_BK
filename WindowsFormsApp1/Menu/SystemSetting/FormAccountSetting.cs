@@ -310,6 +310,13 @@ namespace Adam.Menu.SystemSetting
                 }
                 else if (btnModifyUser.BackColor == Color.RoyalBlue)
                 {
+                    if (txbUserID.Text.Trim().Equals(string.Empty) || txbUserName.Text.Trim().Equals(string.Empty) ||
+                        txbPassword.Text.Trim().Equals(string.Empty) || cmbGroup.SelectedIndex == -1 )
+                    {
+                        MessageBox.Show("Missing the data.", "Account Setting", MessageBoxButtons.OK, MessageBoxIcon.Warning, MessageBoxDefaultButton.Button1);
+                        return;
+                    }
+
                     strSql = "UPDATE account SET user_name = @user_name, " +
                                 "user_group_id = @user_group_id," +
                                 "active = @active, " +
@@ -325,6 +332,14 @@ namespace Adam.Menu.SystemSetting
                 }
                 else if (btnChangePassword.BackColor == Color.RoyalBlue)
                 {
+                    if (txbUserID.Text.Trim().Equals(string.Empty) || txbUserName.Text.Trim().Equals(string.Empty) ||
+                        txbPassword.Text.Trim().Equals(string.Empty) || cmbGroup.SelectedIndex == -1 || txbPasswordNew.Text.Trim().Equals(string.Empty)
+                        || txbPasswordNewAgain.Text.Trim().Equals(string.Empty))
+                    {
+                        MessageBox.Show("Missing the data.", "Account Setting", MessageBoxButtons.OK, MessageBoxIcon.Warning, MessageBoxDefaultButton.Button1);
+                        return;
+                    }
+
                     if (txbPasswordNew.Text.Trim().Equals(string.Empty) || txbPasswordNewAgain.Text.Trim().Equals(string.Empty))
                     {
                         MessageBox.Show("Missing the data.", "Account Setting", MessageBoxButtons.OK, MessageBoxIcon.Warning, MessageBoxDefaultButton.Button1);
@@ -349,17 +364,24 @@ namespace Adam.Menu.SystemSetting
 
                 dBUtil.ExecuteNonQuery(strSql, keyValues);
                 Adam.Util.SanwaUtil.addActionLog("Adam.Menu.SystemSetting", "FormAccountSetting", strUserID);
-                MessageBox.Show("Done it.", "Save", MessageBoxButtons.OKCancel, MessageBoxIcon.Exclamation, MessageBoxDefaultButton.Button1);
+                MessageBox.Show("Done it.", "Save", MessageBoxButtons.OK, MessageBoxIcon.Exclamation, MessageBoxDefaultButton.Button1);
                 FormAccountSetting_Load(sender, e);
 
                 gbAccount.Enabled = false;
                 txbUserID.Text = string.Empty;
+                txbUserID.BackColor = Color.White;
                 txbUserName.Text = string.Empty;
+                txbUserName.BackColor = Color.White;
                 cmbGroup.SelectedIndex = -1;
+                cmbGroup.BackColor = Color.White;
                 txbPassword.Text = string.Empty;
+                txbPassword.BackColor = Color.White;
                 txbPasswordNew.Text = string.Empty;
+                txbPasswordNew.BackColor = Color.White;
                 txbPasswordNewAgain.Text = string.Empty;
+                txbPasswordNewAgain.BackColor = Color.White;
                 chbActive.Checked = false;
+                chbActive.BackColor = SystemColors.Control;
                 btnCreateUser.BackColor = Color.Silver;
                 btnModifyUser.BackColor = Color.Silver;
                 btnChangePassword.BackColor = Color.Silver;
@@ -381,18 +403,25 @@ namespace Adam.Menu.SystemSetting
 
                 txbUserID.Text = string.Empty;
                 txbUserID.Enabled = true;
+                txbUserID.BackColor = Color.LemonChiffon;
                 txbUserName.Text = string.Empty;
                 txbUserName.Enabled = true;
+                txbUserName.BackColor = Color.LemonChiffon;
                 cmbGroup.SelectedIndex = -1;
                 cmbGroup.Enabled = true;
+                cmbGroup.BackColor = Color.LemonChiffon;
                 txbPassword.Text = string.Empty;
                 txbPassword.Enabled = true;
+                txbPassword.BackColor = Color.LemonChiffon;
                 labUserPasswordNew.Enabled = false;
                 labUserPasswordNewAgain.Enabled = false;
                 txbPasswordNew.Enabled = false;
                 txbPasswordNewAgain.Enabled = false;
+                txbPasswordNew.BackColor = Color.White;
+                txbPasswordNewAgain.BackColor = Color.White;
                 chbActive.Checked = false;
                 chbActive.Enabled = true;
+                chbActive.BackColor = Color.LemonChiffon;
 
                 btnCreateUser.BackColor = Color.RoyalBlue;
                 btnModifyUser.BackColor = Color.Silver;
@@ -414,18 +443,25 @@ namespace Adam.Menu.SystemSetting
 
                 txbUserID.Text = string.Empty;
                 txbUserID.Enabled = false;
+                txbUserID.BackColor = Color.White;
                 txbUserName.Text = string.Empty;
                 txbUserName.Enabled = true;
+                txbUserName.BackColor = Color.LemonChiffon;
                 cmbGroup.SelectedIndex = -1;
                 cmbGroup.Enabled = true;
+                cmbGroup.BackColor = Color.LemonChiffon;
                 txbPassword.Text = string.Empty;
                 txbPassword.Enabled = false;
+                txbPassword.BackColor = Color.White;
                 labUserPasswordNew.Enabled = false;
                 labUserPasswordNewAgain.Enabled = false;
                 txbPasswordNew.Enabled = false;
                 txbPasswordNewAgain.Enabled = false;
+                txbPasswordNew.BackColor = Color.White;
+                txbPasswordNewAgain.BackColor = Color.White;
                 chbActive.Checked = false;
                 chbActive.Enabled = true;
+                chbActive.BackColor = Color.LemonChiffon;
 
                 btnCreateUser.BackColor = Color.Silver;
                 btnModifyUser.BackColor = Color.RoyalBlue;
@@ -447,18 +483,25 @@ namespace Adam.Menu.SystemSetting
 
                 txbUserID.Text = string.Empty;
                 txbUserID.Enabled = false;
+                txbUserID.BackColor = Color.White;
                 txbUserName.Text = string.Empty;
                 txbUserName.Enabled = false;
+                txbUserName.BackColor = Color.White;
                 cmbGroup.SelectedIndex = -1;
                 cmbGroup.Enabled = false;
+                cmbGroup.BackColor = Color.White;
                 txbPassword.Text = string.Empty;
                 txbPassword.Enabled = false;
+                txbPassword.BackColor = Color.White;
                 labUserPasswordNew.Enabled = true;
                 labUserPasswordNewAgain.Enabled = true;
                 txbPasswordNew.Enabled = true;
                 txbPasswordNewAgain.Enabled = true;
+                txbPasswordNew.BackColor = Color.LemonChiffon;
+                txbPasswordNewAgain.BackColor = Color.LemonChiffon;
                 chbActive.Checked = false;
                 chbActive.Enabled = false;
+                chbActive.BackColor = SystemColors.Control;
 
                 btnCreateUser.BackColor = Color.Silver;
                 btnModifyUser.BackColor = Color.Silver;

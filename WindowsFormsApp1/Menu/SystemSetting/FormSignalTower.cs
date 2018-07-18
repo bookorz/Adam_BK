@@ -31,7 +31,7 @@ namespace Adam.Menu.SystemSetting
                 UpdateList();
 
                 strSql = "SELECT * " +
-                    "FROM list_item " +
+                    "FROM config_list_item " +
                     "WHERE list_type = 'SIGNAL_LIGHT_TYPE' " +
                     "ORDER BY sort_sequence ASC; ";
 
@@ -69,7 +69,7 @@ namespace Adam.Menu.SystemSetting
                 }
 
                 strSql = "SELECT * " +
-                        "FROM list_item " +
+                        "FROM config_list_item " +
                         "WHERE list_type = 'SIGNAL_BUZZER_TYPE' " +
                         "ORDER BY sort_sequence ASC; ";
 
@@ -142,6 +142,18 @@ namespace Adam.Menu.SystemSetting
 
         private void btnSave_Click(object sender, EventArgs e)
         {
+            if ((DataTable)lsbCondition.DataSource == null || ((DataTable)lsbCondition.DataSource).Rows.Count == 0)
+            {
+                MessageBox.Show("The grid data does not exist.", this.Name, MessageBoxButtons.OK, MessageBoxIcon.Warning, MessageBoxDefaultButton.Button1);
+                return;
+            }
+
+            if (lsbCondition.SelectedIndex < 0)
+            {
+                MessageBox.Show("Choose the condition.", this.Name, MessageBoxButtons.OK, MessageBoxIcon.Warning, MessageBoxDefaultButton.Button1);
+                return;
+            }
+
             string strSql = string.Empty;
             Dictionary<string, object> keyValues = new Dictionary<string, object>();
 
@@ -174,7 +186,7 @@ namespace Adam.Menu.SystemSetting
 
                 dBUtil.ExecuteNonQuery(strSql, keyValues);
 
-                MessageBox.Show("Done it.", "Save", MessageBoxButtons.OKCancel, MessageBoxIcon.Exclamation, MessageBoxDefaultButton.Button1);
+                MessageBox.Show("Done it.", "Save", MessageBoxButtons.OK, MessageBoxIcon.Exclamation, MessageBoxDefaultButton.Button1);
 
                 Adam.Util.SanwaUtil.addActionLog("Adam.Menu.SystemSetting", "FormSignalTower", Signal.Text);
 

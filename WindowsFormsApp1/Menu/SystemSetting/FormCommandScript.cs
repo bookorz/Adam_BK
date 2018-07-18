@@ -134,7 +134,7 @@ namespace Adam.Menu.SystemSetting
                     txbIndex.Text.Trim().Equals(string.Empty)
                     )
                 {
-                    MessageBox.Show("Miss input data in the form.", "Warning");
+                    MessageBox.Show("Miss input data in the form.", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Warning, MessageBoxDefaultButton.Button1);
                     return;
                 }
 
@@ -181,7 +181,7 @@ namespace Adam.Menu.SystemSetting
                 keyValues.Add("@Flag", txbFlag.Text.Trim());
 
                 dBUtil.ExecuteNonQuery(strSql, keyValues);
-                MessageBox.Show("Done it.", "Save", MessageBoxButtons.OKCancel, MessageBoxIcon.Exclamation, MessageBoxDefaultButton.Button1);
+                MessageBox.Show("Done it.", "Save", MessageBoxButtons.OK, MessageBoxIcon.Exclamation, MessageBoxDefaultButton.Button1);
 
                 Form form = Application.OpenForms["FormMain"];
                 Label Signal = form.Controls.Find("lbl_login_id", true).FirstOrDefault() as Label;

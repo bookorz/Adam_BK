@@ -120,7 +120,7 @@ namespace Adam.Menu.SystemSetting
         {
             if (txbParameter.Text.Trim().ToString().Equals(string.Empty))
             {
-                MessageBox.Show("Parameter is empty.", "Alart", MessageBoxButtons.OKCancel, MessageBoxIcon.Exclamation, MessageBoxDefaultButton.Button1);
+                MessageBox.Show("Parameter is empty.", "Alart", MessageBoxButtons.OK, MessageBoxIcon.Exclamation, MessageBoxDefaultButton.Button1);
                 txbParameter.Focus();
                 return;
             }
@@ -153,7 +153,7 @@ namespace Adam.Menu.SystemSetting
 
                 dBUtil.ExecuteNonQuery(strSql, keyValues);
                 Adam.Util.SanwaUtil.addActionLog("Adam.Menu.SystemSetting", "FormDIOSetting", Signal.Text);
-                MessageBox.Show("Done it.", "Save", MessageBoxButtons.OKCancel, MessageBoxIcon.Exclamation, MessageBoxDefaultButton.Button1);
+                MessageBox.Show("Done it.", "Save", MessageBoxButtons.OK, MessageBoxIcon.Exclamation, MessageBoxDefaultButton.Button1);
 
                 UpdateList();
             }

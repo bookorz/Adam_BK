@@ -90,7 +90,7 @@ namespace Adam.UI_Update.Monitoring
                             Label present = form.Controls.Find(node.Name + "_Slot_" + i.ToString(), true).FirstOrDefault() as Label;
                             if (present != null)
                             {
-                                
+
                                 Job tmp;
                                 if (node.JobList.TryGetValue(i.ToString(), out tmp))
                                 {
@@ -161,79 +161,31 @@ namespace Adam.UI_Update.Monitoring
                         Node CurrentNode = NodeManagement.Get(Job.Position);
                         if (LastNode != null && CurrentNode != null)
                         {
-                            for (int i = 1; i <= Tools.GetSlotCount(LastNode.Type); i++)
-                            {
-                                Label present = form.Controls.Find(LastNode.Name + "_Slot_" + i.ToString(), true).FirstOrDefault() as Label;
-                                if (present != null)
-                                {
-                                    
-                                    Job tmp;
-                                    if (LastNode.JobList.TryGetValue(i.ToString(), out tmp))
-                                    {
-                                        present.Text = tmp.Host_Job_Id;
-                                       
-                                        switch (present.Text)
-                                        {
-                                            case "No wafer":
-                                                present.BackColor = Color.DimGray;
-                                                present.ForeColor = Color.White;
-                                                break;
-                                            case "Crossed":
-                                            case "Undefined":
-                                            case "Double":
-                                                present.BackColor = Color.Red;
-                                                present.ForeColor = Color.White;
-                                                break;
-                                            default:
-                                                present.BackColor = Color.Green;
-                                                present.ForeColor = Color.White;
-                                                break;
-                                        }
 
-                                    }
-                                    else
-                                    {
-                                        present.Text = "";
-                                        present.BackColor = Color.White;
-                                    }
-                                }
+                            Label present = form.Controls.Find(Job.LastNode + "_Slot_" + Job.LastSlot, true).FirstOrDefault() as Label;
+                            if (present != null)
+                            {
+
+                                present.Text = "No wafer";
+                                present.BackColor = Color.DimGray;
+                                present.ForeColor = Color.White;
+
                             }
 
-                            for (int i = 1; i <= Tools.GetSlotCount(CurrentNode.Type); i++)
+
+
+                            present = form.Controls.Find(Job.Position + "_Slot_" + Job.Slot, true).FirstOrDefault() as Label;
+                            if (present != null)
                             {
-                                Label present = form.Controls.Find(CurrentNode.Name + "_Slot_" + i.ToString(), true).FirstOrDefault() as Label;
-                                if (present != null)
-                                {
-                                    
-                                    Job tmp;
-                                    if (CurrentNode.JobList.TryGetValue(i.ToString(), out tmp))
-                                    {
-                                        present.Text = tmp.Host_Job_Id;
-                                        switch (present.Text)
-                                        {
-                                            case "No wafer":
-                                                present.BackColor = Color.DimGray;
-                                                present.ForeColor = Color.White;
-                                                break;
-                                            case "Crossed":
-                                            case "Undefined":
-                                            case "Double":
-                                                present.BackColor = Color.Red;
-                                                present.ForeColor = Color.White;
-                                                break;
-                                            default:
-                                                present.BackColor = Color.Green;
-                                                present.ForeColor = Color.White;
-                                                break;
-                                        }
-                                    }
-                                    else
-                                    {
-                                        present.Text = "";
-                                        present.BackColor = Color.White;
-                                    }
-                                }
+
+
+                                present.Text = Job.Host_Job_Id;
+
+                                present.BackColor = Color.Green;
+                                present.ForeColor = Color.White;
+
                             }
+
                         }
                     }
                 }
