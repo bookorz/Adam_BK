@@ -10,16 +10,17 @@ using System.Threading;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using TransferControl.Engine;
+using TransferControl.Management;
 
 namespace Adam.UI_Update.OCR
 {
     class OCRUpdate
     {
         static ILog logger = LogManager.GetLogger(typeof(OCRUpdate));
-        delegate void UpdateOCR(string OCRName, string In);
+        delegate void UpdateOCR(string OCRName, string In, Job Job);
 
 
-        public static void UpdateOCRRead(string OCRName,string WaferID)
+        public static void UpdateOCRRead(string OCRName,string WaferID,Job Job)
         {
             try
             {
@@ -35,7 +36,7 @@ namespace Adam.UI_Update.OCR
                 if (Tb_OCRRead.InvokeRequired)
                 {
                     UpdateOCR ph = new UpdateOCR(UpdateOCRRead);
-                    Tb_OCRRead.BeginInvoke(ph, OCRName, WaferID);
+                    Tb_OCRRead.BeginInvoke(ph, OCRName, WaferID, Job);
                 }
                 else
                 {
@@ -56,25 +57,46 @@ namespace Adam.UI_Update.OCR
                             src = SystemConfig.Get().OCR2ImgSourcePath;
                             break;
                     }
+                    
                     Thread.Sleep(500);
-                    string saveTmpPath = save + "/" + WaferID + "_" + DateTime.Now.ToString("yyyy_mm_dd_HH_MM_ss") + ".bmp";
-                    string savePath = save + "/" + WaferID + "_" + DateTime.Now.ToString("yyyy_mm_dd_HH_MM_ss") + ".jpg";
-                    WaferID = WaferID.Replace("[", "").Replace("]", "").Split(',')[0];
-                    Tb_OCRRead.Text = WaferID;
-                    string[] files = Directory.GetFiles(src);
-                    List<string> fileList = files.ToList();
-                    if (fileList.Count != 0)
+                    Node OCR = NodeManagement.Get(OCRName);
+                    if (OCR != null)
                     {
-                        fileList.Sort((x, y) => { return -File.GetLastWriteTime(x).CompareTo(File.GetLastWriteTime(y)); });
-                        File.Copy(fileList[0], saveTmpPath);
-                        Image bmp = Image.FromFile(saveTmpPath);
-                        bmp.Save(savePath, System.Drawing.Imaging.ImageFormat.Jpeg);
-                        bmp.Dispose();
-                        PictureBox Pic_OCR = form.Controls.Find(OCRName + "_Pic", true).FirstOrDefault() as PictureBox;
-                        File.Delete(saveTmpPath);
-                        if (Pic_OCR == null)
-                            return;
-                        Pic_OCR.Image = Image.FromFile(savePath);
+                        string saveTmpPath = "";
+                        string savePath = "";
+                        switch (OCR.Brand)
+                        {
+                            case "HST":
+                                saveTmpPath = save + "/" + WaferID + "_" + DateTime.Now.ToString("yyyy_mm_dd_HH_MM_ss") + ".bmp";
+                                savePath = save + "/" + WaferID + "_" + DateTime.Now.ToString("yyyy_mm_dd_HH_MM_ss") + ".jpg";
+                                break;
+                            case "COGNEX":
+                                saveTmpPath = save + "/" + WaferID + "_" + DateTime.Now.ToString("yyyy_mm_dd_HH_MM_ss") + ".bmp";
+                                savePath = save + "/" + WaferID + "_" + DateTime.Now.ToString("yyyy_mm_dd_HH_MM_ss") + ".jpg";
+                                break;
+                        }
+                        if (savePath != "")
+                        {
+                            WaferID = WaferID.Replace("[", "").Replace("]", "").Split(',')[0];
+                            Tb_OCRRead.Text = WaferID;
+                            string[] files = Directory.GetFiles(src);
+                            List<string> fileList = files.ToList();
+                            if (fileList.Count != 0)
+                            {
+                                fileList.Sort((x, y) => { return -File.GetLastWriteTime(x).CompareTo(File.GetLastWriteTime(y)); });
+                                File.Copy(fileList[0], saveTmpPath);
+                                Image bmp = Image.FromFile(saveTmpPath);
+                                bmp.Save(savePath, System.Drawing.Imaging.ImageFormat.Jpeg);
+                                bmp.Dispose();
+                                PictureBox Pic_OCR = form.Controls.Find(OCRName + "_Pic", true).FirstOrDefault() as PictureBox;
+                                File.Delete(saveTmpPath);
+                                if (Pic_OCR == null)
+                                    return;
+                                Pic_OCR.Image = Image.FromFile(savePath);
+                                Job.OCRImgPath = savePath;
+                                ProcessRecord.updateSubstrateOCR(NodeManagement.Get(Job.FromPort).PrID, Job);
+                            }
+                        }
                     }
                 }
 
@@ -86,47 +108,47 @@ namespace Adam.UI_Update.OCR
             }
         }
 
-        public static void UpdateOCRStatus(string OCRName, string Status)
-        {
-            try
-            {
-                Form form = Application.OpenForms["FormOCR"];
-                Button Btn_OCROnline;
-                if (form == null)
-                    return;
+        //public static void UpdateOCRStatus(string OCRName, string Status)
+        //{
+        //    try
+        //    {
+        //        Form form = Application.OpenForms["FormOCR"];
+        //        Button Btn_OCROnline;
+        //        if (form == null)
+        //            return;
 
-                Btn_OCROnline = form.Controls.Find(OCRName+"Online_Btn", true).FirstOrDefault() as Button;
-                if (Btn_OCROnline == null)
-                    return;
-                Button Btn_OCROffline = form.Controls.Find(OCRName + "Offline_Btn", true).FirstOrDefault() as Button;
-                if (Btn_OCROffline == null)
-                    return;
-                if (Btn_OCROnline.InvokeRequired)
-                {
-                    UpdateOCR ph = new UpdateOCR(UpdateOCRStatus);
-                    Btn_OCROnline.BeginInvoke(ph, OCRName, Status);
-                }
-                else
-                {
-                    switch (Status)
-                    {
-                        case "1":
-                            Btn_OCROnline.Enabled = false;
-                            Btn_OCROffline.Enabled = true;
-                            break;
-                        case "0":
-                            Btn_OCROnline.Enabled = true;
-                            Btn_OCROffline.Enabled = false;
-                            break;
-                    }
-                }
+        //        Btn_OCROnline = form.Controls.Find(OCRName+"Online_Btn", true).FirstOrDefault() as Button;
+        //        if (Btn_OCROnline == null)
+        //            return;
+        //        Button Btn_OCROffline = form.Controls.Find(OCRName + "Offline_Btn", true).FirstOrDefault() as Button;
+        //        if (Btn_OCROffline == null)
+        //            return;
+        //        if (Btn_OCROnline.InvokeRequired)
+        //        {
+        //            UpdateOCR ph = new UpdateOCR(UpdateOCRStatus);
+        //            Btn_OCROnline.BeginInvoke(ph, OCRName, Status);
+        //        }
+        //        else
+        //        {
+        //            switch (Status)
+        //            {
+        //                case "1":
+        //                    Btn_OCROnline.Enabled = false;
+        //                    Btn_OCROffline.Enabled = true;
+        //                    break;
+        //                case "0":
+        //                    Btn_OCROnline.Enabled = true;
+        //                    Btn_OCROffline.Enabled = false;
+        //                    break;
+        //            }
+        //        }
 
 
-            }
-            catch
-            {
-                logger.Error("UpdateOCRStatus: Update fail.");
-            }
-        }
+        //    }
+        //    catch
+        //    {
+        //        logger.Error("UpdateOCRStatus: Update fail.");
+        //    }
+        //}
     }
 }
