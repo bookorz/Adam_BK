@@ -93,7 +93,7 @@ namespace Adam.Menu.Status
                 Thread.Sleep(1000);//避免查詢指令尚未回來
                 foreach (Node each in NodeManagement.GetList())
                 {
-                    string ctrl_status = ControllerManagement.Get(each.Controller)!= null ? ControllerManagement.Get(each.Controller).Status:"";
+                    string ctrl_status = ControllerManagement.Get(each.Controller) != null ? ControllerManagement.Get(each.Controller).Status : "";
                     if (ctrl_status.Equals("Connected") && each.ByPass == false)
                     {
                         if (each.Brand.ToUpper().Equals("KAWASAKI"))
@@ -145,8 +145,8 @@ namespace Adam.Menu.Status
                     }
                     else
                     {
-                        //continue;
-                        //do nothing 以下為假資料
+                        ////continue;
+                        ////do nothing 以下為假資料
                         //string[] states = new String[] { "0", "1", "2", "3", "A", "E", "?" };
                         //string state;
                         //int idx = 0;
@@ -243,7 +243,7 @@ namespace Adam.Menu.Status
                     IController Ctrl = ControllerManagement.Get(each.Controller);
                     //string ctrl_status = ControllerManagement.Get(each.Controller).Status;
                     string ctrl_status = ControllerManagement.Get(each.Controller) != null ? ControllerManagement.Get(each.Controller).Status : "";
-                    if (ctrl_status.Equals("Connected") && each.ByPass == false)
+                    if (ctrl_status.Equals("Connected") && each.ByPass == false )
                     {
                         string seq = "";
                         Transaction txn = new Transaction();
