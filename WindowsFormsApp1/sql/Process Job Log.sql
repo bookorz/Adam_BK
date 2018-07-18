@@ -20,7 +20,7 @@ SELECT pr_id, foup_id, slot_list, process_cnt,
        date_format(start_time,'%Y-%m-%d %H:%i:%s.%f') AS start_time, 
 	   date_format(last_update_time,'%Y-%m-%d %H:%i:%s.%f') AS last_update_time, 
 	   last_update_status, process_seconds,
-       CASE WHEN last_update_status = 'COMPLETED' THEN ROUND(process_cnt / process_seconds * 3600)
+       CASE WHEN last_update_status = 'COMPLETE' THEN ROUND(process_cnt / process_seconds * 3600)
 		      ELSE 0 END AS wph
   FROM tmp2
  WHERE create_time BETWEEN @from_dt AND @to_dt

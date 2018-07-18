@@ -93,7 +93,7 @@ namespace Adam.Menu.Status
                 Thread.Sleep(1000);//避免查詢指令尚未回來
                 foreach (Node each in NodeManagement.GetList())
                 {
-                    string ctrl_status = ControllerManagement.Get(each.Controller).Status;
+                    string ctrl_status = ControllerManagement.Get(each.Controller) != null ? ControllerManagement.Get(each.Controller).Status : "";
                     if (ctrl_status.Equals("Connected") && each.ByPass == false)
                     {
                         if (each.Brand.ToUpper().Equals("KAWASAKI"))
@@ -145,53 +145,53 @@ namespace Adam.Menu.Status
                     }
                     else
                     {
-                        //continue;
-                        //do nothing 以下為假資料
-                        string[] states = new String[] { "0", "1", "2", "3", "A", "E", "?" };
-                        string state;
-                        int idx = 0;
-                        switch (each.Type)
-                        {
-                            case "Robot":
-                                DataGridViewRow robotRow = (DataGridViewRow)dgvRstatus.Rows[0].Clone();
-                                robotRow.Cells[0].Value = each.Name;
-                                for (int i = 1; i <= 32; i++)
-                                {
-                                    idx = new Random(i).Next() % 7;
-                                    state = states[idx];
-                                    string value = state;
-                                    robotRow.Cells[i].Value = value;
-                                    robotRow.Cells[i].Style.BackColor = getStatusColor(value);
-                                }
-                                dgvRstatus.Rows.Add(robotRow);
-                                break;
-                            case "Aligner":
-                                DataGridViewRow alignerRow = (DataGridViewRow)dgvAstatus.Rows[0].Clone();
-                                alignerRow.Cells[0].Value = each.Name;
-                                for (int i = 1; i <= 32; i++)
-                                {
-                                    idx = new Random(i).Next() % 7;
-                                    state = states[idx];
-                                    string value = state;
-                                    alignerRow.Cells[i].Value = value;
-                                    alignerRow.Cells[i].Style.BackColor = getStatusColor(value);
-                                }
-                                dgvAstatus.Rows.Add(alignerRow);
-                                break;
-                            case "LoadPort":
-                                DataGridViewRow portRow = (DataGridViewRow)dgvLstatus.Rows[0].Clone();
-                                portRow.Cells[0].Value = each.Name;
-                                for (int i = 1; i <= 20; i++)
-                                {
-                                    idx = new Random(i).Next() % 7;
-                                    state = states[idx];
-                                    string value = state;
-                                    portRow.Cells[i].Value = state;
-                                    portRow.Cells[i].Style.BackColor = getStatusColor(value);
-                                }
-                                dgvLstatus.Rows.Add(portRow);
-                                break;
-                        }
+                        ////continue;
+                        ////do nothing 以下為假資料
+                        //string[] states = new String[] { "0", "1", "2", "3", "A", "E", "?" };
+                        //string state;
+                        //int idx = 0;
+                        //switch (each.Type)
+                        //{
+                        //    case "Robot":
+                        //        DataGridViewRow robotRow = (DataGridViewRow)dgvRstatus.Rows[0].Clone();
+                        //        robotRow.Cells[0].Value = each.Name;
+                        //        for (int i = 1; i <= 32; i++)
+                        //        {
+                        //            idx = new Random(i).Next() % 7;
+                        //            state = states[idx];
+                        //            string value = state;
+                        //            robotRow.Cells[i].Value = value;
+                        //            robotRow.Cells[i].Style.BackColor = getStatusColor(value);
+                        //        }
+                        //        dgvRstatus.Rows.Add(robotRow);
+                        //        break;
+                        //    case "Aligner":
+                        //        DataGridViewRow alignerRow = (DataGridViewRow)dgvAstatus.Rows[0].Clone();
+                        //        alignerRow.Cells[0].Value = each.Name;
+                        //        for (int i = 1; i <= 32; i++)
+                        //        {
+                        //            idx = new Random(i).Next() % 7;
+                        //            state = states[idx];
+                        //            string value = state;
+                        //            alignerRow.Cells[i].Value = value;
+                        //            alignerRow.Cells[i].Style.BackColor = getStatusColor(value);
+                        //        }
+                        //        dgvAstatus.Rows.Add(alignerRow);
+                        //        break;
+                        //    case "LoadPort":
+                        //        DataGridViewRow portRow = (DataGridViewRow)dgvLstatus.Rows[0].Clone();
+                        //        portRow.Cells[0].Value = each.Name;
+                        //        for (int i = 1; i <= 20; i++)
+                        //        {
+                        //            idx = new Random(i).Next() % 7;
+                        //            state = states[idx];
+                        //            string value = state;
+                        //            portRow.Cells[i].Value = state;
+                        //            portRow.Cells[i].Style.BackColor = getStatusColor(value);
+                        //        }
+                        //        dgvLstatus.Rows.Add(portRow);
+                        //        break;
+                        //}
                     }
                 }
             }
@@ -240,7 +240,8 @@ namespace Adam.Menu.Status
                 foreach (Node each in NodeManagement.GetList())
                 {
                     IController Ctrl = ControllerManagement.Get(each.Controller);
-                    string ctrl_status = ControllerManagement.Get(each.Controller).Status;
+                    //string ctrl_status = ControllerManagement.Get(each.Controller).Status;
+                    string ctrl_status = ControllerManagement.Get(each.Controller) != null ? ControllerManagement.Get(each.Controller).Status : "";
                     if (ctrl_status.Equals("Connected") && each.ByPass == false )
                     {
                         string seq = "";
