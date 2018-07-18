@@ -113,8 +113,8 @@ namespace Adam.Menu.SystemSetting
                         "AND vendor = @vendor " +
                         "AND node_type  = @node_type";
 
-                    keyValues.Add("@vendor", lsbAlarmConditionVendorCode.SelectedValue.ToString());
-                    keyValues.Add("@node_type", lsbAlarmConditionDeviceType.SelectedValue.ToString());
+                    keyValues.Add("@vendor", lsbAlarmConditionVendorCode.SelectedValue.ToString().Equals("ICP_DAS") ? "SANWA" : lsbAlarmConditionVendorCode.SelectedValue.ToString());
+                    keyValues.Add("@node_type", lsbAlarmConditionDeviceType.SelectedValue.ToString().Equals("DIO") ? "SYSTEM" : lsbAlarmConditionDeviceType.SelectedValue.ToString());
 
                     dtTemp = dBUtil.GetDataTable(strSql, keyValues);
                     dgvlsbAlarmData.AutoGenerateColumns = false;
