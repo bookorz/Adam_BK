@@ -876,9 +876,11 @@
             // 
             // OCR01_Pic
             // 
+            this.OCR01_Pic.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             this.OCR01_Pic.Location = new System.Drawing.Point(14, 9);
             this.OCR01_Pic.Name = "OCR01_Pic";
             this.OCR01_Pic.Size = new System.Drawing.Size(215, 79);
+            this.OCR01_Pic.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
             this.OCR01_Pic.TabIndex = 1;
             this.OCR01_Pic.TabStop = false;
             // 
@@ -917,6 +919,7 @@
             this.OCR02_Pic.Location = new System.Drawing.Point(14, 9);
             this.OCR02_Pic.Name = "OCR02_Pic";
             this.OCR02_Pic.Size = new System.Drawing.Size(215, 79);
+            this.OCR02_Pic.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
             this.OCR02_Pic.TabIndex = 1;
             this.OCR02_Pic.TabStop = false;
             // 
@@ -1308,6 +1311,7 @@
             this.LoadPort08_Slot_1.TabIndex = 82;
             this.LoadPort08_Slot_1.Tag = "1";
             this.LoadPort08_Slot_1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.LoadPort08_Slot_1.DoubleClick += new System.EventHandler(this.Slot_Click);
             // 
             // label344
             // 
@@ -1341,6 +1345,7 @@
             this.LoadPort08_Slot_2.TabIndex = 79;
             this.LoadPort08_Slot_2.Tag = "1";
             this.LoadPort08_Slot_2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.LoadPort08_Slot_2.DoubleClick += new System.EventHandler(this.Slot_Click);
             // 
             // label346
             // 
@@ -1374,6 +1379,7 @@
             this.LoadPort08_Slot_3.TabIndex = 76;
             this.LoadPort08_Slot_3.Tag = "1";
             this.LoadPort08_Slot_3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.LoadPort08_Slot_3.DoubleClick += new System.EventHandler(this.Slot_Click);
             // 
             // label348
             // 
@@ -1407,6 +1413,7 @@
             this.LoadPort08_Slot_4.TabIndex = 73;
             this.LoadPort08_Slot_4.Tag = "1";
             this.LoadPort08_Slot_4.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.LoadPort08_Slot_4.DoubleClick += new System.EventHandler(this.Slot_Click);
             // 
             // label350
             // 
@@ -1440,6 +1447,7 @@
             this.LoadPort08_Slot_5.TabIndex = 70;
             this.LoadPort08_Slot_5.Tag = "1";
             this.LoadPort08_Slot_5.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.LoadPort08_Slot_5.DoubleClick += new System.EventHandler(this.Slot_Click);
             // 
             // label352
             // 
@@ -1473,6 +1481,7 @@
             this.LoadPort08_Slot_6.TabIndex = 67;
             this.LoadPort08_Slot_6.Tag = "1";
             this.LoadPort08_Slot_6.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.LoadPort08_Slot_6.DoubleClick += new System.EventHandler(this.Slot_Click);
             // 
             // label354
             // 
@@ -1506,6 +1515,7 @@
             this.LoadPort08_Slot_7.TabIndex = 64;
             this.LoadPort08_Slot_7.Tag = "1";
             this.LoadPort08_Slot_7.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.LoadPort08_Slot_7.DoubleClick += new System.EventHandler(this.Slot_Click);
             // 
             // label356
             // 
@@ -1539,6 +1549,7 @@
             this.LoadPort08_Slot_8.TabIndex = 61;
             this.LoadPort08_Slot_8.Tag = "1";
             this.LoadPort08_Slot_8.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.LoadPort08_Slot_8.DoubleClick += new System.EventHandler(this.Slot_Click);
             // 
             // label358
             // 
@@ -1572,6 +1583,7 @@
             this.LoadPort08_Slot_9.TabIndex = 58;
             this.LoadPort08_Slot_9.Tag = "1";
             this.LoadPort08_Slot_9.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.LoadPort08_Slot_9.DoubleClick += new System.EventHandler(this.Slot_Click);
             // 
             // label360
             // 
@@ -1605,6 +1617,7 @@
             this.LoadPort08_Slot_10.TabIndex = 55;
             this.LoadPort08_Slot_10.Tag = "1";
             this.LoadPort08_Slot_10.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.LoadPort08_Slot_10.DoubleClick += new System.EventHandler(this.Slot_Click);
             // 
             // label362
             // 
@@ -1638,6 +1651,7 @@
             this.LoadPort08_Slot_11.TabIndex = 52;
             this.LoadPort08_Slot_11.Tag = "1";
             this.LoadPort08_Slot_11.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.LoadPort08_Slot_11.DoubleClick += new System.EventHandler(this.Slot_Click);
             // 
             // label364
             // 
@@ -1671,6 +1685,7 @@
             this.LoadPort08_Slot_12.TabIndex = 49;
             this.LoadPort08_Slot_12.Tag = "1";
             this.LoadPort08_Slot_12.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.LoadPort08_Slot_12.DoubleClick += new System.EventHandler(this.Slot_Click);
             // 
             // label366
             // 
@@ -1704,6 +1719,7 @@
             this.LoadPort08_Slot_13.TabIndex = 46;
             this.LoadPort08_Slot_13.Tag = "1";
             this.LoadPort08_Slot_13.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.LoadPort08_Slot_13.DoubleClick += new System.EventHandler(this.Slot_Click);
             // 
             // label368
             // 
@@ -1737,6 +1753,7 @@
             this.LoadPort08_Slot_14.TabIndex = 43;
             this.LoadPort08_Slot_14.Tag = "1";
             this.LoadPort08_Slot_14.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.LoadPort08_Slot_14.DoubleClick += new System.EventHandler(this.Slot_Click);
             // 
             // label370
             // 
@@ -1770,6 +1787,7 @@
             this.LoadPort08_Slot_15.TabIndex = 40;
             this.LoadPort08_Slot_15.Tag = "1";
             this.LoadPort08_Slot_15.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.LoadPort08_Slot_15.DoubleClick += new System.EventHandler(this.Slot_Click);
             // 
             // label372
             // 
@@ -1803,6 +1821,7 @@
             this.LoadPort08_Slot_16.TabIndex = 37;
             this.LoadPort08_Slot_16.Tag = "1";
             this.LoadPort08_Slot_16.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.LoadPort08_Slot_16.DoubleClick += new System.EventHandler(this.Slot_Click);
             // 
             // label374
             // 
@@ -1836,6 +1855,7 @@
             this.LoadPort08_Slot_17.TabIndex = 34;
             this.LoadPort08_Slot_17.Tag = "1";
             this.LoadPort08_Slot_17.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.LoadPort08_Slot_17.DoubleClick += new System.EventHandler(this.Slot_Click);
             // 
             // label376
             // 
@@ -1869,6 +1889,7 @@
             this.LoadPort08_Slot_18.TabIndex = 31;
             this.LoadPort08_Slot_18.Tag = "1";
             this.LoadPort08_Slot_18.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.LoadPort08_Slot_18.DoubleClick += new System.EventHandler(this.Slot_Click);
             // 
             // label378
             // 
@@ -1902,6 +1923,7 @@
             this.LoadPort08_Slot_19.TabIndex = 28;
             this.LoadPort08_Slot_19.Tag = "1";
             this.LoadPort08_Slot_19.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.LoadPort08_Slot_19.DoubleClick += new System.EventHandler(this.Slot_Click);
             // 
             // label380
             // 
@@ -1935,6 +1957,7 @@
             this.LoadPort08_Slot_20.TabIndex = 25;
             this.LoadPort08_Slot_20.Tag = "1";
             this.LoadPort08_Slot_20.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.LoadPort08_Slot_20.DoubleClick += new System.EventHandler(this.Slot_Click);
             // 
             // label382
             // 
@@ -1968,6 +1991,7 @@
             this.LoadPort08_Slot_21.TabIndex = 22;
             this.LoadPort08_Slot_21.Tag = "1";
             this.LoadPort08_Slot_21.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.LoadPort08_Slot_21.DoubleClick += new System.EventHandler(this.Slot_Click);
             // 
             // label384
             // 
@@ -2001,6 +2025,7 @@
             this.LoadPort08_Slot_22.TabIndex = 19;
             this.LoadPort08_Slot_22.Tag = "1";
             this.LoadPort08_Slot_22.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.LoadPort08_Slot_22.DoubleClick += new System.EventHandler(this.Slot_Click);
             // 
             // label386
             // 
@@ -2034,6 +2059,7 @@
             this.LoadPort08_Slot_23.TabIndex = 16;
             this.LoadPort08_Slot_23.Tag = "1";
             this.LoadPort08_Slot_23.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.LoadPort08_Slot_23.DoubleClick += new System.EventHandler(this.Slot_Click);
             // 
             // label388
             // 
@@ -2067,6 +2093,7 @@
             this.LoadPort08_Slot_24.TabIndex = 13;
             this.LoadPort08_Slot_24.Tag = "1";
             this.LoadPort08_Slot_24.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.LoadPort08_Slot_24.DoubleClick += new System.EventHandler(this.Slot_Click);
             // 
             // label390
             // 
@@ -2100,6 +2127,7 @@
             this.LoadPort08_Slot_25.TabIndex = 10;
             this.LoadPort08_Slot_25.Tag = "1";
             this.LoadPort08_Slot_25.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.LoadPort08_Slot_25.DoubleClick += new System.EventHandler(this.Slot_Click);
             // 
             // label392
             // 
@@ -2224,6 +2252,7 @@
             this.LoadPort07_Slot_1.TabIndex = 82;
             this.LoadPort07_Slot_1.Tag = "1";
             this.LoadPort07_Slot_1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.LoadPort07_Slot_1.DoubleClick += new System.EventHandler(this.Slot_Click);
             // 
             // label294
             // 
@@ -2257,6 +2286,7 @@
             this.LoadPort07_Slot_2.TabIndex = 79;
             this.LoadPort07_Slot_2.Tag = "1";
             this.LoadPort07_Slot_2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.LoadPort07_Slot_2.DoubleClick += new System.EventHandler(this.Slot_Click);
             // 
             // label296
             // 
@@ -2290,6 +2320,7 @@
             this.LoadPort07_Slot_3.TabIndex = 76;
             this.LoadPort07_Slot_3.Tag = "1";
             this.LoadPort07_Slot_3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.LoadPort07_Slot_3.DoubleClick += new System.EventHandler(this.Slot_Click);
             // 
             // label298
             // 
@@ -2323,6 +2354,7 @@
             this.LoadPort07_Slot_4.TabIndex = 73;
             this.LoadPort07_Slot_4.Tag = "1";
             this.LoadPort07_Slot_4.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.LoadPort07_Slot_4.DoubleClick += new System.EventHandler(this.Slot_Click);
             // 
             // label300
             // 
@@ -2356,6 +2388,7 @@
             this.LoadPort07_Slot_5.TabIndex = 70;
             this.LoadPort07_Slot_5.Tag = "1";
             this.LoadPort07_Slot_5.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.LoadPort07_Slot_5.DoubleClick += new System.EventHandler(this.Slot_Click);
             // 
             // label302
             // 
@@ -2389,6 +2422,7 @@
             this.LoadPort07_Slot_6.TabIndex = 67;
             this.LoadPort07_Slot_6.Tag = "1";
             this.LoadPort07_Slot_6.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.LoadPort07_Slot_6.DoubleClick += new System.EventHandler(this.Slot_Click);
             // 
             // label304
             // 
@@ -2422,6 +2456,7 @@
             this.LoadPort07_Slot_7.TabIndex = 64;
             this.LoadPort07_Slot_7.Tag = "1";
             this.LoadPort07_Slot_7.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.LoadPort07_Slot_7.DoubleClick += new System.EventHandler(this.Slot_Click);
             // 
             // label306
             // 
@@ -2455,6 +2490,7 @@
             this.LoadPort07_Slot_8.TabIndex = 61;
             this.LoadPort07_Slot_8.Tag = "1";
             this.LoadPort07_Slot_8.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.LoadPort07_Slot_8.DoubleClick += new System.EventHandler(this.Slot_Click);
             // 
             // label308
             // 
@@ -2488,6 +2524,7 @@
             this.LoadPort07_Slot_9.TabIndex = 58;
             this.LoadPort07_Slot_9.Tag = "1";
             this.LoadPort07_Slot_9.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.LoadPort07_Slot_9.DoubleClick += new System.EventHandler(this.Slot_Click);
             // 
             // label310
             // 
@@ -2521,6 +2558,7 @@
             this.LoadPort07_Slot_10.TabIndex = 55;
             this.LoadPort07_Slot_10.Tag = "1";
             this.LoadPort07_Slot_10.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.LoadPort07_Slot_10.DoubleClick += new System.EventHandler(this.Slot_Click);
             // 
             // label312
             // 
@@ -2554,6 +2592,7 @@
             this.LoadPort07_Slot_11.TabIndex = 52;
             this.LoadPort07_Slot_11.Tag = "1";
             this.LoadPort07_Slot_11.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.LoadPort07_Slot_11.DoubleClick += new System.EventHandler(this.Slot_Click);
             // 
             // label314
             // 
@@ -2587,6 +2626,7 @@
             this.LoadPort07_Slot_12.TabIndex = 49;
             this.LoadPort07_Slot_12.Tag = "1";
             this.LoadPort07_Slot_12.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.LoadPort07_Slot_12.DoubleClick += new System.EventHandler(this.Slot_Click);
             // 
             // label316
             // 
@@ -2620,6 +2660,7 @@
             this.LoadPort07_Slot_13.TabIndex = 46;
             this.LoadPort07_Slot_13.Tag = "1";
             this.LoadPort07_Slot_13.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.LoadPort07_Slot_13.DoubleClick += new System.EventHandler(this.Slot_Click);
             // 
             // label318
             // 
@@ -2653,6 +2694,7 @@
             this.LoadPort07_Slot_14.TabIndex = 43;
             this.LoadPort07_Slot_14.Tag = "1";
             this.LoadPort07_Slot_14.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.LoadPort07_Slot_14.DoubleClick += new System.EventHandler(this.Slot_Click);
             // 
             // label320
             // 
@@ -2686,6 +2728,7 @@
             this.LoadPort07_Slot_15.TabIndex = 40;
             this.LoadPort07_Slot_15.Tag = "1";
             this.LoadPort07_Slot_15.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.LoadPort07_Slot_15.DoubleClick += new System.EventHandler(this.Slot_Click);
             // 
             // label322
             // 
@@ -2719,6 +2762,7 @@
             this.LoadPort07_Slot_16.TabIndex = 37;
             this.LoadPort07_Slot_16.Tag = "1";
             this.LoadPort07_Slot_16.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.LoadPort07_Slot_16.DoubleClick += new System.EventHandler(this.Slot_Click);
             // 
             // label324
             // 
@@ -2752,6 +2796,7 @@
             this.LoadPort07_Slot_17.TabIndex = 34;
             this.LoadPort07_Slot_17.Tag = "1";
             this.LoadPort07_Slot_17.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.LoadPort07_Slot_17.DoubleClick += new System.EventHandler(this.Slot_Click);
             // 
             // label326
             // 
@@ -2785,6 +2830,7 @@
             this.LoadPort07_Slot_18.TabIndex = 31;
             this.LoadPort07_Slot_18.Tag = "1";
             this.LoadPort07_Slot_18.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.LoadPort07_Slot_18.DoubleClick += new System.EventHandler(this.Slot_Click);
             // 
             // label328
             // 
@@ -2818,6 +2864,7 @@
             this.LoadPort07_Slot_19.TabIndex = 28;
             this.LoadPort07_Slot_19.Tag = "1";
             this.LoadPort07_Slot_19.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.LoadPort07_Slot_19.DoubleClick += new System.EventHandler(this.Slot_Click);
             // 
             // label330
             // 
@@ -2851,6 +2898,7 @@
             this.LoadPort07_Slot_20.TabIndex = 25;
             this.LoadPort07_Slot_20.Tag = "1";
             this.LoadPort07_Slot_20.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.LoadPort07_Slot_20.DoubleClick += new System.EventHandler(this.Slot_Click);
             // 
             // label332
             // 
@@ -2884,6 +2932,7 @@
             this.LoadPort07_Slot_21.TabIndex = 22;
             this.LoadPort07_Slot_21.Tag = "1";
             this.LoadPort07_Slot_21.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.LoadPort07_Slot_21.DoubleClick += new System.EventHandler(this.Slot_Click);
             // 
             // label334
             // 
@@ -2917,6 +2966,7 @@
             this.LoadPort07_Slot_22.TabIndex = 19;
             this.LoadPort07_Slot_22.Tag = "1";
             this.LoadPort07_Slot_22.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.LoadPort07_Slot_22.DoubleClick += new System.EventHandler(this.Slot_Click);
             // 
             // label336
             // 
@@ -2950,6 +3000,7 @@
             this.LoadPort07_Slot_23.TabIndex = 16;
             this.LoadPort07_Slot_23.Tag = "1";
             this.LoadPort07_Slot_23.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.LoadPort07_Slot_23.DoubleClick += new System.EventHandler(this.Slot_Click);
             // 
             // label338
             // 
@@ -2983,6 +3034,7 @@
             this.LoadPort07_Slot_24.TabIndex = 13;
             this.LoadPort07_Slot_24.Tag = "1";
             this.LoadPort07_Slot_24.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.LoadPort07_Slot_24.DoubleClick += new System.EventHandler(this.Slot_Click);
             // 
             // label340
             // 
@@ -3016,6 +3068,7 @@
             this.LoadPort07_Slot_25.TabIndex = 10;
             this.LoadPort07_Slot_25.Tag = "1";
             this.LoadPort07_Slot_25.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.LoadPort07_Slot_25.DoubleClick += new System.EventHandler(this.Slot_Click);
             // 
             // label342
             // 
@@ -3139,6 +3192,7 @@
             this.LoadPort06_Slot_1.TabIndex = 82;
             this.LoadPort06_Slot_1.Tag = "1";
             this.LoadPort06_Slot_1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.LoadPort06_Slot_1.DoubleClick += new System.EventHandler(this.Slot_Click);
             // 
             // label244
             // 
@@ -3172,6 +3226,7 @@
             this.LoadPort06_Slot_2.TabIndex = 79;
             this.LoadPort06_Slot_2.Tag = "1";
             this.LoadPort06_Slot_2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.LoadPort06_Slot_2.DoubleClick += new System.EventHandler(this.Slot_Click);
             // 
             // label246
             // 
@@ -3205,6 +3260,7 @@
             this.LoadPort06_Slot_3.TabIndex = 76;
             this.LoadPort06_Slot_3.Tag = "1";
             this.LoadPort06_Slot_3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.LoadPort06_Slot_3.DoubleClick += new System.EventHandler(this.Slot_Click);
             // 
             // label248
             // 
@@ -3238,6 +3294,7 @@
             this.LoadPort06_Slot_4.TabIndex = 73;
             this.LoadPort06_Slot_4.Tag = "1";
             this.LoadPort06_Slot_4.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.LoadPort06_Slot_4.DoubleClick += new System.EventHandler(this.Slot_Click);
             // 
             // label250
             // 
@@ -3271,6 +3328,7 @@
             this.LoadPort06_Slot_5.TabIndex = 70;
             this.LoadPort06_Slot_5.Tag = "1";
             this.LoadPort06_Slot_5.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.LoadPort06_Slot_5.DoubleClick += new System.EventHandler(this.Slot_Click);
             // 
             // label252
             // 
@@ -3304,6 +3362,7 @@
             this.LoadPort06_Slot_6.TabIndex = 67;
             this.LoadPort06_Slot_6.Tag = "1";
             this.LoadPort06_Slot_6.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.LoadPort06_Slot_6.DoubleClick += new System.EventHandler(this.Slot_Click);
             // 
             // label254
             // 
@@ -3337,6 +3396,7 @@
             this.LoadPort06_Slot_7.TabIndex = 64;
             this.LoadPort06_Slot_7.Tag = "1";
             this.LoadPort06_Slot_7.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.LoadPort06_Slot_7.DoubleClick += new System.EventHandler(this.Slot_Click);
             // 
             // label256
             // 
@@ -3370,6 +3430,7 @@
             this.LoadPort06_Slot_8.TabIndex = 61;
             this.LoadPort06_Slot_8.Tag = "1";
             this.LoadPort06_Slot_8.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.LoadPort06_Slot_8.DoubleClick += new System.EventHandler(this.Slot_Click);
             // 
             // label258
             // 
@@ -3403,6 +3464,7 @@
             this.LoadPort06_Slot_9.TabIndex = 58;
             this.LoadPort06_Slot_9.Tag = "1";
             this.LoadPort06_Slot_9.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.LoadPort06_Slot_9.DoubleClick += new System.EventHandler(this.Slot_Click);
             // 
             // label260
             // 
@@ -3436,6 +3498,7 @@
             this.LoadPort06_Slot_10.TabIndex = 55;
             this.LoadPort06_Slot_10.Tag = "1";
             this.LoadPort06_Slot_10.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.LoadPort06_Slot_10.DoubleClick += new System.EventHandler(this.Slot_Click);
             // 
             // label262
             // 
@@ -3469,6 +3532,7 @@
             this.LoadPort06_Slot_11.TabIndex = 52;
             this.LoadPort06_Slot_11.Tag = "1";
             this.LoadPort06_Slot_11.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.LoadPort06_Slot_11.DoubleClick += new System.EventHandler(this.Slot_Click);
             // 
             // label264
             // 
@@ -3502,6 +3566,7 @@
             this.LoadPort06_Slot_12.TabIndex = 49;
             this.LoadPort06_Slot_12.Tag = "1";
             this.LoadPort06_Slot_12.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.LoadPort06_Slot_12.DoubleClick += new System.EventHandler(this.Slot_Click);
             // 
             // label266
             // 
@@ -3535,6 +3600,7 @@
             this.LoadPort06_Slot_13.TabIndex = 46;
             this.LoadPort06_Slot_13.Tag = "1";
             this.LoadPort06_Slot_13.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.LoadPort06_Slot_13.DoubleClick += new System.EventHandler(this.Slot_Click);
             // 
             // label268
             // 
@@ -3568,6 +3634,7 @@
             this.LoadPort06_Slot_14.TabIndex = 43;
             this.LoadPort06_Slot_14.Tag = "1";
             this.LoadPort06_Slot_14.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.LoadPort06_Slot_14.DoubleClick += new System.EventHandler(this.Slot_Click);
             // 
             // label270
             // 
@@ -3601,6 +3668,7 @@
             this.LoadPort06_Slot_15.TabIndex = 40;
             this.LoadPort06_Slot_15.Tag = "1";
             this.LoadPort06_Slot_15.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.LoadPort06_Slot_15.DoubleClick += new System.EventHandler(this.Slot_Click);
             // 
             // label272
             // 
@@ -3634,6 +3702,7 @@
             this.LoadPort06_Slot_16.TabIndex = 37;
             this.LoadPort06_Slot_16.Tag = "1";
             this.LoadPort06_Slot_16.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.LoadPort06_Slot_16.DoubleClick += new System.EventHandler(this.Slot_Click);
             // 
             // label274
             // 
@@ -3667,6 +3736,7 @@
             this.LoadPort06_Slot_17.TabIndex = 34;
             this.LoadPort06_Slot_17.Tag = "1";
             this.LoadPort06_Slot_17.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.LoadPort06_Slot_17.DoubleClick += new System.EventHandler(this.Slot_Click);
             // 
             // label276
             // 
@@ -3700,6 +3770,7 @@
             this.LoadPort06_Slot_18.TabIndex = 31;
             this.LoadPort06_Slot_18.Tag = "1";
             this.LoadPort06_Slot_18.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.LoadPort06_Slot_18.DoubleClick += new System.EventHandler(this.Slot_Click);
             // 
             // label278
             // 
@@ -3733,6 +3804,7 @@
             this.LoadPort06_Slot_19.TabIndex = 28;
             this.LoadPort06_Slot_19.Tag = "1";
             this.LoadPort06_Slot_19.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.LoadPort06_Slot_19.DoubleClick += new System.EventHandler(this.Slot_Click);
             // 
             // label280
             // 
@@ -3766,6 +3838,7 @@
             this.LoadPort06_Slot_20.TabIndex = 25;
             this.LoadPort06_Slot_20.Tag = "1";
             this.LoadPort06_Slot_20.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.LoadPort06_Slot_20.DoubleClick += new System.EventHandler(this.Slot_Click);
             // 
             // label282
             // 
@@ -3799,6 +3872,7 @@
             this.LoadPort06_Slot_21.TabIndex = 22;
             this.LoadPort06_Slot_21.Tag = "1";
             this.LoadPort06_Slot_21.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.LoadPort06_Slot_21.DoubleClick += new System.EventHandler(this.Slot_Click);
             // 
             // label284
             // 
@@ -3832,6 +3906,7 @@
             this.LoadPort06_Slot_22.TabIndex = 19;
             this.LoadPort06_Slot_22.Tag = "1";
             this.LoadPort06_Slot_22.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.LoadPort06_Slot_22.DoubleClick += new System.EventHandler(this.Slot_Click);
             // 
             // label286
             // 
@@ -3865,6 +3940,7 @@
             this.LoadPort06_Slot_23.TabIndex = 16;
             this.LoadPort06_Slot_23.Tag = "1";
             this.LoadPort06_Slot_23.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.LoadPort06_Slot_23.DoubleClick += new System.EventHandler(this.Slot_Click);
             // 
             // label288
             // 
@@ -3898,6 +3974,7 @@
             this.LoadPort06_Slot_24.TabIndex = 13;
             this.LoadPort06_Slot_24.Tag = "1";
             this.LoadPort06_Slot_24.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.LoadPort06_Slot_24.DoubleClick += new System.EventHandler(this.Slot_Click);
             // 
             // label290
             // 
@@ -3931,6 +4008,7 @@
             this.LoadPort06_Slot_25.TabIndex = 10;
             this.LoadPort06_Slot_25.Tag = "1";
             this.LoadPort06_Slot_25.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.LoadPort06_Slot_25.DoubleClick += new System.EventHandler(this.Slot_Click);
             // 
             // label292
             // 
@@ -4054,6 +4132,7 @@
             this.LoadPort05_Slot_1.TabIndex = 82;
             this.LoadPort05_Slot_1.Tag = "1";
             this.LoadPort05_Slot_1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.LoadPort05_Slot_1.DoubleClick += new System.EventHandler(this.Slot_Click);
             // 
             // label194
             // 
@@ -4087,6 +4166,7 @@
             this.LoadPort05_Slot_2.TabIndex = 79;
             this.LoadPort05_Slot_2.Tag = "1";
             this.LoadPort05_Slot_2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.LoadPort05_Slot_2.DoubleClick += new System.EventHandler(this.Slot_Click);
             // 
             // label196
             // 
@@ -4120,6 +4200,7 @@
             this.LoadPort05_Slot_3.TabIndex = 76;
             this.LoadPort05_Slot_3.Tag = "1";
             this.LoadPort05_Slot_3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.LoadPort05_Slot_3.DoubleClick += new System.EventHandler(this.Slot_Click);
             // 
             // label198
             // 
@@ -4153,6 +4234,7 @@
             this.LoadPort05_Slot_4.TabIndex = 73;
             this.LoadPort05_Slot_4.Tag = "1";
             this.LoadPort05_Slot_4.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.LoadPort05_Slot_4.DoubleClick += new System.EventHandler(this.Slot_Click);
             // 
             // label200
             // 
@@ -4186,6 +4268,7 @@
             this.LoadPort05_Slot_5.TabIndex = 70;
             this.LoadPort05_Slot_5.Tag = "1";
             this.LoadPort05_Slot_5.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.LoadPort05_Slot_5.DoubleClick += new System.EventHandler(this.Slot_Click);
             // 
             // label202
             // 
@@ -4219,6 +4302,7 @@
             this.LoadPort05_Slot_6.TabIndex = 67;
             this.LoadPort05_Slot_6.Tag = "1";
             this.LoadPort05_Slot_6.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.LoadPort05_Slot_6.DoubleClick += new System.EventHandler(this.Slot_Click);
             // 
             // label204
             // 
@@ -4252,6 +4336,7 @@
             this.LoadPort05_Slot_7.TabIndex = 64;
             this.LoadPort05_Slot_7.Tag = "1";
             this.LoadPort05_Slot_7.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.LoadPort05_Slot_7.DoubleClick += new System.EventHandler(this.Slot_Click);
             // 
             // label206
             // 
@@ -4285,6 +4370,7 @@
             this.LoadPort05_Slot_8.TabIndex = 61;
             this.LoadPort05_Slot_8.Tag = "1";
             this.LoadPort05_Slot_8.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.LoadPort05_Slot_8.DoubleClick += new System.EventHandler(this.Slot_Click);
             // 
             // label208
             // 
@@ -4318,6 +4404,7 @@
             this.LoadPort05_Slot_9.TabIndex = 58;
             this.LoadPort05_Slot_9.Tag = "1";
             this.LoadPort05_Slot_9.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.LoadPort05_Slot_9.DoubleClick += new System.EventHandler(this.Slot_Click);
             // 
             // label210
             // 
@@ -4351,6 +4438,7 @@
             this.LoadPort05_Slot_10.TabIndex = 55;
             this.LoadPort05_Slot_10.Tag = "1";
             this.LoadPort05_Slot_10.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.LoadPort05_Slot_10.DoubleClick += new System.EventHandler(this.Slot_Click);
             // 
             // label212
             // 
@@ -4384,6 +4472,7 @@
             this.LoadPort05_Slot_11.TabIndex = 52;
             this.LoadPort05_Slot_11.Tag = "1";
             this.LoadPort05_Slot_11.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.LoadPort05_Slot_11.DoubleClick += new System.EventHandler(this.Slot_Click);
             // 
             // label214
             // 
@@ -4417,6 +4506,7 @@
             this.LoadPort05_Slot_12.TabIndex = 49;
             this.LoadPort05_Slot_12.Tag = "1";
             this.LoadPort05_Slot_12.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.LoadPort05_Slot_12.DoubleClick += new System.EventHandler(this.Slot_Click);
             // 
             // label216
             // 
@@ -4450,6 +4540,7 @@
             this.LoadPort05_Slot_13.TabIndex = 46;
             this.LoadPort05_Slot_13.Tag = "1";
             this.LoadPort05_Slot_13.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.LoadPort05_Slot_13.DoubleClick += new System.EventHandler(this.Slot_Click);
             // 
             // label218
             // 
@@ -4483,6 +4574,7 @@
             this.LoadPort05_Slot_14.TabIndex = 43;
             this.LoadPort05_Slot_14.Tag = "1";
             this.LoadPort05_Slot_14.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.LoadPort05_Slot_14.DoubleClick += new System.EventHandler(this.Slot_Click);
             // 
             // label220
             // 
@@ -4516,6 +4608,7 @@
             this.LoadPort05_Slot_15.TabIndex = 40;
             this.LoadPort05_Slot_15.Tag = "1";
             this.LoadPort05_Slot_15.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.LoadPort05_Slot_15.DoubleClick += new System.EventHandler(this.Slot_Click);
             // 
             // label222
             // 
@@ -4549,6 +4642,7 @@
             this.LoadPort05_Slot_16.TabIndex = 37;
             this.LoadPort05_Slot_16.Tag = "1";
             this.LoadPort05_Slot_16.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.LoadPort05_Slot_16.DoubleClick += new System.EventHandler(this.Slot_Click);
             // 
             // label224
             // 
@@ -4582,6 +4676,7 @@
             this.LoadPort05_Slot_17.TabIndex = 34;
             this.LoadPort05_Slot_17.Tag = "1";
             this.LoadPort05_Slot_17.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.LoadPort05_Slot_17.DoubleClick += new System.EventHandler(this.Slot_Click);
             // 
             // label226
             // 
@@ -4615,6 +4710,7 @@
             this.LoadPort05_Slot_18.TabIndex = 31;
             this.LoadPort05_Slot_18.Tag = "1";
             this.LoadPort05_Slot_18.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.LoadPort05_Slot_18.DoubleClick += new System.EventHandler(this.Slot_Click);
             // 
             // label228
             // 
@@ -4648,6 +4744,7 @@
             this.LoadPort05_Slot_19.TabIndex = 28;
             this.LoadPort05_Slot_19.Tag = "1";
             this.LoadPort05_Slot_19.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.LoadPort05_Slot_19.DoubleClick += new System.EventHandler(this.Slot_Click);
             // 
             // label230
             // 
@@ -4681,6 +4778,7 @@
             this.LoadPort05_Slot_20.TabIndex = 25;
             this.LoadPort05_Slot_20.Tag = "1";
             this.LoadPort05_Slot_20.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.LoadPort05_Slot_20.DoubleClick += new System.EventHandler(this.Slot_Click);
             // 
             // label232
             // 
@@ -4714,6 +4812,7 @@
             this.LoadPort05_Slot_21.TabIndex = 22;
             this.LoadPort05_Slot_21.Tag = "1";
             this.LoadPort05_Slot_21.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.LoadPort05_Slot_21.DoubleClick += new System.EventHandler(this.Slot_Click);
             // 
             // label234
             // 
@@ -4747,6 +4846,7 @@
             this.LoadPort05_Slot_22.TabIndex = 19;
             this.LoadPort05_Slot_22.Tag = "1";
             this.LoadPort05_Slot_22.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.LoadPort05_Slot_22.DoubleClick += new System.EventHandler(this.Slot_Click);
             // 
             // label236
             // 
@@ -4780,6 +4880,7 @@
             this.LoadPort05_Slot_23.TabIndex = 16;
             this.LoadPort05_Slot_23.Tag = "1";
             this.LoadPort05_Slot_23.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.LoadPort05_Slot_23.DoubleClick += new System.EventHandler(this.Slot_Click);
             // 
             // label238
             // 
@@ -4813,6 +4914,7 @@
             this.LoadPort05_Slot_24.TabIndex = 13;
             this.LoadPort05_Slot_24.Tag = "1";
             this.LoadPort05_Slot_24.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.LoadPort05_Slot_24.DoubleClick += new System.EventHandler(this.Slot_Click);
             // 
             // label240
             // 
@@ -4846,6 +4948,7 @@
             this.LoadPort05_Slot_25.TabIndex = 10;
             this.LoadPort05_Slot_25.Tag = "1";
             this.LoadPort05_Slot_25.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.LoadPort05_Slot_25.DoubleClick += new System.EventHandler(this.Slot_Click);
             // 
             // label242
             // 
@@ -4970,6 +5073,7 @@
             this.LoadPort04_Slot_1.TabIndex = 82;
             this.LoadPort04_Slot_1.Tag = "1";
             this.LoadPort04_Slot_1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.LoadPort04_Slot_1.DoubleClick += new System.EventHandler(this.Slot_Click);
             // 
             // label144
             // 
@@ -5003,6 +5107,7 @@
             this.LoadPort04_Slot_2.TabIndex = 79;
             this.LoadPort04_Slot_2.Tag = "1";
             this.LoadPort04_Slot_2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.LoadPort04_Slot_2.DoubleClick += new System.EventHandler(this.Slot_Click);
             // 
             // label146
             // 
@@ -5036,6 +5141,7 @@
             this.LoadPort04_Slot_3.TabIndex = 76;
             this.LoadPort04_Slot_3.Tag = "1";
             this.LoadPort04_Slot_3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.LoadPort04_Slot_3.DoubleClick += new System.EventHandler(this.Slot_Click);
             // 
             // label148
             // 
@@ -5069,6 +5175,7 @@
             this.LoadPort04_Slot_4.TabIndex = 73;
             this.LoadPort04_Slot_4.Tag = "1";
             this.LoadPort04_Slot_4.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.LoadPort04_Slot_4.DoubleClick += new System.EventHandler(this.Slot_Click);
             // 
             // label150
             // 
@@ -5102,6 +5209,7 @@
             this.LoadPort04_Slot_5.TabIndex = 70;
             this.LoadPort04_Slot_5.Tag = "1";
             this.LoadPort04_Slot_5.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.LoadPort04_Slot_5.DoubleClick += new System.EventHandler(this.Slot_Click);
             // 
             // label152
             // 
@@ -5135,6 +5243,7 @@
             this.LoadPort04_Slot_6.TabIndex = 67;
             this.LoadPort04_Slot_6.Tag = "1";
             this.LoadPort04_Slot_6.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.LoadPort04_Slot_6.DoubleClick += new System.EventHandler(this.Slot_Click);
             // 
             // label154
             // 
@@ -5168,6 +5277,7 @@
             this.LoadPort04_Slot_7.TabIndex = 64;
             this.LoadPort04_Slot_7.Tag = "1";
             this.LoadPort04_Slot_7.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.LoadPort04_Slot_7.DoubleClick += new System.EventHandler(this.Slot_Click);
             // 
             // label156
             // 
@@ -5201,6 +5311,7 @@
             this.LoadPort04_Slot_8.TabIndex = 61;
             this.LoadPort04_Slot_8.Tag = "1";
             this.LoadPort04_Slot_8.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.LoadPort04_Slot_8.DoubleClick += new System.EventHandler(this.Slot_Click);
             // 
             // label158
             // 
@@ -5234,6 +5345,7 @@
             this.LoadPort04_Slot_9.TabIndex = 58;
             this.LoadPort04_Slot_9.Tag = "1";
             this.LoadPort04_Slot_9.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.LoadPort04_Slot_9.DoubleClick += new System.EventHandler(this.Slot_Click);
             // 
             // label160
             // 
@@ -5267,6 +5379,7 @@
             this.LoadPort04_Slot_10.TabIndex = 55;
             this.LoadPort04_Slot_10.Tag = "1";
             this.LoadPort04_Slot_10.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.LoadPort04_Slot_10.DoubleClick += new System.EventHandler(this.Slot_Click);
             // 
             // label162
             // 
@@ -5300,6 +5413,7 @@
             this.LoadPort04_Slot_11.TabIndex = 52;
             this.LoadPort04_Slot_11.Tag = "1";
             this.LoadPort04_Slot_11.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.LoadPort04_Slot_11.DoubleClick += new System.EventHandler(this.Slot_Click);
             // 
             // label164
             // 
@@ -5333,6 +5447,7 @@
             this.LoadPort04_Slot_12.TabIndex = 49;
             this.LoadPort04_Slot_12.Tag = "1";
             this.LoadPort04_Slot_12.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.LoadPort04_Slot_12.DoubleClick += new System.EventHandler(this.Slot_Click);
             // 
             // label166
             // 
@@ -5366,6 +5481,7 @@
             this.LoadPort04_Slot_13.TabIndex = 46;
             this.LoadPort04_Slot_13.Tag = "1";
             this.LoadPort04_Slot_13.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.LoadPort04_Slot_13.DoubleClick += new System.EventHandler(this.Slot_Click);
             // 
             // label168
             // 
@@ -5399,6 +5515,7 @@
             this.LoadPort04_Slot_14.TabIndex = 43;
             this.LoadPort04_Slot_14.Tag = "1";
             this.LoadPort04_Slot_14.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.LoadPort04_Slot_14.DoubleClick += new System.EventHandler(this.Slot_Click);
             // 
             // label170
             // 
@@ -5432,6 +5549,7 @@
             this.LoadPort04_Slot_15.TabIndex = 40;
             this.LoadPort04_Slot_15.Tag = "1";
             this.LoadPort04_Slot_15.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.LoadPort04_Slot_15.DoubleClick += new System.EventHandler(this.Slot_Click);
             // 
             // label172
             // 
@@ -5465,6 +5583,7 @@
             this.LoadPort04_Slot_16.TabIndex = 37;
             this.LoadPort04_Slot_16.Tag = "1";
             this.LoadPort04_Slot_16.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.LoadPort04_Slot_16.DoubleClick += new System.EventHandler(this.Slot_Click);
             // 
             // label174
             // 
@@ -5498,6 +5617,7 @@
             this.LoadPort04_Slot_17.TabIndex = 34;
             this.LoadPort04_Slot_17.Tag = "1";
             this.LoadPort04_Slot_17.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.LoadPort04_Slot_17.DoubleClick += new System.EventHandler(this.Slot_Click);
             // 
             // label176
             // 
@@ -5531,6 +5651,7 @@
             this.LoadPort04_Slot_18.TabIndex = 31;
             this.LoadPort04_Slot_18.Tag = "1";
             this.LoadPort04_Slot_18.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.LoadPort04_Slot_18.DoubleClick += new System.EventHandler(this.Slot_Click);
             // 
             // label178
             // 
@@ -5564,6 +5685,7 @@
             this.LoadPort04_Slot_19.TabIndex = 28;
             this.LoadPort04_Slot_19.Tag = "1";
             this.LoadPort04_Slot_19.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.LoadPort04_Slot_19.DoubleClick += new System.EventHandler(this.Slot_Click);
             // 
             // label180
             // 
@@ -5597,6 +5719,7 @@
             this.LoadPort04_Slot_20.TabIndex = 25;
             this.LoadPort04_Slot_20.Tag = "1";
             this.LoadPort04_Slot_20.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.LoadPort04_Slot_20.DoubleClick += new System.EventHandler(this.Slot_Click);
             // 
             // label182
             // 
@@ -5630,6 +5753,7 @@
             this.LoadPort04_Slot_21.TabIndex = 22;
             this.LoadPort04_Slot_21.Tag = "1";
             this.LoadPort04_Slot_21.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.LoadPort04_Slot_21.DoubleClick += new System.EventHandler(this.Slot_Click);
             // 
             // label184
             // 
@@ -5663,6 +5787,7 @@
             this.LoadPort04_Slot_22.TabIndex = 19;
             this.LoadPort04_Slot_22.Tag = "1";
             this.LoadPort04_Slot_22.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.LoadPort04_Slot_22.DoubleClick += new System.EventHandler(this.Slot_Click);
             // 
             // label186
             // 
@@ -5696,6 +5821,7 @@
             this.LoadPort04_Slot_23.TabIndex = 16;
             this.LoadPort04_Slot_23.Tag = "1";
             this.LoadPort04_Slot_23.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.LoadPort04_Slot_23.DoubleClick += new System.EventHandler(this.Slot_Click);
             // 
             // label188
             // 
@@ -5729,6 +5855,7 @@
             this.LoadPort04_Slot_24.TabIndex = 13;
             this.LoadPort04_Slot_24.Tag = "1";
             this.LoadPort04_Slot_24.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.LoadPort04_Slot_24.DoubleClick += new System.EventHandler(this.Slot_Click);
             // 
             // label190
             // 
@@ -5762,6 +5889,7 @@
             this.LoadPort04_Slot_25.TabIndex = 10;
             this.LoadPort04_Slot_25.Tag = "1";
             this.LoadPort04_Slot_25.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.LoadPort04_Slot_25.DoubleClick += new System.EventHandler(this.Slot_Click);
             // 
             // label192
             // 
@@ -5887,6 +6015,7 @@
             this.LoadPort03_Slot_1.TabIndex = 82;
             this.LoadPort03_Slot_1.Tag = "1";
             this.LoadPort03_Slot_1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.LoadPort03_Slot_1.DoubleClick += new System.EventHandler(this.Slot_Click);
             // 
             // label69
             // 
@@ -5920,6 +6049,7 @@
             this.LoadPort03_Slot_2.TabIndex = 79;
             this.LoadPort03_Slot_2.Tag = "1";
             this.LoadPort03_Slot_2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.LoadPort03_Slot_2.DoubleClick += new System.EventHandler(this.Slot_Click);
             // 
             // label71
             // 
@@ -5953,6 +6083,7 @@
             this.LoadPort03_Slot_3.TabIndex = 76;
             this.LoadPort03_Slot_3.Tag = "1";
             this.LoadPort03_Slot_3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.LoadPort03_Slot_3.DoubleClick += new System.EventHandler(this.Slot_Click);
             // 
             // label73
             // 
@@ -5986,6 +6117,7 @@
             this.LoadPort03_Slot_4.TabIndex = 73;
             this.LoadPort03_Slot_4.Tag = "1";
             this.LoadPort03_Slot_4.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.LoadPort03_Slot_4.DoubleClick += new System.EventHandler(this.Slot_Click);
             // 
             // label75
             // 
@@ -6019,6 +6151,7 @@
             this.LoadPort03_Slot_5.TabIndex = 70;
             this.LoadPort03_Slot_5.Tag = "1";
             this.LoadPort03_Slot_5.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.LoadPort03_Slot_5.DoubleClick += new System.EventHandler(this.Slot_Click);
             // 
             // label77
             // 
@@ -6052,6 +6185,7 @@
             this.LoadPort03_Slot_6.TabIndex = 67;
             this.LoadPort03_Slot_6.Tag = "1";
             this.LoadPort03_Slot_6.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.LoadPort03_Slot_6.DoubleClick += new System.EventHandler(this.Slot_Click);
             // 
             // label79
             // 
@@ -6085,6 +6219,7 @@
             this.LoadPort03_Slot_7.TabIndex = 64;
             this.LoadPort03_Slot_7.Tag = "1";
             this.LoadPort03_Slot_7.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.LoadPort03_Slot_7.DoubleClick += new System.EventHandler(this.Slot_Click);
             // 
             // label81
             // 
@@ -6118,6 +6253,7 @@
             this.LoadPort03_Slot_8.TabIndex = 61;
             this.LoadPort03_Slot_8.Tag = "1";
             this.LoadPort03_Slot_8.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.LoadPort03_Slot_8.DoubleClick += new System.EventHandler(this.Slot_Click);
             // 
             // label108
             // 
@@ -6151,6 +6287,7 @@
             this.LoadPort03_Slot_9.TabIndex = 58;
             this.LoadPort03_Slot_9.Tag = "1";
             this.LoadPort03_Slot_9.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.LoadPort03_Slot_9.DoubleClick += new System.EventHandler(this.Slot_Click);
             // 
             // label110
             // 
@@ -6184,6 +6321,7 @@
             this.LoadPort03_Slot_10.TabIndex = 55;
             this.LoadPort03_Slot_10.Tag = "1";
             this.LoadPort03_Slot_10.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.LoadPort03_Slot_10.DoubleClick += new System.EventHandler(this.Slot_Click);
             // 
             // label112
             // 
@@ -6217,6 +6355,7 @@
             this.LoadPort03_Slot_11.TabIndex = 52;
             this.LoadPort03_Slot_11.Tag = "1";
             this.LoadPort03_Slot_11.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.LoadPort03_Slot_11.DoubleClick += new System.EventHandler(this.Slot_Click);
             // 
             // label114
             // 
@@ -6250,6 +6389,7 @@
             this.LoadPort03_Slot_12.TabIndex = 49;
             this.LoadPort03_Slot_12.Tag = "1";
             this.LoadPort03_Slot_12.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.LoadPort03_Slot_12.DoubleClick += new System.EventHandler(this.Slot_Click);
             // 
             // label116
             // 
@@ -6283,6 +6423,7 @@
             this.LoadPort03_Slot_13.TabIndex = 46;
             this.LoadPort03_Slot_13.Tag = "1";
             this.LoadPort03_Slot_13.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.LoadPort03_Slot_13.DoubleClick += new System.EventHandler(this.Slot_Click);
             // 
             // label118
             // 
@@ -6317,6 +6458,7 @@
             this.LoadPort03_Slot_14.TabIndex = 43;
             this.LoadPort03_Slot_14.Tag = "1";
             this.LoadPort03_Slot_14.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.LoadPort03_Slot_14.DoubleClick += new System.EventHandler(this.Slot_Click);
             // 
             // label120
             // 
@@ -6351,6 +6493,7 @@
             this.LoadPort03_Slot_15.TabIndex = 40;
             this.LoadPort03_Slot_15.Tag = "1";
             this.LoadPort03_Slot_15.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.LoadPort03_Slot_15.DoubleClick += new System.EventHandler(this.Slot_Click);
             // 
             // label122
             // 
@@ -6385,6 +6528,7 @@
             this.LoadPort03_Slot_16.TabIndex = 37;
             this.LoadPort03_Slot_16.Tag = "1";
             this.LoadPort03_Slot_16.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.LoadPort03_Slot_16.DoubleClick += new System.EventHandler(this.Slot_Click);
             // 
             // label124
             // 
@@ -6419,6 +6563,7 @@
             this.LoadPort03_Slot_17.TabIndex = 34;
             this.LoadPort03_Slot_17.Tag = "1";
             this.LoadPort03_Slot_17.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.LoadPort03_Slot_17.DoubleClick += new System.EventHandler(this.Slot_Click);
             // 
             // label126
             // 
@@ -6453,6 +6598,7 @@
             this.LoadPort03_Slot_18.TabIndex = 31;
             this.LoadPort03_Slot_18.Tag = "1";
             this.LoadPort03_Slot_18.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.LoadPort03_Slot_18.DoubleClick += new System.EventHandler(this.Slot_Click);
             // 
             // label128
             // 
@@ -6487,6 +6633,7 @@
             this.LoadPort03_Slot_19.TabIndex = 28;
             this.LoadPort03_Slot_19.Tag = "1";
             this.LoadPort03_Slot_19.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.LoadPort03_Slot_19.DoubleClick += new System.EventHandler(this.Slot_Click);
             // 
             // label130
             // 
@@ -6521,6 +6668,7 @@
             this.LoadPort03_Slot_20.TabIndex = 25;
             this.LoadPort03_Slot_20.Tag = "1";
             this.LoadPort03_Slot_20.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.LoadPort03_Slot_20.DoubleClick += new System.EventHandler(this.Slot_Click);
             // 
             // label132
             // 
@@ -6555,6 +6703,7 @@
             this.LoadPort03_Slot_21.TabIndex = 22;
             this.LoadPort03_Slot_21.Tag = "1";
             this.LoadPort03_Slot_21.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.LoadPort03_Slot_21.DoubleClick += new System.EventHandler(this.Slot_Click);
             // 
             // label134
             // 
@@ -6589,6 +6738,7 @@
             this.LoadPort03_Slot_22.TabIndex = 19;
             this.LoadPort03_Slot_22.Tag = "1";
             this.LoadPort03_Slot_22.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.LoadPort03_Slot_22.DoubleClick += new System.EventHandler(this.Slot_Click);
             // 
             // label136
             // 
@@ -6623,6 +6773,7 @@
             this.LoadPort03_Slot_23.TabIndex = 16;
             this.LoadPort03_Slot_23.Tag = "1";
             this.LoadPort03_Slot_23.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.LoadPort03_Slot_23.DoubleClick += new System.EventHandler(this.Slot_Click);
             // 
             // label138
             // 
@@ -6657,6 +6808,7 @@
             this.LoadPort03_Slot_24.TabIndex = 13;
             this.LoadPort03_Slot_24.Tag = "1";
             this.LoadPort03_Slot_24.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.LoadPort03_Slot_24.DoubleClick += new System.EventHandler(this.Slot_Click);
             // 
             // label140
             // 
@@ -6691,6 +6843,7 @@
             this.LoadPort03_Slot_25.TabIndex = 10;
             this.LoadPort03_Slot_25.Tag = "1";
             this.LoadPort03_Slot_25.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.LoadPort03_Slot_25.DoubleClick += new System.EventHandler(this.Slot_Click);
             // 
             // label142
             // 
@@ -6815,6 +6968,7 @@
             this.LoadPort02_Slot_1.TabIndex = 82;
             this.LoadPort02_Slot_1.Tag = "1";
             this.LoadPort02_Slot_1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.LoadPort02_Slot_1.DoubleClick += new System.EventHandler(this.Slot_Click);
             // 
             // label5
             // 
@@ -6848,6 +7002,7 @@
             this.LoadPort02_Slot_2.TabIndex = 79;
             this.LoadPort02_Slot_2.Tag = "1";
             this.LoadPort02_Slot_2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.LoadPort02_Slot_2.DoubleClick += new System.EventHandler(this.Slot_Click);
             // 
             // label6
             // 
@@ -6881,6 +7036,7 @@
             this.LoadPort02_Slot_3.TabIndex = 76;
             this.LoadPort02_Slot_3.Tag = "1";
             this.LoadPort02_Slot_3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.LoadPort02_Slot_3.DoubleClick += new System.EventHandler(this.Slot_Click);
             // 
             // label23
             // 
@@ -6914,6 +7070,7 @@
             this.LoadPort02_Slot_4.TabIndex = 73;
             this.LoadPort02_Slot_4.Tag = "1";
             this.LoadPort02_Slot_4.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.LoadPort02_Slot_4.DoubleClick += new System.EventHandler(this.Slot_Click);
             // 
             // label25
             // 
@@ -6947,6 +7104,7 @@
             this.LoadPort02_Slot_5.TabIndex = 70;
             this.LoadPort02_Slot_5.Tag = "1";
             this.LoadPort02_Slot_5.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.LoadPort02_Slot_5.DoubleClick += new System.EventHandler(this.Slot_Click);
             // 
             // label27
             // 
@@ -6980,6 +7138,7 @@
             this.LoadPort02_Slot_6.TabIndex = 67;
             this.LoadPort02_Slot_6.Tag = "1";
             this.LoadPort02_Slot_6.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.LoadPort02_Slot_6.DoubleClick += new System.EventHandler(this.Slot_Click);
             // 
             // label29
             // 
@@ -7013,6 +7172,7 @@
             this.LoadPort02_Slot_7.TabIndex = 64;
             this.LoadPort02_Slot_7.Tag = "1";
             this.LoadPort02_Slot_7.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.LoadPort02_Slot_7.DoubleClick += new System.EventHandler(this.Slot_Click);
             // 
             // label31
             // 
@@ -7046,6 +7206,7 @@
             this.LoadPort02_Slot_8.TabIndex = 61;
             this.LoadPort02_Slot_8.Tag = "1";
             this.LoadPort02_Slot_8.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.LoadPort02_Slot_8.DoubleClick += new System.EventHandler(this.Slot_Click);
             // 
             // label33
             // 
@@ -7079,6 +7240,7 @@
             this.LoadPort02_Slot_9.TabIndex = 58;
             this.LoadPort02_Slot_9.Tag = "1";
             this.LoadPort02_Slot_9.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.LoadPort02_Slot_9.DoubleClick += new System.EventHandler(this.Slot_Click);
             // 
             // label35
             // 
@@ -7112,6 +7274,7 @@
             this.LoadPort02_Slot_10.TabIndex = 55;
             this.LoadPort02_Slot_10.Tag = "1";
             this.LoadPort02_Slot_10.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.LoadPort02_Slot_10.DoubleClick += new System.EventHandler(this.Slot_Click);
             // 
             // label37
             // 
@@ -7145,6 +7308,7 @@
             this.LoadPort02_Slot_11.TabIndex = 52;
             this.LoadPort02_Slot_11.Tag = "1";
             this.LoadPort02_Slot_11.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.LoadPort02_Slot_11.DoubleClick += new System.EventHandler(this.Slot_Click);
             // 
             // label39
             // 
@@ -7178,6 +7342,7 @@
             this.LoadPort02_Slot_12.TabIndex = 49;
             this.LoadPort02_Slot_12.Tag = "1";
             this.LoadPort02_Slot_12.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.LoadPort02_Slot_12.DoubleClick += new System.EventHandler(this.Slot_Click);
             // 
             // label41
             // 
@@ -7211,6 +7376,7 @@
             this.LoadPort02_Slot_13.TabIndex = 46;
             this.LoadPort02_Slot_13.Tag = "1";
             this.LoadPort02_Slot_13.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.LoadPort02_Slot_13.DoubleClick += new System.EventHandler(this.Slot_Click);
             // 
             // label43
             // 
@@ -7244,6 +7410,7 @@
             this.LoadPort02_Slot_14.TabIndex = 43;
             this.LoadPort02_Slot_14.Tag = "1";
             this.LoadPort02_Slot_14.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.LoadPort02_Slot_14.DoubleClick += new System.EventHandler(this.Slot_Click);
             // 
             // label45
             // 
@@ -7277,6 +7444,7 @@
             this.LoadPort02_Slot_15.TabIndex = 40;
             this.LoadPort02_Slot_15.Tag = "1";
             this.LoadPort02_Slot_15.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.LoadPort02_Slot_15.DoubleClick += new System.EventHandler(this.Slot_Click);
             // 
             // label47
             // 
@@ -7310,6 +7478,7 @@
             this.LoadPort02_Slot_16.TabIndex = 37;
             this.LoadPort02_Slot_16.Tag = "1";
             this.LoadPort02_Slot_16.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.LoadPort02_Slot_16.DoubleClick += new System.EventHandler(this.Slot_Click);
             // 
             // label49
             // 
@@ -7343,6 +7512,7 @@
             this.LoadPort02_Slot_17.TabIndex = 34;
             this.LoadPort02_Slot_17.Tag = "1";
             this.LoadPort02_Slot_17.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.LoadPort02_Slot_17.DoubleClick += new System.EventHandler(this.Slot_Click);
             // 
             // label51
             // 
@@ -7376,6 +7546,7 @@
             this.LoadPort02_Slot_18.TabIndex = 31;
             this.LoadPort02_Slot_18.Tag = "1";
             this.LoadPort02_Slot_18.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.LoadPort02_Slot_18.DoubleClick += new System.EventHandler(this.Slot_Click);
             // 
             // label53
             // 
@@ -7409,6 +7580,7 @@
             this.LoadPort02_Slot_19.TabIndex = 28;
             this.LoadPort02_Slot_19.Tag = "1";
             this.LoadPort02_Slot_19.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.LoadPort02_Slot_19.DoubleClick += new System.EventHandler(this.Slot_Click);
             // 
             // label55
             // 
@@ -7442,6 +7614,7 @@
             this.LoadPort02_Slot_20.TabIndex = 25;
             this.LoadPort02_Slot_20.Tag = "1";
             this.LoadPort02_Slot_20.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.LoadPort02_Slot_20.DoubleClick += new System.EventHandler(this.Slot_Click);
             // 
             // label57
             // 
@@ -7475,6 +7648,7 @@
             this.LoadPort02_Slot_21.TabIndex = 22;
             this.LoadPort02_Slot_21.Tag = "1";
             this.LoadPort02_Slot_21.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.LoadPort02_Slot_21.DoubleClick += new System.EventHandler(this.Slot_Click);
             // 
             // label59
             // 
@@ -7508,6 +7682,7 @@
             this.LoadPort02_Slot_22.TabIndex = 19;
             this.LoadPort02_Slot_22.Tag = "1";
             this.LoadPort02_Slot_22.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.LoadPort02_Slot_22.DoubleClick += new System.EventHandler(this.Slot_Click);
             // 
             // label61
             // 
@@ -7541,6 +7716,7 @@
             this.LoadPort02_Slot_23.TabIndex = 16;
             this.LoadPort02_Slot_23.Tag = "1";
             this.LoadPort02_Slot_23.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.LoadPort02_Slot_23.DoubleClick += new System.EventHandler(this.Slot_Click);
             // 
             // label63
             // 
@@ -7574,6 +7750,7 @@
             this.LoadPort02_Slot_24.TabIndex = 13;
             this.LoadPort02_Slot_24.Tag = "1";
             this.LoadPort02_Slot_24.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.LoadPort02_Slot_24.DoubleClick += new System.EventHandler(this.Slot_Click);
             // 
             // label65
             // 
@@ -7607,6 +7784,7 @@
             this.LoadPort02_Slot_25.TabIndex = 10;
             this.LoadPort02_Slot_25.Tag = "1";
             this.LoadPort02_Slot_25.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.LoadPort02_Slot_25.DoubleClick += new System.EventHandler(this.Slot_Click);
             // 
             // label67
             // 
@@ -7730,6 +7908,7 @@
             this.LoadPort01_Slot_1.TabIndex = 82;
             this.LoadPort01_Slot_1.Tag = "1";
             this.LoadPort01_Slot_1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.LoadPort01_Slot_1.DoubleClick += new System.EventHandler(this.Slot_Click);
             // 
             // label82
             // 
@@ -7763,6 +7942,7 @@
             this.LoadPort01_Slot_2.TabIndex = 79;
             this.LoadPort01_Slot_2.Tag = "1";
             this.LoadPort01_Slot_2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.LoadPort01_Slot_2.DoubleClick += new System.EventHandler(this.Slot_Click);
             // 
             // label83
             // 
@@ -7796,6 +7976,7 @@
             this.LoadPort01_Slot_3.TabIndex = 76;
             this.LoadPort01_Slot_3.Tag = "1";
             this.LoadPort01_Slot_3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.LoadPort01_Slot_3.DoubleClick += new System.EventHandler(this.Slot_Click);
             // 
             // label84
             // 
@@ -7829,6 +8010,7 @@
             this.LoadPort01_Slot_4.TabIndex = 73;
             this.LoadPort01_Slot_4.Tag = "1";
             this.LoadPort01_Slot_4.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.LoadPort01_Slot_4.DoubleClick += new System.EventHandler(this.Slot_Click);
             // 
             // label85
             // 
@@ -7862,6 +8044,7 @@
             this.LoadPort01_Slot_5.TabIndex = 70;
             this.LoadPort01_Slot_5.Tag = "1";
             this.LoadPort01_Slot_5.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.LoadPort01_Slot_5.DoubleClick += new System.EventHandler(this.Slot_Click);
             // 
             // label86
             // 
@@ -7895,6 +8078,7 @@
             this.LoadPort01_Slot_6.TabIndex = 67;
             this.LoadPort01_Slot_6.Tag = "1";
             this.LoadPort01_Slot_6.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.LoadPort01_Slot_6.DoubleClick += new System.EventHandler(this.Slot_Click);
             // 
             // label87
             // 
@@ -7928,6 +8112,7 @@
             this.LoadPort01_Slot_7.TabIndex = 64;
             this.LoadPort01_Slot_7.Tag = "1";
             this.LoadPort01_Slot_7.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.LoadPort01_Slot_7.DoubleClick += new System.EventHandler(this.Slot_Click);
             // 
             // label88
             // 
@@ -7961,6 +8146,7 @@
             this.LoadPort01_Slot_8.TabIndex = 61;
             this.LoadPort01_Slot_8.Tag = "1";
             this.LoadPort01_Slot_8.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.LoadPort01_Slot_8.DoubleClick += new System.EventHandler(this.Slot_Click);
             // 
             // label89
             // 
@@ -7994,6 +8180,7 @@
             this.LoadPort01_Slot_9.TabIndex = 58;
             this.LoadPort01_Slot_9.Tag = "1";
             this.LoadPort01_Slot_9.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.LoadPort01_Slot_9.DoubleClick += new System.EventHandler(this.Slot_Click);
             // 
             // label90
             // 
@@ -8027,6 +8214,7 @@
             this.LoadPort01_Slot_10.TabIndex = 55;
             this.LoadPort01_Slot_10.Tag = "1";
             this.LoadPort01_Slot_10.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.LoadPort01_Slot_10.DoubleClick += new System.EventHandler(this.Slot_Click);
             // 
             // label91
             // 
@@ -8060,6 +8248,7 @@
             this.LoadPort01_Slot_11.TabIndex = 52;
             this.LoadPort01_Slot_11.Tag = "1";
             this.LoadPort01_Slot_11.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.LoadPort01_Slot_11.DoubleClick += new System.EventHandler(this.Slot_Click);
             // 
             // label92
             // 
@@ -8093,6 +8282,7 @@
             this.LoadPort01_Slot_12.TabIndex = 49;
             this.LoadPort01_Slot_12.Tag = "1";
             this.LoadPort01_Slot_12.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.LoadPort01_Slot_12.DoubleClick += new System.EventHandler(this.Slot_Click);
             // 
             // label93
             // 
@@ -8126,6 +8316,7 @@
             this.LoadPort01_Slot_13.TabIndex = 46;
             this.LoadPort01_Slot_13.Tag = "1";
             this.LoadPort01_Slot_13.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.LoadPort01_Slot_13.DoubleClick += new System.EventHandler(this.Slot_Click);
             // 
             // label94
             // 
@@ -8159,6 +8350,7 @@
             this.LoadPort01_Slot_14.TabIndex = 43;
             this.LoadPort01_Slot_14.Tag = "1";
             this.LoadPort01_Slot_14.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.LoadPort01_Slot_14.DoubleClick += new System.EventHandler(this.Slot_Click);
             // 
             // label95
             // 
@@ -8192,6 +8384,7 @@
             this.LoadPort01_Slot_15.TabIndex = 40;
             this.LoadPort01_Slot_15.Tag = "1";
             this.LoadPort01_Slot_15.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.LoadPort01_Slot_15.DoubleClick += new System.EventHandler(this.Slot_Click);
             // 
             // label96
             // 
@@ -8225,6 +8418,7 @@
             this.LoadPort01_Slot_16.TabIndex = 37;
             this.LoadPort01_Slot_16.Tag = "1";
             this.LoadPort01_Slot_16.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.LoadPort01_Slot_16.DoubleClick += new System.EventHandler(this.Slot_Click);
             // 
             // label97
             // 
@@ -8258,6 +8452,7 @@
             this.LoadPort01_Slot_17.TabIndex = 34;
             this.LoadPort01_Slot_17.Tag = "1";
             this.LoadPort01_Slot_17.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.LoadPort01_Slot_17.DoubleClick += new System.EventHandler(this.Slot_Click);
             // 
             // label98
             // 
@@ -8291,6 +8486,7 @@
             this.LoadPort01_Slot_18.TabIndex = 31;
             this.LoadPort01_Slot_18.Tag = "1";
             this.LoadPort01_Slot_18.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.LoadPort01_Slot_18.DoubleClick += new System.EventHandler(this.Slot_Click);
             // 
             // label99
             // 
@@ -8324,6 +8520,7 @@
             this.LoadPort01_Slot_19.TabIndex = 28;
             this.LoadPort01_Slot_19.Tag = "1";
             this.LoadPort01_Slot_19.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.LoadPort01_Slot_19.DoubleClick += new System.EventHandler(this.Slot_Click);
             // 
             // label100
             // 
@@ -8357,6 +8554,7 @@
             this.LoadPort01_Slot_20.TabIndex = 25;
             this.LoadPort01_Slot_20.Tag = "1";
             this.LoadPort01_Slot_20.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.LoadPort01_Slot_20.DoubleClick += new System.EventHandler(this.Slot_Click);
             // 
             // label101
             // 
@@ -8390,6 +8588,7 @@
             this.LoadPort01_Slot_21.TabIndex = 22;
             this.LoadPort01_Slot_21.Tag = "1";
             this.LoadPort01_Slot_21.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.LoadPort01_Slot_21.DoubleClick += new System.EventHandler(this.Slot_Click);
             // 
             // label102
             // 
@@ -8423,6 +8622,7 @@
             this.LoadPort01_Slot_22.TabIndex = 19;
             this.LoadPort01_Slot_22.Tag = "1";
             this.LoadPort01_Slot_22.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.LoadPort01_Slot_22.DoubleClick += new System.EventHandler(this.Slot_Click);
             // 
             // label103
             // 
@@ -8456,6 +8656,7 @@
             this.LoadPort01_Slot_23.TabIndex = 16;
             this.LoadPort01_Slot_23.Tag = "1";
             this.LoadPort01_Slot_23.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.LoadPort01_Slot_23.DoubleClick += new System.EventHandler(this.Slot_Click);
             // 
             // label104
             // 
@@ -8489,6 +8690,7 @@
             this.LoadPort01_Slot_24.TabIndex = 13;
             this.LoadPort01_Slot_24.Tag = "1";
             this.LoadPort01_Slot_24.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.LoadPort01_Slot_24.DoubleClick += new System.EventHandler(this.Slot_Click);
             // 
             // label105
             // 
@@ -8522,6 +8724,8 @@
             this.LoadPort01_Slot_25.TabIndex = 10;
             this.LoadPort01_Slot_25.Tag = "1";
             this.LoadPort01_Slot_25.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.LoadPort01_Slot_25.Click += new System.EventHandler(this.Slot_Click);
+            this.LoadPort01_Slot_25.DoubleClick += new System.EventHandler(this.Slot_Click);
             // 
             // label106
             // 

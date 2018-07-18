@@ -348,7 +348,7 @@ namespace Adam
                             switch (Txn.Method)
                             {
                                 case Transaction.Command.OCRType.GetOnline:
-                                    OCRUpdate.UpdateOCRStatus(Node.Name, Msg.Value);
+                                    //OCRUpdate.UpdateOCRStatus(Node.Name, Msg.Value);
                                     break;
                             }
                             break;
@@ -569,7 +569,8 @@ namespace Adam
                             switch (Txn.Method)
                             {
                                 case Transaction.Command.OCRType.Read:
-                                    OCRUpdate.UpdateOCRRead(Node.Name, Msg.Value);
+                                    OCRUpdate.UpdateOCRRead(Node.Name, Msg.Value, Txn.TargetJobs[0]);
+                                   
                                     break;
                             }
                             break;

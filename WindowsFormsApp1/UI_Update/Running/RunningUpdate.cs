@@ -146,6 +146,8 @@ namespace Adam.UI_Update.Running
                                     {
                                         job.NeedProcess = true;
                                         job.ProcessFlag = false;
+                                        job.AlignerFlag = true;
+                                        job.OCRFlag = true;
                                         job.AssignPort(FinPort.Name, StartSlot.ToString());
                                        
                                         FinPort.ReserveList.TryAdd(job.Slot, job);
