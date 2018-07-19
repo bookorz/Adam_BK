@@ -125,6 +125,7 @@ namespace Adam.Menu.Monitoring
 
         private void Slot_Click(object sender, EventArgs e)
         {
+
             string[] ary = (sender as Label).Name.Split('_');
             if (ary.Length == 3)
             {
@@ -142,8 +143,10 @@ namespace Adam.Menu.Monitoring
                         }
                         else
                         {
-                            // open image in default viewer
-                            System.Diagnostics.Process.Start(j.OCRImgPath);
+                            OCRResult form2 = new OCRResult(j);
+                            form2.ShowDialog();
+                            //// open image in default viewer
+                            //System.Diagnostics.Process.Start(j.OCRImgPath);
                         }
                     }
                     else
@@ -153,6 +156,18 @@ namespace Adam.Menu.Monitoring
                 }
 
             }
+        }
+
+        private void OCR01_Pic_DoubleClick(object sender, EventArgs e)
+        {
+            OCRResult form2 = new OCRResult((sender as PictureBox).Tag as Job);
+            form2.ShowDialog();
+        }
+
+        private void OCR02_Pic_DoubleClick(object sender, EventArgs e)
+        {
+            OCRResult form2 = new OCRResult((sender as PictureBox).Tag as Job);
+            form2.ShowDialog();
         }
     }
 }

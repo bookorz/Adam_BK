@@ -20,7 +20,7 @@ namespace Adam.UI_Update.OCR
         delegate void UpdateOCR(string OCRName, string In, Job Job);
 
 
-        public static void UpdateOCRRead(string OCRName,string WaferID,Job Job)
+        public static void UpdateOCRRead(string OCRName, string WaferID, Job Job)
         {
             try
             {
@@ -40,9 +40,9 @@ namespace Adam.UI_Update.OCR
                 }
                 else
                 {
-                    string save= "";
-                    string src="";
-                    if (WaferID.IndexOf("*")!=-1)
+                    string save = "";
+                    string src = "";
+                    if (WaferID.IndexOf("*") != -1)
                     {
                         WaferID = "辨識失敗";
                     }
@@ -57,27 +57,27 @@ namespace Adam.UI_Update.OCR
                             src = SystemConfig.Get().OCR2ImgSourcePath;
                             break;
                     }
-                    
+
                     Thread.Sleep(500);
                     Node OCR = NodeManagement.Get(OCRName);
                     if (OCR != null)
                     {
-                        string saveTmpPath = "";
-                        string savePath = "";
-                        switch (OCR.Brand)
-                        {
-                            case "HST":
-                                saveTmpPath = save + "/" + WaferID + "_" + DateTime.Now.ToString("yyyy_mm_dd_HH_MM_ss") + ".bmp";
-                                savePath = save + "/" + WaferID + "_" + DateTime.Now.ToString("yyyy_mm_dd_HH_MM_ss") + ".jpg";
-                                break;
-                            case "COGNEX":
-                                saveTmpPath = save + "/" + WaferID + "_" + DateTime.Now.ToString("yyyy_mm_dd_HH_MM_ss") + ".bmp";
-                                savePath = save + "/" + WaferID + "_" + DateTime.Now.ToString("yyyy_mm_dd_HH_MM_ss") + ".jpg";
-                                break;
-                        }
+
+                        string saveTmpPath = save + "/" + WaferID + "_" + DateTime.Now.ToString("yyyy_mm_dd_HH_MM_ss") + ".bmp";
+                        string savePath = save + "/" + WaferID + "_" + DateTime.Now.ToString("yyyy_mm_dd_HH_MM_ss") + ".jpg";
+
                         if (savePath != "")
                         {
-                            WaferID = WaferID.Replace("[", "").Replace("]", "").Split(',')[0];
+                            string[] ocrResult = WaferID.Replace("[", "").Replace("]", "").Split(',');
+                            WaferID = ocrResult[0];
+                            if (ocrResult.Length >= 2)
+                            {
+                                WaferID += " Score:" + ocrResult[1];
+                            }
+                            else
+                            {
+                                WaferID += " Score:0";
+                            }
                             Tb_OCRRead.Text = WaferID;
                             string[] files = Directory.GetFiles(src);
                             List<string> fileList = files.ToList();
@@ -86,13 +86,16 @@ namespace Adam.UI_Update.OCR
                                 fileList.Sort((x, y) => { return -File.GetLastWriteTime(x).CompareTo(File.GetLastWriteTime(y)); });
                                 File.Copy(fileList[0], saveTmpPath);
                                 Image bmp = Image.FromFile(saveTmpPath);
+
                                 bmp.Save(savePath, System.Drawing.Imaging.ImageFormat.Jpeg);
                                 bmp.Dispose();
                                 PictureBox Pic_OCR = form.Controls.Find(OCRName + "_Pic", true).FirstOrDefault() as PictureBox;
                                 File.Delete(saveTmpPath);
                                 if (Pic_OCR == null)
                                     return;
-                                Pic_OCR.Image = Image.FromFile(savePath);
+                                Bitmap t = new Bitmap(Image.FromFile(savePath), new Size(320, 240));
+                                Pic_OCR.Image = t;
+                                Pic_OCR.Tag = Job;
                                 Job.OCRImgPath = savePath;
                                 ProcessRecord.updateSubstrateOCR(NodeManagement.Get(Job.FromPort).PrID, Job);
                             }

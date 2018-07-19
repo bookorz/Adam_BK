@@ -877,12 +877,14 @@
             // OCR01_Pic
             // 
             this.OCR01_Pic.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.OCR01_Pic.ImageLocation = "";
             this.OCR01_Pic.Location = new System.Drawing.Point(14, 9);
             this.OCR01_Pic.Name = "OCR01_Pic";
-            this.OCR01_Pic.Size = new System.Drawing.Size(215, 79);
+            this.OCR01_Pic.Size = new System.Drawing.Size(215, 84);
             this.OCR01_Pic.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
             this.OCR01_Pic.TabIndex = 1;
             this.OCR01_Pic.TabStop = false;
+            this.OCR01_Pic.DoubleClick += new System.EventHandler(this.OCR01_Pic_DoubleClick);
             // 
             // OCR01Read_Tb
             // 
@@ -922,6 +924,7 @@
             this.OCR02_Pic.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
             this.OCR02_Pic.TabIndex = 1;
             this.OCR02_Pic.TabStop = false;
+            this.OCR02_Pic.DoubleClick += new System.EventHandler(this.OCR02_Pic_DoubleClick);
             // 
             // OCR02Read_Tb
             // 

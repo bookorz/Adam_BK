@@ -156,6 +156,8 @@ namespace Adam.Menu.SystemSetting
                 MessageBox.Show("Done it.", "Save", MessageBoxButtons.OK, MessageBoxIcon.Exclamation, MessageBoxDefaultButton.Button1);
 
                 UpdateList();
+                //改設定後套用
+                FormMain.DIO.Initial();
             }
             catch (Exception ex)
             {

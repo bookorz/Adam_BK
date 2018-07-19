@@ -809,6 +809,7 @@ namespace Adam
                     }
                     if (!NodeManagement.IsNeedInitial())
                     {
+                        NodeStatusUpdate.UpdateCurrentState("Idle");
                         ConnectionStatusUpdate.UpdateInitial(true.ToString());
                         foreach (Node port in NodeManagement.GetLoadPortList())
                         {

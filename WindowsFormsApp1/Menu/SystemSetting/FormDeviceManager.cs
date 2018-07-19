@@ -9,6 +9,7 @@ using System.Windows.Forms;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Linq;
 using SANWA.Utility;
+using TransferControl.Management;
 
 namespace Adam.Menu.SystemSetting
 {
@@ -304,6 +305,9 @@ namespace Adam.Menu.SystemSetting
 
                 UpdateNodeList();
                 ClearUI();
+
+                //改設定後套用
+                NodeManagement.LoadConfig();
             }
             catch (Exception ex)
             {
