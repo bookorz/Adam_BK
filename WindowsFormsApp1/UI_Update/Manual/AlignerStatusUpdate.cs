@@ -103,7 +103,7 @@ namespace Adam.UI_Update.Manual
                 Control tbError = null;
                 ComboBox cbMode = null;
 
-                if (device.Equals("Aligner01"))
+                if (device.Equals("ALIGNER01"))
                 {
                     tbStatus = manual.Controls.Find("tbA1Status", true).FirstOrDefault() as Control;
                     tbServo = manual.Controls.Find("tbA1Servo", true).FirstOrDefault() as Control;
@@ -113,7 +113,7 @@ namespace Adam.UI_Update.Manual
                     tbError = manual.Controls.Find("tbA1Error", true).FirstOrDefault() as Control;
                     cbMode = manual.Controls.Find("cbA1Mode", true).FirstOrDefault() as ComboBox;
                 }
-                else if (device.Equals("Aligner02"))
+                else if (device.Equals("ALIGNER02"))
                 {
                     tbStatus = manual.Controls.Find("tbA2Status", true).FirstOrDefault() as Control;
                     tbServo = manual.Controls.Find("tbA2Servo", true).FirstOrDefault() as Control;

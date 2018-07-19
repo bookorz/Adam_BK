@@ -105,7 +105,7 @@ namespace Adam.Menu.Status
                         String state = "";
                         switch (each.Type)
                         {
-                            case "Robot":
+                            case "ROBOT":
                                 DataGridViewRow robotRow = (DataGridViewRow)dgvRstatus.Rows[0].Clone();
                                 robotRow.Cells[0].Value = each.Name;
                                 state = ((RobotState)StateUtil.device[each.Name]).State;
@@ -117,7 +117,7 @@ namespace Adam.Menu.Status
                                 }
                                 dgvRstatus.Rows.Add(robotRow);
                                 break;
-                            case "Aligner":
+                            case "ALIGNER":
                                 DataGridViewRow alignerRow = (DataGridViewRow)dgvAstatus.Rows[0].Clone();
                                 alignerRow.Cells[0].Value = each.Name;
                                 state = ((AlignerState)StateUtil.device[each.Name]).State;
@@ -129,7 +129,7 @@ namespace Adam.Menu.Status
                                 }
                                 dgvAstatus.Rows.Add(alignerRow);
                                 break;
-                            case "LoadPort":
+                            case "LOADPORT":
                                 DataGridViewRow portRow = (DataGridViewRow)dgvLstatus.Rows[0].Clone();
                                 portRow.Cells[0].Value = each.Name;
                                 state = ((LoadPortState)StateUtil.device[each.Name]).State;
@@ -257,13 +257,13 @@ namespace Adam.Menu.Status
                         }
                         switch (each.Type)
                         {
-                            case "Robot":
+                            case "ROBOT":
                                 txn.Method = Transaction.Command.RobotType.GetStatus;
                                 break;
-                            case "Aligner":
+                            case "ALIGNER":
                                 txn.Method = Transaction.Command.AlignerType.GetStatus;
                                 break;
-                            case "LoadPort":
+                            case "LOADPORT":
                                 txn.Method = Transaction.Command.LoadPortType.ReadStatus;
                                 break;
                         }
