@@ -58,7 +58,7 @@ namespace Adam
 
             SanwaUtil.addPartition();
             SanwaUtil.dropPartition();
-
+            
         }
 
         protected override CreateParams CreateParams
@@ -128,6 +128,8 @@ namespace Adam
             this.Width = oldWidth;
             this.Height = oldHeight;
             this.WindowState = FormWindowState.Maximized;
+
+            
         }
 
         private void LoadPort01_DataBindingComplete(object sender, DataGridViewBindingCompleteEventArgs e)
@@ -761,6 +763,7 @@ namespace Adam
                 RunningUpdate.UpdateRunningInfo("LapsedWfCount", LapsedWfCount.ToString());
                 RunningUpdate.UpdateRunningInfo("LapsedLotCount", LapsedLotCount.ToString());
                 RunningUpdate.UpdateRunningInfo("WPH", (LapsedWfCount/Convert.ToDouble(LapsedTime)*3600).ToString() );
+                MonitoringUpdate.UpdateWPH(Math.Round((LapsedWfCount / Convert.ToDouble(LapsedTime) * 3600),1).ToString());
             }
             catch (Exception e)
             {

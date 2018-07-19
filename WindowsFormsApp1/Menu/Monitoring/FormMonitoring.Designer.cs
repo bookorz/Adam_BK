@@ -509,6 +509,9 @@
             this.Aligner01_State = new System.Windows.Forms.TextBox();
             this.LoadPort01_FID = new System.Windows.Forms.TextBox();
             this.label9 = new System.Windows.Forms.Label();
+            this.panel5 = new System.Windows.Forms.Panel();
+            this.WPH = new System.Windows.Forms.Label();
+            this.label32 = new System.Windows.Forms.Label();
             this.Aligner01_tb.SuspendLayout();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.OCR01_Pic)).BeginInit();
@@ -526,11 +529,13 @@
             this.tableLayoutPanel2.SuspendLayout();
             this.tableLayoutPanel1.SuspendLayout();
             this.TblPanel_A.SuspendLayout();
+            this.panel5.SuspendLayout();
             this.SuspendLayout();
             // 
             // Aligner01_tb
             // 
             this.Aligner01_tb.BackColor = System.Drawing.SystemColors.Control;
+            this.Aligner01_tb.Controls.Add(this.panel5);
             this.Aligner01_tb.Controls.Add(this.LoadPort08_Mode);
             this.Aligner01_tb.Controls.Add(this.label54);
             this.Aligner01_tb.Controls.Add(this.LoadPort07_Mode);
@@ -900,7 +905,7 @@
             this.label15.AutoSize = true;
             this.label15.Font = new System.Drawing.Font("Consolas", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label15.ForeColor = System.Drawing.Color.Black;
-            this.label15.Location = new System.Drawing.Point(1366, 189);
+            this.label15.Location = new System.Drawing.Point(1366, 185);
             this.label15.Name = "label15";
             this.label15.Size = new System.Drawing.Size(45, 19);
             this.label15.TabIndex = 151;
@@ -911,7 +916,7 @@
             this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.panel1.Controls.Add(this.OCR02_Pic);
             this.panel1.Controls.Add(this.OCR02Read_Tb);
-            this.panel1.Location = new System.Drawing.Point(1346, 202);
+            this.panel1.Location = new System.Drawing.Point(1346, 198);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(243, 134);
             this.panel1.TabIndex = 147;
@@ -940,7 +945,7 @@
             this.label8.AutoSize = true;
             this.label8.Font = new System.Drawing.Font("Consolas", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label8.ForeColor = System.Drawing.Color.Black;
-            this.label8.Location = new System.Drawing.Point(1425, 640);
+            this.label8.Location = new System.Drawing.Point(1425, 587);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(63, 19);
             this.label8.TabIndex = 149;
@@ -953,7 +958,7 @@
             this.panel3.Controls.Add(this.label36);
             this.panel3.Controls.Add(this.Robot02_Slot_1);
             this.panel3.Controls.Add(this.label40);
-            this.panel3.Location = new System.Drawing.Point(1412, 651);
+            this.panel3.Location = new System.Drawing.Point(1412, 598);
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(177, 67);
             this.panel3.TabIndex = 150;
@@ -1025,7 +1030,7 @@
             this.label12.AutoSize = true;
             this.label12.Font = new System.Drawing.Font("Consolas", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label12.ForeColor = System.Drawing.Color.Black;
-            this.label12.Location = new System.Drawing.Point(1425, 458);
+            this.label12.Location = new System.Drawing.Point(1425, 429);
             this.label12.Name = "label12";
             this.label12.Size = new System.Drawing.Size(81, 19);
             this.label12.TabIndex = 147;
@@ -1036,7 +1041,7 @@
             this.panel7.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.panel7.Controls.Add(this.Aligner02_Slot_1);
             this.panel7.Controls.Add(this.label17);
-            this.panel7.Location = new System.Drawing.Point(1412, 469);
+            this.panel7.Location = new System.Drawing.Point(1412, 440);
             this.panel7.Name = "panel7";
             this.panel7.Size = new System.Drawing.Size(177, 39);
             this.panel7.TabIndex = 148;
@@ -1077,7 +1082,7 @@
             this.label18.AutoSize = true;
             this.label18.Font = new System.Drawing.Font("Consolas", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label18.ForeColor = System.Drawing.Color.Black;
-            this.label18.Location = new System.Drawing.Point(1425, 362);
+            this.label18.Location = new System.Drawing.Point(1425, 356);
             this.label18.Name = "label18";
             this.label18.Size = new System.Drawing.Size(81, 19);
             this.label18.TabIndex = 145;
@@ -1088,7 +1093,7 @@
             this.panel6.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.panel6.Controls.Add(this.Aligner01_Slot_1);
             this.panel6.Controls.Add(this.label19);
-            this.panel6.Location = new System.Drawing.Point(1412, 376);
+            this.panel6.Location = new System.Drawing.Point(1412, 370);
             this.panel6.Name = "panel6";
             this.panel6.Size = new System.Drawing.Size(177, 39);
             this.panel6.TabIndex = 146;
@@ -1129,7 +1134,7 @@
             this.label20.AutoSize = true;
             this.label20.Font = new System.Drawing.Font("Consolas", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label20.ForeColor = System.Drawing.Color.Black;
-            this.label20.Location = new System.Drawing.Point(1425, 550);
+            this.label20.Location = new System.Drawing.Point(1425, 497);
             this.label20.Name = "label20";
             this.label20.Size = new System.Drawing.Size(63, 19);
             this.label20.TabIndex = 143;
@@ -1142,7 +1147,7 @@
             this.panel4.Controls.Add(this.label21);
             this.panel4.Controls.Add(this.Robot01_Slot_1);
             this.panel4.Controls.Add(this.label22);
-            this.panel4.Location = new System.Drawing.Point(1412, 561);
+            this.panel4.Location = new System.Drawing.Point(1412, 508);
             this.panel4.Name = "panel4";
             this.panel4.Size = new System.Drawing.Size(177, 67);
             this.panel4.TabIndex = 144;
@@ -9062,7 +9067,7 @@
             this.Robot02_State.BackColor = System.Drawing.Color.Orange;
             this.Robot02_State.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.Robot02_State.Font = new System.Drawing.Font("微軟正黑體", 12F, System.Drawing.FontStyle.Bold);
-            this.Robot02_State.Location = new System.Drawing.Point(1347, 651);
+            this.Robot02_State.Location = new System.Drawing.Point(1347, 598);
             this.Robot02_State.Name = "Robot02_State";
             this.Robot02_State.Size = new System.Drawing.Size(66, 29);
             this.Robot02_State.TabIndex = 105;
@@ -9075,7 +9080,7 @@
             this.Robot01_State.BackColor = System.Drawing.Color.Orange;
             this.Robot01_State.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.Robot01_State.Font = new System.Drawing.Font("微軟正黑體", 12F, System.Drawing.FontStyle.Bold);
-            this.Robot01_State.Location = new System.Drawing.Point(1346, 561);
+            this.Robot01_State.Location = new System.Drawing.Point(1346, 508);
             this.Robot01_State.Name = "Robot01_State";
             this.Robot01_State.Size = new System.Drawing.Size(67, 29);
             this.Robot01_State.TabIndex = 94;
@@ -9088,7 +9093,7 @@
             this.Aligner02_State.BackColor = System.Drawing.Color.Orange;
             this.Aligner02_State.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.Aligner02_State.Font = new System.Drawing.Font("微軟正黑體", 12F, System.Drawing.FontStyle.Bold);
-            this.Aligner02_State.Location = new System.Drawing.Point(1346, 469);
+            this.Aligner02_State.Location = new System.Drawing.Point(1346, 440);
             this.Aligner02_State.Name = "Aligner02_State";
             this.Aligner02_State.Size = new System.Drawing.Size(67, 29);
             this.Aligner02_State.TabIndex = 92;
@@ -9101,7 +9106,7 @@
             this.Aligner01_State.BackColor = System.Drawing.Color.Orange;
             this.Aligner01_State.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.Aligner01_State.Font = new System.Drawing.Font("微軟正黑體", 12F, System.Drawing.FontStyle.Bold);
-            this.Aligner01_State.Location = new System.Drawing.Point(1346, 376);
+            this.Aligner01_State.Location = new System.Drawing.Point(1346, 370);
             this.Aligner01_State.Name = "Aligner01_State";
             this.Aligner01_State.Size = new System.Drawing.Size(67, 29);
             this.Aligner01_State.TabIndex = 88;
@@ -9136,6 +9141,48 @@
             this.label9.Text = "LoadPort01";
             this.label9.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
+            // panel5
+            // 
+            this.panel5.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel5.Controls.Add(this.WPH);
+            this.panel5.Controls.Add(this.label32);
+            this.panel5.Location = new System.Drawing.Point(1412, 694);
+            this.panel5.Name = "panel5";
+            this.panel5.Size = new System.Drawing.Size(177, 40);
+            this.panel5.TabIndex = 170;
+            // 
+            // WPH
+            // 
+            this.WPH.BackColor = System.Drawing.Color.Navy;
+            this.WPH.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.WPH.Font = new System.Drawing.Font("Consolas", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.WPH.ForeColor = System.Drawing.Color.White;
+            this.WPH.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.WPH.Location = new System.Drawing.Point(63, 12);
+            this.WPH.Margin = new System.Windows.Forms.Padding(3);
+            this.WPH.Name = "WPH";
+            this.WPH.Size = new System.Drawing.Size(104, 18);
+            this.WPH.TabIndex = 17;
+            this.WPH.Tag = "1";
+            this.WPH.Text = "0";
+            this.WPH.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // label32
+            // 
+            this.label32.BackColor = System.Drawing.Color.DimGray;
+            this.label32.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.label32.Font = new System.Drawing.Font("微軟正黑體", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
+            this.label32.ForeColor = System.Drawing.Color.White;
+            this.label32.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.label32.Location = new System.Drawing.Point(9, 12);
+            this.label32.Margin = new System.Windows.Forms.Padding(3);
+            this.label32.Name = "label32";
+            this.label32.Size = new System.Drawing.Size(48, 18);
+            this.label32.TabIndex = 16;
+            this.label32.Tag = "1";
+            this.label32.Text = "WPH";
+            this.label32.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
             // FormMonitoring
             // 
             this.ClientSize = new System.Drawing.Size(1620, 760);
@@ -9169,6 +9216,7 @@
             this.tableLayoutPanel1.PerformLayout();
             this.TblPanel_A.ResumeLayout(false);
             this.TblPanel_A.PerformLayout();
+            this.panel5.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -9656,5 +9704,8 @@
         internal System.Windows.Forms.Label label26;
         internal System.Windows.Forms.Label LoadPort01_Mode;
         internal System.Windows.Forms.Label label16;
+        private System.Windows.Forms.Panel panel5;
+        internal System.Windows.Forms.Label WPH;
+        internal System.Windows.Forms.Label label32;
     }
 }

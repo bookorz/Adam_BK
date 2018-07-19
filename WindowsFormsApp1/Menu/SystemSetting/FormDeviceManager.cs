@@ -10,6 +10,7 @@ using Newtonsoft.Json;
 using Newtonsoft.Json.Linq;
 using SANWA.Utility;
 using TransferControl.Management;
+using Adam.UI_Update.OCR;
 
 namespace Adam.Menu.SystemSetting
 {
@@ -308,6 +309,7 @@ namespace Adam.Menu.SystemSetting
 
                 //改設定後套用
                 NodeManagement.LoadConfig();
+                OCRUpdate.AssignForm();
             }
             catch (Exception ex)
             {
