@@ -114,6 +114,7 @@ namespace Adam.UI_Update.WaferMapping
                     Port_gv.ColumnHeadersDefaultCellStyle.Font = new Font("Arial", 10);
                     Port_gv.Columns["NeedProcess"].Visible = false;
                     Port_gv.Columns["OCRImgPath"].Visible = false;
+                    Port_gv.Columns["OCRScore"].Visible = false;
                     Port_gv.Columns["LastSlot"].Visible = false;
                     Port_gv.Columns["FromPortSlot"].Visible = false;
                     Port_gv.Columns["AssignTime"].Visible = false;
@@ -259,6 +260,7 @@ namespace Adam.UI_Update.WaferMapping
                     Port_gv.ColumnHeadersDefaultCellStyle.Font = new Font("Arial", 10);
                     Port_gv.Columns["NeedProcess"].Visible = false;
                     Port_gv.Columns["OCRImgPath"].Visible = false;
+                    Port_gv.Columns["OCRScore"].Visible = false;
                     Port_gv.Columns["LastSlot"].Visible = false;
                     Port_gv.Columns["FromPortSlot"].Visible = false;
                     Port_gv.Columns["AssignTime"].Visible = false;

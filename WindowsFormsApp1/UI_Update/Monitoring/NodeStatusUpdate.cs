@@ -24,7 +24,7 @@ namespace Adam.UI_Update.Monitoring
             public string Eqp_Status { get; set; }
             public bool Is_Alarm { get; set; }
             public string Red { get; set; }
-            public string Yellow { get; set; }
+            public string Orange { get; set; }
             public string Blue { get; set; }
             public string Green { get; set; }
             public string Buzzer1 { get; set; }
@@ -131,7 +131,7 @@ namespace Adam.UI_Update.Monitoring
                     Dictionary<string, string> Params = new Dictionary<string, string>();
 
                     var findSetting = from Setting in SignalSetting
-                                      where Setting.Eqp_Status.Equals(State.ToUpper()) && Setting.Is_Alarm == (NodeManagement.GetCurrentState().ToUpper().Equals("ALARM"))
+                                      where Setting.Eqp_Status.Equals(State.ToUpper()) && Setting.Is_Alarm == (AlarmManagement.GetAll().Count!=0)
                                       select Setting;
 
                     if (findSetting.Count() != 0)
@@ -139,35 +139,35 @@ namespace Adam.UI_Update.Monitoring
                         Setting each = findSetting.First();
                         if (!each.Blue.Equals("BLINK"))
                         {
-                            Params.Add("Blue", each.Blue);
+                            Params.Add("BLUE", each.Blue);
                         }
                         else
                         {
-                            FormMain.DIO.SetBlink("Blue", "True");
+                            FormMain.DIO.SetBlink("BLUE", "True");
                         }
                         if (!each.Green.Equals("BLINK"))
                         {
-                            Params.Add("Green", each.Green);
+                            Params.Add("GREEN", each.Green);
                         }
                         else
                         {
-                            FormMain.DIO.SetBlink("Green", "True");
+                            FormMain.DIO.SetBlink("GREEN", "True");
                         }
                         if (!each.Red.Equals("BLINK"))
                         {
-                            Params.Add("Red", each.Red);
+                            Params.Add("RED", each.Red);
                         }
                         else
                         {
-                            FormMain.DIO.SetBlink("Red", "True");
+                            FormMain.DIO.SetBlink("RED", "True");
                         }
-                        if (!each.Yellow.Equals("BLINK"))
+                        if (!each.Orange.Equals("BLINK"))
                         {
-                            Params.Add("Yellow", each.Yellow);
+                            Params.Add("ORANGE", each.Orange);
                         }
                         else
                         {
-                            FormMain.DIO.SetBlink("Yellow", "True");
+                            FormMain.DIO.SetBlink("ORANGE", "True");
                         }
 
                         FormMain.DIO.SetIO(Params);

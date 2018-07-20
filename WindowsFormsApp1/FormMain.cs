@@ -58,6 +58,7 @@ namespace Adam
 
             SanwaUtil.addPartition();
             SanwaUtil.dropPartition();
+            ThreadPool.QueueUserWorkItem(new WaitCallback(DBUtil.consumeSqlCmd));
             
         }
 
@@ -290,6 +291,11 @@ namespace Adam
             logger.Debug("On_Command_Excuted");
 
             Transaction txn = new Transaction();
+
+            if(Txn.Method == Transaction.Command.LoadPortType.Reset)
+            {
+                AlarmUpdate.UpdateAlarmList(AlarmManagement.GetAll());
+            }
 
             switch (Node.Type)
             {
@@ -987,7 +993,7 @@ namespace Adam
         {
             switch ((sender as Button).Name)
             {
-                case "Red_Signal":
+                case "RED_Signal":
                     if (DIO.GetIO("OUT", "RED").ToUpper().Equals("TRUE"))
                     {
                         DIO.SetIO("RED", "False");
@@ -997,7 +1003,7 @@ namespace Adam
                         DIO.SetIO("RED", "True");
                     }
                     break;
-                case "Orange_Signal":
+                case "ORANGE_Signal":
                     if (DIO.GetIO("OUT", "ORANGE").ToUpper().Equals("TRUE"))
                     {
                         DIO.SetIO("ORANGE", "False");
@@ -1007,7 +1013,7 @@ namespace Adam
                         DIO.SetIO("ORANGE", "True");
                     }
                     break;
-                case "Green_Signal":
+                case "GREEN_Signal":
                     if (DIO.GetIO("OUT", "GREEN").ToUpper().Equals("TRUE"))
                     {
                         DIO.SetIO("GREEN", "False");
@@ -1017,7 +1023,7 @@ namespace Adam
                         DIO.SetIO("GREEN", "True");
                     }
                     break;
-                case "Blue_Signal":
+                case "BLUE_Signal":
                     if (DIO.GetIO("OUT", "BLUE").ToUpper().Equals("TRUE"))
                     {
                         DIO.SetIO("BLUE", "False");
@@ -1027,7 +1033,7 @@ namespace Adam
                         DIO.SetIO("BLUE", "True");
                     }
                     break;
-                case "Buzzer1_Signal":
+                case "BUZZER1_Signal":
                     if (DIO.GetIO("OUT", "BUZZER1").ToUpper().Equals("TRUE"))
                     {
                         DIO.SetIO("BUZZER1", "False");
@@ -1037,7 +1043,7 @@ namespace Adam
                         DIO.SetIO("BUZZER1", "True");
                     }
                     break;
-                case "Buzzer2_Signal":
+                case "BUZZER2_Signal":
                     if (DIO.GetIO("OUT", "BUZZER2").ToUpper().Equals("TRUE"))
                     {
                         DIO.SetIO("BUZZER2", "False");

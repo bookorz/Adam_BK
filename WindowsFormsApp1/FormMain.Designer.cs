@@ -54,8 +54,8 @@ namespace Adam
             this.panel1 = new System.Windows.Forms.Panel();
             this.groupBox4 = new System.Windows.Forms.GroupBox();
             this.Mute_chk = new System.Windows.Forms.CheckBox();
-            this.Buzzer2_Signal = new System.Windows.Forms.Button();
-            this.Buzzer1_Signal = new System.Windows.Forms.Button();
+            this.BUZZER2_Signal = new System.Windows.Forms.Button();
+            this.BUZZER1_Signal = new System.Windows.Forms.Button();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.lbl_login_date = new System.Windows.Forms.Label();
             this.lbl_login_group = new System.Windows.Forms.Label();
@@ -70,10 +70,10 @@ namespace Adam
             this.groupBox3 = new System.Windows.Forms.GroupBox();
             this.Conn_gv = new System.Windows.Forms.DataGridView();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
-            this.Blue_Signal = new System.Windows.Forms.Button();
-            this.Green_Signal = new System.Windows.Forms.Button();
-            this.Orange_Signal = new System.Windows.Forms.Button();
-            this.Red_Signal = new System.Windows.Forms.Button();
+            this.BLUE_Signal = new System.Windows.Forms.Button();
+            this.GREEN_Signal = new System.Windows.Forms.Button();
+            this.ORANGE_Signal = new System.Windows.Forms.Button();
+            this.RED_Signal = new System.Windows.Forms.Button();
             this.tbcMian = new System.Windows.Forms.TabControl();
             this.tabMonitor = new System.Windows.Forms.TabPage();
             this.tabComm = new System.Windows.Forms.TabPage();
@@ -319,8 +319,8 @@ namespace Adam
             // 
             resources.ApplyResources(this.groupBox4, "groupBox4");
             this.groupBox4.Controls.Add(this.Mute_chk);
-            this.groupBox4.Controls.Add(this.Buzzer2_Signal);
-            this.groupBox4.Controls.Add(this.Buzzer1_Signal);
+            this.groupBox4.Controls.Add(this.BUZZER2_Signal);
+            this.groupBox4.Controls.Add(this.BUZZER1_Signal);
             this.groupBox4.Name = "groupBox4";
             this.groupBox4.TabStop = false;
             // 
@@ -332,21 +332,21 @@ namespace Adam
             this.Mute_chk.Name = "Mute_chk";
             this.Mute_chk.UseVisualStyleBackColor = true;
             // 
-            // Buzzer2_Signal
+            // BUZZER2_Signal
             // 
-            this.Buzzer2_Signal.BackColor = System.Drawing.Color.Gray;
-            resources.ApplyResources(this.Buzzer2_Signal, "Buzzer2_Signal");
-            this.Buzzer2_Signal.Name = "Buzzer2_Signal";
-            this.Buzzer2_Signal.UseVisualStyleBackColor = false;
-            this.Buzzer2_Signal.MouseClick += new System.Windows.Forms.MouseEventHandler(this.Signal_MouseClick);
+            this.BUZZER2_Signal.BackColor = System.Drawing.Color.Gray;
+            resources.ApplyResources(this.BUZZER2_Signal, "BUZZER2_Signal");
+            this.BUZZER2_Signal.Name = "BUZZER2_Signal";
+            this.BUZZER2_Signal.UseVisualStyleBackColor = false;
+            this.BUZZER2_Signal.MouseClick += new System.Windows.Forms.MouseEventHandler(this.Signal_MouseClick);
             // 
-            // Buzzer1_Signal
+            // BUZZER1_Signal
             // 
-            this.Buzzer1_Signal.BackColor = System.Drawing.Color.Gray;
-            resources.ApplyResources(this.Buzzer1_Signal, "Buzzer1_Signal");
-            this.Buzzer1_Signal.Name = "Buzzer1_Signal";
-            this.Buzzer1_Signal.UseVisualStyleBackColor = false;
-            this.Buzzer1_Signal.MouseClick += new System.Windows.Forms.MouseEventHandler(this.Signal_MouseClick);
+            this.BUZZER1_Signal.BackColor = System.Drawing.Color.Gray;
+            resources.ApplyResources(this.BUZZER1_Signal, "BUZZER1_Signal");
+            this.BUZZER1_Signal.Name = "BUZZER1_Signal";
+            this.BUZZER1_Signal.UseVisualStyleBackColor = false;
+            this.BUZZER1_Signal.MouseClick += new System.Windows.Forms.MouseEventHandler(this.Signal_MouseClick);
             // 
             // groupBox1
             // 
@@ -452,44 +452,44 @@ namespace Adam
             // groupBox2
             // 
             resources.ApplyResources(this.groupBox2, "groupBox2");
-            this.groupBox2.Controls.Add(this.Blue_Signal);
-            this.groupBox2.Controls.Add(this.Green_Signal);
-            this.groupBox2.Controls.Add(this.Orange_Signal);
-            this.groupBox2.Controls.Add(this.Red_Signal);
+            this.groupBox2.Controls.Add(this.BLUE_Signal);
+            this.groupBox2.Controls.Add(this.GREEN_Signal);
+            this.groupBox2.Controls.Add(this.ORANGE_Signal);
+            this.groupBox2.Controls.Add(this.RED_Signal);
             this.groupBox2.Name = "groupBox2";
             this.groupBox2.TabStop = false;
             // 
-            // Blue_Signal
+            // BLUE_Signal
             // 
-            this.Blue_Signal.BackColor = System.Drawing.Color.Gray;
-            resources.ApplyResources(this.Blue_Signal, "Blue_Signal");
-            this.Blue_Signal.Name = "Blue_Signal";
-            this.Blue_Signal.UseVisualStyleBackColor = false;
-            this.Blue_Signal.MouseClick += new System.Windows.Forms.MouseEventHandler(this.Signal_MouseClick);
+            this.BLUE_Signal.BackColor = System.Drawing.Color.Gray;
+            resources.ApplyResources(this.BLUE_Signal, "BLUE_Signal");
+            this.BLUE_Signal.Name = "BLUE_Signal";
+            this.BLUE_Signal.UseVisualStyleBackColor = false;
+            this.BLUE_Signal.MouseClick += new System.Windows.Forms.MouseEventHandler(this.Signal_MouseClick);
             // 
-            // Green_Signal
+            // GREEN_Signal
             // 
-            this.Green_Signal.BackColor = System.Drawing.Color.Gray;
-            resources.ApplyResources(this.Green_Signal, "Green_Signal");
-            this.Green_Signal.Name = "Green_Signal";
-            this.Green_Signal.UseVisualStyleBackColor = false;
-            this.Green_Signal.MouseClick += new System.Windows.Forms.MouseEventHandler(this.Signal_MouseClick);
+            this.GREEN_Signal.BackColor = System.Drawing.Color.Gray;
+            resources.ApplyResources(this.GREEN_Signal, "GREEN_Signal");
+            this.GREEN_Signal.Name = "GREEN_Signal";
+            this.GREEN_Signal.UseVisualStyleBackColor = false;
+            this.GREEN_Signal.MouseClick += new System.Windows.Forms.MouseEventHandler(this.Signal_MouseClick);
             // 
-            // Orange_Signal
+            // ORANGE_Signal
             // 
-            this.Orange_Signal.BackColor = System.Drawing.Color.Gray;
-            resources.ApplyResources(this.Orange_Signal, "Orange_Signal");
-            this.Orange_Signal.Name = "Orange_Signal";
-            this.Orange_Signal.UseVisualStyleBackColor = false;
-            this.Orange_Signal.MouseClick += new System.Windows.Forms.MouseEventHandler(this.Signal_MouseClick);
+            this.ORANGE_Signal.BackColor = System.Drawing.Color.Gray;
+            resources.ApplyResources(this.ORANGE_Signal, "ORANGE_Signal");
+            this.ORANGE_Signal.Name = "ORANGE_Signal";
+            this.ORANGE_Signal.UseVisualStyleBackColor = false;
+            this.ORANGE_Signal.MouseClick += new System.Windows.Forms.MouseEventHandler(this.Signal_MouseClick);
             // 
-            // Red_Signal
+            // RED_Signal
             // 
-            this.Red_Signal.BackColor = System.Drawing.Color.Gray;
-            resources.ApplyResources(this.Red_Signal, "Red_Signal");
-            this.Red_Signal.Name = "Red_Signal";
-            this.Red_Signal.UseVisualStyleBackColor = false;
-            this.Red_Signal.MouseClick += new System.Windows.Forms.MouseEventHandler(this.Signal_MouseClick);
+            this.RED_Signal.BackColor = System.Drawing.Color.Gray;
+            resources.ApplyResources(this.RED_Signal, "RED_Signal");
+            this.RED_Signal.Name = "RED_Signal";
+            this.RED_Signal.UseVisualStyleBackColor = false;
+            this.RED_Signal.MouseClick += new System.Windows.Forms.MouseEventHandler(this.Signal_MouseClick);
             // 
             // tbcMian
             // 
@@ -920,13 +920,13 @@ namespace Adam
         private System.Windows.Forms.TabPage tabStatus;
         private System.Windows.Forms.Button IonizerAir_Signal;
         private System.Windows.Forms.Button DifferentialPressureAlarm2_Signal;
-        private System.Windows.Forms.Button Blue_Signal;
-        private System.Windows.Forms.Button Green_Signal;
-        private System.Windows.Forms.Button Orange_Signal;
-        private System.Windows.Forms.Button Red_Signal;
+        private System.Windows.Forms.Button BLUE_Signal;
+        private System.Windows.Forms.Button GREEN_Signal;
+        private System.Windows.Forms.Button ORANGE_Signal;
+        private System.Windows.Forms.Button RED_Signal;
         private System.Windows.Forms.GroupBox groupBox4;
-        private System.Windows.Forms.Button Buzzer2_Signal;
-        private System.Windows.Forms.Button Buzzer1_Signal;
+        private System.Windows.Forms.Button BUZZER2_Signal;
+        private System.Windows.Forms.Button BUZZER1_Signal;
         private System.Windows.Forms.Button Mode_btn;
         private System.Windows.Forms.Button Connection_btn;
         private System.Windows.Forms.Button Initial_btn;

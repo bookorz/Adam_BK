@@ -1,4 +1,5 @@
-﻿using log4net;
+﻿using Adam.UI_Update.Monitoring;
+using log4net;
 using System;
 using System.Collections.Generic;
 using System.Drawing;
@@ -55,14 +56,15 @@ namespace Adam.UI_Update.Alarm
                     //Conn_gv.Refresh();
                     AlarmList_gv.ClearSelection();
                     AlarmList_gv.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.AllCells;
+                    NodeStatusUpdate.UpdateCurrentState(FormMain.RouteCtrl.EqpState);
                     if (AlarmList.Count() != 0)
                     {
                         form.Visible = true;
-                        FormMain.DIO.SetBlink("Red","True");
+                        
                     }
                     else
                     {
-                        FormMain.DIO.SetIO("Red", "False");
+                        
                         form.Visible = false;
                     }
                 }

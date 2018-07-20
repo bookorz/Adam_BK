@@ -32,6 +32,7 @@ namespace Adam.UI_Update.OCR
         delegate void AssignUI(object param);
         delegate void ReAssignUI();
         static IntPtr appWin2;
+        static int pCnt = 0;
 
   
 
@@ -128,7 +129,7 @@ namespace Adam.UI_Update.OCR
 
         public static void AssignForm()
         {
-
+            pCnt = 0;
             foreach (Process p in Process.GetProcessesByName("VB9BReaderForm"))
             {
                 p.Kill();
@@ -160,6 +161,7 @@ namespace Adam.UI_Update.OCR
             }
             else
             {
+                
                 tabControl1.TabPages.Clear();
                 var ocrs = from ocr in NodeManagement.GetList()
                            where ocr.Type.Equals("OCR")
@@ -170,7 +172,7 @@ namespace Adam.UI_Update.OCR
                     switch (ocr.Brand)
                     {
                         case "HST":
-
+                            pCnt++;
                             Process p1 = Process.Start(new ProcessStartInfo("C:/Program Files (x86)/HST Vision/e-Reader8000/VB9BReaderForm.exe", ocr.AdrNo));
                             ThreadPool.QueueUserWorkItem(new WaitCallback(LoadHST), ocr);
                            
@@ -179,10 +181,12 @@ namespace Adam.UI_Update.OCR
                         case "COGNEX":
                             if (!IsCognexInit)
                             {
+                                pCnt++;
                                 IsCognexInit = true;
                                 Process p2 = Process.Start(new ProcessStartInfo("C:/Program Files (x86)/Cognex/In-Sight/In-Sight Explorer Wafer 4.5.0/WaferID.exe"));
                                 ThreadPool.QueueUserWorkItem(new WaitCallback(LoadCOGNEX), ocr);
                             }
+                            ControllerManagement.Get(ocr.Controller).Connect();
                             break;
                     }
                 }
@@ -210,7 +214,7 @@ namespace Adam.UI_Update.OCR
                 SpinWait.SpinUntil(() => (from prs in Process.GetProcessesByName("VB9BReaderForm").OfType<Process>().ToList()
                                           where prs.MainWindowTitle.Equals("[" + OCR.AdrNo + "]Wafer Reader Version 4.3.1.0")
                                           select prs).Count() != 0, 60000);
-
+                SpinWait.SpinUntil(() => false, 2000);
                 // Put it into this form
                 if (tabControl1.InvokeRequired)
                 {
@@ -231,7 +235,13 @@ namespace Adam.UI_Update.OCR
                         SetParent(p2.MainWindowHandle, tabControl1.TabPages[OCR.Name].Handle);
                         MoveWindow(p2.MainWindowHandle, 0, -30, tabControl1.TabPages[OCR.Name].Width, tabControl1.TabPages[OCR.Name].Height + 30, true);
                     }
-                    ControllerManagement.Get("OCRCONTROLLER02").Connect();
+                    ControllerManagement.Get(OCR.Controller).Connect();
+                    pCnt--;
+                    if(pCnt == 0)
+                    {
+                        Button Reload = form.Controls.Find("Reload_btn", true).FirstOrDefault() as Button;
+                        Reload.Enabled = true;
+                    }
                 }
 
 
@@ -251,6 +261,7 @@ namespace Adam.UI_Update.OCR
                 
                 //Cognex Wafer ID - 4.5.0
                 SpinWait.SpinUntil(() => Process.GetProcessesByName("WaferID")[0].MainWindowTitle.Equals("Cognex Wafer ID - 4.5.0"), 60000);
+                SpinWait.SpinUntil(() => false, 2000);
                 //SpinWait.SpinUntil(() => Process.GetProcessesByName("WaferID").Length != 0, 60000);
 
                 //logger.Debug("1" + Process.GetProcessesByName("WaferID")[0].MainWindowTitle);
@@ -278,6 +289,12 @@ namespace Adam.UI_Update.OCR
                     appWin2 = p2.MainWindowHandle;
                     SetParent(p2.MainWindowHandle, tabControl1.TabPages["COGNEX"].Handle);
                     MoveWindow(p2.MainWindowHandle, 0, -30, tabControl1.TabPages["COGNEX"].Width, tabControl1.TabPages["COGNEX"].Height + 30, true);
+                    pCnt--;
+                    if (pCnt == 0)
+                    {
+                        Button Reload = form.Controls.Find("Reload_btn", true).FirstOrDefault() as Button;
+                        Reload.Enabled = true;
+                    }
                 }
 
             }

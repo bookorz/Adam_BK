@@ -130,7 +130,7 @@ namespace Adam.Menu.SystemSetting
                     cmbBlue.SelectedValue = query[0]["blue"].ToString();
                     cmbGreen.SelectedValue = query[0]["green"].ToString();
                     cmbRad.SelectedValue = query[0]["red"].ToString();
-                    cmbYellow.SelectedValue = query[0]["yellow"].ToString();
+                    cmbYellow.SelectedValue = query[0]["orange"].ToString();
                     cmbBuzzer1.SelectedValue = query[0]["buzzer1"].ToString();
                     cmbBuzzer2.SelectedValue = query[0]["buzzer2"].ToString();
                 }
@@ -162,7 +162,7 @@ namespace Adam.Menu.SystemSetting
             {
                 strSql = "UPDATE config_signal_tower " +
                     "SET red = @red, " +
-                    "yellow = @yellow, " +
+                    "orange = @orange, " +
                     "green = @green, " +
                     "blue = @blue, " +
                     "buzzer1 = @buzzer1, " +
@@ -176,7 +176,7 @@ namespace Adam.Menu.SystemSetting
                 Label Signal = form.Controls.Find("lbl_login_id", true).FirstOrDefault() as Label;
 
                 keyValues.Add("@red", cmbRad.Text.ToString());
-                keyValues.Add("@yellow", cmbYellow.Text.ToString());
+                keyValues.Add("@orange", cmbYellow.Text.ToString());
                 keyValues.Add("@green", cmbGreen.Text.ToString());
                 keyValues.Add("@blue", cmbBlue.Text.ToString());
                 keyValues.Add("@buzzer1", cmbBuzzer1.Text.ToString());
@@ -219,7 +219,7 @@ namespace Adam.Menu.SystemSetting
             try
             {
                 strSql = "select concat(eqp_status, '-', (case when is_alarm = 0 then 'Normal' else 'Alarm' end)) item, " +
-                            "eqp_status, is_alarm, red, yellow, green, blue, buzzer1, buzzer2 " +
+                            "eqp_status, is_alarm, red, orange, green, blue, buzzer1, buzzer2 " +
                             "from config_signal_tower order by is_alarm, eqp_status asc ";
 
                 dtSignalTower = dBUtil.GetDataTable(strSql, null);

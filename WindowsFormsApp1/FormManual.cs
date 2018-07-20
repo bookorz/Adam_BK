@@ -198,7 +198,7 @@ namespace GUI
             string speed = "0";
             if (btn.Name.IndexOf("A1") > 0)
             {
-                nodeName = "Aligner01";
+                nodeName = "ALIGNER01";
                 if (cbA1Angle.Text.Equals(""))
                 {
                     cbA1Angle.Text = "0";
@@ -212,7 +212,7 @@ namespace GUI
             }
             if (btn.Name.IndexOf("A2") > 0)
             {
-                nodeName = "Aligner02";
+                nodeName = "ALIGNER02";
                 if (cbA2Angle.Text.Equals(""))
                 {
                     cbA2Angle.Text = "0";
@@ -426,7 +426,7 @@ namespace GUI
                 }
             }
             
-            String nodeName = rbR1.Checked ? "Robot01" : "Robot02";
+            String nodeName = rbR1.Checked ? "ROBOT01" : "ROBOT02";
             Node robot = NodeManagement.Get(nodeName);
             Transaction[] txns = new Transaction[1];
             
@@ -675,7 +675,7 @@ namespace GUI
                 control.Text = "";
                 control.BackColor = Color.WhiteSmoke;
             }
-            String nodeName = rbR1.Checked ? "Robot01" : "Robot02";
+            String nodeName = rbR1.Checked ? "ROBOT01" : "ROBOT02";
             SetDeviceStatus(nodeName);
             if (tbRStatus.Text.Equals("N/A") || tbRStatus.Text.Equals("Disconnected") || tbRStatus.Text.Equals("") || tbRStatus.Text.Equals("Connecting"))
             {
@@ -697,10 +697,10 @@ namespace GUI
                 control.Text = "";
                 control.BackColor = Color.WhiteSmoke;
             }
-            SetDeviceStatus("Aligner01");
-            SetDeviceStatus("Aligner02");
-            Node aligner1 = NodeManagement.Get("Aligner01");
-            Node aligner2 = NodeManagement.Get("Aligner02");
+            SetDeviceStatus("ALIGNER01");
+            SetDeviceStatus("ALIGNER02");
+            Node aligner1 = NodeManagement.Get("ALIGNER01");
+            Node aligner2 = NodeManagement.Get("ALIGNER02");
 
             //向Aligner 詢問狀態
             if (!tbA1Status.Text.Equals("N/A") && !tbA1Status.Text.Equals("Disconnected") && !tbA1Status.Text.Equals(""))
@@ -731,14 +731,14 @@ namespace GUI
             TextBox tbStatus = null;
             switch (name)
             {
-                case "Robot01":
-                case "Robot02":
+                case "ROBOT01":
+                case "ROBOT02":
                     tbStatus = tbRStatus;
                     break;
-                case "Aligner01":
+                case "ALIGNER01":
                     tbStatus = tbA1Status;
                     break;
-                case "Aligner02":
+                case "ALIGNER02":
                     tbStatus = tbA2Status;
                     break;
             }
