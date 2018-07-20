@@ -5,8 +5,9 @@
 	   date_format(s.start_time,'%Y-%m-%d %H:%i:%s.%f') AS start_time,
 	   date_format(s.end_time,'%Y-%m-%d %H:%i:%s.%f') AS end_time
   FROM log_process_job_substrate s
- WHERE create_time BETWEEN @from_dt AND @to_dt 
+ WHERE time_stamp BETWEEN @from_dt AND @to_dt 
    AND host_id LIKE @cond_1
    AND from_foup_id LIKE @cond_2
    AND to_foup_id LIKE @cond_3
  ORDER BY s.pr_id, s.create_time, s.start_time, s.end_time
+ LIMIT @limit;

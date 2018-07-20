@@ -41,7 +41,12 @@
             this.gbCondition = new System.Windows.Forms.GroupBox();
             this.tlpCondition = new System.Windows.Forms.TableLayoutPanel();
             this.plButtonList = new System.Windows.Forms.Panel();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.rdbExcel = new System.Windows.Forms.RadioButton();
+            this.rdbCsv = new System.Windows.Forms.RadioButton();
             this.tlpConditionList = new System.Windows.Forms.TableLayoutPanel();
+            this.cbLimitCnt = new System.Windows.Forms.ComboBox();
+            this.label1 = new System.Windows.Forms.Label();
             this.labCondition1 = new System.Windows.Forms.Label();
             this.labCondition2 = new System.Windows.Forms.Label();
             this.labCondition3 = new System.Windows.Forms.Label();
@@ -53,6 +58,7 @@
             this.gbCondition.SuspendLayout();
             this.tlpCondition.SuspendLayout();
             this.plButtonList.SuspendLayout();
+            this.panel1.SuspendLayout();
             this.tlpConditionList.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -88,7 +94,7 @@
             this.btnExport.FlatAppearance.BorderSize = 2;
             this.btnExport.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnExport.Font = new System.Drawing.Font("微軟正黑體", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-            this.btnExport.Location = new System.Drawing.Point(2, 55);
+            this.btnExport.Location = new System.Drawing.Point(3, 18);
             this.btnExport.Name = "btnExport";
             this.btnExport.Size = new System.Drawing.Size(149, 46);
             this.btnExport.TabIndex = 67;
@@ -129,6 +135,7 @@
             // cbQueryType
             // 
             this.cbQueryType.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.cbQueryType.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbQueryType.Font = new System.Drawing.Font("微軟正黑體", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
             this.cbQueryType.FormattingEnabled = true;
             this.cbQueryType.Items.AddRange(new object[] {
@@ -137,7 +144,7 @@
             "Process Job Log",
             "Process Wafer Log",
             "Command Log",
-            "DIO Setting Log"});
+            "DIO Change Log"});
             this.cbQueryType.Location = new System.Drawing.Point(177, 3);
             this.cbQueryType.Name = "cbQueryType";
             this.cbQueryType.Size = new System.Drawing.Size(400, 35);
@@ -224,13 +231,45 @@
             // 
             // plButtonList
             // 
-            this.plButtonList.Controls.Add(this.btnExport);
+            this.plButtonList.Controls.Add(this.panel1);
             this.plButtonList.Controls.Add(this.btnQuery);
             this.plButtonList.Dock = System.Windows.Forms.DockStyle.Fill;
             this.plButtonList.Location = new System.Drawing.Point(1170, 3);
             this.plButtonList.Name = "plButtonList";
             this.plButtonList.Size = new System.Drawing.Size(154, 180);
             this.plButtonList.TabIndex = 0;
+            // 
+            // panel1
+            // 
+            this.panel1.Controls.Add(this.rdbExcel);
+            this.panel1.Controls.Add(this.rdbCsv);
+            this.panel1.Controls.Add(this.btnExport);
+            this.panel1.Location = new System.Drawing.Point(0, 52);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(154, 100);
+            this.panel1.TabIndex = 69;
+            // 
+            // rdbExcel
+            // 
+            this.rdbExcel.AutoSize = true;
+            this.rdbExcel.Location = new System.Drawing.Point(72, 70);
+            this.rdbExcel.Name = "rdbExcel";
+            this.rdbExcel.Size = new System.Drawing.Size(74, 24);
+            this.rdbExcel.TabIndex = 69;
+            this.rdbExcel.Text = "EXCEL";
+            this.rdbExcel.UseVisualStyleBackColor = true;
+            // 
+            // rdbCsv
+            // 
+            this.rdbCsv.AutoSize = true;
+            this.rdbCsv.Checked = true;
+            this.rdbCsv.Location = new System.Drawing.Point(8, 70);
+            this.rdbCsv.Name = "rdbCsv";
+            this.rdbCsv.Size = new System.Drawing.Size(58, 24);
+            this.rdbCsv.TabIndex = 68;
+            this.rdbCsv.TabStop = true;
+            this.rdbCsv.Text = "CSV";
+            this.rdbCsv.UseVisualStyleBackColor = true;
             // 
             // tlpConditionList
             // 
@@ -239,8 +278,9 @@
             this.tlpConditionList.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 35F));
             this.tlpConditionList.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 15F));
             this.tlpConditionList.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 35F));
+            this.tlpConditionList.Controls.Add(this.cbLimitCnt, 3, 0);
+            this.tlpConditionList.Controls.Add(this.label1, 2, 0);
             this.tlpConditionList.Controls.Add(this.dtpToDate, 3, 1);
-            this.tlpConditionList.Controls.Add(this.labTo, 2, 1);
             this.tlpConditionList.Controls.Add(this.cbQueryType, 1, 0);
             this.tlpConditionList.Controls.Add(this.labFrom, 0, 1);
             this.tlpConditionList.Controls.Add(this.dtpFromDate, 1, 1);
@@ -251,6 +291,7 @@
             this.tlpConditionList.Controls.Add(this.txbCondition1, 1, 2);
             this.tlpConditionList.Controls.Add(this.txbCondition2, 3, 2);
             this.tlpConditionList.Controls.Add(this.txbCondition3, 1, 3);
+            this.tlpConditionList.Controls.Add(this.labTo, 2, 1);
             this.tlpConditionList.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tlpConditionList.Location = new System.Drawing.Point(3, 3);
             this.tlpConditionList.Name = "tlpConditionList";
@@ -261,6 +302,36 @@
             this.tlpConditionList.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 25F));
             this.tlpConditionList.Size = new System.Drawing.Size(1161, 180);
             this.tlpConditionList.TabIndex = 1;
+            // 
+            // cbLimitCnt
+            // 
+            this.cbLimitCnt.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.cbLimitCnt.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cbLimitCnt.Font = new System.Drawing.Font("微軟正黑體", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
+            this.cbLimitCnt.FormattingEnabled = true;
+            this.cbLimitCnt.Items.AddRange(new object[] {
+            "100",
+            "500",
+            "1000",
+            "5000",
+            "10000",
+            "50000"});
+            this.cbLimitCnt.Location = new System.Drawing.Point(757, 3);
+            this.cbLimitCnt.Name = "cbLimitCnt";
+            this.cbLimitCnt.Size = new System.Drawing.Size(401, 35);
+            this.cbLimitCnt.TabIndex = 87;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.label1.Font = new System.Drawing.Font("微軟正黑體", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
+            this.label1.Location = new System.Drawing.Point(583, 0);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(168, 45);
+            this.label1.TabIndex = 86;
+            this.label1.Text = "Result Limit";
+            this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
             // labCondition1
             // 
@@ -349,6 +420,8 @@
             this.gbCondition.ResumeLayout(false);
             this.tlpCondition.ResumeLayout(false);
             this.plButtonList.ResumeLayout(false);
+            this.panel1.ResumeLayout(false);
+            this.panel1.PerformLayout();
             this.tlpConditionList.ResumeLayout(false);
             this.tlpConditionList.PerformLayout();
             this.ResumeLayout(false);
@@ -377,5 +450,10 @@
         private System.Windows.Forms.TextBox txbCondition1;
         private System.Windows.Forms.TextBox txbCondition2;
         private System.Windows.Forms.TextBox txbCondition3;
+        private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.RadioButton rdbExcel;
+        private System.Windows.Forms.RadioButton rdbCsv;
+        private System.Windows.Forms.ComboBox cbLimitCnt;
+        private System.Windows.Forms.Label label1;
     }
 }
