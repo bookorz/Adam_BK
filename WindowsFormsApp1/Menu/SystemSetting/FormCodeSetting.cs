@@ -75,7 +75,7 @@ namespace Adam.Menu.SystemSetting
                 {
                     dtTemp = new DataTable();
 
-                    strSql = "SELECT * " +
+                    strSql = "SELECT node_type, vendor, model_no, category, code_type, code_id, code_name, code_desc, code_desc_en, active " +
                              "FROM device_code " +
                              "WHERE node_type = @node_type " +
                              "AND vendor = @vendor " +

@@ -205,3 +205,10 @@ C:\Users\ethan_huang\source\repos\Adam\WindowsFormsApp1\bin\Debug\config\Command
 C:\Users\ethan_huang\source\repos\Adam\WindowsFormsApp1\obj\Debug\Adam.Menu.SystemSetting.FormDIOSetting.resources
 C:\Users\ethan_huang\source\repos\Adam\WindowsFormsApp1\obj\Debug\Adam.Menu.SystemSetting.FormSignalTower.resources
 C:\Users\ethan_huang\source\repos\Adam\WindowsFormsApp1\obj\Debug\Adam.Menu.SystemSetting.FormCommandScript.resources
+C:\Users\ethan_huang\source\repos\Adam\WindowsFormsApp1\bin\Debug\sql\Alarm Log.sql
+C:\Users\ethan_huang\source\repos\Adam\WindowsFormsApp1\bin\Debug\sql\Command Log.sql
+C:\Users\ethan_huang\source\repos\Adam\WindowsFormsApp1\bin\Debug\sql\DIO Setting Log.sql
+C:\Users\ethan_huang\source\repos\Adam\WindowsFormsApp1\bin\Debug\sql\Process Job Log.sql
+C:\Users\ethan_huang\source\repos\Adam\WindowsFormsApp1\bin\Debug\sql\Process Wafer Log.sql
+C:\Users\ethan_huang\source\repos\Adam\WindowsFormsApp1\bin\Debug\sql\User Action Log.sql
+C:\Users\ethan_huang\source\repos\Adam\WindowsFormsApp1\obj\Debug\Adam.OCRResult.resources

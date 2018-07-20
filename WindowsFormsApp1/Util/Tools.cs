@@ -14,13 +14,13 @@ namespace Adam.Util
             int result = 0;
             switch (NodeType)
             {
-                case "LoadPort":
+                case "LOADPORT":
                     result = 25;
                     break;
-                case "Robot":
+                case "ROBOT":
                     result = 2;
                     break;
-                case "Aligner":
+                case "ALIGNER":
                     result = 1;
                     break;
             }

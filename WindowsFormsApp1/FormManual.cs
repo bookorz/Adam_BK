@@ -238,11 +238,11 @@ namespace GUI
             if (!btnFuncName.Equals("btnConn") && !btnFuncName.Equals("btnDisConn"))
             {
                 string status = "";
-                if (nodeName.Equals("Aligner01"))
+                if (nodeName.Equals("ALIGNER01"))
                 {
                     status = tbA1Status.Text;
                 }
-                if (nodeName.Equals("Aligner02"))
+                if (nodeName.Equals("ALIGNER02"))
                 {
                     status = tbA2Status.Text;
                 }
@@ -368,7 +368,7 @@ namespace GUI
             if (tbcManual.SelectedTab.Text.Equals("Robot"))
             {
                 isRobotActive = true;
-                nodeName = rbR1.Checked ? "Robot01" : "Robot02";
+                nodeName = rbR1.Checked ? "ROBOT01" : "ROBOT02";
             }
             if (tbcManual.SelectedTab.Text.Equals("Aligner"))
                 nodeName = this.ActiveAligner;

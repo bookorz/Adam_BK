@@ -7,6 +7,7 @@ using System.Text;
 using System.Linq;
 using System.Windows.Forms;
 using SANWA.Utility;
+using TransferControl.Management;
 
 namespace Adam.Menu.SystemSetting
 {
@@ -188,6 +189,8 @@ namespace Adam.Menu.SystemSetting
                 Adam.Util.SanwaUtil.addActionLog("Adam.Menu.SystemSetting", "FormCpmmandScript", Signal.Text);
 
                 UpdateNodeList();
+                //改設定後套用
+                CommandScriptManagement.LoadConfig();
             }
             catch (Exception ex)
             {

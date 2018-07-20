@@ -68,16 +68,16 @@ namespace Adam.Menu.Status
             //t.Start();
             OnTimedRefresh();
         }
-        
+
         private void OnTimedRefresh()
         {
             //while (isRefresh)
             //{
-                //this.Cursor = Cursors.WaitCursor;
-                getStatus();
-                setStatus();
-                //this.Cursor = Cursors.Default;
-                //Thread.Sleep(30000);//30 秒更新一次
+            //this.Cursor = Cursors.WaitCursor;
+            getStatus();
+            setStatus();
+            //this.Cursor = Cursors.Default;
+            //Thread.Sleep(30000);//30 秒更新一次
             //}
         }
 
@@ -97,18 +97,18 @@ namespace Adam.Menu.Status
                     if (ctrl_status.Equals("Connected") && each.ByPass == false)
                     {
                         if (each.Brand.ToUpper().Equals("KAWASAKI"))
-                        {                            
+                        {
                         }
                         else
-                        {                            
+                        {
                         }
                         String state = "";
                         switch (each.Type)
                         {
-                            case "Robot":
+                            case "ROBOT":
                                 DataGridViewRow robotRow = (DataGridViewRow)dgvRstatus.Rows[0].Clone();
                                 robotRow.Cells[0].Value = each.Name;
-                                state = ((RobotState) StateUtil.device[each.Name]).State;
+                                state = ((RobotState)StateUtil.device[each.Name]).State;
                                 for (int i = 1; i <= state.Length; i++)
                                 {
                                     string value = state.Substring(i - 1, 1);
@@ -117,7 +117,7 @@ namespace Adam.Menu.Status
                                 }
                                 dgvRstatus.Rows.Add(robotRow);
                                 break;
-                            case "Aligner":
+                            case "ALIGNER":
                                 DataGridViewRow alignerRow = (DataGridViewRow)dgvAstatus.Rows[0].Clone();
                                 alignerRow.Cells[0].Value = each.Name;
                                 state = ((AlignerState)StateUtil.device[each.Name]).State;
@@ -129,7 +129,7 @@ namespace Adam.Menu.Status
                                 }
                                 dgvAstatus.Rows.Add(alignerRow);
                                 break;
-                            case "LoadPort":
+                            case "LOADPORT":
                                 DataGridViewRow portRow = (DataGridViewRow)dgvLstatus.Rows[0].Clone();
                                 portRow.Cells[0].Value = each.Name;
                                 state = ((LoadPortState)StateUtil.device[each.Name]).State;
@@ -234,10 +234,11 @@ namespace Adam.Menu.Status
 
         public void getStatus()
         {
-            try
+
+            StateUtil.Init();
+            foreach (Node each in NodeManagement.GetList())
             {
-                StateUtil.Init();
-                foreach (Node each in NodeManagement.GetList())
+                try
                 {
                     IController Ctrl = ControllerManagement.Get(each.Controller);
                     //string ctrl_status = ControllerManagement.Get(each.Controller).Status;
@@ -256,13 +257,13 @@ namespace Adam.Menu.Status
                         }
                         switch (each.Type)
                         {
-                            case "Robot":
+                            case "ROBOT":
                                 txn.Method = Transaction.Command.RobotType.GetStatus;
                                 break;
-                            case "Aligner":
+                            case "ALIGNER":
                                 txn.Method = Transaction.Command.AlignerType.GetStatus;
                                 break;
-                            case "LoadPort":
+                            case "LOADPORT":
                                 txn.Method = Transaction.Command.LoadPortType.ReadStatus;
                                 break;
                         }
@@ -275,11 +276,12 @@ namespace Adam.Menu.Status
                         }
                     }
                 }
+                catch (Exception e)
+                {
+                    logger.Error(e.StackTrace);
+                }
             }
-            catch (Exception e)
-            {
-                logger.Error(e.StackTrace);
-            }
+
         }
     }
 }

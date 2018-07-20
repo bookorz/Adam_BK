@@ -58,7 +58,7 @@ namespace Adam
 
             SanwaUtil.addPartition();
             SanwaUtil.dropPartition();
-
+            
         }
 
         protected override CreateParams CreateParams
@@ -128,6 +128,8 @@ namespace Adam
             this.Width = oldWidth;
             this.Height = oldHeight;
             this.WindowState = FormWindowState.Maximized;
+
+            
         }
 
         private void LoadPort01_DataBindingComplete(object sender, DataGridViewBindingCompleteEventArgs e)
@@ -291,7 +293,7 @@ namespace Adam
 
             switch (Node.Type)
             {
-                case "LoadPort":
+                case "LOADPORT":
                     switch (Txn.Method)
                     {
                         case Transaction.Command.LoadPortType.GetMapping:
@@ -319,7 +321,7 @@ namespace Adam
                 case "FormManual":
                     switch (Node.Type)
                     {
-                        case "LoadPort":
+                        case "LOADPORT":
                             if (!Txn.CommandType.Equals("MOV"))
                             {
                                 ManualPortStatusUpdate.LockUI(false);
@@ -348,11 +350,11 @@ namespace Adam
                             switch (Txn.Method)
                             {
                                 case Transaction.Command.OCRType.GetOnline:
-                                    OCRUpdate.UpdateOCRStatus(Node.Name, Msg.Value);
+                                    //OCRUpdate.UpdateOCRStatus(Node.Name, Msg.Value);
                                     break;
                             }
                             break;
-                        case "Robot":
+                        case "ROBOT":
                             switch (Txn.Method)
                             {
                                 case Transaction.Command.RobotType.RobotSpeed:
@@ -382,7 +384,7 @@ namespace Adam
                                     break;
                             }
                             break;
-                        case "Aligner":
+                        case "ALIGNER":
                             switch (Txn.Method)
                             {
                                 case Transaction.Command.AlignerType.AlignerSpeed:
@@ -415,7 +417,7 @@ namespace Adam
                 case "InitialFinish":
                     switch (Node.Type)
                     {
-                        case "LoadPort":
+                        case "LOADPORT":
                             switch (Txn.Method)
                             {
 
@@ -489,7 +491,7 @@ namespace Adam
                 case "FormManual":
                     switch (Node.Type)
                     {
-                        case "LoadPort":
+                        case "LOADPORT":
                             ManualPortStatusUpdate.LockUI(false);
                             break;
 
@@ -541,17 +543,17 @@ namespace Adam
 
                     switch (Node.Type)
                     {
-                        case "LoadPort":
+                        case "LOADPORT":
 
                             ManualPortStatusUpdate.UpdateLog(Node.Name, Msg.Command + " Finished");
                             ManualPortStatusUpdate.LockUI(false);
 
                             break;
 
-                        case "Robot":
+                        case "ROBOT":
                             ManualRobotStatusUpdate.UpdateGUI(Txn, Node.Name, Msg.Value);//update 手動功能畫面
                             break;
-                        case "Aligner":
+                        case "ALIGNER":
                             ManualAlignerStatusUpdate.UpdateGUI(Txn, Node.Name, Msg.Value);//update 手動功能畫面
                             break;
                     }
@@ -559,7 +561,7 @@ namespace Adam
                 default:
                     switch (Node.Type)
                     {
-                        case "LoadPort":
+                        case "LOADPORT":
                             switch (Txn.Method)
                             {
 
@@ -569,7 +571,8 @@ namespace Adam
                             switch (Txn.Method)
                             {
                                 case Transaction.Command.OCRType.Read:
-                                    OCRUpdate.UpdateOCRRead(Node.Name, Msg.Value);
+                                    OCRUpdate.UpdateOCRRead(Node.Name, Msg.Value, Txn.TargetJobs[0]);
+                                   
                                     break;
                             }
                             break;
@@ -619,7 +622,7 @@ namespace Adam
             Transaction txn = new Transaction();
             switch (Node.Type)
             {
-                case "LoadPort":
+                case "LOADPORT":
                     ManualPortStatusUpdate.UpdateLog(Node.Name, Msg.Command + " Trigger");
                     switch (Msg.Command)
                     {
@@ -653,12 +656,12 @@ namespace Adam
             NodeStatusUpdate.UpdateNodeState(Node.Name, Status);
             switch (Node.Name)
             {
-                case "Robot01":
-                case "Robot02":
+                case "ROBOT01":
+                case "ROBOT02":
                     ManualRobotStatusUpdate.UpdateRobotStatus(Node.Name, Status);//update 手動功能畫面
                     break;
-                case "Aligner01":
-                case "Aligner02":
+                case "ALIGNER01":
+                case "ALIGNER02":
                     ManualAlignerStatusUpdate.UpdateAlignerStatus(Node.Name, Status);//update 手動功能畫面
                     break;
             }
@@ -679,7 +682,7 @@ namespace Adam
             {
                 //當Loadport連線成功，檢查狀態，進行燈號顯示
                 var findPort = from port in NodeManagement.GetLoadPortList()
-                               where port.Controller.Equals(Device_ID) && !port.ByPass && port.Type.Equals("LoadPort")
+                               where port.Controller.Equals(Device_ID) && !port.ByPass && port.Type.Equals("LOADPORT")
                                select port;
 
                 foreach (Node port in findPort)
@@ -760,6 +763,7 @@ namespace Adam
                 RunningUpdate.UpdateRunningInfo("LapsedWfCount", LapsedWfCount.ToString());
                 RunningUpdate.UpdateRunningInfo("LapsedLotCount", LapsedLotCount.ToString());
                 RunningUpdate.UpdateRunningInfo("WPH", (LapsedWfCount/Convert.ToDouble(LapsedTime)*3600).ToString() );
+                MonitoringUpdate.UpdateWPH(Math.Round((LapsedWfCount / Convert.ToDouble(LapsedTime) * 3600),1).ToString());
             }
             catch (Exception e)
             {
@@ -798,16 +802,17 @@ namespace Adam
                     Node.InitialObject();
                     switch (Node.Type)
                     {
-                        case "Robot":
-                        case "Aligner":
+                        case "ROBOT":
+                        case "ALIGNER":
                             Node.State = "Idle";
                             break;
-                        case "LoadPort":
+                        case "LOADPORT":
                             Node.State = "Ready To Load";
                             break;
                     }
                     if (!NodeManagement.IsNeedInitial())
                     {
+                        NodeStatusUpdate.UpdateCurrentState("Idle");
                         ConnectionStatusUpdate.UpdateInitial(true.ToString());
                         foreach (Node port in NodeManagement.GetLoadPortList())
                         {
@@ -825,7 +830,7 @@ namespace Adam
 
                     switch (Node.Type)
                     {
-                        case "Robot":
+                        case "ROBOT":
                             ManualRobotStatusUpdate.UpdateGUI(new Transaction(), Node.Name, "");//update 手動功能畫面
                             break;
                     }
@@ -983,63 +988,63 @@ namespace Adam
             switch ((sender as Button).Name)
             {
                 case "Red_Signal":
-                    if (DIO.GetIO("OUT", "Red").ToUpper().Equals("TRUE"))
+                    if (DIO.GetIO("OUT", "RED").ToUpper().Equals("TRUE"))
                     {
-                        DIO.SetIO("Red", "False");
+                        DIO.SetIO("RED", "False");
                     }
                     else
                     {
-                        DIO.SetIO("Red", "True");
+                        DIO.SetIO("RED", "True");
                     }
                     break;
                 case "Orange_Signal":
-                    if (DIO.GetIO("OUT", "Orange").ToUpper().Equals("TRUE"))
+                    if (DIO.GetIO("OUT", "ORANGE").ToUpper().Equals("TRUE"))
                     {
-                        DIO.SetIO("Orange", "False");
+                        DIO.SetIO("ORANGE", "False");
                     }
                     else
                     {
-                        DIO.SetIO("Orange", "True");
+                        DIO.SetIO("ORANGE", "True");
                     }
                     break;
                 case "Green_Signal":
-                    if (DIO.GetIO("OUT", "Green").ToUpper().Equals("TRUE"))
+                    if (DIO.GetIO("OUT", "GREEN").ToUpper().Equals("TRUE"))
                     {
-                        DIO.SetIO("Green", "False");
+                        DIO.SetIO("GREEN", "False");
                     }
                     else
                     {
-                        DIO.SetIO("Green", "True");
+                        DIO.SetIO("GREEN", "True");
                     }
                     break;
                 case "Blue_Signal":
-                    if (DIO.GetIO("OUT", "Blue").ToUpper().Equals("TRUE"))
+                    if (DIO.GetIO("OUT", "BLUE").ToUpper().Equals("TRUE"))
                     {
-                        DIO.SetIO("Blue", "False");
+                        DIO.SetIO("BLUE", "False");
                     }
                     else
                     {
-                        DIO.SetIO("Blue", "True");
+                        DIO.SetIO("BLUE", "True");
                     }
                     break;
                 case "Buzzer1_Signal":
-                    if (DIO.GetIO("OUT", "Buzzer1").ToUpper().Equals("TRUE"))
+                    if (DIO.GetIO("OUT", "BUZZER1").ToUpper().Equals("TRUE"))
                     {
-                        DIO.SetIO("Buzzer1", "False");
+                        DIO.SetIO("BUZZER1", "False");
                     }
                     else
                     {
-                        DIO.SetIO("Buzzer1", "True");
+                        DIO.SetIO("BUZZER1", "True");
                     }
                     break;
                 case "Buzzer2_Signal":
-                    if (DIO.GetIO("OUT", "Buzzer2").ToUpper().Equals("TRUE"))
+                    if (DIO.GetIO("OUT", "BUZZER2").ToUpper().Equals("TRUE"))
                     {
-                        DIO.SetIO("Buzzer2", "False");
+                        DIO.SetIO("BUZZER2", "False");
                     }
                     else
                     {
-                        DIO.SetIO("Buzzer2", "True");
+                        DIO.SetIO("BUZZER2", "True");
                     }
                     break;
             }

@@ -9,6 +9,8 @@ using System.Windows.Forms;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Linq;
 using SANWA.Utility;
+using TransferControl.Management;
+using Adam.UI_Update.OCR;
 
 namespace Adam.Menu.SystemSetting
 {
@@ -216,6 +218,13 @@ namespace Adam.Menu.SystemSetting
                     return;
                 }
 
+                if (txbDeviceNodeName.Text.Trim().Equals(string.Empty) ||
+                    cmbDeviceNodeType.SelectedIndex == -1 || cmbVendor.SelectedIndex == -1)
+                {
+                    MessageBox.Show("Miss input data in the form.", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Warning, MessageBoxDefaultButton.Button1);
+                    return;
+                }
+
                 strSql = "select * from config_node where equipment_model_id = @equipment_model_id and enable_flg = '1' and node_type = @node_type order by node_id, sn_no";
                 keyValues.Add("@equipment_model_id", SANWA.Utility.Config.SystemConfig.Get().SystemMode);
                 keyValues.Add("@node_type", cmbDeviceNodeType.SelectedValue.ToString());
@@ -297,6 +306,10 @@ namespace Adam.Menu.SystemSetting
 
                 UpdateNodeList();
                 ClearUI();
+
+                //改設定後套用
+                NodeManagement.LoadConfig();
+                OCRUpdate.AssignForm();
             }
             catch (Exception ex)
             {

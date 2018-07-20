@@ -122,5 +122,52 @@ namespace Adam.Menu.Monitoring
         {
 
         }
+
+        private void Slot_Click(object sender, EventArgs e)
+        {
+
+            string[] ary = (sender as Label).Name.Split('_');
+            if (ary.Length == 3)
+            {
+                string Port = ary[0];
+                string Slot = ary[2];
+                Node p = NodeManagement.Get(Port);
+                if (p != null)
+                {
+                    Job j;
+                    if(p.JobList.TryGetValue(Slot,out j))
+                    {
+                        if(j.OCRImgPath == "")
+                        {
+                            MessageBox.Show("未找到OCR紀錄");
+                        }
+                        else
+                        {
+                            OCRResult form2 = new OCRResult(j);
+                            form2.ShowDialog();
+                            //// open image in default viewer
+                            //System.Diagnostics.Process.Start(j.OCRImgPath);
+                        }
+                    }
+                    else
+                    {
+                        MessageBox.Show("未找到Wafer");
+                    }
+                }
+
+            }
+        }
+
+        private void OCR01_Pic_DoubleClick(object sender, EventArgs e)
+        {
+            OCRResult form2 = new OCRResult((sender as PictureBox).Tag as Job);
+            form2.ShowDialog();
+        }
+
+        private void OCR02_Pic_DoubleClick(object sender, EventArgs e)
+        {
+            OCRResult form2 = new OCRResult((sender as PictureBox).Tag as Job);
+            form2.ShowDialog();
+        }
     }
 }

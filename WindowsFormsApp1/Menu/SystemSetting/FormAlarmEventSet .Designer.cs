@@ -259,7 +259,7 @@
             // 
             this.btnSave.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.btnSave.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.btnSave.Location = new System.Drawing.Point(848, 658);
+            this.btnSave.Location = new System.Drawing.Point(845, 658);
             this.btnSave.Name = "btnSave";
             this.btnSave.Size = new System.Drawing.Size(229, 48);
             this.btnSave.TabIndex = 6;
@@ -301,7 +301,7 @@
             this.Event_AlarmNo.HeaderText = "Alarm No";
             this.Event_AlarmNo.Name = "Event_AlarmNo";
             this.Event_AlarmNo.ReadOnly = true;
-            this.Event_AlarmNo.Width = 106;
+            this.Event_AlarmNo.Width = 97;
             // 
             // Event_AlarmDescription
             // 

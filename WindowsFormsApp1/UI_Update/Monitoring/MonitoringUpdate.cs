@@ -18,6 +18,36 @@ namespace Adam.UI_Update.Monitoring
         delegate void UpdatePortUsed(string PortName, bool Used);
         delegate void UpdateNode(string JobId);
 
+        public static void UpdateWPH(string WPH)
+        {
+            try
+            {
+                Form form = Application.OpenForms["FormMonitoring"];
+                Label W;
+                if (form == null)
+                    return;
+
+                W = form.Controls.Find("WPH", true).FirstOrDefault() as Label;
+                if (W == null)
+                    return;
+
+                if (W.InvokeRequired)
+                {
+                    UpdateNode ph = new UpdateNode(UpdateWPH);
+                    W.BeginInvoke(ph, WPH);
+                }
+                else
+                {
+                    W.Text = WPH;
+
+                }
+            }
+            catch
+            {
+                logger.Error("UpdateWPH: Update fail.");
+            }
+        }
+
         public static void UpdateUseState(string PortName, bool used)
         {
             try

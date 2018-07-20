@@ -7,6 +7,7 @@ using System.Text;
 using System.Windows.Forms;
 using SANWA.Utility;
 using System.Linq;
+using Adam.UI_Update.Monitoring;
 
 namespace Adam.Menu.SystemSetting
 {
@@ -201,6 +202,9 @@ namespace Adam.Menu.SystemSetting
                 cmbBuzzer1.SelectedIndex = -1;
                 cmbBuzzer2.SelectedIndex = -1;
                 lsbCondition.SelectedIndex = -1;
+                //改設定後套用
+                NodeStatusUpdate.InitialSetting();
+                NodeStatusUpdate.UpdateCurrentState(FormMain.RouteCtrl.EqpState);
             }
             catch (Exception ex)
             {

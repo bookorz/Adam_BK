@@ -31,7 +31,7 @@ namespace Adam.UI_Update.Monitoring
             public string Buzzer2 { get; set; }
         }
 
-        private static void InitialSetting()
+        public static void InitialSetting()
         {
             DBUtil dBUtil = new DBUtil();
 

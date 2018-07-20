@@ -82,7 +82,7 @@ namespace Adam.Menu.RunningScreen
             }
             foreach (Node node in NodeManagement.GetList())
             {
-                if (node.Type.Equals("Robot"))
+                if (node.Type.Equals("ROBOT"))
                 {
                     Transaction txn = new Transaction();
                     txn.Method = Transaction.Command.RobotType.RobotSpeed;
@@ -91,7 +91,7 @@ namespace Adam.Menu.RunningScreen
                     node.SendCommand(txn);
                 }
                 else
-                if (node.Type.Equals("Aligner"))
+                if (node.Type.Equals("ALIGNER"))
                 {
                     Transaction txn = new Transaction();
                     txn.Method = Transaction.Command.AlignerType.AlignerSpeed;
