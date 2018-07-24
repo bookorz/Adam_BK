@@ -130,7 +130,7 @@ namespace Adam.Menu.SystemSetting
                     cmbBlue.SelectedValue = query[0]["blue"].ToString();
                     cmbGreen.SelectedValue = query[0]["green"].ToString();
                     cmbRad.SelectedValue = query[0]["red"].ToString();
-                    cmbYellow.SelectedValue = query[0]["yellow"].ToString();
+                    cmbYellow.SelectedValue = query[0]["orange"].ToString();
                     cmbBuzzer1.SelectedValue = query[0]["buzzer1"].ToString();
                     cmbBuzzer2.SelectedValue = query[0]["buzzer2"].ToString();
                 }
@@ -162,7 +162,7 @@ namespace Adam.Menu.SystemSetting
             {
                 strSql = "UPDATE config_signal_tower " +
                     "SET red = @red, " +
-                    "yellow = @yellow, " +
+                    "orange = @orange, " +
                     "green = @green, " +
                     "blue = @blue, " +
                     "buzzer1 = @buzzer1, " +

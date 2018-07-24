@@ -200,7 +200,7 @@
             this.labRad.Name = "labRad";
             this.labRad.Size = new System.Drawing.Size(272, 40);
             this.labRad.TabIndex = 2;
-            this.labRad.Text = "Rad";
+            this.labRad.Text = "Red";
             this.labRad.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
             // labYellow
