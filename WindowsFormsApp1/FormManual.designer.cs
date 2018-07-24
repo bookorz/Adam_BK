@@ -482,16 +482,16 @@
             // 
             this.cbRA1Point.FormattingEnabled = true;
             this.cbRA1Point.Items.AddRange(new object[] {
-            "LoadPort01",
-            "LoadPort02",
-            "LoadPort03",
-            "LoadPort04",
-            "LoadPort05",
-            "LoadPort06",
-            "LoadPort07",
-            "LoadPort08",
-            "Aligner01",
-            "Aligner02"});
+            "LOADPORT01",
+            "LOADPORT02",
+            "LOADPORT03",
+            "LOADPORT04",
+            "LOADPORT05",
+            "LOADPORT06",
+            "LOADPORT07",
+            "LOADPORT08",
+            "ALIGNER01",
+            "ALIGNER02"});
             this.cbRA1Point.Location = new System.Drawing.Point(129, 60);
             this.cbRA1Point.Name = "cbRA1Point";
             this.cbRA1Point.Size = new System.Drawing.Size(208, 38);
@@ -683,16 +683,16 @@
             // 
             this.cbRA2Point.FormattingEnabled = true;
             this.cbRA2Point.Items.AddRange(new object[] {
-            "LoadPort01",
-            "LoadPort02",
-            "LoadPort03",
-            "LoadPort04",
-            "LoadPort05",
-            "LoadPort06",
-            "LoadPort07",
-            "LoadPort08",
-            "Aligner01",
-            "Aligner02"});
+            "LOADPORT01",
+            "LOADPORT02",
+            "LOADPORT03",
+            "LOADPORT04",
+            "LOADPORT05",
+            "LOADPORT06",
+            "LOADPORT07",
+            "LOADPORT08",
+            "ALIGNER01",
+            "ALIGNER02"});
             this.cbRA2Point.Location = new System.Drawing.Point(130, 60);
             this.cbRA2Point.Name = "cbRA2Point";
             this.cbRA2Point.Size = new System.Drawing.Size(208, 38);

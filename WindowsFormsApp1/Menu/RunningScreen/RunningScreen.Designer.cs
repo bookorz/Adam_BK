@@ -29,6 +29,8 @@
         private void InitializeComponent()
         {
             this.panel1 = new System.Windows.Forms.Panel();
+            this.WPH_tb = new System.Windows.Forms.TextBox();
+            this.label6 = new System.Windows.Forms.Label();
             this.Start_btn = new System.Windows.Forms.Button();
             this.label5 = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
@@ -41,8 +43,6 @@
             this.label3 = new System.Windows.Forms.Label();
             this.TransCount_tb = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
-            this.WPH_tb = new System.Windows.Forms.TextBox();
-            this.label6 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.SuspendLayout();
@@ -67,6 +67,25 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(410, 736);
             this.panel1.TabIndex = 1;
+            // 
+            // WPH_tb
+            // 
+            this.WPH_tb.Font = new System.Drawing.Font("微軟正黑體", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
+            this.WPH_tb.Location = new System.Drawing.Point(134, 374);
+            this.WPH_tb.Name = "WPH_tb";
+            this.WPH_tb.Size = new System.Drawing.Size(151, 35);
+            this.WPH_tb.TabIndex = 17;
+            this.WPH_tb.Text = "0";
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Font = new System.Drawing.Font("微軟正黑體", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
+            this.label6.Location = new System.Drawing.Point(129, 341);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(62, 27);
+            this.label6.TabIndex = 16;
+            this.label6.Text = "WPH";
             // 
             // Start_btn
             // 
@@ -184,7 +203,7 @@
             this.TransCount_tb.Name = "TransCount_tb";
             this.TransCount_tb.Size = new System.Drawing.Size(151, 35);
             this.TransCount_tb.TabIndex = 1;
-            this.TransCount_tb.Text = "1000";
+            this.TransCount_tb.Text = "9999999";
             // 
             // label1
             // 
@@ -195,25 +214,6 @@
             this.label1.Size = new System.Drawing.Size(138, 27);
             this.label1.TabIndex = 0;
             this.label1.Text = "Trans. Count";
-            // 
-            // WPH_tb
-            // 
-            this.WPH_tb.Font = new System.Drawing.Font("微軟正黑體", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-            this.WPH_tb.Location = new System.Drawing.Point(134, 374);
-            this.WPH_tb.Name = "WPH_tb";
-            this.WPH_tb.Size = new System.Drawing.Size(151, 35);
-            this.WPH_tb.TabIndex = 17;
-            this.WPH_tb.Text = "0";
-            // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.Font = new System.Drawing.Font("微軟正黑體", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-            this.label6.Location = new System.Drawing.Point(129, 341);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(62, 27);
-            this.label6.TabIndex = 16;
-            this.label6.Text = "WPH";
             // 
             // FormRunningScreen
             // 

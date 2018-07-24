@@ -58,7 +58,8 @@ namespace Adam
 
             SanwaUtil.addPartition();
             SanwaUtil.dropPartition();
-            
+            ThreadPool.QueueUserWorkItem(new WaitCallback(DBUtil.consumeSqlCmd));
+
         }
 
         protected override CreateParams CreateParams
@@ -129,7 +130,7 @@ namespace Adam
             this.Height = oldHeight;
             this.WindowState = FormWindowState.Maximized;
 
-            
+
         }
 
         private void LoadPort01_DataBindingComplete(object sender, DataGridViewBindingCompleteEventArgs e)
@@ -290,6 +291,11 @@ namespace Adam
             logger.Debug("On_Command_Excuted");
 
             Transaction txn = new Transaction();
+
+            if (Txn.Method == Transaction.Command.LoadPortType.Reset)
+            {
+                AlarmUpdate.UpdateAlarmList(AlarmManagement.GetAll());
+            }
 
             switch (Node.Type)
             {
@@ -572,7 +578,7 @@ namespace Adam
                             {
                                 case Transaction.Command.OCRType.Read:
                                     OCRUpdate.UpdateOCRRead(Node.Name, Msg.Value, Txn.TargetJobs[0]);
-                                   
+
                                     break;
                             }
                             break;
@@ -762,8 +768,8 @@ namespace Adam
                 RunningUpdate.UpdateRunningInfo("TransCount", "-1");
                 RunningUpdate.UpdateRunningInfo("LapsedWfCount", LapsedWfCount.ToString());
                 RunningUpdate.UpdateRunningInfo("LapsedLotCount", LapsedLotCount.ToString());
-                RunningUpdate.UpdateRunningInfo("WPH", (LapsedWfCount/Convert.ToDouble(LapsedTime)*3600).ToString() );
-                MonitoringUpdate.UpdateWPH(Math.Round((LapsedWfCount / Convert.ToDouble(LapsedTime) * 3600),1).ToString());
+                RunningUpdate.UpdateRunningInfo("WPH", (LapsedWfCount / Convert.ToDouble(LapsedTime) * 3600).ToString());
+                MonitoringUpdate.UpdateWPH(Math.Round((LapsedWfCount / Convert.ToDouble(LapsedTime) * 3600), 1).ToString());
             }
             catch (Exception e)
             {
@@ -841,39 +847,46 @@ namespace Adam
                     {
                         Node Port;
                         Node DestPort;
+
+                        Node.PortUnloadAndLoadFinished = true;
                         if (!Node.DestPort.Equals(""))
                         {
                             Port = Node;
                             DestPort = NodeManagement.Get(Node.DestPort);
                             // SpinWait.SpinUntil(() => (Port.IsMapping && Port.JobList.Count!=0 && DestPort.IsMapping && DestPort.JobList.Count != 0) || RouteCtrl.GetMode().Equals("Stop") , 99999999);
 
-                            //SpinWait.SpinUntil(() => (Port.IsMapping  && DestPort.IsMapping ) || RouteCtrl.GetMode().Equals("Stop"), 99999999);
+                            SpinWait.SpinUntil(() => (Port.PortUnloadAndLoadFinished && DestPort.PortUnloadAndLoadFinished) || RouteCtrl.GetMode().Equals("Stop"), 99999999);
 
-                            if (!RouteCtrl.GetMode().Equals("Stop") && Port.IsMapping && DestPort.IsMapping)
+                            if (!RouteCtrl.GetMode().Equals("Stop") && Port.PortUnloadAndLoadFinished && DestPort.PortUnloadAndLoadFinished)
                             {
+                                Port.PortUnloadAndLoadFinished = false;
+                                DestPort.PortUnloadAndLoadFinished = false;
                                 RunningUpdate.ReverseRunning(Port.Name);
                             }
                         }
-                        else
-                        {
-                            var findPort = from port in NodeManagement.GetLoadPortList()
-                                           where port.DestPort.Equals(Node.Name)
-                                           select port;
+                        //else
+                        //{
+                        //    var findPort = from port in NodeManagement.GetLoadPortList()
+                        //                   where port.DestPort.Equals(Node.Name)
+                        //                   select port;
 
-                            if (findPort.Count() != 0)
-                            {
-                                Port = findPort.First();
-                                DestPort = Node;
-                                //SpinWait.SpinUntil(() => (Port.IsMapping && Port.JobList.Count != 0 && DestPort.IsMapping && DestPort.JobList.Count != 0) || RouteCtrl.GetMode().Equals("Stop"), 99999999);
+                        //    if (findPort.Count() != 0)
+                        //    {
+                        //        Port = findPort.First();
+                        //        DestPort = Node;
+                        //        //SpinWait.SpinUntil(() => (Port.IsMapping && Port.JobList.Count != 0 && DestPort.IsMapping && DestPort.JobList.Count != 0) || RouteCtrl.GetMode().Equals("Stop"), 99999999);
 
-                                //SpinWait.SpinUntil(() => (Port.IsMapping && DestPort.IsMapping) || RouteCtrl.GetMode().Equals("Stop"), 99999999);
-                                if (!RouteCtrl.GetMode().Equals("Stop") && Port.IsMapping && DestPort.IsMapping)
-                                {
-                                    RunningUpdate.ReverseRunning(Port.Name);
-                                }
+                        //        //SpinWait.SpinUntil(() => (Port.IsMapping && DestPort.IsMapping) || RouteCtrl.GetMode().Equals("Stop"), 99999999);
+                        //        if (!RouteCtrl.GetMode().Equals("Stop") && Port.PortUnloadAndLoadFinished && DestPort.PortUnloadAndLoadFinished)
+                        //        {
 
-                            }
-                        }
+                        //            RunningUpdate.ReverseRunning(Port.Name);
+
+                        //        }
+
+                        //    }
+                        //}
+
                     }
 
                     break;
@@ -909,12 +922,12 @@ namespace Adam
         public void On_Data_Chnaged(string Parameter, string Value)
         {
             DIOUpdate.UpdateDIOStatus(Parameter, Value);
-            
+
         }
 
         public void On_Alarm_Happen(string DIOName, string ErrorCode)
         {
-            
+
             AlarmInfo CurrentAlarm = new AlarmInfo();
             CurrentAlarm.NodeName = DIOName;
             CurrentAlarm.AlarmCode = ErrorCode;
@@ -987,7 +1000,7 @@ namespace Adam
         {
             switch ((sender as Button).Name)
             {
-                case "Red_Signal":
+                case "RED_Signal":
                     if (DIO.GetIO("OUT", "RED").ToUpper().Equals("TRUE"))
                     {
                         DIO.SetIO("RED", "False");
@@ -997,7 +1010,7 @@ namespace Adam
                         DIO.SetIO("RED", "True");
                     }
                     break;
-                case "Orange_Signal":
+                case "ORANGE_Signal":
                     if (DIO.GetIO("OUT", "ORANGE").ToUpper().Equals("TRUE"))
                     {
                         DIO.SetIO("ORANGE", "False");
@@ -1007,7 +1020,7 @@ namespace Adam
                         DIO.SetIO("ORANGE", "True");
                     }
                     break;
-                case "Green_Signal":
+                case "GREEN_Signal":
                     if (DIO.GetIO("OUT", "GREEN").ToUpper().Equals("TRUE"))
                     {
                         DIO.SetIO("GREEN", "False");
@@ -1017,7 +1030,7 @@ namespace Adam
                         DIO.SetIO("GREEN", "True");
                     }
                     break;
-                case "Blue_Signal":
+                case "BLUE_Signal":
                     if (DIO.GetIO("OUT", "BLUE").ToUpper().Equals("TRUE"))
                     {
                         DIO.SetIO("BLUE", "False");
@@ -1027,7 +1040,7 @@ namespace Adam
                         DIO.SetIO("BLUE", "True");
                     }
                     break;
-                case "Buzzer1_Signal":
+                case "BUZZER1_Signal":
                     if (DIO.GetIO("OUT", "BUZZER1").ToUpper().Equals("TRUE"))
                     {
                         DIO.SetIO("BUZZER1", "False");
@@ -1037,7 +1050,7 @@ namespace Adam
                         DIO.SetIO("BUZZER1", "True");
                     }
                     break;
-                case "Buzzer2_Signal":
+                case "BUZZER2_Signal":
                     if (DIO.GetIO("OUT", "BUZZER2").ToUpper().Equals("TRUE"))
                     {
                         DIO.SetIO("BUZZER2", "False");

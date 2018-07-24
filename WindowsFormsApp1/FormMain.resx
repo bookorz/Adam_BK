@@ -813,58 +813,58 @@
   <data name="&gt;&gt;Mute_chk.ZOrder" xml:space="preserve">
     <value>0</value>
   </data>
-  <data name="Buzzer2_Signal.FlatStyle" type="System.Windows.Forms.FlatStyle, System.Windows.Forms">
+  <data name="BUZZER2_Signal.FlatStyle" type="System.Windows.Forms.FlatStyle, System.Windows.Forms">
     <value>Flat</value>
   </data>
-  <data name="Buzzer2_Signal.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+  <data name="BUZZER2_Signal.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
   </data>
-  <data name="Buzzer2_Signal.Location" type="System.Drawing.Point, System.Drawing">
+  <data name="BUZZER2_Signal.Location" type="System.Drawing.Point, System.Drawing">
     <value>6, 74</value>
   </data>
-  <data name="Buzzer2_Signal.Size" type="System.Drawing.Size, System.Drawing">
+  <data name="BUZZER2_Signal.Size" type="System.Drawing.Size, System.Drawing">
     <value>70, 45</value>
   </data>
-  <data name="Buzzer2_Signal.TabIndex" type="System.Int32, mscorlib">
+  <data name="BUZZER2_Signal.TabIndex" type="System.Int32, mscorlib">
     <value>4</value>
   </data>
-  <data name="&gt;&gt;Buzzer2_Signal.Name" xml:space="preserve">
-    <value>Buzzer2_Signal</value>
+  <data name="&gt;&gt;BUZZER2_Signal.Name" xml:space="preserve">
+    <value>BUZZER2_Signal</value>
   </data>
-  <data name="&gt;&gt;Buzzer2_Signal.Type" xml:space="preserve">
+  <data name="&gt;&gt;BUZZER2_Signal.Type" xml:space="preserve">
     <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;Buzzer2_Signal.Parent" xml:space="preserve">
+  <data name="&gt;&gt;BUZZER2_Signal.Parent" xml:space="preserve">
     <value>groupBox4</value>
   </data>
-  <data name="&gt;&gt;Buzzer2_Signal.ZOrder" xml:space="preserve">
+  <data name="&gt;&gt;BUZZER2_Signal.ZOrder" xml:space="preserve">
     <value>1</value>
   </data>
-  <data name="Buzzer1_Signal.FlatStyle" type="System.Windows.Forms.FlatStyle, System.Windows.Forms">
+  <data name="BUZZER1_Signal.FlatStyle" type="System.Windows.Forms.FlatStyle, System.Windows.Forms">
     <value>Flat</value>
   </data>
-  <data name="Buzzer1_Signal.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+  <data name="BUZZER1_Signal.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
   </data>
-  <data name="Buzzer1_Signal.Location" type="System.Drawing.Point, System.Drawing">
+  <data name="BUZZER1_Signal.Location" type="System.Drawing.Point, System.Drawing">
     <value>6, 26</value>
   </data>
-  <data name="Buzzer1_Signal.Size" type="System.Drawing.Size, System.Drawing">
+  <data name="BUZZER1_Signal.Size" type="System.Drawing.Size, System.Drawing">
     <value>70, 45</value>
   </data>
-  <data name="Buzzer1_Signal.TabIndex" type="System.Int32, mscorlib">
+  <data name="BUZZER1_Signal.TabIndex" type="System.Int32, mscorlib">
     <value>1</value>
   </data>
-  <data name="&gt;&gt;Buzzer1_Signal.Name" xml:space="preserve">
-    <value>Buzzer1_Signal</value>
+  <data name="&gt;&gt;BUZZER1_Signal.Name" xml:space="preserve">
+    <value>BUZZER1_Signal</value>
   </data>
-  <data name="&gt;&gt;Buzzer1_Signal.Type" xml:space="preserve">
+  <data name="&gt;&gt;BUZZER1_Signal.Type" xml:space="preserve">
     <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;Buzzer1_Signal.Parent" xml:space="preserve">
+  <data name="&gt;&gt;BUZZER1_Signal.Parent" xml:space="preserve">
     <value>groupBox4</value>
   </data>
-  <data name="&gt;&gt;Buzzer1_Signal.ZOrder" xml:space="preserve">
+  <data name="&gt;&gt;BUZZER1_Signal.ZOrder" xml:space="preserve">
     <value>2</value>
   </data>
   <data name="groupBox4.Location" type="System.Drawing.Point, System.Drawing">
@@ -1417,112 +1417,112 @@
   <data name="groupBox2.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>Top, Bottom, Right</value>
   </data>
-  <data name="Blue_Signal.FlatStyle" type="System.Windows.Forms.FlatStyle, System.Windows.Forms">
+  <data name="BLUE_Signal.FlatStyle" type="System.Windows.Forms.FlatStyle, System.Windows.Forms">
     <value>Flat</value>
   </data>
-  <data name="Blue_Signal.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+  <data name="BLUE_Signal.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
   </data>
-  <data name="Blue_Signal.Location" type="System.Drawing.Point, System.Drawing">
+  <data name="BLUE_Signal.Location" type="System.Drawing.Point, System.Drawing">
     <value>6, 119</value>
   </data>
-  <data name="Blue_Signal.Size" type="System.Drawing.Size, System.Drawing">
+  <data name="BLUE_Signal.Size" type="System.Drawing.Size, System.Drawing">
     <value>119, 27</value>
   </data>
-  <data name="Blue_Signal.TabIndex" type="System.Int32, mscorlib">
+  <data name="BLUE_Signal.TabIndex" type="System.Int32, mscorlib">
     <value>4</value>
   </data>
-  <data name="&gt;&gt;Blue_Signal.Name" xml:space="preserve">
-    <value>Blue_Signal</value>
+  <data name="&gt;&gt;BLUE_Signal.Name" xml:space="preserve">
+    <value>BLUE_Signal</value>
   </data>
-  <data name="&gt;&gt;Blue_Signal.Type" xml:space="preserve">
+  <data name="&gt;&gt;BLUE_Signal.Type" xml:space="preserve">
     <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;Blue_Signal.Parent" xml:space="preserve">
+  <data name="&gt;&gt;BLUE_Signal.Parent" xml:space="preserve">
     <value>groupBox2</value>
   </data>
-  <data name="&gt;&gt;Blue_Signal.ZOrder" xml:space="preserve">
+  <data name="&gt;&gt;BLUE_Signal.ZOrder" xml:space="preserve">
     <value>0</value>
   </data>
-  <data name="Green_Signal.FlatStyle" type="System.Windows.Forms.FlatStyle, System.Windows.Forms">
+  <data name="GREEN_Signal.FlatStyle" type="System.Windows.Forms.FlatStyle, System.Windows.Forms">
     <value>Flat</value>
   </data>
-  <data name="Green_Signal.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+  <data name="GREEN_Signal.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
   </data>
-  <data name="Green_Signal.Location" type="System.Drawing.Point, System.Drawing">
+  <data name="GREEN_Signal.Location" type="System.Drawing.Point, System.Drawing">
     <value>6, 88</value>
   </data>
-  <data name="Green_Signal.Size" type="System.Drawing.Size, System.Drawing">
+  <data name="GREEN_Signal.Size" type="System.Drawing.Size, System.Drawing">
     <value>119, 27</value>
   </data>
-  <data name="Green_Signal.TabIndex" type="System.Int32, mscorlib">
+  <data name="GREEN_Signal.TabIndex" type="System.Int32, mscorlib">
     <value>3</value>
   </data>
-  <data name="&gt;&gt;Green_Signal.Name" xml:space="preserve">
-    <value>Green_Signal</value>
+  <data name="&gt;&gt;GREEN_Signal.Name" xml:space="preserve">
+    <value>GREEN_Signal</value>
   </data>
-  <data name="&gt;&gt;Green_Signal.Type" xml:space="preserve">
+  <data name="&gt;&gt;GREEN_Signal.Type" xml:space="preserve">
     <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;Green_Signal.Parent" xml:space="preserve">
+  <data name="&gt;&gt;GREEN_Signal.Parent" xml:space="preserve">
     <value>groupBox2</value>
   </data>
-  <data name="&gt;&gt;Green_Signal.ZOrder" xml:space="preserve">
+  <data name="&gt;&gt;GREEN_Signal.ZOrder" xml:space="preserve">
     <value>1</value>
   </data>
-  <data name="Orange_Signal.FlatStyle" type="System.Windows.Forms.FlatStyle, System.Windows.Forms">
+  <data name="ORANGE_Signal.FlatStyle" type="System.Windows.Forms.FlatStyle, System.Windows.Forms">
     <value>Flat</value>
   </data>
-  <data name="Orange_Signal.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+  <data name="ORANGE_Signal.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
   </data>
-  <data name="Orange_Signal.Location" type="System.Drawing.Point, System.Drawing">
+  <data name="ORANGE_Signal.Location" type="System.Drawing.Point, System.Drawing">
     <value>6, 57</value>
   </data>
-  <data name="Orange_Signal.Size" type="System.Drawing.Size, System.Drawing">
+  <data name="ORANGE_Signal.Size" type="System.Drawing.Size, System.Drawing">
     <value>119, 27</value>
   </data>
-  <data name="Orange_Signal.TabIndex" type="System.Int32, mscorlib">
+  <data name="ORANGE_Signal.TabIndex" type="System.Int32, mscorlib">
     <value>2</value>
   </data>
-  <data name="&gt;&gt;Orange_Signal.Name" xml:space="preserve">
-    <value>Orange_Signal</value>
+  <data name="&gt;&gt;ORANGE_Signal.Name" xml:space="preserve">
+    <value>ORANGE_Signal</value>
   </data>
-  <data name="&gt;&gt;Orange_Signal.Type" xml:space="preserve">
+  <data name="&gt;&gt;ORANGE_Signal.Type" xml:space="preserve">
     <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;Orange_Signal.Parent" xml:space="preserve">
+  <data name="&gt;&gt;ORANGE_Signal.Parent" xml:space="preserve">
     <value>groupBox2</value>
   </data>
-  <data name="&gt;&gt;Orange_Signal.ZOrder" xml:space="preserve">
+  <data name="&gt;&gt;ORANGE_Signal.ZOrder" xml:space="preserve">
     <value>2</value>
   </data>
-  <data name="Red_Signal.FlatStyle" type="System.Windows.Forms.FlatStyle, System.Windows.Forms">
+  <data name="RED_Signal.FlatStyle" type="System.Windows.Forms.FlatStyle, System.Windows.Forms">
     <value>Flat</value>
   </data>
-  <data name="Red_Signal.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+  <data name="RED_Signal.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
   </data>
-  <data name="Red_Signal.Location" type="System.Drawing.Point, System.Drawing">
+  <data name="RED_Signal.Location" type="System.Drawing.Point, System.Drawing">
     <value>6, 26</value>
   </data>
-  <data name="Red_Signal.Size" type="System.Drawing.Size, System.Drawing">
+  <data name="RED_Signal.Size" type="System.Drawing.Size, System.Drawing">
     <value>119, 27</value>
   </data>
-  <data name="Red_Signal.TabIndex" type="System.Int32, mscorlib">
+  <data name="RED_Signal.TabIndex" type="System.Int32, mscorlib">
     <value>1</value>
   </data>
-  <data name="&gt;&gt;Red_Signal.Name" xml:space="preserve">
-    <value>Red_Signal</value>
+  <data name="&gt;&gt;RED_Signal.Name" xml:space="preserve">
+    <value>RED_Signal</value>
   </data>
-  <data name="&gt;&gt;Red_Signal.Type" xml:space="preserve">
+  <data name="&gt;&gt;RED_Signal.Type" xml:space="preserve">
     <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;Red_Signal.Parent" xml:space="preserve">
+  <data name="&gt;&gt;RED_Signal.Parent" xml:space="preserve">
     <value>groupBox2</value>
   </data>
-  <data name="&gt;&gt;Red_Signal.ZOrder" xml:space="preserve">
+  <data name="&gt;&gt;RED_Signal.ZOrder" xml:space="preserve">
     <value>3</value>
   </data>
   <data name="groupBox2.Location" type="System.Drawing.Point, System.Drawing">
@@ -2174,7 +2174,7 @@
     <value>Terminal</value>
   </data>
   <data name="menuMaintenace.Size" type="System.Drawing.Size, System.Drawing">
-    <value>306, 314</value>
+    <value>306, 292</value>
   </data>
   <data name="&gt;&gt;menuMaintenace.Name" xml:space="preserve">
     <value>menuMaintenace</value>

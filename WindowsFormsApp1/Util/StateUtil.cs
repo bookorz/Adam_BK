@@ -22,90 +22,90 @@ namespace Adam.Util
         static public Dictionary<string, object> device = new Dictionary<string, object>();
         //static private Dictionary<string, AlignerState> aligner = new Dictionary<string, AlignerState>();
         //static private Dictionary<string, LoadPortState> port = new Dictionary<string, LoadPortState>();
-        static private RobotState robot1 = new RobotState("Robot01");
-        static private RobotState robot2 = new RobotState("Robot02");
-        static private AlignerState aligner1 = new AlignerState("Aligner01");
-        static private AlignerState aligner2 = new AlignerState("Aligner02");
-        static private LoadPortState loadPort1 = new LoadPortState("LoadPort01");
-        static private LoadPortState loadPort2 = new LoadPortState("LoadPort02");
-        static private LoadPortState loadPort3 = new LoadPortState("LoadPort03");
-        static private LoadPortState loadPort4 = new LoadPortState("LoadPort04");
-        static private LoadPortState loadPort5 = new LoadPortState("LoadPort05");
-        static private LoadPortState loadPort6 = new LoadPortState("LoadPort06");
-        static private LoadPortState loadPort7 = new LoadPortState("LoadPort07");
-        static private LoadPortState loadPort8 = new LoadPortState("LoadPort08");
+        static private RobotState robot1 = new RobotState("ROBOT01");
+        static private RobotState robot2 = new RobotState("ROBOT02");
+        static private AlignerState aligner1 = new AlignerState("ALIGNER01");
+        static private AlignerState aligner2 = new AlignerState("ALIGNER02");
+        static private LoadPortState loadPort1 = new LoadPortState("LOADPORT01");
+        static private LoadPortState loadPort2 = new LoadPortState("LOADPORT02");
+        static private LoadPortState loadPort3 = new LoadPortState("LOADPORT03");
+        static private LoadPortState loadPort4 = new LoadPortState("LOADPORT04");
+        static private LoadPortState loadPort5 = new LoadPortState("LOADPORT05");
+        static private LoadPortState loadPort6 = new LoadPortState("LOADPORT06");
+        static private LoadPortState loadPort7 = new LoadPortState("LOADPORT07");
+        static private LoadPortState loadPort8 = new LoadPortState("LOADPORT08");
 
         public static void Init()
         {
             device.Clear();
-            device.Add("Robot01", robot1);
-            device.Add("Robot02", robot2);
-            device.Add("Aligner01", aligner1);
-            device.Add("Aligner02", aligner2);
-            device.Add("LoadPort01", loadPort1);
-            device.Add("LoadPort02", loadPort2);
-            device.Add("LoadPort03", loadPort3);
-            device.Add("LoadPort04", loadPort4);
-            device.Add("LoadPort05", loadPort5);
-            device.Add("LoadPort06", loadPort6);
-            device.Add("LoadPort07", loadPort7);
-            device.Add("LoadPort08", loadPort8);
+            device.Add("ROBOT01", robot1);
+            device.Add("ROBOT02", robot2);
+            device.Add("ALIGNER01", aligner1);
+            device.Add("ALIGNER02", aligner2);
+            device.Add("LOADPORT01", loadPort1);
+            device.Add("LOADPORT02", loadPort2);
+            device.Add("LOADPORT03", loadPort3);
+            device.Add("LOADPORT04", loadPort4);
+            device.Add("LOADPORT05", loadPort5);
+            device.Add("LOADPORT06", loadPort6);
+            device.Add("LOADPORT07", loadPort7);
+            device.Add("LOADPORT08", loadPort8);
 
         }
         public static void UpdateSTS(string device, string msg)
         {
             switch (device)
             {
-                case "Robot01":
+                case "ROBOT01":
                     robot1.State = msg;
                     if (msg.Length == 32)
                     {
                         robot1.Servo = msg.Substring(10 - 1, 1).Equals("1") ? "ON" : "OFF";// 10 Servo On 0 = Servo off 1 = Servo On
                     }
                     break;
-                case "Robot02":
+                case "ROBOT02":
                     robot2.State = msg;
                     if (msg.Length == 32)
                     {
                         robot2.Servo = msg.Substring(10 - 1, 1).Equals("1") ? "ON" : "OFF";// 10 Servo On 0 = Servo off 1 = Servo On
                     }
                     break;
-                case "Aligner01":
+                case "ALIGNER01":
                     aligner1.State = msg;
                     if (msg.Length == 32)
                     {
                         aligner1.Servo = msg.Substring(10 - 1, 1).Equals("1") ? "ON" : "OFF";// 10 Servo On 0 = Servo off 1 = Servo On
                     }
                     break;
-                case "Aligner02":
+                case "ALIGNER02":
                     aligner2.State = msg;
                     if (msg.Length == 32)
                     {
                         aligner2.Servo = msg.Substring(10 - 1, 1).Equals("1") ? "ON" : "OFF";// 10 Servo On 0 = Servo off 1 = Servo On
                     }
                     break;
-                case "LoadPort01":
+                case "LOADPORT01":
                     loadPort1.State = msg;
                     break;
-                case "LoadPort02":
+                case "LOADPORT02":
                     loadPort2.State = msg;
                     break;
-                case "LoadPort03":
+                case "LOADPORT03":
                     loadPort3.State = msg;
                     break;
-                case "LoadPort04":
+                case "LOADPORT04":
                     loadPort4.State = msg;
                     break;
-                case "LoadPort05":
+                case "LOADPORT05":
                     loadPort5.State = msg;
                     break;
-                case "LoadPort06":
+                case "LOADPORT06":
                     loadPort6.State = msg;
                     break;
-                case "LoadPort07":
+                case "LOADPORT07":
                     loadPort8.State = msg;
                     break;
-                case "LoadPort08":
+                case "LOADPORT08":
                     loadPort8.State = msg;
                     break;
             }
@@ -116,16 +116,16 @@ namespace Adam.Util
             AlignerState aligner = null;
             switch (device)
             {
-                case "Robot01":
+                case "ROBOT01":
                     robot = robot1;
                     break;
-                case "Robot02":
+                case "ROBOT02":
                     robot = robot2;
                     break;
-                case "Aligner01":
+                case "ALIGNER01":
                     aligner = aligner1;
                     break;
-                case "Aligner02":
+                case "ALIGNER02":
                     aligner = aligner2;
                     break;
                 default:
@@ -227,53 +227,53 @@ namespace Adam.Util
                 switch (result[3])//<049,Success,A1,[Rdy],AL,REL,U>
                 {
                     case "Rdy":
-                            aligner.Status = "Ready";
-                            aligner.Servo = "ON";
+                        aligner.Status = "Ready";
+                        aligner.Servo = "ON";
                         break;
                     case "Bsy":
-                            aligner.Status = "Busy";
-                            aligner.Servo = "ON";
+                        aligner.Status = "Busy";
+                        aligner.Servo = "ON";
                         break;
                     case "Off":
-                            aligner.Status = "Servo OFF";
-                            aligner.Servo = "OFF";
+                        aligner.Status = "Servo OFF";
+                        aligner.Servo = "OFF";
                         break;
                     case "Err":
-                            aligner.Status = "Error";
-                            aligner.Servo = "N/A";
+                        aligner.Status = "Error";
+                        aligner.Servo = "N/A";
                         break;
                     case "Tch":
-                            aligner.Status = "Teach";
-                            aligner.Servo = "N/A";
+                        aligner.Status = "Teach";
+                        aligner.Servo = "N/A";
                         break;
                 }
                 //AL ChuckCode
                 switch (result[5])//<049,Success,A1,Rdy,AL,[REL],U>
                 {
                     case "HLD"://Vacuum ON
-                            aligner.Vacuum = "1";
+                        aligner.Vacuum = "1";
                         break;
                     case "REL"://Vacuum OFF
-                            aligner.Vacuum = "0";
+                        aligner.Vacuum = "0";
                         break;
                     case "UKN"://Unknown
-                            aligner.Vacuum = "N/A";
+                        aligner.Vacuum = "N/A";
                         break;
                 }
                 //AL SenseCode
                 switch (result[6])//<049,Success,A1,Rdy,AL,REL,[U]>
                 {
                     case "0"://Wafer absence
-                            aligner.Present = result[6];
+                        aligner.Present = result[6];
                         break;
                     case "1"://Wafer presence
-                            aligner.Present = result[6];
+                        aligner.Present = result[6];
                         break;
                     case "U"://Wafer unknown
-                            aligner.Present = result[6];
+                        aligner.Present = result[6];
                         break;
                     case "E"://sensor failure
-                            aligner.Present = result[6];
+                        aligner.Present = result[6];
                         break;
                 }
             }
@@ -284,16 +284,16 @@ namespace Adam.Util
         {
             switch (device)
             {
-                case "Robot01":
+                case "ROBOT01":
                     robot1.Error = msg;
                     break;
-                case "Robot02":
+                case "ROBOT02":
                     robot2.Error = msg;
                     break;
-                case "Aligner01":
+                case "ALIGNER01":
                     aligner1.Error = msg;
                     break;
-                case "Aligner02":
+                case "ALIGNER02":
                     aligner2.Error = msg;
                     break;
             }
@@ -303,16 +303,16 @@ namespace Adam.Util
         {
             switch (device)
             {
-                case "Robot01":
+                case "ROBOT01":
                     robot1.Mode = msg;
                     break;
-                case "Robot02":
+                case "ROBOT02":
                     robot2.Mode = msg;
                     break;
-                case "Aligner01":
+                case "ALIGNER01":
                     aligner1.Mode = msg;
                     break;
-                case "Aligner02":
+                case "ALIGNER02":
                     aligner2.Mode = msg;
                     break;
             }
@@ -324,16 +324,16 @@ namespace Adam.Util
             AlignerState aligner = null;
             switch (device)
             {
-                case "Robot01":
+                case "ROBOT01":
                     robot = robot1;
                     break;
-                case "Robot02":
+                case "ROBOT02":
                     robot = robot2;
                     break;
-                case "Aligner01":
+                case "ALIGNER01":
                     aligner = aligner1;
                     break;
-                case "Aligner02":
+                case "ALIGNER02":
                     aligner = aligner2;
                     break;
                 default:
@@ -363,16 +363,16 @@ namespace Adam.Util
             AlignerState aligner = null;
             switch (device)
             {
-                case "Robot01":
+                case "ROBOT01":
                     robot = robot1;
                     break;
-                case "Robot02":
+                case "ROBOT02":
                     robot = robot2;
                     break;
-                case "Aligner01":
+                case "ALIGNER01":
                     aligner = aligner1;
                     break;
-                case "Aligner02":
+                case "ALIGNER02":
                     aligner = aligner2;
                     break;
                 default:
@@ -400,16 +400,16 @@ namespace Adam.Util
         {
             switch (device)
             {
-                case "Robot01":
+                case "ROBOT01":
                     robot1.Speed = msg;
                     break;
-                case "Robot02":
+                case "ROBOT02":
                     robot2.Speed = msg;
                     break;
-                case "Aligner01":
+                case "ALIGNER01":
                     aligner1.Speed = msg;
                     break;
-                case "Aligner02":
+                case "ALIGNER02":
                     aligner2.Speed = msg;
                     break;
             }

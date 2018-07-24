@@ -250,6 +250,7 @@
             this.LoadPort06Assign_Gv.Size = new System.Drawing.Size(189, 555);
             this.LoadPort06Assign_Gv.StandardTab = true;
             this.LoadPort06Assign_Gv.TabIndex = 53;
+            this.LoadPort06Assign_Gv.CellFormatting += new System.Windows.Forms.DataGridViewCellFormattingEventHandler(this.Assign_Gv_CellFormatting);
             this.LoadPort06Assign_Gv.MouseClick += new System.Windows.Forms.MouseEventHandler(this.Assign_Gv_MouseClick);
             // 
             // LoadPort06State_lb
@@ -390,6 +391,7 @@
             this.LoadPort05Assign_Gv.Size = new System.Drawing.Size(189, 555);
             this.LoadPort05Assign_Gv.StandardTab = true;
             this.LoadPort05Assign_Gv.TabIndex = 53;
+            this.LoadPort05Assign_Gv.CellFormatting += new System.Windows.Forms.DataGridViewCellFormattingEventHandler(this.Assign_Gv_CellFormatting);
             this.LoadPort05Assign_Gv.MouseClick += new System.Windows.Forms.MouseEventHandler(this.Assign_Gv_MouseClick);
             // 
             // LoadPort05State_lb
@@ -530,6 +532,7 @@
             this.LoadPort08Assign_Gv.Size = new System.Drawing.Size(195, 555);
             this.LoadPort08Assign_Gv.StandardTab = true;
             this.LoadPort08Assign_Gv.TabIndex = 53;
+            this.LoadPort08Assign_Gv.CellFormatting += new System.Windows.Forms.DataGridViewCellFormattingEventHandler(this.Assign_Gv_CellFormatting);
             this.LoadPort08Assign_Gv.MouseClick += new System.Windows.Forms.MouseEventHandler(this.Assign_Gv_MouseClick);
             // 
             // LoadPort08State_lb
@@ -670,6 +673,7 @@
             this.LoadPort07Assign_Gv.Size = new System.Drawing.Size(189, 555);
             this.LoadPort07Assign_Gv.StandardTab = true;
             this.LoadPort07Assign_Gv.TabIndex = 53;
+            this.LoadPort07Assign_Gv.CellFormatting += new System.Windows.Forms.DataGridViewCellFormattingEventHandler(this.Assign_Gv_CellFormatting);
             this.LoadPort07Assign_Gv.MouseClick += new System.Windows.Forms.MouseEventHandler(this.Assign_Gv_MouseClick);
             // 
             // LoadPort07State_lb
@@ -810,6 +814,7 @@
             this.LoadPort02Assign_Gv.Size = new System.Drawing.Size(189, 555);
             this.LoadPort02Assign_Gv.StandardTab = true;
             this.LoadPort02Assign_Gv.TabIndex = 53;
+            this.LoadPort02Assign_Gv.CellFormatting += new System.Windows.Forms.DataGridViewCellFormattingEventHandler(this.Assign_Gv_CellFormatting);
             this.LoadPort02Assign_Gv.MouseClick += new System.Windows.Forms.MouseEventHandler(this.Assign_Gv_MouseClick);
             // 
             // LoadPort02State_lb
@@ -940,6 +945,7 @@
             this.LoadPort01Assign_Gv.Size = new System.Drawing.Size(188, 552);
             this.LoadPort01Assign_Gv.StandardTab = true;
             this.LoadPort01Assign_Gv.TabIndex = 53;
+            this.LoadPort01Assign_Gv.CellFormatting += new System.Windows.Forms.DataGridViewCellFormattingEventHandler(this.Assign_Gv_CellFormatting);
             this.LoadPort01Assign_Gv.MouseClick += new System.Windows.Forms.MouseEventHandler(this.Assign_Gv_MouseClick);
             // 
             // LoadPort01State_lb
@@ -1092,6 +1098,7 @@
             this.LoadPort04Assign_Gv.Size = new System.Drawing.Size(189, 555);
             this.LoadPort04Assign_Gv.StandardTab = true;
             this.LoadPort04Assign_Gv.TabIndex = 53;
+            this.LoadPort04Assign_Gv.CellFormatting += new System.Windows.Forms.DataGridViewCellFormattingEventHandler(this.Assign_Gv_CellFormatting);
             this.LoadPort04Assign_Gv.MouseClick += new System.Windows.Forms.MouseEventHandler(this.Assign_Gv_MouseClick);
             // 
             // LoadPort04State_lb
@@ -1233,6 +1240,7 @@
             this.LoadPort03Assign_Gv.Size = new System.Drawing.Size(189, 555);
             this.LoadPort03Assign_Gv.StandardTab = true;
             this.LoadPort03Assign_Gv.TabIndex = 53;
+            this.LoadPort03Assign_Gv.CellFormatting += new System.Windows.Forms.DataGridViewCellFormattingEventHandler(this.Assign_Gv_CellFormatting);
             this.LoadPort03Assign_Gv.MouseClick += new System.Windows.Forms.MouseEventHandler(this.Assign_Gv_MouseClick);
             // 
             // LoadPort03State_lb

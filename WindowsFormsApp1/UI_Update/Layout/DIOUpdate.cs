@@ -41,24 +41,24 @@ namespace Adam.UI_Update.Layout
 
                     switch (Parameter)
                     {
-                        case "Red":
-                        case "Orange":
-                        case "Green":
-                        case "Blue":
+                        case "RED":
+                        case "ORANGE":
+                        case "GREEN":
+                        case "BLUE":
                             if (Value.ToUpper().Equals("TRUE"))
                             {
                                 switch (Parameter)
                                 {
-                                    case "Red":
+                                    case "RED":
                                         Signal.BackColor = Color.Red;
                                         break;
-                                    case "Orange":
+                                    case "ORANGE":
                                         Signal.BackColor = Color.DarkOrange;
                                         break;
-                                    case "Green":
+                                    case "GREEN":
                                         Signal.BackColor = Color.Green;
                                         break;
-                                    case "Blue":
+                                    case "BLUE":
                                         Signal.BackColor = Color.Blue;
                                         break;
                                 }
@@ -68,8 +68,8 @@ namespace Adam.UI_Update.Layout
                                 Signal.BackColor = Color.Silver;
                             }
                             break;
-                        case "Buzzer1":
-                        case "Buzzer2":
+                        case "BUZZER1":
+                        case "BUZZER2":
                             if (Value.ToUpper().Equals("TRUE"))
                             {
                                 Signal.BackColor = Color.Yellow;

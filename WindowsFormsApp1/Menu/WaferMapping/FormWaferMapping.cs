@@ -30,22 +30,7 @@ namespace Adam.Menu.WaferMapping
 
         private void InitialForm(object input)
         {
-            //WaferAssignUpdate.UpdateLoadPortMapping("LoadPort01", "111211111?111110111W11111");
-            //WaferAssignUpdate.UpdateLoadPortMapping("LoadPort02", "11WW111112111111011110111");
-            //WaferAssignUpdate.UpdateLoadPortMapping("LoadPort03", "0000000000000000000000000");
-            //WaferAssignUpdate.UpdateLoadPortMapping("LoadPort04", "0000000000000000000000000");
-            //WaferAssignUpdate.UpdateLoadPortMapping("LoadPort05", "11WW111112111111011110111");
-            //WaferAssignUpdate.UpdateLoadPortMapping("LoadPort06", "0000000000000000000000000");
-            //WaferAssignUpdate.UpdateLoadPortMapping("LoadPort07", "0000000000000000000000000");
-            //WaferAssignUpdate.UpdateLoadPortMapping("LoadPort08", "0000000000000000000000000");
-            WaferAssignUpdate.UpdateLoadPortMode("LoadPort01", "LD");
-            WaferAssignUpdate.UpdateLoadPortMode("LoadPort02", "LD");
-            WaferAssignUpdate.UpdateLoadPortMode("LoadPort03", "UD");
-            WaferAssignUpdate.UpdateLoadPortMode("LoadPort04", "UD");
-            WaferAssignUpdate.UpdateLoadPortMode("LoadPort05", "LD");
-            WaferAssignUpdate.UpdateLoadPortMode("LoadPort06", "UD");
-            WaferAssignUpdate.UpdateLoadPortMode("LoadPort07", "UD");
-            WaferAssignUpdate.UpdateLoadPortMode("LoadPort08", "UD");
+            
         }
 
         private void Assign_Gv_CellFormatting(object sender, DataGridViewCellFormattingEventArgs e)

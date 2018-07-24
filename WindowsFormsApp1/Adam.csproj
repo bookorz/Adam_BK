@@ -551,7 +551,7 @@
     <Content Include="sql\Command Log.sql">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
-    <Content Include="sql\DIO Setting Log.sql">
+    <Content Include="sql\DIO Change Log.sql">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
     <Content Include="sql\Process Job Log.sql">

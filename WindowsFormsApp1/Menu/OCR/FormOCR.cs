@@ -59,6 +59,10 @@ namespace Adam.Menu.OCR
             }
         }
 
-
+        private void Reload_btn_Click(object sender, EventArgs e)
+        {
+            Reload_btn.Enabled = false;
+            OCRUpdate.AssignForm();
+        }
     }
 }

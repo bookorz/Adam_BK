@@ -1,4 +1,5 @@
-﻿using MySql.Data.MySqlClient;
+﻿using log4net;
+using MySql.Data.MySqlClient;
 using NPOI;
 using NPOI.HSSF.UserModel;
 using NPOI.SS.UserModel;
@@ -11,14 +12,17 @@ using System.Diagnostics;
 using System.Drawing;
 using System.IO;
 using System.Linq;
+using System.Reflection;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace GUI
 {
+    
     public partial class FormQuery : Form
     {
+        private static readonly ILog logger = LogManager.GetLogger(typeof(FormQuery));
         DataTable dataTable;
         string sqlScript = "";
         ToolTip toolTip1 = new ToolTip();
@@ -40,101 +44,176 @@ namespace GUI
         public FormQuery()
         {
             InitializeComponent();
+            gdvData.MakeDoubleBuffered(true);
         }
 
         private DataTable dtCondition = new DataTable();
 
         private void btnQuery_Click(object sender, EventArgs e)
         {
-            DBUtil dBUtil = new DBUtil();
-            //StringBuilder sql = new StringBuilder();
-            //sql.Append("\n SELECT *");
-            //sql.Append("\n   FROM device_code_params ");
+            try
+            {
+                this.Cursor = Cursors.WaitCursor;
+                DBUtil dBUtil = new DBUtil();
 
+                //set parameter
+                Dictionary<string, object> param = new Dictionary<string, object>();
+                DateTime fromDt = this.dtpFromDate.Value;
+                DateTime toDt = this.dtpToDate.Value;
 
-            //set parameter
-            Dictionary<string, object> param = new Dictionary<string, object>();
-            //Query
-            //DataTableReader rs = dBUtil.GetDataReader(sql.ToString(), param);
-            //MySqlDataAdapter adapter  = dBUtil.GetDataAdapter(sql.ToString());
-            //MySqlDataAdapter adapter = dBUtil.GetDataAdapter(this.getSqlContent(sqlScript));
-            //dataTable = new DataTable();
-            //adapter.Fill(dataTable);
-            DateTime fromDt = this.dtpFromDate.Value;
-            DateTime toDt = this.dtpToDate.Value;
+                string cond_1 = txbCondition1.Text.Equals("") ? "%" : txbCondition1.Text;
+                string cond_2 = txbCondition2.Text.Equals("") ? "%" : txbCondition2.Text;
+                string cond_3 = txbCondition3.Text.Equals("") ? "%" : txbCondition3.Text;
+                param.Add("@from_dt", fromDt.ToString("yyyy-MM-dd 00:00:00.000000"));
+                param.Add("@to_dt", toDt.ToString("yyyy-MM-dd 23:59:59.999999"));
+                param.Add("@cond_1", cond_1);
+                param.Add("@cond_2", cond_2);
+                param.Add("@cond_3", cond_3);
+                param.Add("@limit", Int32.Parse(cbLimitCnt.Text));
 
-            string cond_1 = txbCondition1.Text.Equals("") ? "%" : txbCondition1.Text;
-            string cond_2 = txbCondition2.Text.Equals("") ? "%" : txbCondition2.Text;
-            string cond_3 = txbCondition3.Text.Equals("") ? "%" : txbCondition3.Text;
-            param.Add("@from_dt", fromDt.ToString("yyyy-MM-dd 00:00:00.000000"));
-            param.Add("@to_dt", toDt.ToString("yyyy-MM-dd 23:59:59.999999"));
-            param.Add("@cond_1", cond_1);
-            param.Add("@cond_2", cond_2);
-            param.Add("@cond_3", cond_3);
-            dataTable = dBUtil.GetDataTable(getSqlContent(sqlScript), param);
-            gdvData.DataSource = dataTable;
-            btnExport.Enabled = true;
+                dataTable = dBUtil.GetDataTable(getSqlContent(sqlScript), param);
+                gdvData.DataSource = dataTable;
+                btnExport.Enabled = true;
+            }
+            catch (Exception ex)
+            {
+                logger.Error(ex.StackTrace);
+                MessageBox.Show(ex.StackTrace, "Error",
+                                MessageBoxButtons.OK,
+                                MessageBoxIcon.Error);
+            }
+            finally
+            {
+                this.Cursor = Cursors.Default;
+            }            
         }
 
         private void DataTableToExcelFile(DataTable dt)
         {
-            //建立Excel 2003檔案
-            HSSFWorkbook wb = new HSSFWorkbook();
-            Sheet ws;
-
-            ////建立Excel 2007檔案
-            //IWorkbook wb = new XSSFWorkbook();
-            //ISheet ws;
-
-            if (dt.TableName != string.Empty)
+            try
             {
-                ws = wb.CreateSheet(dt.TableName);
-            }
-            else
-            {
-                ws = wb.CreateSheet("Sheet1");
-            }
+                //建立Excel 2003檔案
+                HSSFWorkbook wb = new HSSFWorkbook();
+                Sheet ws;
 
-            ws.CreateRow(0);//第一行為欄位名稱
-            for (int i = 0; i < dt.Columns.Count; i++)
-            {
-                ws.GetRow(0).CreateCell(i).SetCellValue(dt.Columns[i].ColumnName);
-            }
+                ////建立Excel 2007檔案
+                //IWorkbook wb = new XSSFWorkbook();
+                //ISheet ws;
 
-            for (int i = 0; i < dt.Rows.Count; i++)
-            {
-                ws.CreateRow(i + 1);
-                for (int j = 0; j < dt.Columns.Count; j++)
+                if (dt.TableName != string.Empty)
                 {
-                    ws.GetRow(i + 1).CreateCell(j).SetCellValue(dt.Rows[i][j].ToString());
+                    ws = wb.CreateSheet(dt.TableName);
                 }
-            }
+                else
+                {
+                    ws = wb.CreateSheet("Sheet1");
+                }
 
-            string dirPath = @"d:\sanwa\export\";
-            if (!Directory.Exists(dirPath))
+                ws.CreateRow(0);//第一行為欄位名稱
+                for (int i = 0; i < dt.Columns.Count; i++)
+                {
+                    ws.GetRow(0).CreateCell(i).SetCellValue(dt.Columns[i].ColumnName);
+                }
+
+                for (int i = 0; i < dt.Rows.Count; i++)
+                {
+                    ws.CreateRow(i + 1);
+                    for (int j = 0; j < dt.Columns.Count; j++)
+                    {
+                        ws.GetRow(i + 1).CreateCell(j).SetCellValue(dt.Rows[i][j].ToString());
+                    }
+                }
+
+                string dirPath = @"d:\sanwa\export\";
+                if (!Directory.Exists(dirPath))
+                {
+                    Directory.CreateDirectory(dirPath);
+                }
+
+                string fileName = cbQueryType.Text + "_" + DateTime.Now.ToString("yyyyMMddHHmmss") + "_result.xls";
+                FileStream file = new FileStream(dirPath + fileName, FileMode.Create);//產生檔案
+                wb.Write(file);
+                file.Close();
+
+                Process.Start(dirPath + fileName);
+                //OpenFileDialog dialog = new OpenFileDialog();
+                //dialog.Title = "Open file";
+                //dialog.InitialDirectory = "D:\\";
+                //dialog.Filter = "xls files (*.*)|*.xls*";
+                //if (dialog.ShowDialog() == DialogResult.OK)
+                //{
+                //    MessageBox.Show(dialog.FileName);
+                //}
+            }
+            catch (Exception ex)
             {
-                Directory.CreateDirectory(dirPath);
+                logger.Error(ex.StackTrace);
+                MessageBox.Show(ex.StackTrace, "Error",
+                                MessageBoxButtons.OK,
+                                MessageBoxIcon.Error);
             }
+        }
 
-            string fileName =  cbQueryType.Text + "_" + DateTime.Now.ToString("yyyyMMddHHmmss") + "_result.xls";
-            FileStream file = new FileStream(dirPath + fileName, FileMode.Create);//產生檔案
-            wb.Write(file);
-            file.Close();
-
-            Process.Start(dirPath + fileName);
-            //OpenFileDialog dialog = new OpenFileDialog();
-            //dialog.Title = "Open file";
-            //dialog.InitialDirectory = "D:\\";
-            //dialog.Filter = "xls files (*.*)|*.xls*";
-            //if (dialog.ShowDialog() == DialogResult.OK)
-            //{
-            //    MessageBox.Show(dialog.FileName);
-            //}
+        public void DataTableToCsvFile(DataTable dt)
+        {
+            try
+            {
+                string fileName = cbQueryType.Text + "_" + DateTime.Now.ToString("yyyyMMddHHmmss") + "_result.csv";
+                string fullPath = @"d:\sanwa\export\" + fileName;
+                FileInfo fi = new FileInfo(fullPath);
+                if (!fi.Directory.Exists)
+                {
+                    fi.Directory.Create();
+                }
+                FileStream fs = new FileStream(fullPath, System.IO.FileMode.Create, System.IO.FileAccess.Write);
+                //StreamWriter sw = new StreamWriter(fs, System.Text.Encoding.Default);
+                StreamWriter sw = new StreamWriter(fs, System.Text.Encoding.UTF8);
+                string data = "";
+                //寫出列名稱
+                for (int i = 0; i < dt.Columns.Count; i++)
+                {
+                    data += "\"" + dt.Columns[i].ColumnName.ToString() + "\"";
+                    if (i < dt.Columns.Count - 1)
+                    {
+                        data += ",";
+                    }
+                }
+                sw.WriteLine(data);
+                //寫出各行數據
+                for (int i = 0; i < dt.Rows.Count; i++)
+                {
+                    data = "";
+                    for (int j = 0; j < dt.Columns.Count; j++)
+                    {
+                        string str = dt.Rows[i][j].ToString();
+                        str = string.Format("\"{0}\"", str).Replace("\r", "\\r").Replace("\n", "\\n");
+                        data += str;
+                        if (j < dt.Columns.Count - 1)
+                        {
+                            data += ",";
+                        }
+                    }
+                    sw.WriteLine(data);
+                }
+                sw.Close();
+                fs.Close();
+                Process.Start(fullPath);
+            }
+            catch(Exception ex)
+            {
+                logger.Error(ex.StackTrace);
+                MessageBox.Show(ex.StackTrace, "Error",
+                                MessageBoxButtons.OK,
+                                MessageBoxIcon.Error);
+            }
         }
 
         private void btnExport_Click(object sender, EventArgs e)
         {
-            DataTableToExcelFile(dataTable);
+            if(rdbExcel.Checked)
+                DataTableToExcelFile(dataTable);
+            if (rdbCsv.Checked)
+                DataTableToCsvFile(dataTable);
         }
 
         private void FormQuery_Load(object sender, EventArgs e)
@@ -145,7 +224,10 @@ namespace GUI
             }
             catch (Exception ex)
             {
-                throw new Exception(ex.ToString());
+                logger.Error(ex.StackTrace);
+                MessageBox.Show(ex.StackTrace, "Error",
+                                MessageBoxButtons.OK,
+                                MessageBoxIcon.Error);
             }
         }
 
@@ -169,20 +251,9 @@ namespace GUI
             this.txbCondition3.Visible = false;
 
             gdvData.DataSource = null;
+            cbLimitCnt.SelectedItem = "1000";
         }
-
-        private void ConditionTable()
-        {
-            try
-            {
-
-            }
-            catch (Exception ex)
-            {
-                throw new Exception(ex.ToString());
-            }
-        }
-
+        
         private void setToolTip(ToolTip toolTip, Control control, string tip)
         {
             toolTip.SetToolTip(control, tip);
@@ -259,19 +330,28 @@ namespace GUI
                     this.txbCondition2.Visible = true;
                     btnQuery.Enabled = true;
                     break;
-                case "DIO Setting Log":
-                    sqlScript = "DIO Setting Log";
-                    setToolTip(toolTip1, txbCondition1, "Logged user id.");
-                    this.labCondition1.Visible = true;
-                    this.txbCondition1.Visible = true;
+                case "DIO Change Log":
+                    sqlScript = "DIO Change Log";
                     btnQuery.Enabled = true;
                     break;
                 default:
-                    MessageBox.Show("不支援的報表查詢!", "Info");
+                    MessageBox.Show("不支援的報表查詢!", "Info",
+                                    MessageBoxButtons.OK,
+                                    MessageBoxIcon.Asterisk);
                     break;
             }
            
         }
 
+    }
+    public static class ControlExtentions
+    {
+        public static void MakeDoubleBuffered(this Control control, bool setting)
+        {
+            Type controlType = control.GetType();
+            PropertyInfo pi = controlType.GetProperty("DoubleBuffered",
+            BindingFlags.Instance | BindingFlags.NonPublic);
+            pi.SetValue(control, setting, null);
+        }
     }
 }

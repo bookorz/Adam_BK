@@ -176,7 +176,7 @@ namespace Adam.Menu.SystemSetting
                 Label Signal = form.Controls.Find("lbl_login_id", true).FirstOrDefault() as Label;
 
                 keyValues.Add("@red", cmbRad.Text.ToString());
-                keyValues.Add("@yellow", cmbYellow.Text.ToString());
+                keyValues.Add("@orange", cmbYellow.Text.ToString());
                 keyValues.Add("@green", cmbGreen.Text.ToString());
                 keyValues.Add("@blue", cmbBlue.Text.ToString());
                 keyValues.Add("@buzzer1", cmbBuzzer1.Text.ToString());
@@ -219,7 +219,7 @@ namespace Adam.Menu.SystemSetting
             try
             {
                 strSql = "select concat(eqp_status, '-', (case when is_alarm = 0 then 'Normal' else 'Alarm' end)) item, " +
-                            "eqp_status, is_alarm, red, yellow, green, blue, buzzer1, buzzer2 " +
+                            "eqp_status, is_alarm, red, orange, green, blue, buzzer1, buzzer2 " +
                             "from config_signal_tower order by is_alarm, eqp_status asc ";
 
                 dtSignalTower = dBUtil.GetDataTable(strSql, null);
