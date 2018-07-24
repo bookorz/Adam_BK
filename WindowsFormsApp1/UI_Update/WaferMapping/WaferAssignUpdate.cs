@@ -266,7 +266,7 @@ namespace Adam.UI_Update.WaferMapping
                     Port_gv.Columns["AssignTime"].Visible = false;
 
                     MonitoringUpdate.UpdateNodesJob(PortName);
-                    port.IsMapping = true;
+                    //port.IsMapping = true;
                 }
 
 
