@@ -721,7 +721,8 @@ namespace GUI
             if (node == null)
                 return;
             string status = node.State != "" ? node.State : "N/A";
-            string ctrl_status = ControllerManagement.Get(node.Controller).Status;
+            string ctrl_status = ControllerManagement.Get(node.Controller) != null? ControllerManagement.Get(node.Controller).Status : "N/A";
+            //string ctrl_status = ControllerManagement.Get(node.Controller).Status;
             if (!ctrl_status.Equals("Connected"))
             {
                 status = ctrl_status;// 如果 Controller 非已連線狀態，NODE 狀態改抓 Controller 的狀態   
