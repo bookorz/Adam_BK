@@ -17,5 +17,6 @@
 		m.txn_slot, m.txn_arm, m.txn_value, m.script_name, m.form_name
    FROM tmp m, log_cmd_txn_detail d
   WHERE m.txn_id = d.txn_id
+    AND d.time_stamp BETWEEN @from_dt AND @to_dt
   ORDER BY m.time_stamp, m.txn_start_time, m.txn_id, d.receive_time
   LIMIT @limit;

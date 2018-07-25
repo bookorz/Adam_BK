@@ -9,5 +9,5 @@
    AND host_id LIKE @cond_1
    AND from_foup_id LIKE @cond_2
    AND to_foup_id LIKE @cond_3
- ORDER BY s.pr_id, s.create_time, s.start_time, s.end_time
+ ORDER BY s.create_time, s.start_time, s.end_time
  LIMIT @limit;

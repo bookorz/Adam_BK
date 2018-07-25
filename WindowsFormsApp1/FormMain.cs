@@ -1204,5 +1204,9 @@ namespace Adam
             }
         }
 
+        private void Conn_gv_RowEnter(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
     }
 }

@@ -114,6 +114,7 @@ namespace Adam.UI_Update.OCR
                                     Pic_OCR.Image = t;
                                     Pic_OCR.Tag = Job;
                                     Job.OCRImgPath = savePath;
+                                    Job.OCRScore = ocrResult[1];
                                     ProcessRecord.updateSubstrateOCR(NodeManagement.Get(Job.FromPort).PrID, Job);
                                     break;
                                 case "HST":
@@ -147,6 +148,7 @@ namespace Adam.UI_Update.OCR
                                         Pic_OCR.Image = t;
                                         Pic_OCR.Tag = Job;
                                         Job.OCRImgPath = savePath;
+                                        Job.OCRScore = ocrResult[1];
                                         ProcessRecord.updateSubstrateOCR(NodeManagement.Get(Job.FromPort).PrID, Job);
                                     }
                                     break;

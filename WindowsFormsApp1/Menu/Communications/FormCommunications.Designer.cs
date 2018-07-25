@@ -60,18 +60,8 @@
             this.label25 = new System.Windows.Forms.Label();
             this.labPortNo = new System.Windows.Forms.Label();
             this.txbConnectionType = new System.Windows.Forms.TextBox();
-            this.txbReadTimeout = new System.Windows.Forms.TextBox();
-            this.labSlaveID = new System.Windows.Forms.Label();
-            this.labDigitalInputQuantity = new System.Windows.Forms.Label();
-            this.labReadTimeout = new System.Windows.Forms.Label();
             this.chbTCPIPActive = new System.Windows.Forms.CheckBox();
-            this.labDelay = new System.Windows.Forms.Label();
-            this.txbSlaveID = new System.Windows.Forms.TextBox();
-            this.txbDigitalInputQuantity = new System.Windows.Forms.TextBox();
-            this.txbDelay = new System.Windows.Forms.TextBox();
             this.txbInformation = new System.Windows.Forms.TextBox();
-            this.labSocketControllerType = new System.Windows.Forms.Label();
-            this.cmbSocketControllerType = new System.Windows.Forms.ComboBox();
             this.gbRS232CSetting = new System.Windows.Forms.GroupBox();
             this.tlpRS232C = new System.Windows.Forms.TableLayoutPanel();
             this.cmbComControllerType = new System.Windows.Forms.ComboBox();
@@ -389,18 +379,8 @@
             this.tlpTCPIP.Controls.Add(this.tableLayoutPanel8, 1, 0);
             this.tlpTCPIP.Controls.Add(this.labPortNo, 0, 1);
             this.tlpTCPIP.Controls.Add(this.txbConnectionType, 1, 2);
-            this.tlpTCPIP.Controls.Add(this.txbReadTimeout, 1, 6);
-            this.tlpTCPIP.Controls.Add(this.labSlaveID, 0, 3);
-            this.tlpTCPIP.Controls.Add(this.labDigitalInputQuantity, 0, 4);
-            this.tlpTCPIP.Controls.Add(this.labReadTimeout, 0, 6);
             this.tlpTCPIP.Controls.Add(this.chbTCPIPActive, 1, 9);
-            this.tlpTCPIP.Controls.Add(this.labDelay, 0, 5);
-            this.tlpTCPIP.Controls.Add(this.txbSlaveID, 1, 3);
-            this.tlpTCPIP.Controls.Add(this.txbDigitalInputQuantity, 1, 4);
-            this.tlpTCPIP.Controls.Add(this.txbDelay, 1, 5);
             this.tlpTCPIP.Controls.Add(this.txbInformation, 1, 8);
-            this.tlpTCPIP.Controls.Add(this.labSocketControllerType, 0, 7);
-            this.tlpTCPIP.Controls.Add(this.cmbSocketControllerType, 1, 7);
             this.tlpTCPIP.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tlpTCPIP.Location = new System.Drawing.Point(3, 25);
             this.tlpTCPIP.Name = "tlpTCPIP";
@@ -471,7 +451,7 @@
             this.nudIPPort.Font = new System.Drawing.Font("微軟正黑體", 16F);
             this.nudIPPort.Location = new System.Drawing.Point(3, 3);
             this.nudIPPort.Maximum = new decimal(new int[] {
-            9999,
+            99999,
             0,
             0,
             0});
@@ -661,50 +641,6 @@
             this.txbConnectionType.TabIndex = 4;
             this.txbConnectionType.Text = "Socket";
             // 
-            // txbReadTimeout
-            // 
-            this.txbReadTimeout.BackColor = System.Drawing.Color.White;
-            this.txbReadTimeout.Dock = System.Windows.Forms.DockStyle.Left;
-            this.txbReadTimeout.Font = new System.Drawing.Font("微軟正黑體", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-            this.txbReadTimeout.Location = new System.Drawing.Point(158, 285);
-            this.txbReadTimeout.Name = "txbReadTimeout";
-            this.txbReadTimeout.ReadOnly = true;
-            this.txbReadTimeout.Size = new System.Drawing.Size(309, 35);
-            this.txbReadTimeout.TabIndex = 6;
-            // 
-            // labSlaveID
-            // 
-            this.labSlaveID.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.labSlaveID.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.labSlaveID.Location = new System.Drawing.Point(3, 141);
-            this.labSlaveID.Name = "labSlaveID";
-            this.labSlaveID.Size = new System.Drawing.Size(149, 47);
-            this.labSlaveID.TabIndex = 7;
-            this.labSlaveID.Text = "Slave ID";
-            this.labSlaveID.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            // 
-            // labDigitalInputQuantity
-            // 
-            this.labDigitalInputQuantity.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.labDigitalInputQuantity.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.labDigitalInputQuantity.Location = new System.Drawing.Point(3, 188);
-            this.labDigitalInputQuantity.Name = "labDigitalInputQuantity";
-            this.labDigitalInputQuantity.Size = new System.Drawing.Size(149, 47);
-            this.labDigitalInputQuantity.TabIndex = 8;
-            this.labDigitalInputQuantity.Text = "Digital Input Quantity";
-            this.labDigitalInputQuantity.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            // 
-            // labReadTimeout
-            // 
-            this.labReadTimeout.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.labReadTimeout.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.labReadTimeout.Location = new System.Drawing.Point(3, 282);
-            this.labReadTimeout.Name = "labReadTimeout";
-            this.labReadTimeout.Size = new System.Drawing.Size(149, 47);
-            this.labReadTimeout.TabIndex = 10;
-            this.labReadTimeout.Text = "Read Timeout";
-            this.labReadTimeout.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            // 
             // chbTCPIPActive
             // 
             this.chbTCPIPActive.AutoSize = true;
@@ -714,50 +650,6 @@
             this.chbTCPIPActive.TabIndex = 5;
             this.chbTCPIPActive.Text = "Active";
             this.chbTCPIPActive.UseVisualStyleBackColor = true;
-            // 
-            // labDelay
-            // 
-            this.labDelay.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.labDelay.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.labDelay.Location = new System.Drawing.Point(3, 235);
-            this.labDelay.Name = "labDelay";
-            this.labDelay.Size = new System.Drawing.Size(149, 47);
-            this.labDelay.TabIndex = 9;
-            this.labDelay.Text = "Delay";
-            this.labDelay.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            // 
-            // txbSlaveID
-            // 
-            this.txbSlaveID.BackColor = System.Drawing.Color.White;
-            this.txbSlaveID.Dock = System.Windows.Forms.DockStyle.Left;
-            this.txbSlaveID.Font = new System.Drawing.Font("微軟正黑體", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-            this.txbSlaveID.Location = new System.Drawing.Point(158, 144);
-            this.txbSlaveID.Name = "txbSlaveID";
-            this.txbSlaveID.ReadOnly = true;
-            this.txbSlaveID.Size = new System.Drawing.Size(309, 35);
-            this.txbSlaveID.TabIndex = 11;
-            // 
-            // txbDigitalInputQuantity
-            // 
-            this.txbDigitalInputQuantity.BackColor = System.Drawing.Color.White;
-            this.txbDigitalInputQuantity.Dock = System.Windows.Forms.DockStyle.Left;
-            this.txbDigitalInputQuantity.Font = new System.Drawing.Font("微軟正黑體", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-            this.txbDigitalInputQuantity.Location = new System.Drawing.Point(158, 191);
-            this.txbDigitalInputQuantity.Name = "txbDigitalInputQuantity";
-            this.txbDigitalInputQuantity.ReadOnly = true;
-            this.txbDigitalInputQuantity.Size = new System.Drawing.Size(309, 35);
-            this.txbDigitalInputQuantity.TabIndex = 12;
-            // 
-            // txbDelay
-            // 
-            this.txbDelay.BackColor = System.Drawing.Color.White;
-            this.txbDelay.Dock = System.Windows.Forms.DockStyle.Left;
-            this.txbDelay.Font = new System.Drawing.Font("微軟正黑體", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-            this.txbDelay.Location = new System.Drawing.Point(158, 238);
-            this.txbDelay.Name = "txbDelay";
-            this.txbDelay.ReadOnly = true;
-            this.txbDelay.Size = new System.Drawing.Size(309, 35);
-            this.txbDelay.TabIndex = 13;
             // 
             // txbInformation
             // 
@@ -770,27 +662,6 @@
             this.txbInformation.Size = new System.Drawing.Size(646, 35);
             this.txbInformation.TabIndex = 16;
             this.txbInformation.Visible = false;
-            // 
-            // labSocketControllerType
-            // 
-            this.labSocketControllerType.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.labSocketControllerType.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.labSocketControllerType.Location = new System.Drawing.Point(3, 329);
-            this.labSocketControllerType.Name = "labSocketControllerType";
-            this.labSocketControllerType.Size = new System.Drawing.Size(149, 47);
-            this.labSocketControllerType.TabIndex = 17;
-            this.labSocketControllerType.Text = "Controller Type";
-            this.labSocketControllerType.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            // 
-            // cmbSocketControllerType
-            // 
-            this.cmbSocketControllerType.Dock = System.Windows.Forms.DockStyle.Left;
-            this.cmbSocketControllerType.Font = new System.Drawing.Font("微軟正黑體", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-            this.cmbSocketControllerType.FormattingEnabled = true;
-            this.cmbSocketControllerType.Location = new System.Drawing.Point(158, 332);
-            this.cmbSocketControllerType.Name = "cmbSocketControllerType";
-            this.cmbSocketControllerType.Size = new System.Drawing.Size(309, 38);
-            this.cmbSocketControllerType.TabIndex = 18;
             // 
             // gbRS232CSetting
             // 
@@ -1167,19 +1038,9 @@
         private System.Windows.Forms.TextBox txbConnectTypeCOM;
         private System.Windows.Forms.SplitContainer splitContainer3;
         private System.Windows.Forms.Button btnRenew;
-        private System.Windows.Forms.TextBox txbReadTimeout;
         private System.Windows.Forms.CheckBox chbRS232CActive;
         private System.Windows.Forms.CheckBox chbTCPIPActive;
-        private System.Windows.Forms.Label labSlaveID;
-        private System.Windows.Forms.Label labDigitalInputQuantity;
-        private System.Windows.Forms.Label labDelay;
-        private System.Windows.Forms.Label labReadTimeout;
-        private System.Windows.Forms.TextBox txbSlaveID;
-        private System.Windows.Forms.TextBox txbDigitalInputQuantity;
-        private System.Windows.Forms.TextBox txbDelay;
         private System.Windows.Forms.TextBox txbInformation;
-        private System.Windows.Forms.Label labSocketControllerType;
-        private System.Windows.Forms.ComboBox cmbSocketControllerType;
         private System.Windows.Forms.ComboBox cmbComControllerType;
         private System.Windows.Forms.Label labComControllerType;
     }

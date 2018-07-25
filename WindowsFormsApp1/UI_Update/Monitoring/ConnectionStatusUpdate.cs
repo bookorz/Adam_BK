@@ -266,7 +266,8 @@ namespace Adam.UI_Update.Monitoring
                     Conn_gv.DataSource = null;
                     Conn_gv.DataSource = connList;
                     //Conn_gv.Refresh();
-                    Conn_gv.ClearSelection();
+                   // Conn_gv.ClearSelection();
+                  
                 }
 
 
