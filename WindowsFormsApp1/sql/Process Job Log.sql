@@ -24,4 +24,5 @@ SELECT pr_id, foup_id, slot_list, process_cnt,
   FROM tmp2
  WHERE time_stamp BETWEEN @from_dt AND @to_dt
    AND foup_id LIKE @cond_1
+ ORDER BY create_time, start_time, last_update_time
  LIMIT @limit;
