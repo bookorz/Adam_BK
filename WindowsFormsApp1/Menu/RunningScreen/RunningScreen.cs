@@ -14,6 +14,9 @@ namespace Adam.Menu.RunningScreen
 {
     public partial class FormRunningScreen : Adam.Menu.FormFrame
     {
+
+        public static int TransCount = 0;
+
         public FormRunningScreen()
         {
             InitializeComponent();
