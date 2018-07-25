@@ -177,6 +177,7 @@ namespace Adam
 
                 foreach (Node each in NodeManagement.GetList())
                 {
+                    each.InitialComplete = false;
                     switch (each.Type.ToUpper())
                     {
                         case "ROBOT":
