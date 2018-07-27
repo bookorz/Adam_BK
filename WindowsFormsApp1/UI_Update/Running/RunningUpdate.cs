@@ -111,18 +111,18 @@ namespace Adam.UI_Update.Running
         {
             
             Form form = Application.OpenForms["FormRunningScreen"];
-            Button Start_btn;
+            
             if (form == null)
                 return;
 
-            Start_btn = form.Controls.Find("Start_btn", true).FirstOrDefault() as Button;
-            if (Start_btn == null)
+            TextBox tb = form.Controls.Find("TransCount_tb", true).FirstOrDefault() as TextBox;
+            if (tb == null)
                 return;
 
-            if (Start_btn.InvokeRequired)
+            if (tb.InvokeRequired)
             {
                 UpdatePresent ph = new UpdatePresent(ReverseRunning);
-                Start_btn.Invoke(ph, FinishPort);
+                tb.BeginInvoke(ph, FinishPort);
             }
             else
             {
@@ -177,7 +177,7 @@ namespace Adam.UI_Update.Running
                         FinPort.DestPort = "";
                         DestPort.DestPort = FinPort.Name;
                         DestPort.ReserveList.Clear();
-                        TextBox tb = form.Controls.Find("TransCount_tb", true).FirstOrDefault() as TextBox;
+                        tb = form.Controls.Find("TransCount_tb", true).FirstOrDefault() as TextBox;
                         if (Convert.ToInt32(tb.Text) <= 1)//次數歸零 停止DEMO
                         {
                             DestPort.Available = false;
@@ -185,7 +185,12 @@ namespace Adam.UI_Update.Running
                         else
                         {
                             ProcessRecord.CreatePr(DestPort);
+                            WaferAssignUpdate.UpdateAssignCM(DestPort.Name, FinPort.Name,false);
                             DestPort.Available = true;
+                            if (DestPort.ByPass)
+                            {
+                                DestPort.PortUnloadAndLoadFinished = true;
+                            }
                         }
                         FinPort.Used = false;
                     }

@@ -1,0 +1,7 @@
+2018/07/27 14:07:47	PvDeviceLib::Device::Connect Access denied status received from the device. The device is already in use.
+2018/07/27 14:26:43	PvDeviceLib::Device::Connect Access denied status received from the device. The device is already in use.
+2018/07/27 14:54:40	PvDeviceLib::Device::Connect Access denied status received from the device. The device is already in use.
+2018/07/27 17:16:16	PvDeviceLib::Device::Connect Access denied status received from the device. The device is already in use.
+2018/07/27 18:30:15	PvDeviceLib::Device::Connect Access denied status received from the device. The device is already in use.
+2018/07/27 18:31:23	PvDeviceLib::Device::Connect Access denied status received from the device. The device is already in use.
+2018/07/27 18:37:17	PvDeviceLib::Device::Connect Access denied status received from the device. The device is already in use.

@@ -322,7 +322,8 @@ namespace Adam.Menu.WaferMapping
                 //    WaferAssignUpdate.UpdateLoadPortMode(Name, "LU");
                 //    break;
                 case "Fake Data(Full)":
-                    WaferAssignUpdate.UpdateLoadPortMapping(Name, "111211111?111110111W11111");
+                    //WaferAssignUpdate.UpdateLoadPortMapping(Name, "1111111111111111111111111");
+                    WaferAssignUpdate.UpdateLoadPortMapping(Name, "1111111111111111111111110");
                     break;
                 case "Fake Data(Empty)":
                     WaferAssignUpdate.UpdateLoadPortMapping(Name, "0000000000000000000000000");

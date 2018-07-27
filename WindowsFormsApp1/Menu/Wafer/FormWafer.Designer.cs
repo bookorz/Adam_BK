@@ -33,6 +33,7 @@
             this.gbCondition = new System.Windows.Forms.GroupBox();
             this.WaferList_tv = new System.Windows.Forms.TreeView();
             this.gbSettingData = new System.Windows.Forms.GroupBox();
+            this.btnDelete = new System.Windows.Forms.Button();
             this.tlpSettingData = new System.Windows.Forms.TableLayoutPanel();
             this.OCRFlag_ck = new System.Windows.Forms.CheckBox();
             this.AlignFlag_ck = new System.Windows.Forms.CheckBox();
@@ -50,9 +51,8 @@
             this.NeedProcess_ck = new System.Windows.Forms.CheckBox();
             this.Position_cb = new System.Windows.Forms.ComboBox();
             this.ProcessFlag_ck = new System.Windows.Forms.CheckBox();
-            this.btnSave = new System.Windows.Forms.Button();
-            this.btnDelete = new System.Windows.Forms.Button();
             this.Slot_cb = new System.Windows.Forms.ComboBox();
+            this.btnSave = new System.Windows.Forms.Button();
             this.gbSetting.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.spcSignalTowerSetting)).BeginInit();
             this.spcSignalTowerSetting.Panel1.SuspendLayout();
@@ -123,6 +123,18 @@
             this.gbSettingData.TabIndex = 0;
             this.gbSettingData.TabStop = false;
             this.gbSettingData.Text = "Data";
+            // 
+            // btnDelete
+            // 
+            this.btnDelete.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnDelete.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.btnDelete.Location = new System.Drawing.Point(10, 658);
+            this.btnDelete.Name = "btnDelete";
+            this.btnDelete.Size = new System.Drawing.Size(229, 48);
+            this.btnDelete.TabIndex = 8;
+            this.btnDelete.Text = "Delete";
+            this.btnDelete.UseVisualStyleBackColor = true;
+            this.btnDelete.Click += new System.EventHandler(this.btnDelete_Click);
             // 
             // tlpSettingData
             // 
@@ -331,6 +343,14 @@
             this.ProcessFlag_ck.TabIndex = 27;
             this.ProcessFlag_ck.UseVisualStyleBackColor = true;
             // 
+            // Slot_cb
+            // 
+            this.Slot_cb.FormattingEnabled = true;
+            this.Slot_cb.Location = new System.Drawing.Point(281, 243);
+            this.Slot_cb.Name = "Slot_cb";
+            this.Slot_cb.Size = new System.Drawing.Size(185, 28);
+            this.Slot_cb.TabIndex = 31;
+            // 
             // btnSave
             // 
             this.btnSave.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
@@ -342,26 +362,6 @@
             this.btnSave.Text = "Save";
             this.btnSave.UseVisualStyleBackColor = true;
             this.btnSave.Click += new System.EventHandler(this.btnSave_Click);
-            // 
-            // btnDelete
-            // 
-            this.btnDelete.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnDelete.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.btnDelete.Location = new System.Drawing.Point(10, 658);
-            this.btnDelete.Name = "btnDelete";
-            this.btnDelete.Size = new System.Drawing.Size(229, 48);
-            this.btnDelete.TabIndex = 8;
-            this.btnDelete.Text = "Delete";
-            this.btnDelete.UseVisualStyleBackColor = true;
-            this.btnDelete.Click += new System.EventHandler(this.btnDelete_Click);
-            // 
-            // Slot_cb
-            // 
-            this.Slot_cb.FormattingEnabled = true;
-            this.Slot_cb.Location = new System.Drawing.Point(281, 243);
-            this.Slot_cb.Name = "Slot_cb";
-            this.Slot_cb.Size = new System.Drawing.Size(185, 28);
-            this.Slot_cb.TabIndex = 31;
             // 
             // FormWafer
             // 

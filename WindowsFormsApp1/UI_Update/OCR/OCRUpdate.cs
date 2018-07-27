@@ -184,52 +184,58 @@ namespace Adam.UI_Update.OCR
 
         private static void ReAssign()
         {
-
-            Form form = Application.OpenForms["FormOCR"];
-            TabControl tabControl1;
-            if (form == null)
-                return;
-
-            tabControl1 = form.Controls.Find("tabControl1", true).FirstOrDefault() as TabControl;
-            if (tabControl1 == null)
-                return;
-            if (tabControl1.InvokeRequired)
+            try
             {
-                ReAssignUI ph = new ReAssignUI(ReAssign);
-                tabControl1.BeginInvoke(ph);
-            }
-            else
-            {
+                Form form = Application.OpenForms["FormOCR"];
+                TabControl tabControl1;
+                if (form == null)
+                    return;
 
-                tabControl1.TabPages.Clear();
-                var ocrs = from ocr in NodeManagement.GetList()
-                           where ocr.Type.Equals("OCR")
-                           select ocr;
-                bool IsCognexInit = false;
-                foreach (Node ocr in ocrs)
+                tabControl1 = form.Controls.Find("tabControl1", true).FirstOrDefault() as TabControl;
+                if (tabControl1 == null)
+                    return;
+                if (tabControl1.InvokeRequired)
                 {
-                    switch (ocr.Brand)
-                    {
-                        case "HST":
-                            pCnt++;
-                            Process p1 = Process.Start(new ProcessStartInfo("C:/Program Files (x86)/HST Vision/e-Reader8000/VB9BReaderForm.exe", ocr.AdrNo));
-                            ThreadPool.QueueUserWorkItem(new WaitCallback(LoadHST), ocr);
-
-
-                            break;
-                        case "COGNEX":
-                            if (!IsCognexInit)
-                            {
-                                pCnt++;
-                                IsCognexInit = true;
-                                Process p2 = Process.Start(new ProcessStartInfo("C:/Program Files (x86)/Cognex/In-Sight/In-Sight Explorer Wafer 4.5.0/WaferID.exe"));
-                                ThreadPool.QueueUserWorkItem(new WaitCallback(LoadCOGNEX), ocr);
-                            }
-                            ControllerManagement.Get(ocr.Controller).Connect();
-                            break;
-                    }
+                    ReAssignUI ph = new ReAssignUI(ReAssign);
+                    tabControl1.BeginInvoke(ph);
                 }
+                else
+                {
 
+                    tabControl1.TabPages.Clear();
+                    var ocrs = from ocr in NodeManagement.GetList()
+                               where ocr.Type.Equals("OCR")
+                               select ocr;
+                    bool IsCognexInit = false;
+                    foreach (Node ocr in ocrs)
+                    {
+                        switch (ocr.Brand)
+                        {
+                            case "HST":
+                                pCnt++;
+                                Process p1 = Process.Start(new ProcessStartInfo("C:/Program Files (x86)/HST Vision/e-Reader8000/VB9BReaderForm.exe", ocr.AdrNo));
+                                ThreadPool.QueueUserWorkItem(new WaitCallback(LoadHST), ocr);
+
+
+                                break;
+                            case "COGNEX":
+                                if (!IsCognexInit)
+                                {
+                                    pCnt++;
+                                    IsCognexInit = true;
+                                    Process p2 = Process.Start(new ProcessStartInfo("C:/Program Files (x86)/Cognex/In-Sight/In-Sight Explorer Wafer 4.5.0/WaferID.exe"));
+                                    ThreadPool.QueueUserWorkItem(new WaitCallback(LoadCOGNEX), ocr);
+                                }
+                                ControllerManagement.Get(ocr.Controller).Connect();
+                                break;
+                        }
+                    }
+
+                }
+            }
+            catch(Exception e)
+            {
+                logger.Error(e.StackTrace);
             }
         }
 

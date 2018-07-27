@@ -17,6 +17,7 @@ namespace Adam.UI_Update.WaferMapping
         delegate void UpdatePort(string PortName, string Mapping);
         delegate void UpdatePortMapping(string PortName);
         delegate void UpdatePortUsed(string PortName, bool Used);
+        delegate void UpdateAssign(string PortName, string Mapping,bool Enable);
 
         public static void UpdateUseState(string PortName, bool used)
         {
@@ -157,26 +158,26 @@ namespace Adam.UI_Update.WaferMapping
                     //port.IsMapping = true;
                     if (Mapping.Equals(""))
                     {
-                        foreach(Job eachJob in port.JobList.Values)
+                        foreach (Job eachJob in port.JobList.Values)
                         {
                             JobManagement.Remove(eachJob.Job_Id);
                         }
                         port.JobList.Clear();
                         port.ReserveList.Clear();
                         JobManagement.ClearAssignJobByPort(port.Name);
-                    }                   
+                    }
                     else
                     {
                         int currentIdx = 1;
-                        for (int i =  0; i < Mapping.Length; i++)
+                        for (int i = 0; i < Mapping.Length; i++)
                         {
                             Job wafer = new Job();
-                            wafer.Slot = (i+1).ToString();
+                            wafer.Slot = (i + 1).ToString();
                             wafer.FromPort = PortName;
                             wafer.FromPortSlot = wafer.Slot;
                             wafer.Position = PortName;
                             wafer.AlignerFlag = false;
-                            string Slot = (i+1).ToString("00");
+                            string Slot = (i + 1).ToString("00");
                             switch (Mapping[i])
                             {
                                 case '0':
@@ -241,7 +242,7 @@ namespace Adam.UI_Update.WaferMapping
                     Port_gv.Columns["Job_Id"].Visible = false;
                     Port_gv.Columns["Destination"].Visible = false;
                     Port_gv.Columns["ProcessFlag"].Visible = false;
-                   // Port_gv.Columns["Piority"].Visible = false;
+                    // Port_gv.Columns["Piority"].Visible = false;
                     Port_gv.Columns["AlignerFlag"].Visible = false;
                     Port_gv.Columns["OCRFlag"].Visible = false;
                     Port_gv.Columns["AlignerFinished"].Visible = false;
@@ -266,7 +267,7 @@ namespace Adam.UI_Update.WaferMapping
                     Port_gv.Columns["AssignTime"].Visible = false;
 
                     MonitoringUpdate.UpdateNodesJob(PortName);
-                    //port.IsMapping = true;
+                    port.IsMapping = true;
                 }
 
 
@@ -305,6 +306,96 @@ namespace Adam.UI_Update.WaferMapping
             catch (Exception e)
             {
                 logger.Error("UpdateLoadPortMode: Update fail:" + e.StackTrace);
+            }
+        }
+
+        public static void UpdateAssignCM(string FromPort, string ToPort,bool Enable)
+        {
+            try
+            {
+                Form form = Application.OpenForms["FormWaferMapping"];
+                if (form == null)
+                    return;
+                Button fromPort = form.Controls.Find(FromPort + "_ASCM", true).FirstOrDefault() as Button;
+                if (fromPort == null)
+                    return;
+                if (fromPort.InvokeRequired)
+                {
+                    UpdateAssign ph = new UpdateAssign(UpdateAssignCM);
+                    fromPort.BeginInvoke(ph, FromPort, ToPort);
+                }
+                else
+                {
+                    DataGridView FromPort_gv = form.Controls.Find(FromPort + "Assign_Gv", true).FirstOrDefault() as DataGridView;
+                    if (FromPort_gv != null)
+                    {
+                        FromPort_gv.Enabled = Enable;
+                    }
+
+                    DataGridView ToPort_gv = form.Controls.Find(ToPort + "Assign_Gv", true).FirstOrDefault() as DataGridView;
+                    if (ToPort_gv != null)
+                    {
+                        ToPort_gv.Enabled = Enable;
+                    }
+                    fromPort.Enabled = Enable;
+                    if (!Enable)
+                    {
+                        fromPort.BackColor = Color.Green;
+                        fromPort.ForeColor = Color.White;
+                    }
+                    else
+                    {
+                        fromPort.BackColor = Color.Gainsboro;
+                        fromPort.ForeColor = Color.Black;
+                    }
+                }
+            }
+            catch (Exception e)
+            {
+                logger.Error("UpdateAssignCM: Update fail:" + e.StackTrace);
+            }
+        }
+
+        public static void ResetAssignCM(string Port, bool Enable)
+        {
+            try
+            {
+                Form form = Application.OpenForms["FormWaferMapping"];
+                if (form == null)
+                    return;
+                Button fromPort = form.Controls.Find(Port + "_ASCM", true).FirstOrDefault() as Button;
+                if (fromPort == null)
+                    return;
+                if (fromPort.InvokeRequired)
+                {
+                    UpdatePortUsed ph = new UpdatePortUsed(ResetAssignCM);
+                    fromPort.BeginInvoke(ph, Port, Enable);
+                }
+                else
+                {
+                    DataGridView FromPort_gv = form.Controls.Find(Port + "Assign_Gv", true).FirstOrDefault() as DataGridView;
+                    if (FromPort_gv != null)
+                    {
+                        FromPort_gv.Enabled = Enable;
+                    }
+
+                   
+                    fromPort.Enabled = Enable;
+                    if (!Enable)
+                    {
+                        fromPort.BackColor = Color.Green;
+                        fromPort.ForeColor = Color.White;
+                    }
+                    else
+                    {
+                        fromPort.BackColor = Color.Gainsboro;
+                        fromPort.ForeColor = Color.Black;
+                    }
+                }
+            }
+            catch (Exception e)
+            {
+                logger.Error("UpdateAssignCM: Update fail:" + e.StackTrace);
             }
         }
     }

@@ -59,6 +59,7 @@ namespace Adam.UI_Update.Alarm
                     NodeStatusUpdate.UpdateCurrentState(FormMain.RouteCtrl.EqpState);
                     if (AlarmList.Count() != 0)
                     {
+                       
                         form.Visible = true;
                         
                     }

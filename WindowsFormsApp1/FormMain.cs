@@ -742,9 +742,15 @@ namespace Adam
                         //RunningUpdate.UpdateUseState(PortName, false);
                         MonitoringUpdate.UpdateUseState(PortName, false);
                         WaferAssignUpdate.UpdateUseState(PortName, false);
-
-                        Port.ExcuteScript("LoadPortUnloadAndLoad", "Running_Port_Finished");
-                        DestPort.ExcuteScript("LoadPortUnloadAndLoad", "Running_Port_Finished");
+                        if (!Port.ByPass)
+                        {
+                            Port.ExcuteScript("LoadPortUnloadAndLoad", "Running_Port_Finished");
+                            DestPort.ExcuteScript("LoadPortUnloadAndLoad", "Running_Port_Finished");
+                        }
+                        else
+                        {
+                            RunningUpdate.ReverseRunning(Port.Name);
+                        }
                         //RunningUpdate.ReverseRunning(PortName);
 
                         break;
@@ -771,6 +777,10 @@ namespace Adam
                 RunningUpdate.UpdateRunningInfo("LapsedLotCount", LapsedLotCount.ToString());
                 RunningUpdate.UpdateRunningInfo("WPH", (LapsedWfCount / Convert.ToDouble(LapsedTime) * 3600).ToString());
                 MonitoringUpdate.UpdateWPH(Math.Round((LapsedWfCount / Convert.ToDouble(LapsedTime) * 3600), 1).ToString());
+                foreach(Node port in NodeManagement.GetLoadPortList())
+                {
+                    WaferAssignUpdate.ResetAssignCM(port.Name,true);
+                }
             }
             catch (Exception e)
             {
@@ -788,7 +798,12 @@ namespace Adam
             foreach (Node port in NodeManagement.GetLoadPortList())
             {
                 WaferAssignUpdate.RefreshMapping(port.Name);
+                if (Mode.Equals("Stop"))
+                {
+                    WaferAssignUpdate.ResetAssignCM(port.Name,true);
+                }
             }
+            
         }
 
         public void On_Job_Location_Changed(Job Job)
