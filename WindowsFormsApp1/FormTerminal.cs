@@ -245,6 +245,7 @@ namespace Adam
             ComboBox cmbTemp;
             NumericUpDown nudTemp;
             string[] strsTemp;
+            string[] strsTemps;
             StringBuilder sbTemp;
             ContainerSet container = new ContainerSet();
             string strCommandFormatParameter = string.Empty;
@@ -273,9 +274,9 @@ namespace Adam
                     if (dr["Data_Value"].ToString().Equals(string.Empty))
                     {
                         nudTemp = new NumericUpDown();
-                        nudTemp.Value = Convert.ToInt32(dr["Default_Value"].ToString());
                         nudTemp.Maximum = Convert.ToInt32(dr["Max_Value"].ToString());
                         nudTemp.Minimum = Convert.ToInt32(dr["Min_Value"].ToString());
+                        nudTemp.Value = Convert.ToInt32(dr["Default_Value"].ToString());
                         nudTemp.Dock = DockStyle.Fill;
 
                         if (Convert.ToInt32(dr["Values_length"].ToString()) > 1 && dr["Is_Fill"].ToString() == "Y")
@@ -296,15 +297,16 @@ namespace Adam
                     }
                     else
                     {
-                        strsTemp = dr["Min_Value"].ToString().Split(',');
+                        strsTemp = dr["Data_Value"].ToString().Split(',');
                         cmbTemp = new ComboBox();
                         cmbTemp.Items.AddRange(strsTemp);
                         cmbTemp.Dock = DockStyle.Fill;
                         cmbTemp.AutoCompleteMode = AutoCompleteMode.SuggestAppend;
                         cmbTemp.AutoCompleteSource = AutoCompleteSource.ListItems;
-                        sbTemp.Append(cmbTemp.Text);
+                        cmbTemp.SelectedIndex = 0;
+                        sbTemp.Append(cmbTemp.Text.ToUpper().Equals("EMPTY") ? string.Empty : cmbTemp.Text);
                         sbTemp.Append(",");
-                        cmbTemp.DropDownClosed += new EventHandler(comboBox_DropDownClosed);
+                        cmbTemp.SelectedIndexChanged += new EventHandler(comboBox_DropDownClosed);
                         toolTip.SetToolTip(cmbTemp, dr["Parameter_Description"].ToString());
                         tlpAssemblyUI.Controls.Add(cmbTemp);
 
@@ -322,6 +324,10 @@ namespace Adam
                         case "TDK":
                             txbManually.Text = dtCommandParameter.Rows[0]["code_format"].ToString();
                             break;
+
+                        case "ATEL":
+                            txbManually.Text = string.Format(dtCommandParameter.Rows[0]["code_format"].ToString(), lsbDeviceName.Text.Split(',')[1].ToString());
+                            break;
                     }
                 }
                 else
@@ -334,6 +340,11 @@ namespace Adam
 
                         case "TDK":
                             txbManually.Text = dtCommandParameter.Rows[0]["code_format"].ToString();
+                            break;
+
+                        case "ATEL":
+                            strsTemps = (lsbDeviceName.Text.Split(',')[1].ToString() + "," + sbTemp.ToString().Substring(0, sbTemp.ToString().Length - 1)).Split(',');
+                            txbManually.Text = string.Format(dtCommandParameter.Rows[0]["code_format"].ToString(), strsTemps);
                             break;
                     }
                 }
@@ -356,6 +367,7 @@ namespace Adam
 
         private void FormulaCalculation()
         {
+            string[] strsTemps;
             StringBuilder sbTemp;
             ContainerSet container = new ContainerSet();
 
@@ -367,7 +379,7 @@ namespace Adam
                     switch (item.GetType().FullName.Split('.')[item.GetType().FullName.Split('.').Length - 1].ToString())
                     {
                         case "ComboBox":
-                            sbTemp.Append(((ComboBox)item).Text);
+                            sbTemp.Append(((ComboBox)item).Text.ToUpper().Equals("EMPTY") ? string.Empty : ((ComboBox)item).Text);
                             sbTemp.Append(",");
                             break;
 
@@ -390,6 +402,11 @@ namespace Adam
                 {
                     case "SANWA":
                         txbManually.Text = string.Format(dtCommandParameter.Rows[0]["code_format"].ToString(), lsbDeviceName.Text.Split(',')[1].ToString(), string.Empty) + container.StringFormat(dtCommandParameter.Select(), sbTemp.ToString().TrimEnd(',').Split(','));
+                        break;
+
+                    case "ATEL":
+                        strsTemps = (lsbDeviceName.Text.Split(',')[1].ToString() + "," + sbTemp.ToString().Substring(0, sbTemp.ToString().Length - 1)).Split(',');
+                        txbManually.Text = string.Format(dtCommandParameter.Rows[0]["code_format"].ToString(), strsTemps);
                         break;
                 }
             }
@@ -420,6 +437,7 @@ namespace Adam
 
                 switch (lsbDeviceName.SelectedValue.ToString().Split(',')[0].ToString())
                 {
+                    case "ATEL":
                     case "SANWA":
 
                         //Adam.UI_Update.Terminal.TerminalUpdate.UpdateReturnList("lsbHistory", DateTime.Now.ToLongTimeString() + strDevice + " <<  " + txbManually.Text, false);
@@ -495,6 +513,7 @@ namespace Adam
                 switch (lsbDeviceName.SelectedValue.ToString().Split(',')[0].ToString())
                 {
                     case "SANWA":
+                    case "ATEL":
 
                         drTemp["Command"] = txbManually.Text + "\r";
 
