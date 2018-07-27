@@ -1,0 +1,16 @@
+2018/07/26 10:30:47	PvDeviceLib::Device::Connect Access denied status received from the device. The device is already in use.
+2018/07/26 10:48:26	PvDeviceLib::Device::Connect Access denied status received from the device. The device is already in use.
+2018/07/26 10:52:23	PvDeviceLib::Device::Connect Access denied status received from the device. The device is already in use.
+2018/07/26 10:58:59	PvDeviceLib::Device::Connect Access denied status received from the device. The device is already in use.
+2018/07/26 19:10:56	PvDeviceLib::Device::Connect Access denied status received from the device. The device is already in use.
+2018/07/26 19:12:28	PvDeviceLib::Device::Connect Access denied status received from the device. The device is already in use.
+2018/07/26 19:41:56	PvDeviceLib::Device::Connect Access denied status received from the device. The device is already in use.
+2018/07/26 19:44:53	PvDeviceLib::Device::Connect Access denied status received from the device. The device is already in use.
+2018/07/26 19:52:29	PvDeviceLib::Device::Connect Access denied status received from the device. The device is already in use.
+2018/07/26 19:53:56	PvDeviceLib::Device::Connect Access denied status received from the device. The device is already in use.
+2018/07/26 20:00:07	PvDeviceLib::Device::Connect Access denied status received from the device. The device is already in use.
+2018/07/26 20:06:58	PvDeviceLib::Device::Connect Access denied status received from the device. The device is already in use.
+2018/07/26 20:13:16	PvDeviceLib::Device::Connect Access denied status received from the device. The device is already in use.
+2018/07/26 20:15:40	PvDeviceLib::Device::Connect Access denied status received from the device. The device is already in use.
+2018/07/26 20:20:08	PvDeviceLib::Device::Connect Access denied status received from the device. The device is already in use.
+2018/07/26 20:28:44	PvDeviceLib::Device::Connect Access denied status received from the device. The device is already in use.

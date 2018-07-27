@@ -91,26 +91,26 @@ namespace Adam.Menu.SystemSetting
                     cmbVendor.DataSource = null;
                 }
 
-                dtTemp = new DataTable();
-                strSql = "SELECT (sn_no +1) AS sn_no, CONCAT(SUBSTRING(controller_id, 1, LENGTH(controller_id) - 2), LPAD(LTRIM(CAST(CONVERT(SUBSTRING(controller_id, LENGTH(controller_id) - 1, 2), INTEGER) + 1 AS CHAR)), 2, '0')) AS new_controller_id " +
-                    "FROM config_node " +
-                    "WHERE equipment_model_id = @equipment_model_id " +
-                    "AND node_type = @node_type " +
-                    "ORDER BY sn_no DESC";
-                keyValues.Add("@equipment_model_id", equipment_Model.EquipmentModel.equipment_model_id);
-                keyValues.Add("@node_type", cmbDeviceNodeType.SelectedValue.ToString());
-                dtTemp = dBUtil.GetDataTable(strSql, keyValues);
+                //dtTemp = new DataTable();
+                //strSql = "SELECT (sn_no +1) AS sn_no, CONCAT(SUBSTRING(controller_id, 1, LENGTH(controller_id) - 2), LPAD(LTRIM(CAST(CONVERT(SUBSTRING(controller_id, LENGTH(controller_id) - 1, 2), INTEGER) + 1 AS CHAR)), 2, '0')) AS new_controller_id " +
+                //    "FROM config_node " +
+                //    "WHERE equipment_model_id = @equipment_model_id " +
+                //    "AND node_type = @node_type " +
+                //    "ORDER BY sn_no DESC";
+                //keyValues.Add("@equipment_model_id", equipment_Model.EquipmentModel.equipment_model_id);
+                //keyValues.Add("@node_type", cmbDeviceNodeType.SelectedValue.ToString());
+                //dtTemp = dBUtil.GetDataTable(strSql, keyValues);
 
-                if (dtTemp.Rows.Count > 0)
-                {
-                    nudSerialNo.Value = Convert.ToInt32(dtTemp.Rows[0]["sn_no"].ToString());
-                    txbControllerID.Text = dtTemp.Rows[0]["new_controller_id"].ToString();
-                }
-                else
-                {
-                    nudSerialNo.Value = 0;
-                    txbControllerID.Text = string.Empty;
-                }
+                //if (dtTemp.Rows.Count > 0)
+                //{
+                //    nudSerialNo.Value = Convert.ToInt32(dtTemp.Rows[0]["sn_no"].ToString());
+                //    txbControllerID.Text = dtTemp.Rows[0]["new_controller_id"].ToString();
+                //}
+                //else
+                //{
+                //    nudSerialNo.Value = 0;
+                //    txbControllerID.Text = string.Empty;
+                //}
 
             }
             catch (Exception ex)
@@ -127,14 +127,17 @@ namespace Adam.Menu.SystemSetting
 
             try
             {
-                strSql = "select * from config_node where equipment_model_id = @equipment_model_id and enable_flg ='1' order by node_id, sn_no";
+                strSql = @"SELECT * 
+                            FROM config_node
+                            WHERE equipment_model_id = @equipment_model_id
+                            ORDER BY node_id";
                 keyValues.Add("@equipment_model_id", SANWA.Utility.Config.SystemConfig.Get().SystemMode);
                 dtConfigNode = dBUtil.GetDataTable(strSql, keyValues);
 
                 if (dtConfigNode.Rows.Count > 0)
                 {
                     lstNodeList.DataSource = dtConfigNode;
-                    lstNodeList.DisplayMember = "node_name";
+                    lstNodeList.DisplayMember = "node_id";
                     lstNodeList.ValueMember = "node_id";
                     lstNodeList.SelectedIndex = -1;
                 }
@@ -168,7 +171,7 @@ namespace Adam.Menu.SystemSetting
                 {
                     dtTemp = query.CopyToDataTable();
 
-                    txbDeviceNodeName.Text = dtTemp.Rows[0]["node_name"].ToString();
+                    txbDeviceNodeName.Text = dtTemp.Rows[0]["node_id"].ToString();
                     txbDeviceNodeName.Tag = dtTemp.Rows[0]["node_id"].ToString();
                     cmbDeviceNodeType.SelectedValue = dtTemp.Rows[0]["node_type"].ToString();
                     cmbDeviceNodeType_SelectionChangeCommitted(sender, e);
@@ -225,7 +228,7 @@ namespace Adam.Menu.SystemSetting
                     return;
                 }
 
-                strSql = "select * from config_node where equipment_model_id = @equipment_model_id and enable_flg = '1' and node_type = @node_type order by node_id, sn_no";
+                strSql = "select * from config_node where equipment_model_id = @equipment_model_id and node_type = @node_type order by node_id, sn_no";
                 keyValues.Add("@equipment_model_id", SANWA.Utility.Config.SystemConfig.Get().SystemMode);
                 keyValues.Add("@node_type", cmbDeviceNodeType.SelectedValue.ToString());
                 dtTemp = dBUtil.GetDataTable(strSql, keyValues);
@@ -262,13 +265,12 @@ namespace Adam.Menu.SystemSetting
                 keyValues.Clear();
 
                 strSql = "REPLACE INTO config_node " +
-                    "(equipment_model_id, node_id, node_name, node_type, sn_no, vendor, model_no, firmware_ver, conn_address, controller_id, bypass, default_aligner, alternative_aligner, route_table, enable_flg, create_user, create_timestamp, modify_user, modify_timestamp) " +
+                    "(equipment_model_id, node_id, node_type, sn_no, vendor, model_no, firmware_ver, conn_address, controller_id, bypass, default_aligner, alternative_aligner, route_table, enable_flg, create_user, create_timestamp, modify_user, modify_timestamp) " +
                     "VALUES " +
-                    "(@equipment_model_id, @node_id, @node_name, @node_type, @sn_no, @vendor, @model_no, @firmware_ver, @conn_address, @controller_id, @bypass, @default_aligner, @alternative_aligner, @route_table, @enable_flg, @create_user, @create_timestamp, @modify_user, NOW())";
+                    "(@equipment_model_id, @node_id, @node_type, @sn_no, @vendor, @model_no, @firmware_ver, @conn_address, @controller_id, @bypass, @default_aligner, @alternative_aligner, @route_table, @enable_flg, @create_user, @create_timestamp, @modify_user, NOW())";
 
                 keyValues.Add("@equipment_model_id", equipment_Model.EquipmentModel.equipment_model_id);
-                keyValues.Add("@node_id", cmbDeviceNodeType.Text.Trim() + Convert.ToInt32(nudSerialNo.Value).ToString("D2"));
-                keyValues.Add("@node_name", txbDeviceNodeName.Text.Trim());
+                keyValues.Add("@node_id", txbDeviceNodeName.Text.Trim());
                 keyValues.Add("@node_type", cmbDeviceNodeType.SelectedValue.ToString());
                 keyValues.Add("@sn_no", nudSerialNo.Value);
                 keyValues.Add("@vendor", cmbVendor.SelectedValue.ToString());
@@ -309,7 +311,10 @@ namespace Adam.Menu.SystemSetting
 
                 //改設定後套用
                 NodeManagement.LoadConfig();
-                OCRUpdate.AssignForm();
+                if (cmbDeviceNodeType.Text.Equals("OCR"))
+                {
+                    OCRUpdate.AssignForm();
+                }
             }
             catch (Exception ex)
             {

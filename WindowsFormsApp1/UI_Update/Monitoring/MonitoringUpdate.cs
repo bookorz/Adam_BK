@@ -189,7 +189,7 @@ namespace Adam.UI_Update.Monitoring
                     {
                         Node LastNode = NodeManagement.Get(Job.LastNode);
                         Node CurrentNode = NodeManagement.Get(Job.Position);
-                        if (LastNode != null && CurrentNode != null)
+                        if (LastNode != null )
                         {
 
                             Label present = form.Controls.Find(Job.LastNode + "_Slot_" + Job.LastSlot, true).FirstOrDefault() as Label;
@@ -202,9 +202,10 @@ namespace Adam.UI_Update.Monitoring
 
                             }
 
-
-
-                            present = form.Controls.Find(Job.Position + "_Slot_" + Job.Slot, true).FirstOrDefault() as Label;
+                        }
+                        if ( CurrentNode != null)
+                        {
+                            Label present = form.Controls.Find(Job.Position + "_Slot_" + Job.Slot, true).FirstOrDefault() as Label;
                             if (present != null)
                             {
 
@@ -227,5 +228,7 @@ namespace Adam.UI_Update.Monitoring
                 logger.Error("UpdateJobMove: Update fail.");
             }
         }
+
+       
     }
 }

@@ -30,7 +30,7 @@ namespace Adam.Menu.WaferMapping
 
         private void InitialForm(object input)
         {
-            
+
         }
 
         private void Assign_Gv_CellFormatting(object sender, DataGridViewCellFormattingEventArgs e)
@@ -139,7 +139,7 @@ namespace Adam.Menu.WaferMapping
                 if (wafer != null)
                 {
                     wafer.UnAssignPort();
-                    wafer.NeedProcess = false ;
+                    wafer.NeedProcess = false;
                     //wafer.Position = PortName;
                     if (!OrgDest.Equals(""))
                     {
@@ -213,7 +213,7 @@ namespace Adam.Menu.WaferMapping
                     if (wafer != null)
                     {
                         wafer.AssignPort(PortName, Slot);
-                        
+
                         wafer.NeedProcess = true;
                         wafer.ProcessFlag = false;
                         //wafer.Position = PortName;
@@ -234,7 +234,13 @@ namespace Adam.Menu.WaferMapping
             else if ((CurrentSelected as DataGridView).SelectedRows.Count > 1)
             {
                 int StartSlot = Convert.ToInt32(Slot);
+                List<DataGridViewRow> tmp = new List<DataGridViewRow>();
                 foreach (DataGridViewRow each in (CurrentSelected as DataGridView).SelectedRows)
+                {
+                    tmp.Add(each);
+                }
+                tmp.Sort((x, y) => { return -x.Index.CompareTo(y.Index); });
+                foreach (DataGridViewRow each in tmp)
                 {
                     string waferId = each.Cells["Job_Id"].Value.ToString();
                     string OrgDest = each.Cells["Destination"].Value.ToString();
@@ -360,7 +366,7 @@ namespace Adam.Menu.WaferMapping
                     desport.FoupID = fp.Text;
 
                     port.Available = true;
-                    
+
                     ProcessRecord.CreatePr(port);
 
                     (sender as Button).Text = "Assign Cancel";
@@ -384,14 +390,14 @@ namespace Adam.Menu.WaferMapping
             Node port = NodeManagement.Get(PortName);
             if (port != null)
             {
-                foreach(Job j in port.JobList.Values.ToList())
+                foreach (Job j in port.JobList.Values.ToList())
                 {
                     j.AlignerFlag = (sender as CheckBox).Checked;
                 }
             }
             else
             {
-                MessageBox.Show("Port "+ PortName +" not found.");
+                MessageBox.Show("Port " + PortName + " not found.");
             }
         }
 

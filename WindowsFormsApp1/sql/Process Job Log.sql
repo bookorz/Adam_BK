@@ -8,7 +8,7 @@
 ), tmp2 AS(
 SELECT t.pr_id, t.foup_id, t.slot_list, t.process_cnt, t.create_time,
        t.start_time, t.last_update_time, d2.job_status AS last_update_status,t.time_stamp,
-       EXTRACT(SECOND FROM timediff(t.last_update_time,t.start_time)) AS process_seconds
+       TIME_TO_SEC( timediff(t.last_update_time,t.start_time)) AS process_seconds
   FROM tmp t
   LEFT JOIN log_process_job_detail d2
     ON t.pr_id = d2.pr_id 
@@ -24,4 +24,5 @@ SELECT pr_id, foup_id, slot_list, process_cnt,
   FROM tmp2
  WHERE time_stamp BETWEEN @from_dt AND @to_dt
    AND foup_id LIKE @cond_1
+ ORDER BY create_time, start_time, last_update_time
  LIMIT @limit;

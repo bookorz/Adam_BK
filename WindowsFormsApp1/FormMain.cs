@@ -40,7 +40,7 @@ namespace Adam
         private Menu.OCR.FormOCR formOCR = new Menu.OCR.FormOCR();
         private Menu.SystemSetting.FormSystemSetting formSystem = new Menu.SystemSetting.FormSystemSetting();
         private Menu.RunningScreen.FormRunningScreen formTestMode = new Menu.RunningScreen.FormRunningScreen();
-
+        private Menu.Wafer.FormWafer WaferForm = new Menu.Wafer.FormWafer();
 
 
         public FormMain()
@@ -87,7 +87,7 @@ namespace Adam
             this.Width = 1;
             this.Height = 1;
 
-            Control[] ctrlForm = new Control[] { formMonitoring, formCommunications, formWafer, formStatus, formOCR, formTestMode, formSystem };
+            Control[] ctrlForm = new Control[] { formMonitoring, formCommunications, formWafer, formStatus, formOCR, formTestMode, WaferForm, formSystem };
 
             try
             {
@@ -177,6 +177,7 @@ namespace Adam
 
                 foreach (Node each in NodeManagement.GetList())
                 {
+                    each.InitialComplete = false;
                     switch (each.Type.ToUpper())
                     {
                         case "ROBOT":
@@ -1203,5 +1204,9 @@ namespace Adam
             }
         }
 
+        private void Conn_gv_RowEnter(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
     }
 }
