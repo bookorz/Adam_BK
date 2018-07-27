@@ -48,7 +48,33 @@ namespace Adam.Util
 
 
         }
+        static public void addActionLog(string function_type, string action_type, string action_user, string remark)
+        {
+            try
+            {
+                StringBuilder sql = new StringBuilder();
+                sql.Append("\n INSERT INTO log_system_action");
+                sql.Append("\n     (action_id, function_type, action_type, remark, action_user, action_time)");
+                sql.Append("\n  SELECT UUID(), @function_type, @action_type, @remark, @action_user, CURRENT_TIMESTAMP(6)");
 
+                Dictionary<string, object> param = new Dictionary<string, object>();
+                param.Add("@function_type", function_type);
+                param.Add("@action_type", action_type);
+                param.Add("@action_user", action_user);
+                param.Add("@remark", remark);
+
+                //Query
+                DBUtil dBUtil = new DBUtil();
+                dBUtil.ExecuteNonQuery(sql.ToString(), param);
+                dBUtil = null;
+            }
+            catch (Exception e)
+            {
+                logger.Error(e.StackTrace);
+            }
+
+
+        }
         static public void addPartition()
         {
             try
