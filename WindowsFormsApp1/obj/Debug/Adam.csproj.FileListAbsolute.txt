@@ -212,3 +212,4 @@ C:\Users\ethan_huang\source\repos\Adam\WindowsFormsApp1\obj\Debug\ja-JP\Adam.res
 C:\Users\ethan_huang\source\repos\Adam\WindowsFormsApp1\obj\Debug\Adam.csproj.CopyComplete
 C:\Users\ethan_huang\source\repos\Adam\WindowsFormsApp1\obj\Debug\Adam.exe
 C:\Users\ethan_huang\source\repos\Adam\WindowsFormsApp1\obj\Debug\Adam.pdb
+C:\Users\ethan_huang\source\repos\Adam\WindowsFormsApp1\obj\Debug\Adam.Menu.Wafer.FormWafer.resources

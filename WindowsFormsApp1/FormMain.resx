@@ -1705,6 +1705,30 @@
   <data name="&gt;&gt;TestMode.ZOrder" xml:space="preserve">
     <value>5</value>
   </data>
+  <data name="Wafer.Location" type="System.Drawing.Point, System.Drawing">
+    <value>4, 44</value>
+  </data>
+  <data name="Wafer.Size" type="System.Drawing.Size, System.Drawing">
+    <value>1626, 764</value>
+  </data>
+  <data name="Wafer.TabIndex" type="System.Int32, mscorlib">
+    <value>11</value>
+  </data>
+  <data name="Wafer.Text" xml:space="preserve">
+    <value>Wafer</value>
+  </data>
+  <data name="&gt;&gt;Wafer.Name" xml:space="preserve">
+    <value>Wafer</value>
+  </data>
+  <data name="&gt;&gt;Wafer.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TabPage, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;Wafer.Parent" xml:space="preserve">
+    <value>tbcMian</value>
+  </data>
+  <data name="&gt;&gt;Wafer.ZOrder" xml:space="preserve">
+    <value>6</value>
+  </data>
   <data name="tabSetting.Location" type="System.Drawing.Point, System.Drawing">
     <value>4, 44</value>
   </data>
@@ -1730,7 +1754,7 @@
     <value>tbcMian</value>
   </data>
   <data name="&gt;&gt;tabSetting.ZOrder" xml:space="preserve">
-    <value>6</value>
+    <value>7</value>
   </data>
   <data name="tbcMian.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
     <value>Left</value>
@@ -2316,6 +2340,9 @@
   </data>
   <data name="$this.Font" type="System.Drawing.Font, System.Drawing">
     <value>微軟正黑體, 12pt</value>
+  </data>
+  <data name="$this.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
   </data>
   <data name="$this.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
     <value>4, 5, 4, 5</value>

@@ -54,26 +54,30 @@ namespace Adam.Menu.Communications
                     libDeviceList.SelectedIndex = -1;
                 }
 
-                strSql = "SELECT* FROM config_controller_setting ";
-                dtController = dBUtil.GetDataTable(strSql, null);
-
-                strSql = "select * from config_list_item where list_type = 'NODE_CONTROLLER_TYPE' ";
-
-                dtTemp = dBUtil.GetDataTable(strSql, null);
-
-                if (dtTemp.Rows.Count > 0)
-                {
-                    cmbComControllerType.DataSource = dtTemp.Copy();
-                    cmbComControllerType.DisplayMember = "list_value";
-                    cmbComControllerType.ValueMember = "list_value";
-                    cmbComControllerType.SelectedIndex = -1;
+                strSql = "SELECT* FROM config_controller_setting t where t.equipment_model_id =@equipment_model_id";
+                keyValues.Clear();
+                keyValues.Add("@equipment_model_id", SANWA.Utility.Config.SystemConfig.Get().SystemMode);
+                dtController = dBUtil.GetDataTable(strSql, keyValues);
 
 
-                }
-                else
-                {
 
-                }
+                //strSql = "select * from config_list_item where list_type = 'NODE_CONTROLLER_TYPE' ";
+
+                //dtTemp = dBUtil.GetDataTable(strSql, null);
+
+                //if (dtTemp.Rows.Count > 0)
+                //{
+                //    cmbComControllerType.DataSource = dtTemp.Copy();
+                //    cmbComControllerType.DisplayMember = "list_value";
+                //    cmbComControllerType.ValueMember = "list_value";
+                //    cmbComControllerType.SelectedIndex = -1;
+
+
+                //}
+                //else
+                //{
+
+                //}
 
                 CleanConnectMode();
             }
@@ -167,6 +171,8 @@ namespace Adam.Menu.Communications
                         nudIP03.Value = Convert.ToInt32(dtTemp.Rows[0]["conn_address"].ToString().Split('.')[2].ToString());
                         nudIP04.Value = Convert.ToInt32(dtTemp.Rows[0]["conn_address"].ToString().Split('.')[3].ToString());
                         nudIPPort.Value = Convert.ToInt32(dtTemp.Rows[0]["conn_prot"].ToString());
+                        DeviceType_cb.Text = dtTemp.Rows[0]["device_type"].ToString();
+                        Vendor_tb.Text = dtTemp.Rows[0]["vendor"].ToString();
                         chbTCPIPActive.Checked = dtTemp.Rows[0]["enable_flg"].ToString() == "1" ? true : false;
                         //txbSlaveID.Text = dtTemp.Rows[0]["slaveid"].ToString();
                         //txbDigitalInputQuantity.Text = dtTemp.Rows[0]["digitalinputquantity"].ToString();
@@ -209,7 +215,8 @@ namespace Adam.Menu.Communications
                         txbInformation.Text = string.Empty;
                         dtControlSetting = null;
                         dtParameterSetting = null;
-
+                        DeviceType_cb.Text = "";
+                        Vendor_tb.Text = "";
                     }
                 }
 
@@ -257,7 +264,7 @@ namespace Adam.Menu.Communications
                 txbParityBit.Text = "None";
                 txbStopBit.Text = "One";
                 txbConnectTypeCOM.Text = "ComPort";
-                cmbComControllerType.SelectedIndex = -1;
+                
             }
             else
             {
@@ -271,7 +278,8 @@ namespace Adam.Menu.Communications
                     dtTemp = query.CopyToDataTable();
                     COMPortScan();
                     cmbPortName.Text = dtTemp.Rows[0]["conn_address"].ToString();
-                    
+                    DeviceType_cb.Text = dtTemp.Rows[0]["device_type"].ToString();
+                    Vendor_tb.Text = dtTemp.Rows[0]["vendor"].ToString();
                     nudBaudRate.Value = Convert.ToInt32(dtTemp.Rows[0]["conn_prot"].ToString());
                     nudDataBits.Value = Convert.ToInt32(dtTemp.Rows[0]["com_data_bits"].ToString());
                     txbParityBit.Text = dtTemp.Rows[0]["com_parity_bit"].ToString();
@@ -288,8 +296,9 @@ namespace Adam.Menu.Communications
                     txbParityBit.Text = "None";
                     txbStopBit.Text = "One";
                     chbRS232CActive.Checked = true;
-
-                    cmbComControllerType.SelectedIndex = -1;
+                    DeviceType_cb.Text ="";
+                    Vendor_tb.Text = "";
+                    
                 }
 
                 txbConnectTypeCOM.Text = btnRS232C.Tag.ToString();
@@ -404,13 +413,14 @@ namespace Adam.Menu.Communications
             try
             {
                 strReplaceSql = "REPLACE INTO config_controller_setting " +
-                    "(equipment_model_id,device_name, device_type, conn_address, conn_type, conn_prot, " +
+                    "(equipment_model_id,device_name, device_type,vendor, conn_address, conn_type, conn_prot, " +
                     "com_parity_bit, com_data_bits, com_stop_bit, enable_flg, " +
                     "create_user, create_timestamp, modify_user, modify_timestamp) " +
                     "VALUES (" +
                     "@equipment_model_id, " +
                     "@device_name, " +
                     "@device_type, " +
+                    "@vendor, " +
                     "@conn_address, " +
                     "@conn_type, " +
                     "@conn_prot, " +
@@ -426,7 +436,8 @@ namespace Adam.Menu.Communications
 
                 keyValues.Add("@equipment_model_id", SystemConfig.Get().SystemMode);
                 keyValues.Add("@device_name", ControllerID);
-                keyValues.Add("@device_type", Vendor);
+                keyValues.Add("@device_type", DeviceType_cb.Text);
+                keyValues.Add("@vendor", Vendor_tb.Text);
 
                 if (btnTCPIP.BackColor == Color.DodgerBlue)
                 {
@@ -437,8 +448,9 @@ namespace Adam.Menu.Communications
                     keyValues.Add("@com_data_bits", string.Empty);
                     keyValues.Add("@com_stop_bit", string.Empty);
                     keyValues.Add("@enable_flg", chbTCPIPActive.Checked ? 1 : 0);
-
-
+                   
+                    
+                   
                     //if (dtControlSetting != null || dtControlSetting.Rows.Count > 0)
                     //{
                     //    keyValues.Add("@control_setting", JsonConvert.SerializeObject(dtControlSetting, Formatting.Indented));
@@ -499,5 +511,7 @@ namespace Adam.Menu.Communications
         {
             ((NumericUpDown)sender).Select(0, ((NumericUpDown)sender).Text.Length);
         }
+
+       
     }
 }
