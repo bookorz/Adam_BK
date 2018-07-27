@@ -177,6 +177,7 @@ namespace Adam
 
                 foreach (Node each in NodeManagement.GetList())
                 {
+                    each.InitialComplete = false;
                     switch (each.Type.ToUpper())
                     {
                         case "ROBOT":
@@ -1203,5 +1204,9 @@ namespace Adam
             }
         }
 
+        private void Conn_gv_RowEnter(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
     }
 }

@@ -11,6 +11,7 @@ using System.IO.Ports;
 using System.Diagnostics;
 using SANWA.Utility;
 using Newtonsoft.Json;
+using SANWA.Utility.Config;
 
 namespace Adam.Menu.Communications
 {
@@ -38,13 +39,9 @@ namespace Adam.Menu.Communications
 
             try
             {
-                strSql = "SELECT A.* " +
-                            "FROM config_node A " +
-                            "INNER JOIN config_equipment_model B ON A.equipment_model_id = B.equipment_model_id " +
-                            "WHERE B.enable_flg = @enable_flg " +
-                            "AND B.equipment_model_id = @equipment_model_id ";
+                strSql = "SELECT t.device_name FROM config_controller_setting t where t.equipment_model_id =@equipment_model_id";
 
-                keyValues.Add("@enable_flg", "Y");
+
                 keyValues.Add("@equipment_model_id", SANWA.Utility.Config.SystemConfig.Get().SystemMode);
 
                 dtNode = dBUtil.GetDataTable(strSql, keyValues);
@@ -52,12 +49,12 @@ namespace Adam.Menu.Communications
                 if (dtNode.Rows.Count > 0)
                 {
                     libDeviceList.DataSource = dtNode;
-                    libDeviceList.DisplayMember = "node_name";
-                    libDeviceList.ValueMember = "node_id";
+                    libDeviceList.DisplayMember = "device_name";
+                    libDeviceList.ValueMember = "device_name";
                     libDeviceList.SelectedIndex = -1;
                 }
 
-                strSql = "SELECT* FROM config_controller ";
+                strSql = "SELECT* FROM config_controller_setting ";
                 dtController = dBUtil.GetDataTable(strSql, null);
 
                 strSql = "select * from config_list_item where list_type = 'NODE_CONTROLLER_TYPE' ";
@@ -71,15 +68,11 @@ namespace Adam.Menu.Communications
                     cmbComControllerType.ValueMember = "list_value";
                     cmbComControllerType.SelectedIndex = -1;
 
-                    cmbSocketControllerType.DataSource = dtTemp.Copy();
-                    cmbSocketControllerType.DisplayMember = "list_value";
-                    cmbSocketControllerType.ValueMember = "list_value";
-                    cmbSocketControllerType.SelectedIndex = -1;
+
                 }
                 else
                 {
-                    cmbComControllerType.DataSource = null;
-                    cmbSocketControllerType.DataSource = null;
+
                 }
 
                 CleanConnectMode();
@@ -152,19 +145,16 @@ namespace Adam.Menu.Communications
                     nudIP04.Value = 0;
                     nudIPPort.Value = 0;
                     chbTCPIPActive.Checked = true;
-                    txbSlaveID.Text = string.Empty;
-                    txbDigitalInputQuantity.Text = string.Empty;
-                    txbDelay.Text = string.Empty;
-                    txbReadTimeout.Text = string.Empty;
+
                     txbInformation.Text = string.Empty;
                     dtControlSetting = null;
                     dtParameterSetting = null;
-                    cmbSocketControllerType.SelectedIndex = -1;
+
                 }
                 else
                 {
                     var query = (from a in dtController.AsEnumerable()
-                                 where a.Field<string>("node_id") == libDeviceList.SelectedValue.ToString()
+                                 where a.Field<string>("device_name") == libDeviceList.SelectedValue.ToString()
                                     && a.Field<string>("conn_type") == btnTCPIP.Tag.ToString()
                                  select a).ToList();
 
@@ -178,12 +168,12 @@ namespace Adam.Menu.Communications
                         nudIP04.Value = Convert.ToInt32(dtTemp.Rows[0]["conn_address"].ToString().Split('.')[3].ToString());
                         nudIPPort.Value = Convert.ToInt32(dtTemp.Rows[0]["conn_prot"].ToString());
                         chbTCPIPActive.Checked = dtTemp.Rows[0]["enable_flg"].ToString() == "1" ? true : false;
-                        txbSlaveID.Text = dtTemp.Rows[0]["slaveid"].ToString();
-                        txbDigitalInputQuantity.Text = dtTemp.Rows[0]["digitalinputquantity"].ToString();
-                        txbDelay.Text = dtTemp.Rows[0]["delay"].ToString();
-                        txbReadTimeout.Text = dtTemp.Rows[0]["readtimeout"].ToString();
+                        //txbSlaveID.Text = dtTemp.Rows[0]["slaveid"].ToString();
+                        //txbDigitalInputQuantity.Text = dtTemp.Rows[0]["digitalinputquantity"].ToString();
+                        //txbDelay.Text = dtTemp.Rows[0]["delay"].ToString();
+                        //txbReadTimeout.Text = dtTemp.Rows[0]["readtimeout"].ToString();
                         txbInformation.Text = dtTemp.Rows[0]["create_user"].ToString() + "," + Convert.ToDateTime(dtTemp.Rows[0]["create_timestamp"].ToString()).ToString("yyyy-MM-dd HH:mm:ss");
-                        cmbSocketControllerType.SelectedValue = dtTemp.Rows[0]["controller_type"].ToString();
+                        //cmbSocketControllerType.SelectedValue = dtTemp.Rows[0]["controller_type"].ToString();
 
                         //if (dtTemp.Rows[0]["control_setting"].ToString().Equals(string.Empty))
                         //{
@@ -215,14 +205,11 @@ namespace Adam.Menu.Communications
                         nudIP04.Value = 0;
                         nudIPPort.Value = 0;
                         chbTCPIPActive.Checked = true;
-                        txbSlaveID.Text = string.Empty;
-                        txbDigitalInputQuantity.Text = string.Empty;
-                        txbDelay.Text = string.Empty;
-                        txbReadTimeout.Text = string.Empty;
+
                         txbInformation.Text = string.Empty;
                         dtControlSetting = null;
                         dtParameterSetting = null;
-                        cmbSocketControllerType.SelectedIndex = -1;
+
                     }
                 }
 
@@ -275,22 +262,23 @@ namespace Adam.Menu.Communications
             else
             {
                 var query = (from a in dtController.AsEnumerable()
-                             where a.Field<string>("node_id") == libDeviceList.SelectedValue.ToString()
+                             where a.Field<string>("device_name") == libDeviceList.SelectedValue.ToString()
                                 && a.Field<string>("conn_type") == btnRS232C.Tag.ToString()
-                select a).ToList();
+                             select a).ToList();
 
                 if (query.Count > 0)
                 {
                     dtTemp = query.CopyToDataTable();
                     COMPortScan();
-                    cmbPortName.SelectedItem = dtTemp.Rows[0]["conn_address"].ToString();
+                    cmbPortName.Text = dtTemp.Rows[0]["conn_address"].ToString();
+                    
                     nudBaudRate.Value = Convert.ToInt32(dtTemp.Rows[0]["conn_prot"].ToString());
                     nudDataBits.Value = Convert.ToInt32(dtTemp.Rows[0]["com_data_bits"].ToString());
                     txbParityBit.Text = dtTemp.Rows[0]["com_parity_bit"].ToString();
                     txbStopBit.Text = dtTemp.Rows[0]["com_stop_bit"].ToString();
                     chbRS232CActive.Checked = dtTemp.Rows[0]["enable_flg"].ToString() == "1" ? true : false;
-                    txbReadTimeout.Text = dtTemp.Rows[0]["create_user"].ToString() + "," + Convert.ToDateTime(dtTemp.Rows[0]["create_timestamp"].ToString()).ToString("yyyy-MM-dd HH:mm:ss");
-                    cmbComControllerType.SelectedValue = dtTemp.Rows[0]["controller_type"].ToString();
+
+                    //cmbComControllerType.SelectedValue = dtTemp.Rows[0]["controller_type"].ToString();
                 }
                 else
                 {
@@ -300,7 +288,7 @@ namespace Adam.Menu.Communications
                     txbParityBit.Text = "None";
                     txbStopBit.Text = "One";
                     chbRS232CActive.Checked = true;
-                    txbReadTimeout.Text = string.Empty;
+
                     cmbComControllerType.SelectedIndex = -1;
                 }
 
@@ -328,18 +316,18 @@ namespace Adam.Menu.Communications
                 if (libDeviceList.SelectedIndex >= 0)
                 {
                     var query = (from a in dtController.AsEnumerable()
-                                 join b in dtNode.AsEnumerable() on a.Field<string>("node_id") equals b.Field<string>("node_id")
-                                 where a.Field<string>("node_id") == libDeviceList.SelectedValue.ToString()
+
+                                 where a.Field<string>("device_name") == libDeviceList.SelectedValue.ToString()
                                  //select  new { a, b }).ToList();
                                  select new
                                  {
-                                     Vendor = b.Field<string>("vendor"),
-                                     ControllerID = b.Field<string>("controller_id"),
+                                     Vendor = a.Field<string>("device_type"),
+                                     ControllerID = a.Field<string>("device_name"),
                                      ConnType = a.Field<string>("conn_type")
 
                                  }).ToList();
 
-                    
+
 
                     if (query.Count > 0)
                     {
@@ -415,15 +403,14 @@ namespace Adam.Menu.Communications
 
             try
             {
-                strReplaceSql = "REPLACE INTO config_controller " +
-                    "(node_id, node_function_name, node_function_type, conn_address, conn_type, conn_prot, " +
+                strReplaceSql = "REPLACE INTO config_controller_setting " +
+                    "(equipment_model_id,device_name, device_type, conn_address, conn_type, conn_prot, " +
                     "com_parity_bit, com_data_bits, com_stop_bit, enable_flg, " +
-                    "slaveid, digitalinputquantity, delay, readtimeout, controller_type, " +
                     "create_user, create_timestamp, modify_user, modify_timestamp) " +
                     "VALUES (" +
-                    "@node_id, " +
-                    "@node_function_name, " +
-                    "@node_function_type, " +
+                    "@equipment_model_id, " +
+                    "@device_name, " +
+                    "@device_type, " +
                     "@conn_address, " +
                     "@conn_type, " +
                     "@conn_prot, " +
@@ -431,20 +418,15 @@ namespace Adam.Menu.Communications
                     "@com_data_bits, " +
                     "@com_stop_bit, " +
                     "@enable_flg, " +
-                    "@slaveid, " +
-                    "@digitalinputquantity, " +
-                    "@delay, " +
-                    "@readtimeout, " +
-                    "@controller_type, " +
                     "@create_user, " +
                     "@create_timestamp, " +
                     "@modify_user, " +
                     "NOW() " +
                     ") ";
 
-                keyValues.Add("@node_id", libDeviceList.SelectedValue.ToString());
-                keyValues.Add("@node_function_name", ControllerID);
-                keyValues.Add("@node_function_type", Vendor);
+                keyValues.Add("@equipment_model_id", SystemConfig.Get().SystemMode);
+                keyValues.Add("@device_name", ControllerID);
+                keyValues.Add("@device_type", Vendor);
 
                 if (btnTCPIP.BackColor == Color.DodgerBlue)
                 {
@@ -455,11 +437,7 @@ namespace Adam.Menu.Communications
                     keyValues.Add("@com_data_bits", string.Empty);
                     keyValues.Add("@com_stop_bit", string.Empty);
                     keyValues.Add("@enable_flg", chbTCPIPActive.Checked ? 1 : 0);
-                    keyValues.Add("@slaveid", txbSlaveID.Text.Trim().Equals(string.Empty) ? 0 : Convert.ToInt32(txbSlaveID.Text.Trim()));
-                    keyValues.Add("@digitalinputquantity", txbDigitalInputQuantity.Text.Trim().Equals(string.Empty) ? 0 : Convert.ToInt32(txbDigitalInputQuantity.Text.Trim()));
-                    keyValues.Add("@delay", txbDelay.Text.Trim().Equals(string.Empty) ? 0 : Convert.ToInt32(txbDelay.Text.Trim()));
-                    keyValues.Add("@readtimeout", txbReadTimeout.Text.Trim().Equals(string.Empty) ? 0 : Convert.ToInt32(txbReadTimeout.Text.Trim()));
-                    keyValues.Add("@controller_type", cmbSocketControllerType.SelectedValue.ToString());
+
 
                     //if (dtControlSetting != null || dtControlSetting.Rows.Count > 0)
                     //{
@@ -490,27 +468,16 @@ namespace Adam.Menu.Communications
                     keyValues.Add("@com_stop_bit", txbStopBit.Text.Trim());
                     keyValues.Add("@enable_flg", chbRS232CActive.Checked ? 1 : 0);
 
-                    keyValues.Add("@slaveid", 0);
-                    keyValues.Add("@digitalinputquantity", 0);
-                    keyValues.Add("@delay", 0);
-                    keyValues.Add("@readtimeout", 0);
 
-                    keyValues.Add("@controller_type", cmbComControllerType.SelectedValue);
                 }
 
                 Form form = Application.OpenForms["FormMain"];
                 Label Signal = form.Controls.Find("lbl_login_id", true).FirstOrDefault() as Label;
 
-                if (txbReadTimeout.Text.Split(',').Length > 1)
-                {
-                    keyValues.Add("@create_user", txbReadTimeout.Text.Split(',')[0].ToString().Equals(string.Empty) ? string.Empty : txbReadTimeout.Text.Split(',')[0].ToString());
-                    keyValues.Add("@create_timestamp", txbReadTimeout.Text.Split(',')[1].ToString().Equals(string.Empty) ? string.Empty : txbReadTimeout.Text.Split(',')[1].ToString());
-                }
-                else
-                {
-                    keyValues.Add("@create_user", Signal.Text);
-                    strReplaceSql = strReplaceSql.Replace("@create_timestamp,", "NOW(),");
-                }
+
+                keyValues.Add("@create_user", Signal.Text);
+                strReplaceSql = strReplaceSql.Replace("@create_timestamp,", "NOW(),");
+
 
                 keyValues.Add("@modify_user", Signal.Text);
 
