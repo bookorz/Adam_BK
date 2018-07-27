@@ -100,7 +100,8 @@ namespace Adam.UI_Update.Authority
                     btn.Text = "Login";
                     string msg = "{\"user_id\": " + user_id + ", \"name\": \"" + user_name + "\", \"action\": \"Logout\"}";
                     log.Info(msg);
-                    SanwaUtil.addActionLog("Authority", "Logout", user_id);// add record to log_system_action
+                    //SanwaUtil.addActionLog("Authority", "Logout", user_id);// add record to log_system_action
+                    SanwaUtil.addActionLog("Authority", "Logout", user_id, "使用者登出");// add record to log_system_action
                 }
             }
             catch
