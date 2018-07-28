@@ -68,6 +68,7 @@ namespace Adam
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.BLUE_Signal = new System.Windows.Forms.Button();
             this.GREEN_Signal = new System.Windows.Forms.Button();
@@ -80,6 +81,7 @@ namespace Adam
             this.tabStatus = new System.Windows.Forms.TabPage();
             this.tabOCR = new System.Windows.Forms.TabPage();
             this.TestMode = new System.Windows.Forms.TabPage();
+            this.Wafer = new System.Windows.Forms.TabPage();
             this.tabSetting = new System.Windows.Forms.TabPage();
             this.panel2 = new System.Windows.Forms.Panel();
             this.panel4 = new System.Windows.Forms.Panel();
@@ -111,8 +113,6 @@ namespace Adam
             this.terminalToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.panel3 = new System.Windows.Forms.Panel();
             this.directorySearcher1 = new System.DirectoryServices.DirectorySearcher();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.Wafer = new System.Windows.Forms.TabPage();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer13)).BeginInit();
             this.splitContainer13.Panel1.SuspendLayout();
             this.splitContainer13.Panel2.SuspendLayout();
@@ -124,6 +124,7 @@ namespace Adam
             ((System.ComponentModel.ISupportInitialize)(this.Conn_gv)).BeginInit();
             this.groupBox4.SuspendLayout();
             this.groupBox1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.groupBox2.SuspendLayout();
             this.tbcMian.SuspendLayout();
             this.panel2.SuspendLayout();
@@ -134,7 +135,6 @@ namespace Adam
             this.contextMenuStrip1.SuspendLayout();
             this.menuMaintenace.SuspendLayout();
             this.panel3.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // splitContainer13
@@ -439,6 +439,12 @@ namespace Adam
             resources.ApplyResources(this.label1, "label1");
             this.label1.Name = "label1";
             // 
+            // pictureBox1
+            // 
+            resources.ApplyResources(this.pictureBox1, "pictureBox1");
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.TabStop = false;
+            // 
             // groupBox2
             // 
             resources.ApplyResources(this.groupBox2, "groupBox2");
@@ -539,6 +545,12 @@ namespace Adam
             this.TestMode.Name = "TestMode";
             this.TestMode.UseVisualStyleBackColor = true;
             // 
+            // Wafer
+            // 
+            resources.ApplyResources(this.Wafer, "Wafer");
+            this.Wafer.Name = "Wafer";
+            this.Wafer.UseVisualStyleBackColor = true;
+            // 
             // tabSetting
             // 
             this.tabSetting.BackColor = System.Drawing.SystemColors.Control;
@@ -622,6 +634,7 @@ namespace Adam
             // contextMenuStrip3
             // 
             resources.ApplyResources(this.contextMenuStrip3, "contextMenuStrip3");
+            this.contextMenuStrip3.ImageScalingSize = new System.Drawing.Size(32, 32);
             this.contextMenuStrip3.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.toolStripMenuItem3});
             this.contextMenuStrip3.Name = "contextMenuStrip1";
@@ -650,6 +663,7 @@ namespace Adam
             // contextMenuStrip2
             // 
             resources.ApplyResources(this.contextMenuStrip2, "contextMenuStrip2");
+            this.contextMenuStrip2.ImageScalingSize = new System.Drawing.Size(32, 32);
             this.contextMenuStrip2.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.toolStripMenuItem1,
             this.toolStripMenuItem2});
@@ -685,6 +699,7 @@ namespace Adam
             // contextMenuStrip1
             // 
             resources.ApplyResources(this.contextMenuStrip1, "contextMenuStrip1");
+            this.contextMenuStrip1.ImageScalingSize = new System.Drawing.Size(32, 32);
             this.contextMenuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.aAAToolStripMenuItem,
             this.bBBToolStripMenuItem});
@@ -720,6 +735,7 @@ namespace Adam
             // menuMaintenace
             // 
             resources.ApplyResources(this.menuMaintenace, "menuMaintenace");
+            this.menuMaintenace.ImageScalingSize = new System.Drawing.Size(32, 32);
             this.menuMaintenace.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.initToolStripMenuItem,
             this.orgToolStripMenuItem,
@@ -801,18 +817,6 @@ namespace Adam
             this.directorySearcher1.ServerPageTimeLimit = System.TimeSpan.Parse("-00:00:01");
             this.directorySearcher1.ServerTimeLimit = System.TimeSpan.Parse("-00:00:01");
             // 
-            // pictureBox1
-            // 
-            resources.ApplyResources(this.pictureBox1, "pictureBox1");
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.TabStop = false;
-            // 
-            // Wafer
-            // 
-            resources.ApplyResources(this.Wafer, "Wafer");
-            this.Wafer.Name = "Wafer";
-            this.Wafer.UseVisualStyleBackColor = true;
-            // 
             // FormMain
             // 
             resources.ApplyResources(this, "$this");
@@ -836,6 +840,7 @@ namespace Adam
             this.groupBox4.PerformLayout();
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.groupBox2.ResumeLayout(false);
             this.tbcMian.ResumeLayout(false);
             this.panel2.ResumeLayout(false);
@@ -847,7 +852,6 @@ namespace Adam
             this.contextMenuStrip1.ResumeLayout(false);
             this.menuMaintenace.ResumeLayout(false);
             this.panel3.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
 
         }

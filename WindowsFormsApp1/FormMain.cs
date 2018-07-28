@@ -22,10 +22,11 @@ using Adam.UI_Update.Running;
 using System.Linq;
 using System.Collections.Concurrent;
 using Adam.Util;
+using Adam.UI_Update.Communications;
 
 namespace Adam
 {
-    public partial class FormMain : Form, IEngineReport, IDIOTriggerReport
+    public partial class FormMain : Form, IUserInterfaceReport, IDIOTriggerReport
     {
         public static RouteControl RouteCtrl;
         public static DIO DIO;
@@ -696,7 +697,11 @@ namespace Adam
                 {
                     port.ExcuteScript("LoadPortFoupOut", "LoadPortFoup", true);
                 }
-
+                CommunicationsUpdate.UpdateConnection(Device_ID, true);
+            }
+            else
+            {
+                CommunicationsUpdate.UpdateConnection(Device_ID, false);
             }
 
 

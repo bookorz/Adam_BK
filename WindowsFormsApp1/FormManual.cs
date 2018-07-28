@@ -438,6 +438,7 @@ namespace GUI
                 case "btnRConn":
                     try
                     {
+                        ControllerManagement.Get(robot.Controller).Close();
                         ControllerManagement.Get(robot.Controller).Connect();
                         robot.State = "";
                         Thread.Sleep(500);//暫解

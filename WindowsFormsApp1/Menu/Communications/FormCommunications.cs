@@ -12,6 +12,9 @@ using System.Diagnostics;
 using SANWA.Utility;
 using Newtonsoft.Json;
 using SANWA.Utility.Config;
+using TransferControl.Management;
+using TransferControl.Controller;
+using Adam.UI_Update.Communications;
 
 namespace Adam.Menu.Communications
 {
@@ -27,7 +30,7 @@ namespace Adam.Menu.Communications
         private DataTable dtControlSetting = new DataTable();
         private DataTable dtParameterSetting = new DataTable();
         private string Vendor = string.Empty;
-        private string ControllerID = string.Empty;
+        public static string ControllerID = string.Empty;
 
         private void FormCommunications_Load(object sender, EventArgs e)
         {
@@ -355,6 +358,11 @@ namespace Adam.Menu.Communications
                             case "ComPort":
                                 btnRS232C_Click(this, null);
                                 break;
+                        }
+                        DeviceController ctrl = ControllerManagement.Get(ControllerID);
+                        if(ctrl != null)
+                        {
+                            CommunicationsUpdate.UpdateConnection(ControllerID,ctrl.IsConnected());
                         }
                     }
                     else

@@ -315,6 +315,7 @@
       <DependentUpon>FormTeaching.cs</DependentUpon>
     </Compile>
     <Compile Include="UI_Update\Aauthority\AuthorityUpdate.cs" />
+    <Compile Include="UI_Update\Communications\CommunicationsUpdate.cs" />
     <Compile Include="UI_Update\Layout\DIOUpdate.cs" />
     <Compile Include="UI_Update\Manual\AlignerStatusUpdate.cs" />
     <Compile Include="UI_Update\Manual\PortStatusUpdate.cs" />
@@ -595,5 +596,6 @@
       <Install>false</Install>
     </BootstrapperPackage>
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
