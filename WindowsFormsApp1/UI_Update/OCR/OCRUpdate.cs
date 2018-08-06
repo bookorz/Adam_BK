@@ -30,6 +30,15 @@ namespace Adam.UI_Update.OCR
         [DllImport("user32.dll", SetLastError = true)]
         private static extern bool MoveWindow(IntPtr hwnd, int x, int y, int cx, int cy, bool repaint);
 
+        private const int GWL_STYLE = -16;
+        private const int WS_CHILD = 0x40000000;//设置窗口属性为child
+
+        [DllImport("user32.dll", EntryPoint = "GetWindowLong")]
+        public static extern int GetWindowLong(IntPtr hwnd, int nIndex);
+
+        [DllImport("user32.dll", EntryPoint = "SetWindowLong")]
+        public static extern int SetWindowLong(IntPtr hwnd, int nIndex, int dwNewLong);
+
         delegate void AssignUI(object param);
         delegate void ReAssignUI();
         static IntPtr appWin2;
@@ -279,6 +288,8 @@ namespace Adam.UI_Update.OCR
                         appWin2 = p2.MainWindowHandle;
                         SetParent(p2.MainWindowHandle, tabControl1.TabPages[OCR.Name].Handle);
                         MoveWindow(p2.MainWindowHandle, 0, -30, tabControl1.TabPages[OCR.Name].Width, tabControl1.TabPages[OCR.Name].Height + 30, true);
+                        var s = GetWindowLong(p2.MainWindowHandle, GWL_STYLE);
+                        SetWindowLong(p2.MainWindowHandle, GWL_STYLE, s | WS_CHILD);
                     }
                     ControllerManagement.Get(OCR.Controller).Connect();
                     pCnt--;
@@ -334,6 +345,8 @@ namespace Adam.UI_Update.OCR
                     appWin2 = p2.MainWindowHandle;
                     SetParent(p2.MainWindowHandle, tabControl1.TabPages["COGNEX"].Handle);
                     MoveWindow(p2.MainWindowHandle, 0, -30, tabControl1.TabPages["COGNEX"].Width, tabControl1.TabPages["COGNEX"].Height + 30, true);
+                    var s = GetWindowLong(p2.MainWindowHandle, GWL_STYLE);
+                    SetWindowLong(p2.MainWindowHandle, GWL_STYLE, s | WS_CHILD);
                     pCnt--;
                     if (pCnt == 0)
                     {

@@ -383,11 +383,13 @@ namespace Adam.UI_Update.WaferMapping
                     fromPort.Enabled = Enable;
                     if (!Enable)
                     {
+                        fromPort.Text = "Assign Cancel";
                         fromPort.BackColor = Color.Green;
                         fromPort.ForeColor = Color.White;
                     }
                     else
                     {
+                        fromPort.Text = "Assign Complete";
                         fromPort.BackColor = Color.Gainsboro;
                         fromPort.ForeColor = Color.Black;
                     }
