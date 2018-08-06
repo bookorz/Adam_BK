@@ -328,6 +328,11 @@ namespace Adam
                         case "ATEL":
                             txbManually.Text = string.Format(dtCommandParameter.Rows[0]["code_format"].ToString(), lsbDeviceName.Text.Split(',')[1].ToString());
                             break;
+
+                        case "HST":
+                        case "COGNEX":
+                            txbManually.Text = dtCommandParameter.Rows[0]["code_format"].ToString();
+                            break;
                     }
                 }
                 else
@@ -345,6 +350,11 @@ namespace Adam
                         case "ATEL":
                             strsTemps = (lsbDeviceName.Text.Split(',')[1].ToString() + "," + sbTemp.ToString().Substring(0, sbTemp.ToString().Length - 1)).Split(',');
                             txbManually.Text = string.Format(dtCommandParameter.Rows[0]["code_format"].ToString(), strsTemps);
+                            break;
+
+                        case "HST":
+                        case "COGNEX":
+                            txbManually.Text = string.Format(dtCommandParameter.Rows[0]["code_format"].ToString(), sbTemp.ToString().Substring(0, sbTemp.ToString().Length - 1).Split(','));
                             break;
                     }
                 }
@@ -407,6 +417,11 @@ namespace Adam
                     case "ATEL":
                         strsTemps = (lsbDeviceName.Text.Split(',')[1].ToString() + "," + sbTemp.ToString().Substring(0, sbTemp.ToString().Length - 1)).Split(',');
                         txbManually.Text = string.Format(dtCommandParameter.Rows[0]["code_format"].ToString(), strsTemps);
+                        break;
+
+                    case "HST":
+                    case "COGNEX":
+                        txbManually.Text = string.Format(dtCommandParameter.Rows[0]["code_format"].ToString(), sbTemp.ToString().Substring(0, sbTemp.ToString().Length - 1).Split(','));
                         break;
                 }
             }
