@@ -79,22 +79,78 @@ namespace Adam.Menu.WaferMapping
                 CurrentSelected = sender;
                 foreach (Node eachPort in NodeManagement.GetLoadPortList())
                 {
-                    if (eachPort.Name.Equals(PortName) || !eachPort.IsMapping)
+                    if (!eachPort.IsMapping)
                     {
                         continue;
                     }
                     List<MenuItem> tmpAry = new List<MenuItem>();
+                    bool findFirst = false;
                     for (int i = 1; i <= 25; i++)
                     {
-                        MenuItem tmp;
-                        if (!eachPort.ReserveList.ContainsKey(i.ToString()))
+                        MenuItem tmp = new MenuItem();
+                        if (eachPort.Name.Equals(PortName.ToUpper()))
                         {
-                            if (eachPort.JobList.ContainsKey(i.ToString()))
+                            tmp = new MenuItem(eachPort.Name + "-" + i.ToString(), AssignPort);
+                            if (!findFirst)
                             {
-                                if (eachPort.JobList[i.ToString()].MapFlag)
+                                List<DataGridViewRow> JobList = new List<DataGridViewRow>();
+                                foreach (DataGridViewRow each in (CurrentSelected as DataGridView).SelectedRows)
                                 {
-                                    tmp = new MenuItem(eachPort.Name + "-" + i.ToString(), AssignPort);
-                                    tmp.Enabled = false;
+                                    JobList.Add(each);
+                                }
+                                JobList.Sort((x, y) => { return -x.Index.CompareTo(y.Index); });
+                                
+                                foreach (DataGridViewRow each in JobList)
+                                {
+                                    string waferId = each.Cells["Job_Id"].Value.ToString();
+                                    Job wafer = JobManagement.Get(waferId);
+                                    if(wafer == null)
+                                    {
+                                        MessageBox.Show("請選擇Wafer");
+                                        return;
+                                    }
+                                    if (!eachPort.ReserveList.ContainsKey(i.ToString()))
+                                    {
+                                        if (wafer.Slot.Equals(i.ToString()))
+                                        {
+                                            tmp.Enabled = true;
+                                            findFirst = true;
+                                            break;
+                                        }
+                                        else
+                                        {
+                                            tmp.Enabled = false;
+                                        }
+                                    }
+                                    else
+                                    {
+                                        tmp.Enabled = false;
+                                    }
+                                }
+                            }
+                            else
+                            {
+                                tmp.Enabled = false;
+                            }
+                        }
+                        else
+                        {
+                            if (!eachPort.ReserveList.ContainsKey(i.ToString()))
+                            {
+                                if (eachPort.JobList.ContainsKey(i.ToString()))
+                                {
+                                    if (eachPort.JobList[i.ToString()].MapFlag)
+                                    {
+                                        tmp = new MenuItem(eachPort.Name + "-" + i.ToString(), AssignPort);
+
+
+                                        tmp.Enabled = false;
+
+                                    }
+                                    else
+                                    {
+                                        tmp = new MenuItem(eachPort.Name + "-" + i.ToString(), AssignPort);
+                                    }
                                 }
                                 else
                                 {
@@ -104,12 +160,8 @@ namespace Adam.Menu.WaferMapping
                             else
                             {
                                 tmp = new MenuItem(eachPort.Name + "-" + i.ToString(), AssignPort);
+                                tmp.Enabled = false;
                             }
-                        }
-                        else
-                        {
-                            tmp = new MenuItem(eachPort.Name + "-" + i.ToString(), AssignPort);
-                            tmp.Enabled = false;
                         }
                         tmpAry.Add(tmp);
                     }
@@ -207,7 +259,7 @@ namespace Adam.Menu.WaferMapping
                     MessageBox.Show(PortName + "沒有FOUP或是尚未進行Mapping");
                     return;
                 }
-                if (UDSlot.MapFlag == false)
+                if (UDSlot.MapFlag == false || LD.Name.Equals(UD.Name))
                 {
                     Job wafer = JobManagement.Get(waferId);
                     if (wafer != null)
@@ -250,10 +302,10 @@ namespace Adam.Menu.WaferMapping
                     {
                         while (true)
                         {
-                            if (NodeManagement.Get(PortName).GetJob(StartSlot.ToString()).MapFlag == false)
+                            if (NodeManagement.Get(PortName).GetJob(StartSlot.ToString()).MapFlag == false || LD.Name.Equals(UD.Name))
                             {
                                 wafer.AssignPort(PortName, StartSlot.ToString());
-
+                                 
                                 //wafer.Position = PortName;
                                 wafer.NeedProcess = true;
                                 wafer.ProcessFlag = false;
@@ -323,7 +375,7 @@ namespace Adam.Menu.WaferMapping
                 //    break;
                 case "Fake Data(Full)":
                     //WaferAssignUpdate.UpdateLoadPortMapping(Name, "1111111111111111111111111");
-                    WaferAssignUpdate.UpdateLoadPortMapping(Name, "1111111111111111111111110");
+                    WaferAssignUpdate.UpdateLoadPortMapping(Name, "1111111111111111111111111");
                     break;
                 case "Fake Data(Empty)":
                     WaferAssignUpdate.UpdateLoadPortMapping(Name, "0000000000000000000000000");
@@ -365,6 +417,18 @@ namespace Adam.Menu.WaferMapping
                     Node desport = NodeManagement.Get(port.DestPort);
                     fp = this.Controls.Find(desport.Name + "_FoupID", true).FirstOrDefault() as TextBox;
                     desport.FoupID = fp.Text;
+
+                    CheckBox Align = this.Controls.Find(port.Name + "_Align_ck", true).FirstOrDefault() as CheckBox;
+                    CheckBox Ocr = this.Controls.Find(port.Name + "_Align_ck", true).FirstOrDefault() as CheckBox;
+                    foreach (Job j in port.JobList.Values.ToList())
+                    {
+                        if (j.NeedProcess)
+                        {
+                            j.AlignerFlag = Align.Checked;
+                            j.OCRFlag = Ocr.Checked;
+                        }
+                    }
+
 
                     port.Available = true;
 

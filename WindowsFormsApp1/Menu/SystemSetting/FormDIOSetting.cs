@@ -39,7 +39,7 @@ namespace Adam.Menu.SystemSetting
             try
             {
                 strSql = "SELECT CONCAT(dioname, '-', `type`, '-', address) AS item, dioname, address, Parameter, `type`, abnormal, error_code " +
-                    "FROM config_dio " +
+                    "FROM config_dio_point " +
                     "ORDER BY dioname, `type`, address ASC ";
 
                 dtDIOSetting = dBUtil.GetDataTable(strSql, null);
@@ -130,7 +130,7 @@ namespace Adam.Menu.SystemSetting
 
             try
             {
-                strSql = "UPDATE config_dio " +
+                strSql = "UPDATE config_dio_point " +
                     "SET " +
                     "Parameter = @Parameter, " +
                     "abnormal = @abnormal, " +

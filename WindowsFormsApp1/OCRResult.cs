@@ -23,9 +23,16 @@ namespace Adam
 
         private void OCRResult_Load(object sender, EventArgs e)
         {
-            OCR_Img.Image = Image.FromFile(_Job.OCRImgPath);
-            WaferID.Text = "Wafer ID:"+_Job.Host_Job_Id;
-            OCR_Score.Text = "Score:"+_Job.OCRScore;
+            if (_Job != null)
+            {
+                OCR_Img.Image = Image.FromFile(_Job.OCRImgPath);
+                WaferID.Text = "Wafer ID:" + _Job.Host_Job_Id;
+                OCR_Score.Text = "Score:" + _Job.OCRScore;
+            }
+            else
+            {
+                MessageBox.Show("Wafer 紀錄不存在");
+            }
         }
     }
 }
