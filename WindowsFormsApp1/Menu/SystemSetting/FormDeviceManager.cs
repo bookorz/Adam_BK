@@ -11,6 +11,7 @@ using Newtonsoft.Json.Linq;
 using SANWA.Utility;
 using TransferControl.Management;
 using Adam.UI_Update.OCR;
+using log4net;
 
 namespace Adam.Menu.SystemSetting
 {
@@ -24,6 +25,7 @@ namespace Adam.Menu.SystemSetting
         private SANWA.Utility.config_equipment_model equipment_Model = new SANWA.Utility.config_equipment_model();
         private DataTable dtConfigNode = new DataTable();
         private DataTable dtRouteTable = new DataTable();
+        private static readonly ILog logger = LogManager.GetLogger(typeof(FormDeviceManager));
 
         private void FormDeviceManager_Load(object sender, EventArgs e)
         {
@@ -36,30 +38,39 @@ namespace Adam.Menu.SystemSetting
             {
                 UpdateNodeList();
 
-                txbEquipmentModel.Text = equipment_Model.EquipmentModel.equipment_model_type;
-
-                dtTemp = new DataTable();
-                strSql = "SELECT list_type, list_id, list_name, list_name_en, CASE WHEN list_value = 'DIO' THEN 'SYSTEM' ELSE list_value END list_value, sort_sequence " +
-                            "FROM config_list_item " +
-                            "WHERE list_type = 'DEVICE_TYPE'";
-                dtTemp = dBUtil.GetDataTable(strSql, null);
-
-                if (dtTemp.Rows.Count > 0)
+                if (equipment_Model.EquipmentModel == null)
                 {
-                    cmbDeviceNodeType.DataSource = dtTemp;
-                    cmbDeviceNodeType.DisplayMember = "list_name";
-                    cmbDeviceNodeType.ValueMember = "list_value";
-                    cmbDeviceNodeType.SelectedIndex = -1;
+                    MessageBox.Show("查無 Equipment_Model 相關資料，請管理者確認組態等相關設定！", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
                 else
                 {
-                    cmbDeviceNodeType.DataSource = null;
+                    txbEquipmentModel.Text = equipment_Model.EquipmentModel.equipment_model_type;
+
+                    dtTemp = new DataTable();
+                    strSql = "SELECT list_type, list_id, list_name, list_name_en, CASE WHEN list_value = 'DIO' THEN 'SYSTEM' ELSE list_value END list_value, sort_sequence " +
+                                "FROM config_list_item " +
+                                "WHERE list_type = 'DEVICE_TYPE'";
+                    dtTemp = dBUtil.GetDataTable(strSql, null);
+
+                    if (dtTemp.Rows.Count > 0)
+                    {
+                        cmbDeviceNodeType.DataSource = dtTemp;
+                        cmbDeviceNodeType.DisplayMember = "list_name";
+                        cmbDeviceNodeType.ValueMember = "list_value";
+                        cmbDeviceNodeType.SelectedIndex = -1;
+                    }
+                    else
+                    {
+                        cmbDeviceNodeType.DataSource = null;
+                    }
                 }
 
             }
             catch (Exception ex)
             {
-                throw new Exception(ex.ToString());
+                //throw new Exception(ex.ToString());
+                logger.Error(ex.StackTrace);
+                MessageBox.Show(ex.StackTrace, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
 

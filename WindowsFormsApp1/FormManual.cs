@@ -818,5 +818,10 @@ namespace GUI
             cbRA2Slot.SelectedIndex = tempSlot;
             cbRA2Arm.SelectedIndex = tempArm;
         }
+
+        private void cbRA1Point_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            
+        }
     }
 }
