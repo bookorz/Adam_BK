@@ -260,7 +260,7 @@ namespace GUI
             switch (btnFuncName)
             {
                 case "btnConn":
-                    ControllerManagement.Get(aligner.Controller).Connect();
+                    //ControllerManagement.Get(aligner.Controller).Connect();
                     aligner.State = "";
                     SetFormEnable(false);
                     Thread.Sleep(500);//暫解
@@ -268,7 +268,7 @@ namespace GUI
                     SetFormEnable(true);
                     return;
                 case "btnDisConn":
-                    ControllerManagement.Get(aligner.Controller).Close();
+                   // ControllerManagement.Get(aligner.Controller).Close();
                     aligner.State = "";
                     SetFormEnable(false);
                     Thread.Sleep(500);//暫解
@@ -425,6 +425,15 @@ namespace GUI
                         break;
                 }
             }
+
+            if (EightInch_rb.Checked)
+            {
+                if(cbRA1Arm.Text.Equals("Both") || cbRA2Arm.Text.Equals("Both"))
+                {
+                    MessageBox.Show("200MM not surport Both arm.", "Error");
+                    return;
+                }
+            }
             
             String nodeName = rbR1.Checked ? "ROBOT01" : "ROBOT02";
             Node robot = NodeManagement.Get(nodeName);
@@ -433,13 +442,41 @@ namespace GUI
             txns[0] = new Transaction();
             txns[0].FormName = "FormManual";
             SetFormEnable(false);
+            string WaferSize = "";
+            if (EightInch_rb.Checked)
+            {
+                WaferSize = "200MM";
+            }else if (TwelveInch_rb.Checked)
+            {
+                WaferSize = "300MM";
+            }
+            switch (btn.Name)
+            {
+                case "btnRGet":
+                case "btnRPut":
+                case "btnRGetWait":
+                case "btnRPutWait":
+                case "btnRMoveDown":
+                case "btnRMoveUp":
+                case "btnRPutPut":
+                case "btnRPutGet":
+                case "btnRGetPut":
+                case "btnRGetGet":
+                    if (WaferSize.Equals(""))
+                    {
+                        MessageBox.Show("請選擇Wafer大小");
+                        return;
+                    }
+                    break;
+            }
+
             switch (btn.Name)
             {
                 case "btnRConn":
                     try
                     {
-                        ControllerManagement.Get(robot.Controller).Close();
-                        ControllerManagement.Get(robot.Controller).Connect();
+                        //ControllerManagement.Get(robot.Controller).Close();
+                        //ControllerManagement.Get(robot.Controller).Connect();
                         robot.State = "";
                         Thread.Sleep(500);//暫解
                         setRobotStatus();
@@ -452,7 +489,7 @@ namespace GUI
                 case "btnRDisConn":
                     try
                     {
-                        ControllerManagement.Get(robot.Controller).Close();
+                        //ControllerManagement.Get(robot.Controller).Close();
                         robot.State = "";
                         Thread.Sleep(500);//暫解
                         setRobotStatus();
@@ -587,7 +624,7 @@ namespace GUI
                     }
                     else
                     {
-                        robot.ExcuteScript("RobotManualPutPut", "FormManual-Script", GetScriptVar());
+                        robot.ExcuteScript("RobotManualPutPut", "FormManual-Script", GetScriptVar(), WaferSize);
                         return;
                     }
                 case "btnRGetGet":
@@ -598,10 +635,11 @@ namespace GUI
                     }
                     else
                     {
-                        robot.ExcuteScript("RobotManualGetGet", "FormManual-Script", GetScriptVar());
+                        robot.ExcuteScript("RobotManualGetGet", "FormManual-Script", GetScriptVar(), WaferSize);
                         return;
                     }
                 case "btnRGetPut":
+        
                     if (GetScriptVar() == null)
                     {
                         MessageBox.Show(" Insufficient information, please select source or destination!", "Invalid source or destination");
@@ -609,10 +647,11 @@ namespace GUI
                     }
                     else
                     {
-                        robot.ExcuteScript("RobotManualGetPut", "FormManual-Script", GetScriptVar());
+                        robot.ExcuteScript("RobotManualGetPut", "FormManual-Script", GetScriptVar(), WaferSize);
                         return;
                     }
                 case "btnRPutGet":
+                
                     if (GetScriptVar() == null)
                     {
                         MessageBox.Show(" Insufficient information, please select source or destination!", "Invalid source or destination");
@@ -620,7 +659,7 @@ namespace GUI
                     }
                     else
                     {
-                        robot.ExcuteScript("RobotManualPutGet", "FormManual-Script", GetScriptVar());
+                        robot.ExcuteScript("RobotManualPutGet", "FormManual-Script", GetScriptVar(), WaferSize);
                         return;
                     }
                 case "btnRReset":
@@ -637,6 +676,7 @@ namespace GUI
             }
             if (!txns[0].Method.Equals(""))
             {
+                txns[0].RecipeID = WaferSize;
                 robot.SendCommand(txns[0]);
             }
             else
@@ -817,6 +857,11 @@ namespace GUI
             cbRA2Point.SelectedIndex = tempPoint;
             cbRA2Slot.SelectedIndex = tempSlot;
             cbRA2Arm.SelectedIndex = tempArm;
+        }
+
+        private void tableLayoutPanel23_Paint(object sender, PaintEventArgs e)
+        {
+
         }
     }
 }

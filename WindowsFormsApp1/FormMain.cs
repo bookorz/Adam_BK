@@ -472,13 +472,13 @@ namespace Adam
                                     if (CheckResult)
                                     {
                                         Node.FoupReady = true;
-                                        Node.ExcuteScript("LoadPortFoupIn", "LoadPortFoup", true);
+                                        Node.ExcuteScript("LoadPortFoupIn", "LoadPortFoup","", true);
 
                                     }
                                     else
                                     {
                                         Node.FoupReady = false;
-                                        Node.ExcuteScript("LoadPortFoupOut", "LoadPortFoup", true);
+                                        Node.ExcuteScript("LoadPortFoupOut", "LoadPortFoup", "", true);
                                         On_Node_State_Changed(Node, "Ready To Load");
                                     }
                                     break;
@@ -637,7 +637,7 @@ namespace Adam
                         case "MANSW":
                             if (Node.FoupReady)
                             {
-                                Node.ExcuteScript("LoadPortMapping", "MANSW", true);
+                                Node.ExcuteScript("LoadPortMapping", "MANSW", "", true);
                             }
                             break;
                         case "PODON":
@@ -649,7 +649,7 @@ namespace Adam
                             break;
                         case "PODOF":
                             Node.FoupReady = false;
-                            Node.ExcuteScript("LoadPortFoupOut", "LoadPortFoup", true);
+                            Node.ExcuteScript("LoadPortFoupOut", "LoadPortFoup", "", true);
                             On_Node_State_Changed(Node, "Ready To Load");
                             break;
                     }
@@ -695,7 +695,7 @@ namespace Adam
 
                 foreach (Node port in findPort)
                 {
-                    port.ExcuteScript("LoadPortFoupOut", "LoadPortFoup", true);
+                    port.ExcuteScript("LoadPortFoupOut", "LoadPortFoup", "", true);
                 }
                 CommunicationsUpdate.UpdateConnection(Device_ID, true);
             }

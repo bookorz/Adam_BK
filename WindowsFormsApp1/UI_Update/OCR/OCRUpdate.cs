@@ -223,7 +223,7 @@ namespace Adam.UI_Update.OCR
                             case "HST":
                                 pCnt++;
                                 Process p1 = Process.Start(new ProcessStartInfo("C:/Program Files (x86)/HST Vision/e-Reader8000/VB9BReaderForm.exe", ocr.AdrNo));
-                                ThreadPool.QueueUserWorkItem(new WaitCallback(LoadHST), ocr);
+                                //ThreadPool.QueueUserWorkItem(new WaitCallback(LoadHST), ocr);
 
 
                                 break;
@@ -233,9 +233,9 @@ namespace Adam.UI_Update.OCR
                                     pCnt++;
                                     IsCognexInit = true;
                                     Process p2 = Process.Start(new ProcessStartInfo("C:/Program Files (x86)/Cognex/In-Sight/In-Sight Explorer Wafer 4.5.0/WaferID.exe"));
-                                    ThreadPool.QueueUserWorkItem(new WaitCallback(LoadCOGNEX), ocr);
+                                    //ThreadPool.QueueUserWorkItem(new WaitCallback(LoadCOGNEX), ocr);
                                 }
-                                ControllerManagement.Get(ocr.Controller).Connect();
+                                //ControllerManagement.Get(ocr.Controller).Connect();
                                 break;
                         }
                     }
@@ -291,7 +291,7 @@ namespace Adam.UI_Update.OCR
                         var s = GetWindowLong(p2.MainWindowHandle, GWL_STYLE);
                         SetWindowLong(p2.MainWindowHandle, GWL_STYLE, s | WS_CHILD);
                     }
-                    ControllerManagement.Get(OCR.Controller).Connect();
+                    //ControllerManagement.Get(OCR.Controller).Connect();
                     pCnt--;
                     if (pCnt == 0)
                     {

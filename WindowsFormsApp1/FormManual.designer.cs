@@ -65,7 +65,10 @@
             this.btnRPutGet = new System.Windows.Forms.Button();
             this.btnRGetGet = new System.Windows.Forms.Button();
             this.btnRGetPut = new System.Windows.Forms.Button();
+            this.panel2 = new System.Windows.Forms.Panel();
+            this.EightInch_rb = new System.Windows.Forms.RadioButton();
             this.btnRAreaSwap = new System.Windows.Forms.Button();
+            this.TwelveInch_rb = new System.Windows.Forms.RadioButton();
             this.groupBox21 = new System.Windows.Forms.GroupBox();
             this.panel13 = new System.Windows.Forms.Panel();
             this.pnlRobotStatus = new System.Windows.Forms.Panel();
@@ -323,6 +326,7 @@
             this.pnlRobotCmdA1.SuspendLayout();
             this.pnlRobotCmdA2.SuspendLayout();
             this.pnlRCmd.SuspendLayout();
+            this.panel2.SuspendLayout();
             this.groupBox21.SuspendLayout();
             this.panel13.SuspendLayout();
             this.pnlRobotStatus.SuspendLayout();
@@ -408,7 +412,7 @@
             this.tableLayoutPanel23.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
             this.tableLayoutPanel23.Controls.Add(this.tableLayoutPanel24, 0, 1);
             this.tableLayoutPanel23.Controls.Add(this.pnlRCmd, 0, 2);
-            this.tableLayoutPanel23.Controls.Add(this.btnRAreaSwap, 0, 0);
+            this.tableLayoutPanel23.Controls.Add(this.panel2, 0, 0);
             this.tableLayoutPanel23.Location = new System.Drawing.Point(20, 20);
             this.tableLayoutPanel23.Name = "tableLayoutPanel23";
             this.tableLayoutPanel23.RowCount = 3;
@@ -417,6 +421,7 @@
             this.tableLayoutPanel23.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 27F));
             this.tableLayoutPanel23.Size = new System.Drawing.Size(756, 715);
             this.tableLayoutPanel23.TabIndex = 52;
+            this.tableLayoutPanel23.Paint += new System.Windows.Forms.PaintEventHandler(this.tableLayoutPanel23_Paint);
             // 
             // tableLayoutPanel24
             // 
@@ -484,14 +489,7 @@
             this.cbRA1Point.Items.AddRange(new object[] {
             "LOADPORT01",
             "LOADPORT02",
-            "LOADPORT03",
-            "LOADPORT04",
-            "LOADPORT05",
-            "LOADPORT06",
-            "LOADPORT07",
-            "LOADPORT08",
-            "ALIGNER01",
-            "ALIGNER02"});
+            "ALIGNER01"});
             this.cbRA1Point.Location = new System.Drawing.Point(129, 60);
             this.cbRA1Point.Name = "cbRA1Point";
             this.cbRA1Point.Size = new System.Drawing.Size(208, 38);
@@ -685,14 +683,7 @@
             this.cbRA2Point.Items.AddRange(new object[] {
             "LOADPORT01",
             "LOADPORT02",
-            "LOADPORT03",
-            "LOADPORT04",
-            "LOADPORT05",
-            "LOADPORT06",
-            "LOADPORT07",
-            "LOADPORT08",
-            "ALIGNER01",
-            "ALIGNER02"});
+            "ALIGNER01"});
             this.cbRA2Point.Location = new System.Drawing.Point(130, 60);
             this.cbRA2Point.Name = "cbRA2Point";
             this.cbRA2Point.Size = new System.Drawing.Size(208, 38);
@@ -913,23 +904,54 @@
             this.btnRGetPut.UseVisualStyleBackColor = false;
             this.btnRGetPut.Click += new System.EventHandler(this.RobotFunction_Click);
             // 
+            // panel2
+            // 
+            this.panel2.Controls.Add(this.EightInch_rb);
+            this.panel2.Controls.Add(this.btnRAreaSwap);
+            this.panel2.Controls.Add(this.TwelveInch_rb);
+            this.panel2.Location = new System.Drawing.Point(3, 3);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(750, 47);
+            this.panel2.TabIndex = 52;
+            // 
+            // EightInch_rb
+            // 
+            this.EightInch_rb.AutoSize = true;
+            this.EightInch_rb.Location = new System.Drawing.Point(510, 6);
+            this.EightInch_rb.Name = "EightInch_rb";
+            this.EightInch_rb.Size = new System.Drawing.Size(119, 34);
+            this.EightInch_rb.TabIndex = 1;
+            this.EightInch_rb.TabStop = true;
+            this.EightInch_rb.Text = "200MM";
+            this.EightInch_rb.UseVisualStyleBackColor = true;
+            // 
             // btnRAreaSwap
             // 
             this.btnRAreaSwap.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
             this.btnRAreaSwap.BackColor = System.Drawing.Color.DarkGray;
-            this.tableLayoutPanel23.SetColumnSpan(this.btnRAreaSwap, 2);
             this.btnRAreaSwap.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.btnRAreaSwap.FlatAppearance.BorderSize = 2;
             this.btnRAreaSwap.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnRAreaSwap.Font = new System.Drawing.Font("微軟正黑體", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
             this.btnRAreaSwap.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.btnRAreaSwap.Location = new System.Drawing.Point(238, 3);
+            this.btnRAreaSwap.Location = new System.Drawing.Point(219, -3);
             this.btnRAreaSwap.Name = "btnRAreaSwap";
             this.btnRAreaSwap.Size = new System.Drawing.Size(280, 49);
             this.btnRAreaSwap.TabIndex = 52;
             this.btnRAreaSwap.Text = "Area1 <-> Area2";
             this.btnRAreaSwap.UseVisualStyleBackColor = false;
             this.btnRAreaSwap.Click += new System.EventHandler(this.btnRAreaSwap_Click);
+            // 
+            // TwelveInch_rb
+            // 
+            this.TwelveInch_rb.AutoSize = true;
+            this.TwelveInch_rb.Location = new System.Drawing.Point(628, 6);
+            this.TwelveInch_rb.Name = "TwelveInch_rb";
+            this.TwelveInch_rb.Size = new System.Drawing.Size(119, 34);
+            this.TwelveInch_rb.TabIndex = 0;
+            this.TwelveInch_rb.TabStop = true;
+            this.TwelveInch_rb.Text = "300MM";
+            this.TwelveInch_rb.UseVisualStyleBackColor = true;
             // 
             // groupBox21
             // 
@@ -4528,6 +4550,8 @@
             this.pnlRobotCmdA2.ResumeLayout(false);
             this.pnlRobotCmdA2.PerformLayout();
             this.pnlRCmd.ResumeLayout(false);
+            this.panel2.ResumeLayout(false);
+            this.panel2.PerformLayout();
             this.groupBox21.ResumeLayout(false);
             this.panel13.ResumeLayout(false);
             this.pnlRobotStatus.ResumeLayout(false);
@@ -4856,5 +4880,8 @@
         private System.Windows.Forms.Button btnStop;
         private System.Windows.Forms.Panel pnlMotionStop;
         private System.Windows.Forms.Button btnRAreaSwap;
+        private System.Windows.Forms.RadioButton EightInch_rb;
+        private System.Windows.Forms.RadioButton TwelveInch_rb;
+        private System.Windows.Forms.Panel panel2;
     }
 }
