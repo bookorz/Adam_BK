@@ -15,6 +15,8 @@ namespace Adam.UI_Update.Terminal
         static ILog logger = LogManager.GetLogger(typeof(TerminalUpdate));
         delegate void UpdateReturn(string UIName, string Message, bool ClearItems);
         delegate void UpdateLabel(string UIName, string Message);
+        delegate void UpdateButton(string UIName, bool blStatus);
+        delegate void UpdateSplitButton(string UIName, bool blStatus);
 
         public static void UpdateReturnList(string UIName, string Message, bool ClearItems)
         {
@@ -89,6 +91,74 @@ namespace Adam.UI_Update.Terminal
             catch (Exception e)
             {
                 logger.Error("UpdateLabelText: Update fail." + e.Message + "\n" + e.StackTrace);
+            }
+        }
+
+        public static void UpdateButtonEnable(string UIName, bool blStatus)
+        {
+            Button btnTemp;
+            Form form;
+
+            try
+            {
+                form = Application.OpenForms["FormTerminal"];
+
+                if (form == null)
+                    return;
+
+                btnTemp = form.Controls.Find(UIName, true).FirstOrDefault() as Button;
+
+                if (btnTemp == null)
+                    return;
+
+                if (btnTemp.InvokeRequired)
+                {
+                    UpdateButton ph = new UpdateButton(UpdateButtonEnable);
+
+                    btnTemp.BeginInvoke(ph, UIName, blStatus);
+                }
+                else
+                {
+                    btnTemp.Enabled = blStatus;
+                }
+            }
+            catch (Exception e)
+            {
+                logger.Error("UpdateButtonEnable: Update fail." + e.Message + "\n" + e.StackTrace);
+            }
+        }
+
+        public static void UpdateSplitButtonEnable(string UIName, bool blStatus)
+        {
+            Button btnTemp;
+            Form form;
+
+            try
+            {
+                form = Application.OpenForms["FormTerminal"];
+
+                if (form == null)
+                    return;
+
+                btnTemp = form.Controls.Find(UIName, true).FirstOrDefault() as Button;
+
+                if (btnTemp == null)
+                    return;
+
+                if (btnTemp.InvokeRequired)
+                {
+                    UpdateSplitButton ph = new UpdateSplitButton(UpdateSplitButtonEnable);
+
+                    btnTemp.BeginInvoke(ph, UIName, blStatus);
+                }
+                else
+                {
+                    btnTemp.Enabled = blStatus;
+                }
+            }
+            catch (Exception e)
+            {
+                logger.Error("UpdateButtonEnable: Update fail." + e.Message + "\n" + e.StackTrace);
             }
         }
     }
