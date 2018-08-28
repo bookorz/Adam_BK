@@ -707,7 +707,7 @@ namespace Adam
 
                                 for (int i = 0; i < ((ArrayList)item.List).Count; i++)
                                 {
-                                    Adam.UI_Update.Terminal.TerminalUpdate.UpdateReturnList("lsbHistory", DateTime.Now.ToString("yyyy-MM-dd hh:mm:ss ffffff") + "    " + ((ArrayList)item.Device)[i].ToString() + " <<  " + ((ArrayList)item.List)[i].ToString(), false);
+                                    Adam.UI_Update.Terminal.TerminalUpdate.UpdateReturnList("lsbHistory", DateTime.Now.ToString("yyyy-MM-dd HH:mm:ss ffffff") + "    " + ((ArrayList)item.Device)[i].ToString() + " <<  " + ((ArrayList)item.List)[i].ToString(), false);
 
                                     // * 回傳訊息處理 待處理
                                     ((ArrayList)item.Message).Add(ControllerManagement.Get(((ArrayList)item.Device)[i].ToString()).DoWorkSync(((ArrayList)item.List)[i].ToString(), ((ArrayList)item.List)[i].ToString().IndexOf("CMD") > 0 ? "CMD" : string.Empty));
@@ -718,13 +718,13 @@ namespace Adam
                                         {
                                             item.Active = false;
                                             btnStop_Click(this, null);
-                                            Adam.UI_Update.Terminal.TerminalUpdate.UpdateReturnList("lsbHistory", DateTime.Now.ToString("yyyy-MM-dd hh:mm:ss ffffff") + "    " + ((ArrayList)item.Device)[i].ToString() + " >>  " + ((ArrayList)item.Message)[i].ToString(), false);
+                                            Adam.UI_Update.Terminal.TerminalUpdate.UpdateReturnList("lsbHistory", DateTime.Now.ToString("yyyy-MM-dd HH:mm:ss ffffff") + "    " + ((ArrayList)item.Device)[i].ToString() + " >>  " + ((ArrayList)item.Message)[i].ToString(), false);
                                             break;
                                         }
                                     }
                                     //((ArrayList)item.Message).Add("TEST");
                                     //Thread.Sleep(1000);
-                                    Adam.UI_Update.Terminal.TerminalUpdate.UpdateReturnList("lsbHistory", DateTime.Now.ToString("yyyy-MM-dd hh:mm:ss ffffff") + "    " + ((ArrayList)item.Device)[i].ToString() + " >>  " + ((ArrayList)item.Message)[i].ToString(), false);
+                                    Adam.UI_Update.Terminal.TerminalUpdate.UpdateReturnList("lsbHistory", DateTime.Now.ToString("yyyy-MM-dd HH:mm:ss ffffff") + "    " + ((ArrayList)item.Device)[i].ToString() + " >>  " + ((ArrayList)item.Message)[i].ToString(), false);
 
                                     if (!item.Active)
                                     {
@@ -865,7 +865,7 @@ namespace Adam
                     if (ii >= 0)
                     {
                         dgvCommandList.ClearSelection();
-                        encoder = new SANWA.Utility.Encoder(lsbDeviceName.SelectedValue.ToString().Split(',')[0].ToString());
+                        encoder = new SANWA.Utility.Encoder(dtCommandAssembly.Rows[ii]["vendor"].ToString().Split(',')[0].ToString());
 
                         job = new TerminalJob();
                         alList = new ArrayList();
