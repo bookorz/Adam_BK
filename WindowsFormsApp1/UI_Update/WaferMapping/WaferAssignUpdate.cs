@@ -83,6 +83,11 @@ namespace Adam.UI_Update.WaferMapping
 
                     Node port = NodeManagement.Get(PortName);
 
+                    foreach(Job each in port.JobList.Values.ToList())
+                    {
+                        each.RecipeID = "300MM";
+                    }
+                    
                     List<Job> tmp = port.JobList.Values.ToList();
                     tmp.Sort((x, y) => { return -Convert.ToInt16(x.Slot).CompareTo(Convert.ToInt16(y.Slot)); });
                     Port_gv.DataSource = tmp;
@@ -177,6 +182,7 @@ namespace Adam.UI_Update.WaferMapping
                             wafer.FromPortSlot = wafer.Slot;
                             wafer.Position = PortName;
                             wafer.AlignerFlag = false;
+                            wafer.RecipeID = "300MM";
                             string Slot = (i + 1).ToString("00");
                             switch (Mapping[i])
                             {

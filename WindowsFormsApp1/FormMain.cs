@@ -126,7 +126,7 @@ namespace Adam
             DIO.Connect();
             AuthorityUpdate.UpdateFuncGroupEnable("INIT");//init 權限
             RouteCtrl.ConnectAll();
-
+            //ThreadPool.QueueUserWorkItem(new WaitCallback(RouteCtrl.ConnectAll));
             this.Width = oldWidth;
             this.Height = oldHeight;
             this.WindowState = FormWindowState.Maximized;
@@ -815,8 +815,14 @@ namespace Adam
         {
             logger.Debug("On_Job_Location_Changed");
             MonitoringUpdate.UpdateJobMove(Job.Job_Id);
-
-
+            if (Job.Position.ToUpper().Equals("ALIGNER01"))
+            {
+                Job.DefaultOCR = "OCR01";
+            }
+            if (Job.Position.ToUpper().Equals("ALIGNER02"))
+            {
+                Job.DefaultOCR = "OCR02";
+            }
         }
 
         public void On_Script_Finished(Node Node, string ScriptName, string FormName)
@@ -825,8 +831,9 @@ namespace Adam
             switch (FormName)
             {
                 case "Initialize":
-                    Node.InitialComplete = true;
+                   
                     Node.InitialObject();
+                    Node.InitialComplete = true;
                     switch (Node.Type)
                     {
                         case "ROBOT":
@@ -1158,7 +1165,7 @@ namespace Adam
 
                         ConnectionStatusUpdate.UpdateInitial(false.ToString());
                         NodeStatusUpdate.UpdateCurrentState(NodeManagement.GetCurrentState());
-                        RouteCtrl.Start("FormMain");
+                        RouteCtrl.Start("Running");
                         //ConnectionStatusUpdate.UpdateModeStatus("Start");
 
 
