@@ -494,6 +494,7 @@
             this.cbRA1Point.Name = "cbRA1Point";
             this.cbRA1Point.Size = new System.Drawing.Size(208, 38);
             this.cbRA1Point.TabIndex = 22;
+            this.cbRA1Point.SelectedIndexChanged += new System.EventHandler(this.cbRA1Point_SelectedIndexChanged);
             // 
             // label58
             // 

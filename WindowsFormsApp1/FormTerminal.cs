@@ -25,11 +25,13 @@ namespace Adam
         private DataTable dtCommand = new DataTable();
         private DataTable dtCommandParameter = new DataTable();
         private DataTable dtCommandAssembly = new DataTable();
+        private Thread trRun;
+
+        private List<TerminalJob> Jobs = new List<TerminalJob>();
 
         string strSql = string.Empty;
-
-        private Thread trRun;
-        private ArrayList alRun = new ArrayList();
+        bool JobLock = true;
+        bool JobStart = true;
 
         public FormTerminal()
         {
@@ -45,6 +47,7 @@ namespace Adam
                 strSql = "SELECT CONCAT(node_id, ',', conn_address) as node_id , node_type, sn_no, CONCAT(vendor, ',' ,node_type, ',', controller_id) as vendor, model_no, firmware_ver, conn_address, controller_id " +
                             "FROM config_node " +
                             "WHERE enable_flg = '1' AND node_type IN('ALIGNER', 'LOADPORT', 'ROBOT', 'OCR') " +
+                            "AND equipment_model_id = '" + SANWA.Utility.Config.SystemConfig.Get().SystemMode + "'" +
                             "ORDER BY node_id, sn_no";
 
                 dtDeviceList = dBUtil.GetDataTable(strSql, null);
@@ -328,6 +331,11 @@ namespace Adam
                         case "ATEL":
                             txbManually.Text = string.Format(dtCommandParameter.Rows[0]["code_format"].ToString(), lsbDeviceName.Text.Split(',')[1].ToString());
                             break;
+
+                        case "HST":
+                        case "COGNEX":
+                            txbManually.Text = dtCommandParameter.Rows[0]["code_format"].ToString();
+                            break;
                     }
                 }
                 else
@@ -345,6 +353,11 @@ namespace Adam
                         case "ATEL":
                             strsTemps = (lsbDeviceName.Text.Split(',')[1].ToString() + "," + sbTemp.ToString().Substring(0, sbTemp.ToString().Length - 1)).Split(',');
                             txbManually.Text = string.Format(dtCommandParameter.Rows[0]["code_format"].ToString(), strsTemps);
+                            break;
+
+                        case "HST":
+                        case "COGNEX":
+                            txbManually.Text = string.Format(dtCommandParameter.Rows[0]["code_format"].ToString(), sbTemp.ToString().Substring(0, sbTemp.ToString().Length - 1).Split(','));
                             break;
                     }
                 }
@@ -408,6 +421,11 @@ namespace Adam
                         strsTemps = (lsbDeviceName.Text.Split(',')[1].ToString() + "," + sbTemp.ToString().Substring(0, sbTemp.ToString().Length - 1)).Split(',');
                         txbManually.Text = string.Format(dtCommandParameter.Rows[0]["code_format"].ToString(), strsTemps);
                         break;
+
+                    case "HST":
+                    case "COGNEX":
+                        txbManually.Text = string.Format(dtCommandParameter.Rows[0]["code_format"].ToString(), sbTemp.ToString().Substring(0, sbTemp.ToString().Length - 1).Split(','));
+                        break;
                 }
             }
             catch (Exception ex)
@@ -422,57 +440,79 @@ namespace Adam
                 return;
 
             string strDevice = string.Empty;
-            string strReturnMsg = string.Empty;
             SANWA.Utility.Encoder encoder;
+            TerminalJob job = null;
+            ArrayList alList = null;
+            ArrayList alDeviceList = null;
 
             try
             {
-                //strDevice = lsbDeviceName.Text.Split(',')[0].ToString();
-
-                strDevice = lsbDeviceName.SelectedValue.ToString().Split(',')[2].ToString();
-
                 encoder = new SANWA.Utility.Encoder(lsbDeviceName.SelectedValue.ToString().Split(',')[0].ToString());
 
-                //btnSend.Enabled = false;
+                job = new TerminalJob();
+                alList = new ArrayList();
+                alDeviceList = new ArrayList();
+                alDeviceList.Add(lsbDeviceName.SelectedValue.ToString().Split(',')[2].ToString());
 
                 switch (lsbDeviceName.SelectedValue.ToString().Split(',')[0].ToString())
                 {
                     case "ATEL":
                     case "SANWA":
 
-                        //Adam.UI_Update.Terminal.TerminalUpdate.UpdateReturnList("lsbHistory", DateTime.Now.ToLongTimeString() + strDevice + " <<  " + txbManually.Text, false);
-                        //strReturnMsg = ControllerManagement.Get(strDevice).DoWorkSync(txbManually.Text + "\r");
-
-                        alRun.Add(strDevice + "&" + txbManually.Text + "\r");
+                        job.Active = true;
+                        job.Device = alDeviceList;
+                        job.IsError = new ArrayList();
+                        job.Message = new ArrayList();
+                        job.No = Jobs.Count + 1;
+                        alList.Add(txbManually.Text + "\r");
+                        job.List = alList;
+                        Jobs.Add(job);
+                        JobLock = false;
 
                         break;
 
                     case "KAWASAKI":
 
-                        //Adam.UI_Update.Terminal.TerminalUpdate.UpdateReturnList("lsbHistory", DateTime.Now.ToLongTimeString() + strDevice + " <<  " + txbManually.Text + encoder.Robot.KawasakiCheckSum(txbManually.Text.Substring(1, txbManually.Text.IndexOf('>') + 1)), false);
-                        //strReturnMsg = ControllerManagement.Get(strDevice).DoWorkSync(txbManually.Text + encoder.Robot.KawasakiCheckSum(txbManually.Text.Substring(1, txbManually.Text.IndexOf('>')+1)));
-
-                        alRun.Add(strDevice + "&" + txbManually.Text + encoder.Robot.KawasakiCheckSum(txbManually.Text.Substring(1, txbManually.Text.IndexOf('>') + 1)) + "\r\n");
+                        job.Active = true;
+                        job.Device = alDeviceList;
+                        job.IsError = new ArrayList();
+                        job.Message = new ArrayList();
+                        job.No = Jobs.Count + 1;
+                        alList.Add(txbManually.Text + encoder.Robot.KawasakiCheckSum(txbManually.Text.Substring(1, txbManually.Text.IndexOf('>') + 1)) + "\r\n");
+                        job.List = alList;
+                        Jobs.Add(job);
+                        JobLock = false;
 
                         break;
 
                     case "TDK":
 
-                        //Adam.UI_Update.Terminal.TerminalUpdate.UpdateReturnList("lsbHistory", DateTime.Now.ToLongTimeString() + strDevice + " <<  " + encoder.LoadPort.TDK_A(txbManually.Text), false);
-                        //strReturnMsg = ControllerManagement.Get(strDevice).DoWorkSync(encoder.LoadPort.TDK_A(txbManually.Text));
-
-                        alRun.Add(strDevice + "&" + encoder.LoadPort.TDK_A(txbManually.Text));
+                        job.Active = true;
+                        job.Device = alDeviceList;
+                        job.IsError = new ArrayList();
+                        job.Message = new ArrayList();
+                        job.No = Jobs.Count + 1;
+                        alList.Add(encoder.LoadPort.TDK_A(txbManually.Text));
+                        job.List = alList;
+                        Jobs.Add(job);
+                        JobLock = false;
 
                         break;
 
                     default:
-                        alRun.Add(strDevice + "&" + txbManually.Text);
+
+                        job.Active = true;
+                        job.Device = alDeviceList;
+                        job.IsError = new ArrayList();
+                        job.Message = new ArrayList();
+                        job.No = Jobs.Count + 1;
+                        alList.Add(txbManually.Text + "\r");
+                        job.List = alList;
+                        Jobs.Add(job);
+                        JobLock = false;
+
                         break;
                 }
-
-                //Adam.UI_Update.Terminal.TerminalUpdate.UpdateReturnList("lsbHistory", strDevice + " >>  " + strReturnMsg, false);
-
-                //MessageBox.Show("Send to queue", "", MessageBoxButtons.OK, MessageBoxIcon.Error, MessageBoxDefaultButton.Button1);
             }
             catch (Exception ex)
             {
@@ -650,37 +690,73 @@ namespace Adam
 
         private void CommandRun()
         {
-            string strDevice = string.Empty;
-            string strCommand = string.Empty;
-            string strReturnMsg = string.Empty;
-
-            strDevice = "RobotController02";
-
             try
             {
-                while (true)
+                while (JobStart)
                 {
-                    if (alRun.Count > 0)
+                    if (Jobs.Count > 0 && !JobLock)
                     {
-                        strDevice = alRun[0].ToString().Split('&')[0];
-                        strCommand = alRun[0].ToString().Split('&')[1];
-
-                        Adam.UI_Update.Terminal.TerminalUpdate.UpdateLabelText("lbQueue", "Queue:" + alRun.Count.ToString());
-                        Adam.UI_Update.Terminal.TerminalUpdate.UpdateReturnList("lsbHistory", DateTime.Now.ToString("yyyy-MM-dd hh:mm:ss ffffff") + "    " + strDevice + " <<  " + strCommand, false);
-                        strReturnMsg = ControllerManagement.Get(strDevice).DoWorkSync(strCommand, strCommand.IndexOf("CMD") > 0 ? "CMD" : string.Empty);                  
-                        Adam.UI_Update.Terminal.TerminalUpdate.UpdateReturnList("lsbHistory", DateTime.Now.ToString("yyyy-MM-dd hh:mm:ss ffffff") + "   " + strDevice + " >>  " + strReturnMsg, false);
-                        alRun.RemoveAt(0);
-
-                        if (alRun.Count > 0)
+                        Adam.UI_Update.Terminal.TerminalUpdate.UpdateButtonEnable("btnSend", false);
+                        Adam.UI_Update.Terminal.TerminalUpdate.UpdateSplitButtonEnable("sbtnRun", false);
+                                                     
+                        foreach (TerminalJob item in Jobs)
                         {
-                            Adam.UI_Update.Terminal.TerminalUpdate.UpdateLabelText("lbQueue", "Queue:" + alRun.Count.ToString());
+                            if (item.Active)
+                            {
+                                Adam.UI_Update.Terminal.TerminalUpdate.UpdateLabelText("lbQueue", "Queue:" + (Jobs.Count - (int)item.No).ToString());
+
+                                for (int i = 0; i < ((ArrayList)item.List).Count; i++)
+                                {
+                                    Adam.UI_Update.Terminal.TerminalUpdate.UpdateReturnList("lsbHistory", DateTime.Now.ToString("yyyy-MM-dd HH:mm:ss ffffff") + "    " + ((ArrayList)item.Device)[i].ToString() + " <<  " + ((ArrayList)item.List)[i].ToString(), false);
+
+                                    // * 回傳訊息處理 待處理
+                                    ((ArrayList)item.Message).Add(ControllerManagement.Get(((ArrayList)item.Device)[i].ToString()).DoWorkSync(((ArrayList)item.List)[i].ToString(), ((ArrayList)item.List)[i].ToString().IndexOf("CMD") > 0 ? "CMD" : string.Empty));
+
+                                    if (((ArrayList)item.Message)[i].ToString().IndexOf("FIN") > 0 || ((ArrayList)item.Message)[i].ToString().IndexOf("NAK") > 0)
+                                    {
+                                        if (!((ArrayList)item.Message)[i].ToString().Split(':')[2].ToString().Equals("00000000") || ((ArrayList)item.Message)[i].ToString().Equals("Command time out!"))
+                                        {
+                                            item.Active = false;
+                                            btnStop_Click(this, null);
+                                            Adam.UI_Update.Terminal.TerminalUpdate.UpdateReturnList("lsbHistory", DateTime.Now.ToString("yyyy-MM-dd HH:mm:ss ffffff") + "    " + ((ArrayList)item.Device)[i].ToString() + " >>  " + ((ArrayList)item.Message)[i].ToString(), false);
+                                            break;
+                                        }
+                                    }
+                                    //((ArrayList)item.Message).Add("TEST");
+                                    //Thread.Sleep(1000);
+                                    Adam.UI_Update.Terminal.TerminalUpdate.UpdateReturnList("lsbHistory", DateTime.Now.ToString("yyyy-MM-dd HH:mm:ss ffffff") + "    " + ((ArrayList)item.Device)[i].ToString() + " >>  " + ((ArrayList)item.Message)[i].ToString(), false);
+
+                                    if (!item.Active)
+                                    {
+                                        break;
+                                    }
+                                }
+
+                                item.Active = false;
+                            }
+                        }
+
+                        for (int i = 0; i < Jobs.Count; i++)
+                        {
+                            if (!Jobs[i].Active)
+                                Jobs.Remove(Jobs[i]);
                         }
                     }
+                    else if (!JobLock)
+                    {
+                        Adam.UI_Update.Terminal.TerminalUpdate.UpdateLabelText("lbQueue", "Queue:" + Jobs.Count);
+                        JobLock = true;
+                        Adam.UI_Update.Terminal.TerminalUpdate.UpdateButtonEnable("btnSend", true);
+                        Adam.UI_Update.Terminal.TerminalUpdate.UpdateSplitButtonEnable("sbtnRun", true);
+                    }
+
+                    if (!JobStart)
+                        break;
                 }
             }
             catch (Exception ex)
             {
-                throw new Exception(ex.ToString());
+                //throw new Exception(ex.ToString());
             }
         }
 
@@ -689,17 +765,32 @@ namespace Adam
             if (dtCommandAssembly.Rows.Count == 0)
                 return;
 
-            alRun.Clear();
+            TerminalJob job = null;
+            ArrayList alList = null;
+            ArrayList alDeviceList = null;
 
             try
             {
+                job = new TerminalJob();
+                alList = new ArrayList();
+                alDeviceList = new ArrayList();
+                job.Active = true;
+                job.IsError = new ArrayList();
+                job.Message = new ArrayList();
+                job.No = Jobs.Count + 1;
 
                 foreach (DataRow dr in dtCommandAssembly.Rows)
                 {
-                    alRun.Add(dr["Controller_ID"].ToString() + "&" + dr["Command"].ToString());
+                    alDeviceList.Add(dr["Controller_ID"].ToString());
+                    alList.Add(dr["Command"].ToString());
                 }
 
-                MessageBox.Show("Send to queue.", "tsmtRunList_Click");
+                job.Device = alDeviceList;
+                job.List = alList;
+                Jobs.Add(job);
+                JobLock = false;
+
+                MessageBox.Show("Send to queue.", "tsmtRunList_Click", MessageBoxButtons.OK, MessageBoxIcon.Information, MessageBoxDefaultButton.Button1);
             }
             catch (Exception ex)
             {
@@ -712,21 +803,40 @@ namespace Adam
             if (dtCommandAssembly.Rows.Count == 0)
                 return;
 
-            alRun.Clear();
-
             int resultInt = 0;
+            int startInt = 0;
+            TerminalJob job = null;
+            ArrayList alList = null;
+            ArrayList alDeviceList = null;
 
             try
             {
                 if(Int32.TryParse(tstbfrequency.Text, out resultInt))
                 {
-                    for (int i = 0; i < resultInt; i++)
+                    job = new TerminalJob();
+                    alList = new ArrayList();
+                    alDeviceList = new ArrayList();
+                    job.Active = true;
+                    job.IsError = new ArrayList();
+                    job.Message = new ArrayList();
+
+                    foreach (DataRow dr in dtCommandAssembly.Rows)
                     {
-                        foreach (DataRow dr in dtCommandAssembly.Rows)
-                        {
-                            alRun.Add(dr["Controller_ID"].ToString() + "&" + dr["Command"].ToString());
-                        }
+                        alDeviceList.Add(dr["Controller_ID"].ToString());
+                        alList.Add(dr["Command"].ToString() + "\r");
                     }
+
+                    job.List = alList;
+                    job.Device = alDeviceList;
+
+                    startInt = Jobs.Count;
+
+                    for (int i = 1; i < resultInt + 1; i++)
+                    {
+                        job.No = i + startInt;
+                        Jobs.Add(job.Copy());
+                    }
+                    JobLock = false;
                 }
 
                 MessageBox.Show("Send to queue.", "tsmtExcute_Click");
@@ -741,6 +851,11 @@ namespace Adam
         {
             int ii = 0;
 
+            TerminalJob job = null;
+            ArrayList alList = null;
+            ArrayList alDeviceList = null;
+            SANWA.Utility.Encoder encoder;
+
             try
             {
                 if (dgvCommandList.SelectedCells.Count > 0)
@@ -750,8 +865,21 @@ namespace Adam
                     if (ii >= 0)
                     {
                         dgvCommandList.ClearSelection();
+                        encoder = new SANWA.Utility.Encoder(dtCommandAssembly.Rows[ii]["vendor"].ToString().Split(',')[0].ToString());
 
-                        alRun.Add(dtCommandAssembly.Rows[ii]["Controller_ID"].ToString() +"&" + dtCommandAssembly.Rows[ii]["Command"].ToString());
+                        job = new TerminalJob();
+                        alList = new ArrayList();
+                        alDeviceList = new ArrayList();
+                        job.Active = true;
+                        alDeviceList.Add(dtCommandAssembly.Rows[ii]["Controller_ID"].ToString());
+                        job.Device = alDeviceList;
+                        job.IsError = new ArrayList();
+                        job.Message = new ArrayList();
+                        job.No = Jobs.Count + 1;
+                        alList.Add(dtCommandAssembly.Rows[ii]["Command"].ToString());
+                        job.List = alList;
+                        Jobs.Add(job);
+                        JobLock = false;
 
                         if (ii + 1 < dgvCommandList.Rows.Count)
                         {
@@ -834,6 +962,68 @@ namespace Adam
             {
                 MessageBox.Show(ex.ToString(), "Exception Message", MessageBoxButtons.OK, MessageBoxIcon.Warning, MessageBoxDefaultButton.Button1, MessageBoxOptions.DefaultDesktopOnly);
             }
+        }
+
+        private void btnStop_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                foreach (TerminalJob item in Jobs)
+                {
+                    item.Active = false;
+                }
+
+                Adam.UI_Update.Terminal.TerminalUpdate.UpdateLabelText("lbQueue", "Queue:0");
+
+            }
+            catch (Exception ex)
+            {
+                throw new Exception(ex.ToString());
+            }
+        }
+
+        public class TerminalJob
+        {
+            public int No { get; set; }
+            public ArrayList Device { get; set; }
+            public ArrayList List { get; set; }
+            public ArrayList Message { get; set; }
+            public ArrayList IsError { get; set; }
+            public bool Active { get; set; }
+
+            public TerminalJob Copy()
+            {
+                TerminalJob jobNew = new TerminalJob();
+
+                jobNew.Active = this.Active;
+                jobNew.Device = this.Device;
+                jobNew.IsError = this.IsError;
+                jobNew.List = this.List;
+                jobNew.Message = this.Message;
+                jobNew.No = this.No;
+
+                return jobNew;
+            }
+        }
+
+        private void btnPause_Click(object sender, EventArgs e)
+        {
+            JobLock = true;
+            JobStart = false;
+        }
+
+        private void btnContinue_Click(object sender, EventArgs e)
+        {
+            JobLock = false;
+        }
+
+        private void FormTerminal_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            trRun.Abort();
+            JobStart = false;
+            JobLock = true;
+            Jobs.Clear();
+            Jobs = null;
         }
     }
 }
